@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --primary: #00A1A5;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: #00A1A5;
+  --font-sans: var(--font-outfit);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Spinning animation for circular text */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 15s linear infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00c4c9;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Text outline effect for headlines */
+.text-outline {
+  -webkit-text-stroke: 1px var(--primary);
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary) 0%, #00d4d9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effect */
+.glow {
+  box-shadow: 0 0 20px rgba(0, 161, 165, 0.3);
+}
+
+/* Circular text container */
+.circular-text-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero background terrain effect */
+.terrain-bg {
+  background:
+    radial-gradient(ellipse 120% 80% at 70% 80%, rgba(0, 161, 165, 0.15) 0%, transparent 50%),
+    linear-gradient(180deg, transparent 40%, rgba(0, 161, 165, 0.08) 100%),
+    #0a0a0a;
+}
+
+/* Button hover effects */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+/* Polyhedron glow animation */
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 10px rgba(0, 161, 165, 0.3));
+  }
+
+  50% {
+    opacity: 0.9;
+    filter: drop-shadow(0 0 20px rgba(0, 161, 165, 0.5));
+  }
+}
+
+.polyhedron {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* Embla carousel styles */
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
