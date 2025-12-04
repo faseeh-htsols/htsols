@@ -3,8 +3,8 @@
 import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import Button from "../ui/Button";
-import CircularText from "../ui/CircularText";
+import Button from "../../components/ui/Button";
+import CircularText from "../../components/ui/CircularText";
 
 interface Slide {
   headline: string[];
@@ -221,4 +221,3 @@ export const HeroSection: React.FC = () => {
 };
 
 export default HeroSection;
-

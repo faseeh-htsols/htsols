@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const Footer: React.FC = () => {
   return (
@@ -13,21 +14,13 @@ export const Footer: React.FC = () => {
             {/* Logo */}
             <div className="flex items-center">
               <Link href="/" className="flex items-center gap-0">
-                <span className="text-2xl font-bold text-white tracking-tight">H</span>
-                <span className="text-2xl font-bold text-primary tracking-tight">T</span>
-                <svg
-                  width="28"
-                  height="24"
-                  viewBox="0 0 28 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="ml-0.5"
-                >
-                  <path d="M0 2H20" stroke="currentColor" strokeWidth="2" className="text-primary" />
-                  <path d="M0 12H16" stroke="currentColor" strokeWidth="2" className="text-primary" />
-                  <path d="M0 22H20" stroke="currentColor" strokeWidth="2" className="text-primary" />
-                </svg>
-                <span className="text-2xl font-bold text-white tracking-tight ml-0.5">OL</span>
+                <Image
+                  src={"/footer-logo.png"}
+                  width={300}
+                  height={300}
+                  className="w-[260px] h-[70px] object-contain"
+                  alt="HTSOLUTIONS LOGO"
+                />
               </Link>
             </div>
 
@@ -37,7 +30,7 @@ export const Footer: React.FC = () => {
 
             <div className="space-y-3">
               <h3 className="text-white text-2xl md:text-3xl font-bold leading-tight">
-                LET'S <br />
+                LET&apos;S <br />
                 WORK TOGETHER
               </h3>
               <button className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-black hover:bg-primary/90 transition-colors duration-300">
@@ -258,7 +251,9 @@ export const Footer: React.FC = () => {
       {/* Copyright */}
       <div className="border-t border-white/10">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 py-6">
-          <p className="text-white/40 text-xs text-center">© 2025 All rights reserved</p>
+          <p className="text-white/40 text-xs text-center">
+            © 2025 All rights reserved
+          </p>
         </div>
       </div>
     </footer>
@@ -266,4 +261,3 @@ export const Footer: React.FC = () => {
 };
 
 export default Footer;
-

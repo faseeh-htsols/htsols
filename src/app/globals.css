@@ -4,14 +4,18 @@
   --background: #0a0a0a;
   --foreground: #ffffff;
   --primary: #00A1A5;
+  --font-unbounded: "Unbounded", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: #00A1A5;
-  --font-sans: var(--font-outfit);
-  --font-mono: var(--font-geist-mono);
+  --color-secondary: #666666;
+  --color-tertiary: #0F0F0F;
+  --font-sans: var(--font-poppins);
+  --font-primary: var(--font-unbounded);
 }
 
 /* Spinning animation for circular text */
