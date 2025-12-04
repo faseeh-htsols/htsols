@@ -6,7 +6,7 @@ import HeadingTwo from "@/components/ui/heading-two";
 
 export const AboutSection: React.FC = () => {
   return (
-    <section className="relative bg-[#0a0a0a] py-20 overflow-hidden">
+    <section className="relative bg-black py-20 overflow-hidden">
       {/* Top accent line */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
 

@@ -45,9 +45,9 @@ const services: ServiceCard[] = [
 
 export const ServicesSection: React.FC = () => {
   return (
-    <section className="relative bg-[#0a0a0a] py-20 overflow-hidden">
+    <section className="relative bg-tertiary py-20 overflow-hidden">
       {/* Top accent line */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-primary via-primary to-transparent" />
 
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         {/* Section Heading */}
@@ -101,7 +101,7 @@ export const ServicesSection: React.FC = () => {
                         viewBox="0 0 25 25"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="fill-[#666666] transition-all duration-150 group-hover:fill-white"
+                        className="fill-secondary transition-all duration-150 group-hover:fill-white"
                       >
                         <path
                           fill-rule="evenodd"

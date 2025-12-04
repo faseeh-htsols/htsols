@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export const Navbar: React.FC = () => {
@@ -8,30 +10,15 @@ export const Navbar: React.FC = () => {
       <div className="flex items-center justify-between max-w-[1600px] mx-auto">
         {/* Logo */}
         <div className="flex items-center">
-          <a href="/" className="flex items-center gap-0">
-            <span className="text-2xl font-bold text-white tracking-tight">
-              H
-            </span>
-            <span className="text-2xl font-bold text-primary tracking-tight">
-              T
-            </span>
-            <svg
-              width="28"
-              height="24"
-              viewBox="0 0 28 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="ml-0.5"
-            >
-              {/* Stylized E with horizontal lines */}
-              <path d="M0 2H20" stroke="currentColor" strokeWidth="2" className="text-primary" />
-              <path d="M0 12H16" stroke="currentColor" strokeWidth="2" className="text-primary" />
-              <path d="M0 22H20" stroke="currentColor" strokeWidth="2" className="text-primary" />
-            </svg>
-            <span className="text-2xl font-bold text-white tracking-tight ml-0.5">
-              OL
-            </span>
-          </a>
+          <Link href="/" className="flex items-center gap-0">
+            <Image
+              className="w-[250px] h-[50px] object-contain"
+              src={"/footer-logo.png"}
+              width={300}
+              height={100}
+              alt="logo"
+            />
+          </Link>
         </div>
 
         {/* Center/Right Section */}
@@ -91,10 +78,34 @@ export const Navbar: React.FC = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <circle cx="8" cy="8" r="3" stroke="currentColor" strokeWidth="1.5" />
-                <circle cx="16" cy="8" r="3" stroke="currentColor" strokeWidth="1.5" />
-                <circle cx="8" cy="16" r="3" stroke="currentColor" strokeWidth="1.5" />
-                <circle cx="16" cy="16" r="3" stroke="currentColor" strokeWidth="1.5" />
+                <circle
+                  cx="8"
+                  cy="8"
+                  r="3"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                />
+                <circle
+                  cx="16"
+                  cy="8"
+                  r="3"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                />
+                <circle
+                  cx="8"
+                  cy="16"
+                  r="3"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                />
+                <circle
+                  cx="16"
+                  cy="16"
+                  r="3"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                />
               </svg>
             </button>
           </div>
@@ -105,4 +116,3 @@ export const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-

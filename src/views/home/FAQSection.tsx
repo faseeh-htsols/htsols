@@ -1,5 +1,6 @@
 "use client";
 
+import HeadingTwo from "@/components/ui/heading-two";
 import React, { useState } from "react";
 
 interface FAQItem {
@@ -51,13 +52,15 @@ export const FAQSection: React.FC = () => {
       {/* Bottom accent line */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
 
-      <div className="max-w-[900px] mx-auto px-6 md:px-12">
+      <div className="max-w-[1300px] mx-auto px-6 md:px-12">
         {/* Header */}
         <div className="text-center mb-16 space-y-3">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-wide">
+          <HeadingTwo className="text-center">
             FREQUENTLY ASKED QUESTIONS
-          </h2>
-          <p className="text-white/60 text-sm">Providing answers to your questions</p>
+          </HeadingTwo>
+          <p className="text-white/60 text-sm">
+            Providing answers to your questions
+          </p>
         </div>
 
         {/* FAQ Accordion */}
@@ -65,12 +68,16 @@ export const FAQSection: React.FC = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-white/20 rounded-lg overflow-hidden transition-all duration-300"
+              className={`border  rounded-lg overflow-hidden transition-all duration-300 ${
+                openIndex === index
+                  ? "bg-tertiary border-transparent"
+                  : "bg-transparent border-white"
+              }`}
             >
               {/* Question */}
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left bg-transparent hover:bg-white/5 transition-colors duration-200"
+                className="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left bg-transparent transition-colors duration-200"
               >
                 <span className="text-white text-sm md:text-base font-medium tracking-wider uppercase pr-4">
                   {faq.question}
@@ -86,7 +93,7 @@ export const FAQSection: React.FC = () => {
                     viewBox="0 0 16 16"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="text-black"
+                    className="text-white"
                   >
                     <path
                       d="M4 6L8 10L12 6"
@@ -102,11 +109,15 @@ export const FAQSection: React.FC = () => {
               {/* Answer */}
               <div
                 className={`transition-all duration-300 ease-in-out ${
-                  openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                  openIndex === index
+                    ? "max-h-96 opacity-100"
+                    : "max-h-0 opacity-0"
                 }`}
               >
                 <div className="px-6 md:px-8 pb-6 pt-2">
-                  <p className="text-white/70 text-sm leading-relaxed">{faq.answer}</p>
+                  <p className="text-white/70 text-sm leading-relaxed">
+                    {faq.answer}
+                  </p>
                 </div>
               </div>
             </div>
@@ -136,7 +147,13 @@ export const FAQSection: React.FC = () => {
               className="inline-flex items-center gap-3 px-8 py-3 rounded-full border border-white/30 text-white text-sm uppercase tracking-wider hover:bg-primary hover:border-primary hover:text-black transition-all duration-300"
             >
               Send Message
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M3 8H13M13 8L9 4M13 8L9 12"
                   stroke="currentColor"
@@ -154,4 +171,3 @@ export const FAQSection: React.FC = () => {
 };
 
 export default FAQSection;
-

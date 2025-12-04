@@ -138,73 +138,7 @@ body {
   animation: pulse-glow 4s ease-in-out infinite;
 }
 
-/* Embla carousel styles */
-.embla {
-  overflow: hidden;
-}
 
-.embla__container {
-  display: flex;
-}
-
-.embla__slide {
-  flex: 0 0 100%;
-  min-width: 0;
-}
-
-/* Work portfolio carousel */
-.portfolio-embla {
-  overflow: hidden;
-}
-
-.portfolio-embla__container {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.portfolio-embla__slide {
-  flex: 0 0 90%;
-  min-width: 0;
-}
-
-@media (min-width: 768px) {
-  .portfolio-embla__slide {
-    flex-basis: 65%;
-  }
-}
-
-@media (min-width: 1280px) {
-  .portfolio-embla__slide {
-    flex-basis: 50%;
-  }
-}
-
-/* Testimonials carousel */
-.testimonials-embla {
-  overflow: hidden;
-}
-
-.testimonials-embla__container {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.testimonials-embla__slide {
-  flex: 0 0 100%;
-  min-width: 0;
-}
-
-@media (min-width: 768px) {
-  .testimonials-embla__slide {
-    flex-basis: 48%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .testimonials-embla__slide {
-    flex-basis: 32%;
-  }
-}
 
 /* Marquee animation */
 @keyframes marquee {
@@ -230,4 +164,14 @@ body {
 
 .marquee-content:hover {
   animation-play-state: paused;
+}
+
+.swiper-slide {
+  flex: initial !important;
+  width: auto !important;
+  min-width: auto !important;
+}
+
+.swiper-wrapper {
+  display: flex !important;
 }
