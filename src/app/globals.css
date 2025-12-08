@@ -166,6 +166,7 @@ body {
   animation-play-state: paused;
 }
 
+/* 
 .swiper-slide {
   flex: initial !important;
   width: auto !important;
@@ -174,4 +175,105 @@ body {
 
 .swiper-wrapper {
   display: flex !important;
+} */
+
+/* ========================= */
+/*  TESTIMONIALS SWIPER      */
+/* ========================= */
+
+/* .testimonials-swiper {
+  overflow: visible !important;
+} */
+
+.testimonials-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+/* base state: side cards */
+.testimonials-swiper .swiper-slide {
+  transition: all 0.35s ease;
+  opacity: 0.25;
+  transform: scale(0.9);
+}
+
+/* neighbours a bit stronger */
+.testimonials-swiper .swiper-slide-prev,
+.testimonials-swiper .swiper-slide-next {
+  opacity: 0.5;
+  transform: scale(0.95);
+}
+
+/* center (active) card */
+.testimonials-swiper .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* soft shadow under center card */
+.testimonials-swiper .swiper-slide-active .testimonial-card::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -28px;
+  width: 70%;
+  height: 32px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.85) 0%, transparent 70%);
+  filter: blur(4px);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.gradient-box {
+  background: linear-gradient(90deg, #075B65 0%, #00838A 37.02%, #328A99 81.25%);
+
+}
+
+/* ========================= */
+/*  PORTFOLIO SWIPER         */
+/* ========================= */
+
+.portfolio-swiper {
+  overflow: visible;
+}
+
+.portfolio-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+/* base: all slides */
+.portfolio-swiper .swiper-slide {
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  opacity: 0.25;
+  transform: scale(0.9);
+}
+
+/* neighbours */
+.portfolio-swiper .swiper-slide-next,
+.portfolio-swiper .swiper-slide-prev {
+  opacity: 0.6;
+  transform: scale(0.95);
+}
+
+/* active center slide */
+.portfolio-swiper .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* soft halo shadow under active card like Figma */
+.portfolio-swiper .swiper-slide-active .portfolio-card::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -26px;
+  width: 70%;
+  height: 32px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.85) 0%, transparent 70%);
+  filter: blur(4px);
+  opacity: 0.9;
+  pointer-events: none;
 }

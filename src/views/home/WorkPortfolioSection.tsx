@@ -1,10 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import Autoplay from "embla-carousel-autoplay";
-import useEmblaCarousel from "embla-carousel-react";
+import React, { useRef, useState } from "react";
 import HeadingTwo from "@/components/ui/heading-two";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper";
+
+import "swiper/css";
 
 interface PortfolioSlide {
   label: string;
@@ -66,34 +70,8 @@ const portfolioSlides: PortfolioSlide[] = [
 ];
 
 export default function WorkPortfolioSection() {
-  const autoplayPlugin = useRef(
-    Autoplay({
-      delay: 5000,
-      stopOnInteraction: false,
-      stopOnMouseEnter: true,
-    })
-  );
-
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      loop: true,
-      align: "start",
-    },
-    [autoplayPlugin.current]
-  );
-
   const [selectedIndex, setSelectedIndex] = useState(0);
-
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-    emblaApi.on("select", onSelect);
-    onSelect();
-  }, [emblaApi, onSelect]);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   return (
     <section className="bg-[#050505] py-24 relative overflow-hidden">
@@ -101,7 +79,7 @@ export default function WorkPortfolioSection() {
         <div className="grid lg:grid-cols-[minmax(590px,420px)_1fr] gap-16 items-center">
           {/* LEFT SIDE */}
           <div className="space-y-6">
-            <HeadingTwo className="">
+            <HeadingTwo>
               OUR WORK <br /> PORTFOLIO
             </HeadingTwo>
 
@@ -119,14 +97,32 @@ export default function WorkPortfolioSection() {
             </a>
           </div>
 
-          {/* RIGHT SIDE – CAROUSEL */}
+          {/* RIGHT SIDE – CAROUSEL (Swiper) */}
           <div className="bg-[#0C0C0C]/90 rounded-[32px] p-6 border border-white/10 shadow-xl relative">
-            <div className="overflow-hidden" ref={emblaRef}>
-              <div className="flex gap-12">
-                {portfolioSlides.map((slide, idx) => (
+            <Swiper
+              modules={[Autoplay]}
+              className="portfolio-swiper"
+              loop
+              centeredSlides
+              slidesPerView={1.5} // width comes from our Tailwind classes
+              slidesPerGroup={1}
+              spaceBetween={48} // similar to gap-12
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+              onSlideChange={(swiper) => {
+                setSelectedIndex(swiper.realIndex);
+              }}
+            >
+              {portfolioSlides.map((slide, idx) => (
+                <SwiperSlide key={idx} className="!w-auto">
                   <div
-                    key={idx}
-                    className={`min-w-[430px] flex-[0_0_15%] grow-0 ${
+                    className={`min-w-[430px] ${
                       idx === portfolioSlides.length - 1 ? "mr-12" : ""
                     }`}
                   >
@@ -136,7 +132,7 @@ export default function WorkPortfolioSection() {
                         <div className="relative h-[300px] w-full rounded-xl overflow-hidden border border-black">
                           <Image
                             src={slide.image}
-                            alt=""
+                            alt={slide.label}
                             fill
                             className="object-contain"
                           />
@@ -174,11 +170,11 @@ export default function WorkPortfolioSection() {
                       </button>
                     </article>
                   </div>
-                ))}
-              </div>
-            </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
-            {/* DOTS */}
+            {/* DOTS (same visual design, now controlling Swiper) */}
             <div className="mt-8 flex gap-2">
               {portfolioSlides.map((_, i) => (
                 <button
@@ -186,7 +182,8 @@ export default function WorkPortfolioSection() {
                   className={`h-[6px] rounded-full transition-all ${
                     i === selectedIndex ? "w-8 bg-white" : "w-5 bg-white/30"
                   }`}
-                  onClick={() => emblaApi?.scrollTo(i)}
+                  onClick={() => swiperRef.current?.slideToLoop(i)}
+                  type="button"
                 />
               ))}
             </div>
