@@ -8,12 +8,9 @@ interface CircularTextProps {
 }
 
 export const CircularText: React.FC<CircularTextProps> = ({
-  text = "Agency Ht Solutions Marketing • ",
+  text = "Ht Solutions Marketing Agency",
   className = "",
 }) => {
-  // Repeat text to fill the circle
-  const repeatedText = text.repeat(2);
-
   return (
     <div className={`circular-text-container ${className}`}>
       <svg
@@ -27,12 +24,13 @@ export const CircularText: React.FC<CircularTextProps> = ({
             fill="none"
           />
         </defs>
-        <text className="fill-black text-[11px] uppercase tracking-[0.3em] font-medium">
+        <text className="fill-white text-[18px] uppercase tracking-[0.3em] font-medium">
           <textPath href="#circlePath" startOffset="0%">
-            {repeatedText}
+            {text}
           </textPath>
         </text>
       </svg>
+
       {/* Center arrow icon */}
       <div className="absolute inset-0 flex items-center justify-center">
         <svg
@@ -40,8 +38,7 @@ export const CircularText: React.FC<CircularTextProps> = ({
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="text-black"
+          className="text-white"
         >
           <path
             d="M7 17L17 7M17 7H7M17 7V17"
@@ -57,4 +54,3 @@ export const CircularText: React.FC<CircularTextProps> = ({
 };
 
 export default CircularText;
-

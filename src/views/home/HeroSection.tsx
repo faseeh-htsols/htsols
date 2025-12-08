@@ -46,11 +46,11 @@ export const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#0a0a0a]">
+    <section className="relative min-h-screen overflow-hidden bg-[url(/home-header.jpg)]">
       {/* Background with 3D terrain effect */}
-      <div className="absolute inset-0">
+      {/* <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#111] to-[#0a1a1a]" />
-        {/* Terrain overlay effect */}
+
         <div
           className="absolute inset-0 opacity-60"
           style={{
@@ -60,7 +60,7 @@ export const HeroSection: React.FC = () => {
             `,
           }}
         />
-        {/* Grid/mesh effect for terrain */}
+
         <div
           className="absolute bottom-0 left-0 right-0 h-[60%] opacity-30"
           style={{
@@ -73,10 +73,10 @@ export const HeroSection: React.FC = () => {
             transformOrigin: "bottom",
           }}
         />
-      </div>
+      </div> */}
 
       {/* 3D Polyhedron Shape */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/4 -translate-y-1/2 pointer-events-none">
+      {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/4 -translate-y-1/2 pointer-events-none">
         <svg
           width="400"
           height="400"
@@ -119,7 +119,7 @@ export const HeroSection: React.FC = () => {
             <circle cx="200" cy="200" r="4" />
           </g>
         </svg>
-      </div>
+      </div> */}
 
       {/* Carousel (Swiper) */}
       <Swiper
@@ -128,7 +128,7 @@ export const HeroSection: React.FC = () => {
         loop
         slidesPerView={1}
         autoplay={{
-          delay: 5000,
+          delay: 10000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
@@ -141,28 +141,36 @@ export const HeroSection: React.FC = () => {
         }}
       >
         {slides.map((slide, index) => (
-          <SwiperSlide key={index} className="min-h-screen flex items-center">
+          <SwiperSlide
+            key={index}
+            className=" relative min-h-screen flex! items-center"
+          >
             <div className="w-full max-w-[1600px] mx-auto px-6 md:px-12 pt-32 pb-20">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left Content */}
                 <div className="space-y-8">
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight">
+                  <h1 className="text-4xl md:text-5xl font-primary lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight">
                     {slide.headline.map((line, i) => (
                       <span key={i} className="block text-white">
                         {line}
                       </span>
                     ))}
-                    <span
-                      className="block text-transparent bg-clip-text"
-                      style={{
-                        WebkitTextStroke: "1px var(--color-primary)",
-                      }}
-                    >
-                      {slide.outlineWord}
+
+                    <span className="relative ">
+                      <span
+                        className="absolute bottom-3 left-0 w-full h-5 bg-primary "
+                        style={{
+                          background:
+                            "linear-gradient(90deg, #075B65 0%, #00838A 37.02%, #328A99 81.25%)",
+                        }}
+                      ></span>
+                      <span className="relative text-white">
+                        {slide.outlineWord}
+                      </span>
                     </span>
                   </h1>
 
-                  <div className="flex flex-wrap gap-4 pt-4">
+                  <div className="absolute bottom-[14%] flex flex-wrap gap-4 pt-4">
                     <Button variant="primary" href="#contact">
                       Start Your Project
                     </Button>
@@ -185,24 +193,30 @@ export const HeroSection: React.FC = () => {
       </Swiper>
 
       {/* Carousel Dots (unchanged visually, now control Swiper) */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => handleDotClick(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === selectedIndex
-                ? "bg-primary w-8"
-                : "bg-white/30 hover:bg-white/50"
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
+      <div className="absolute top-1/2 -translate-y-1/2 right-7 flex flex-col z-20 flex gap-2">
+        {slides.map((_, index) => {
+          const isActive = index === selectedIndex;
+          return (
+            <button
+              key={index}
+              onClick={() => handleDotClick(index)}
+              className={`w-2 h-8 rounded-full transition-all duration-300 ${
+                index === selectedIndex ? " h-14" : ""
+              }`}
+              style={{
+                background: isActive
+                  ? "linear-gradient(90deg, #075B65 0%, #00838A 37.02%, #328A99 81.25%)"
+                  : "#ffffff",
+              }}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          );
+        })}
       </div>
 
       {/* Circular Text Badge */}
       <div className="absolute bottom-12 right-12 z-20 hidden lg:block">
-        <div className="relative w-32 h-32 md:w-40 md:h-40 bg-white rounded-full flex items-center justify-center">
+        <div className="relative w-32 h-32 md:w-40 md:h-40  rounded-full flex items-center justify-center">
           <CircularText />
         </div>
       </div>
