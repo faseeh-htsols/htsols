@@ -234,36 +234,36 @@ body {
 /*  PORTFOLIO SWIPER         */
 /* ========================= */
 
-.portfolio-swiper {
+/* .portfolio-swiper {
   overflow: visible;
-}
+} */
 
-.portfolio-swiper .swiper-wrapper {
+/* .portfolio-swiper .swiper-wrapper {
   align-items: stretch;
-}
+} */
 
 /* base: all slides */
-.portfolio-swiper .swiper-slide {
+/* .portfolio-swiper .swiper-slide {
   transition: transform 0.35s ease, opacity 0.35s ease;
   opacity: 0.25;
   transform: scale(0.9);
-}
+} */
 
 /* neighbours */
-.portfolio-swiper .swiper-slide-next,
+/* .portfolio-swiper .swiper-slide-next,
 .portfolio-swiper .swiper-slide-prev {
   opacity: 0.6;
   transform: scale(0.95);
-}
+} */
 
 /* active center slide */
-.portfolio-swiper .swiper-slide-active {
+/* .portfolio-swiper .swiper-slide-active {
   opacity: 1;
   transform: scale(1);
-}
+} */
 
 /* soft halo shadow under active card like Figma */
-.portfolio-swiper .swiper-slide-active .portfolio-card::after {
+/* .portfolio-swiper .swiper-slide-active .portfolio-card::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -276,4 +276,4 @@ body {
   filter: blur(4px);
   opacity: 0.9;
   pointer-events: none;
-}
+} */

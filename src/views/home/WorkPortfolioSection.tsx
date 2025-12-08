@@ -23,7 +23,7 @@ const portfolioSlides: PortfolioSlide[] = [
     label: "AERO SCULPT",
     title: "WEB DEVELOPMENT",
     description:
-      "Since our establishment we have successfully served hundreds of clients worldwide. Our primary skills are around web designing and mobile application development.",
+      "High-performing teams that plug seamlessly into your workflows so you can scale faster.High-performing teams that plug",
     stats: ["UI/UX", "E-COMMERCE", "PERFORMANCE"],
     image: "/web-dev.png",
   },
@@ -31,7 +31,7 @@ const portfolioSlides: PortfolioSlide[] = [
     label: "VERTEX DASH",
     title: "DIGITAL PRODUCTS",
     description:
-      "We deliver conversion-focused product experiences that blend aesthetics with functionality.",
+      "High-performing teams that plug seamlessly into your workflows so you can scale faster.High-performing teams that plug",
     stats: ["PRODUCT DESIGN", "SAAS", "MOBILE"],
     image: "/web-dev.png",
   },
@@ -47,7 +47,7 @@ const portfolioSlides: PortfolioSlide[] = [
     label: "AERO SCULPT",
     title: "WEB DEVELOPMENT",
     description:
-      "Since our establishment we have successfully served hundreds of clients worldwide. Our primary skills are around web designing and mobile application development.",
+      "High-performing teams that plug seamlessly into your workflows so you can scale faster.High-performing teams that plug",
     stats: ["UI/UX", "E-COMMERCE", "PERFORMANCE"],
     image: "/web-dev.png",
   },
@@ -55,7 +55,7 @@ const portfolioSlides: PortfolioSlide[] = [
     label: "VERTEX DASH",
     title: "DIGITAL PRODUCTS",
     description:
-      "We deliver conversion-focused product experiences that blend aesthetics with functionality.",
+      "High-performing teams that plug seamlessly into your workflows so you can scale faster.High-performing teams that plug",
     stats: ["PRODUCT DESIGN", "SAAS", "MOBILE"],
     image: "/web-dev.png",
   },
@@ -98,13 +98,13 @@ export default function WorkPortfolioSection() {
           </div>
 
           {/* RIGHT SIDE – CAROUSEL (Swiper) */}
-          <div className="bg-[#0C0C0C]/90 rounded-[32px] p-6 border border-white/10 shadow-xl relative">
+          <div className="relative">
             <Swiper
               modules={[Autoplay]}
               className="portfolio-swiper"
               loop
               centeredSlides
-              slidesPerView={1.5} // width comes from our Tailwind classes
+              slidesPerView={1.4} // width comes from our Tailwind classes
               slidesPerGroup={1}
               spaceBetween={48} // similar to gap-12
               autoplay={{
@@ -120,12 +120,8 @@ export default function WorkPortfolioSection() {
               }}
             >
               {portfolioSlides.map((slide, idx) => (
-                <SwiperSlide key={idx} className="!w-auto">
-                  <div
-                    className={`min-w-[430px] ${
-                      idx === portfolioSlides.length - 1 ? "mr-12" : ""
-                    }`}
-                  >
+                <SwiperSlide key={idx} className="">
+                  <div className={``}>
                     <article className="rounded-[26px] bg-[#111] border border-white/10 p-6 shadow-lg flex flex-col gap-6">
                       {/* IMAGE CARD */}
                       <div className="bg-black rounded-[22px] p-4 shadow">
