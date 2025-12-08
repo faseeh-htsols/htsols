@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Unbounded, Poppins } from "next/font/google";
+import { Unbounded, Poppins, Jost } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -13,6 +13,11 @@ const popins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800", "900"],
+});
+const jost = Jost({
+  variable: "--font-jost",
+  subsets: ["latin"],
+  weight: ["600"],
 });
 
 export const metadata: Metadata = {
@@ -38,7 +43,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${unbounded.variable} ${popins.variable} antialiased`}>
+      <body
+        className={`${unbounded.variable} ${popins.variable} ${jost.variable} antialiased`}
+      >
         <Navbar />
         <main>{children}</main>
         <Footer />

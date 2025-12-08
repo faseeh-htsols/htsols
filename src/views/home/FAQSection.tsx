@@ -2,7 +2,12 @@
 
 import HeadingTwo from "@/components/ui/heading-two";
 import React, { useState } from "react";
-
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 interface FAQItem {
   question: string;
   answer: string;
@@ -65,106 +70,27 @@ export const FAQSection: React.FC = () => {
 
         {/* FAQ Accordion */}
         <div className="space-y-4 mb-12">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className={`border  rounded-lg overflow-hidden transition-all duration-300 ${
-                openIndex === index
-                  ? "bg-tertiary border-transparent"
-                  : "bg-transparent border-white"
-              }`}
-            >
-              {/* Question */}
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full flex items-center justify-between px-6 md:px-8 py-5 text-left bg-transparent transition-colors duration-200"
+          <Accordion type="single" className="space-y-4 mb-12" collapsible>
+            {faqs.map((faq, index) => (
+              <AccordionItem
+                key={index}
+                className="
+    border border-white border-b! px-4 bg-transparent rounded-lg transition-all
+    data-[state=open]:border-tertiary
+    data-[state=open]:bg-tertiary
+  "
+                value={String(index)}
               >
-                <span className="text-white text-sm md:text-base font-medium tracking-wider uppercase pr-4">
+                <AccordionTrigger className="text-white font-secondary text-lg uppercase hover:no-underline cursor-pointer">
                   {faq.question}
-                </span>
-                <div
-                  className={`flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center transition-transform duration-300 ${
-                    openIndex === index ? "rotate-180" : ""
-                  }`}
-                >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="text-white"
-                  >
-                    <path
-                      d="M4 6L8 10L12 6"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-              </button>
-
-              {/* Answer */}
-              <div
-                className={`transition-all duration-300 ease-in-out ${
-                  openIndex === index
-                    ? "max-h-96 opacity-100"
-                    : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="px-6 md:px-8 pb-6 pt-2">
-                  <p className="text-white/70 text-sm leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
+                </AccordionTrigger>
+                <AccordionContent className="text-white">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
-
-        {/* Custom Question Form */}
-        <form onSubmit={handleSubmit} className="space-y-6 mt-16">
-          <div className="border border-white/20 rounded-lg overflow-hidden">
-            <textarea
-              value={customQuestion}
-              onChange={(e) => setCustomQuestion(e.target.value)}
-              placeholder="Ask us what you want to know..."
-              rows={6}
-              className="w-full bg-transparent px-6 md:px-8 py-6 text-white placeholder:text-white/40 text-sm focus:outline-none resize-none"
-            />
-          </div>
-
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <p className="text-white/50 text-xs md:text-sm">
-              We will answer your questions via <br className="md:hidden" />
-              email within 48 hours.
-            </p>
-
-            <button
-              type="submit"
-              className="inline-flex items-center gap-3 px-8 py-3 rounded-full border border-white/30 text-white text-sm uppercase tracking-wider hover:bg-primary hover:border-primary hover:text-black transition-all duration-300"
-            >
-              Send Message
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 8H13M13 8L9 4M13 8L9 12"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-        </form>
       </div>
     </section>
   );
