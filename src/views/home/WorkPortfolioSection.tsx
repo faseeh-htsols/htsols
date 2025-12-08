@@ -103,7 +103,7 @@ export default function WorkPortfolioSection() {
               modules={[Autoplay]}
               className="portfolio-swiper"
               loop
-              centeredSlides
+              // centeredSlides
               slidesPerView={1.4} // width comes from our Tailwind classes
               slidesPerGroup={1}
               spaceBetween={48} // similar to gap-12
@@ -129,8 +129,9 @@ export default function WorkPortfolioSection() {
                           <Image
                             src={slide.image}
                             alt={slide.label}
-                            fill
-                            className="object-contain"
+                            className="w-full h-full object-contain"
+                            width={500}
+                            height={500}
                           />
                         </div>
                       </div>

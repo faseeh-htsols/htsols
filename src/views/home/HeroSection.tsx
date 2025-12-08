@@ -1,8 +1,12 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper";
+
+import "swiper/css";
+
 import Button from "../../components/ui/Button";
 import CircularText from "../../components/ui/CircularText";
 
@@ -34,31 +38,12 @@ const slides: Slide[] = [
 ];
 
 export const HeroSection: React.FC = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 5000, stopOnInteraction: false }),
-  ]);
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const swiperRef = useRef<SwiperType | null>(null);
 
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-    onSelect();
-    emblaApi.on("select", onSelect);
-    return () => {
-      emblaApi.off("select", onSelect);
-    };
-  }, [emblaApi, onSelect]);
-
-  const scrollTo = useCallback(
-    (index: number) => {
-      if (emblaApi) emblaApi.scrollTo(index);
-    },
-    [emblaApi]
-  );
+  const handleDotClick = (index: number) => {
+    swiperRef.current?.slideToLoop(index);
+  };
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#0a0a0a]">
@@ -100,9 +85,7 @@ export const HeroSection: React.FC = () => {
           xmlns="http://www.w3.org/2000/svg"
           className="opacity-80"
         >
-          {/* Icosahedron/Polyhedron wireframe */}
           <g stroke="rgba(0,161,165,0.6)" strokeWidth="0.5">
-            {/* Outer hexagon vertices and connections */}
             <polygon
               points="200,50 320,120 320,280 200,350 80,280 80,120"
               fill="rgba(0,161,165,0.05)"
@@ -113,14 +96,12 @@ export const HeroSection: React.FC = () => {
             <line x1="200" y1="350" x2="200" y2="200" />
             <line x1="80" y1="280" x2="200" y2="200" />
             <line x1="80" y1="120" x2="200" y2="200" />
-            {/* Inner structure */}
             <line x1="200" y1="50" x2="320" y2="120" />
             <line x1="320" y1="120" x2="320" y2="280" />
             <line x1="320" y1="280" x2="200" y2="350" />
             <line x1="200" y1="350" x2="80" y2="280" />
             <line x1="80" y1="280" x2="80" y2="120" />
             <line x1="80" y1="120" x2="200" y2="50" />
-            {/* Cross lines */}
             <line x1="200" y1="50" x2="320" y2="280" />
             <line x1="200" y1="50" x2="80" y2="280" />
             <line x1="320" y1="120" x2="80" y2="280" />
@@ -128,7 +109,6 @@ export const HeroSection: React.FC = () => {
             <line x1="80" y1="120" x2="320" y2="280" />
             <line x1="80" y1="120" x2="200" y2="350" />
           </g>
-          {/* Glowing vertices */}
           <g fill="rgba(0,161,165,0.8)">
             <circle cx="200" cy="50" r="3" />
             <circle cx="320" cy="120" r="3" />
@@ -141,65 +121,75 @@ export const HeroSection: React.FC = () => {
         </svg>
       </div>
 
-      {/* Carousel */}
-      <div className="relative z-10 min-h-screen" ref={emblaRef}>
-        <div className="flex min-h-screen">
-          {slides.map((slide, index) => (
-            <div
-              key={index}
-              className="flex-[0_0_100%] min-w-0 min-h-screen flex items-center"
-            >
-              <div className="w-full max-w-[1600px] mx-auto px-6 md:px-12 pt-32 pb-20">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                  {/* Left Content */}
-                  <div className="space-y-8">
-                    {/* Headline */}
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight">
-                      {slide.headline.map((line, i) => (
-                        <span key={i} className="block text-white">
-                          {line}
-                        </span>
-                      ))}
-                      <span
-                        className="block text-transparent bg-clip-text"
-                        style={{
-                          WebkitTextStroke: "1px var(--color-primary)",
-                        }}
-                      >
-                        {slide.outlineWord}
+      {/* Carousel (Swiper) */}
+      <Swiper
+        modules={[Autoplay]}
+        className="relative z-10 min-h-screen"
+        loop
+        slidesPerView={1}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
+        onSlideChange={(swiper) => {
+          // realIndex = index in slides[] when loop is enabled
+          setSelectedIndex(swiper.realIndex);
+        }}
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index} className="min-h-screen flex items-center">
+            <div className="w-full max-w-[1600px] mx-auto px-6 md:px-12 pt-32 pb-20">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                {/* Left Content */}
+                <div className="space-y-8">
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight">
+                    {slide.headline.map((line, i) => (
+                      <span key={i} className="block text-white">
+                        {line}
                       </span>
-                    </h1>
+                    ))}
+                    <span
+                      className="block text-transparent bg-clip-text"
+                      style={{
+                        WebkitTextStroke: "1px var(--color-primary)",
+                      }}
+                    >
+                      {slide.outlineWord}
+                    </span>
+                  </h1>
 
-                    {/* CTA Buttons */}
-                    <div className="flex flex-wrap gap-4 pt-4">
-                      <Button variant="primary" href="#contact">
-                        Start Your Project
-                      </Button>
-                      <Button variant="outline" href="#services">
-                        View All Services
-                      </Button>
-                    </div>
+                  <div className="flex flex-wrap gap-4 pt-4">
+                    <Button variant="primary" href="#contact">
+                      Start Your Project
+                    </Button>
+                    <Button variant="outline" href="#services">
+                      View All Services
+                    </Button>
                   </div>
+                </div>
 
-                  {/* Right Content - Description */}
-                  <div className="lg:pl-12">
-                    <p className="text-white/70 text-base md:text-lg leading-relaxed max-w-md ml-auto">
-                      {slide.description}
-                    </p>
-                  </div>
+                {/* Right Content - Description */}
+                <div className="lg:pl-12">
+                  <p className="text-white/70 text-base md:text-lg leading-relaxed max-w-md ml-auto">
+                    {slide.description}
+                  </p>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-      </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
-      {/* Carousel Dots */}
+      {/* Carousel Dots (unchanged visually, now control Swiper) */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
         {slides.map((_, index) => (
           <button
             key={index}
-            onClick={() => scrollTo(index)}
+            onClick={() => handleDotClick(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
               index === selectedIndex
                 ? "bg-primary w-8"

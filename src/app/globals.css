@@ -277,3 +277,6 @@ body {
   opacity: 0.9;
   pointer-events: none;
 } */
+.portfolio-swiper .swiper-wrapper {
+  width: 100%;
+}
