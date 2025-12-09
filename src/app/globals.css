@@ -187,7 +187,7 @@ body {
 }
 
 .marquee-content {
-  display: inline-block;
+  display: flex;
   animation: marquee 30s linear infinite;
   will-change: transform;
 }
