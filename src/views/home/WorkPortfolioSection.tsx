@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import HeadingTwo from "@/components/ui/heading-two";
+import Button from "@/components/ui/Button";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -136,12 +137,9 @@ export default function WorkPortfolioSection() {
                 application development.
               </p>
 
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 text-white uppercase tracking-[0.3em] text-xs hover:bg-white hover:text-black transition"
-              >
-                GET A FREE CONSULTATION →
-              </a>
+              <Button href="/" variant="outline">
+                Get A Free Consultation
+              </Button>
             </div>
           </div>
         </div>

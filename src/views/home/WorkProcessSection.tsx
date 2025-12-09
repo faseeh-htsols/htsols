@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/components/ui/Button";
 import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
 import React from "react";
@@ -47,28 +48,9 @@ export const WorkProcessSection: React.FC = () => {
               clients world wide. Our primary skills are around web designing
               and mobile application development. We have a team of...
             </p>
-
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-primary/50 bg-primary/10 text-primary uppercase tracking-wider text-xs hover:bg-primary hover:text-black transition-all duration-300"
-            >
-              GET A FREE CONSULTATION
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 8H13M13 8L9 4M13 8L9 12"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </a>
+            <Button href="/" variant="outline">
+              Get A Free Consultation
+            </Button>
           </div>
         </div>
         <div className="-mt-[20%] relative">
