@@ -85,14 +85,14 @@ const TestimonialsSection = () => {
       ></div>
 
       {/* vertical label on the left */}
-      <div className="hidden lg:block absolute left-16 top-1/2 -translate-y-1/2">
+      <div className="hidden lg:block absolute left-0 top-[27%] -translate-y-1/2">
         <div className="flex">
           {/* teal strip */}
-          <div className="w-[3px] bg-[#00A1A5]" />
+          {/* <div className="w-[3px] bg-[#00A1A5]" /> */}
           {/* label */}
-          <div className="h-[120px] w-[36px] bg-[#181818] border border-white/10 flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.7)]">
-            <span className="text-[10px] tracking-[0.35em] text-white/70 [writing-mode:vertical-rl] rotate-180">
-              TESTIMONIALS
+          <div className="h-[130px] w-[36px] bg-[#333333] border border-white/10 flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.7)]">
+            <span className=" text-white [writing-mode:vertical-rl] rotate-180">
+              Testimonials
             </span>
           </div>
         </div>
