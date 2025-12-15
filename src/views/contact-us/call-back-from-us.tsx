@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const CallBackFromUs = () => {
   return (
-    <div>
+    <div className="bg-black py-10">
       <Container>
         <div className="mb-4">
           <Image
@@ -16,14 +16,14 @@ const CallBackFromUs = () => {
           />
         </div>
       </Container>
-      <div>
+      <div className="py-18">
         <Container>
-          <div className="border border-[#5C5C5C] rounded-lg px-4 flex gap-4 relative">
-            <div className="grow w-[60%] py-8 flex flex-col gap-3">
+          <div className="border border-[#5C5C5C] rounded-lg px-4 flex gap-4 relative text-white">
+            <div className="w-[56%] py-8 flex flex-col gap-4">
               <h2 className="font-primary uppercase text-2xl">
                 Want A Call back from us ?
               </h2>
-              <p>
+              <p className="text-xl">
                 HT-Solutions provides you Website Designing, Web Development,
                 SEO Services, Graphic Designing.
               </p>
@@ -31,13 +31,13 @@ const CallBackFromUs = () => {
                 <Button href="/">Schedule A call Back</Button>
               </div>
             </div>
-            <div className="w-[40%] absolute -top-10 right-0">
+            <div className="w-[37%] absolute -top-10 right-0">
               <Image
                 src={"/call-back-from-us.png"}
                 alt="Call back from us"
                 width={700}
                 height={700}
-                className="w-full h-[330px] object-contain"
+                className="w-full h-[380px] object-contain"
               />
             </div>
           </div>
