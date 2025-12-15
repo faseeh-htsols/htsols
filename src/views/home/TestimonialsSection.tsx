@@ -28,7 +28,7 @@ const testimonials: Testimonial[] = [
     name: "ALAN BAKER",
     title: "CEO",
     content:
-      "Working with HtSolutions has been an incredible experience. They truly listened to our needs and delivered a stunning design that exceeded our expectations. We couldn't be happier with the final product!",
+      "Working with HtSolutions has been an incredible experience. They truly listened to our needs and delivered a stunning design that exceeded our expectations. We couldn't be happier with the final product!<br/><br/>Working with HtSolutions has been an incredible experience. They truly listened to our needs and delivered a stunning design that exceeded our expectations",
     image:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces",
   },
@@ -104,7 +104,7 @@ const TestimonialsSection = () => {
             </span>
           </HeadingTwo>
 
-          <p className="mt-5  text-[#DBDBDB] max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-5  text-[#DBDBDB] max-w-[700px] mx-auto leading-relaxed">
             Read through our testimonials to see why our clients love working
             with us and how we can help you achieve your business goals through
             creative and effective design.
@@ -126,7 +126,7 @@ const TestimonialsSection = () => {
               slidesPerView: 2,
             },
             1024: {
-              slidesPerView: 3,
+              slidesPerView: 2.1,
             },
           }}
           navigation={{
@@ -139,43 +139,31 @@ const TestimonialsSection = () => {
             <SwiperSlide key={i}>
               <div className="relative testimonial-card h-full bg-[#111111] rounded-[24px] px-10 py-10 flex flex-col border border-white/6 shadow-[0_28px_80px_rgba(0,0,0,0.8)]">
                 {/* quote icon */}
-                <svg
-                  width="32"
-                  height="26"
-                  viewBox="0 0 40 32"
-                  fill="none"
-                  className="text-[#00A1A5] mb-7"
-                >
-                  <path
-                    d="M0 17.92C0 11.52 1.6 6.4 4.8 2.56C8.05333 0.853333 11.3067 0 14.56 0C15.7333 0 16.6933 0.213333 17.44 0.64C18.24 1.01333 18.64 1.76 18.64 2.88C18.64 4 18.24 4.77333 17.44 5.2C16.6933 5.62667 15.7333 5.84 14.56 5.84C11.7867 5.84 9.30667 6.53333 7.12 7.92C4.98667 9.30667 3.92 11.52 3.92 14.56H7.84C10.5067 14.56 12.6133 15.3067 14.16 16.8C15.76 18.24 16.56 20.2667 16.56 22.88C16.56 25.4933 15.76 27.5733 14.16 29.12C12.6133 30.6133 10.5067 31.36 7.84 31.36C5.17333 31.36 3.04 30.6133 1.44 29.12C-0.106667 27.5733 -0.533333 25.4933 -0.533333 22.88L0 17.92Z"
-                    fill="currentColor"
-                    opacity="0.5"
-                  />
-                </svg>
-
-                <p className="text-white/80 text-[12px] leading-relaxed mb-9">
-                  {t.content}
-                </p>
-
-                {/* author */}
-                <div className="flex items-center gap-4 mt-auto">
-                  <div className="relative w-12 h-12 rounded-full overflow-hidden border border-[#00A1A5]/40">
-                    <Image
-                      src={t.image}
-                      alt={t.name}
-                      fill
-                      className="object-cover"
-                    />
+                <div className="flex justify-between gap-2 mb-4">
+                  <div className="flex gap-3 items-center">
+                    <div className="w-16 h-15 bg-[#E5E7EC] rounded-full"></div>
+                    <div>
+                      <h3 className="font-primary text-white uppercase">
+                        {t.name}
+                      </h3>
+                      <p className="uppercase text-[#DDDDDD]">{t.title}</p>
+                    </div>
                   </div>
                   <div>
-                    <p className="text-white text-[12px] font-semibold tracking-[0.18em] uppercase">
-                      {t.name}
-                    </p>
-                    <p className="text-[11px] text-white/45 uppercase">
-                      {t.title}
-                    </p>
+                    <Image
+                      src={"/quoteup.svg"}
+                      className="w-[45px] h-[45px]"
+                      width={45}
+                      height={45}
+                      alt="qoute icon"
+                    />
                   </div>
                 </div>
+
+                <p
+                  dangerouslySetInnerHTML={{ __html: t.content }}
+                  className="text-white/80 text-[12px] leading-relaxed mb-9"
+                ></p>
               </div>
             </SwiperSlide>
           ))}
@@ -184,24 +172,38 @@ const TestimonialsSection = () => {
         {/* navigation buttons (exactly like design) */}
         <div className="flex items-center justify-center gap-5 mt-10">
           <button className="testi-prev w-10 h-10 rounded-full border border-white/55 flex items-center justify-center text-white hover:border-[#00A1A5] hover:text-[#00A1A5] transition-colors">
-            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="24"
+                cy="24"
+                r="23.5"
+                transform="matrix(-1 0 0 1 48 0)"
+                stroke="white"
+              />
               <path
-                d="M12 4L6 10L12 16"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+                d="M11.2929 24.7071C10.9024 24.3166 10.9024 23.6834 11.2929 23.2929L17.6569 16.9289C18.0474 16.5384 18.6805 16.5384 19.0711 16.9289C19.4616 17.3195 19.4616 17.9526 19.0711 18.3431L13.4142 24L19.0711 29.6569C19.4616 30.0474 19.4616 30.6805 19.0711 31.0711C18.6805 31.4616 18.0474 31.4616 17.6569 31.0711L11.2929 24.7071ZM36 24V25H12V24V23H36V24Z"
+                fill="white"
               />
             </svg>
           </button>
           <button className="testi-next w-10 h-10 rounded-full border border-white/55 flex items-center justify-center text-white hover:border-[#00A1A5] hover:text-[#00A1A5] transition-colors">
-            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="24" cy="24" r="23.5" stroke="white" />
               <path
-                d="M8 4L14 10L8 16"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+                d="M36.7071 24.7071C37.0976 24.3166 37.0976 23.6834 36.7071 23.2929L30.3431 16.9289C29.9526 16.5384 29.3195 16.5384 28.9289 16.9289C28.5384 17.3195 28.5384 17.9526 28.9289 18.3431L34.5858 24L28.9289 29.6569C28.5384 30.0474 28.5384 30.6805 28.9289 31.0711C29.3195 31.4616 29.9526 31.4616 30.3431 31.0711L36.7071 24.7071ZM12 24V25H36V24V23H12V24Z"
+                fill="white"
               />
             </svg>
           </button>

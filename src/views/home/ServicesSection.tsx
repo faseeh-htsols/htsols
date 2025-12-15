@@ -60,7 +60,7 @@ export const ServicesSection: React.FC = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-black py-7 pl-7 rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-300"
+              className="group relative bg-black py-7 pl-7 group hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-300"
             >
               {/* Number Label */}
               <div className=" text-[20px] mb-3">
@@ -94,14 +94,14 @@ export const ServicesSection: React.FC = () => {
 
                   {/* Arrow Icon */}
                   <div className="pt-2">
-                    <button className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60 group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all duration-300">
+                    <button className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60  group-hover:border-white group-hover:text-primary transition-all duration-300 group-hover:bg-white">
                       <svg
                         width="25"
                         height="25"
                         viewBox="0 0 25 25"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="fill-secondary transition-all duration-150 group-hover:fill-white"
+                        className="fill-secondary transition-all duration-150 group-hover:fill-[#328A99]"
                       >
                         <path
                           fill-rule="evenodd"
