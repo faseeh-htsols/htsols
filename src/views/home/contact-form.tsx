@@ -5,12 +5,19 @@ import React from "react";
 
 const ContactForm = () => {
   return (
-    <div className="bg-[url(/contact-form-bg.jpg)] bg-cover relative">
+    <div className="bg-[url(/get-in-touch-bg.jpg)] bg-cover relative py-10">
+      <div
+        className="pointer-events-none absolute -top-5 left-0 h-10 w-[140%]
+           bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
+           [clip-path:polygon(0_63%,100%_0,100%_55%,0_100%)]
+           opacity-90"
+      ></div>
+
       {/* <div className="pointer-events-none h-full w-full absolute inset-x-0 top-0 flex justify-center">
         <div className="w-full h-full  max-w-[1600px] bg-gradient-to-r from-transparent via-[#00A1A5] to-transparent" />
       </div> */}
       <Container>
-        <div className="relative py-10 flex gap-4 flex-col max-w-5xl mx-auto">
+        <div className="relative py-10 flex gap-8 flex-col max-w-5xl mx-auto">
           <div className="flex justify-center">
             <Image
               src={"/chat.svg"}
@@ -29,51 +36,51 @@ const ContactForm = () => {
             Lahore, Pakistan.
           </p>
         </div>
-        <div className="relative mt-10">
-          <div className="grid grid-cols-2 gap-3 mb-3">
+        <div className="relative mt-8">
+          <div className="grid grid-cols-2 gap-3 mb-5">
             <div>
               <input
                 type="text"
-                className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white text-white"
+                className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                 placeholder="First Name"
               />
             </div>
             <div>
               <input
                 type="text"
-                className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white text-white"
+                className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                 placeholder="Last Name"
               />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-3 mb-3">
+          <div className="grid grid-cols-2 gap-3 mb-5">
             <div>
               <input
                 type="text"
-                className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white text-white"
+                className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                 placeholder="Contact No"
               />
             </div>
             <div>
               <input
                 type="text"
-                className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white text-white"
+                className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                 placeholder="Email Address"
               />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-3 mb-3">
+          <div className="grid grid-cols-2 gap-3 mb-5">
             <div>
               <input
                 type="text"
-                className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white text-white"
+                className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                 placeholder="City/Area"
               />
             </div>
             <select
               name=""
               id=""
-              className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-sm px-4 backdrop:backdrop-blur-2xl placeholder:text-white text-white"
+              className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-sm px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
             >
               <option value="">web dev</option>
               <option value=""> cgi / vfx /3d animations </option>
@@ -84,7 +91,7 @@ const ContactForm = () => {
           <div className="mb-3">
             <textarea
               name=""
-              className="h-28 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white text-white"
+              className="h-28 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 py-3 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
               placeholder="Enquiry  details"
               id=""
             ></textarea>

@@ -122,6 +122,13 @@ export default function WorkPortfolioSection() {
 
   return (
     <section className="bg-[#050505] py-24 relative overflow-hidden">
+      <div
+        className="pointer-events-none absolute -top-5 left-0 h-10 w-[140%]
+           bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
+           [clip-path:polygon(0_63%,100%_0,100%_55%,0_100%)]
+           opacity-90"
+      ></div>
+
       <div className="flex relative justify-end items-center">
         {/* LEFT SIDE (fixed to the container width calc) */}
         <div className="absolute top-0 left-0 w-full flex items-center h-full">
@@ -150,9 +157,20 @@ export default function WorkPortfolioSection() {
             modules={[Autoplay]}
             className="portfolio-swiper"
             loop
-            slidesPerView={2.8}
+            // slidesPerView={2.8}
             slidesPerGroup={1}
             spaceBetween={48}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 1.5,
+              },
+              1624: {
+                slidesPerView: 2.5,
+              },
+            }}
             autoplay={{
               delay: AUTOPLAY_DELAY,
               disableOnInteraction: false,
@@ -184,33 +202,44 @@ export default function WorkPortfolioSection() {
 
                   {/* TEXT AREA */}
                   <div>
-                    <p className="text-[11px] uppercase tracking-widest text-white/50 mb-1">
-                      Case Study
-                    </p>
-                    <h3 className="text-xl text-white font-semibold leading-snug">
+                    <h3 className="text-xl font-primary text-white font-semibold leading-snug">
                       {slide.title}
                     </h3>
                   </div>
 
-                  <p className="text-white/70 text-sm leading-relaxed">
+                  <p className="text-white/70 text-sm leading-relaxed mb-8">
                     {slide.description}
                   </p>
 
-                  <div className="flex gap-2 flex-wrap">
-                    {slide.stats.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 text-[10px] uppercase tracking-widest text-white/60 border border-white/10 rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
                   {/* BUTTON */}
-                  <button className="text-white text-[12px] uppercase tracking-widest hover:text-primary transition flex items-center gap-2 pt-2">
-                    View Service →
-                  </button>
+                  <div className="flex">
+                    <button className="text-white text-[12px] relative uppercase tracking-widest hover:text-primary transition flex items-center gap-2 py-2 ps-4 pr-8 border-t border-b border-white">
+                      View Service
+                      <span className="absolute bottom-1 right-0">
+                        <svg
+                          width="29"
+                          height="29"
+                          viewBox="0 0 29 29"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-5 h-5"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6.45514 21.8225C5.94598 21.3134 5.94597 20.4878 6.45514 19.9787L19.9769 6.45695C20.486 5.94779 21.3116 5.94779 21.8207 6.45695C22.3299 6.9661 22.3299 7.79166 21.8207 8.30082L8.29901 21.8225C7.78984 22.3317 6.96429 22.3317 6.45514 21.8225Z"
+                            fill="white"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M8.53123 7.37574C8.53124 6.65565 9.115 6.07188 9.83509 6.07187L20.8983 6.07185C21.6183 6.07191 22.2021 6.65568 22.2021 7.37571L22.2021 18.4389C22.2021 19.159 21.6183 19.7427 20.8983 19.7428C20.1783 19.7427 19.5945 19.159 19.5944 18.4389L19.5945 8.67951L9.83504 8.67955C9.11502 8.67949 8.53129 8.09576 8.53123 7.37574Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
                 </article>
               </SwiperSlide>
             ))}

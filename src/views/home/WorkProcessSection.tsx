@@ -34,9 +34,15 @@ export const WorkProcessSection: React.FC = () => {
   return (
     <section className="relative bg-[#0a0a0a] py-24 overflow-hidden">
       {/* Top accent line */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
+      {/* <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" /> */}
       {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
+      {/* <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" /> */}
+      <div
+        className="pointer-events-none absolute -top-5 left-0 h-10 w-[140%]
+           bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
+           [clip-path:polygon(0_63%,100%_0,100%_55%,0_100%)]
+           opacity-90"
+      ></div>
 
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
         <div className="">

@@ -70,13 +70,19 @@ const TestimonialsSection = () => {
   return (
     <section className="relative bg-[#050505] py-24 overflow-hidden">
       {/* top teal line (same as Figma) */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 flex justify-center">
+      {/* <div className="pointer-events-none absolute inset-x-0 top-0 flex justify-center">
         <div className="h-[2px] w-full max-w-[1600px] bg-gradient-to-r from-transparent via-[#00A1A5] to-transparent" />
-      </div>
+      </div> */}
       {/* bottom teal line */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center">
+      {/* <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center">
         <div className="h-[2px] w-full max-w-[1600px] bg-gradient-to-r from-transparent via-[#00A1A5] to-transparent" />
-      </div>
+      </div> */}
+      <div
+        className="pointer-events-none absolute -top-5 left-0 h-10 w-[140%]
+           bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
+           [clip-path:polygon(0_63%,100%_0,100%_55%,0_100%)]
+           opacity-90"
+      ></div>
 
       {/* vertical label on the left */}
       <div className="hidden lg:block absolute left-16 top-1/2 -translate-y-1/2">

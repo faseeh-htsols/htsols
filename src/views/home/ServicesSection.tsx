@@ -46,8 +46,15 @@ const services: ServiceCard[] = [
 export const ServicesSection: React.FC = () => {
   return (
     <section className="relative bg-tertiary py-20 overflow-hidden">
+      <div
+        className="pointer-events-none absolute -top-5 left-0 h-10 w-[140%]
+           bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
+           [clip-path:polygon(0_63%,100%_0,100%_55%,0_100%)]
+           opacity-90"
+      ></div>
+
       {/* Top accent line */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-primary via-primary to-transparent" />
+      {/* <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-primary via-primary to-transparent" /> */}
 
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         {/* Section Heading */}
