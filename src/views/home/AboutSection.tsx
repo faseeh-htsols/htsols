@@ -17,7 +17,7 @@ export const AboutSection: React.FC = () => {
       ></div>
 
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        <div className="flex gap-12">
+        <div className="flex lg:flex-row flex-col gap-12">
           {/* Left Content */}
           <div className="space-y-6 grow">
             {/* Heading */}
@@ -54,17 +54,17 @@ export const AboutSection: React.FC = () => {
           </div>
 
           {/* Right Content - Decorative Star */}
-          <div className="w-[40%] justify-end items-start relative">
-            <div className="absolute -top-[50px] -right-[50px] z-1">
+          <div className="lg:w-[40%] justify-end items-start relative">
+            <div className="absolute -top-[25px] lg:-top-[50px] -right-[25px] lg:-right-[50px] z-1">
               <Image
                 src={"/star.svg"}
                 alt="decorative star"
                 width={150}
                 height={150}
-                className="w-[100px] h-[100px]"
+                className="w-[50px] h-[50px] lg:w-[100px] lg:h-[100px]"
               />
             </div>
-            <div className="w-full h-full">
+            <div className="w-full h-full min-h-[300px]">
               <Image src={"/about-two.png"} alt="image" fill />
             </div>
           </div>

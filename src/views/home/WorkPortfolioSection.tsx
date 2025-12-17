@@ -129,9 +129,9 @@ export default function WorkPortfolioSection() {
            opacity-90"
       ></div>
 
-      <div className="flex relative justify-end items-center">
+      <div className="flex flex-col lg:flex-row relative justify-end items-center">
         {/* LEFT SIDE (fixed to the container width calc) */}
-        <div className="absolute top-0 left-0 w-full flex items-center h-full">
+        <div className="relative lg:absolute top-0 left-0 w-full flex items-center h-full">
           <div className="w-[calc(100%-((100vw-1600px)/2)+(50px/2)+(15px/2))] mx-auto max-w-[1600px] px-6 md:px-12">
             <div className="space-y-6">
               <HeadingTwo>
@@ -152,7 +152,7 @@ export default function WorkPortfolioSection() {
         </div>
 
         {/* RIGHT SIDE – CAROUSEL (Swiper) */}
-        <div className="relative w-[55%]">
+        <div className="relative px-2 lg:px-0 w-full lg:w-[55%]">
           <Swiper
             modules={[Autoplay]}
             className="portfolio-swiper"

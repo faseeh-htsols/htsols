@@ -7,13 +7,13 @@ import Button from "../ui/Button";
 
 export const Navbar: React.FC = () => {
   return (
-    <nav className="fixed bg-black top-0 left-0 right-0 z-50 px-6 md:px-12 py-6">
+    <nav className="fixed w-full bg-black top-0 left-0 right-0 z-50 px-6 md:px-12 py-6">
       <div className="flex items-center justify-between max-w-[1600px] mx-auto">
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-0">
             <Image
-              className="w-[250px] h-[50px] object-contain"
+              className="w-[150px] md:w-[250px] h-[50px] object-contain"
               src={"/footer-logo.png"}
               width={300}
               height={100}
@@ -25,7 +25,9 @@ export const Navbar: React.FC = () => {
         {/* Center/Right Section */}
         <div className="flex items-center gap-6">
           {/* Book Consultation Button */}
-          <Button href="/contact-us">Book a Free Consultation</Button>
+          <div className="md:block hidden">
+            <Button href="/contact-us">Book a Free Consultation</Button>
+          </div>
 
           {/* Menu Icons */}
           <div className="flex items-center gap-4">

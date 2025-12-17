@@ -11,7 +11,7 @@ const HeadingTwo = ({
 }) => {
   return (
     <h2
-      className={`text-5xl text-white font-bold font-primary uppercase ${
+      className={`text-4xl lg:text-5xl text-white font-bold font-primary uppercase ${
         className ? className : ""
       }`}
     >

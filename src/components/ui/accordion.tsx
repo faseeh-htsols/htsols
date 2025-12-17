@@ -41,7 +41,7 @@ function AccordionTrigger({
         {...props}
       >
         {children}
-        <span className="accordion-icon bg-[#00A1A5] w-[46px] h-[46px] rounded-full flex justify-center items-center transition-transform duration-200">
+        <span className="shrink-0 accordion-icon bg-[#00A1A5] w-[46px] h-[46px] rounded-full flex justify-center items-center transition-transform duration-200">
           <ChevronDownIcon className="text-white pointer-events-none size-7 shrink-0 translate-y-0.5" />
         </span>
       </AccordionPrimitive.Trigger>
