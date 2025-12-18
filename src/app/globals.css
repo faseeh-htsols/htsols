@@ -397,3 +397,57 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@media all and (min-width:1200px) {
+  .container-for-work-process {
+    max-width: 1200px;
+    padding: 0 15px;
+  }
+
+  .container-for-work-process .item-0 {
+    left: 0;
+    top: 63%;
+  }
+
+  .container-for-work-process .item-1 {
+    left: 33%;
+    top: 56%;
+  }
+
+  .container-for-work-process .item-2 {
+    left: 63%;
+    top: 51%;
+  }
+
+  .container-for-work-process .item-3 {
+    right: 0;
+    top: 26%;
+  }
+}
+
+@media all and (min-width:1600px) {
+  .container-for-work-process {
+    max-width: 1600px;
+    padding-right: 0%;
+  }
+
+  .container-for-work-process .item-0 {
+    left: 0;
+    top: 67%;
+  }
+
+  .container-for-work-process .item-1 {
+    left: 33%;
+    top: 60%;
+  }
+
+  .container-for-work-process .item-2 {
+    left: 63%;
+    top: 53%;
+  }
+
+  .container-for-work-process .item-3 {
+    right: 0;
+    top: 13%;
+  }
+}

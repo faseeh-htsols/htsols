@@ -12,14 +12,14 @@ const CallBackFromUs = () => {
             alt="map"
             width={900}
             height={900}
-            className="w-full h-[600px] object-contain object-center"
+            className="w-full h-[300px] lg:h-[600px] object-contain object-center"
           />
         </div>
       </Container>
       <div className="py-18">
         <Container>
-          <div className="border border-[#5C5C5C] rounded-lg px-4 flex gap-4 relative text-white">
-            <div className="w-[56%] py-8 flex flex-col gap-4">
+          <div className="border border-[#5C5C5C] rounded-lg px-4 flex lg:flex-row flex-col gap-4 relative text-white">
+            <div className="lg:w-[56%] py-8 flex flex-col gap-4">
               <h2 className="font-primary uppercase text-2xl">
                 Want A Call back from us ?
               </h2>
@@ -31,7 +31,7 @@ const CallBackFromUs = () => {
                 <Button href="/">Schedule A call Back</Button>
               </div>
             </div>
-            <div className="w-[37%] absolute -top-10 right-0">
+            <div className="lg:w-[37%] lg:absolute lg:-top-10 lg:right-0">
               <Image
                 src={"/call-back-from-us.png"}
                 alt="Call back from us"

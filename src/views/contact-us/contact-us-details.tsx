@@ -32,7 +32,7 @@ const ContactUsDetails = () => {
             <br /> Mobile Application Development Video Production
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-9 py-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-9 py-8">
           {data.map((item) => (
             <div
               key={item.name}

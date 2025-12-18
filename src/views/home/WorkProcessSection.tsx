@@ -29,7 +29,15 @@ const processSteps: ProcessStep[] = [
       "We deliver, review performance, and refine for continuous improvement.",
   },
 ];
-
+// ${
+//                 index === 0
+//                   ? "left-0 top-[66%]"
+//                   : index === 1
+//                   ? "left-[33%] top-[60%]"
+//                   : index === 2
+//                   ? "left-[63%] top-[53%]"
+//                   : "right-0 top-[15%]"
+//               }
 export const WorkProcessSection: React.FC = () => {
   return (
     <section className="relative bg-[#0a0a0a] py-24 overflow-hidden">
@@ -44,7 +52,7 @@ export const WorkProcessSection: React.FC = () => {
            opacity-90"
       ></div>
 
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
+      <div className=" container-for-work-process mx-auto px-6 md:px-12 relative z-10">
         <div className="">
           {/* Left Column */}
           <div className="space-y-6">
@@ -70,15 +78,7 @@ export const WorkProcessSection: React.FC = () => {
           {processSteps.map((item, index) => (
             <div
               key={item.title}
-              className={`absolute text-white ${
-                index === 0
-                  ? "left-0 top-[66%]"
-                  : index === 1
-                  ? "left-[33%] top-[60%]"
-                  : index === 2
-                  ? "left-[63%] top-[53%]"
-                  : "right-0 top-[15%]"
-              }`}
+              className={`absolute ${`item-${index}`} text-white `}
             >
               <div className="bg-white w-[65px] h-[65px] rounded-3xl flex justify-center items-center">
                 <div className="gradient-box w-5 h-5 rounded-lg " />

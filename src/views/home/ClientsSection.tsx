@@ -54,13 +54,13 @@ export const ClientsSection: React.FC = () => {
           <div className="relative w-full max-w-[1100px] mx-auto">
             {/* === Vertical Lines (Y-Axis) === */}
             <div
-              className="absolute top-0 bottom-0 left-1/3 w-px "
+              className="hidden lg:block absolute top-0 bottom-0 left-1/3 w-px "
               style={{
                 background: "linear-gradient(180deg, #00A1A5 0%, #1A2626 100%)",
               }}
             ></div>
             <div
-              className="absolute top-0 bottom-0 left-2/3 w-px "
+              className="hidden lg:block  absolute top-0 bottom-0 left-2/3 w-px "
               style={{
                 background: "linear-gradient(180deg, #00A1A5 0%, #1A2626 100%)",
               }}
@@ -68,26 +68,26 @@ export const ClientsSection: React.FC = () => {
 
             {/* === Horizontal Lines (X-Axis) === */}
             <div
-              className="absolute left-0 right-0 top-1/4 h-px "
+              className="hidden lg:block absolute left-0 right-0 top-1/4 h-px "
               style={{
                 background: "linear-gradient(90deg, #00A1A5 0%, #1A2626 100%)",
               }}
             ></div>
             <div
-              className="absolute left-0 right-0 top-2/4 h-px "
+              className="hidden lg:block absolute left-0 right-0 top-2/4 h-px "
               style={{
                 background: "linear-gradient(90deg, #00A1A5 0%, #1A2626 100%)",
               }}
             ></div>
             <div
-              className="absolute left-0 right-0 top-3/4 h-px"
+              className="hidden lg:block absolute left-0 right-0 top-3/4 h-px"
               style={{
                 background: "linear-gradient(90deg, #00A1A5 0%, #1A2626 100%)",
               }}
             ></div>
 
             {/* === Grid Content === */}
-            <div className="grid grid-cols-3 grid-rows-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 sm:grid-rows-4">
               {clients.map((client, index) => (
                 <div
                   key={index}
@@ -98,7 +98,7 @@ export const ClientsSection: React.FC = () => {
                     alt={client.name}
                     width={140}
                     height={60}
-                    className="object-contain"
+                    className="object-contain w-[80%] h-[70px] sm:w-[140px] sm:h-[60px]"
                   />
                 </div>
               ))}

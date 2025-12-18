@@ -10,11 +10,11 @@ export const Footer: React.FC = () => {
     <footer className="bg-[#0a0a0a] border-t border-white/10">
       <div className="bg-tertiary">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 py-16 md:py-20">
-          <div className="flex gap-12 lg:gap-8">
+          <div className="flex flex-col md:flex-row gap-12 lg:gap-8">
             {/* Column 1 - Brand */}
-            <div className="space-y-6 w-[45%]">
+            <div className="space-y-6 md:w-[45%]">
               {/* Logo */}
-              <div className="flex items-center">
+              <div className="flex md:justify-start justify-center items-center">
                 <Link href="/" className="flex items-center gap-0">
                   <Image
                     src={"/footer-logo.png"}
@@ -26,13 +26,13 @@ export const Footer: React.FC = () => {
                 </Link>
               </div>
 
-              <p className="text-white/40 text-xs uppercase tracking-wider">
+              <p className="text-white/40 md:text-left text-center text-xs uppercase tracking-wider">
                 TAGLINE WILL BE ADDED HERE
               </p>
 
               <div className="space-y-3">
-                <h3 className="text-white flex flex-col uppercase font-primary gap-2 text-5xl md:text-3xl font-bold leading-tight">
-                  <span className="flex items-center gap-3">
+                <h3 className="text-white md:text-left text-center  flex flex-col uppercase font-primary gap-2 text-5xl md:text-3xl font-bold leading-tight">
+                  <span className="flex md:justify-start justify-center items-center gap-3">
                     LET&apos;S{" "}
                     <span className="rounded-full w-[120px] h-[60px] bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] flex items-center justify-center">
                       <svg
@@ -62,7 +62,7 @@ export const Footer: React.FC = () => {
             </div>
 
             {/* Column 2 - Quick Links */}
-            <div className="w-[13%]">
+            <div className="md:w-[13%]">
               <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-6">
                 QUICK LINKS
               </h4>

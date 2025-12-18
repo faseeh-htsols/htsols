@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface ButtonProps {
@@ -31,12 +32,13 @@ export const Button: React.FC<ButtonProps> = ({
     return (
       <a href={href} className={combinedStyles}>
         {children}
-        <svg
+        {/* <svg
           width="34"
           height="34"
           viewBox="0 0 34 34"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className="w-[30px] h-[30px]"
         >
           <g clip-path="url(#clip0_397_144)">
             <path
@@ -86,7 +88,14 @@ export const Button: React.FC<ButtonProps> = ({
               />
             </clipPath>
           </defs>
-        </svg>
+        </svg> */}
+        <Image
+          src={"/right-arrow-btn.png"}
+          alt="aroow"
+          width={30}
+          height={30}
+          className="w-[30px] h-[30px]"
+        />
       </a>
     );
   }

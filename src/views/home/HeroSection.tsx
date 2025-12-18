@@ -169,15 +169,6 @@ export const HeroSection: React.FC = () => {
                       </span>
                     </span>
                   </h1>
-
-                  <div className="absolute bottom-[14%] flex flex-wrap gap-4 pt-4">
-                    <Button variant="primary" href="#contact">
-                      Start Your Project
-                    </Button>
-                    <Button variant="outline" href="#services">
-                      View All Services
-                    </Button>
-                  </div>
                 </div>
 
                 {/* Right Content - Description */}
@@ -186,6 +177,14 @@ export const HeroSection: React.FC = () => {
                     {slide.description}
                   </p>
                 </div>
+              </div>
+              <div className="lg:absolute lg:bottom-[14%] flex flex-wrap gap-4 pt-4">
+                <Button variant="primary" href="#contact">
+                  Start Your Project
+                </Button>
+                <Button variant="outline" href="#services">
+                  View All Services
+                </Button>
               </div>
             </div>
           </SwiperSlide>

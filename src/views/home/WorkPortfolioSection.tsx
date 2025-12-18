@@ -129,7 +129,7 @@ export default function WorkPortfolioSection() {
            opacity-90"
       ></div>
 
-      <div className="flex flex-col lg:flex-row relative justify-end items-center">
+      <div className="flex flex-col lg:gap-0 gap-9 lg:flex-row relative justify-end items-center">
         {/* LEFT SIDE (fixed to the container width calc) */}
         <div className="relative lg:absolute top-0 left-0 w-full flex items-center h-full">
           <div className="w-[calc(100%-((100vw-1600px)/2)+(50px/2)+(15px/2))] mx-auto max-w-[1600px] px-6 md:px-12">
