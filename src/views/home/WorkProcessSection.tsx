@@ -67,7 +67,7 @@ export const WorkProcessSection: React.FC = () => {
             </Button>
           </div>
         </div>
-        <div className="-mt-[20%] relative">
+        <div className="-mt-[20%] svg-curve relative">
           <Image
             src={"/svg-work-process.svg"}
             alt="curve"
@@ -84,6 +84,31 @@ export const WorkProcessSection: React.FC = () => {
                 <div className="gradient-box w-5 h-5 rounded-lg " />
               </div>
               <div className="mt-16 relative">
+                <h3
+                  className="font-primary text-2xl mb-4"
+                  dangerouslySetInnerHTML={{ __html: item.title }}
+                />
+                <p className="max-w-[250px]">{item.description}</p>
+                <div className="absolute right-0 -top-5 font-primary text-9xl opacity-25">
+                  {index + 1}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="ipad-settings mt-7 relative grid sm:grid-cols-2 gap-10">
+          <div className="hidden sm:block absolute top-0 h-full w-1 bg-white left-1/2 -translate-x-1/2"></div>
+          <div className="hidden sm:block absolute top-1/2 h-1 w-full bg-white left-0 -translate-y-1/2"></div>
+          {processSteps.map((item, index) => (
+            <div
+              key={item.title}
+              className={`relative  ${`item-${index}`} text-white `}
+            >
+              <div className=" absolute -bottom-5 h-1 w-full bg-white sm:hidden"></div>
+              <div className="bg-white w-[65px] h-[65px] rounded-3xl flex justify-center items-center">
+                <div className="gradient-box w-5 h-5 rounded-lg " />
+              </div>
+              <div className="mt-8 sm:mt-16 relative">
                 <h3
                   className="font-primary text-2xl mb-4"
                   dangerouslySetInnerHTML={{ __html: item.title }}

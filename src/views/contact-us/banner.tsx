@@ -47,7 +47,7 @@ const Banner = () => {
           </p>
         </div>
         <div className="relative mt-8">
-          <div className="grid grid-cols-2 gap-3 mb-5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-5">
             <div>
               <input
                 type="text"
@@ -63,7 +63,7 @@ const Banner = () => {
               />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-3 mb-5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-5">
             <div>
               <input
                 type="text"
@@ -79,7 +79,7 @@ const Banner = () => {
               />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-3 mb-5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-5">
             <div>
               <input
                 type="text"
@@ -92,10 +92,21 @@ const Banner = () => {
               id=""
               className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-sm px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
             >
-              <option value="">web dev</option>
-              <option value=""> cgi / vfx /3d animations </option>
-              <option value=""> staff augmentation </option>
-              <option value=""> Complete digital transformation </option>
+              <option value="" className="bg-black text-white">
+                web dev
+              </option>
+              <option value="" className="bg-black text-white">
+                {" "}
+                cgi / vfx /3d animations{" "}
+              </option>
+              <option value="" className="bg-black text-white">
+                {" "}
+                staff augmentation{" "}
+              </option>
+              <option value="" className="bg-black text-white">
+                {" "}
+                Complete digital transformation{" "}
+              </option>
             </select>
           </div>
           <div className="mb-3">

@@ -398,10 +398,30 @@ body {
   }
 }
 
+@media (max-width: 639px) {
+  .ipad-settings {}
+}
+
+@media (max-width: 1199px) {
+  .svg-curve {
+    display: none;
+    /* Use !important to override other styles */
+  }
+
+  .ipad-settings {
+    display: grid;
+
+  }
+}
+
 @media all and (min-width:1200px) {
   .container-for-work-process {
     max-width: 1200px;
     padding: 0 15px;
+  }
+
+  .ipad-settings {
+    display: none !important;
   }
 
   .container-for-work-process .item-0 {
