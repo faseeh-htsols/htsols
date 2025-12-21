@@ -32,13 +32,14 @@ export const Navbar: React.FC = () => {
           {/* Menu Icons */}
           <div className="flex items-center gap-4">
             {/* Menu Toggle Icon */}
-            <button className="text-white hover:text-primary transition-colors">
+            <button className="text-white hover:text-primary transition-colors cursor-pointer">
               <svg
                 width="53"
                 height="53"
                 viewBox="0 0 53 53"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                className="w-8 h-8"
               >
                 <path
                   d="M13.9711 23.0826H9.11156C3.23157 23.0826 0 19.8511 0 13.9711V9.11157C0 3.23157 3.23157 7.62939e-06 9.11156 7.62939e-06H13.9711C19.8511 7.62939e-06 23.0826 3.23157 23.0826 9.11157V13.9711C23.0826 19.8511 19.8511 23.0826 13.9711 23.0826ZM9.11156 3.64463C5.27256 3.64463 3.64462 5.27256 3.64462 9.11157V13.9711C3.64462 17.8101 5.27256 19.438 9.11156 19.438H13.9711C17.8101 19.438 19.438 17.8101 19.438 13.9711V9.11157C19.438 5.27256 17.8101 3.64463 13.9711 3.64463H9.11156Z"

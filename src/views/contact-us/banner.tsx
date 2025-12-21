@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="bg-black relative py-10 mt-10">
+    <div className="bg-black relative py-10 pt-24 ">
       {/* <div className="pointer-events-none h-full w-full absolute inset-x-0 top-0 flex justify-center">
         <div className="w-full h-full  max-w-[1600px] bg-gradient-to-r from-transparent via-[#00A1A5] to-transparent" />
       </div> */}
