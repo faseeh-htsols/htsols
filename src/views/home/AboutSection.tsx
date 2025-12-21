@@ -6,7 +6,7 @@ import HeadingTwo from "@/components/ui/heading-two";
 
 export const AboutSection: React.FC = () => {
   return (
-    <section className="relative bg-black py-20  [clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]">
+    <section className="relative bg-black py-20  [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]">
       {/* Top accent line */}
       {/* <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" /> */}
       {/* <div
