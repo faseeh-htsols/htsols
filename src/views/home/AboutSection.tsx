@@ -6,15 +6,15 @@ import HeadingTwo from "@/components/ui/heading-two";
 
 export const AboutSection: React.FC = () => {
   return (
-    <section className="relative bg-black py-20 overflow-hidden">
+    <section className="relative bg-black py-20  [clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]">
       {/* Top accent line */}
       {/* <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" /> */}
-      <div
-        className="pointer-events-none absolute -top-5 left-0 h-10 w-[140%]
+      {/* <div
+        className="pointer-events-none absolute bottom-0 left-0 h-[3%] w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
-           [clip-path:polygon(0_63%,100%_0,100%_55%,0_100%)]
+           [clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]
            opacity-90"
-      ></div>
+      ></div> */}
 
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="flex lg:flex-row flex-col gap-12">
@@ -64,8 +64,13 @@ export const AboutSection: React.FC = () => {
                 className="w-[50px] h-[50px] lg:w-[100px] lg:h-[100px]"
               />
             </div>
-            <div className="w-full h-full min-h-[300px]">
-              <Image src={"/about-two.png"} alt="image" fill />
+            <div className="w-full relative h-full min-h-[300px]">
+              <Image
+                src={"/about-two.png"}
+                alt="image"
+                className="object-cover"
+                fill
+              />
             </div>
           </div>
         </div>

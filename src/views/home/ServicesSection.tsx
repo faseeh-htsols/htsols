@@ -45,12 +45,11 @@ const services: ServiceCard[] = [
 
 export const ServicesSection: React.FC = () => {
   return (
-    <section className="relative bg-tertiary py-20 overflow-hidden">
+    <section className="relative bg-tertiary py-20 overflow-visible  -mt-[3%] [clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)]">
       <div
-        className="pointer-events-none absolute -top-5 left-0 h-10 w-[140%]
+        className="pointer-events-none absolute z-2 top-0 left-0 h-7 -rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
-           [clip-path:polygon(0_63%,100%_0,100%_55%,0_100%)]
-           opacity-90"
+          "
       ></div>
 
       {/* Top accent line */}
