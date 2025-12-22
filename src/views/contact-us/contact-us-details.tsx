@@ -22,7 +22,7 @@ const data = [
 ];
 const ContactUsDetails = () => {
   return (
-    <div className="bg-black text-white pb-10">
+    <div className="bg-black text-white pb-24">
       <Container>
         <div className="flex flex-col gap-5 mb-7">
           <HeadingTwo className="text-center">Contact us details</HeadingTwo>
