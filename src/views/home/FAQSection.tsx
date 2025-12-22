@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Container from "@/components/ui/container";
 interface FAQItem {
   question: string;
   answer: string;
@@ -59,7 +60,7 @@ export const FAQSection: React.FC = () => {
           "
       ></div>
 
-      <div className="max-w-[1300px] mx-auto px-6 md:px-12">
+      <Container>
         {/* Header */}
         <div className="text-center mb-16 space-y-3">
           <HeadingTwo className="text-center">
@@ -93,7 +94,7 @@ export const FAQSection: React.FC = () => {
             ))}
           </Accordion>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

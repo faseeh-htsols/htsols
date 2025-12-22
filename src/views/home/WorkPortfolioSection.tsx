@@ -131,7 +131,7 @@ export default function WorkPortfolioSection() {
       <div className="flex flex-col lg:gap-0 gap-9 lg:flex-row relative justify-end items-center">
         {/* LEFT SIDE (fixed to the container width calc) */}
         <div className="relative lg:absolute top-0 left-0 w-full flex items-center h-full">
-          <div className="w-[calc(100%-((100vw-1600px)/2)+(50px/2)+(15px/2))] mx-auto max-w-[1600px] px-6 md:px-12">
+          <div className="w-[calc(100%-((100vw-1600px)/2)+(50px/2)+(15px/2))] mx-auto max-w-[1600px] px-5">
             <div className="space-y-6">
               <HeadingTwo>
                 OUR WORK <br /> PORTFOLIO
@@ -142,10 +142,11 @@ export default function WorkPortfolioSection() {
                 clients. Our primary skills are in web designing and mobile
                 application development.
               </p>
-
-              <Button href="/" variant="outline">
-                Get A Free Consultation
-              </Button>
+              <div className="flex">
+                <Button href="/" variant="outline">
+                  Get A Free Consultation
+                </Button>
+              </div>
             </div>
           </div>
         </div>

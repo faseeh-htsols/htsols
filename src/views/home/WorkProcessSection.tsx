@@ -51,7 +51,7 @@ export const WorkProcessSection: React.FC = () => {
           "
       ></div>
 
-      <div className=" container-for-work-process mx-auto px-6 md:px-12 relative z-10">
+      <div className=" container-for-work-process mx-auto px-5  relative z-10">
         <div className="">
           {/* Left Column */}
           <div className="space-y-6">
@@ -61,9 +61,11 @@ export const WorkProcessSection: React.FC = () => {
               clients world wide. Our primary skills are around web designing
               and mobile application development. We have a team of...
             </p>
-            <Button href="/" variant="outline">
-              Get A Free Consultation
-            </Button>
+            <div className="flex">
+              <Button href="/" variant="outline">
+                Get A Free Consultation
+              </Button>
+            </div>
           </div>
         </div>
         <div className="-mt-[20%] svg-curve relative">
@@ -88,7 +90,7 @@ export const WorkProcessSection: React.FC = () => {
                   dangerouslySetInnerHTML={{ __html: item.title }}
                 />
                 <p className="max-w-[250px]">{item.description}</p>
-                <div className="absolute right-0 -top-5 font-primary text-9xl opacity-25">
+                <div className="absolute right-0 -top-5 text-9xl opacity-25 font-tertiary font-semibold">
                   {index + 1}
                 </div>
               </div>

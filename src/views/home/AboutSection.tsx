@@ -3,10 +3,11 @@
 import React from "react";
 import Image from "next/image";
 import HeadingTwo from "@/components/ui/heading-two";
+import Container from "@/components/ui/container";
 
 export const AboutSection: React.FC = () => {
   return (
-    <section className="relative bg-black py-20  [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]">
+    <section className="relative bg-black py-25  [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]">
       {/* Top accent line */}
       {/* <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" /> */}
       {/* <div
@@ -16,7 +17,7 @@ export const AboutSection: React.FC = () => {
            opacity-90"
       ></div> */}
 
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+      <Container>
         <div className="flex lg:flex-row flex-col gap-12">
           {/* Left Content */}
           <div className="space-y-6 grow">
@@ -54,7 +55,7 @@ export const AboutSection: React.FC = () => {
           </div>
 
           {/* Right Content - Decorative Star */}
-          <div className="lg:w-[40%] justify-end items-start relative">
+          <div className="lg:w-[30%] shrink-0 justify-end items-start relative">
             <div className="absolute -top-[25px] lg:-top-[50px] -right-[25px] lg:-right-[50px] z-1">
               <Image
                 src={"/star.svg"}
@@ -74,7 +75,7 @@ export const AboutSection: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

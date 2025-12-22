@@ -9,6 +9,7 @@ import "swiper/css";
 
 import Button from "../../components/ui/Button";
 import CircularText from "../../components/ui/CircularText";
+import Container from "@/components/ui/container";
 
 interface Slide {
   headline: string[];
@@ -145,7 +146,8 @@ export const HeroSection: React.FC = () => {
             key={index}
             className=" relative min-h-screen flex! items-center"
           >
-            <div className="w-full max-w-[1600px] mx-auto px-6 md:px-12 pt-32 pb-20">
+            {/* <div className="w-full max-w-[1600px] mx-auto px-6 md:px-12 pt-32 pb-20"> */}
+            <Container>
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left Content */}
                 <div className="space-y-8">
@@ -186,7 +188,8 @@ export const HeroSection: React.FC = () => {
                   View All Services
                 </Button>
               </div>
-            </div>
+            </Container>
+            {/* </div> */}
           </SwiperSlide>
         ))}
       </Swiper>

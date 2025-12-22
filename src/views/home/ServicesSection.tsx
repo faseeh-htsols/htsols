@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import HeadingTwo from "@/components/ui/heading-two";
+import Container from "@/components/ui/container";
 
 interface ServiceCard {
   title: string;
@@ -55,7 +56,7 @@ export const ServicesSection: React.FC = () => {
       {/* Top accent line */}
       {/* <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-primary via-primary to-transparent" /> */}
 
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+      <Container>
         {/* Section Heading */}
         <div className="text-center mb-16">
           <HeadingTwo span="OFFER"> WHAT WE</HeadingTwo>
@@ -127,7 +128,7 @@ export const ServicesSection: React.FC = () => {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

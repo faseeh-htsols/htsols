@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import HeadingTwo from "@/components/ui/heading-two";
+import Container from "@/components/ui/container";
 
 interface Client {
   name: string;
@@ -43,7 +44,7 @@ export const ClientsSection: React.FC = () => {
         {/* Top accent line */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
 
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <Container>
           {/* Header */}
           <div className="text-center mb-16">
             <HeadingTwo className=" text-white tracking-wider">
@@ -103,7 +104,7 @@ export const ClientsSection: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
+        </Container>
 
         {/* Scrolling Marquee */}
       </section>
