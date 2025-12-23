@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${unbounded.variable} ${popins.variable} ${jost.variable} ${open_Sans.variable} antialiased`}
+        className={`${unbounded.variable} bg-black ${popins.variable} ${jost.variable} ${open_Sans.variable} antialiased`}
       >
         <Navbar />
         <main>{children}</main>
