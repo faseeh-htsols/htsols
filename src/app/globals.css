@@ -116,6 +116,22 @@ body {
   background-clip: text;
 }
 
+/* Blue gradient text (used in portfolio subname) */
+.gradient-text-blue {
+  background: linear-gradient(90deg, #075B65 0%, #00838A 37.02%, #328A99 81.25%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hover gradient for process step numbers */
+.process-step:hover .process-step-number {
+  background: linear-gradient(90deg, #075B65 0%, #00838A 37.02%, #328A99 81.25%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Glow effect */
 .glow {
   box-shadow: 0 0 20px rgba(0, 161, 165, 0.3);
