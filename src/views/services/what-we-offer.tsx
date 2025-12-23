@@ -14,7 +14,7 @@ const WhatWeOffer = () => {
     <div>
       <Container>
         <div className="flex flex-row gap-5">
-          <div className="w-[250px] text-white shrink-0 pr-5 border-r border-white">
+          <div className="w-[250px] text-white shrink-0 pr-5 border-r border-white pt-10">
             <h2 className="uppercase">What WE Offer</h2>
             <p>
               HT-Solutions provides you Website Designing, Web Development, SEO
@@ -28,21 +28,26 @@ const WhatWeOffer = () => {
             </div>
           </div>
 
-          <div className="grow">
+          <div className="grow pt-10">
             <Accordion type="single" className="space-y-4 mb-12" collapsible>
               {SERVICES_SERVICES_OFFERED_ACCORDION.map((item, index) => (
                 <AccordionItem
                   key={item.title}
                   value={String(index)}
                   className="
-                    border border-transparent border-b! px-4 bg-transparent rounded-lg transition-all
-                    data-[state=open]:border-[#2C2C2C] data-[state=open]:bg-tertiary
+                    border border-[#2C2C2C] border-b! px-4 bg-transparent rounded-lg transition-all
+                    data-[state=open]:border-transparent data-[state=open]:bg-tertiary
                     
                   "
                 >
-                  <AccordionTrigger className="text-white font-secondary text-lg uppercase hover:no-underline cursor-pointer">
-                    <div>
-                      <div>{parse(item.icons)}</div>
+                  <AccordionTrigger
+                    className="text-white font-secondary text-lg uppercase hover:no-underline cursor-pointer  [&[data-state=closed]_.offer-icon_svg]:fill-white/60
+    [&[data-state=open]_.offer-icon_svg]:fill-white"
+                  >
+                    <div className="flex gap-3 items-center">
+                      <div className="offer-icon [&_svg]:w-12 [&_svg]:h-12">
+                        {parse(item.icons)}
+                      </div>
                       <h3>{item.title}</h3>
                     </div>
                   </AccordionTrigger>
