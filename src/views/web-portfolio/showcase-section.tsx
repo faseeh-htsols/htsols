@@ -1,7 +1,27 @@
 import Container from "@/components/ui/container";
 import Image from "next/image";
 
-const showcaseItems = [
+type ShowcaseLabel = {
+  name: string;
+  subname: string;
+  href: string;
+};
+
+type ShowcaseItem =
+  | {
+      variant: "blur";
+      name: string;
+      subname: string;
+      image: string;
+      href: string;
+    }
+  | {
+      variant: "dual";
+      image: string;
+      labels: ShowcaseLabel[];
+    };
+
+const showcaseItems: ShowcaseItem[] = [
   {
     variant: "blur",
     name: "Website Name Here",
