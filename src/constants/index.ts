@@ -130,3 +130,20 @@ export const SERVICES_SERVICES_OFFERED_ACCORDION = [
     para: "HT-Solutions provides you Website Designing, Web Development, SEO Services, Graphic Designing, Mobile Application Development Video Production, Voice Over.n.",
   },
 ];
+export const DELIVERING_SOLUTIONS = [
+  {
+    name: "DIGITAL TRANSFORMATION",
+    para: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. (Focus on modernizing and scaling business processes.)",
+    image: "/about-us/digital-transformation.png",
+  },
+  {
+    name: "STRATEGIC REACH",
+    para: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. (Focus on modernizing and scaling business processes.)",
+    image: "/about-us/digital-transformation.png",
+  },
+  {
+    name: "OPERATIONAL POWER",
+    para: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. (Focus on modernizing and scaling business processes.)",
+    image: "/about-us/digital-transformation.png",
+  },
+];
