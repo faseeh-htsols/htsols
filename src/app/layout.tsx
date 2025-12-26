@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Unbounded, Poppins, Jost, Open_Sans } from "next/font/google";
+import { Unbounded, Poppins, Jost, Open_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -16,6 +16,11 @@ const popins = Poppins({
 });
 const open_Sans = Open_Sans({
   variable: "--font-open-sans",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
 });
@@ -49,7 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${unbounded.variable} bg-black ${popins.variable} ${jost.variable} ${open_Sans.variable} antialiased`}
+        className={`${unbounded.variable} bg-black text-white ${inter.variable} ${popins.variable} ${jost.variable} ${open_Sans.variable} antialiased`}
       >
         <Navbar />
         <main>{children}</main>

@@ -134,16 +134,55 @@ export const DELIVERING_SOLUTIONS = [
   {
     name: "DIGITAL TRANSFORMATION",
     para: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. (Focus on modernizing and scaling business processes.)",
-    image: "/about-us/digital-transformation.png",
+    image: "/about-us/digital-transformation.svg",
   },
   {
     name: "STRATEGIC REACH",
     para: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. (Focus on modernizing and scaling business processes.)",
-    image: "/about-us/digital-transformation.png",
+    image: "/about-us/digital-transformation.svg",
   },
   {
     name: "OPERATIONAL POWER",
     para: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. (Focus on modernizing and scaling business processes.)",
-    image: "/about-us/digital-transformation.png",
+    image: "/about-us/digital-transformation.svg",
+  },
+];
+export const TEAM = [
+  {
+    name: "Alex Johnson",
+    image: "/about-us/alex.png",
+    designation: "CEO & Founder",
+  },
+  {
+    name: "Emma Wilson",
+    image: "/about-us/emma.png",
+    designation: "CTO & Co-Founder",
+  },
+  {
+    name: "John Smith",
+    image: "/about-us/john.png",
+    designation: "Lead Developer",
+  },
+  {
+    name: "Marco Rossi",
+    image: "/about-us/marco.png",
+    designation: "Senior Developer",
+  },
+];
+export const CEO_ACHIEVEMENTS = [
+  {
+    number: " 150%",
+    name: "Lead Growth",
+    para: "Engineered high-performance apps that turn traffic into customers.",
+  },
+  {
+    number: "40%",
+    name: "Faster Launch",
+    para: "Rapid MVP development to get your SaaS to market ahead of schedule.",
+  },
+  {
+    number: "7+",
+    name: "Years Scalability",
+    para: "Proven full-stack expertise in building products that grow with you.",
   },
 ];

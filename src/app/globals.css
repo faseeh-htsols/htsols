@@ -8,6 +8,7 @@
   --font-unbounded: "Unbounded", sans-serif;
   --font-poppins: "Poppins", sans-serif;
   --font-jost: "Jost", sans-serif;
+  --font-inter: "Inter", sans-serif;
   --font-open-sans: "Open Sans", sans-serif;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -52,6 +53,7 @@
   --font-primary: var(--font-unbounded);
   --font-secondary: var(--font-jost);
   --font-tertiary: var(--font-open-sans);
+  --font-inter: var(--font-inter);
 }
 
 /* Spinning animation for circular text */
@@ -488,4 +490,12 @@ body {
     right: 0;
     top: 13%;
   }
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #075B65 0%, #00838A 37.02%, #328A99 81.25%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* for future compatibility */
 }
