@@ -14,7 +14,7 @@ const ServicesMain = () => {
       <WhatWeOffer />
       <Approach />
       <ProjectToDiscuss />
-      <ClientsSection />
+      {/* <ClientsSection /> */}
     </>
   );
 };

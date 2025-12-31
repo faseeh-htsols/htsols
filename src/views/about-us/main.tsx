@@ -3,6 +3,7 @@ import DeliveringSolutions from "./delivering-solutions";
 import ImaginationMeetsStrategy from "./imagination-meets-strategy";
 import MeetOurTeam from "./meet-our-team";
 import Banner from "./banner";
+import ProjectToDiscuss from "../services/project-to-discuss";
 
 const AboutUsMain = () => {
   return (
@@ -11,6 +12,7 @@ const AboutUsMain = () => {
       <DeliveringSolutions />
       <ImaginationMeetsStrategy />
       <MeetOurTeam />
+      <ProjectToDiscuss />
     </>
   );
 };
