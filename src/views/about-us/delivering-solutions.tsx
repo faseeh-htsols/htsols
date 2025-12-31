@@ -6,7 +6,7 @@ import React from "react";
 
 const DeliveringSolutions = () => {
   return (
-    <div className="text-white py-24">
+    <div className="text-white py-24 bg-tertiary">
       <Container>
         <div>
           <HeadingTwo className="text-center" span="EXCELLENCE">
