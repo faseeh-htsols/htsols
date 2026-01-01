@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const AboutMe = () => {
   return (
-    <div>
+    <div className="py-20">
       <Container>
         <div className="flex gap-16 items-center">
           <div className="w-[40%] shrink-0 p-4 pr-0 relative">

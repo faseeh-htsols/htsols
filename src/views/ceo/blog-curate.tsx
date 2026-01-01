@@ -5,9 +5,9 @@ import Image from "next/image";
 
 const BlogCurate = () => {
   return (
-    <div>
+    <div className="py-20">
       <Container>
-        <HeadingTwo>A blog I curate</HeadingTwo>
+        <HeadingTwo className="text-center mb-10">A blog I curate</HeadingTwo>
         <div className="grid grid-cols-3 gap-7 ">
           {BOLG_CURATE_CEO.map((item, index) => (
             <div key={index} className="relative overflow-hidden">

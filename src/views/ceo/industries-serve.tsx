@@ -6,9 +6,9 @@ import React from "react";
 
 const IndustriesServe = () => {
   return (
-    <div className="bg-[url(/ceo/industries-serve.png)] bg-cover">
+    <div className="bg-[url(/ceo/industries-serve.png)] bg-cover py-20">
       <Container>
-        <HeadingTwo className="text-center">Industries I Serve</HeadingTwo>
+        <HeadingTwo className="text-center mb-7">Industries I Serve</HeadingTwo>
 
         {/* Make this relative so absolute dividers can be placed inside */}
         <div className="relative grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-7">

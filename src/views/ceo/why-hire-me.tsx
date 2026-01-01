@@ -5,10 +5,10 @@ import { WHY_HIRE_ME_CEO } from "@/constants";
 import parse from "html-react-parser";
 const WhyHireMe = () => {
   return (
-    <div className="bg-tertiary">
+    <div className="bg-tertiary py-20 relative">
       <Container>
         <div>
-          <div className="max-w-[1124px] mx-auto">
+          <div className="max-w-[1124px] mx-auto flex flex-col gap-5 mb-4">
             <HeadingTwo className="text-center">Why hire me</HeadingTwo>
             <p className="text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -20,7 +20,7 @@ const WhyHireMe = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-3 gap-10 mb-6">
           {WHY_HIRE_ME_CEO.map((item, index) => (
             <div
               key={item.heading}
