@@ -69,7 +69,7 @@ export const AboutSection: React.FC = () => {
               <Image
                 src={"/about-two.png"}
                 alt="image"
-                className="object-cover"
+                className="object-cover rounded-lg"
                 fill
               />
             </div>

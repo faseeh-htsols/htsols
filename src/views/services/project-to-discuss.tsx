@@ -30,9 +30,11 @@ const ProjectToDiscuss = () => {
           "
       ></div>
       <Container>
-        <div>
-          <HeadingTwo>have a project to discuss ?</HeadingTwo>
-          <p className="max-w-[970px] mx-auto">
+        <div className="flex flex-col gap-4 mb-5">
+          <HeadingTwo className="text-center">
+            have a project to discuss ?
+          </HeadingTwo>
+          <p className="max-w-[970px] text-center mx-auto">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium. Sed ut perspiciatis unde omnis
             iste natus error sit voluptatem accusantium doloremque laudantium.
@@ -56,10 +58,10 @@ const ProjectToDiscuss = () => {
             width={1000}
             height={1000}
             quality={100}
-            className="w-full h-[656px] object-cover rounded-lg"
+            className="w-full h-[620x] object-cover rounded-lg"
           />
         </div>
-        <div>
+        <div className="pt-10">
           <div className="text-center mb-16">
             <HeadingTwo className=" text-white tracking-wider">
               OUR CLIENTS

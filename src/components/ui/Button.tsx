@@ -17,7 +17,7 @@ export const Button: React.FC<ButtonProps> = ({
   href,
 }) => {
   const baseStyles =
-    "flex items-center gap-2 px-6 py-3 text-sm font-secondary font-semibold uppercase rounded-full tracking-wider transition-all duration-300 border";
+    "flex items-center gap-2 px-6 py-3 text-sm font-sans font-semibold uppercase rounded-full tracking-wider transition-all duration-300 border";
 
   const variants = {
     primary:

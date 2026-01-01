@@ -32,7 +32,7 @@ const CallBackFromUs = () => {
                 HT-Solutions provides you Website Designing, Web Development,
                 SEO Services, Graphic Designing.
               </p>
-              <div>
+              <div className="flex">
                 <Button href="/">Schedule A call Back</Button>
               </div>
             </div>

@@ -175,7 +175,7 @@ export const HeroSection: React.FC = () => {
 
                 {/* Right Content - Description */}
                 <div className="lg:pl-12">
-                  <p className="text-white/70 text-base md:text-lg leading-relaxed max-w-md ml-auto">
+                  <p className="text-white/70 text-lg md:text-lg leading-relaxed max-w-md  ml-auto">
                     {slide.description}
                   </p>
                 </div>
@@ -217,7 +217,7 @@ export const HeroSection: React.FC = () => {
       </div>
 
       {/* Circular Text Badge */}
-      <div className="absolute bottom-12 right-12 z-20 hidden lg:block">
+      <div className="absolute bottom-0 right-1 z-20 hidden lg:block">
         <div className="relative w-32 h-32 md:w-40 md:h-40  rounded-full flex items-center justify-center">
           <CircularText />
         </div>

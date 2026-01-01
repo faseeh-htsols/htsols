@@ -117,7 +117,7 @@ const Banner = () => {
               id=""
             ></textarea>
           </div>
-          <div className="flex justify-center">
+          <div className="flex mt-6 justify-center">
             <button className="inline-flex items-center bg-white gap-2 px-6 py-3 text-sm text-primary font-medium uppercase rounded-full tracking-wider transition-all duration-300 border">
               Send Message
               <svg

@@ -213,7 +213,7 @@ export default function WorkPortfolioSection() {
 
                   {/* BUTTON */}
                   <div className="flex">
-                    <button className="text-white text-[12px] relative uppercase tracking-widest hover:text-primary transition flex items-center gap-2 py-2 ps-4 pr-8 border-t border-b border-white">
+                    <button className="text-white group text-[12px] relative uppercase tracking-widest hover:text-[#075B65] transition flex items-center gap-2 py-2 ps-4 pr-8 border-t border-b border-white hover:border-[#075B65]">
                       View Service
                       <span className="absolute bottom-1 right-0">
                         <svg
@@ -222,19 +222,17 @@ export default function WorkPortfolioSection() {
                           viewBox="0 0 29 29"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
-                          className="w-5 h-5"
+                          className="w-5 h-5  fill-white group-hover:fill-[#075B65]"
                         >
                           <path
                             fill-rule="evenodd"
                             clip-rule="evenodd"
                             d="M6.45514 21.8225C5.94598 21.3134 5.94597 20.4878 6.45514 19.9787L19.9769 6.45695C20.486 5.94779 21.3116 5.94779 21.8207 6.45695C22.3299 6.9661 22.3299 7.79166 21.8207 8.30082L8.29901 21.8225C7.78984 22.3317 6.96429 22.3317 6.45514 21.8225Z"
-                            fill="white"
                           />
                           <path
                             fill-rule="evenodd"
                             clip-rule="evenodd"
                             d="M8.53123 7.37574C8.53124 6.65565 9.115 6.07188 9.83509 6.07187L20.8983 6.07185C21.6183 6.07191 22.2021 6.65568 22.2021 7.37571L22.2021 18.4389C22.2021 19.159 21.6183 19.7427 20.8983 19.7428C20.1783 19.7427 19.5945 19.159 19.5944 18.4389L19.5945 8.67951L9.83504 8.67955C9.11502 8.67949 8.53129 8.09576 8.53123 7.37574Z"
-                            fill="white"
                           />
                         </svg>
                       </span>
