@@ -1,5 +1,6 @@
 import AboutMe from "./about-me";
 import Achievements from "./achievements";
+import Banner from "./banner";
 import BlogCurate from "./blog-curate";
 import ClientsAboutMe from "./clients-about-me";
 import IndustriesServe from "./industries-serve";
@@ -10,6 +11,7 @@ import WhyHireMe from "./why-hire-me";
 const CeoMain = () => {
   return (
     <>
+      <Banner />
       <Skills />
       <AboutMe />
       <Achievements />
