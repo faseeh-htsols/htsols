@@ -32,7 +32,7 @@ const WhyChoose = () => {
               height={800}
               className="w-[80%] mx-auto h-[650px] object-contain"
             />
-            <div className="absolute left-0 bottom-[20%] p-0.5 rounded-full bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]">
+            <div className="absolute left-0 bottom-[20%] rounded-full border border-[#328A99]">
               <div
                 className="p-3 bg-[linear-gradient(90deg,rgba(217,217,217,0.6)_0%,rgba(115,115,115,0.7)_100%)] rounded-full
 "
@@ -55,7 +55,7 @@ const WhyChoose = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute right-0 top-[20%] p-0.5 rounded-full bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]">
+            <div className="absolute right-0 top-[20%] rounded-full border border-[#328A99]">
               <div className="rounded-full p-4 bg-[linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(153,153,153,0.5)_100%)]">
                 <div className="rounded-full bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] p-3">
                   <div className="rounded-full p-5 aspect-square flex justify-center items-center bg-black">
