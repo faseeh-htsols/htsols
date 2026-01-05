@@ -582,3 +582,20 @@ export const NAV_ITEMS = [
     link: "/ceo",
   },
 ];
+export const WEBSITE_NEEDS_BUISNESS = [
+  {
+    image: "/website/get-found-easily.svg",
+    heading: "Get found<br/> easily",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+  },
+  {
+    image: "/website/build-trust.svg",
+    heading: "Build trust before <br/> they visit",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+  },
+  {
+    image: "/website/booking-automatically.svg",
+    heading: "Increase bookings<br/> automatically",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+  },
+];
