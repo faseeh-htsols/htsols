@@ -599,3 +599,37 @@ export const WEBSITE_NEEDS_BUISNESS = [
     para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
   },
 ];
+export const WEBSITE_PLANNING = [
+  {
+    name: "planning",
+    imageSingle: "/website/planning1.png",
+    image: "/website/planning2.png",
+    para: "Looking for design experts who can bring your vision to life?",
+    heading: "Meet our expert",
+    href: "/",
+  },
+  {
+    name: "design",
+    imageSingle: "/website/planning1.png",
+    image: "/website/planning2.png",
+    para: "Looking for design experts who can bring your vision to life?",
+    heading: "Meet our expert",
+    href: "/",
+  },
+  {
+    name: "development",
+    imageSingle: "/website/planning1.png",
+    image: "/website/planning2.png",
+    para: "Looking for design experts who can bring your vision to life?",
+    heading: "Meet our expert",
+    href: "/",
+  },
+  {
+    name: "testing",
+    imageSingle: "/website/planning1.png",
+    image: "/website/planning2.png",
+    para: "Looking for design experts who can bring your vision to life?",
+    heading: "Meet our expert",
+    href: "/",
+  },
+];
