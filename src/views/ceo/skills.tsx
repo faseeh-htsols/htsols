@@ -2,7 +2,8 @@ import Image from "next/image";
 
 const Skills = () => {
   return (
-    <div className="lg:mt-40 mt-20">
+    <div className="lg:pt-40 pt-20 relative">
+      <div className="bg-radial from-[#00A1A5] to-[#075B65] blur-[120px] absolute w-[150px] h-[150px] -top-10 -left-10" />
       <div className="max-w-[1770px] mx-auto px-5">
         <div className="grid grid-cols-2 lg:flex gap-4 lg:flex-wrap justify-center">
           <div
