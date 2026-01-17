@@ -36,7 +36,7 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Menu Icon -> Drawer */}
-          <Drawer open={open} onOpenChange={setOpen}>
+          <Drawer open={open} direction="right" onOpenChange={setOpen}>
             <DrawerTrigger asChild>
               <button
                 aria-label="Open menu"
