@@ -40,7 +40,7 @@ const Banner = () => {
             <span className="border-b-2 border-white">Growth Services</span>
           </h1>
         </div>
-        <div className="flex mt-10 gap-9 items-center">
+        <div className="flex mt-20 gap-9 items-center">
           <div className="shrink-0">
             <Button href="/" variant="outline">
               START YOUR PROJECT

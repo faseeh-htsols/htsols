@@ -69,10 +69,10 @@ const WhyChoose = () => {
             </div>
           </div>
           <div>
-            <div className="border-b pb-4 border-white">
+            <div className="border-b pb-9 border-white">
               <HeadingTwo>Why Choose Us</HeadingTwo>
             </div>
-            <div className="ps-5 relative my-4 flex flex-col gap-7">
+            <div className="ps-5 relative mt-9 flex flex-col gap-10">
               <div className="absolute top-0 left-0 bg-white/20 w-1 h-full"></div>
               {WHY_CHOOSE_WEB_DEV.map((item, index) => (
                 <div key={index} className="relative group flex flex-col gap-2">

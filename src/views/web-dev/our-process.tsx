@@ -12,7 +12,7 @@ const OurProcess = () => {
   const active = WEBSITE_PLANNING[activeIndex];
 
   return (
-    <div>
+    <div className="py-32 bg-tertiary">
       <Container>
         <HeadingTwo className="text-center">Our process</HeadingTwo>
 
@@ -34,7 +34,7 @@ const OurProcess = () => {
                     <button
                       type="button"
                       onClick={() => setActiveIndex(index)}
-                      className={`border pr-4 rounded-full w-full flex items-center justify-between transition ${
+                      className={`border cursor-pointer pr-4 rounded-full w-full flex items-center justify-between transition ${
                         isActive
                           ? "border-white/60 bg-white/5"
                           : "border-white/20 hover:border-white/40"

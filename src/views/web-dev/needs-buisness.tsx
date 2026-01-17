@@ -1,3 +1,4 @@
+import CircularText from "@/components/ui/CircularText";
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
 import { WEBSITE_NEEDS_BUISNESS } from "@/constants";
@@ -5,9 +6,9 @@ import Image from "next/image";
 
 const NeedsBuisness = () => {
   return (
-    <div className="bg-tertiary py-20 relative">
+    <div className="bg-tertiary py-32 relative">
       <Container>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-12">
           <HeadingTwo className="text-center">
             Why Your business needs a <br /> website?
           </HeadingTwo>
@@ -49,6 +50,9 @@ const NeedsBuisness = () => {
                 </div>
               </div>
             ))}
+          </div>
+          <div>
+            <CircularText />
           </div>
         </div>
       </Container>

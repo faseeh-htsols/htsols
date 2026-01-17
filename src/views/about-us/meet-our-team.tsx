@@ -15,9 +15,11 @@ const MeetOurTeam = () => {
       ></div>
       <Wrapper>
         <div className="flex gap-28 items-center">
-          <div>
+          <div className="flex flex-col gap-8">
             <div>
-              <p>Meet our team</p>
+              <p className="font-semibold uppercase text-2xl pb-8 w-fit relative before:content-[''] before:absolute before:left-0 before:bottom-0 before:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] before:w-full before:h-1 ">
+                Meet our team
+              </p>
             </div>
             <HeadingTwo>The Minds Behind</HeadingTwo>
             <p>

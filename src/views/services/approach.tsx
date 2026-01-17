@@ -12,7 +12,7 @@ const Approach = () => {
           "
       ></div>
       <Container>
-        <div className="grid grid-cols-2 gap-10 items-center">
+        <div className="grid grid-cols-2 gap-24 items-center">
           <div className="">
             <div className="w-[45%]">
               <Image
@@ -33,7 +33,7 @@ const Approach = () => {
               />
             </div>
           </div>
-          <div>
+          <div className="flex flex-col gap-8 ">
             <HeadingTwo>Approach</HeadingTwo>
             <p>
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -41,9 +41,15 @@ const Approach = () => {
               processes.)
             </p>
             <div className="flex flex-row justify-between">
-              <h3>Monitor</h3>
-              <h3>Analyze</h3>
-              <h3>Multipy</h3>
+              <h3 className="text-[20px] font-semibold font-primary uppercase bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">
+                Monitor
+              </h3>
+              <h3 className="text-[20px] font-semibold font-primary uppercase ">
+                Analyze
+              </h3>
+              <h3 className="text-[20px] font-semibold font-primary uppercase ">
+                Multipy
+              </h3>
             </div>
             <p>
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="bg-black relative pb-20 pt-32 [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]">
+    <div className="bg-black relative pb-32 pt-32 [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]">
       <div className="absolute top-20 left-0">
         <Image
           src={"/left-gradient.png"}
@@ -39,7 +39,7 @@ const Banner = () => {
             <span className="border-b-2 border-white">Htsolutions</span>
           </h1>
         </div>
-        <div className="flex mt-10 gap-9 items-center">
+        <div className="flex mt-20 gap-9 items-center">
           <div className="shrink-0">
             <Button href="/" variant="outline">
               START YOUR PROJECT

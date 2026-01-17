@@ -23,14 +23,14 @@ const clients: Client[] = [
 ];
 const ProjectToDiscuss = () => {
   return (
-    <div className="relative py-20 -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_100%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)]">
+    <div className="relative py-32 -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_100%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)]">
       <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
           "
       ></div>
       <Container>
-        <div className="flex flex-col gap-4 mb-5">
+        <div className="flex flex-col gap-8 mb-8">
           <HeadingTwo className="text-center">
             have a project to discuss ?
           </HeadingTwo>
@@ -61,7 +61,7 @@ const ProjectToDiscuss = () => {
             className="w-full h-[620x] object-cover rounded-lg"
           />
         </div>
-        <div className="pt-10">
+        <div className="pt-20">
           <div className="text-center mb-16">
             <HeadingTwo className=" text-white tracking-wider">
               OUR CLIENTS
