@@ -21,16 +21,21 @@ export const WHY_CHOOSE_WEB_DEV = [
 ];
 const WhyChoose = () => {
   return (
-    <div className="py-20">
+    <div className="py-20 relative  -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[2%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+      <div
+        className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
+           bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
+          "
+      ></div>
       <Container>
-        <div className="flex gap-10">
-          <div className="relative w-[43%] shrink-0">
+        <div className="flex lg:flex-row flex-col gap-10">
+          <div className="relative lg:w-[43%] shrink-0">
             <Image
               src={"/website/choose-us.png"}
               alt="why choose us"
               width={800}
               height={800}
-              className="w-[80%] mx-auto h-[650px] object-contain"
+              className="w-[80%] mx-auto h-[400px] lg:h-[650px] rounded-2xl object-cover"
             />
             <div className="absolute left-0 bottom-[20%] rounded-full border border-[#328A99]">
               <div

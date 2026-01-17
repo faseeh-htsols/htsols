@@ -13,8 +13,8 @@ const WhatWeOffer = () => {
   return (
     <div className="relative bg-black pb-32  [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]">
       <Container>
-        <div className="flex flex-row gap-5">
-          <div className="w-[250px] text-white flex flex-col gap-8 shrink-0 pr-5 border-r border-white pt-10">
+        <div className="flex flex-col lg:flex-row gap-5">
+          <div className="lg:w-[250px] text-white flex flex-col gap-8 shrink-0 lg:pr-5 lg:border-r border-white pt-10">
             <h2 className="uppercase text-3xl font-semibold font-primary">
               What WE Offer
             </h2>

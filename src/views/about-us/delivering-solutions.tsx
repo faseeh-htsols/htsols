@@ -18,11 +18,11 @@ const DeliveringSolutions = () => {
             DELIVERING DIGITAL SOLUTIONS WITH STRATEGY AND
           </HeadingTwo>
         </div>
-        <div className="grid grid-cols-3">
+        <div className="grid gap-6 lg:gap-0 lg:grid-cols-3">
           {DELIVERING_SOLUTIONS.map((solution, index) => (
-            <div key={solution.name} className="relative px-3">
+            <div key={solution.name} className="relative py-6 lg:py-0 lg:px-3">
               <div
-                className={`absolute top-0 right-0 h-full w-1 ${
+                className={`absolute lg:top-0 bottom-0 right-0 lg:h-full w-full h-1 lg:w-1 ${
                   DELIVERING_SOLUTIONS.length - 1 !== index ? "bg-white" : ""
                 }`}
               ></div>

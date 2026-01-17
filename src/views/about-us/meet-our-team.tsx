@@ -14,7 +14,7 @@ const MeetOurTeam = () => {
           "
       ></div>
       <Wrapper>
-        <div className="flex gap-28 items-center">
+        <div className="flex flex-col lg:flex-row gap-28 items-center">
           <div className="flex flex-col gap-8">
             <div>
               <p className="font-semibold uppercase text-2xl pb-8 w-fit relative before:content-[''] before:absolute before:left-0 before:bottom-0 before:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] before:w-full before:h-1 ">
@@ -34,7 +34,7 @@ const MeetOurTeam = () => {
           <div className="flex flex-row justify-between gap-5 flex-wrap">
             {TEAM.map((member, index) => (
               <div
-                className={`w-[48%] h-fit ${
+                className={`lg:w-[48%] h-fit ${
                   index === 1 ? "mt-8" : index === 2 ? "-mt-8" : ""
                 } border border-[#5C5C5C] overflow-hidden rounded-lg`}
                 key={member.name}
@@ -44,12 +44,12 @@ const MeetOurTeam = () => {
                     src={member.image}
                     alt={member.name}
                     width={500}
-                    className="w-full h-[350px] object-cover rouned-lg"
+                    className="w-full h-[350px] z-10 opacity-80 relative object-cover rouned-lg"
                     height={500}
                   />
                 </div>
-                <div className="mt-5 relative  p-4">
-                  <div className="absolute top-0 left-0 h-full w-full bg-[url(/about-us/ball-team.png)]"></div>
+                <div className=" relative  p-4">
+                  <div className="absolute -top-10 -left-10 h-[calc(100%+40px)] w-[calc(100%+40px)] bg-[url(/about-us/ball-team.png)]"></div>
                   <h3 className="text-2xl relative text-center font-primary uppercase">
                     {member.name}
                   </h3>

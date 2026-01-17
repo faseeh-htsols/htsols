@@ -12,7 +12,7 @@ const Approach = () => {
           "
       ></div>
       <Container>
-        <div className="grid grid-cols-2 gap-24 items-center">
+        <div className="grid lg:grid-cols-2 gap-24 items-center">
           <div className="">
             <div className="w-[45%]">
               <Image

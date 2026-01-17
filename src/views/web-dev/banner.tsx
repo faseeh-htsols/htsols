@@ -25,7 +25,7 @@ const Banner = () => {
       </div>
       <Container>
         <div>
-          <h1 className="text-6xl font-primary mb-8 font-semibold text-white text-center uppercase">
+          <h1 className="text-4xl lg:text-6xl font-primary mb-8 font-semibold text-white text-center uppercase">
             Websites that convert clicks into consultations
           </h1>
         </div>

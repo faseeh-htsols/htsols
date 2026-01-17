@@ -36,8 +36,8 @@ const ImaginationMeetsStrategy = () => {
         <HeadingTwo className="text-center mb-20" span="Strategy">
           Imagination Meets 
         </HeadingTwo>
-        <div className="flex gap-4">
-          <div className="flex flex-col border border-[#5C5C5C] rounded-lg overflow-hidden justify-between w-[26%]">
+        <div className="flex lg:flex-row flex-col gap-4">
+          <div className="flex flex-col border border-[#5C5C5C] rounded-lg overflow-hidden justify-between lg:w-[26%]">
             <div className="flex gap-3 p-4">
               <Image
                 src={"/about-us/star.svg"}
@@ -67,7 +67,7 @@ const ImaginationMeetsStrategy = () => {
               </div>
             </div>
           </div>
-          <div className="w-[45%] shrink-0">
+          <div className="lg:w-[45%] shrink-0">
             <Image
               src={"/about-us/imagination.png"}
               width={1000}
@@ -76,7 +76,7 @@ const ImaginationMeetsStrategy = () => {
               alt="imagination"
             />
           </div>
-          <div className="w-[26%] flex flex-col gap-4">
+          <div className="lg:w-[26%] flex flex-col gap-4">
             {MISSION_VISION.map((item, index) => (
               <div
                 key={index}
