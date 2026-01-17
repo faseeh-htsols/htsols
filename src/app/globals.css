@@ -499,3 +499,29 @@ body {
   background-clip: text;
   /* for future compatibility */
 }
+.ceo-pagination .swiper-pagination {
+  position: static !important;
+  margin: 32px auto 0;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 8px 16px;
+  border-radius: 9999px;
+  z-index: 50;
+}
+
+.ceo-pagination .swiper-pagination .swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 9999px !important;
+  border: 1px solid #00838A;
+}
+
+.ceo-pagination  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 40px !important;
+  border-radius: 9999px !important;
+  background: linear-gradient(90deg, #075b65 0%, #00838a 37.02%, #328a99 81.25%) !important;
+}

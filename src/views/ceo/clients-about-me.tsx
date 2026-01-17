@@ -6,7 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import { Autoplay } from "swiper/modules";
+import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
 import { CLIENT_SAY_ABOUT_CEO } from "@/constants";
 
 const ClientsAboutMe = () => {
@@ -16,6 +17,7 @@ const ClientsAboutMe = () => {
         <HeadingTwo className="mb-8 text-center">
           What my clients say about me
         </HeadingTwo>
+
         <div className="flex justify-between">
           <div className="w-[200px] ">
             <Image
@@ -26,9 +28,10 @@ const ClientsAboutMe = () => {
               alt="left Qoute"
             />
           </div>
+
           <div className="w-[60%]">
             <Swiper
-              className="mySwiper"
+              className=" ceo-pagination"
               loop
               slidesPerView={1}
               autoplay={{
@@ -36,8 +39,8 @@ const ClientsAboutMe = () => {
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
               }}
-              modules={[Autoplay]}
-            >
+              pagination={{ clickable: true }}
+              modules={[Autoplay, Pagination]}>
               {CLIENT_SAY_ABOUT_CEO.map((item, index) => (
                 <SwiperSlide key={index}>
                   <p className="text-center text-lg mb-6">{item.para}</p>
@@ -60,8 +63,8 @@ const ClientsAboutMe = () => {
               ))}
             </Swiper>
           </div>
+
           <div className="w-[200px] ">
-            {" "}
             <Image
               src={"/ceo/right-qoute.svg"}
               className="w-[200px] h-40"

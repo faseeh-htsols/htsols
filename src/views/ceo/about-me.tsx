@@ -6,8 +6,8 @@ const AboutMe = () => {
   return (
     <div className="py-20">
       <Container>
-        <div className="flex gap-16 items-center">
-          <div className="w-[40%] shrink-0 p-4 pr-0 relative">
+        <div className="flex flex-col lg:flex-row gap-16 items-center">
+          <div className="w-full lg:w-[40%] shrink-0 p-4 pr-0 relative">
             <div
               className="absolute left-0 top-0 h-full  w-[40%] rounded-lg border-3 border-[#075B65]"
               // style={{

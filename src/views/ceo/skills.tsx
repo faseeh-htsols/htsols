@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const Skills = () => {
   return (
-    <div className="mt-40">
+    <div className="lg:mt-40 mt-20">
       <div className="max-w-[1770px] mx-auto px-5">
-        <div className="flex gap-4 flex-wrap justify-center">
+        <div className="grid grid-cols-2 lg:flex gap-4 lg:flex-wrap justify-center">
           <div
             className="px-9 py-3 flex gap-3 items-center border-[#075B65] border-2 rounded-full"
             //   style={{

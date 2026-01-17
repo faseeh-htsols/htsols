@@ -1,3 +1,4 @@
+import LogosMarquee from "../home/logos-marquee";
 import AboutMe from "./about-me";
 import Achievements from "./achievements";
 import Banner from "./banner";
@@ -20,6 +21,7 @@ const CeoMain = () => {
       <ClientsAboutMe />
       <BlogCurate />
       <ViewOnInstgram />
+      <LogosMarquee />
     </>
   );
 };

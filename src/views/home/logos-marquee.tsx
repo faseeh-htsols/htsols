@@ -6,12 +6,10 @@ const LogosMarquee = () => {
     <div className="overflow-hidden bg-[#0E0E10] py-6">
       <div className="marquee-wrapper">
         <div className="marquee-content">
-          {/* First set */}
           {marqueeClients.map((client, index) => (
             <div
               key={`set1-${index}`}
-              className="inline-flex items-center gap-3 px-8"
-            >
+              className="inline-flex items-center gap-3 px-8">
               <div className="w-8 h-8 rounded-full bg-primary/30 flex items-center justify-center">
                 <Image
                   src={"/htsol-ball.svg"}
@@ -30,8 +28,7 @@ const LogosMarquee = () => {
           {marqueeClients.map((client, index) => (
             <div
               key={`set2-${index}`}
-              className="inline-flex items-center gap-3 px-8"
-            >
+              className="inline-flex items-center gap-3 px-8">
               <div className="w-8 h-8 rounded-full bg-primary/30 flex items-center justify-center">
                 <Image
                   src={"/htsol-ball.svg"}
