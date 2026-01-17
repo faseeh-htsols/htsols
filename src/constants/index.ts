@@ -441,7 +441,33 @@ export const WEBSITE_PLANNING = [
     imageSingle: "/website/planning1.png",
     image: "/website/planning2.png",
     para: "Looking for design experts who can bring your vision to life?",
-    heading: "Meet our expert",
+    heading: "Meet our ",
     href: "/",
+  },
+];
+export const WHATS_INCLUDED_WEBDEV = [
+  {
+    image: "/website/bespoke-design.svg",
+    para: "Bespoke design (no templates)",
+  },
+  {
+    image: "/website/bespoke-design.svg",
+    para: "Bespoke design (no templates)",
+  },
+  {
+    image: "/website/bespoke-design.svg",
+    para: "Bespoke design (no templates)",
+  },
+  {
+    image: "/website/bespoke-design.svg",
+    para: "Bespoke design (no templates)",
+  },
+  {
+    image: "/website/bespoke-design.svg",
+    para: "Bespoke design (no templates)",
+  },
+  {
+    image: "/website/bespoke-design.svg",
+    para: "Bespoke design (no templates)",
   },
 ];
