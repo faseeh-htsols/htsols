@@ -44,6 +44,14 @@ export const metadata: Metadata = {
     "Lahore",
     "Pakistan",
   ],
+  icons: {
+    icon: [
+      {
+        url: "/htsol-ball-favicon.svg",
+        href: "/htsol-ball-favicon.svg",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

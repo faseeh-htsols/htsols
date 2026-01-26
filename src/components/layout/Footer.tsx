@@ -26,8 +26,8 @@ export const Footer: React.FC = () => {
                 </Link>
               </div>
 
-              <p className="text-white/40 md:text-left text-center text-xs uppercase tracking-wider">
-                TAGLINE WILL BE ADDED HERE
+              <p className="text-white/40 uppercase md:text-left text-center text-xs uppercase tracking-wider">
+                Strategize, Optimize, Maximize
               </p>
 
               <div className="space-y-3">
@@ -183,18 +183,20 @@ export const Footer: React.FC = () => {
               <ul className="space-y-4">
                 <li>
                   <p className="text-white/60 text-sm">
-                    <span className="text-white/80">CALL AT:</span> 123 456 789
+                    <span className="text-white/80">CALL AT:</span> (+1)
+                    437-937-1235
                   </p>
                 </li>
                 <li>
                   <p className="text-white/60 text-sm">
                     <span className="text-white/80">Email Us:</span>{" "}
-                    abc@gmail.com
+                    hello@htsol.ca
                   </p>
                 </li>
                 <li>
                   <p className="text-white/60 text-sm">
-                    <span className="text-white/80">Location:</span> Lorem Ipsum
+                    <span className="text-white/80">Location:</span> 3400
+                    Riverspray Crescent, L4Y 3M5 , Mississauga
                   </p>
                 </li>
               </ul>
@@ -202,11 +204,9 @@ export const Footer: React.FC = () => {
               {/* Social Icons */}
               <div className="flex items-center gap-3 mt-6">
                 <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="mailto:hello@htsol.ca"
                   className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center text-white hover:text-black transition-all duration-300"
-                  aria-label="Facebook"
+                  aria-label="Email"
                 >
                   <svg
                     width="18"
@@ -215,15 +215,16 @@ export const Footer: React.FC = () => {
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" />
                   </svg>
                 </a>
+
                 <a
-                  href="https://twitter.com"
+                  href="http://instagram.com/htsol.ca"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center text-white hover:text-black transition-all duration-300"
-                  aria-label="Twitter"
+                  aria-label="Instagram"
                 >
                   <svg
                     width="18"
@@ -232,11 +233,12 @@ export const Footer: React.FC = () => {
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                    <path d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4Zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0ZM12 2c2.7 0 3 .01 4.1.06 1.1.05 1.8.22 2.5.49a5 5 0 0 1 1.8 1.17 5 5 0 0 1 1.17 1.8c.27.7.44 1.4.49 2.5.05 1.1.06 1.4.06 4.1s-.01 3-.06 4.1c-.05 1.1-.22 1.8-.49 2.5a5 5 0 0 1-1.17 1.8 5 5 0 0 1-1.8 1.17c-.7.27-1.4.44-2.5.49-1.1.05-1.4.06-4.1.06s-3-.01-4.1-.06c-1.1-.05-1.8-.22-2.5-.49a5 5 0 0 1-1.8-1.17 5 5 0 0 1-1.17-1.8c-.27-.7-.44-1.4-.49-2.5C2.01 15 2 14.7 2 12s.01-3 .06-4.1c.05-1.1.22-1.8.49-2.5a5 5 0 0 1 1.17-1.8 5 5 0 0 1 1.8-1.17c.7-.27 1.4-.44 2.5-.49C9 2.01 9.3 2 12 2Zm0 1.7c-2.66 0-2.97.01-4.02.06-.97.04-1.5.2-1.86.34a3.3 3.3 0 0 0-1.2.78 3.3 3.3 0 0 0-.78 1.2c-.14.36-.3.89-.34 1.86C3.71 9.03 3.7 9.34 3.7 12s.01 2.97.06 4.02c.04.97.2 1.5.34 1.86.18.47.4.8.78 1.2.4.38.73.6 1.2.78.36.14.89.3 1.86.34 1.05.05 1.36.06 4.02.06s2.97-.01 4.02-.06c.97-.04 1.5-.2 1.86-.34.47-.18.8-.4 1.2-.78.38-.4.6-.73.78-1.2.14-.36.3-.89.34-1.86.05-1.05.06-1.36.06-4.02s-.01-2.97-.06-4.02c-.04-.97-.2-1.5-.34-1.86a3.3 3.3 0 0 0-.78-1.2 3.3 3.3 0 0 0-1.2-.78c-.36-.14-.89-.3-1.86-.34C14.97 3.71 14.66 3.7 12 3.7Z" />
                   </svg>
                 </a>
+
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/htsol"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center text-white hover:text-black transition-all duration-300"
@@ -261,7 +263,7 @@ export const Footer: React.FC = () => {
       <div className="border-t border-white/10">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 py-6">
           <p className="text-white text-xs text-center">
-            © 2025 All rights reserved
+            © 2026 All rights reserved
           </p>
         </div>
       </div>

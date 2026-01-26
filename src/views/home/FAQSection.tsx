@@ -16,24 +16,19 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: "DO YOU HAVE SPECIFIC PRICING PLANS TO SHOW?",
+    question: "Do You Have Specific Pricing Plans to Show?",
     answer:
-      "Donec rutrum, mauris et blandit convallis, orci nulla volutpat sapien, id pulvinar leo ligula eget nunc. In quis magna magna. Nullam mattis eget.",
+      "We don’t use one-size-fits-all pricing. Every package is customized based on your goals, market, and scope of work. After a short consultation, we provide a clear, transparent proposal with deliverables and timelines.",
   },
   {
-    question: "HOW MANY YEARS OF EXPERIENCE DO YOU HAVE?",
+    question: "Do You Work With Businesses in Different Industries?",
     answer:
-      "Donec rutrum, mauris et blandit convallis, orci nulla volutpat sapien, id pulvinar leo ligula eget nunc. In quis magna magna. Nullam mattis eget.",
+      "Yes. We’ve worked across multiple industries and tailor our strategies to fit each client’s audience, competition, and business objectives but we have a our forte in Healthcare from past 5 years.",
   },
   {
-    question: "DO YOU HAVE SPECIFIC PRICING PLANS TO SHOW?",
+    question: "Are You a Canadian Registered Company?",
     answer:
-      "Donec rutrum, mauris et blandit convallis, orci nulla volutpat sapien, id pulvinar leo ligula eget nunc. In quis magna magna. Nullam mattis eget.",
-  },
-  {
-    question: "DO YOU HAVE SPECIFIC PRICING PLANS TO SHOW?",
-    answer:
-      "Donec rutrum, mauris et blandit convallis, orci nulla volutpat sapien, id pulvinar leo ligula eget nunc. In quis magna magna. Nullam mattis eget.",
+      "Yes, we are a Canadian registered company, operating in full compliance with local regulations. We work with clients across Canada and internationally, delivering transparent, reliable, and professional marketing services.",
   },
 ];
 
