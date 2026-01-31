@@ -10,23 +10,56 @@ import { useRef } from "react";
 const NoLimitations = () => {
   const containerRef = useRef<null | HTMLDivElement>(null);
   const rightRef = useRef<null | HTMLDivElement>(null);
-  useGSAP(() => {
-    const photos = gsap.utils.toArray(".photos:not(:first-child)");
-    gsap.set(photos, { yPercent: 100 });
-    const animation = gsap.to(photos, {
-      yPercent: 0,
-      duration: 1,
-      stagger: 1,
-    });
-    ScrollTrigger.create({
-      trigger: containerRef.current,
-      start: "top top",
-      end: "bottom bottom",
-      pin: rightRef.current,
-      animation: animation,
-      scrub: true,
-    });
-  });
+  // useGSAP(() => {
+  //   const photos = gsap.utils.toArray(".photos:not(:first-child)");
+  //   gsap.set(photos, { yPercent: 100 });
+  //   const animation = gsap.to(photos, {
+  //     yPercent: 0,
+  //     duration: 1,
+  //     stagger: 1,
+  //   });
+  //   ScrollTrigger.create({
+  //     trigger: containerRef.current,
+  //     start: "top top",
+  //     end: "bottom bottom",
+  //     pin: rightRef.current,
+  //     animation: animation,
+  //     scrub: true,
+  //   });
+  // });
+  useGSAP(
+    () => {
+      const photos = gsap.utils.toArray<HTMLElement>(".photos");
+
+      // base states
+      gsap.set(photos, { opacity: 1 });
+      gsap.set(photos.slice(1), { yPercent: 100 });
+
+      const tl = gsap.timeline({ defaults: { ease: "none" } });
+
+      // step-by-step: bring next in + dim previous
+      for (let i = 1; i < photos.length; i++) {
+        tl.to(
+          photos[i - 1],
+          { opacity: 0.3, duration: 1 },
+          `step${i}`, // same label as next animation
+        ).to(photos[i], { yPercent: 0, duration: 1 }, `step${i}`);
+      }
+
+      ScrollTrigger.create({
+        trigger: containerRef.current,
+        start: "top top",
+        end: "bottom bottom",
+        pin: rightRef.current,
+        animation: tl,
+        scrub: true,
+        // invalidateOnRefresh: true,
+        pinSpacing: false,
+      });
+    },
+    { scope: containerRef },
+  );
+
   return (
     <div>
       <Container>
@@ -51,7 +84,7 @@ const NoLimitations = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
               </div>
-              <div className="flex h-screen flex-col gap-4">
+              <div className="flex h-screen justify-center flex-col gap-4">
                 <h3 className="text-[20px] uppercase font-primary">
                   Burger O Clock
                 </h3>
@@ -60,7 +93,7 @@ const NoLimitations = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
               </div>
-              <div className="flex h-screen flex-col gap-4">
+              <div className="flex h-screen justify-center flex-col gap-4">
                 <h3 className="text-[20px] uppercase font-primary">
                   Burger O Clock
                 </h3>
@@ -69,7 +102,7 @@ const NoLimitations = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
               </div>
-              <div className="flex h-screen flex-col gap-4">
+              <div className="flex h-screen justify-center flex-col gap-4">
                 <h3 className="text-[20px] uppercase font-primary">
                   Burger O Clock
                 </h3>
@@ -78,7 +111,7 @@ const NoLimitations = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
               </div>
-              <div className="flex h-screen flex-col gap-4">
+              <div className="flex h-screen justify-center flex-col gap-4">
                 <h3 className="text-[20px] uppercase font-primary">
                   Burger O Clock
                 </h3>
@@ -92,27 +125,51 @@ const NoLimitations = () => {
               className="relative w-1/2 h-screen grow flex items-center"
               ref={rightRef}
             >
-              <div className="relative w-[40vw] h-[50vw] overflow-hidden">
+              <div className="relative w-[40vw] h-[30vw] overflow-hidden">
                 <div className="photos absolute inset-0 w-full h-full">
                   <video
                     src="/cgi1.mp4"
                     autoPlay
                     muted
                     loop
-                    className="min-w-full h-full"
+                    className="min-w-full h-full object-cover"
                   ></video>
                 </div>
                 <div className="photos absolute inset-0 w-full h-full">
-                  <video src="/cgi2.mp4" autoPlay muted loop></video>
+                  <video
+                    src="/cgi2.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    className="min-w-full h-full object-cover"
+                  ></video>
                 </div>
                 <div className="photos absolute inset-0 w-full h-full">
-                  <video src="/cgi1.mp4" autoPlay muted loop></video>
+                  <video
+                    src="/cgi1.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    className="min-w-full h-full object-cover"
+                  ></video>
                 </div>
                 <div className="photos absolute inset-0 w-full h-full">
-                  <video src="/cgi2.mp4" autoPlay muted loop></video>
+                  <video
+                    src="/cgi2.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    className="min-w-full h-full object-cover"
+                  ></video>
                 </div>
                 <div className="photos absolute inset-0 w-full h-full">
-                  <video src="/cgi1.mp4" autoPlay muted loop></video>
+                  <video
+                    src="/cgi1.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    className="min-w-full h-full object-cover"
+                  ></video>
                 </div>
               </div>
             </div>
