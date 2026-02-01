@@ -4,9 +4,9 @@ import WannaStart from "./wanna-start";
 import FillForm from "./fill-form";
 import NoLimitations from "./no-limitations";
 import OurClients from "./our-clients";
-import ComprehensiveOfferings from "./services-card";
-import ServiceCarousel from "./ServiceCarousel";
 import RecentlyDoneProjects from "./recently-done-projects";
+import InnovativeProblem from "./innovative-problem";
+import About from "./About";
 
 const CgiMain = () => {
   return (
@@ -15,8 +15,8 @@ const CgiMain = () => {
       <NoLimitations />
       <OurClients />
       <RecentlyDoneProjects />
-      <ComprehensiveOfferings />
-      <ServiceCarousel />
+      <About />
+      <InnovativeProblem />
       <WannaStart />
       <FillForm />
     </>

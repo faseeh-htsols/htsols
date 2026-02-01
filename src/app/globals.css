@@ -852,3 +852,14 @@ body {
 .swiper-button-next {
   display: none !important;
 }
+
+.bg-innovative {
+  background:
+    linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+    linear-gradient(90deg, #0C0C0C -0.09%, #000000 99.91%),
+    conic-gradient(from 181.06deg at 50% 50%,
+      rgba(0, 131, 138, 0.2) 0deg,
+      rgba(0, 0, 0, 0) 172.66deg,
+      rgba(0, 131, 138, 0.4) 281.25deg,
+      rgba(0, 131, 138, 0.2) 360deg);
+}

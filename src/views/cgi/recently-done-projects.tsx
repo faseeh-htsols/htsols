@@ -46,7 +46,16 @@ const RecentlyDoneProjects = () => {
           </div>
         </Container>
       </div>
-      <div></div>
+      <div className="grid grid-cols-4 gap-4">
+        {data.map((item, idx) => (
+          <div key={idx}>
+            <div>
+              <h3>{item.heading}</h3>
+              <p>{item.para}</p>
+            </div>
+          </div>
+        ))}
+      </div>
       <div></div>
     </div>
   );
