@@ -27,7 +27,7 @@ function PopUp({
   const isVideo = /\.(mp4|webm|ogg)$/i.test(src);
 
   return (
-    <div className="fixed inset-0 z-[999] flex items-center justify-center px-4">
+    <div className="fixed inset-0 z-100 flex items-center justify-center backdrop-blur-2xl px-4">
       <button
         aria-label="Close popup"
         onClick={onClose}

@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div>
       <Container>
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 mb-18 ">
           <p className="text-xl font-primary uppercase bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">
             About
           </p>
@@ -15,7 +15,7 @@ const About = () => {
             Motion Animation, we create compelling visual experiences that
             elevate your brand.
           </h2>
-          <div className="flex flex-row gap-12">
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
             <p className="text-xl bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">
               Based in London and Barcelona
             </p>
@@ -34,7 +34,7 @@ const About = () => {
           alt="image"
           width={1000}
           height={1000}
-          className="w-full h-[500px] object-contain"
+          className="w-full h-[200px] lg:h-[500px] object-contain"
         />
       </div>
     </div>

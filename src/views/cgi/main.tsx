@@ -10,19 +10,21 @@ import About from "./About";
 import TheWayWeWork from "./the-way-we-work";
 import TestimonialCarousel from "./testimonial-carousel";
 import PortfolioGrid from "./portfolio-grid";
+import ClientsMarquee from "./clients-marquee";
 
 const CgiMain = () => {
   return (
     <>
       <Banner />
+      <ClientsMarquee />
       <NoLimitations />
       <OurClients />
-      <TheWayWeWork />
-      <TestimonialCarousel />
       <RecentlyDoneProjects />
-      <PortfolioGrid />
       <About />
       <InnovativeProblem />
+      <TheWayWeWork />
+      <TestimonialCarousel />
+      <PortfolioGrid />
       <WannaStart />
       <FillForm />
     </>

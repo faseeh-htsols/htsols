@@ -9,7 +9,7 @@ const WannaStart = () => {
           <HeadingTwo className="text-center">
             Wanna start right now?
           </HeadingTwo>
-          <div className="max-w-[1080px] mx-auto grid grid-cols-2 w-full gap-20">
+          <div className="max-w-[1080px] mx-auto grid md:grid-cols-2 w-full gap-20">
             <div className="bg-white py-7 rounded-3xl flex flex-col gap-5">
               <div className="flex justify-center">
                 <Image

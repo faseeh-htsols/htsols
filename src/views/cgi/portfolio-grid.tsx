@@ -284,7 +284,10 @@ const PortfolioGrid = () => {
         {/* Grid */}
         <section className="pb-20">
           <div ref={containerRef}>
-            <div ref={gridRef} className="relative grid grid-cols-4 gap-5">
+            <div
+              ref={gridRef}
+              className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"
+            >
               {WORKS.map((w, i) => {
                 const colSpan = w.w ? `col-span-${Math.min(w.w, 4)}` : "";
                 const rowSpan = w.h ? `row-span-${Math.min(w.h, 4)}` : "";

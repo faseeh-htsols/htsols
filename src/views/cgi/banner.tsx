@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="bg-black relative pb-20 pt-36 ">
+    <div className="bg-[url(/cgi/banner.png)] h-screen bg-center flex items-center relative pb-36 bg-cover pt-36 ">
       <div className="absolute top-20 left-0">
         <Image
           src={"/left-gradient.png"}
