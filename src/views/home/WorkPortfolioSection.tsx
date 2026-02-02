@@ -152,7 +152,7 @@ export default function WorkPortfolioSection() {
         </div>
 
         {/* RIGHT SIDE – CAROUSEL (Swiper) */}
-        <div className="relative px-2 lg:px-0 w-full lg:w-[55%]">
+        <div className="relative px-2 lg:px-0 w-full overflow-hidden lg:w-[55%]">
           <Swiper
             modules={[Autoplay]}
             className="portfolio-swiper"

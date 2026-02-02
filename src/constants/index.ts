@@ -369,7 +369,7 @@ export const NAV_ITEMS = [
       },
       {
         name: "CGI services",
-        link: "/services/cgi-services",
+        link: "/services/cgi",
       },
       {
         name: "Staff Augmentation",

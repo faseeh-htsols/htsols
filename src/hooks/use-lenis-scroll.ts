@@ -1,54 +1,57 @@
 "use client";
+
 import { useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const useLenisScroll = () => {
+// module-level singleton prevents double init across re-mounts
+let lenisSingleton: Lenis | null = null;
+
+export default function useLenisScroll() {
   useEffect(() => {
+    // ✅ prevents multiple Lenis instances (big source of “jerk”)
+    if (lenisSingleton) return;
+
     const lenis = new Lenis({
-      lerp: 0.1,
+      // your “too late” feeling is mostly low lerp — raise it
+      lerp: 0.1, // try 0.22–0.35
+      smoothWheel: true,
       gestureOrientation: "vertical",
-      wheelMultiplier: 1, // optional
-      touchMultiplier: 1.5, // optional
+      wheelMultiplier: 1,
+      touchMultiplier: 1.15,
     });
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
+    lenisSingleton = lenis;
 
-    // Sync ScrollTrigger
+    // ✅ official pattern: update ScrollTrigger on Lenis scroll
     lenis.on("scroll", ScrollTrigger.update);
 
-    ScrollTrigger.scrollerProxy(document.body, {
-      scrollTop(value) {
-        return value !== undefined
-          ? lenis.scrollTo(value)
-          : lenis.scroll.instance.scroll.y;
-      },
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight,
-        };
-      },
-      pinType: document.body.style.transform ? "transform" : "fixed",
-    });
+    // ✅ run Lenis in GSAP ticker, and prioritize it to reduce reflow/jitter
+    const raf = (time: number) => {
+      lenis.raf(time * 1000); // gsap time is seconds → lenis wants ms
+    };
+    gsap.ticker.add(raf, false, true); // <-- prioritize=true (key)
+    gsap.ticker.lagSmoothing(0);
 
-    ScrollTrigger.defaults({ scroller: document.body });
-    ScrollTrigger.refresh();
+    // refresh once layout is stable
+    const refresh = () => ScrollTrigger.refresh(true);
+    requestAnimationFrame(refresh);
+    window.addEventListener("load", refresh, { once: true });
+
+    // optional: refresh after fonts
+
+    document.fonts?.ready?.then(refresh).catch(() => {});
 
     return () => {
+      window.removeEventListener("load", refresh);
+      gsap.ticker.remove(raf);
+
+      lenis.off?.("scroll", ScrollTrigger.update);
       lenis.destroy();
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      lenisSingleton = null;
     };
   }, []);
-};
-
-export default useLenisScroll;
+}
