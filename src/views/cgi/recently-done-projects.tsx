@@ -1,3 +1,6 @@
+"use client";
+import { useState } from "react";
+import PopUp from "@/components/ui/popup";
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
@@ -24,6 +27,17 @@ const data = [
   },
 ];
 const RecentlyDoneProjects = () => {
+  const [open, setOpen] = useState(false);
+  const [activeSrc, setActiveSrc] = useState<string | null>(null);
+  const openPopup = (src: string) => {
+    setActiveSrc(src);
+    setOpen(true);
+  };
+
+  const closePopup = () => {
+    setOpen(false);
+    setActiveSrc(null);
+  };
   return (
     <div className="py-14">
       <Container>
@@ -46,17 +60,36 @@ const RecentlyDoneProjects = () => {
           </div>
         </Container>
       </div>
-      <div className="grid grid-cols-4 gap-4">
-        {data.map((item, idx) => (
-          <div key={idx}>
-            <div>
-              <h3>{item.heading}</h3>
-              <p>{item.para}</p>
+      <Container>
+        <div className="grid grid-cols-4 gap-4">
+          {data.map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#5C5C5C_99.52%)] p-0.5"
+            >
+              <div className="bg-black relative p-4 flex flex-col gap-3">
+                <div
+                  className="ms-auto -mt-10 cursor-pointer"
+                  onClick={() => openPopup(item.href)}
+                >
+                  <Image
+                    src={"/cgi/play-btn.svg"}
+                    alt="images"
+                    width={48}
+                    height={48}
+                    className="w-[45px] h-[45px]"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-xl">{item.heading}</h3>
+                  <p>{item.para}</p>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-      <div></div>
+          ))}
+        </div>
+      </Container>
+      <PopUp open={open} src={activeSrc} onClose={closePopup} />
     </div>
   );
 };
