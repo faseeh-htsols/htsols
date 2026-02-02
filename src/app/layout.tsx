@@ -3,6 +3,7 @@ import { Unbounded, Poppins, Jost, Open_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import DefaultProviders from "@/providers/default-providers";
 
 const unbounded = Unbounded({
   variable: "--font-unbounded",
@@ -64,9 +65,9 @@ export default function RootLayout({
       <body
         className={`${unbounded.variable} bg-black text-white ${inter.variable} ${popins.variable} ${jost.variable} ${open_Sans.variable} antialiased`}
       >
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        {/* <Navbar /> */}
+        <DefaultProviders>{children}</DefaultProviders>
+        {/* <Footer /> */}
       </body>
     </html>
   );

@@ -31,31 +31,35 @@ const NoLimitations = () => {
   useGSAP(
     () => {
       const photos = gsap.utils.toArray<HTMLElement>(".photos");
+      const mm = gsap.matchMedia();
 
-      // base states
-      gsap.set(photos, { opacity: 1 });
-      gsap.set(photos.slice(1), { yPercent: 100 });
+      // Tailwind lg = 1024px by default
+      mm.add("(min-width: 1024px)", () => {
+        // base states
+        gsap.set(photos, { opacity: 1 });
+        gsap.set(photos.slice(1), { yPercent: 100 });
 
-      const tl = gsap.timeline({ defaults: { ease: "none" } });
+        const tl = gsap.timeline({ defaults: { ease: "none" } });
 
-      // step-by-step: bring next in + dim previous
-      for (let i = 1; i < photos.length; i++) {
-        tl.to(
-          photos[i - 1],
-          { opacity: 0.3, duration: 1 },
-          `step${i}`, // same label as next animation
-        ).to(photos[i], { yPercent: 0, duration: 1 }, `step${i}`);
-      }
+        // step-by-step: bring next in + dim previous
+        for (let i = 1; i < photos.length; i++) {
+          tl.to(
+            photos[i - 1],
+            { opacity: 0.3, duration: 1 },
+            `step${i}`, // same label as next animation
+          ).to(photos[i], { yPercent: 0, duration: 1 }, `step${i}`);
+        }
 
-      ScrollTrigger.create({
-        trigger: containerRef.current,
-        start: "top top",
-        end: "bottom bottom",
-        pin: rightRef.current,
-        animation: tl,
-        scrub: true,
-        // invalidateOnRefresh: true,
-        pinSpacing: false,
+        ScrollTrigger.create({
+          trigger: containerRef.current,
+          start: "top top",
+          end: "bottom bottom",
+          pin: rightRef.current,
+          animation: tl,
+          scrub: true,
+          // invalidateOnRefresh: true,
+          pinSpacing: false,
+        });
       });
     },
     { scope: containerRef },
