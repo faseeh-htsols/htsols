@@ -4,6 +4,7 @@ import PopUp from "@/components/ui/popup";
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
+import Button from "@/components/ui/Button";
 const data = [
   {
     heading: "Lorem Ipsum",
@@ -66,13 +67,13 @@ const RecentlyDoneProjects = () => {
         </Container>
       </div>
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-8 lg:gap-y-0 gap-x-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-8 lg:gap-y-0 gap-x-4 mb-8">
           {data.map((item, idx) => (
             <div
               key={idx}
-              className="bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#5C5C5C_99.52%)] p-0.5"
+              className="bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#5C5C5C_99.52%)] p-0.5 rounded-lg"
             >
-              <div className="bg-black relative p-4 flex flex-col gap-3">
+              <div className="bg-black relative p-4 flex flex-col gap-3 rounded-lg ">
                 <div
                   className="ms-auto -mt-10 cursor-pointer"
                   onClick={() => openPopup(item.href)}
@@ -85,13 +86,16 @@ const RecentlyDoneProjects = () => {
                     className="w-[45px] h-[45px]"
                   />
                 </div>
-                <div>
+                <div className="flex flex-col gap-3">
                   <h3 className="text-xl">{item.heading}</h3>
                   <p>{item.para}</p>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex justify-center">
+          <Button href="/">Book 1:1 Consultation With Us</Button>
         </div>
       </Container>
       <PopUp open={open} src={activeSrc} onClose={closePopup} />

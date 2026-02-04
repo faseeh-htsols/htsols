@@ -11,6 +11,7 @@ import TheWayWeWork from "./the-way-we-work";
 import TestimonialCarousel from "./testimonial-carousel";
 import PortfolioGrid from "./portfolio-grid";
 import ClientsMarquee from "./clients-marquee";
+import CgiIdeasSection from "./cgi-ideas";
 
 const CgiMain = () => {
   return (
@@ -21,6 +22,7 @@ const CgiMain = () => {
       <OurClients />
       <RecentlyDoneProjects />
       <About />
+      <CgiIdeasSection />
       <InnovativeProblem />
       <TheWayWeWork />
       <TestimonialCarousel />

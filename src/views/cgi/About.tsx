@@ -15,15 +15,17 @@ const About = () => {
             Motion Animation, we create compelling visual experiences that
             elevate your brand.
           </h2>
-          <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 lg:justify-between">
             <p className="text-xl bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">
-              Based in London and Barcelona
+              Based in London <br className="lg:block hidden" /> and Barcelona
             </p>
             <p>
               Our expert team is passionate about turning your vision into
-              reality. Utilising state-of-the-art tools and creative ingenuity,
-              we craft animations and graphics that not only attract attention
-              but also foster deeper engagement with your brand.
+              reality. Utilising state-
+              <br className="lg:block hidden" />
+              of-the-art tools and creative ingenuity, we craft animations and
+              graphics that not <br className="lg:block hidden" /> only attract
+              attention but also foster deeper engagement with your brand.
             </p>
           </div>
         </div>

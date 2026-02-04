@@ -5,7 +5,7 @@ import React from "react";
 
 const InnovativeProblem = () => {
   return (
-    <div className="py-24 bg-[url(/cgi/innovative-bg.png)]">
+    <div className="py-24 bg-[url(/cgi/innovative-bg.png)] bg-cover">
       <Container>
         <div>
           <HeadingTwo className="text-center mb-10">
@@ -31,7 +31,7 @@ const InnovativeProblem = () => {
                 className="w-full h-full"
               />
             </div>
-            <div className="absolute hidden lg:block left-1/2 -translate-x-1/2 top-[10px] w-[70%]">
+            <div className="absolute hidden lg:block left-1/2 -translate-x-1/2 top-[38px] w-[70%]">
               <Image
                 src={"/cgi/line.svg"}
                 alt="imge"
@@ -42,7 +42,7 @@ const InnovativeProblem = () => {
             </div>
             <div className="flex mb-16 lg:mb-0 gap-16 lg:gap-0 flex-col lg:flex-row mt-14 justify-between">
               <div
-                className="lg:w-[30%] p-4 relative"
+                className="lg:w-[30%] p-4 relative border-2 border-white/20 rounded-lg"
                 style={{
                   background:
                     "linear-gradient(0deg, rgba(255,255,255,0.1), rgba(255,255,255,0.1)), linear-gradient(90deg, #0C0C0C -0.09%, #000000 99.91%), conic-gradient(from 181.06deg at 50% 50%, rgba(0,131,138,0.2) 0deg, rgba(0,0,0,0) 172.66deg, rgba(0,131,138,0.4) 281.25deg, rgba(0,131,138,0.2) 360deg)",
@@ -73,14 +73,14 @@ const InnovativeProblem = () => {
                     src={"/cgi/star.svg"}
                   />
                 </div>
-                <h3 className="text-center font-primary text-2xl">
+                <h3 className="text-center font-primary mb-4 text-2xl">
                   Developing tailored solutions
                 </h3>{" "}
                 <p className="text-center">
                   Next, our team of experts develops tailored solutions.
                 </p>
               </div>
-              <div className="lg:w-[30%] relative p-4  bg-innovative">
+              <div className="lg:w-[30%] relative p-4  bg-innovative border-2 border-white/20 rounded-lg">
                 <div className="mx-auto mb-5 -mt-14 rounded-full w-[70px] h-[70px] flex justify-center items-center bg-[linear-gradient(180deg,#00838A_0%,#00A1A5_100%)]">
                   <Image
                     width={40}
@@ -106,7 +106,7 @@ const InnovativeProblem = () => {
                     src={"/cgi/star.svg"}
                   />
                 </div>
-                <h3 className="text-center font-primary text-2xl">
+                <h3 className="text-center font-primary  mb-4 text-2xl">
                   Implementing Technology
                 </h3>{" "}
                 <p className="text-center">
@@ -115,7 +115,7 @@ const InnovativeProblem = () => {
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="lg:w-[30%] relative p-4  bg-innovative">
+              <div className="lg:w-[30%] relative p-4  border-2 border-white/20 rounded-lg bg-innovative">
                 <div className="mx-auto mb-5 -mt-14 rounded-full w-[70px] h-[70px] flex justify-center items-center bg-[linear-gradient(180deg,#00838A_0%,#00A1A5_100%)]">
                   <Image
                     width={40}
@@ -141,7 +141,7 @@ const InnovativeProblem = () => {
                     src={"/cgi/star.svg"}
                   />
                 </div>
-                <h3 className="text-center font-primary text-2xl">
+                <h3 className="text-center font-primary mb-4 text-2xl">
                   Understanding Your Business Goals
                 </h3>{" "}
                 <p className="text-center">

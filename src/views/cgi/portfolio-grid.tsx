@@ -325,7 +325,7 @@ const PortfolioGrid = () => {
                             />
                           </div>
                         </div>
-                        <div className="text-white pt-2 flex flex-col gap-1">
+                        <div className="text-white pt-5 flex flex-col gap-1">
                           <h3 className="text-xl font-primary text-center uppercase">
                             {w.title}
                           </h3>

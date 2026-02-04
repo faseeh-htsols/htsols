@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="bg-[url(/cgi/banner.png)] h-screen bg-center flex items-center relative pb-36 bg-cover pt-36 ">
+    <div className="bg-[url(/cgi/banner.png)] h-screen bg-center flex items-center relative pb-36 bg-cover  ">
       <div className="absolute top-20 left-0">
         <Image
           src={"/left-gradient.png"}
@@ -25,7 +25,7 @@ const Banner = () => {
       </div>
       <Container>
         <div>
-          <h1 className="text-6xl font-primary mb-8 font-semibold text-white text-center uppercase">
+          <h1 className="text-6xl font-primary -mt-20 font-semibold text-white text-center uppercase">
             Brands go viral with wild CGI videos
           </h1>
         </div>
