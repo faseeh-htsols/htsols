@@ -12,11 +12,13 @@ import TestimonialCarousel from "./testimonial-carousel";
 import PortfolioGrid from "./portfolio-grid";
 import ClientsMarquee from "./clients-marquee";
 import CgiIdeasSection from "./cgi-ideas";
+import OfferingsCarousel3D from "./OfferingsCarousel3D";
 
 const CgiMain = () => {
   return (
     <>
       <Banner />
+      <OfferingsCarousel3D />
       <ClientsMarquee />
       <NoLimitations />
       <OurClients />
