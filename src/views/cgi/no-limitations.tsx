@@ -4,13 +4,17 @@ import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 import { useRef, useState } from "react";
 import PopUp from "@/components/ui/popup";
+gsap.registerPlugin(ScrollTrigger);
 const NoLimitations = () => {
+  const mainRef = useRef<null | HTMLDivElement>(null);
   const containerRef = useRef<null | HTMLDivElement>(null);
   const rightRef = useRef<null | HTMLDivElement>(null);
+  const headingRef = useRef<HTMLHeadingElement | null>(null);
+  const paraRef = useRef<HTMLHeadingElement | null>(null);
   // useGSAP(() => {
   //   const photos = gsap.utils.toArray(".photos:not(:first-child)");
   //   gsap.set(photos, { yPercent: 100 });
@@ -32,7 +36,40 @@ const NoLimitations = () => {
     () => {
       const photos = gsap.utils.toArray<HTMLElement>(".photos");
       const mm = gsap.matchMedia();
-
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
+      const split = new SplitType(headingRef.current!, {
+        types: isMobile ? "words" : "chars",
+      });
+      const targets = isMobile ? split.words : split.chars;
+      const splitPara = new SplitType(paraRef.current!, {
+        types: isMobile ? "words" : "chars",
+      });
+      const targetsPara = isMobile ? splitPara.words : splitPara.chars;
+      gsap.from(targets, {
+        x: 2,
+        duration: 1.8,
+        opacity: 0,
+        stagger: 0.06,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: "top 100%",
+          end: "bottom bottom",
+        },
+      });
+      gsap.from(targetsPara, {
+        x: -2,
+        opacity: 0,
+        stagger: 0.006,
+        duration: 1.2,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: paraRef.current,
+          start: "top 100%",
+          end: "bottom bottom",
+          // markers: true,
+        },
+      });
       // Tailwind lg = 1024px by default
       mm.add("(min-width: 1024px)", () => {
         // base states
@@ -62,7 +99,7 @@ const NoLimitations = () => {
         });
       });
     },
-    { scope: containerRef },
+    { scope: mainRef },
   );
   const [open, setOpen] = useState(false);
   const [activeSrc, setActiveSrc] = useState<string | null>(null);
@@ -76,13 +113,18 @@ const NoLimitations = () => {
     setActiveSrc(null);
   };
   return (
-    <div className="py-10 [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)] ">
+    <div
+      ref={mainRef}
+      className="py-10 [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)] "
+    >
       <Container>
         <div className="">
           <div className="flex flex-col lg:flex-row gap-6 pb-6 border-b border-white">
-            <HeadingTwo className="grow">No Limitations In CGI</HeadingTwo>
+            <HeadingTwo className="grow" ref={headingRef}>
+              No Limitations In CGI
+            </HeadingTwo>
             <div className="lg:w-[40%]">
-              <p>
+              <p ref={paraRef}>
                 At our professional CGI agency, photographic skills and digital
                 artistry are collaborative teamwork in action.
               </p>

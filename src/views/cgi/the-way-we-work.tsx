@@ -83,15 +83,15 @@ const TheWayWeWork = () => {
                       onClick={() => setOpenIndex(idx)}
                       aria-expanded={isOpen}
                       className={cx(
-                        "w-full text-left",
-                        "grid grid-cols-[70px_1fr_28px] gap-4",
+                        "w-full text-left cursor-pointer",
+                        "grid grid-cols-[70px_1fr_28px]",
                         "py-6",
                       )}
                     >
                       <span
                         className={cx(
-                          "text-sm tracking-[0.18em]",
-                          isOpen ? "text-white" : "text-white/45",
+                          "text-xl  font-primary",
+                          isOpen ? "text-white" : "text-white/60",
                         )}
                       >
                         {item.no}
@@ -99,8 +99,8 @@ const TheWayWeWork = () => {
 
                       <span
                         className={cx(
-                          "text-sm md:text-base tracking-[0.22em] uppercase",
-                          isOpen ? "text-white" : "text-white/45",
+                          "text-sm md:text-xl font-primary  uppercase",
+                          isOpen ? "text-white" : "text-white/60",
                         )}
                       >
                         {item.title}
@@ -126,7 +126,7 @@ const TheWayWeWork = () => {
                       )}
                     >
                       <div className="overflow-hidden">
-                        <p className="pb-6 pr-10 pl-[70px] text-white/70 text-sm leading-6 max-w-[880px]">
+                        <p className="pb-6 pr-10 pl-[70px] text-white text-sm leading-6 max-w-[880px]">
                           {item.desc}
                         </p>
                       </div>

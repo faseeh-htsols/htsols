@@ -24,7 +24,7 @@ const WannaStart = () => {
                 EMAIL US NOW
               </h3>
               <p className="text-[20px] font-sans text-center text-black">
-                abc@gmail.com
+                <a href="mailto:hello@htsol.ca">hello@htsol.ca</a>
               </p>
             </div>
             <div className="bg-white py-7 rounded-3xl flex flex-col gap-5">
@@ -41,7 +41,7 @@ const WannaStart = () => {
                 CALL US NOW
               </h3>
               <p className="text-[20px] font-sans text-center text-black">
-                123 456 789
+                <a href="tel:(+1) 437-937-1235">(+1) 437-937-1235</a>
               </p>
             </div>
           </div>

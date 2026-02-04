@@ -9,6 +9,7 @@ import React from "react";
 import Image from "next/image";
 import HeadingTwo from "@/components/ui/heading-two";
 import PopUp from "@/components/ui/popup";
+import Button from "@/components/ui/Button";
 
 gsap.registerPlugin(Flip);
 
@@ -265,8 +266,8 @@ const PortfolioGrid = () => {
                   <button
                     onClick={() => setActive(t)}
                     className={[
-                      "uppercase text-[14px] tracking-[0.2em] transition-colors",
-                      "focus:outline-none font-primary cursor-pointer focus-visible:ring-1 py-2 px-3 focus-visible:ring-white/40",
+                      "uppercase rounded-sm text-xl  transition-colors",
+                      "focus:outline-none font-primary cursor-pointer focus-visible:ring-1 py-2 px-6 focus-visible:ring-white/40",
                       isActive
                         ? "text-white bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]"
                         : "text-white/60 hover:text-secondary border border-white",
@@ -305,7 +306,7 @@ const PortfolioGrid = () => {
                     <div className={`relative w-full `}>
                       <button
                         onClick={() => openPopup(w.video)}
-                        className={`block relative w-full h-full  overflow-hidden `}
+                        className={`block relative w-full h-full cursor-pointer overflow-hidden `}
                       >
                         <div className="relative w-full h-[400px] rounded-lg overflow-hidden">
                           <img
@@ -337,6 +338,9 @@ const PortfolioGrid = () => {
                 );
               })}
             </div>
+          </div>
+          <div className="flex justify-center mt-8">
+            <Button href="/">More projects</Button>
           </div>
         </section>
       </Wrapper>

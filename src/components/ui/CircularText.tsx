@@ -12,7 +12,7 @@ export const CircularText: React.FC<CircularTextProps> = ({
   className = "",
 }) => {
   return (
-    <div className={`circular-text-container ${className}`}>
+    <div className={`circular-text-container cursor-pointer ${className}`}>
       <svg
         viewBox="0 0 200 200"
         className="w-32 h-32 md:w-40 md:h-40 animate-spin-slow"
