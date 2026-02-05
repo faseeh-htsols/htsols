@@ -9,7 +9,30 @@ const WannaStart = () => {
           <HeadingTwo className="text-center">
             Wanna start right now?
           </HeadingTwo>
-          <div className="max-w-[1080px] mx-auto grid md:grid-cols-2 w-full gap-20">
+          <div className="max-w-[1080px] mx-auto grid md:grid-cols-3 w-full gap-3">
+            <div className="bg-white py-7 rounded-3xl flex flex-col gap-5">
+              <div className="flex justify-center">
+                <Image
+                  src={"/cgi/email.svg"}
+                  width={80}
+                  height={80}
+                  className="w-20 h-20"
+                  alt="image"
+                />
+              </div>
+              <h3 className="font-primary uppercase text-[20px] text-black font-medium text-center">
+                book a free consultation
+              </h3>
+              <p className="text-[20px] font-sans text-center text-black">
+                <a
+                  href="https://calendly.com/faseehkhan-htsol/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  book
+                </a>
+              </p>
+            </div>
             <div className="bg-white py-7 rounded-3xl flex flex-col gap-5">
               <div className="flex justify-center">
                 <Image

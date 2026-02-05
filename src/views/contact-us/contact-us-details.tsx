@@ -4,20 +4,20 @@ import Image from "next/image";
 const data = [
   {
     name: "Phone No",
-    para: "123 456 789",
+    para: "(+1) 437-937-1235",
     imageUrl: "/call-svg.svg",
-    href: "tel:123 456 789",
+    href: "tel:(+1) 437-937-1235",
   },
   {
     name: "Email:",
-    para: "loremisum@gmail.com",
+    para: "hello@htsol.ca",
     imageUrl: "/email-svg.svg",
-    href: "mailto:loremisum@gmail.com",
+    href: "mailto:hello@htsol.ca",
   },
   {
     name: "Book a Free 1hr Consultation With Us via Whatapp",
     imageUrl: "/book-consultation-svg.svg",
-    href: "https://wa.me/552196312XXXX",
+    href: "https://calendly.com/faseehkhan-htsol/30min",
   },
 ];
 const ContactUsDetails = () => {

@@ -129,7 +129,7 @@ export const HeroSection: React.FC = () => {
         loop
         slidesPerView={1}
         autoplay={{
-          delay: 10000,
+          delay: 10000000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
@@ -180,7 +180,7 @@ export const HeroSection: React.FC = () => {
                   </p>
                 </div>
               </div>
-              <div className="lg:absolute lg:bottom-[14%] flex flex-wrap gap-4 pt-4">
+              <div className="lg:absolute lg:bottom-[10%] flex flex-wrap gap-4 pt-4">
                 <Button variant="primary" href="#contact">
                   Start Your Project
                 </Button>

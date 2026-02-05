@@ -263,7 +263,7 @@ export const Footer: React.FC = () => {
       <div className="border-t border-white/10">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 py-6">
           <p className="text-white text-xs text-center">
-            © 2026 All rights reserved
+            © 2026 HtSol Inc. all rights reserved. company no: 1749219-7
           </p>
         </div>
       </div>

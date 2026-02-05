@@ -64,7 +64,7 @@ export default function CgiIdeasSection() {
       <Container>
         {/* Heading */}
         <div className="text-center">
-          <HeadingTwo>WANT TO GET CGI IDEAS</HeadingTwo>
+          <HeadingTwo>Get Your Brands CGI Idea Right away!</HeadingTwo>
         </div>
 
         {/* Filters */}
