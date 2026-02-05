@@ -13,13 +13,20 @@ const InnovativeProblem = () => {
           </HeadingTwo>
           <div className="relative">
             <div className="flex justify-center">
-              <Image
+              {/* <Image
                 src={"/cgi/inovative-logo.png"}
                 alt="logo"
                 width={200}
                 height={200}
                 className="w-[143px] z-1 relative h-[143px] object-contain"
-              />
+              /> */}
+              <video
+                src="/cgi/outputiii.webm"
+                className="w-[170px] z-1 relative h-[180px] object-contain"
+                autoPlay
+                muted
+                loop
+              ></video>
             </div>
             <div className="absolute top-[110px] w-3 left-1/2 -translate-x-1/2 h-[calc(100%-200px)]">
               {" "}

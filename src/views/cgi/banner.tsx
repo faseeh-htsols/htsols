@@ -13,7 +13,7 @@ const Banner = () => {
     const split = new SplitType(headingRef.current!, {
       types: isMobile ? "words" : "chars",
     });
-    const targets = isMobile ? split.words : split.chars;
+    const targets = isMobile ? split.words : split.words;
     gsap.from(targets, {
       x: 100,
       duration: 1.8,
@@ -51,7 +51,7 @@ const Banner = () => {
             ref={headingRef}
             className="text-6xl font-primary -mt-20 font-semibold text-white text-center uppercase"
           >
-            Brands go viral with wild CGI videos
+            Brands go viral with wild CGI & 3D Animations
           </h1>
         </div>
         <div></div>

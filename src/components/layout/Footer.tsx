@@ -1,11 +1,31 @@
 "use client";
 
-import React from "react";
+import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import HeadingTwo from "../ui/heading-two";
-
+import LottiePlayer from "../ui/lottie-player";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import type { AnimationItem } from "lottie-web";
 export const Footer: React.FC = () => {
+  const lottieAnimRef = useRef<AnimationItem | null>(null);
+  const lottieTriggerRef = useRef<ScrollTrigger | null>(null);
+  const imageContainer = useRef<HTMLAnchorElement | null>(null);
+  const handleLottieReady = (anim: AnimationItem) => {
+    lottieAnimRef.current = anim;
+    anim.goToAndStop(0, true);
+
+    lottieTriggerRef.current?.kill();
+
+    if (imageContainer.current) {
+      lottieTriggerRef.current = ScrollTrigger.create({
+        trigger: imageContainer.current,
+        start: "top 80%",
+        onEnter: () => anim.goToAndPlay(0, true),
+        onLeaveBack: () => anim.goToAndStop(0, true),
+      });
+    }
+  };
   return (
     <footer className="bg-[#0a0a0a] border-t border-white/10">
       <div className="bg-tertiary">
@@ -34,27 +54,19 @@ export const Footer: React.FC = () => {
                 <h3 className="text-white md:text-left text-center  flex flex-col uppercase font-primary gap-2 text-5xl md:text-3xl font-bold leading-tight">
                   <span className="flex md:justify-start justify-center items-center gap-3">
                     LET&apos;S{" "}
-                    <span className="rounded-full w-[120px] h-[60px] bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] flex items-center justify-center">
-                      <svg
-                        width="25"
-                        height="25"
-                        viewBox="0 0 25 25"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="fill-white"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M5.32725 18.4846C4.90706 18.027 4.93743 17.3153 5.3951 16.8951L17.5493 5.736C18.007 5.31581 18.7187 5.34619 19.1389 5.80386C19.5591 6.26152 19.5287 6.97321 19.071 7.3934L6.91679 18.5525C6.45912 18.9727 5.74744 18.9423 5.32725 18.4846Z"
-                        />
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M7.64913 6.10673C7.67563 5.48597 8.20036 5.0042 8.82112 5.0307L18.3584 5.43778C18.9791 5.46433 19.4608 5.98906 19.4344 6.60978L19.0273 16.147C19.0007 16.7678 18.476 17.2495 17.8553 17.2231C17.2346 17.1965 16.7528 16.6718 16.7793 16.0511L17.1384 7.63779L8.72512 7.27869C8.10441 7.25215 7.62268 6.72745 7.64913 6.10673Z"
-                        />
-                      </svg>{" "}
-                    </span>{" "}
+                    <Link
+                      href={"/"}
+                      ref={imageContainer}
+                      className="rounded-full w-[120px] h-[60px] bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] flex items-center justify-center"
+                    >
+                      <LottiePlayer
+                        src={"/up-right-arrow-white.json"} // e.g. "/search_17569494_edited.json"
+                        loop={true}
+                        autoplay={true}
+                        className="w-[60px] h-[60px]"
+                        onReady={handleLottieReady}
+                      />
+                    </Link>{" "}
                   </span>
                   WORK TOGETHER
                 </h3>
