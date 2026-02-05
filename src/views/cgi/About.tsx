@@ -31,13 +31,20 @@ const About = () => {
         </div>
       </Container>
       <div>
-        <Image
+        {/* <Image
           src={"/cgi/about.png"}
           alt="image"
           width={1000}
           height={1000}
           className="w-full h-[200px] lg:h-[500px] object-contain"
-        />
+        /> */}
+        <video
+          src="/cgi/loop-export.mp4"
+          className="w-full h-[500px]"
+          muted
+          loop
+          autoPlay
+        ></video>
       </div>
     </div>
   );

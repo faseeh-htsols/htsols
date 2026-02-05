@@ -22,7 +22,7 @@ const InnovativeProblem = () => {
               /> */}
               <video
                 src="/cgi/outputiii.webm"
-                className="w-[170px] z-1 relative h-[180px] object-contain"
+                className="w-[290px] z-1 relative h-[200px] object-contain"
                 autoPlay
                 muted
                 loop
@@ -38,7 +38,7 @@ const InnovativeProblem = () => {
                 className="w-full h-full"
               />
             </div>
-            <div className="absolute hidden lg:block left-1/2 -translate-x-1/2 top-[38px] w-[70%]">
+            <div className="absolute hidden lg:block left-1/2 -translate-x-1/2 top-[63px] w-[70%]">
               <Image
                 src={"/cgi/line.svg"}
                 alt="imge"

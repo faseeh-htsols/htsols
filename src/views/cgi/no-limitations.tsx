@@ -197,10 +197,10 @@ const NoLimitations = () => {
               className="relative w-1/2 h-screen grow flex items-center"
               ref={rightRef}
             >
-              <div className="relative w-[40vw] h-[30vw] overflow-hidden">
+              <div className="relative w-[40vw] h-[30vw] overflow-hidden rounded-lg">
                 <div className="photos absolute inset-0 w-full h-full">
                   <video
-                    src="/cgi1.mp4"
+                    src="/cgi/kaybees.mp4"
                     autoPlay
                     muted
                     loop
