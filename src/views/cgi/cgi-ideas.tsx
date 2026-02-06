@@ -68,7 +68,7 @@ export default function CgiIdeasSection() {
         </div>
 
         {/* Filters */}
-        <div className="mt-6 grid grid-cols-3 gap-3 md:gap-4">
+        <div className="mt-6 grid lg:grid-cols-3 gap-3 md:gap-4">
           {/* <div className="flex w-full md:w-auto gap-3 md:gap-4"></div> */}
           <select
             className="h-9 w-full bg-transparent text-white/90 text-sm px-3

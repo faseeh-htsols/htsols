@@ -82,15 +82,15 @@ export const Footer: React.FC = () => {
                 <li>
                   <Link
                     href="/"
-                    className="text-white/60 hover:text-primary text-sm transition-colors duration-200"
+                    className="text-white/60 hover:text-white text-sm transition-colors duration-200"
                   >
                     Home
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/about"
-                    className="text-white/60 hover:text-primary text-sm transition-colors duration-200"
+                    href="/about-us"
+                    className="text-white/60 hover:text-white text-sm transition-colors duration-200"
                   >
                     About Us
                   </Link>
@@ -98,7 +98,7 @@ export const Footer: React.FC = () => {
                 <li>
                   <Link
                     href="/services"
-                    className="text-white/60 hover:text-primary text-sm transition-colors duration-200"
+                    className="text-white/60 hover:text-white text-sm transition-colors duration-200"
                   >
                     Services
                   </Link>
@@ -106,7 +106,7 @@ export const Footer: React.FC = () => {
                 <li>
                   <Link
                     href="/testimonials"
-                    className="text-white/60 hover:text-primary text-sm transition-colors duration-200"
+                    className="text-white/60 hover:text-white text-sm transition-colors duration-200"
                   >
                     Testimonials
                   </Link>
@@ -114,7 +114,7 @@ export const Footer: React.FC = () => {
                 <li>
                   <Link
                     href="/blog"
-                    className="text-white/60 hover:text-primary text-sm transition-colors duration-200"
+                    className="text-white/60 hover:text-white text-sm transition-colors duration-200"
                   >
                     Blog
                   </Link>
@@ -122,7 +122,7 @@ export const Footer: React.FC = () => {
                 <li>
                   <Link
                     href="/contact"
-                    className="text-white/60 hover:text-primary text-sm transition-colors duration-200"
+                    className="text-white/60 hover:text-white text-sm transition-colors duration-200"
                   >
                     Contact
                   </Link>
@@ -138,48 +138,48 @@ export const Footer: React.FC = () => {
               <ul className="space-y-3">
                 <li>
                   <Link
-                    href="/portfolio/web-development"
-                    className="text-white/60 hover:text-primary text-sm transition-colors duration-200"
+                    href="/services/website-development"
+                    className="text-white/60 hover:text-white text-sm transition-colors duration-200"
                   >
                     Website Development services
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/portfolio/seo"
-                    className="text-white/60 hover:text-primary text-sm transition-colors duration-200"
+                    href="/services/seo"
+                    className="text-white/60 hover:text-white text-sm transition-colors duration-200"
                   >
                     SEO services
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/portfolio/cgi"
-                    className="text-white/60 hover:text-primary text-sm transition-colors duration-200"
+                    href="/services/cgi"
+                    className="text-white/60 hover:text-white text-sm transition-colors duration-200"
                   >
                     CGI services
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/portfolio/staff-augmentation"
-                    className="text-white/60 hover:text-primary text-sm transition-colors duration-200"
+                    href="/services/staff-augmentation"
+                    className="text-white/60 hover:text-white text-sm transition-colors duration-200"
                   >
                     Staff Augmentation
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/portfolio/digital-transformation"
-                    className="text-white/60 hover:text-primary text-sm transition-colors duration-200"
+                    href="/services/digital-transformation"
+                    className="text-white/60 hover:text-white text-sm transition-colors duration-200"
                   >
                     Digital Transformation
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/portfolio/digital-marketing"
-                    className="text-white/60 hover:text-primary text-sm transition-colors duration-200"
+                    href="/services/digital-marketing"
+                    className="text-white/60 hover:text-white text-sm transition-colors duration-200"
                   >
                     Digital Marketing
                   </Link>

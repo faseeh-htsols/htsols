@@ -20,7 +20,7 @@ const testimonials: Testimonial[] = [
     name: "MICHAEL CHEN",
     title: "CTO",
     content:
-      "Exceptional technical expertise combined with creative vision. HtSolutions delivered a robust, scalable solution perfectly aligned with our business needs.",
+      "Exceptional technical expertise combined with creative vision. HtSol Inc. delivered a robust, scalable solution perfectly aligned with our business needs.",
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces",
   },
@@ -28,7 +28,7 @@ const testimonials: Testimonial[] = [
     name: "ALAN BAKER",
     title: "CEO",
     content:
-      "Working with HtSolutions has been an incredible experience. They truly listened to our needs and delivered a stunning design that exceeded our expectations. We couldn't be happier with the final product!<br/><br/>Working with HtSolutions has been an incredible experience. They truly listened to our needs and delivered a stunning design that exceeded our expectations",
+      "Working with HtSol Inc. has been an incredible experience. They truly listened to our needs and delivered a stunning design that exceeded our expectations. We couldn't be happier with the final product!<br/><br/>Working with HtSol Inc. has been an incredible experience. They truly listened to our needs and delivered a stunning design that exceeded our expectations",
     image:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces",
   },
@@ -44,7 +44,7 @@ const testimonials: Testimonial[] = [
     name: "MICHAEL CHEN",
     title: "CTO",
     content:
-      "Exceptional technical expertise combined with creative vision. HtSolutions delivered a robust, scalable solution perfectly aligned with our business needs.",
+      "Exceptional technical expertise combined with creative vision. HtSol Inc. delivered a robust, scalable solution perfectly aligned with our business needs.",
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces",
   },
@@ -52,7 +52,7 @@ const testimonials: Testimonial[] = [
     name: "ALAN BAKER",
     title: "CEO",
     content:
-      "Working with HtSolutions has been an incredible experience. They truly listened to our needs and delivered a stunning design that exceeded our expectations. We couldn't be happier with the final product!",
+      "Working with HtSol Inc. has been an incredible experience. They truly listened to our needs and delivered a stunning design that exceeded our expectations. We couldn't be happier with the final product!",
     image:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces",
   },

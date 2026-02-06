@@ -18,11 +18,11 @@ const CgiMain = () => {
   return (
     <>
       <Banner />
-      <OfferingsCarousel3D />
       <ClientsMarquee />
       <NoLimitations />
       <OurClients />
       <RecentlyDoneProjects />
+      <OfferingsCarousel3D />
       <About />
       <CgiIdeasSection />
       <InnovativeProblem />

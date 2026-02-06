@@ -19,17 +19,17 @@ const ClientsAboutMe = () => {
         </HeadingTwo>
 
         <div className="flex justify-between">
-          <div className="w-[200px] ">
+          <div className="[50px] md:w-[120px] lg:w-[200px] ">
             <Image
               src={"/ceo/left-qoute.svg"}
-              className="w-[200px] h-40"
+              className="w-[50px] md:w-[120px] lg:w-[200px] h-40"
               width={200}
               height={200}
               alt="left Qoute"
             />
           </div>
 
-          <div className="w-[60%]">
+          <div className="w-[calc(100%-120px)] md:w-[calc(100%-240px)] lg:w-[60%] overflow-hidden">
             <Swiper
               className=" ceo-pagination"
               loop
@@ -40,7 +40,8 @@ const ClientsAboutMe = () => {
                 pauseOnMouseEnter: true,
               }}
               pagination={{ clickable: true }}
-              modules={[Autoplay, Pagination]}>
+              modules={[Autoplay, Pagination]}
+            >
               {CLIENT_SAY_ABOUT_CEO.map((item, index) => (
                 <SwiperSlide key={index}>
                   <p className="text-center text-lg mb-6">{item.para}</p>
@@ -64,10 +65,10 @@ const ClientsAboutMe = () => {
             </Swiper>
           </div>
 
-          <div className="w-[200px] ">
+          <div className="w-[50px] md:w-[120px] lg:w-[200px] ">
             <Image
               src={"/ceo/right-qoute.svg"}
-              className="w-[200px] h-40"
+              className="w-[50px] md:w-[120px] lg:w-[200px] h-40"
               width={200}
               height={200}
               alt="left Qoute"

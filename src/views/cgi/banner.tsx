@@ -49,7 +49,7 @@ const Banner = () => {
         <div>
           <h1
             ref={headingRef}
-            className="text-6xl font-primary -mt-20 font-semibold text-white text-center uppercase"
+            className="text-4xl lg:text-6xl font-primary -mt-20 font-semibold text-white text-center uppercase"
           >
             Brands go viral with wild CGI & 3D Animations
           </h1>

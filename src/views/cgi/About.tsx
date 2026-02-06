@@ -40,7 +40,7 @@ const About = () => {
         /> */}
         <video
           src="/cgi/loop-export.mp4"
-          className="w-full h-[500px]"
+          className="w-full h-[150px] lg:h-[500px]"
           muted
           loop
           autoPlay

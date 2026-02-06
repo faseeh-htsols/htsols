@@ -142,7 +142,10 @@ export default function OfferingsPinnedEllipse() {
   );
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-black">
+    <section
+      ref={sectionRef}
+      className="relative overflow-hidden pt-[50px] bg-black"
+    >
       {/* background vignette */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,131,138,0.18)_0%,rgba(0,0,0,0.88)_60%,rgba(0,0,0,1)_100%)]" />
 

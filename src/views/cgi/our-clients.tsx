@@ -59,7 +59,7 @@ const OurClients = () => {
           trigger: headingRef.current,
           start: "top 85%",
           end: "bottom 60%",
-          markers: isDev,
+          // markers: isDev,
           once: true,
           invalidateOnRefresh: true,
         },

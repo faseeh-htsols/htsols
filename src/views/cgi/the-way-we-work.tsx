@@ -5,6 +5,7 @@ import CircularText from "@/components/ui/CircularText";
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 
 type WorkStep = {
   no: string;
@@ -12,31 +13,36 @@ type WorkStep = {
   desc: string;
 };
 
-const STEPS: WorkStep[] = [
+const STEPS = [
   {
     no: "01",
     title: "CREATIVE",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    image: "/cgi/burger-o-clock.png",
   },
   {
     no: "02",
     title: "SHOOTING",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    image: "/cgi/piza-hits.png",
   },
   {
     no: "03",
     title: "3D SCENE",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    image: "/cgi/burger-o-clock.png",
   },
   {
     no: "04",
     title: "ANIMATION",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    image: "/cgi/piza-hits.png",
   },
   {
     no: "05",
     title: "POST-PRODUCTION",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    image: "/cgi/burger-o-clock.png",
   },
 ];
 
@@ -49,21 +55,12 @@ const TheWayWeWork = () => {
   return (
     <section className="bg-[#0B0B0B] text-white py-14 lg:py-20">
       <Container>
+        <HeadingTwo className="text-center mb-7">THE WAY WE WORK</HeadingTwo>
         <div className="flex items-start justify-between gap-10">
           {/* Left content */}
           <div className="w-full">
             {/* Title row + long line */}
             <div className="flex items-center gap-6">
-              <HeadingTwo
-                className={cx(
-                  "uppercase tracking-[0.14em]",
-                  "text-transparent",
-                  "[-webkit-text-stroke:1px_rgba(255,255,255,0.85)]",
-                )}
-              >
-                THE WAY WE WORK
-              </HeadingTwo>
-
               {/* long line (like design) */}
               {/* <div className="hid   den lg:block h-px flex-1 bg-[#2F7AAE]/70" /> */}
             </div>
@@ -138,8 +135,14 @@ const TheWayWeWork = () => {
           </div>
 
           {/* Right circle */}
-          <div className="hidden lg:flex shrink-0 self-center">
-            <CircularText />
+          <div className="hidden lg:flex w-[47%] shrink-0 self-center">
+            <Image
+              src={STEPS[openIndex]?.image}
+              className="w-full h-[500px] object-contain"
+              width={500}
+              height={500}
+              alt="image"
+            />
           </div>
         </div>
       </Container>

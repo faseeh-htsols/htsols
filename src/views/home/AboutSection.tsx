@@ -22,7 +22,7 @@ export const AboutSection: React.FC = () => {
           {/* Left Content */}
           <div className="space-y-6 grow">
             {/* Heading */}
-            <HeadingTwo className="">About Htsolutions</HeadingTwo>
+            <HeadingTwo className="">About HtSol Inc.</HeadingTwo>
 
             {/* Description paragraphs */}
             <div className="space-y-4 text-white/60 text-sm md:text-base leading-relaxed">

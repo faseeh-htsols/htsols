@@ -130,9 +130,12 @@ const NoLimitations = () => {
               </p>
             </div>
           </div>
-          <div className="flex pt-8 gap-14 justify-between" ref={containerRef}>
-            <div className="w-[48%]">
-              <div className="flex h-screen justify-center flex-col gap-4">
+          <div
+            className="flex lg:flex-row flex-col pt-8 gap-14 justify-between"
+            ref={containerRef}
+          >
+            <div className="lg:w-[48%] lg:block flex flex-col gap-8">
+              <div className="flex lg:h-screen justify-center flex-col gap-4">
                 <h3 className="text-[20px] uppercase font-primary">
                   Burger O Clock
                 </h3>
@@ -156,7 +159,7 @@ const NoLimitations = () => {
                   </button>
                 </div>
               </div>
-              <div className="flex h-screen justify-center flex-col gap-4">
+              <div className="flex lg:h-screen justify-center flex-col gap-4">
                 <h3 className="text-[20px] uppercase font-primary">
                   Burger O Clock
                 </h3>
@@ -165,7 +168,7 @@ const NoLimitations = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
               </div>
-              <div className="flex h-screen justify-center flex-col gap-4">
+              <div className="flex lg:h-screen justify-center flex-col gap-4">
                 <h3 className="text-[20px] uppercase font-primary">
                   Burger O Clock
                 </h3>
@@ -174,7 +177,7 @@ const NoLimitations = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
               </div>
-              <div className="flex h-screen justify-center flex-col gap-4">
+              <div className="flex lg:h-screen justify-center flex-col gap-4">
                 <h3 className="text-[20px] uppercase font-primary">
                   Burger O Clock
                 </h3>
@@ -183,7 +186,7 @@ const NoLimitations = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
               </div>
-              <div className="flex h-screen justify-center flex-col gap-4">
+              <div className="flex lg:h-screen justify-center flex-col gap-4">
                 <h3 className="text-[20px] uppercase font-primary">
                   Burger O Clock
                 </h3>
@@ -194,7 +197,7 @@ const NoLimitations = () => {
               </div>
             </div>
             <div
-              className="relative w-1/2 h-screen grow flex items-center"
+              className="relative lg:w-1/2 lg:h-screen grow hidden lg:flex items-center"
               ref={rightRef}
             >
               <div className="relative w-[40vw] h-[30vw] overflow-hidden rounded-lg">

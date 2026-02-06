@@ -36,7 +36,7 @@ const Banner = () => {
                 className="lg:w-[400px] w-[120px] object-contain h-[100px] lg:h-[186px]"
               />
             </span>
-            <span className="border-b-2 border-white">Htsolutions</span>
+            <span className="border-b-2 border-white">HtSol Inc.</span>
           </h1>
         </div>
         <div className="flex lg:flex-row flex-col mt-20 gap-9 items-center">
