@@ -393,6 +393,10 @@ export const NAV_ITEMS = [
     name: "About CEO",
     link: "/ceo",
   },
+  {
+    name: "About CTO",
+    link: "/cto",
+  },
 ];
 export const WEBSITE_NEEDS_BUISNESS = [
   {
