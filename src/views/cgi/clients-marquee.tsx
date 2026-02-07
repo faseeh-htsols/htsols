@@ -9,16 +9,18 @@ import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 
 const IMAGES_CLIENTS_CGI = [
-  { image: "/cgi/gendiwa-design.png", alt: "Gendwa design" },
-  { image: "/cgi/virefori.png", alt: "virefori" },
-  { image: "/cgi/loka-oma.png", alt: "loka-oma" },
-  { image: "/cgi/one-stup.png", alt: "one-stup" },
+  { image: "/cgi/burgeroclock.webp", alt: "Gendwa design" },
+  { image: "/cgi/avlinc.webp", alt: "virefori" },
+  { image: "/cgi/borjan.webp", alt: "loka-oma" },
+  { image: "/cgi/dentopia.webp", alt: "one-stup" },
 
   // (you had duplicates already — you can keep them OR remove them)
-  { image: "/cgi/gendiwa-design.png", alt: "Gendwa design" },
-  { image: "/cgi/virefori.png", alt: "virefori" },
-  { image: "/cgi/loka-oma.png", alt: "loka-oma" },
-  { image: "/cgi/one-stup.png", alt: "one-stup" },
+  { image: "/cgi/kaybees.webp", alt: "Gendwa design" },
+  { image: "/cgi/meiidz.webp", alt: "virefori" },
+  { image: "/cgi/nayza.webp", alt: "loka-oma" },
+  { image: "/cgi/pizzahutt.webp", alt: "one-stup" },
+  { image: "/cgi/skincare.webp", alt: "one-stup" },
+  { image: "/cgi/skinwhite.webp", alt: "one-stup" },
 ];
 
 export default function ClientsMarquee() {

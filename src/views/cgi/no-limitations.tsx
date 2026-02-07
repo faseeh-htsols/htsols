@@ -121,12 +121,12 @@ const NoLimitations = () => {
         <div className="">
           <div className="flex flex-col lg:flex-row gap-6 pb-6 border-b border-white">
             <HeadingTwo className="grow" ref={headingRef}>
-              No Limitations In CGI
+              CGI Creates Viral Moments
             </HeadingTwo>
             <div className="lg:w-[40%]">
               <p ref={paraRef}>
-                At our professional CGI agency, photographic skills and digital
-                artistry are collaborative teamwork in action.
+                We’ve generated 20+ million organic views, turning brands into
+                viral sensations overnight.
               </p>
             </div>
           </div>
@@ -137,11 +137,19 @@ const NoLimitations = () => {
             <div className="lg:w-[48%] lg:block flex flex-col gap-8">
               <div className="flex lg:h-screen justify-center flex-col gap-4">
                 <h3 className="text-[20px] uppercase font-primary">
-                  Burger O Clock
+                  Pizza Hut - Hut Hits 10
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  We created an explosive CGI campaign celebrating Pizza
+                  Hut&apos;s 10th branch launch in Pakistan. Our 3D animations
+                  featured pizzas erupting from iconic Pakistani landmarks,
+                  blending local culture with global brand energy. The campaign
+                  showcased their signature menu items in gravity-defying,
+                  hyperrealistic scenarios that captured the excitement of
+                  expansion. Through dynamic motion graphics and photorealistic
+                  renders, we transformed a simple branch opening into a viral
+                  moment, generating massive social media buzz and driving foot
+                  traffic to all locations across the country.
                 </p>
                 <div>
                   <button
@@ -161,38 +169,58 @@ const NoLimitations = () => {
               </div>
               <div className="flex lg:h-screen justify-center flex-col gap-4">
                 <h3 className="text-[20px] uppercase font-primary">
-                  Burger O Clock
+                  Kiwai Skincare
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  For Kiwai, an international herbal skincare brand, we
+                  developed a stunning CGI series that brought their natural
+                  ingredients to life. Our 3D animations visualized botanical
+                  extracts transforming into luxurious products, with organic
+                  textures flowing seamlessly through ethereal environments. The
+                  photorealistic renders highlighted the purity and premium
+                  quality of their skin and hair care line while maintaining an
+                  elegant, spa-like aesthetic. This campaign elevated their
+                  brand positioning in competitive markets, communicating both
+                  efficacy and natural beauty through captivating visual
+                  storytelling that resonated globally.
                 </p>
               </div>
               <div className="flex lg:h-screen justify-center flex-col gap-4">
                 <h3 className="text-[20px] uppercase font-primary">
-                  Burger O Clock
+                  Red Bull - CGI Gives You Wings
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  An unofficial passion project that reimagines Red Bull&apos;s
+                  iconic &apos;Gives You Wings&apos; tagline through the lens of
+                  limitless CGI creativity. We crafted explosive 3D animations
+                  featuring Red Bull cans soaring through impossible dimensions,
+                  breaking gravity, and defying physics in ways traditional
+                  photography never could. From cans erupting with energetic
+                  liquid wings to extreme sports scenarios rendered in
+                  hyperrealistic detail, this campaign demonstrates how CGI
+                  truly gives brands wings—unlimited creative freedom. The
+                  project showcases vibrant motion graphics, dynamic camera
+                  movements, and photorealistic product renders that capture Red
+                  Bull&apos;s high-energy essence while proving that in the
+                  world of CGI, the only limit is imagination.
                 </p>
               </div>
               <div className="flex lg:h-screen justify-center flex-col gap-4">
                 <h3 className="text-[20px] uppercase font-primary">
-                  Burger O Clock
+                  Nayza Apparel
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-              <div className="flex lg:h-screen justify-center flex-col gap-4">
-                <h3 className="text-[20px] uppercase font-primary">
-                  Burger O Clock
-                </h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  For Burger O&apos;Clock&apos;s multi-branch expansion into a
+                  new city, we created a mouthwatering CGI campaign that made
+                  their burgers impossible to resist. Our 3D artists crafted
+                  hyperrealistic renders featuring their signature burgers in
+                  explosive, vibrant scenarios—from ingredients flying through
+                  the air to gravity-defying stack compositions. Each animation
+                  was optimized for social media virality, combining appetizing
+                  visuals with dynamic motion that stopped scrolls instantly.
+                  The campaign generated millions of impressions organically,
+                  building massive anticipation and ensuring packed locations
+                  from day one of the new launches.
                 </p>
               </div>
             </div>

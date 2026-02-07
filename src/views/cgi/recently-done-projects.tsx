@@ -7,23 +7,27 @@ import Image from "next/image";
 import Button from "@/components/ui/Button";
 const data = [
   {
-    heading: "Lorem Ipsum",
-    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.",
+    heading: "1: Service Businesses",
+    smallHeading: "Service Providers Going Next-Level",
+    para: "Salons, gyms, restaurants, clinics—turn boring before/afters into scroll-stopping CGI ads that get shared and remembered.",
     href: "/cgi1.mp4",
   },
   {
-    heading: "Lorem Ipsum",
-    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.",
+    heading: "2: Product Businesses",
+    smallHeading: "Product Brands Wanting Viral Impact",
+    para: "Showcase products in impossible scenarios. CGI creates hyperrealistic, gravity-defying content that drives conversions.",
     href: "/cgi1.mp4",
   },
   {
-    heading: "Lorem Ipsum",
-    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.",
+    heading: "3: Location Showcases",
+    smallHeading: "Businesses Showcasing Locations",
+    para: "Real estate, hotels, retail chains—bring locations to life with cinematic CGI reveals that drive foot traffic.",
     href: "/cgi1.mp4",
   },
   {
-    heading: "Lorem Ipsum",
-    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.",
+    heading: "4: New Launches",
+    smallHeading: "New Product/Service Launches",
+    para: "Launching something new? Create viral CGI commercials that position your brand as innovative and get millions of views.",
     href: "/cgi1.mp4",
   },
 ];
@@ -49,7 +53,7 @@ const RecentlyDoneProjects = () => {
       <Container>
         <div className="mb-10">
           <HeadingTwo className="text-center">
-            Recently done projects
+            Is CGI / 3D Right for Your Business?
           </HeadingTwo>{" "}
         </div>
       </Container>
@@ -73,7 +77,7 @@ const RecentlyDoneProjects = () => {
               key={idx}
               className="bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#5C5C5C_99.52%)] p-0.5 rounded-lg"
             >
-              <div className="bg-black relative p-4 flex flex-col gap-3 rounded-lg ">
+              <div className="bg-black h-full relative p-4 flex flex-col gap-3 rounded-lg ">
                 <div
                   className="ms-auto -mt-10 cursor-pointer"
                   onClick={() => openPopup(item.href)}
@@ -87,7 +91,8 @@ const RecentlyDoneProjects = () => {
                   />
                 </div>
                 <div className="flex flex-col gap-3">
-                  <h3 className="text-xl">{item.heading}</h3>
+                  <h3 className="text-xl font-primary">{item.heading}</h3>
+                  <h4 className="font-semibold">{item.smallHeading}</h4>
                   <p>{item.para}</p>
                 </div>
               </div>
