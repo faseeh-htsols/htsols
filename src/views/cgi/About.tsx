@@ -45,6 +45,8 @@ const About = () => {
           muted
           loop
           autoPlay
+          webkit-playsinline="true"
+          playsInline
         ></video>
       </div>
     </div>
