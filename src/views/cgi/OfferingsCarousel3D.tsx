@@ -31,16 +31,17 @@ const OFFERINGS: Offering[] = [
     desc: "Dominate outdoor advertising with jaw-dropping 3D billboard content in up to 8K. Create viral street moments that turn passersby into amplifiers.",
   },
   {
-    title: "Service Name\nHere",
-    desc: "Our Hardware Solution service provides top-notch hardware tailored to your business needs. We offer installation, and support for a wide range of equipment.",
+    title: "CGI / VFX Mixed Reality Videos",
+    desc: "Blend reality with CGI magic. Our mixed reality videos combine live footage with stunning VFX, creating viral content that captivates audiences.",
   },
   {
-    title: "Service Name\nHere",
-    desc: "Our Software Solution service offers custom, high-quality software to meet your business needs, enhancing efficiency and driving growth.",
+    title: "3D Animation Videos",
+    desc: "Captivating 3D animations that bring your brand to life. From product reveals to explainers, we create scroll-stopping content that converts.",
+    cta: "Learn more",
   },
   {
-    title: "Service Name\nHere",
-    desc: "Our Innovative Solutions service offers creative and cutting-edge strategies to solve complex business challenges.",
+    title: "Immersive 3D Billboard Videos",
+    desc: "Dominate outdoor advertising with jaw-dropping 3D billboard content in up to 8K. Create viral street moments that turn passersby into amplifiers.",
   },
 ];
 

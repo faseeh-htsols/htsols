@@ -7,6 +7,7 @@ import CaseStudiesPrevious from "./case-studies-previous";
 import OurClients from "./our-clients";
 import LetsHaveAChat from "./lets-have-a-chat";
 import FAQSection from "./faq-section";
+import ContactDetails from "./contact-details";
 
 const DentalMain = () => {
   return (
@@ -19,6 +20,7 @@ const DentalMain = () => {
       <OurClients />
       <FAQSection />
       <LetsHaveAChat />
+      <ContactDetails />
     </>
   );
 };

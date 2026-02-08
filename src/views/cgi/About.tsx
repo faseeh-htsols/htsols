@@ -11,21 +11,22 @@ const About = () => {
             About
           </p>
           <h2 className="text-[28px] font-primary uppercase">
-            With expertise in Creative Direction, CGI, VFX, 3D Modelling, and
-            Motion Animation, we create compelling visual experiences that
-            elevate your brand.
+            Specialists in Creative Direction, CGI, VFX, 3D Modelling, and
+            Motion Animation. We engineer viral visual moments that transform
+            brands into trends.
           </h2>
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 lg:justify-between">
             <p className="text-xl bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">
-              Based in London <br className="lg:block hidden" /> and Barcelona
+              Based in Mississauga, <br className="lg:block hidden" /> Canada
             </p>
             <p>
               Our expert team is passionate about turning your vision into
-              reality. Utilising state-
+              measurable success. Utilizing state-of
               <br className="lg:block hidden" />
-              of-the-art tools and creative ingenuity, we craft animations and
-              graphics that not <br className="lg:block hidden" /> only attract
-              attention but also foster deeper engagement with your brand.
+              -the-art CGI tools and creative ingenuity, we craft animations
+              that not only captivate audiences
+              <br className="lg:block hidden" />
+              but generate millions of impressions and drive conversions
             </p>
           </div>
         </div>

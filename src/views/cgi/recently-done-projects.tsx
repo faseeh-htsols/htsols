@@ -60,18 +60,25 @@ const RecentlyDoneProjects = () => {
       <div className="bg-[url(/cgi/reccently-done-bg.png)] bg-center">
         <Container>
           <div className="max-w-[300px] mx-auto">
-            <Image
+            {/* <Image
               width={300}
               height={1000}
               src={"/cgi/reccently-done.png"}
               alt="image"
               className="w-full h-[450px] object-contain object-center"
-            />
+            /> */}
           </div>
         </Container>
       </div>
+      <video
+        src="/cgi/ball-animation.mp4"
+        autoPlay
+        muted
+        loop
+        className="w-full h-[280px] object-cover"
+      ></video>
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-8 lg:gap-y-0 gap-x-4 mb-8">
+        <div className="grid -mt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-8 lg:gap-y-0 gap-x-4 mb-8">
           {data.map((item, idx) => (
             <div
               key={idx}
