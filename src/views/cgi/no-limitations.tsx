@@ -115,7 +115,7 @@ const NoLimitations = () => {
   return (
     <div
       ref={mainRef}
-      className="py-10 [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]"
+      className="py-24 lg:py-10 [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]"
     >
       <Container>
         <div className="">
@@ -139,6 +139,17 @@ const NoLimitations = () => {
                 <h3 className="text-[20px] uppercase font-primary">
                   Pizza Hut - Hut Hits 10
                 </h3>
+                <div className="lg:hidden block">
+                  <video
+                    src="/cgi/kaybees.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    webkit-playsinline="true"
+                    playsInline
+                    className="min-w-full h-[300px] rounded-2xl object-cover"
+                  ></video>
+                </div>
                 <p>
                   We created an explosive CGI campaign celebrating Pizza
                   Hut&apos;s 10th branch launch in Pakistan. Our 3D animations
@@ -173,6 +184,17 @@ const NoLimitations = () => {
                 <h3 className="text-[20px] uppercase font-primary">
                   Kiwai Skincare
                 </h3>
+                <div className="lg:hidden block">
+                  <video
+                    src="/cgi/kaybees.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    webkit-playsinline="true"
+                    playsInline
+                    className="min-w-full h-[300px] rounded-2xl object-cover"
+                  ></video>
+                </div>
                 <p>
                   For Kiwai, an international herbal skincare brand, we
                   developed a stunning CGI series that brought their natural
@@ -208,6 +230,17 @@ const NoLimitations = () => {
                 <h3 className="text-[20px] uppercase font-primary">
                   Red Bull - CGI Gives You Wings
                 </h3>
+                <div className="lg:hidden block">
+                  <video
+                    src="/cgi/kaybees.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    webkit-playsinline="true"
+                    playsInline
+                    className="min-w-full h-[300px] rounded-2xl object-cover"
+                  ></video>
+                </div>
                 <p>
                   An unofficial passion project that reimagines Red Bull&apos;s
                   iconic &apos;Gives You Wings&apos; tagline through the lens of
@@ -245,6 +278,17 @@ const NoLimitations = () => {
                 <h3 className="text-[20px] uppercase font-primary">
                   Nayza Apparel
                 </h3>
+                <div className="lg:hidden block">
+                  <video
+                    src="/cgi/kaybees.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    webkit-playsinline="true"
+                    playsInline
+                    className="min-w-full h-[300px] rounded-2xl object-cover"
+                  ></video>
+                </div>
                 <p>
                   For Burger O&apos;Clock&apos;s multi-branch expansion into a
                   new city, we created a mouthwatering CGI campaign that made

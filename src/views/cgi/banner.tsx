@@ -59,14 +59,17 @@ const Banner = () => {
           <Button href="/">View PitchDeck</Button>
         </div>
       </Container>
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-12">
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-3 lg:bottom-12">
         <video
-          src="/cgi/outputiii.webm"
           className="w-[290px] z-1 relative h-[200px] object-contain"
+          webkit-playsinline="true"
+          playsInline
           autoPlay
           muted
           loop
-        ></video>
+        >
+          <source src="/cgi/outputiii.webm" type="video/webm"></source>
+        </video>
       </div>
     </div>
   );

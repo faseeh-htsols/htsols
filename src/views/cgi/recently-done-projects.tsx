@@ -46,7 +46,7 @@ const RecentlyDoneProjects = () => {
   return (
     <div className="py-24 relative -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[1%] [clip-path:polygon(0_1%,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_100%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)]">
       <div
-        className="pointer-events-none absolute z-2 top-[4%] left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[1.7%] -rotate-3 sm:-rotate-1 w-full
+        className="pointer-events-none absolute z-2 top-6 lg:top-[4%] left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[1.7%] -rotate-3 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
           "
       ></div>
@@ -71,12 +71,15 @@ const RecentlyDoneProjects = () => {
         </Container>
       </div>
       <video
-        src="/cgi/ball-animation.mp4"
+        webkit-playsinline="true"
+        playsInline
         autoPlay
         muted
         loop
         className="w-full h-[563px] object-cover"
-      ></video>
+      >
+        <source src="/cgi/ball-animation.mp4" type="video/mp4" />
+      </video>
       <Container>
         <div className="grid relative  -mt-[280px] grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-8 lg:gap-y-0 gap-x-4 mb-8">
           {data.map((item, idx) => (
