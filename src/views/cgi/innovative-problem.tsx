@@ -26,6 +26,8 @@ const InnovativeProblem = () => {
                 autoPlay
                 muted
                 loop
+                webkit-playsinline="true"
+                playsInline
               ></video>
             </div>
             <div className="absolute top-[110px] w-3 left-1/2 -translate-x-1/2 h-[calc(100%-200px)]">
