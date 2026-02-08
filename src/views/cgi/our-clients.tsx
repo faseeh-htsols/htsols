@@ -8,7 +8,9 @@ import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 gsap.registerPlugin(ScrollTrigger);
 
 const IMAGES_CLIENTS_CGI = [
@@ -114,7 +116,7 @@ const OurClients = () => {
             OUR CLIENTS
           </HeadingTwo>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {IMAGES_CLIENTS_CGI.map((item, index) => (
               <div
                 key={index}
@@ -132,6 +134,51 @@ const OurClients = () => {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="lg:hidden block overflow-hidden">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={30}
+              loop={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 4,
+                  spaceBetween: 40,
+                },
+                1024: {
+                  slidesPerView: 5,
+                  spaceBetween: 50,
+                },
+              }}
+              modules={[Autoplay]}
+            >
+              {IMAGES_CLIENTS_CGI.map((item, index) => (
+                <SwiperSlide key={`${index}-mob`}>
+                  <div
+                    data-client-card
+                    className="bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] rounded-lg p-0.5"
+                  >
+                    <div className="bg-black py-10 flex justify-center items-center rounded-lg">
+                      <Image
+                        src={item.image}
+                        width={400}
+                        height={400}
+                        className="w-[75%] h-10 object-contain"
+                        alt={item.alt}
+                      />
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </Container>

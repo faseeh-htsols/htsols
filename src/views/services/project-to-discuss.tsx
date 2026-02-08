@@ -1,8 +1,11 @@
+"use client";
 import CircularText from "@/components/ui/CircularText";
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
-import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 interface Client {
   name: string;
   logo: string;
@@ -103,7 +106,7 @@ const ProjectToDiscuss = () => {
             ></div>
 
             {/* === Grid Content === */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 sm:grid-rows-4">
+            <div className="hidden lg:grid grid-cols-1 sm:grid-cols-3 sm:grid-rows-4">
               {clients.map((client, index) => (
                 <div
                   key={index}
@@ -118,6 +121,49 @@ const ProjectToDiscuss = () => {
                   />
                 </div>
               ))}
+            </div>
+            <div className="lg:hidden block overflow-hidden">
+              <Swiper
+                slidesPerView={1}
+                spaceBetween={30}
+                loop={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                  },
+                  1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                  },
+                }}
+                modules={[Autoplay]}
+              >
+                {clients.map((client, index) => (
+                  <SwiperSlide key={`${index}-mob`}>
+                    <div
+                      key={index}
+                      className="flex items-center justify-center "
+                    >
+                      <Image
+                        src={client.logo}
+                        alt={client.name}
+                        width={140}
+                        height={60}
+                        className="object-contain w-[80%] mx-auto h-[70px] sm:w-[140px] sm:h-[60px]"
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </div>
         </div>
