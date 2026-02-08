@@ -15,7 +15,7 @@ const WhatsIncluded = () => {
         <div className="pb-10 border-b border-white mb-10">
           <HeadingTwo className="text-center">What’s included</HeadingTwo>
         </div>
-        <div className="grid grid-cols-2 gap-9">
+        <div className="grid lg:grid-cols-2 gap-9">
           {WHATS_INCLUDED_WEBDEV.map((item, index) => (
             <div
               key={index}
