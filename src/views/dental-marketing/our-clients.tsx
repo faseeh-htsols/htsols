@@ -51,15 +51,15 @@ const OurClients = () => {
         </div>
         <div className="relative w-full max-w-[1100px] mx-auto">
           {/* === Grid Content === */}
-          <div className="grid grid-cols-1 lg:grid-cols-5 justify-center">
+          <div className=" flex flex-row gap-y-6 flex-wrap justify-center">
             {data.map((client, index) => (
-              <div key={index} className="">
+              <div key={index} className="px-5 w-[20%]">
                 <Image
                   src={client.logo}
                   alt={client.name}
                   width={140}
                   height={60}
-                  className="object-contain w-[80%] h-[70px] sm:w-[140px] sm:h-[60px]"
+                  className="object-contain w-full h-[180px] "
                 />
               </div>
             ))}

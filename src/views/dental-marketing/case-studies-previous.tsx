@@ -1,3 +1,4 @@
+import HeadingTwo from "@/components/ui/heading-two";
 import Wrapper from "@/components/ui/wrapper";
 import Image from "next/image";
 import React from "react";
@@ -27,6 +28,9 @@ const CaseStudiesPrevious = () => {
   return (
     <div className="bg-white py-24">
       <Wrapper>
+        <HeadingTwo className="!text-black mb-10">
+          Case studies and previous work
+        </HeadingTwo>
         <div className="flex flex-row flex-wrap justify-center">
           {data.map((item, index) => (
             <div className="w-[33.33%]" key={index}>

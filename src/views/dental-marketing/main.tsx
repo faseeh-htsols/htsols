@@ -8,6 +8,7 @@ import OurClients from "./our-clients";
 import LetsHaveAChat from "./lets-have-a-chat";
 import FAQSection from "./faq-section";
 import ContactDetails from "./contact-details";
+import ClientsSay from "./clients-say";
 
 const DentalMain = () => {
   return (
@@ -16,10 +17,11 @@ const DentalMain = () => {
       <WhyOnlinePresenceMatters />
       <OurSpecializedServices />
       <WhyChooseAgency />
-      <CaseStudiesPrevious />
-      <OurClients />
+      <ClientsSay />
       <FAQSection />
+      <CaseStudiesPrevious />
       <LetsHaveAChat />
+      <OurClients />
       <ContactDetails />
     </>
   );

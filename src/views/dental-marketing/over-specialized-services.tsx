@@ -30,20 +30,23 @@ const data = [
 ];
 export default function OurSpecializedServices() {
   return (
-    <section className="bg-[#F3F3F3] py-24">
+    <section className="bg-black py-24">
       <Container>
         {/* Heading */}
-        <HeadingTwo className="!text-[#020202] mb-10 text-center">
+        <HeadingTwo className="mb-10 text-center">
           Our Specialized Services
         </HeadingTwo>
 
         {/* Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-20 relative">
           {/* vertical divider */}
-          <div className="hidden lg:block absolute left-1/2 top-0 h-full w-px bg-[#8fb7c5]" />
-          <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 h-px w-full bg-[#8fb7c5]" />
+          {/* <div className="hidden lg:block absolute left-1/2 top-0 h-full w-px bg-[#8fb7c5]" /> */}
+          {/* <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 h-px w-full bg-[#8fb7c5]" /> */}
           {data.map((item) => (
-            <div key={item.heading} className="text-black flex flex-col gap-5">
+            <div
+              key={item.heading}
+              className="text-white bg-tertiary flex flex-col gap-5 px-5 py-4"
+            >
               <div>
                 <Image
                   src={item.image}
@@ -65,12 +68,12 @@ export default function OurSpecializedServices() {
                     />
                   </div>
                 </div>
-                <h3 className="font-semibold text-xl text-black font-primary ">
+                <h3 className="font-semibold text-xl font-primary ">
                   {item.heading}
                 </h3>
               </div>
               <p>{item.para}</p>
-              <div>
+              <div className="pb-6">
                 <Link
                   href="/"
                   className="text-white px-7 rounded-sm py-2 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]"
