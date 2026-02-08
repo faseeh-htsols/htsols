@@ -5,13 +5,14 @@ import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import gsap from "gsap";
 import { useRef } from "react";
+import Button from "@/components/ui/Button";
 const Banner = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const headingRef = useRef<HTMLHeadingElement | null>(null);
   useGSAP(() => {
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
     const split = new SplitType(headingRef.current!, {
-      types: isMobile ? "words" : "chars",
+      types: isMobile ? "words" : "words",
     });
     const targets = isMobile ? split.words : split.words;
     gsap.from(targets, {
@@ -49,13 +50,24 @@ const Banner = () => {
         <div>
           <h1
             ref={headingRef}
-            className="text-4xl lg:text-6xl font-primary -mt-20 font-semibold text-white text-center uppercase"
+            className="text-4xl mb-8 lg:text-6xl font-primary -mt-20 font-semibold text-white text-center uppercase"
           >
             Brands go viral with wild CGI & 3D Animations
           </h1>
         </div>
-        <div></div>
+        <div className="flex justify-center">
+          <Button href="/">View PitchDeck</Button>
+        </div>
       </Container>
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-12">
+        <video
+          src="/cgi/outputiii.webm"
+          className="w-[290px] z-1 relative h-[200px] object-contain"
+          autoPlay
+          muted
+          loop
+        ></video>
+      </div>
     </div>
   );
 };

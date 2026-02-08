@@ -46,7 +46,7 @@ const RecentlyDoneProjects = () => {
   return (
     <div className="py-24 relative -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[1%] [clip-path:polygon(0_1%,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_100%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)]">
       <div
-        className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
+        className="pointer-events-none absolute z-2 top-[4%] left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[1.7%] -rotate-3 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
           "
       ></div>
@@ -78,25 +78,23 @@ const RecentlyDoneProjects = () => {
         className="w-full h-[563px] object-cover"
       ></video>
       <Container>
-        <div className="grid -mt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-8 lg:gap-y-0 gap-x-4 mb-8">
+        <div className="grid relative  -mt-[280px] grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-8 lg:gap-y-0 gap-x-4 mb-8">
           {data.map((item, idx) => (
-            <div
-              key={idx}
-              className="bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#5C5C5C_99.52%)] p-0.5 rounded-lg"
-            >
-              <div className="bg-black h-full relative p-4 flex flex-col gap-3 rounded-lg ">
-                <div
-                  className="ms-auto -mt-10 cursor-pointer"
-                  onClick={() => openPopup(item.href)}
-                >
-                  <Image
-                    src={"/cgi/play-btn.svg"}
-                    alt="images"
-                    width={48}
-                    height={48}
-                    className="w-[45px] h-[45px]"
-                  />
-                </div>
+            <div key={idx} className="relative  p-0.5 rounded-lg">
+              <div
+                className="ms-auto w-fit -mt-5 z-10 relative cursor-pointer "
+                onClick={() => openPopup(item.href)}
+              >
+                <Image
+                  src={"/cgi/play-btn.svg"}
+                  alt="images"
+                  width={48}
+                  height={48}
+                  className="w-[45px] h-[45px]"
+                />
+              </div>
+              <div className=" absolute inset-0  bg-transparent opacity-50 backdrop-blur-[250px] rounded-lg"></div>
+              <div className=" h-full relative p-4 flex flex-col gap-3 rounded-lg ">
                 <div className="flex flex-col gap-3">
                   <h3 className="text-xl font-primary">{item.heading}</h3>
                   <h4 className="font-semibold">{item.smallHeading}</h4>

@@ -7,7 +7,7 @@ import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useState } from "react";
-import PopUp from "@/components/ui/popup";
+import PopUp from "@/components/ui/popup-youtube";
 gsap.registerPlugin(ScrollTrigger);
 const NoLimitations = () => {
   const mainRef = useRef<null | HTMLDivElement>(null);
@@ -38,11 +38,11 @@ const NoLimitations = () => {
       const mm = gsap.matchMedia();
       const isMobile = window.matchMedia("(max-width: 768px)").matches;
       const split = new SplitType(headingRef.current!, {
-        types: isMobile ? "words" : "chars",
+        types: isMobile ? "words" : "words",
       });
       const targets = isMobile ? split.words : split.chars;
       const splitPara = new SplitType(paraRef.current!, {
-        types: isMobile ? "words" : "chars",
+        types: isMobile ? "words" : "words",
       });
       const targetsPara = isMobile ? splitPara.words : splitPara.chars;
       gsap.from(targets, {
@@ -115,7 +115,7 @@ const NoLimitations = () => {
   return (
     <div
       ref={mainRef}
-      className="py-10 [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)] "
+      className="py-10 [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]"
     >
       <Container>
         <div className="">
@@ -153,7 +153,9 @@ const NoLimitations = () => {
                 </p>
                 <div>
                   <button
-                    onClick={() => openPopup("/cgi1.mp4")}
+                    onClick={() =>
+                      openPopup("https://www.youtube.com/shorts/nvr9g1-7S8s")
+                    }
                     className="flex cursor-pointer items-center gap-2 px-6 py-3 text-sm font-sans font-semibold uppercase rounded-full tracking-wider transition-all duration-300 border bg-transparent border-white/30 text-white hover:border-white hover:bg-white hover:text-black"
                   >
                     Watch Full video
@@ -184,6 +186,23 @@ const NoLimitations = () => {
                   efficacy and natural beauty through captivating visual
                   storytelling that resonated globally.
                 </p>
+                <div>
+                  <button
+                    onClick={() =>
+                      openPopup("https://www.youtube.com/shorts/nn4cC3qRik0")
+                    }
+                    className="flex cursor-pointer items-center gap-2 px-6 py-3 text-sm font-sans font-semibold uppercase rounded-full tracking-wider transition-all duration-300 border bg-transparent border-white/30 text-white hover:border-white hover:bg-white hover:text-black"
+                  >
+                    Watch Full video
+                    <Image
+                      src={"/right-arrow-btn.png"}
+                      alt="aroow"
+                      width={30}
+                      height={30}
+                      className="w-[30px] h-[30px]"
+                    />
+                  </button>
+                </div>
               </div>
               <div className="flex lg:h-screen justify-center flex-col gap-4">
                 <h3 className="text-[20px] uppercase font-primary">
@@ -204,6 +223,23 @@ const NoLimitations = () => {
                   Bull&apos;s high-energy essence while proving that in the
                   world of CGI, the only limit is imagination.
                 </p>
+                <div>
+                  <button
+                    onClick={() =>
+                      openPopup("https://www.youtube.com/shorts/t105qp6q2fY")
+                    }
+                    className="flex cursor-pointer items-center gap-2 px-6 py-3 text-sm font-sans font-semibold uppercase rounded-full tracking-wider transition-all duration-300 border bg-transparent border-white/30 text-white hover:border-white hover:bg-white hover:text-black"
+                  >
+                    Watch Full video
+                    <Image
+                      src={"/right-arrow-btn.png"}
+                      alt="aroow"
+                      width={30}
+                      height={30}
+                      className="w-[30px] h-[30px]"
+                    />
+                  </button>
+                </div>
               </div>
               <div className="flex lg:h-screen justify-center flex-col gap-4">
                 <h3 className="text-[20px] uppercase font-primary">
@@ -222,6 +258,23 @@ const NoLimitations = () => {
                   building massive anticipation and ensuring packed locations
                   from day one of the new launches.
                 </p>
+                <div>
+                  <button
+                    onClick={() =>
+                      openPopup("https://www.youtube.com/shorts/BDOPnNwhHpU")
+                    }
+                    className="flex cursor-pointer items-center gap-2 px-6 py-3 text-sm font-sans font-semibold uppercase rounded-full tracking-wider transition-all duration-300 border bg-transparent border-white/30 text-white hover:border-white hover:bg-white hover:text-black"
+                  >
+                    Watch Full video
+                    <Image
+                      src={"/right-arrow-btn.png"}
+                      alt="aroow"
+                      width={30}
+                      height={30}
+                      className="w-[30px] h-[30px]"
+                    />
+                  </button>
+                </div>
               </div>
             </div>
             <div
