@@ -1,61 +1,109 @@
 "use client";
 
-import React from "react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import Container from "@/components/ui/container";
+import Wrapper from "@/components/wrapper";
+import { IAccordion } from "@/types";
+import React, { useState } from "react";
 
-interface IFaq {
-  question: string;
-  answer: string;
-}
+const Faqs = ({ data }: { data: IAccordion[] }) => {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-interface FaqsSimpleProps {
-  data: IFaq[];
-}
-
-const FaqsSimple: React.FC<FaqsSimpleProps> = ({ data }) => {
-  if (!data || data.length === 0) return null;
+  const toggle = (i: number) => {
+    setOpenIndex((prev) => (prev === i ? null : i));
+  };
 
   return (
-    <section className="bg-[url(/get-in-touch-bg.jpg)] py-24 bg-cover relative -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
-      {/* Top accent line */}
-      <div className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]"></div>
+    <section className="bg-primary py-14">
+      <Wrapper>
+        <h2 className="text-center uppercase text-[40px] text-secondary font-bold mb-8 tracking-wide">
+          Frequently Asked Questions
+        </h2>
 
-      <Container>
-        {/* Header */}
-        <div className="text-center mb-16 space-y-3">
-          <h2 className="text-white text-4xl md:text-5xl font-bold uppercase">
-            FREQUENTLY ASKED QUESTIONS
-          </h2>
-          <p className="text-white/60 text-sm">
-            Providing answers to your questions
-          </p>
+        <div className=" space-y-4">
+          {data.map((faq, i) => {
+            const open = openIndex === i;
+
+            return (
+              <div
+                key={i}
+                className={[
+                  "rounded-md transition-colors",
+                  open ? "bg-secondary" : "bg-transparent",
+                ].join(" ")}
+              >
+                {/* Header */}
+                <button
+                  type="button"
+                  onClick={() => toggle(i)}
+                  aria-expanded={open}
+                  aria-controls={`faq-panel-${i}`}
+                  className={[
+                    "w-full flex items-center justify-between gap-4 cursor-pointer px-6 py-4",
+                    "uppercase font-semibold tracking-wide",
+                    open ? "text-[#0E1F1F]" : "text-white",
+                    open
+                      ? "border border-transparent"
+                      : "border border-white/40 hover:border-white/70",
+                    "rounded-md",
+                  ].join(" ")}
+                >
+                  <span className="text-left">{faq.question}</span>
+
+                  {/* circular arrow button */}
+                  <span
+                    className={[
+                      "inline-flex shrink-0 h-8 w-8 items-center justify-center rounded-full border transition-colors",
+                      open
+                        ? "bg-[#0E1F1F]/10 border-[#0E1F1F]/30"
+                        : "bg-transparent border-white/60",
+                    ].join(" ")}
+                    aria-hidden="true"
+                  >
+                    <svg
+                      className={[
+                        "h-4 w-4 transition-transform duration-300",
+                        open
+                          ? "rotate-180 text-[#0E1F1F]"
+                          : "rotate-0 text-white",
+                      ].join(" ")}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path d="M6 9l6 6 6-6" />
+                    </svg>
+                  </span>
+                </button>
+
+                {/* Panel */}
+                <div
+                  id={`faq-panel-${i}`}
+                  role="region"
+                  className={[
+                    "px-6 overflow-hidden",
+                    "transition-[max-height] duration-500 ease-in-out",
+                    open ? "max-h-40" : "max-h-0", // adjust height if some answers are longer
+                  ].join(" ")}
+                >
+                  <div
+                    className={[
+                      "pb-5 leading-relaxed",
+                      "transition-opacity duration-300 ease-in-out",
+                      open
+                        ? "opacity-100 text-[#0E1F1F]"
+                        : "opacity-0 text-transparent",
+                    ].join(" ")}
+                  >
+                    {faq.answer}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
-
-        {/* FAQ Accordion */}
-        <Accordion type="single" className="space-y-4 mb-12" collapsible>
-          {data.map((faq, index) => (
-            <AccordionItem
-              key={index}
-              className="border border-white border-b! px-4 bg-transparent rounded-lg transition-all data-[state=open]:border-tertiary data-[state=open]:bg-tertiary"
-              value={String(index)}>
-              <AccordionTrigger className="text-white font-secondary text-lg uppercase hover:no-underline cursor-pointer">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-white">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </Container>
+      </Wrapper>
     </section>
   );
 };
 
-export default FaqsSimple;
+export default Faqs;
