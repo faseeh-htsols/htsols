@@ -129,9 +129,9 @@ export const HeroSection: React.FC = () => {
         loop
         slidesPerView={1}
         autoplay={{
-          delay: 10000000,
+          delay: 4500,
           disableOnInteraction: false,
-          pauseOnMouseEnter: true,
+          pauseOnMouseEnter: false,
         }}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
