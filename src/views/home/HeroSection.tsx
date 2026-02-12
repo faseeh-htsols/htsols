@@ -14,27 +14,48 @@ import Container from "@/components/ui/container";
 interface Slide {
   headline: string[];
   outlineWord: string;
+  subHeading?: string;
   description: string;
+  btn: string;
+  href: string;
 }
 
 const slides: Slide[] = [
   {
-    headline: ["DESIGNING", "CLARITY", "FOR MODERN"],
-    outlineWord: "BRANDS",
+    headline: ["Website and Custom Software Development"],
+    outlineWord: "Canada",
+    subHeading: "A Website Designed To Guide Your Visitors Clearly",
     description:
-      "HT-Solutions provides you Website Designing, Web Development, SEO Services, Graphic Designing, Mobile Application Development Video Production, Voice Over, Digital Marketing and Network Solutions in Lahore, Pakistan.",
+      "At HTSOL Inc., we build websites and web applications based on how your customers use them and what your business needs to achieve. Whether you need a custom website, SaaS platform, headless CMS, API integrations, or full stack development, our team focuses on clarity, performance, and long term scalability.<br/><br/>You receive a fast and reliable platform built for search visibility, usability, and steady growth from the start.",
+    btn: "Schedule a consultation",
+    href: "/",
   },
   {
-    headline: ["CREATING", "DIGITAL", "SOLUTIONS FOR"],
-    outlineWord: "GROWTH",
+    headline: ["Website Redesign and Branding "],
+    outlineWord: "Services",
+    subHeading:
+      "Design That Communicates Clearly and Feels Consistent &Trustworthy",
     description:
-      "Transform your business with cutting-edge digital solutions. We specialize in creating powerful web applications, mobile apps, and marketing strategies that drive results.",
+      "Good design should make things easier to understand, not just look appealing. HTSOL Inc. creates thoughtful UI/UX and branding that helps people recognise your business and feel confident using your website and materials.<br/><br/>From brand identity and redesigns to ongoing creative support, we ensure every visual touchpoint works together and represents your business accurately.",
+    btn: "Learn more",
+    href: "/",
   },
   {
-    headline: ["BUILDING", "FUTURE", "READY"],
-    outlineWord: "BRANDS",
+    headline: ["Your Business Needs To Be Understood, Not "],
+    outlineWord: "Only Indexed",
     description:
-      "Partner with us to build a strong digital presence. From branding to development, we deliver comprehensive solutions tailored to your unique business needs.",
+      "Search engines and AI systems now evaluate meaning, credibility, and usefulness before showing results. HTSOL Inc. prepares your website for modern discovery, including traditional rankings and AI generated answers.<br/><br/>Through technical SEO, structured content, and authority development, we help your business appear where customers are already searching and asking questions.<br/><br/>Our focus is to help your content be recognised as relevant and dependable over time.",
+    btn: "Improve your search visibility",
+    href: "/",
+  },
+  {
+    headline: ["CGI THAT BREAKS THE INTERNET NOT YOUR "],
+    outlineWord: "BUDGET",
+    subHeading: "Your Business Now Needs To Be Understood, Not Just Indexed",
+    description:
+      "We create scroll-stopping CGI and 3D animations that consistently hit 10+ million organic views. From photorealistic product renders to mind-bending mixed reality videos—we turn brands into viral sensations. Stop blending in. Start trendings",
+    btn: "Go Viral",
+    href: "/",
   },
 ];
 
@@ -151,7 +172,7 @@ export const HeroSection: React.FC = () => {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left Content */}
                 <div className="space-y-8">
-                  <h1 className="text-4xl md:text-5xl font-primary lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight">
+                  <h1 className="text-4xl uppercase md:text-5xl font-primary lg:text-6xl xl:text-6xl font-bold leading-[1.1] tracking-tight">
                     {slide.headline.map((line, i) => (
                       <span key={i} className="block text-white">
                         {line}
@@ -171,23 +192,34 @@ export const HeroSection: React.FC = () => {
                       </span>
                     </span>
                   </h1>
+                  <div className="flex">
+                    <Button variant="primary" href="#contact">
+                      Start Your Project
+                    </Button>
+                  </div>
                 </div>
 
                 {/* Right Content - Description */}
                 <div className="lg:pl-12">
-                  <p className="text-white/70 text-lg md:text-lg leading-relaxed max-w-md  ml-auto">
-                    {slide.description}
-                  </p>
+                  {slide.subHeading && (
+                    <p className="uppercase font-primary text-xl  max-w-md  ml-auto mb-3">
+                      {slide.subHeading}
+                    </p>
+                  )}
+                  <p
+                    className="text-white/70 text-lg md:text-lg leading-relaxed max-w-md  ml-auto"
+                    dangerouslySetInnerHTML={{ __html: slide.description }}
+                  ></p>
                 </div>
               </div>
-              <div className="lg:absolute lg:bottom-[10%] flex flex-wrap gap-4 pt-4">
+              {/* <div className="lg:absolute lg:bottom-[10%] flex flex-wrap gap-4 pt-4">
                 <Button variant="primary" href="#contact">
                   Start Your Project
                 </Button>
                 <Button variant="outline" href="#services">
                   View All Services
                 </Button>
-              </div>
+              </div> */}
             </Container>
             {/* </div> */}
           </SwiperSlide>

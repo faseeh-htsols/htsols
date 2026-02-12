@@ -32,19 +32,6 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "HT-Solutions | Web Design & Digital Marketing Agency",
-  description:
-    "HT-Solutions provides Website Designing, Web Development, SEO Services, Graphic Designing, Mobile Application Development, Video Production, Voice Over, Digital Marketing and Network Solutions in Lahore, Pakistan.",
-  keywords: [
-    "web design",
-    "web development",
-    "SEO",
-    "digital marketing",
-    "graphic design",
-    "mobile app development",
-    "Lahore",
-    "Pakistan",
-  ],
   icons: {
     icon: [
       {
