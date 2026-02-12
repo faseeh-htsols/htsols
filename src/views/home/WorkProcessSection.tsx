@@ -12,21 +12,24 @@ interface ProcessStep {
 
 const processSteps: ProcessStep[] = [
   {
-    title: "DISCOVERY & <br/> CONSULTATION",
-    description: "We understand your goals, requirements, and project scope.",
-  },
-  {
-    title: "STRATEGY & <br/> PLANNING",
-    description: "We create a clear strategy, timeline, and roadmap.",
-  },
-  {
-    title: "EXECUTION & <br/> IMPLEMENTATION",
-    description: "We implement the plan using the right tools and expertise.",
-  },
-  {
-    title: "FINALIZE &<br/> OPTIMIZE",
+    title: "Discovery and<br/> audit",
     description:
-      "We deliver, review performance, and refine for continuous improvement.",
+      "We assess your current systems, challenges, and objectives. You receive clear insights and practical recommendations.",
+  },
+  {
+    title: "Strategy and<br/> roadmap",
+    description:
+      "We define priorities, timelines, and implementation phases. You understand what should happen first and how everything connects.",
+  },
+  {
+    title: "Design and <br/> development",
+    description:
+      "Our team designs and builds your solution. Communication remains consistent and decisions stay transparent.We deploy carefully, test performance, and refine key elements to ensure stability and usability.",
+  },
+  {
+    title: "Ongoing <br/> improvement",
+    description:
+      "We monitor performance and refine the platform based on real data. Enhancements are introduced thoughtfully to maintain operational stability.",
   },
 ];
 // ${
@@ -57,9 +60,9 @@ export const WorkProcessSection: React.FC = () => {
           <div className="space-y-6">
             <HeadingTwo>OUR WORK PROCESS</HeadingTwo>
             <p className="text-white/60 text-base leading-relaxed max-w-lg">
-              Since our establishment we have successfully served hundreds of
-              clients world wide. Our primary skills are around web designing
-              and mobile application development. We have a team of...
+              We follow a structured approach so you always understand what’s
+              happening and why. You’re never left guessing about progress or
+              next steps.
             </p>
             <div className="flex">
               <Button href="/" variant="outline">
