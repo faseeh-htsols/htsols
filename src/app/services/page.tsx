@@ -1,5 +1,12 @@
 import ServicesMain from "@/views/services/main";
-import React from "react";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "",
+  description: "",
+  alternates: {
+    canonical: "https://www.htsol.ca/services",
+  },
+};
 
 const ServicesPage = () => {
   return (

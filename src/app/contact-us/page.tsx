@@ -1,6 +1,12 @@
 import ContactUsMain from "@/views/contact-us/main";
-import React from "react";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "",
+  description: "",
+  alternates: {
+    canonical: "https://www.htsol.ca/contact-us",
+  },
+};
 const ContactUsPage = () => {
   return (
     <>

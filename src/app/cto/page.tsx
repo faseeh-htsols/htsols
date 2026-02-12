@@ -1,6 +1,12 @@
 import CtoMain from "@/views/cto/main";
-import React from "react";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "",
+  description: "",
+  alternates: {
+    canonical: "https://www.htsol.ca/cto",
+  },
+};
 function Page() {
   return (
     <div>

@@ -27,16 +27,26 @@ export const AboutSection: React.FC = () => {
             {/* Description paragraphs */}
             <div className="space-y-4 text-white/60 text-sm md:text-base leading-relaxed">
               <p>
-                Since our establishment we have successfully served hundreds of
-                clients world wide. Our primary skills are around web designing
-                and mobile application development. We have a team of 40+
-                dedicated professionals for all kinds of tasks.
+                HTSOL Inc. is a full-service digital solutions partner focused
+                on practical, measurable growth for Canadian businesses. We
+                bring together strategy, development, design, and marketing to
+                help organisations build, refine, and scale their digital
+                presence with clarity and control.
               </p>
               <p>
-                Since our establishment we have successfully served hundreds of
-                clients world wide. Our primary skills are around web designing
-                and mobile application development. We have a team of 40+
-                dedicated professionals for all kinds of tasks.
+                We support organisations at every stage of growth, from startups
+                launching their first platform to established companies
+                strengthening complex systems. Our clients operate across Canada
+                and internationally, where consistent visibility and dependable
+                performance are essential to staying competitive.
+              </p>
+              <p>
+                Rather than offering fixed packages, we adapt our involvement to
+                match your needs. That may involve a complete digital build,
+                ongoing optimisation, or additional technical capacity to
+                support internal teams. We earn trust through steady results,
+                transparent communication, and improvements you can clearly
+                measure over time.
               </p>
             </div>
 

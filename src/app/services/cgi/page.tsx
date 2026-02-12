@@ -1,6 +1,12 @@
 import CgiMain from "@/views/cgi/main";
-import React from "react";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "",
+  description: "",
+  alternates: {
+    canonical: "https://www.htsol.ca/services/cgi",
+  },
+};
 const CgiPage = () => {
   return (
     <>

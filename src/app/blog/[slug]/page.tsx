@@ -29,7 +29,7 @@ export async function generateMetadata({
   const title = post.seo?.seoTitle || post.banner.title || "Blog Post";
   const description =
     post.seo?.seoDescription || post.banner.description || "Blog Description";
-  const canonicalPath = `https://www.ht-solutions.com/blog/${slug}`;
+  const canonicalPath = `https://www.htsol.ca/blog/${slug}`;
 
   return {
     title,
