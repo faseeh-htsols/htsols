@@ -68,7 +68,7 @@ export const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[url(/home-header.jpg)]">
+    <section className="relative lg:min-h-screen overflow-hidden bg-[url(/home-header.jpg)]">
       {/* Background with 3D terrain effect */}
       {/* <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#111] to-[#0a1a1a]" />
@@ -146,7 +146,7 @@ export const HeroSection: React.FC = () => {
       {/* Carousel (Swiper) */}
       <Swiper
         modules={[Autoplay]}
-        className="relative z-10 min-h-screen"
+        className="relative z-10 lg:min-h-screen"
         loop
         slidesPerView={1}
         autoplay={{
@@ -165,7 +165,7 @@ export const HeroSection: React.FC = () => {
         {slides.map((slide, index) => (
           <SwiperSlide
             key={index}
-            className=" relative min-h-screen flex! items-center"
+            className=" relative lg:min-h-screen pt-36 lg:pt-0 flex! items-center"
           >
             {/* <div className="w-full max-w-[1600px] mx-auto px-6 md:px-12 pt-32 pb-20"> */}
             <Container>
@@ -202,12 +202,12 @@ export const HeroSection: React.FC = () => {
                 {/* Right Content - Description */}
                 <div className="lg:pl-12">
                   {slide.subHeading && (
-                    <p className="uppercase font-primary text-xl  max-w-md  ml-auto mb-3">
+                    <p className="uppercase font-primary text-xl  lg:max-w-md  ml-auto mb-3">
                       {slide.subHeading}
                     </p>
                   )}
                   <p
-                    className="text-white/70 text-lg md:text-lg leading-relaxed max-w-md  ml-auto"
+                    className="text-white/70 text-lg md:text-lg leading-relaxed lg:max-w-md  ml-auto"
                     dangerouslySetInnerHTML={{ __html: slide.description }}
                   ></p>
                 </div>
@@ -227,15 +227,15 @@ export const HeroSection: React.FC = () => {
       </Swiper>
 
       {/* Carousel Dots (unchanged visually, now control Swiper) */}
-      <div className="absolute top-1/2 -translate-y-1/2 right-7 flex flex-col z-20 flex gap-2">
+      <div className="lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:right-7 py-5 lg:py-0  flex-row lg:flex-col justify-center z-20 flex gap-2">
         {slides.map((_, index) => {
           const isActive = index === selectedIndex;
           return (
             <button
               key={index}
               onClick={() => handleDotClick(index)}
-              className={`w-2 h-8 rounded-full transition-all duration-300 ${
-                index === selectedIndex ? " h-14" : ""
+              className={`lg:w-2 w-8 h-2 lg:h-8 rounded-full transition-all duration-300 ${
+                index === selectedIndex ? "w-14 lg:w-2 lg:h-14" : ""
               }`}
               style={{
                 background: isActive

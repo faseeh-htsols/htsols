@@ -33,7 +33,7 @@ const Banner = () => {
                 width={200}
                 height={200}
                 alt="services header"
-                className="lg:w-[400px] w-[120px] object-contain h-[100px] lg:h-[186px]"
+                className="lg:w-[400px] w-[170px] object-contain h-[110px] lg:h-[186px]"
               />
             </span>
             <span className="border-b-2 border-white">HtSol Inc.</span>

@@ -103,22 +103,25 @@ export const WorkProcessSection: React.FC = () => {
         <div className="ipad-settings mt-7 relative grid sm:grid-cols-2 gap-10">
           <div className="hidden sm:block absolute top-0 h-full w-1 bg-white left-1/2 -translate-x-1/2"></div>
           <div className="hidden sm:block absolute top-1/2 h-1 w-full bg-white left-0 -translate-y-1/2"></div>
+          <div className="sm:hidden absolute left-8 h-full w-1 bg-white"></div>
           {processSteps.map((item, index) => (
             <div
               key={item.title}
               className={`relative  ${`item-${index}`} text-white `}
             >
-              <div className=" absolute -bottom-5 h-1 w-full bg-white sm:hidden"></div>
+              {/* <div className=" absolute left-0 h-full w-1 bg-white sm:hidden"></div> */}
               <div className="bg-white w-[65px] h-[65px] rounded-3xl flex justify-center items-center">
                 <div className="gradient-box w-5 h-5 rounded-lg " />
               </div>
               <div className="mt-8 sm:mt-16 relative">
                 <h3
-                  className="font-primary text-2xl mb-4"
+                  className="font-primary text-2xl mb-4 text-end"
                   dangerouslySetInnerHTML={{ __html: item.title }}
                 />
-                <p className="max-w-[250px]">{item.description}</p>
-                <div className="absolute right-0 -top-5 font-primary text-9xl opacity-25">
+                <p className="max-w-[250px] ml-auto text-end">
+                  {item.description}
+                </p>
+                <div className="absolute left-0 lg:left-full lg:right-0 -top-5 font-primary text-9xl opacity-25">
                   {index + 1}
                 </div>
               </div>

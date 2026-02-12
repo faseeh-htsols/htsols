@@ -42,7 +42,7 @@ const Banner = () => {
           <Image
             src={"/website/website-banner.png"}
             alt=""
-            className="w-full h-[500px] object-contain"
+            className="w-full h-[280px] lg:h-[500px] object-contain"
             width={1000}
             height={1000}
           />

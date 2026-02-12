@@ -84,7 +84,7 @@ const ContactForm = () => {
         <div className="w-full h-full  max-w-[1600px] bg-gradient-to-r from-transparent via-[#00A1A5] to-transparent" />
       </div> */}
       <Container>
-        <div className="relative py-10 flex gap-8 flex-col max-w-5xl mx-auto">
+        <div className="relative py-5 lg:py-10 flex gap-8 flex-col max-w-5xl mx-auto">
           <div className="flex justify-center">
             <Image
               src={"/chat.svg"}
@@ -196,26 +196,26 @@ const ContactForm = () => {
                       id=""
                       className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-sm px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                     >
-                      <option value=" web dev" className="bg-black text-white">
+                      <option value=" web dev" className="bg-white text-black">
                         web dev
                       </option>
                       <option
                         value=" cgi / vfx /3d animations"
-                        className="bg-black text-white"
+                        className="bg-white text-black"
                       >
                         {" "}
                         cgi / vfx /3d animations{" "}
                       </option>
                       <option
                         value="staff augmentation"
-                        className="bg-black text-white"
+                        className="bg-white text-black"
                       >
                         {" "}
                         staff augmentation{" "}
                       </option>
                       <option
                         value="Complete digital transformation"
-                        className="bg-black text-white"
+                        className="bg-white text-black"
                       >
                         {" "}
                         Complete digital transformation{" "}
@@ -242,7 +242,7 @@ const ContactForm = () => {
                     className="text-red-600 text-xs mt-2"
                   />
                 </div>
-                <div className="flex justify-center">
+                <div className="flex mt-6 justify-center">
                   <button
                     type="submit"
                     disabled={isSubmitting || isSending}

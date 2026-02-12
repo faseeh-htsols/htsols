@@ -18,7 +18,27 @@ export const AboutSection: React.FC = () => {
       ></div> */}
 
       <Container>
-        <div className="flex lg:flex-row flex-col gap-12">
+        <div className="flex lg:flex-row-reverse flex-col gap-12">
+          {/* Right Content - Decorative Star */}
+          <div className="lg:w-[30%] shrink-0 justify-end items-start relative">
+            <div className="absolute -top-[25px] lg:-top-[50px] -right-[25px] lg:-right-[50px] z-1">
+              <Image
+                src={"/star.svg"}
+                alt="decorative star"
+                width={150}
+                height={150}
+                className="w-[50px] h-[50px] lg:w-[100px] lg:h-[100px]"
+              />
+            </div>
+            <div className="w-full relative h-full min-h-[300px]">
+              <Image
+                src={"/about-two.png"}
+                alt="image"
+                className="object-cover rounded-lg"
+                fill
+              />
+            </div>
+          </div>
           {/* Left Content */}
           <div className="space-y-6 grow">
             {/* Heading */}
@@ -61,27 +81,6 @@ export const AboutSection: React.FC = () => {
                   className="object-cover"
                 />
               </div>
-            </div>
-          </div>
-
-          {/* Right Content - Decorative Star */}
-          <div className="lg:w-[30%] shrink-0 justify-end items-start relative">
-            <div className="absolute -top-[25px] lg:-top-[50px] -right-[25px] lg:-right-[50px] z-1">
-              <Image
-                src={"/star.svg"}
-                alt="decorative star"
-                width={150}
-                height={150}
-                className="w-[50px] h-[50px] lg:w-[100px] lg:h-[100px]"
-              />
-            </div>
-            <div className="w-full relative h-full min-h-[300px]">
-              <Image
-                src={"/about-two.png"}
-                alt="image"
-                className="object-cover rounded-lg"
-                fill
-              />
             </div>
           </div>
         </div>

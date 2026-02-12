@@ -115,7 +115,7 @@ export const FAQSection: React.FC = () => {
                 key={index}
                 className="
     border border-white border-b! px-4 bg-transparent rounded-lg transition-all
-    data-[state=open]:border-tertiary
+    data-[state=open]:border-tertiary  data-[state=open]:shadow-[0_0_5px_#00838A] 
     data-[state=open]:bg-tertiary
   "
                 value={String(index)}

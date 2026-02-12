@@ -79,10 +79,14 @@ const InnovativeProblem = () => {
                   />
                 </div>
                 <h3 className="text-center font-primary mb-4 text-2xl">
-                  Developing tailored solutions
+                  Brand Control & Authenticity
                 </h3>{" "}
                 <p className="text-center">
-                  Next, our team of experts develops tailored solutions.
+                  AI videos look generic because they&apos;re trained on random
+                  internet content. Custom CGI gives you complete creative
+                  control—every color, angle, and movement perfectly matches
+                  your brand identity. AI feels fake. Professional CGI builds
+                  credibility and trust with your audience.
                 </p>
               </div>
               <div className="lg:w-[30%] relative p-4 bg-center bg-[url(/cgi/innovative-problem-card.png)] bg-cover border-2 border-white/20 rounded-2xl">
@@ -112,10 +116,16 @@ const InnovativeProblem = () => {
                   />
                 </div>
                 <h3 className="text-center font-primary  mb-4 text-2xl">
-                  Implementing Technology
+                  Platform Performance & Virality
                 </h3>{" "}
                 <p className="text-center">
-                  We leverage cutting-edge technology impolement seamlessly.
+                  Social media algorithms penalize low-quality AI content,
+                  limiting your reach. Custom CGI is optimized for each
+                  platform&apos;s technical specs and audience preferences,
+                  maximizing organic reach and shareability. While AI videos
+                  struggle to hit 10K views, our professional CGI consistently
+                  generates millions of organic impressions and actual business
+                  results.
                 </p>
               </div>
             </div>
@@ -147,14 +157,15 @@ const InnovativeProblem = () => {
                   />
                 </div>
                 <h3 className="text-center font-primary mb-4 text-2xl">
-                  Understanding Your Business Goals
+                  Photorealism & Quality That Converts
                 </h3>{" "}
                 <p className="text-center">
-                  We start by gaining a deep understanding of your business
-                  goals. We take the time to learn about your unique vision,
-                  challenges, and objectives. This deep understanding allows us
-                  to create tailored solutions that align perfectly with your
-                  goals, ensuring maximum impact and success.
+                  AI video tools create distorted, uncanny valley content with
+                  warped objects, bizarre movements, and obvious artifacts that
+                  hurt your brand. Custom CGI delivers photorealistic,
+                  cinema-quality visuals that look indistinguishable from real
+                  footage. Quality matters—our clients see 10M+ views because
+                  professional CGI stops scrolls, while AI videos get skipped.
                 </p>
               </div>
             </div>

@@ -56,7 +56,7 @@ const NeedsBuisness = () => {
               </div>
             ))}
           </div>
-          <div>
+          <div className="lg:mt-0 mt-12">
             <CircularText />
           </div>
         </div>
