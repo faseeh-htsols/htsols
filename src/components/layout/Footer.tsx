@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
                       className="rounded-full w-[120px] h-[60px] bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] flex items-center justify-center"
                     >
                       <LottiePlayer
-                        src={"/up-right-arrow-white.json"} // e.g. "/search_17569494_edited.json"
+                        src={"/up-right-arrow.json"} // e.g. "/search_17569494_edited.json"
                         loop={true}
                         autoplay={true}
                         className="w-[60px] h-[60px]"

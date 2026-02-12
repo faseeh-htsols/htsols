@@ -59,9 +59,9 @@ const Banner = () => {
           <Button href="/">View PitchDeck</Button>
         </div>
       </Container>
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-3 lg:bottom-12">
+      <div className="absolute left-1/2 -translate-x-1/2 -bottom-3 lg:-bottom-3 3xl:bottom-12">
         <video
-          className="w-[290px] bg-transparent z-1 relative h-[200px] object-contain"
+          className="lg:w-[200px] xl:w-[290px] bg-transparent z-1 relative h-[200px] object-center object-contain"
           webkit-playsinline="true"
           playsInline
           autoPlay

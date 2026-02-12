@@ -24,7 +24,7 @@ const CgiMain = () => {
       <RecentlyDoneProjects />
       <OfferingsCarousel3D />
       <About />
-      <CgiIdeasSection />
+      {/* <CgiIdeasSection /> */}
       <InnovativeProblem />
       <TheWayWeWork />
       <TestimonialCarousel />
