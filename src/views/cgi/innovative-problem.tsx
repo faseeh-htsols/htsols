@@ -1,15 +1,16 @@
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
+import { useTypewriterHeadings } from "@/components/ui/useTypewriterHeadings";
 import Image from "next/image";
-import React from "react";
-
 const InnovativeProblem = () => {
+  const displayText = useTypewriterHeadings();
   return (
     <div className="py-24 bg-[url(/cgi/innovative-bg.png)] bg-cover">
       <Container>
         <div>
-          <HeadingTwo className="text-center mb-10">
-            Innovative Problem-Solving <br /> for Your Business Needs
+          <HeadingTwo className="text-center mb-10 h-[100px]">
+            {displayText}
+            <span className="inline-block ml-1 w-[4px] h-[1em] bg-[#00838A] align-[-0.15em] animate-pulse" />
           </HeadingTwo>
           <div className="relative">
             <div className="flex justify-center">

@@ -16,19 +16,60 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: "Do You Have Specific Pricing Plans to Show?",
+    question:
+      "How long does it usually take to build a custom business website in Canada?",
     answer:
-      "We don’t use one-size-fits-all pricing. Every package is customized based on your goals, market, and scope of work. After a short consultation, we provide a clear, transparent proposal with deliverables and timelines.",
+      "Most standard business websites take 2 to 4 weeks depending on features, content readiness, and feedback speed. Larger web applications or integrations may take longer, but we provide a clear timeline before work begins.",
   },
   {
-    question: "Do You Work With Businesses in Different Industries?",
+    question: "Do I need to provide design ideas before starting UI/UX work?",
     answer:
-      "Yes. We’ve worked across multiple industries and tailor our strategies to fit each client’s audience, competition, and business objectives but we have a our forte in Healthcare from past 5 years.",
+      "Not at all. We guide you through a discovery process and create a bespoke design based on your brand, audience, and goals. Your feedback simply helps refine direction.",
   },
   {
-    question: "Are You a Canadian Registered Company?",
+    question: "What is the difference between SEO and AI SEO Services?",
     answer:
-      "Yes, we are a Canadian registered company, operating in full compliance with local regulations. We work with clients across Canada and internationally, delivering transparent, reliable, and professional marketing services.",
+      "Traditional SEO focuses on ranking pages in search engines, while AI SEO Services also optimise content for AI search tools and answer engines. This helps your business appear in modern search results, not just standard listings.",
+  },
+  {
+    question:
+      "Can you work with our existing website instead of rebuilding it?",
+    answer:
+      "Yes. If your current platform is stable, we can improve performance, redesign sections, or optimise structure. A rebuild is only recommended when the system limits growth.",
+  },
+  {
+    question:
+      "Is staff augmentation suitable for small businesses or only large companies?",
+    answer:
+      "It works well for both. Small businesses use it to access skills without hiring full-time staff, while larger companies use it to scale teams quickly for projects.",
+  },
+  {
+    question:
+      "How do I know which marketing service my business actually needs?",
+    answer:
+      "We review your goals, audience, and current traffic sources first. Then we recommend only the channels that realistically support growth rather than spreading effort everywhere.",
+  },
+  {
+    question:
+      "Will SEO or PPC bring faster results for a new business in Canada?",
+    answer:
+      "PPC usually brings traffic quickly, while SEO builds steady long-term visibility. Many businesses start with both so they get immediate leads while organic presence grows.",
+  },
+  {
+    question:
+      "Can CGI or visual production help sell services, not just products?",
+    answer:
+      "Yes. Visual explanations make complex services easier to understand. They help visitors quickly grasp value, which improves engagement and enquiries.",
+  },
+  {
+    question: "What happens after my website or app launches?",
+    answer:
+      "We monitor performance, fix issues, and suggest improvements based on user behaviour. Most clients keep ongoing support so the platform continues evolving with their business.",
+  },
+  {
+    question: "Do you integrate CRM or booking systems into websites?",
+    answer:
+      "Yes. We regularly connect websites with CRM platforms, booking tools, and internal systems so information flows automatically and reduces manual work. We can also create a custom AI-powered CRM/CMS/Software tailor made for your business.",
   },
 ];
 
