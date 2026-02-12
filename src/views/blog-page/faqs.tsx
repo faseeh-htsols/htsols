@@ -1,9 +1,12 @@
 "use client";
 
-import Wrapper from "@/components/wrapper";
-import { IAccordion } from "@/types";
-import React, { useState } from "react";
+import Wrapper from "@/components/ui/wrapper";
 
+import React, { useState } from "react";
+interface IAccordion {
+  question: string;
+  answer: string;
+}
 const Faqs = ({ data }: { data: IAccordion[] }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
