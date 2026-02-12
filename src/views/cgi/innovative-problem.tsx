@@ -1,3 +1,4 @@
+"use client";
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
 import { useTypewriterHeadings } from "@/components/ui/useTypewriterHeadings";

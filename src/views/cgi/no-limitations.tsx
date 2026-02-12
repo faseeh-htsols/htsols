@@ -141,7 +141,7 @@ const NoLimitations = () => {
                 </h3>
                 <div className="lg:hidden block">
                   <video
-                    src="/cgi/kaybees.mp4"
+                    src="/pizzahut.mp4"
                     autoPlay
                     muted
                     loop
@@ -186,7 +186,7 @@ const NoLimitations = () => {
                 </h3>
                 <div className="lg:hidden block">
                   <video
-                    src="/cgi/kaybees.mp4"
+                    src="/kiwai.mp4"
                     autoPlay
                     muted
                     loop
@@ -232,7 +232,7 @@ const NoLimitations = () => {
                 </h3>
                 <div className="lg:hidden block">
                   <video
-                    src="/cgi/kaybees.mp4"
+                    src="/redbull.mp4"
                     autoPlay
                     muted
                     loop
@@ -280,7 +280,7 @@ const NoLimitations = () => {
                 </h3>
                 <div className="lg:hidden block">
                   <video
-                    src="/cgi/kaybees.mp4"
+                    src="/nayza.mp4"
                     autoPlay
                     muted
                     loop
@@ -320,6 +320,117 @@ const NoLimitations = () => {
                   </button>
                 </div>
               </div>
+              <div className="flex lg:h-screen justify-center flex-col gap-4">
+                <h3 className="text-[20px] uppercase font-primary">BOC</h3>
+                <div className="lg:hidden block">
+                  <video
+                    src="/boc.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    webkit-playsinline="true"
+                    playsInline
+                    className="min-w-full h-[300px] rounded-2xl object-cover"
+                  ></video>
+                </div>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui,
+                  neque? Fugiat recusandae laboriosam assumenda ipsa, dolorum
+                  amet quo soluta eligendi provident commodi ducimus voluptatum
+                  eum velit, culpa quis praesentium unde.
+                </p>
+                <div>
+                  <button
+                    onClick={() =>
+                      openPopup("https://www.youtube.com/shorts/BDOPnNwhHpU")
+                    }
+                    className="flex cursor-pointer items-center gap-2 px-6 py-3 text-sm font-sans font-semibold uppercase rounded-full tracking-wider transition-all duration-300 border bg-transparent border-white/30 text-white hover:border-white hover:bg-white hover:text-black"
+                  >
+                    Watch Full video
+                    <Image
+                      src={"/right-arrow-btn.png"}
+                      alt="aroow"
+                      width={30}
+                      height={30}
+                      className="w-[30px] h-[30px]"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div className="flex lg:h-screen justify-center flex-col gap-4">
+                <h3 className="text-[20px] uppercase font-primary">Enviro</h3>
+                <div className="lg:hidden block">
+                  <video
+                    src="/enviro.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    webkit-playsinline="true"
+                    playsInline
+                    className="min-w-full h-[300px] rounded-2xl object-cover"
+                  ></video>
+                </div>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui,
+                  neque? Fugiat recusandae laboriosam assumenda ipsa, dolorum
+                  amet quo soluta eligendi provident commodi ducimus voluptatum
+                  eum velit, culpa quis praesentium unde.
+                </p>
+                <div>
+                  <button
+                    onClick={() =>
+                      openPopup("https://www.youtube.com/shorts/BDOPnNwhHpU")
+                    }
+                    className="flex cursor-pointer items-center gap-2 px-6 py-3 text-sm font-sans font-semibold uppercase rounded-full tracking-wider transition-all duration-300 border bg-transparent border-white/30 text-white hover:border-white hover:bg-white hover:text-black"
+                  >
+                    Watch Full video
+                    <Image
+                      src={"/right-arrow-btn.png"}
+                      alt="aroow"
+                      width={30}
+                      height={30}
+                      className="w-[30px] h-[30px]"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div className="flex lg:h-screen justify-center flex-col gap-4">
+                <h3 className="text-[20px] uppercase font-primary">Kaybees</h3>
+                <div className="lg:hidden block">
+                  <video
+                    src="/kaybees.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    webkit-playsinline="true"
+                    playsInline
+                    className="min-w-full h-[300px] rounded-2xl object-cover"
+                  ></video>
+                </div>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui,
+                  neque? Fugiat recusandae laboriosam assumenda ipsa, dolorum
+                  amet quo soluta eligendi provident commodi ducimus voluptatum
+                  eum velit, culpa quis praesentium unde.
+                </p>
+                <div>
+                  <button
+                    onClick={() =>
+                      openPopup("https://www.youtube.com/shorts/BDOPnNwhHpU")
+                    }
+                    className="flex cursor-pointer items-center gap-2 px-6 py-3 text-sm font-sans font-semibold uppercase rounded-full tracking-wider transition-all duration-300 border bg-transparent border-white/30 text-white hover:border-white hover:bg-white hover:text-black"
+                  >
+                    Watch Full video
+                    <Image
+                      src={"/right-arrow-btn.png"}
+                      alt="aroow"
+                      width={30}
+                      height={30}
+                      className="w-[30px] h-[30px]"
+                    />
+                  </button>
+                </div>
+              </div>
             </div>
             <div
               className="relative lg:w-1/2 lg:h-screen grow hidden lg:flex items-center"
@@ -328,7 +439,7 @@ const NoLimitations = () => {
               <div className="relative w-[40vw] h-[30vw] overflow-hidden rounded-lg">
                 <div className="photos absolute inset-0 w-full h-full">
                   <video
-                    src="/cgi/kaybees.mp4"
+                    src="/pizzahut.mp4"
                     autoPlay
                     muted
                     loop
@@ -337,7 +448,7 @@ const NoLimitations = () => {
                 </div>
                 <div className="photos absolute inset-0 w-full h-full">
                   <video
-                    src="/cgi2.mp4"
+                    src="/kiwai.mp4"
                     autoPlay
                     muted
                     loop
@@ -346,7 +457,7 @@ const NoLimitations = () => {
                 </div>
                 <div className="photos absolute inset-0 w-full h-full">
                   <video
-                    src="/cgi1.mp4"
+                    src="/redbull.mp4"
                     autoPlay
                     muted
                     loop
@@ -355,7 +466,7 @@ const NoLimitations = () => {
                 </div>
                 <div className="photos absolute inset-0 w-full h-full">
                   <video
-                    src="/cgi2.mp4"
+                    src="/nayza.mp4"
                     autoPlay
                     muted
                     loop
@@ -364,7 +475,25 @@ const NoLimitations = () => {
                 </div>
                 <div className="photos absolute inset-0 w-full h-full">
                   <video
-                    src="/cgi1.mp4"
+                    src="/boc.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    className="min-w-full h-full object-cover"
+                  ></video>
+                </div>
+                <div className="photos absolute inset-0 w-full h-full">
+                  <video
+                    src="/enviro.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    className="min-w-full h-full object-cover"
+                  ></video>
+                </div>
+                <div className="photos absolute inset-0 w-full h-full">
+                  <video
+                    src="/kaybees.mp4"
                     autoPlay
                     muted
                     loop
