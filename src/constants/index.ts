@@ -132,18 +132,18 @@ export const SERVICES_SERVICES_OFFERED_ACCORDION = [
 ];
 export const DELIVERING_SOLUTIONS = [
   {
-    name: "DIGITAL TRANSFORMATION",
-    para: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. (Focus on modernizing and scaling business processes.)",
+    name: "OPTIMIZE",
+    para: "Marketing Processes",
     image: "/about-us/digital-transformation.svg",
   },
   {
-    name: "STRATEGIC REACH",
-    para: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. (Focus on modernizing and scaling business processes.)",
+    name: "GENERATE",
+    para: "Targeted Results ",
     image: "/about-us/digital-transformation.svg",
   },
   {
-    name: "OPERATIONAL POWER",
-    para: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. (Focus on modernizing and scaling business processes.)",
+    name: "GROW",
+    para: "Your Brand Online",
     image: "/about-us/digital-transformation.svg",
   },
 ];
@@ -269,6 +269,48 @@ export const INDUSTRIES_I_SERVE_CEO = [
   },
   {
     name: "Real Estate",
+    image: "/ceo/realstate.svg",
+  },
+];
+export const HOW_WE_HELP_HOME = [
+  {
+    name: "Healthcare practices and clinics",
+    image: "/ceo/education.svg",
+  },
+  {
+    name: "Professional services ",
+    image: "/ceo/healthcare.svg",
+  },
+  {
+    name: "E-commerce and retail",
+    image: "/ceo/ecommerence.svg",
+  },
+  {
+    name: "Construction and trades",
+    image: "/ceo/travel.svg",
+  },
+  {
+    name: "SaaS and technology startups ",
+    image: "/ceo/construction.svg",
+  },
+  {
+    name: "Local service providers",
+    image: "/ceo/fitness.svg",
+  },
+  {
+    name: "Legal marketing  (law firms and lawyers)",
+    image: "/ceo/food.svg",
+  },
+  {
+    name: "Marketing Agencies",
+    image: "/ceo/automotive.svg",
+  },
+  {
+    name: "Software Companies  ",
+    image: "/ceo/insurance.svg",
+  },
+  {
+    name: "Dental Practices and Dentists",
     image: "/ceo/realstate.svg",
   },
 ];

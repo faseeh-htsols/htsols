@@ -14,9 +14,25 @@ const DeliveringSolutions = () => {
       ></div>
       <Container>
         <div>
-          <HeadingTwo className="text-center mb-24" span="EXCELLENCE">
-            DELIVERING DIGITAL SOLUTIONS WITH STRATEGY AND
+          <p>Who We Are</p>
+          <HeadingTwo className="text-center mb-24" span="Partner">
+            Your Trusted Canadian Digital <br /> Marketing
           </HeadingTwo>
+          <div className="max-w-[1125px] mx-auto">
+            <p>
+              HTSOL Inc. is a Canada-based digital marketing agency that helps
+              businesses build, strengthen, and grow their online presence
+              through strategy-led marketing, high-performing websites, and
+              measurable campaigns.
+            </p>
+            <p>
+              If you want to attract the right audience, build trust online, and
+              turn traffic into revenue, we can help you get there with a clear
+              plan and steady progress. We bring creative, technical, and
+              data-driven work together, so your marketing is easier to manage
+              and easier to measure.
+            </p>
+          </div>
         </div>
         <div className="grid gap-6 lg:gap-0 lg:grid-cols-3">
           {DELIVERING_SOLUTIONS.map((solution, index) => (
