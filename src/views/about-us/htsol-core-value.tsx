@@ -41,7 +41,7 @@ const CoreValueBadge = ({ letter }: { letter: string }) => {
       <div className="absolute inset-0 rounded-full bg-white/5 blur-[10px]" />
 
       {/* outer dark ring */}
-      <div className="relative h-[123px] w-[123px] rounded-full bg-tertiary p-4">
+      <div className="relative h-[123px] w-[123px] rounded-full bg-tertiary p-4 ">
         {/* gradient ring (border-image look) */}
         <div className="h-full w-full rounded-full p-[12px] bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]">
           {/* inner fill */}
