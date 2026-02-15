@@ -1,5 +1,7 @@
+import Button from "@/components/ui/Button";
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
+import LottiePlayer from "@/components/ui/lottie-player";
 import { DELIVERING_SOLUTIONS } from "@/constants";
 import Image from "next/image";
 import React from "react";
@@ -13,19 +15,21 @@ const DeliveringSolutions = () => {
           "
       ></div>
       <Container>
-        <div>
-          <p>Who We Are</p>
-          <HeadingTwo className="text-center mb-24" span="Partner">
+        <div className="flex flex-col gap-8 mb-8">
+          <p className="uppercase text-center bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent font-primary font-semibold text-[22px]">
+            Who We Are
+          </p>
+          <HeadingTwo className="text-center" span="Partner">
             Your Trusted Canadian Digital <br /> Marketing
           </HeadingTwo>
-          <div className="max-w-[1125px] mx-auto">
-            <p>
+          <div className="max-w-[1125px] mx-auto flex flex-col gap-8">
+            <p className="text-center">
               HTSOL Inc. is a Canada-based digital marketing agency that helps
               businesses build, strengthen, and grow their online presence
               through strategy-led marketing, high-performing websites, and
               measurable campaigns.
             </p>
-            <p>
+            <p className="text-center">
               If you want to attract the right audience, build trust online, and
               turn traffic into revenue, we can help you get there with a clear
               plan and steady progress. We bring creative, technical, and
@@ -34,7 +38,7 @@ const DeliveringSolutions = () => {
             </p>
           </div>
         </div>
-        <div className="grid gap-6 lg:gap-0 lg:grid-cols-3">
+        <div className="grid gap-6 lg:gap-0 lg:grid-cols-3 mb-8">
           {DELIVERING_SOLUTIONS.map((solution, index) => (
             <div key={solution.name} className="relative py-6 lg:py-0 lg:px-3">
               <div
@@ -44,12 +48,18 @@ const DeliveringSolutions = () => {
               ></div>
               <div className="max-w-[310px] mx-auto flex flex-col gap-5">
                 <div className="flex justify-center">
-                  <Image
+                  {/* <Image
                     src={solution.image}
                     alt={solution.name}
                     width={70}
                     height={70}
                     className="w-[70px] h-[70px]"
+                  /> */}
+                  <LottiePlayer
+                    className="w-[70px] h-[70px]"
+                    src={solution.image}
+                    autoplay
+                    loop
                   />
                 </div>
                 <h3 className="text-2xl text-center font-primary">
@@ -59,6 +69,9 @@ const DeliveringSolutions = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex justify-center">
+          <Button href="/">Get a Free Proposal</Button>
         </div>
       </Container>
     </div>

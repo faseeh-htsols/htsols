@@ -77,13 +77,13 @@ const HtsolCoreValue = () => {
             our work and our culture.
           </p>
 
-          <div className="mx-auto mt-8 h-px w-full max-w-5xl bg-white/20" />
+          <div className="mx-auto mt-8 h-px w-full max-w-5xl bg-white" />
         </div>
 
         {/* Values */}
         <div className="relative mt-12">
           {/* dashed connector line (desktop) */}
-          <div className="pointer-events-none absolute left-0 right-0 top-[160px] hidden border-t border-dashed border-white/25 lg:block" />
+          <div className="pointer-events-none absolute left-0 right-0 top-[180px] hidden border-t border-dashed border-white lg:block" />
 
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-5 lg:gap-10">
             {VALUES.map((v) => (
@@ -94,20 +94,18 @@ const HtsolCoreValue = () => {
                 <CoreValueBadge letter={v.letter} />
 
                 {/* little triangle */}
-                <div className="mt-4 h-0 w-0 border-l-[9px] border-r-[9px] border-t-[10px] border-l-transparent border-r-transparent border-t-white/80" />
+                <div className="mt-4 h-0 w-0 border-l-[10px] border-r-[10px] border-t-[12px] border-l-transparent border-r-transparent border-t-white" />
 
                 {/* dot */}
                 <div className="relative z-10 mt-3 flex h-8 items-center justify-center">
-                  <span className="h-3.5 w-3.5 rounded-full bg-[#0B6B76] ring-4 ring-black/40 shadow-[0_0_0_1px_rgba(255,255,255,0.10)]" />
+                  <span className="h-3.5 w-3.5 rounded-full bg-[#0B6B76] ring-8 ring-tertiary shadow-[0_0_0_1px_rgba(255,255,255,0.10)]" />
                 </div>
 
-                <h3 className="mt-3 text-sm font-semibold tracking-wide text-white">
+                <h3 className="mt-3 font-primary text-xl text-white">
                   {v.title}
                 </h3>
 
-                <p className="mt-2 text-xs leading-relaxed text-white/55">
-                  {v.desc}
-                </p>
+                <p className="mt-2 text-white">{v.desc}</p>
               </div>
             ))}
           </div>

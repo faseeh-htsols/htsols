@@ -64,7 +64,9 @@ const StrategyFirstResult = () => {
           </div>
           <div>
             <div className="border-b pb-9 border-white">
-              <HeadingTwo>A Strategy-First, Results-Driven Agency</HeadingTwo>
+              <HeadingTwo className="lg:!text-4xl">
+                A Strategy-First, Results-Driven Agency
+              </HeadingTwo>
             </div>
             <div className="ps-5 relative mt-9 flex flex-col gap-10">
               {/* <div className="absolute top-0 left-0 bg-white/20 w-1 h-full"></div> */}
@@ -75,12 +77,21 @@ const StrategyFirstResult = () => {
                   This keeps decisions grounded and ensures your time and budget
                   go where they’ll have real impact.
                 </p>
-                <p>Our team focuses on outcomes like:</p>
-                <ul>
+                <p className="text-xl font-semibold">
+                  Our team focuses on outcomes like:
+                </p>
+                <ul className="flex flex-col gap-5">
                   {lists.map((list, idx) => (
-                    <li key={idx}>
-                      <span></span>
-                      {list}
+                    <li
+                      key={idx}
+                      className="rounded-lg bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] p-px"
+                    >
+                      <div className="bg-tertiary text-lg font-semibold flex items-center gap-4 p-4 rounded-lg">
+                        <span className="h-2 w-2 bg-white block rounded-full">
+                          {" "}
+                        </span>
+                        {list}
+                      </div>
                     </li>
                   ))}
                 </ul>

@@ -1,6 +1,7 @@
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
+import LottiePlayer from "@/components/ui/lottie-player";
 import { WHY_HIRE_ME_CEO } from "@/constants";
 import parse from "html-react-parser";
 const WhyHireMe = () => {
@@ -9,7 +10,8 @@ const WhyHireMe = () => {
       <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
-          "></div>
+          "
+      ></div>
       <div className="bg-tertiary py-24 relative">
         <Container>
           <div>
@@ -29,13 +31,20 @@ const WhyHireMe = () => {
             {WHY_HIRE_ME_CEO.map((item, index) => (
               <div
                 key={item.heading}
-                className="relative group  bg-black rounded-lg px-4 py-6 hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]">
+                className="relative group  bg-black rounded-lg px-4 py-6 hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]"
+              >
                 <div className="p-3 absolute right-0 top-0 text-xl rounded-bl-2xl font-primary bg-tertiary">
                   0 {index + 1}
                 </div>
                 <div className="flex flex-col gap-4">
-                  <div className="p-4 border border-[#075B65] group-hover:bg-white w-fit rounded-full group-hover:[&_svg_path]:!fill-black">
-                    {parse(item.svg)}
+                  <div className="p-4 border border-[#075B65] group-hover:bg-black w-fit rounded-full ">
+                    {/* {parse(item.svg)} */}
+                    <LottiePlayer
+                      className="w-[45px] h-[45px]"
+                      src={item.icon}
+                      autoplay
+                      loop
+                    />
                   </div>
                   <h3 className="font-primary uppercase">{item.heading}</h3>
                   <p>{item.para}</p>

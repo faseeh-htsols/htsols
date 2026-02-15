@@ -6,12 +6,18 @@ import Banner from "./banner";
 import ProjectToDiscuss from "../services/project-to-discuss";
 import HtsolCoreValue from "./htsol-core-value";
 import OurStory from "./our-story";
+import ClearProcess from "./clear-process";
+import RelationshipAndResults from "./relationship-and-results";
+import StrategyFirstResult from "./strategy-first-result";
 
 const AboutUsMain = () => {
   return (
     <>
       <Banner />
       <DeliveringSolutions />
+      <RelationshipAndResults />
+      <ClearProcess />
+      <StrategyFirstResult />
       <HtsolCoreValue />
       <OurStory />
       <ImaginationMeetsStrategy />

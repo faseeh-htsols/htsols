@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/accordion-two";
 import { SERVICES_SERVICES_OFFERED_ACCORDION } from "@/constants";
 import parse from "html-react-parser";
+import LottiePlayer from "@/components/ui/lottie-player";
 
 const WhatWeOffer = () => {
   return (
@@ -48,7 +49,13 @@ const WhatWeOffer = () => {
                   >
                     <div className="flex gap-3 items-center">
                       <div className="offer-icon [&_svg]:w-12 [&_svg]:h-12">
-                        {parse(item.icons)}
+                        {/* {parse(item.icons)} */}
+                        <LottiePlayer
+                          className="w-[45px] h-[45px]"
+                          src={item.icon}
+                          autoplay
+                          loop
+                        />
                       </div>
                       <h3>{item.title}</h3>
                     </div>

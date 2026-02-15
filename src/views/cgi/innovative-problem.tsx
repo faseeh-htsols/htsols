@@ -1,6 +1,7 @@
 "use client";
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
+import LottiePlayer from "@/components/ui/lottie-player";
 import { useTypewriterHeadings } from "@/components/ui/useTypewriterHeadings";
 import Image from "next/image";
 const InnovativeProblem = () => {
@@ -54,12 +55,18 @@ const InnovativeProblem = () => {
             <div className="flex mb-16 lg:mb-0 gap-16 lg:gap-0 flex-col lg:flex-row mt-14 justify-between">
               <div className="lg:w-[30%] p-4 relative bg-center bg-[url(/cgi/innovative-problem-card.png)] bg-cover border-2 border-white/20 rounded-2xl">
                 <div className="mx-auto mb-5 -mt-14 rounded-full w-[70px] h-[70px] flex justify-center items-center bg-[linear-gradient(180deg,#00838A_0%,#00A1A5_100%)]">
-                  <Image
+                  {/* <Image
                     width={40}
                     height={40}
                     alt="star"
                     className="w-[36px] h-[36px]"
                     src={"/cgi/bulb.svg"}
+                  /> */}
+                  <LottiePlayer
+                    className="w-[50px] h-[50px]"
+                    src="/cgi/bulb-white.json"
+                    autoplay
+                    loop
                   />
                 </div>
                 <div className="flex justify-between mb-2">
@@ -91,12 +98,18 @@ const InnovativeProblem = () => {
               </div>
               <div className="lg:w-[30%] relative p-4 bg-center bg-[url(/cgi/innovative-problem-card.png)] bg-cover border-2 border-white/20 rounded-2xl">
                 <div className="mx-auto mb-5 -mt-14 rounded-full w-[70px] h-[70px] flex justify-center items-center bg-[linear-gradient(180deg,#00838A_0%,#00A1A5_100%)]">
-                  <Image
+                  {/* <Image
                     width={40}
                     height={40}
                     alt="star"
                     className="w-[36px] h-[36px]"
                     src={"/cgi/webhookslogo.svg"}
+                  /> */}
+                  <LottiePlayer
+                    className="w-[45px] h-[45px]"
+                    src="/cgi/locket-white.json"
+                    autoplay
+                    loop
                   />
                 </div>
                 <div className="flex justify-between mb-2">
@@ -132,12 +145,18 @@ const InnovativeProblem = () => {
             <div className="flex justify-center">
               <div className="lg:w-[30%] relative p-4 bg-[url(/cgi/innovative-problem-card.png)] bg-cover border-2 border-white/20 rounded-2xl">
                 <div className="mx-auto mb-5 -mt-14 rounded-full w-[70px] h-[70px] flex justify-center items-center bg-[linear-gradient(180deg,#00838A_0%,#00A1A5_100%)]">
-                  <Image
+                  {/* <Image
                     width={40}
                     height={40}
                     alt="star"
                     className="w-[36px] h-[36px]"
                     src={"/cgi/plane.svg"}
+                  /> */}
+                  <LottiePlayer
+                    className="w-[40px] h-[40px]"
+                    src="/cgi/rocket-white.json"
+                    autoplay
+                    loop
                   />
                 </div>
                 <div className="flex justify-between mb-2">

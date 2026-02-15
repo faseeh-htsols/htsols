@@ -8,16 +8,16 @@ const lists = [
   "What’s working today and what’s getting in the way",
   "The day-to-day realities of running your business",
 ];
-const WhatHappensAfterLaunch = () => {
+const RelationshipAndResults = () => {
   return (
     <div className="py-24 bg-[url(/what-happens-after-launch.jpg)] bg-cover">
       <Container>
-        <div>
+        <div className="flex flex-col gap-6">
           <HeadingTwo className="text-center mb-10" span="Results">
             We’re All About <br /> Relationships and
           </HeadingTwo>
           <div className="flex gap-8">
-            <div className="w-[40%] flex flex-col gap-4">
+            <div className="w-[45%] flex flex-col gap-4">
               <p className="text-[#DBDBDB]">
                 Good marketing isn’t about doing more. It’s about doing the
                 right things, in the right order, for the right reasons. At
@@ -52,14 +52,14 @@ const WhatHappensAfterLaunch = () => {
               <Image
                 src={"/happens-after.png"}
                 alt="image"
-                className="w-full min-h-[300px] rounded-3xl h-full object-cover"
+                className="w-full min-h-[300px] rounded-3xl lg:h-full object-cover"
                 width={600}
                 height={600}
               />
             </div>
           </div>
-          <div>
-            <p>
+          <div className="bg-tertiary p-8 rounded-3xl">
+            <p className="text-center ">
               {" "}
               We support startups, growing companies, and established businesses
               that want dependable help without juggling multiple vendors.
@@ -75,4 +75,4 @@ const WhatHappensAfterLaunch = () => {
   );
 };
 
-export default WhatHappensAfterLaunch;
+export default RelationshipAndResults;

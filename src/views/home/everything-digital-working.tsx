@@ -1,10 +1,11 @@
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
+import LottiePlayer from "@/components/ui/lottie-player";
 import Image from "next/image";
 const data = [
   {
     heading: "Build",
-    image: "/website/get-found-easily.svg",
+    image: "/everything1.json",
     lists: [
       "Website design and development",
       "Web applications and AI solutions",
@@ -14,7 +15,7 @@ const data = [
   },
   {
     heading: "Grow",
-    image: "/website/get-found-easily.svg",
+    image: "/everything2.json",
     lists: [
       "Digital marketing",
       "Search engine optimisation",
@@ -23,7 +24,7 @@ const data = [
   },
   {
     heading: "Scale ",
-    image: "/website/get-found-easily.svg",
+    image: "/everything3.json",
     lists: [
       "Ongoing technical support",
       "Platform management",
@@ -72,12 +73,18 @@ const EverythingDigitalWorking = () => {
                 <div className="p-2 rounded-[20px] h-full bg-tertiary">
                   <div className="flex rounded-[20px] flex-col px-6 gap-5 py-10  h-full  bg-black transition-all duration-200 group-hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] ">
                     <div className="w-[70px] h-[70px] bg-white rounded-full flex justify-center items-center">
-                      <Image
+                      {/* <Image
                         width={27}
                         height={34}
                         src={item.image}
                         alt={item.heading}
                         className="w-10 h-10"
+                      /> */}
+                      <LottiePlayer
+                        className="w-14 h-14"
+                        src={item.image}
+                        autoplay
+                        loop
                       />
                     </div>
                     <h3
