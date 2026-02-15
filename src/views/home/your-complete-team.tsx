@@ -25,7 +25,7 @@ const YourCompleteTeam = () => {
     <div className="py-20 relative  -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[2%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
       <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
-           bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
+           bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] animate-pulse
           "
       ></div>
       <Container>
@@ -76,7 +76,9 @@ const YourCompleteTeam = () => {
           </div>
           <div>
             <div className="border-b pb-9 border-white">
-              <HeadingTwo>Why Choose Us</HeadingTwo>
+              <HeadingTwo className="lg:!text-4xl">
+                Your Complete Digital Team, Without the Hiring
+              </HeadingTwo>
             </div>
             <div className="ps-5 relative mt-9 flex flex-col gap-10">
               {/* <div className="absolute top-0 left-0 bg-white/20 w-1 h-full"></div> */}
