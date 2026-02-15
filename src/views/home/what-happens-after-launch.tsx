@@ -17,8 +17,8 @@ const WhatHappensAfterLaunch = () => {
           <HeadingTwo className="text-center mb-10" span="Launch">
             What Happens After{" "}
           </HeadingTwo>
-          <div className="flex gap-8">
-            <div className="w-[40%] flex flex-col gap-4">
+          <div className="flex lg:flex-row flex-col gap-8">
+            <div className="lg:w-[40%] flex flex-col gap-4">
               <p className="text-[#DBDBDB]">
                 Many businesses worry that support ends once a project goes
                 live. That may be common in the industry, but it is not our

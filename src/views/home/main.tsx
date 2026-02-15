@@ -32,9 +32,9 @@ const Main = () => {
       <EngagementPricing />
       <WhyBuisnessChoose />
       <PlanNextStep />
-      <ClientsSection />
-      <FAQSection />
       <ContactForm />
+      <FAQSection />
+      <ClientsSection />
       <LogosMarquee />
     </>
   );
