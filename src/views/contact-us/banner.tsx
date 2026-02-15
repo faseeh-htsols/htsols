@@ -38,7 +38,9 @@ const Banner = () => {
             />
           </div>
 
-          <HeadingTwo className="text-center">Let’s have a chat</HeadingTwo>
+          <h1 className="text-4xl lg:text-5xl font-medium uppercase text-center font-primary">
+            Let’s have a chat
+          </h1>
           <p className="text-white text-[20px] text-center">
             HT-Solutions provides you Website Designing, Web Development, SEO
             Services, Graphic Designing, Mobile Application Development Video

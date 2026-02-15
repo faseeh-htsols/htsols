@@ -172,26 +172,49 @@ export const HeroSection: React.FC = () => {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left Content */}
                 <div className="space-y-8">
-                  <h1 className="text-4xl uppercase md:text-5xl font-primary lg:text-6xl xl:text-6xl font-bold leading-[1.1] tracking-tight">
-                    {slide.headline.map((line, i) => (
-                      <span key={i} className="block text-white">
-                        {line}
-                      </span>
-                    ))}
+                  {index === 0 ? (
+                    <h1 className="text-4xl uppercase md:text-5xl font-primary lg:text-6xl xl:text-6xl font-bold leading-[1.1] tracking-tight">
+                      {slide.headline.map((line, i) => (
+                        <span key={i} className="block text-white">
+                          {line}
+                        </span>
+                      ))}
 
-                    <span className="relative ">
-                      <span
-                        className="absolute bottom-3 left-0 w-full h-5 bg-primary "
-                        style={{
-                          background:
-                            "linear-gradient(90deg, #075B65 0%, #00838A 37.02%, #328A99 81.25%)",
-                        }}
-                      ></span>
-                      <span className="relative text-white">
-                        {slide.outlineWord}
+                      <span className="relative ">
+                        <span
+                          className="absolute bottom-3 left-0 w-full h-5 bg-primary "
+                          style={{
+                            background:
+                              "linear-gradient(90deg, #075B65 0%, #00838A 37.02%, #328A99 81.25%)",
+                          }}
+                        ></span>
+                        <span className="relative text-white">
+                          {slide.outlineWord}
+                        </span>
                       </span>
-                    </span>
-                  </h1>
+                    </h1>
+                  ) : (
+                    <h2 className="text-4xl uppercase md:text-5xl font-primary lg:text-6xl xl:text-6xl font-bold leading-[1.1] tracking-tight">
+                      {slide.headline.map((line, i) => (
+                        <span key={i} className="block text-white">
+                          {line}
+                        </span>
+                      ))}
+
+                      <span className="relative ">
+                        <span
+                          className="absolute bottom-3 left-0 w-full h-5 bg-primary "
+                          style={{
+                            background:
+                              "linear-gradient(90deg, #075B65 0%, #00838A 37.02%, #328A99 81.25%)",
+                          }}
+                        ></span>
+                        <span className="relative text-white">
+                          {slide.outlineWord}
+                        </span>
+                      </span>
+                    </h2>
+                  )}
                   <div className="flex">
                     <Button variant="primary" href="#contact">
                       Start Your Project
