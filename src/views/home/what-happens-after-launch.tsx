@@ -1,7 +1,16 @@
+"use client";
+
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const lists = [
   "Monitor performance",
   "Provide reporting and insights",
@@ -9,16 +18,56 @@ const lists = [
   "Deliver technical support",
   "Support scaling as your business grows",
 ];
+
 const WhatHappensAfterLaunch = () => {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const headingRef = useRef<HTMLDivElement | null>(null);
+  const leftRef = useRef<HTMLDivElement | null>(null);
+  const rightRef = useRef<HTMLDivElement | null>(null);
+
+  useGSAP(
+    () => {
+      if (!sectionRef.current) return;
+
+      const tl = gsap.timeline({
+        defaults: { ease: "power3.out" },
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      tl.from(headingRef.current, { autoAlpha: 0, y: 18, duration: 0.7 })
+        .from(
+          leftRef.current,
+          { autoAlpha: 0, x: -50, duration: 0.8 },
+          "-=0.35",
+        )
+        .from(
+          rightRef.current,
+          { autoAlpha: 0, x: 50, duration: 0.8 },
+          "-=0.6",
+        );
+    },
+    { scope: sectionRef },
+  );
+
   return (
-    <div className="py-24 bg-[url(/what-happens-after-launch.jpg)] bg-cover">
+    <div
+      ref={sectionRef}
+      className="py-24 bg-[url(/what-happens-after-launch.jpg)] bg-cover"
+    >
       <Container>
         <div>
-          <HeadingTwo className="text-center mb-10" span="Launch">
-            What Happens After{" "}
-          </HeadingTwo>
+          <div ref={headingRef}>
+            <HeadingTwo className="text-center mb-10" span="Launch">
+              What Happens After{" "}
+            </HeadingTwo>
+          </div>
+
           <div className="flex lg:flex-row flex-col gap-8">
-            <div className="lg:w-[40%] flex flex-col gap-4">
+            <div ref={leftRef} className="lg:w-[40%] flex flex-col gap-4">
               <p className="text-[#DBDBDB]">
                 Many businesses worry that support ends once a project goes
                 live. That may be common in the industry, but it is not our
@@ -27,6 +76,7 @@ const WhatHappensAfterLaunch = () => {
               <p className="font-semibold">
                 After launch, we remain actively involved. We continue to:
               </p>
+
               <div className="border-[#5C5C5C] rounded-2xl bg-[url(/happens-after-bg.png)] bg-bottom bg-no-repeat border-2 py-10 px-3">
                 <div className="flex flex-col gap-3 pb-6 border-b border-white">
                   {lists.map((list, idx) => (
@@ -42,6 +92,7 @@ const WhatHappensAfterLaunch = () => {
                     </div>
                   ))}
                 </div>
+
                 <div className="pt-8">
                   <p className="text-[#DBDBDB] text-lg">
                     Your platform stays current rather than gradually becoming
@@ -51,7 +102,8 @@ const WhatHappensAfterLaunch = () => {
                 </div>
               </div>
             </div>
-            <div className="grow">
+
+            <div ref={rightRef} className="grow">
               <Image
                 src={"/happens-after.png"}
                 alt="image"

@@ -7,6 +7,12 @@ import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import type { FormikHelpers } from "formik";
 import { useRef, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import SplitType from "split-type";
+
+gsap.registerPlugin(ScrollTrigger);
 const validationSchema = Yup.object({
   firstName: Yup.string()
     .min(2, "First name must be at least 2 characters")
@@ -36,11 +42,112 @@ type FormValues = {
   city: string;
 };
 const ContactForm = () => {
+  const scopeRef = useRef<HTMLElement | null>(null);
   const formRef = useRef<HTMLFormElement | null>(null);
+  // 👇 for split text
+  const headingSplitRef = useRef<HTMLHeadingElement | null>(null);
+  const paraSplitRef = useRef<HTMLParagraphElement | null>(null);
+  const iconWrapRef = useRef<HTMLDivElement | null>(null);
+  // 👇 for form fade
+  const formWrapRef = useRef<HTMLDivElement | null>(null);
   const [isSending, setIsSending] = useState(false);
   const [popupOpen, setPopupOpen] = useState(false);
   const [popupType, setPopupType] = useState<"success" | "error">("success");
   const [popupMsg, setPopupMsg] = useState("");
+  useGSAP(
+    () => {
+      const headingEl = headingSplitRef.current;
+      const paraEl = paraSplitRef.current;
+      const formEl = formWrapRef.current;
+      if (!headingEl || !paraEl || !formEl) return;
+
+      // Split into words
+      const headingSplit = new SplitType(headingEl, { types: "words" });
+      const paraSplit = new SplitType(paraEl, { types: "words" });
+      const iconEl = iconWrapRef.current;
+
+      if (iconEl) {
+        gsap.fromTo(
+          iconEl,
+          { opacity: 0, y: -14, scale: 0.96 },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.7,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: iconEl,
+              start: "top 85%",
+              toggleActions: "play none none reverse",
+              invalidateOnRefresh: true,
+            },
+          },
+        );
+      }
+      // Make sure words can move independently
+      gsap.set([headingSplit.words, paraSplit.words], {
+        display: "inline-block",
+        opacity: 0,
+        y: 18,
+      });
+
+      // Heading + para reveal by words on scroll
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: headingEl, // top block
+          start: "top 80%",
+          end: "bottom 55%",
+          scrub: true,
+          invalidateOnRefresh: true,
+          // markers: true,
+        },
+      });
+
+      tl.to(headingSplit.words, {
+        opacity: 1,
+        y: 0,
+        stagger: 0.04,
+        ease: "power2.out",
+        duration: 0.6,
+      }).to(
+        paraSplit.words,
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.01,
+          ease: "power2.out",
+          duration: 0.6,
+        },
+        "-=0.25",
+      );
+
+      // Form fade from bottom
+      gsap.fromTo(
+        formEl,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: formEl,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+            invalidateOnRefresh: true,
+          },
+        },
+      );
+
+      // ✅ cleanup SplitType DOM changes
+      return () => {
+        headingSplit.revert();
+        paraSplit.revert();
+      };
+    },
+    { scope: scopeRef },
+  );
   const sendEmail = (
     values: FormValues,
     formikHelpers: FormikHelpers<FormValues>,
@@ -74,7 +181,10 @@ const ContactForm = () => {
   };
   const closePopup = () => setPopupOpen(false);
   return (
-    <section className="bg-[url(/get-in-touch-bg.jpg)] bg-cover relative py-20   ">
+    <section
+      ref={scopeRef}
+      className="bg-[url(/get-in-touch-bg.jpg)] bg-cover relative py-20   "
+    >
       {/* <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
@@ -85,7 +195,7 @@ const ContactForm = () => {
       </div> */}
       <Container>
         <div className="relative py-5 lg:py-10 flex gap-8 flex-col max-w-5xl mx-auto">
-          <div className="flex justify-center">
+          <div className="flex justify-center" ref={iconWrapRef}>
             <Image
               src={"/chat.svg"}
               alt="chat icon"
@@ -95,15 +205,17 @@ const ContactForm = () => {
             />
           </div>
 
-          <HeadingTwo className="text-center">Let’s have a chat</HeadingTwo>
-          <p className="text-white text-[20px] text-center">
+          <HeadingTwo ref={headingSplitRef} className="text-center">
+            Let’s have a chat
+          </HeadingTwo>
+          <p ref={paraSplitRef} className="text-white text-[20px] text-center">
             HT-Solutions provides you Website Designing, Web Development, SEO
             Services, Graphic Designing, Mobile Application Development Video
             Production, Voice Over, Digital Marketing and Network Solutions in
             Lahore, Pakistan.
           </p>
         </div>
-        <div className="relative mt-8">
+        <div className="relative mt-8" ref={formWrapRef}>
           <Formik
             initialValues={{
               firstName: "",

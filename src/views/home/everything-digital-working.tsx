@@ -1,7 +1,13 @@
+"use client";
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
 import LottiePlayer from "@/components/ui/lottie-player";
-import Image from "next/image";
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 const data = [
   {
     heading: "Build",
@@ -33,8 +39,48 @@ const data = [
   },
 ];
 const EverythingDigitalWorking = () => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const headingRef = useRef<HTMLHeadingElement | null>(null);
+  const methodsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useGSAP(
+    () => {
+      gsap.from(headingRef.current, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      methodsRef.current.forEach((method, i) => {
+        if (method) {
+          gsap.from(method, {
+            opacity: 0,
+            y: 60,
+            duration: 0.8,
+            delay: i * 0.15,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: method,
+              start: "top 100%",
+              toggleActions: "play none none reverse",
+            },
+          });
+        }
+      });
+    },
+    { scope: containerRef },
+  );
   return (
-    <div className="py-20 relative bg-tertiary    -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[2%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+    <div
+      ref={containerRef}
+      className="py-20 relative bg-tertiary    -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[2%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]"
+    >
       <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] animate-pulse
@@ -42,25 +88,40 @@ const EverythingDigitalWorking = () => {
       ></div>
       <Container>
         <div className="flex flex-col gap-6">
-          <HeadingTwo className="text-center">
+          <HeadingTwo ref={headingRef} className="text-center">
             Everything Digital <br />{" "}
             <span className="bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">
               Working Together
             </span>
           </HeadingTwo>
           <div className="max-w-[1041px] mx-auto flex flex-col gap-6">
-            <p className="text-center">
+            <p
+              ref={(el) => {
+                methodsRef.current[0] = el;
+              }}
+              className="text-center"
+            >
               Many businesses struggle because their website, marketing, and
               internal systems are managed separately. When platforms don’t
               connect properly, performance becomes inconsistent and harder to
               measure. In many cases, fixing disconnected tools costs more than
               building the right foundation from the start.
             </p>
-            <p className="text-center font-semibold ">
+            <p
+              ref={(el) => {
+                methodsRef.current[1] = el;
+              }}
+              className="text-center font-semibold "
+            >
               At HTSOL Inc., we keep everything under one coordinated structure
               so each decision supports the next.
             </p>
-            <p className="text-center">
+            <p
+              ref={(el) => {
+                methodsRef.current[2] = el;
+              }}
+              className="text-center"
+            >
               We support the full digital lifecycle:
             </p>
           </div>

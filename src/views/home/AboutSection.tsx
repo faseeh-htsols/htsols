@@ -1,27 +1,85 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import HeadingTwo from "@/components/ui/heading-two";
 import Container from "@/components/ui/container";
 
-export const AboutSection: React.FC = () => {
-  return (
-    <section className="relative bg-black py-25  [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]">
-      {/* Top accent line */}
-      {/* <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" /> */}
-      {/* <div
-        className="pointer-events-none absolute bottom-0 left-0 h-[3%] w-full
-           bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
-           [clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]
-           opacity-90"
-      ></div> */}
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
+gsap.registerPlugin(ScrollTrigger);
+
+export const AboutSection: React.FC = () => {
+  const sectionRef = useRef<HTMLElement | null>(null);
+
+  useGSAP(
+    () => {
+      const section = sectionRef.current;
+      if (!section) return;
+
+      const q = gsap.utils.selector(section);
+
+      // main timeline
+      const tl = gsap.timeline({
+        defaults: { ease: "power3.out" },
+        scrollTrigger: {
+          trigger: section,
+          start: "top 75%",
+          toggleActions: "play none none none", // animate once
+        },
+      });
+
+      // left content
+      tl.from(q("[data-anim='left']"), { autoAlpha: 0, y: 24, duration: 0.7 });
+
+      // paragraphs stagger
+      tl.from(
+        q("[data-anim='p']"),
+        { autoAlpha: 0, y: 16, duration: 0.55, stagger: 0.12 },
+        "-=0.35",
+      );
+
+      // bottom image
+      tl.from(
+        q("[data-anim='bottom-img']"),
+        { autoAlpha: 0, y: 18, duration: 0.6 },
+        "-=0.35",
+      );
+
+      // right image + star
+      tl.from(
+        q("[data-anim='right']"),
+        { autoAlpha: 0, x: 22, duration: 0.75 },
+        "-=0.6",
+      );
+
+      tl.from(
+        q("[data-anim='star']"),
+        { autoAlpha: 0, scale: 0.6, rotate: -20, duration: 0.55 },
+        "-=0.55",
+      );
+    },
+    { scope: sectionRef },
+  );
+
+  return (
+    <section
+      ref={sectionRef}
+      className="relative bg-black py-25 [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]"
+    >
       <Container>
         <div className="flex lg:flex-row-reverse flex-col gap-12">
-          {/* Right Content - Decorative Star */}
-          <div className="lg:w-[30%] shrink-0 justify-end items-start relative">
-            <div className="absolute -top-[25px] lg:-top-[50px] -right-[25px] lg:-right-[50px] z-1">
+          {/* Right */}
+          <div
+            data-anim="right"
+            className="lg:w-[30%] shrink-0 justify-end items-start relative"
+          >
+            <div
+              data-anim="star"
+              className="absolute -top-[25px] lg:-top-[50px] -right-[25px] lg:-right-[50px] z-1"
+            >
               <Image
                 src={"/star.svg"}
                 alt="decorative star"
@@ -30,6 +88,7 @@ export const AboutSection: React.FC = () => {
                 className="w-[50px] h-[50px] lg:w-[100px] lg:h-[100px]"
               />
             </div>
+
             <div className="w-full relative h-full min-h-[300px]">
               <Image
                 src={"/about-two.png"}
@@ -39,28 +98,27 @@ export const AboutSection: React.FC = () => {
               />
             </div>
           </div>
-          {/* Left Content */}
-          <div className="space-y-6 grow">
-            {/* Heading */}
+
+          {/* Left */}
+          <div data-anim="left" className="space-y-6 grow">
             <HeadingTwo className="">About HtSol Inc.</HeadingTwo>
 
-            {/* Description paragraphs */}
             <div className="space-y-4 text-white/60 text-sm md:text-base leading-relaxed">
-              <p>
+              <p data-anim="p">
                 HTSOL Inc. is a full-service digital solutions partner focused
                 on practical, measurable growth for Canadian businesses. We
                 bring together strategy, development, design, and marketing to
                 help organisations build, refine, and scale their digital
                 presence with clarity and control.
               </p>
-              <p>
+              <p data-anim="p">
                 We support organisations at every stage of growth, from startups
                 launching their first platform to established companies
                 strengthening complex systems. Our clients operate across Canada
                 and internationally, where consistent visibility and dependable
                 performance are essential to staying competitive.
               </p>
-              <p>
+              <p data-anim="p">
                 Rather than offering fixed packages, we adapt our involvement to
                 match your needs. That may involve a complete digital build,
                 ongoing optimisation, or additional technical capacity to
@@ -70,10 +128,11 @@ export const AboutSection: React.FC = () => {
               </p>
             </div>
 
-            {/* Images container */}
             <div className="relative mt-8 flex gap-4">
-              {/* First image - Team meeting */}
-              <div className="relative w-full h-[300px] rounded-lg overflow-hidden border-2 border-primary/30">
+              <div
+                data-anim="bottom-img"
+                className="relative w-full h-[300px] rounded-lg overflow-hidden border-2 border-primary/30"
+              >
                 <Image
                   src="/about-htsols.jpg"
                   alt="Team collaboration"

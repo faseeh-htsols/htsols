@@ -13,6 +13,7 @@ import WhatHappensAfterLaunch from "./what-happens-after-launch";
 import WhoWeHelp from "./who-we-help";
 import WhyBuisnessChoose from "./why-buisness-choose";
 import WorkPortfolioSection from "./WorkPortfolioSection";
+import WorkPortfolioSectionTwo from "./WorkPortfolioSectionTwo";
 import WorkProcessSection from "./WorkProcessSection";
 import YourCompleteTeam from "./your-complete-team";
 
@@ -23,7 +24,7 @@ const Main = () => {
       <AboutSection />
       <ServicesSection />
       <YourCompleteTeam />
-      <WorkPortfolioSection />
+      <WorkPortfolioSectionTwo />
       <EverythingDigitalWorking />
       <WhoWeHelp />
       <WorkProcessSection />

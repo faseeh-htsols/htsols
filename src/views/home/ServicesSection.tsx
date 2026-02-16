@@ -1,9 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import HeadingTwo from "@/components/ui/heading-two";
 import Container from "@/components/ui/container";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface ServiceCard {
   title: string;
@@ -45,8 +50,48 @@ const services: ServiceCard[] = [
 ];
 
 export const ServicesSection: React.FC = () => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const headingRef = useRef<HTMLHeadingElement | null>(null);
+  const methodsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useGSAP(
+    () => {
+      gsap.from(headingRef.current, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      methodsRef.current.forEach((method, i) => {
+        if (method) {
+          gsap.from(method, {
+            opacity: 0,
+            y: 60,
+            duration: 0.8,
+            delay: i * 0.15,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: method,
+              start: "top 100%",
+              toggleActions: "play none none reverse",
+            },
+          });
+        }
+      });
+    },
+    { scope: containerRef },
+  );
   return (
-    <section className="relative bg-tertiary py-20  -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+    <section
+      ref={containerRef}
+      className="relative bg-tertiary py-20  -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]"
+    >
       <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[2.5%] -rotate-3 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] animate-pulse
@@ -59,13 +104,19 @@ export const ServicesSection: React.FC = () => {
       <Container>
         {/* Section Heading */}
         <div className="text-center mb-16">
-          <HeadingTwo span="OFFER"> WHAT WE</HeadingTwo>
+          <HeadingTwo span="OFFER" ref={headingRef}>
+            {" "}
+            WHAT WE
+          </HeadingTwo>
         </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
+              ref={(el) => {
+                methodsRef.current[index] = el;
+              }}
               key={index}
               className="group relative bg-black py-7 pl-7 group hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-300"
             >

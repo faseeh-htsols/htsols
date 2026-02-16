@@ -1,10 +1,15 @@
 "use client";
 
 import Container from "@/components/ui/container";
-import React, { useMemo, useState } from "react";
-import Link from "next/link";
+import { useMemo, useState, useRef } from "react";
+// import Link from "next/link";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 type Tab = {
   name: string;
@@ -47,9 +52,44 @@ const EngagementPricing = () => {
   const [active, setActive] = useState(0);
 
   const tab = useMemo(() => TABS[active], [active]);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const headingRef = useRef<HTMLDivElement | null>(null);
+  const leftRef = useRef<HTMLDivElement | null>(null);
+  const rightRef = useRef<HTMLDivElement | null>(null);
+
+  useGSAP(
+    () => {
+      if (!sectionRef.current) return;
+
+      const tl = gsap.timeline({
+        defaults: { ease: "power3.out" },
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      tl.from(headingRef.current, { autoAlpha: 0, y: 18, duration: 0.7 })
+        .from(
+          leftRef.current,
+          { autoAlpha: 0, x: -50, duration: 0.8 },
+          "-=0.35",
+        )
+        .from(
+          rightRef.current,
+          { autoAlpha: 0, x: 50, duration: 0.8 },
+          "-=0.6",
+        );
+    },
+    { scope: sectionRef },
+  );
 
   return (
-    <section className="bg-tertiary  relative py-24   -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+    <section
+      ref={sectionRef}
+      className="bg-tertiary  relative py-24   -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]"
+    >
       {/* Top accent line */}
       <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
@@ -60,7 +100,7 @@ const EngagementPricing = () => {
         {/* 2-col grid (tab panel on the right, like your screenshot) */}
         <div className="grid grid-cols-1 gap-9 lg:grid-cols-2">
           {/* Left column (leave empty or add your heading/content) */}
-          <div>
+          <div ref={leftRef}>
             <div>
               <Image
                 src={"/engagement-pricing1.png"}
@@ -82,10 +122,10 @@ const EngagementPricing = () => {
           </div>
 
           {/* Right column: the tab card (2 rows: tabs row + content row) */}
-          <div className="">
+          <div className="" ref={rightRef}>
             <div className="grid gap-5">
               {/* Row 1: Tabs */}
-              <div className="flex w-full rounded-lg border border-white/20 p-1">
+              <div className="flex md:flex-row flex-col w-full rounded-lg border border-white/20 p-1">
                 {TABS.map((t, idx) => {
                   const isActive = idx === active;
                   return (
