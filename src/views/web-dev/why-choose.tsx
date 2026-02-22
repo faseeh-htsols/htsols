@@ -1,23 +1,15 @@
 import Container from "@/components/ui/container";
 import Image from "next/image";
 import HeadingTwo from "@/components/ui/heading-two";
+import Button from "@/components/ui/Button";
 export const WHY_CHOOSE_WEB_DEV = [
-  {
-    heading: "Lorem ipsum dolor sit",
-    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-  },
-  {
-    heading: "Lorem ipsum dolor sit",
-    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-  },
-  {
-    heading: "Lorem ipsum dolor sit",
-    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-  },
-  {
-    heading: "Lorem ipsum dolor sit",
-    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-  },
+  "Clear navigation and intuitive user flow",
+  "Strong visual hierarchy and modern design",
+  "Concise, evergreen content that answers real questions",
+  "Mobile responsiveness across current devices",
+  "Fast performance and stable Core Web Vitals",
+  "Clean, scalable code and a reliable CMS",
+  "Trust signals, privacy basics, and security best practices",
 ];
 const WhyChoose = () => {
   return (
@@ -28,8 +20,18 @@ const WhyChoose = () => {
           "
       ></div>
       <Container>
-        <div className="flex lg:flex-row flex-col gap-10">
-          <div className="relative lg:w-[43%] py-10 lg:py-0 shrink-0">
+        <div className="grid grid-cols-2 gap-5 pb-8 border-b border-white mb-12">
+          <HeadingTwo className="lg:!text-[33px]">
+            Why Professional Web Development Matters in Canada
+          </HeadingTwo>
+          <p>
+            Your website is your strongest owned channel. Ads stop the moment
+            you stop paying. Social posts fade quickly. A well-built website
+            keeps working every day, as long as the foundations are solid.
+          </p>
+        </div>
+        <div className="grid lg:grid-cols-2 gap-10">
+          <div className="relative py-10 lg:py-0 shrink-0">
             <Image
               src={"/website/choose-us.png"}
               alt="why choose us"
@@ -37,7 +39,7 @@ const WhyChoose = () => {
               height={800}
               className="w-[80%] mx-auto h-[400px] lg:h-[650px] rounded-2xl object-cover"
             />
-            <div className="absolute left-0 -bottom-0 lg:bottom-[20%] rounded-full border border-[#328A99]">
+            {/* <div className="absolute left-0 -bottom-0 lg:bottom-[20%] rounded-full border border-[#328A99]">
               <div
                 className="p-3 bg-[linear-gradient(90deg,rgba(217,217,217,0.6)_0%,rgba(115,115,115,0.7)_100%)] rounded-full
 "
@@ -59,8 +61,8 @@ const WhyChoose = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="absolute right-0 -top-4 lg:top-[20%] rounded-full border border-[#328A99]">
+            </div> */}
+            <div className="absolute left-0 -bottom-0 lg:bottom-[20%] rounded-full border border-[#328A99]">
               <div className="rounded-full p-4 bg-[linear-gradient(180deg,rgba(255,255,255,0.5)_0%,rgba(153,153,153,0.5)_100%)]">
                 <div className="rounded-full bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] p-3">
                   <div className="rounded-full p-5 aspect-square flex justify-center items-center bg-black">
@@ -74,20 +76,23 @@ const WhyChoose = () => {
             </div>
           </div>
           <div>
-            <div className="border-b pb-9 border-white">
-              <HeadingTwo>Why Choose Us</HeadingTwo>
-            </div>
             <div className="ps-5 relative mt-9 flex flex-col gap-10">
               <div className="absolute top-0 left-0 bg-white/20 w-1 h-full"></div>
               {WHY_CHOOSE_WEB_DEV.map((item, index) => (
                 <div key={index} className="relative group flex flex-col gap-2">
-                  <div className="absolute w-1 h-full -left-5  group-hover:bg-[#075B65]"></div>
-                  <h3 className="font-primary uppercase text-lg">
-                    {item.heading}
-                  </h3>
-                  <p>{item.para}</p>
+                  <div className="absolute top-1/2 -translate-y-1/2 w-5 h-5 -left-7 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] rounded-full"></div>
+                  <p className="text-xl ps-2">{item}</p>
                 </div>
               ))}
+            </div>
+            <div className="mt-12 border-white pt-8 border-t">
+              <p className="mb-6 ">
+                If any one of these breaks, users bounce, leads drop, and
+                marketing costs rise.
+              </p>
+              <div className="flex ">
+                <Button href="/">Get Started</Button>
+              </div>
             </div>
           </div>
         </div>

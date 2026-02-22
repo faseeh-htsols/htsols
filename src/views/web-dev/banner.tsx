@@ -1,5 +1,6 @@
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/container";
+import Wrapper from "@/components/ui/wrapper";
 import Image from "next/image";
 
 const Banner = () => {
@@ -23,21 +24,30 @@ const Banner = () => {
           alt="left gradient"
         />
       </div>
-      <Container>
+      <Wrapper>
         <div>
-          <h1 className="text-4xl lg:text-6xl font-primary mb-8 font-semibold text-white text-center uppercase">
-            Websites that convert clicks into consultations
+          <h1 className="text-4xl lg:text-[53px] font-primary mb-8 font-semibold text-white text-center uppercase">
+            Websites Built For Speed, Search Visibility, And Real Business
+            Growth
           </h1>
         </div>
 
         <p className="text-lg text-center mb-8">
-          Your website is the digital front door to your practice it’s where
-          trust begins. At Dentopia, we build fast, elegant, and
-          conversion-driven websites that reflect your brand, perform
-          beautifully on every device, and turn patient interest into bookings.
-          Every line of code and every pixel is designed to grow your practice,
-          not just decorate it. 
+          Your website is often the first place people meet your brand. It
+          should load fast, look sharp, and make it easy for visitors to take
+          the next step. That could be calling, booking, buying, or requesting a
+          quote. HTSOL Inc. is a Canadian digital marketing and web development
+          agency. We design and build modern websites that support your
+          marketing, strengthen trust, and help you convert more of the right
+          traffic. We keep things clear, practical, and focused on what your
+          business actually needs.
         </p>
+        <div className="flex gap-3 mb-8 justify-center">
+          <Button href="/">BOOK A FREE CONSULTATION</Button>
+          <Button href="/" variant="outline">
+            Request a Proposal
+          </Button>
+        </div>
         <div>
           <Image
             src={"/website/website-banner.png"}
@@ -47,7 +57,7 @@ const Banner = () => {
             height={1000}
           />
         </div>
-      </Container>
+      </Wrapper>
     </div>
   );
 };
