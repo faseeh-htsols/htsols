@@ -19,32 +19,38 @@ interface ServiceCard {
 const services: ServiceCard[] = [
   {
     title: "WEBSITE DEVELOPMENT SERVICES",
-    description: "Enim ad minim veniam quis nostrud exercitation.",
-    image: "/website-development-services.png",
+    description:
+      "Design and development that turns visitors into leads with speed, clarity, and clean UX.",
+    image: "/web-dev-ser-home.png",
   },
   {
     title: "SEO SERVICES",
-    description: "Enim adipisicing ipsum fugit labore ipsum.",
-    image: "/seo-services.png",
+    description:
+      "Smart SEO, content, and campaigns that get you seen in Google, ChatGPT, and where buyers search.",
+    image: "/seo-ser-home.png",
   },
   {
     title: "CGI SERVICES",
-    description: "Enim adipisicing ipsum fugit labore ipsum.",
-    image: "/cgi-services.png",
+    description:
+      "Scroll-stopping CGI and 3D visuals that make your product look premium and earn attention fast.",
+    image: "/cgi-ser-home.png",
   },
   {
     title: "STAFF AUGMENTATION",
-    description: "Enim ad minim veniam quis nostrud exercitation.",
-    image: "/staff-augmentation.png",
+    description:
+      "Add vetted developers and designers to your team, without the hiring delays or overhead.",
+    image: "/staff-aug.png",
   },
   {
     title: "DIGITAL TRANSFORMATION",
-    description: "Enim adipisicing ipsum fugit labore ipsum.",
+    description:
+      "Strategy and execution that modernises your business without disrupting day-to-day delivery.",
     image: "/digital-transformations.png",
   },
   {
     title: "DIGITAL MARKETING",
-    description: "Enim adipisicing ipsum fugit labore ipsum.",
+    description:
+      "Performance marketing that drives qualified traffic, better leads, and stronger ROI across channels.",
     image: "/digital-marketing.png",
   },
 ];

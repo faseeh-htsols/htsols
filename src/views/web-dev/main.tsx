@@ -23,9 +23,9 @@ const WebDevMain = () => {
       <SeoReadyWebsite />
       <WhatToExpect />
       <ServicesWeOfferCanada />
-      <OurProcess />
+      {/* <OurProcess />            */}
       <CallBackFromUs />
-      <WhatsIncluded />
+      {/* <WhatsIncluded /> */}
       <ClientsSection />
       <ContactForm />
     </>

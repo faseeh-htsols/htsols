@@ -14,14 +14,14 @@ const CallBackFromUs = () => {
         <div className="border border-[#5C5C5C] rounded-lg px-4 flex lg:flex-row flex-col gap-0 lg:gap-4 relative text-white mb-20">
           <div className="lg:w-[56%] py-8 flex flex-col gap-4">
             <h2 className="font-primary uppercase text-2xl">
-              Want A Call back from us ?
+              Ready to Build a Website That Supports Growth?
             </h2>
             <p className="text-xl">
-              HT-Solutions provides you Website Designing, Web Development, SEO
-              Services, Graphic Designing.
+              If you want a website that looks modern, loads fast, supports SEO,
+              and helps your marketing work harder, HTSOL Inc. can help.
             </p>
             <div className="flex">
-              <Button href="/">Schedule A call Back</Button>
+              <Button href="/">Book a Free Consultation </Button>
             </div>
           </div>
           <div className="lg:w-[37%] lg:absolute lg:-top-10 lg:right-0">
