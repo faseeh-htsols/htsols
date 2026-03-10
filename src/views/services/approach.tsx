@@ -1,4 +1,5 @@
 import Button from "@/components/ui/Button";
+import CircularText from "@/components/ui/CircularText";
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
@@ -12,54 +13,34 @@ const Approach = () => {
           "
       ></div>
       <Container>
-        <div className="grid lg:grid-cols-2 gap-24 items-center">
-          <div className="">
-            <div className="w-[45%]">
-              <Image
-                src={"/services/approach-1.png"}
-                width={500}
-                height={500}
-                className="w-full h-[370px] rounded-lg object-cover"
-                alt="graph"
-              />
-            </div>
-            <div className="w-[68%] relative -mt-[150px] ms-auto">
-              <Image
-                src={"/services/approach-2.png"}
-                width={500}
-                className="w-full rounded-lg h-[300px] object-cover"
-                height={500}
-                alt="graph"
-              />
-            </div>
+        <div className="flex flex-col gap-8 mb-8">
+          <HeadingTwo className="text-center">
+            Get Started Today with HTSOL
+          </HeadingTwo>
+          <p className="max-w-[970px] text-center mx-auto">
+            Ready to take the next step? We're here to listen to your goals and guide you toward success. Reach out to HTSOL Inc. to schedule your consultation today, and let’s discuss the best path forward for your business.
+          </p>
+          <div>
+            <CircularText />
           </div>
-          <div className="flex flex-col gap-8 ">
-            <HeadingTwo>Approach</HeadingTwo>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium. (Focus on modernizing and scaling business
-              processes.)
-            </p>
-            <div className="flex flex-row justify-between">
-              <h3 className="text-[20px] font-semibold font-primary uppercase bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">
-                Monitor
-              </h3>
-              <h3 className="text-[20px] font-semibold font-primary uppercase ">
-                Analyze
-              </h3>
-              <h3 className="text-[20px] font-semibold font-primary uppercase ">
-                Multipy
-              </h3>
-            </div>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium. (Focus on modernizing and scaling business
-              processes.)
-            </p>
-            <div className="flex">
-              <Button href="/">Get Started</Button>
-            </div>
-          </div>
+        </div>
+        <div className="relative">
+          {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <Image
+              src={"/services/play-btn.svg"}
+              width={100}
+              height={100}
+              alt="play button"
+            />
+          </div> */}
+          <Image
+            src={"/services/service-img.png"}
+            alt="ball"
+            width={1000}
+            height={1000}
+            quality={100}
+            className="w-full h-[620x] object-cover rounded-lg"
+          />
         </div>
       </Container>
     </div>

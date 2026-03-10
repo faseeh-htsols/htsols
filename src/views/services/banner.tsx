@@ -40,17 +40,6 @@ const Banner = () => {
             <span className="border-b-2 border-white">Growth Services</span>
           </h1>
         </div>
-        <div className="flex lg:flex-row flex-col mt-20 gap-9 items-center">
-          <div className="shrink-0">
-            <Button href="/" variant="outline">
-              START YOUR PROJECT
-            </Button>
-          </div>
-          <p className="text-secondary text-2xl">
-            We are bluo, bluo is a creative digital agency with serveral
-            services which focused on quality and innovations for your company.
-          </p>
-        </div>
       </Container>
     </div>
   );
