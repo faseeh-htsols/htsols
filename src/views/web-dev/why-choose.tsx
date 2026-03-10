@@ -14,8 +14,8 @@ export const WHY_CHOOSE_WEB_DEV = [
 ];
 const WhyChoose = () => {
   return (
-    <DoubleCurves>
-      <div className="grid grid-cols-2 gap-5 pb-8 border-b border-white mb-12">
+    <Container>
+      <div className="grid grid-cols-2 gap-5 pb-8 border-b border-white mb-12 mt-10">
         <HeadingTwo className="lg:!text-[33px]">
           Why Professional Web Development Matters in Canada
         </HeadingTwo>
@@ -91,7 +91,7 @@ const WhyChoose = () => {
           </div>
         </div>
       </div>
-    </DoubleCurves>
+    </Container>
   );
 };
 

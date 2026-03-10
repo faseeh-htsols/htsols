@@ -1,41 +1,34 @@
 import Button from "@/components/ui/Button";
-import Container from "@/components/ui/container";
+import DoubleCurves from "@/components/ui/double-curves";
 import Image from "next/image";
 
 const CallBackFromUs = () => {
   return (
-    <div className="bg-black relative py-32  -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
-      <div
-        className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
-           bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
-          "
-      ></div>
-      <Container>
-        <div className="border border-[#5C5C5C] rounded-lg px-4 flex lg:flex-row flex-col gap-0 lg:gap-4 relative text-white mb-20">
-          <div className="lg:w-[56%] py-8 flex flex-col gap-4">
-            <h2 className="font-primary uppercase text-2xl">
-              Ready to Build a Website That Supports Growth?
-            </h2>
-            <p className="text-xl">
-              If you want a website that looks modern, loads fast, supports SEO,
-              and helps your marketing work harder, HTSOL Inc. can help.
-            </p>
-            <div className="flex">
-              <Button href="/">Book a Free Consultation </Button>
-            </div>
-          </div>
-          <div className="lg:w-[37%] lg:absolute lg:-top-10 lg:right-0">
-            <Image
-              src={"/call-back-from-us.png"}
-              alt="Call back from us"
-              width={700}
-              height={700}
-              className="w-full h-[300px] lg:h-[380px] object-contain"
-            />
+    <DoubleCurves down>
+      <div className="border border-[#5C5C5C] rounded-lg px-4 flex lg:flex-row flex-col gap-0 lg:gap-4 relative text-white mb-20">
+        <div className="lg:w-[56%] py-8 flex flex-col gap-4">
+          <h2 className="font-primary uppercase text-2xl">
+            Ready to Build a Website That Supports Growth?
+          </h2>
+          <p className="text-xl">
+            If you want a website that looks modern, loads fast, supports SEO,
+            and helps your marketing work harder, HTSOL Inc. can help.
+          </p>
+          <div className="flex">
+            <Button href="/">Book a Free Consultation </Button>
           </div>
         </div>
-      </Container>
-    </div>
+        <div className="lg:w-[37%] lg:absolute lg:-top-10 lg:right-0">
+          <Image
+            src={"/call-back-from-us.png"}
+            alt="Call back from us"
+            width={700}
+            height={700}
+            className="w-full h-[300px] lg:h-[380px] object-contain"
+          />
+        </div>
+      </div>
+    </DoubleCurves>
   );
 };
 

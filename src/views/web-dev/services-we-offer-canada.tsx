@@ -7,7 +7,7 @@ import { WEB_DEV_SERVICES_WE_OFFER } from "@/constants";
 
 const ServicesWeOfferCanada = () => {
   return (
-    <DoubleCurves>
+    <DoubleCurves up>
       <HeadingTwo className="text-center mb-8">
         Web Development Services We Offer in Canada
       </HeadingTwo>
@@ -15,8 +15,7 @@ const ServicesWeOfferCanada = () => {
         {WEB_DEV_SERVICES_WE_OFFER.map((item, index) => (
           <div
             key={item.heading}
-            className="relative group lg:w-[calc(33.33%-27px)] bg-tertiary rounded-lg px-4 py-6 hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]"
-          >
+            className="relative group lg:w-[calc(33.33%-27px)] bg-tertiary rounded-lg px-4 py-6 hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]">
             <div className="p-3 absolute right-0 top-0 text-xl rounded-bl-2xl font-primary bg-black">
               0 {index + 1}
             </div>

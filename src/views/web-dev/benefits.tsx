@@ -6,7 +6,7 @@ import { WEB_DEV_BENEFITS } from "@/constants";
 
 const Benefits = () => {
   return (
-    <DoubleCurves>
+    <DoubleCurves up>
       <HeadingTwo className="text-center mb-8">
         How Website Development Benefits Your Business
       </HeadingTwo>
@@ -26,8 +26,7 @@ const Benefits = () => {
             </div>{" "}
             <h3
               dangerouslySetInnerHTML={{ __html: benefit.name }}
-              className="text-2xl uppercase text-center font-primary"
-            ></h3>
+              className="text-2xl uppercase text-center font-primary"></h3>
             <p className="text-center w-[80%] mx-auto">{benefit.para}</p>
           </div>
         ))}

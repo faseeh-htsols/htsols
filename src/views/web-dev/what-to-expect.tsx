@@ -57,8 +57,7 @@ const ChevronDown = ({ className = "" }: { className?: string }) => (
     height="18"
     viewBox="0 0 24 24"
     fill="none"
-    aria-hidden="true"
-  >
+    aria-hidden="true">
     <path
       d="M6 9l6 6 6-6"
       stroke="currentColor"
@@ -76,8 +75,7 @@ const CloseIcon = ({ className = "" }: { className?: string }) => (
     height="18"
     viewBox="0 0 24 24"
     fill="none"
-    aria-hidden="true"
-  >
+    aria-hidden="true">
     <path
       d="M18 6L6 18"
       stroke="currentColor"
@@ -98,7 +96,7 @@ const WhatToExpect = () => {
   const baseId = useId();
 
   return (
-    <DoubleCurves className="bg-tertiary">
+    <DoubleCurves up className="bg-tertiary">
       <div className="relative">
         {/* Header */}
         <div className="text-center">
@@ -124,21 +122,18 @@ const WhatToExpect = () => {
             return (
               <div
                 key={step.number}
-                className={`border-b  ${isOpen ? "border-white" : "border-white/70"}`}
-              >
+                className={`border-b  ${isOpen ? "border-white" : "border-white/70"}`}>
                 <button
                   id={buttonId}
                   type="button"
                   aria-expanded={isOpen}
                   aria-controls={panelId}
                   onClick={() => setActiveIndex(idx)}
-                  className="w-full text-left py-5 cursor-pointer"
-                >
+                  className="w-full text-left py-5 cursor-pointer">
                   <div className="grid grid-cols-[52px_1fr_24px] items-center gap-4">
                     {/* number */}
                     <div
-                      className={`font-primary text-xl uppercase  ${isOpen ? "text-white" : "text-white/70"}`}
-                    >
+                      className={`font-primary text-xl uppercase  ${isOpen ? "text-white" : "text-white/70"}`}>
                       {step.number}
                     </div>
 
@@ -146,8 +141,7 @@ const WhatToExpect = () => {
                     <div
                       className={`uppercase font-primary text-xl  ${
                         isOpen ? "text-white" : "text-white/75"
-                      }`}
-                    >
+                      }`}>
                       {step.title}
                     </div>
 
@@ -168,8 +162,7 @@ const WhatToExpect = () => {
                       isOpen
                         ? "mt-5 max-h-40 opacity-100"
                         : "mt-0 max-h-0 opacity-0"
-                    } overflow-hidden`}
-                  >
+                    } overflow-hidden`}>
                     <div />
                     <p className="text-white pr-4">{step.description}</p>
                     <div />

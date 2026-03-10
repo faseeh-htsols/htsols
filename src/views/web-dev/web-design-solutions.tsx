@@ -56,8 +56,7 @@ const ArrowRight = ({ className = "" }: { className?: string }) => (
     height="18"
     viewBox="0 0 24 24"
     fill="none"
-    aria-hidden="true"
-  >
+    aria-hidden="true">
     <path
       d="M10 7l5 5-5 5"
       stroke="currentColor"
@@ -114,30 +113,26 @@ const WebDesignSolutions = () => {
                       isActive
                         ? "border-[#2C2C2C] bg-black"
                         : "border-white/10 bg-black hover:bg-white/[0.05]"
-                    }`}
-                  >
+                    }`}>
                     <div className="flex items-center justify-between gap-4">
                       <span
                         className={`uppercase text-lg font-primary  ${
                           isActive ? "text-white" : "text-white/60"
-                        }`}
-                      >
+                        }`}>
                         {item.title}
                       </span>
 
                       <span
                         className={`shrink-0 ${
                           isActive ? "text-[#0B6F7A]" : "text-white/45"
-                        }`}
-                      >
+                        }`}>
                         <svg
                           width="18"
                           height="32"
                           viewBox="0 0 18 32"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
-                          className="w-[24px] h-[18px]"
-                        >
+                          className="w-[24px] h-[18px]">
                           <path
                             d="M17.5406 14.7836C18.1531 15.4431 18.1531 16.5422 17.5406 17.2017L4.33837 31.4907C3.65784 32.1502 2.63705 32.1502 2.02457 31.4907L0.459356 29.8054C-0.15312 29.1459 -0.15312 28.0467 0.459356 27.3139L10.9395 16.0293L0.459356 4.67138C-0.15312 3.93861 -0.15312 2.83946 0.459356 2.17997L2.02457 0.494598C2.63705 -0.164894 3.65784 -0.164894 4.33837 0.494598L17.5406 14.7836Z"
                             fill={isActive ? "#075B65" : "white"}

@@ -6,7 +6,7 @@ import { BLOGS } from "@/constants/blog";
 
 function Blog() {
   return (
-    <div className="pb-20 bg-black">
+    <div className="pb-10 bg-tertiary">
       <Container>
         {BLOGS.length > 0 && (
           <div className="relative overflow-hidden rounded-2xl h-auto md:h-[500px] mb-10">
