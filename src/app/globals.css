@@ -880,3 +880,20 @@ body {
       rgba(0, 131, 138, 0.4) 281.25deg,
       rgba(0, 131, 138, 0.2) 360deg);
 }
+
+
+
+.seo-topics-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+  align-items: center;
+}
+
+.clear-strategy-swiper,
+.clear-strategy-swiper .swiper-wrapper,
+.clear-strategy-swiper .swiper-slide {
+  width: 100%;
+}
+
+.clear-strategy-swiper {
+  overflow: hidden;
+}
