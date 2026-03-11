@@ -1,5 +1,6 @@
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/container";
+import DoubleCurves from "@/components/ui/double-curves";
 import HeadingTwo from "@/components/ui/heading-two";
 import LottiePlayer from "@/components/ui/lottie-player";
 import { DELIVERING_SOLUTIONS } from "@/constants";
@@ -8,73 +9,74 @@ import React from "react";
 
 const DeliveringSolutions = () => {
   return (
-    <div className="text-white relative py-32 bg-tertiary -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
-      <div
+    <DoubleCurves up className=" -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+      <div className="text-white relative py-32 bg-tertiary">
+        {/* <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
           "
-      ></div>
-      <Container>
-        <div className="flex flex-col gap-8 mb-8">
-          <p className="uppercase text-center bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent font-primary font-semibold text-[22px]">
-            Who We Are
-          </p>
-          <HeadingTwo className="text-center" span="Partner">
-            Your Trusted Canadian Digital <br /> Marketing
-          </HeadingTwo>
-          <div className="max-w-[1125px] mx-auto flex flex-col gap-8">
-            <p className="text-center">
-              HTSOL Inc. is a Canada-based digital marketing agency that helps
-              businesses build, strengthen, and grow their online presence
-              through strategy-led marketing, high-performing websites, and
-              measurable campaigns.
+      ></div> */}
+        <Container>
+          <div className="flex flex-col gap-8 mb-8">
+            <p className="uppercase text-center bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent font-primary font-semibold text-[22px]">
+              Who We Are
             </p>
-            <p className="text-center">
-              If you want to attract the right audience, build trust online, and
-              turn traffic into revenue, we can help you get there with a clear
-              plan and steady progress. We bring creative, technical, and
-              data-driven work together, so your marketing is easier to manage
-              and easier to measure.
-            </p>
+            <HeadingTwo className="text-center" span="Partner">
+              Your Trusted Canadian Digital <br /> Marketing
+            </HeadingTwo>
+            <div className="max-w-[1125px] mx-auto flex flex-col gap-8">
+              <p className="text-center">
+                HTSOL Inc. is a Canada-based digital marketing agency that helps
+                businesses build, strengthen, and grow their online presence
+                through strategy-led marketing, high-performing websites, and
+                measurable campaigns.
+              </p>
+              <p className="text-center">
+                If you want to attract the right audience, build trust online, and
+                turn traffic into revenue, we can help you get there with a clear
+                plan and steady progress. We bring creative, technical, and
+                data-driven work together, so your marketing is easier to manage
+                and easier to measure.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="grid gap-6 lg:gap-0 lg:grid-cols-3 mb-8">
-          {DELIVERING_SOLUTIONS.map((solution, index) => (
-            <div key={solution.name} className="relative py-6 lg:py-0 lg:px-3">
-              <div
-                className={`absolute lg:top-0 bottom-0 right-0 lg:h-full w-full h-1 lg:w-1 ${
-                  DELIVERING_SOLUTIONS.length - 1 !== index ? "bg-white" : ""
-                }`}
-              ></div>
-              <div className="max-w-[310px] mx-auto flex flex-col gap-5">
-                <div className="flex justify-center">
-                  {/* <Image
+          <div className="grid gap-6 lg:gap-0 lg:grid-cols-3 mb-8">
+            {DELIVERING_SOLUTIONS.map((solution, index) => (
+              <div key={solution.name} className="relative py-6 lg:py-0 lg:px-3">
+                <div
+                  className={`absolute lg:top-0 bottom-0 right-0 lg:h-full w-full h-1 lg:w-1 ${DELIVERING_SOLUTIONS.length - 1 !== index ? "bg-white" : ""
+                    }`}
+                ></div>
+                <div className="max-w-[310px] mx-auto flex flex-col gap-5">
+                  <div className="flex justify-center">
+                    {/* <Image
                     src={solution.image}
                     alt={solution.name}
                     width={70}
                     height={70}
                     className="w-[70px] h-[70px]"
                   /> */}
-                  <LottiePlayer
-                    className="w-[70px] h-[70px]"
-                    src={solution.image}
-                    autoplay
-                    loop
-                  />
+                    <LottiePlayer
+                      className="w-[70px] h-[70px]"
+                      src={solution.image}
+                      autoplay
+                      loop
+                    />
+                  </div>
+                  <h3 className="text-2xl text-center font-primary">
+                    {solution.name}
+                  </h3>
+                  <p className="text-center">{solution.para}</p>
                 </div>
-                <h3 className="text-2xl text-center font-primary">
-                  {solution.name}
-                </h3>
-                <p className="text-center">{solution.para}</p>
               </div>
-            </div>
-          ))}
-        </div>
-        <div className="flex justify-center">
-          <Button href="/">Get a Free Proposal</Button>
-        </div>
-      </Container>
-    </div>
+            ))}
+          </div>
+          <div className="flex justify-center">
+            <Button href="/">Get a Free Proposal</Button>
+          </div>
+        </Container>
+      </div>
+    </DoubleCurves>
   );
 };
 

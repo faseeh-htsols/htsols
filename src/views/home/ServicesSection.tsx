@@ -7,6 +7,7 @@ import Container from "@/components/ui/container";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import DoubleCurves from "@/components/ui/double-curves";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -94,99 +95,101 @@ export const ServicesSection: React.FC = () => {
     { scope: containerRef },
   );
   return (
-    <section
-      ref={containerRef}
-      className="relative bg-tertiary py-20  -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]"
-    >
-      <div
+    <DoubleCurves up className=" -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+      <section
+        ref={containerRef}
+        className="bg-tertiary relative py-20"
+      >
+        {/* <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[2.5%] -rotate-3 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] animate-pulse
           "
-      ></div>
+      ></div> */}
 
-      {/* Top accent line */}
-      {/* <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-primary via-primary to-transparent" /> */}
+        {/* Top accent line */}
+        {/* <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-primary via-primary to-transparent" /> */}
 
-      <Container>
-        {/* Section Heading */}
-        <div className="text-center mb-16">
-          <HeadingTwo span="OFFER" ref={headingRef}>
-            {" "}
-            WHAT WE
-          </HeadingTwo>
-        </div>
+        <Container>
+          {/* Section Heading */}
+          <div className="text-center mb-16">
+            <HeadingTwo span="OFFER" ref={headingRef}>
+              {" "}
+              WHAT WE
+            </HeadingTwo>
+          </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <div
-              ref={(el) => {
-                methodsRef.current[index] = el;
-              }}
-              key={index}
-              className="group relative bg-black py-7 pl-7 group hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-300"
-            >
-              {/* Number Label */}
-              <div className=" text-[20px] mb-3">
-                <span className="text-secondary font-primary font-medium">
-                  0{index + 1}
-                </span>
-              </div>
-
-              {/* Image */}
-              <div className="pr-7 mb-4">
-                <div className="relative w-full h-[250px] rounded-2xl overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-[#111] via-transparent to-transparent" />
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <div
+                ref={(el) => {
+                  methodsRef.current[index] = el;
+                }}
+                key={index}
+                className="group relative bg-black py-7 pl-7 group hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-300"
+              >
+                {/* Number Label */}
+                <div className=" text-[20px] mb-3">
+                  <span className="text-secondary font-primary font-medium">
+                    0{index + 1}
+                  </span>
                 </div>
-              </div>
 
-              {/* Content */}
-              <div className="pr-7">
-                <h3 className="text-white mb-4 font-primary font-bold text-sm md:text-base tracking-wide">
-                  {service.title}
-                </h3>
-                <div className="flex gap-3 items-center justify-between">
-                  <p className="text-white/50 text-sm leading-relaxed w-[60%]">
-                    {service.description}
-                  </p>
+                {/* Image */}
+                <div className="pr-7 mb-4">
+                  <div className="relative w-full h-[250px] rounded-2xl overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-[#111] via-transparent to-transparent" />
+                  </div>
+                </div>
 
-                  {/* Arrow Icon */}
-                  <div className="pt-2">
-                    <button className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60  group-hover:border-white group-hover:text-primary transition-all duration-300 group-hover:bg-white">
-                      <svg
-                        width="25"
-                        height="25"
-                        viewBox="0 0 25 25"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="fill-secondary transition-all duration-150 group-hover:fill-[#328A99]"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M5.32725 18.4846C4.90706 18.027 4.93743 17.3153 5.3951 16.8951L17.5493 5.736C18.007 5.31581 18.7187 5.34619 19.1389 5.80386C19.5591 6.26152 19.5287 6.97321 19.071 7.3934L6.91679 18.5525C6.45912 18.9727 5.74744 18.9423 5.32725 18.4846Z"
-                        />
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M7.64913 6.10673C7.67563 5.48597 8.20036 5.0042 8.82112 5.0307L18.3584 5.43778C18.9791 5.46433 19.4608 5.98906 19.4344 6.60978L19.0273 16.147C19.0007 16.7678 18.476 17.2495 17.8553 17.2231C17.2346 17.1965 16.7528 16.6718 16.7793 16.0511L17.1384 7.63779L8.72512 7.27869C8.10441 7.25215 7.62268 6.72745 7.64913 6.10673Z"
-                        />
-                      </svg>
-                    </button>
+                {/* Content */}
+                <div className="pr-7">
+                  <h3 className="text-white mb-4 font-primary font-bold text-sm md:text-base tracking-wide">
+                    {service.title}
+                  </h3>
+                  <div className="flex gap-3 items-center justify-between">
+                    <p className="text-white/50 text-sm leading-relaxed w-[60%]">
+                      {service.description}
+                    </p>
+
+                    {/* Arrow Icon */}
+                    <div className="pt-2">
+                      <button className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60  group-hover:border-white group-hover:text-primary transition-all duration-300 group-hover:bg-white">
+                        <svg
+                          width="25"
+                          height="25"
+                          viewBox="0 0 25 25"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="fill-secondary transition-all duration-150 group-hover:fill-[#328A99]"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M5.32725 18.4846C4.90706 18.027 4.93743 17.3153 5.3951 16.8951L17.5493 5.736C18.007 5.31581 18.7187 5.34619 19.1389 5.80386C19.5591 6.26152 19.5287 6.97321 19.071 7.3934L6.91679 18.5525C6.45912 18.9727 5.74744 18.9423 5.32725 18.4846Z"
+                          />
+                          <path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M7.64913 6.10673C7.67563 5.48597 8.20036 5.0042 8.82112 5.0307L18.3584 5.43778C18.9791 5.46433 19.4608 5.98906 19.4344 6.60978L19.0273 16.147C19.0007 16.7678 18.476 17.2495 17.8553 17.2231C17.2346 17.1965 16.7528 16.6718 16.7793 16.0511L17.1384 7.63779L8.72512 7.27869C8.10441 7.25215 7.62268 6.72745 7.64913 6.10673Z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </Container>
-    </section>
+            ))}
+          </div>
+        </Container>
+      </section>
+    </DoubleCurves>
   );
 };
 

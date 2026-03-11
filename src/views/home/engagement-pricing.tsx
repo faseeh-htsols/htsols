@@ -8,6 +8,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import DoubleCurves from "@/components/ui/double-curves";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -86,96 +87,98 @@ const EngagementPricing = () => {
   );
 
   return (
-    <section
-      ref={sectionRef}
-      className="bg-tertiary  relative py-24   -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]"
-    >
-      {/* Top accent line */}
-      <div
+    <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+      <section
+        ref={sectionRef}
+        className="bg-tertiary relative py-24"
+      >
+        {/* Top accent line */}
+        {/* <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] animate-pulse
           "
-      ></div>
-      <Container>
-        {/* 2-col grid (tab panel on the right, like your screenshot) */}
-        <div className="grid grid-cols-1 gap-9 lg:grid-cols-2">
-          {/* Left column (leave empty or add your heading/content) */}
-          <div ref={leftRef}>
-            <div>
-              <Image
-                src={"/engagement-pricing1.png"}
-                alt="image"
-                width={400}
-                height={400}
-                className="w-[65%] h-[300px]"
-              />
-            </div>
-            <div className="-mt-24">
-              <Image
-                src={"/engagement-pricing2.png"}
-                alt="image"
-                width={400}
-                height={400}
-                className="w-[65%] ms-auto h-[300px]"
-              />
-            </div>
-          </div>
-
-          {/* Right column: the tab card (2 rows: tabs row + content row) */}
-          <div className="" ref={rightRef}>
-            <div className="grid gap-5">
-              {/* Row 1: Tabs */}
-              <div className="flex md:flex-row flex-col w-full rounded-lg border border-white/20 p-1">
-                {TABS.map((t, idx) => {
-                  const isActive = idx === active;
-                  return (
-                    <button
-                      key={t.name}
-                      type="button"
-                      onClick={() => setActive(idx)}
-                      aria-selected={isActive}
-                      className={[
-                        "flex-1 cursor-pointer font-primary rounded-md px-4 py-4 font-semibold  transition",
-                        isActive
-                          ? "bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] text-white"
-                          : "text-white/80 hover:text-white",
-                      ].join(" ")}
-                    >
-                      {t.name.toUpperCase()}
-                    </button>
-                  );
-                })}
-              </div>
-
-              {/* Row 2: Content */}
+      ></div> */}
+        <Container>
+          {/* 2-col grid (tab panel on the right, like your screenshot) */}
+          <div className="grid grid-cols-1 gap-9 lg:grid-cols-2">
+            {/* Left column (leave empty or add your heading/content) */}
+            <div ref={leftRef}>
               <div>
-                <p className="text-white">{tab.header}</p>
+                <Image
+                  src={"/engagement-pricing1.png"}
+                  alt="image"
+                  width={400}
+                  height={400}
+                  className="w-[65%] h-[300px]"
+                />
+              </div>
+              <div className="-mt-24">
+                <Image
+                  src={"/engagement-pricing2.png"}
+                  alt="image"
+                  width={400}
+                  height={400}
+                  className="w-[65%] ms-auto h-[300px]"
+                />
+              </div>
+            </div>
 
-                <p className="mt-4 text-sm font-semibold text-white">
-                  {tab.para}
-                </p>
-
-                <div className="mt-3 ">
-                  <ul className="space-y-3 list-disc ps-4 marker:text-[#00838A]">
-                    {tab.lists.map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <span className="text-[#00A1A5]">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+            {/* Right column: the tab card (2 rows: tabs row + content row) */}
+            <div className="" ref={rightRef}>
+              <div className="grid gap-5">
+                {/* Row 1: Tabs */}
+                <div className="flex md:flex-row flex-col w-full rounded-lg border border-white/20 p-1">
+                  {TABS.map((t, idx) => {
+                    const isActive = idx === active;
+                    return (
+                      <button
+                        key={t.name}
+                        type="button"
+                        onClick={() => setActive(idx)}
+                        aria-selected={isActive}
+                        className={[
+                          "flex-1 cursor-pointer font-primary rounded-md px-4 py-4 font-semibold  transition",
+                          isActive
+                            ? "bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] text-white"
+                            : "text-white/80 hover:text-white",
+                        ].join(" ")}
+                      >
+                        {t.name.toUpperCase()}
+                      </button>
+                    );
+                  })}
                 </div>
 
-                <p className="mt-4 text-white">{tab.botPara}</p>
+                {/* Row 2: Content */}
+                <div>
+                  <p className="text-white">{tab.header}</p>
 
-                <div className="mt-6 flex">
-                  <Button href="/">Get Started</Button>
+                  <p className="mt-4 text-sm font-semibold text-white">
+                    {tab.para}
+                  </p>
+
+                  <div className="mt-3 ">
+                    <ul className="space-y-3 list-disc ps-4 marker:text-[#00838A]">
+                      {tab.lists.map((item) => (
+                        <li key={item} className="flex items-start gap-3">
+                          <span className="text-[#00A1A5]">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <p className="mt-4 text-white">{tab.botPara}</p>
+
+                  <div className="mt-6 flex">
+                    <Button href="/">Get Started</Button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </Container>
-    </section>
+        </Container>
+      </section>
+    </DoubleCurves>
   );
 };
 
