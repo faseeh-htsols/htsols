@@ -1,113 +1,452 @@
-export const SERVICES_SERVICES_OFFERED_ACCORDION = [
+interface ListItem {
+  title?: string;
+  para: string;
+}
+
+interface AccordionItemType {
+  title: string;
+  icon: string;
+  images?: { src: string; alt: string }[];
+  subHeading?: string;
+  para: string;
+  subHeading2?: string;
+  botPara?: string;
+  lists?: ListItem[];
+  lists2?: ListItem[];
+}
+
+export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
   {
-    title: "Website Development",
-    icon: "/services/website-development.json",
-    images: [
+    title: "CGI Services",
+    icon: "/services/tab-icon.svg",
+    subHeading: "Unlock the Power of High-Quality Visuals for Your Business",
+    para: "At HTSOL Inc., we specialize in <b>CGI (Computer-Generated Imagery)</b> that transforms ideas into visually captivating realities. Whether you're in need of realistic 3D visualizations, animated models, or immersive environments, our CGI services are tailored to elevate your brand and make a lasting impact on your audience.",
+    subHeading2: "What We Offer:",
+    lists: [
       {
-        src: "/services/web-one.png",
-        alt: "Website Development Image 1",
+        title: `3D Modelling & Animation`,
+        para: `Bring your concepts to life with high-quality 3D models and animations that communicate your ideas clearly.`,
       },
       {
-        src: "/services/web-two.png",
-        alt: "Website Development Image 2",
+        title: `Product Visualization`,
+        para: `Showcase your products with hyper-realistic CGI, allowing your customers to explore every detail before purchase.`,
+      },
+      {
+        title: `Architectural Rendering`,
+        para: `Create photorealistic images of your architectural projects, helping stakeholders visualize the final result even before construction begins.`,
+      },
+      {
+        title: `Virtual Reality (VR) Experiences`,
+        para: `Engage your audience with interactive VR environments that offer unique, hands-on experiences.`,
+      },
+      {
+        title: `Motion Graphics`,
+        para: `Enhance your videos and presentations with stunning motion graphics that capture attention and deliver your message effectively.`,
       },
     ],
-    para: "HT-Solutions provides you Website Designing, Web Development, SEO Services, Graphic Designing, Mobile Application Development Video Production, Voice Over.n.",
-  },
-  {
-    title: "SEO services",
-    icon: "/services/seo-services.json",
-    images: [
-      {
-        src: "/services/web-one.png",
-        alt: "Website Development Image 1",
-      },
-      {
-        src: "/services/web-two.png",
-        alt: "Website Development Image 2",
-      },
-    ],
-    para: "HT-Solutions provides you Website Designing, Web Development, SEO Services, Graphic Designing, Mobile Application Development Video Production, Voice Over.n.",
-  },
-  {
-    title: "CGI services",
-    icon: "/services/cgi-services.json",
-    images: [
-      {
-        src: "/services/web-one.png",
-        alt: "Website Development Image 1",
-      },
-      {
-        src: "/services/web-two.png",
-        alt: "Website Development Image 2",
-      },
-    ],
-    para: "HT-Solutions provides you Website Designing, Web Development, SEO Services, Graphic Designing, Mobile Application Development Video Production, Voice Over.n.",
   },
   {
     title: "Staff Augmentation",
-    icon: "/services/staff-augmentation.json",
-    images: [
+    icon: "/services/tab-icon.svg",
+    subHeading: "Get the Right Talent to Fuel Your Success",
+    para: "Finding the right team for your project can be challenging, but HTSOL Inc. makes it easy with <b>Staff Augmentation</b> services that provide you with access to skilled professionals when and where you need them. Whether you're looking to expand your team temporarily or require specialized expertise, we offer customized solutions to meet your unique business needs.",
+    subHeading2: "Our Staff Augmentation Services Include:",
+    lists: [
       {
-        src: "/services/web-one.png",
-        alt: "Website Development Image 1",
+        title: `Flexible Workforce Solutions`,
+        para: `Scale your team up or down based on project needs, timelines, and budget.`,
       },
       {
-        src: "/services/web-two.png",
-        alt: "Website Development Image 2",
+        title: `Highly Skilled Professionals`,
+        para: `Access top talent across various domains, including software development, digital marketing, design, and project management.`,
+      },
+      {
+        title: `Seamless Integration`,
+        para: `Our professionals integrate smoothly into your existing teams, working in alignment with your company culture and processes.`,
+      },
+      {
+        title: `Expertise Across Industries`,
+        para: `From healthcare to eCommerce, our experts bring valuable industry insights that can drive growth and innovation.`,
       },
     ],
-    para: "HT-Solutions provides you Website Designing, Web Development, SEO Services, Graphic Designing, Mobile Application Development Video Production, Voice Over.n.",
   },
   {
     title: "Digital Transformation",
-    icon: "/services/digital-transformation.json",
-    images: [
+    icon: "/services/tab-icon.svg",
+    subHeading: "Embrace the Future with Innovative Solutions",
+    para: "In today’s fast-paced digital world, staying ahead requires more than just keeping up—it requires <b>Digital Transformation.<b/> At HTSOL Inc., we help businesses evolve by adopting digital technologies that streamline operations, enhance customer experiences, and drive growth. Our team of experts will guide you through every step of the transformation journey, ensuring your business is future-ready.",
+    subHeading2: "Our Digital Transformation Services Include:",
+    lists: [
       {
-        src: "/services/web-one.png",
-        alt: "Website Development Image 1",
+        title: `Business Process Automation`,
+        para: `Streamline your workflows and reduce operational costs by automating manual tasks and processes.`,
       },
       {
-        src: "/services/web-two.png",
-        alt: "Website Development Image 2",
+        title: `Cloud Solutions`,
+        para: `Transition your business to the cloud for improved accessibility, collaboration, and scalability.`,
+      },
+      {
+        title: `Data Analytics`,
+        para: `Leverage data to make smarter, more informed decisions that drive performance and enhance customer experiences.`,
+      },
+      {
+        title: `Custom Software Development`,
+        para: `Build tailored software solutions that address your unique business needs and improve efficiency.`,
+      },
+      {
+        title: `Mobile App Development`,
+        para: `Stay connected with your customers through innovative mobile apps designed to enhance user experience and engagement.`,
       },
     ],
-    para: "HT-Solutions provides you Website Designing, Web Development, SEO Services, Graphic Designing, Mobile Application Development Video Production, Voice Over.n.",
   },
   {
-    title: "Digital Marketing",
-    icons: `<svg width="65" height="48" viewBox="0 0 65 48"  xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M60.3882 47.3376H12.5235C9.97225 47.3376 7.91602 45.2813 7.91602 42.7301V38.9222C7.91602 38.4653 8.25872 38.1606 8.67759 38.1606H25.6225V42.8062C25.6225 43.2251 25.9652 43.5678 26.3841 43.5678H46.5276C46.9465 43.5678 47.2892 43.2251 47.2892 42.8062V38.1606H64.2341C64.653 38.1606 64.9957 38.4653 64.9957 38.9222V42.7301C64.9957 45.2813 62.9394 47.3376 60.3882 47.3376ZM27.1457 38.1606H45.766V42.0447H27.1457V38.1606Z" />
-<path fill-rule="evenodd" clip-rule="evenodd" d="M61.986 39.6837H58.8254C59.2443 39.6837 59.587 39.341 59.587 38.9221V13.3333C59.587 12.5718 58.9397 11.9625 58.1781 11.9625H26.7634L24.5929 8.76392H58.1781C60.6913 8.76392 62.7475 10.8202 62.7475 13.3333V38.9221C62.7475 39.341 62.4048 39.6837 61.986 39.6837ZM13.3216 33.0199V38.9221C13.3216 39.341 13.6643 39.6837 14.0832 39.6837H10.8846C10.4658 39.6837 10.123 39.341 10.123 38.9221V30.9637L10.8846 32.068C11.2654 32.563 11.7604 32.9438 12.3697 33.0199C12.5981 33.058 12.5601 33.058 12.7885 33.058C12.9789 33.058 13.1312 33.058 13.3216 33.0199Z" />
-<path fill-rule="evenodd" clip-rule="evenodd" d="M55.8934 36.6755H25.7733C25.3544 36.6755 25.0117 36.3328 25.0117 35.9139C25.0117 35.4951 25.3544 35.1523 25.7733 35.1523H55.8934C56.3122 35.1523 56.655 35.4951 56.655 35.9139C56.655 36.3328 56.3122 36.6755 55.8934 36.6755Z" />
-<path fill-rule="evenodd" clip-rule="evenodd" d="M8.37305 12.7241L15.646 0.386659C15.7984 0.158188 16.0268 0.00587404 16.2934 0.00587404C16.5599 -0.0322045 16.7884 0.12011 16.9407 0.310502L28.2881 16.8366C28.4404 17.027 28.4785 17.3316 28.3643 17.5601C28.25 17.7885 28.0596 17.9789 27.7931 18.017L13.666 20.3779C13.5898 20.1113 13.4756 19.8829 13.3233 19.6544L8.94422 13.2953C8.79191 13.0668 8.60152 12.8764 8.37305 12.7241Z" />
-<path fill-rule="evenodd" clip-rule="evenodd" d="M6.12656 25.366C5.89809 25.366 5.66962 25.2518 5.51731 25.0233L1.13828 18.6642C1.02405 18.5119 0.985967 18.2834 1.02405 18.0931C1.06212 17.9027 1.17636 17.7123 1.32867 17.598L6.65966 13.9806C6.81198 13.8663 7.00237 13.7902 7.19276 13.8283C7.42123 13.8663 7.57355 13.9806 7.68778 14.171L12.0668 20.492C12.181 20.6824 12.2191 20.8728 12.181 21.0632C12.143 21.2917 12.0287 21.444 11.8764 21.5582L6.58351 25.2137C6.43119 25.2899 6.27888 25.366 6.12656 25.366Z" />
-<path fill-rule="evenodd" clip-rule="evenodd" d="M12.7892 31.5348C12.7511 31.5348 12.6749 31.5348 12.6369 31.5348C12.4465 31.4967 12.2561 31.3825 12.1418 31.2302L8.41016 25.785L11.7611 23.5002L15.4928 28.9455C15.7212 29.2882 15.607 29.7451 15.2643 29.9736L13.208 31.4206C13.0938 31.4967 12.9415 31.5348 12.7892 31.5348Z" />
-<path fill-rule="evenodd" clip-rule="evenodd" d="M2.96508 25.2139C2.73661 25.2139 2.47006 25.0997 2.31774 24.8712L0.14727 21.6726C-0.11928 21.3299 -0.00504416 20.873 0.337662 20.6064L0.528055 20.4922L3.61241 24.9474L3.38394 25.0997C3.26971 25.1758 3.11739 25.2139 2.96508 25.2139Z" />
-<path fill-rule="evenodd" clip-rule="evenodd" d="M26.0021 22.4721H17.4725C17.0536 22.4721 16.7109 22.1294 16.7109 21.7105C16.7109 21.2917 17.0536 20.949 17.4725 20.949H26.0021C26.421 20.949 26.7637 21.2917 26.7637 21.7105C26.7637 22.1294 26.421 22.4721 26.0021 22.4721Z" />
-<path fill-rule="evenodd" clip-rule="evenodd" d="M26.0021 25.747H17.4725C17.0536 25.747 16.7109 25.4043 16.7109 24.9854C16.7109 24.5666 17.0536 24.2239 17.4725 24.2239H26.0021C26.421 24.2239 26.7637 24.5666 26.7637 24.9854C26.7637 25.4043 26.421 25.747 26.0021 25.747Z" />
-<path fill-rule="evenodd" clip-rule="evenodd" d="M26.0021 29.0598H17.4725C17.0536 29.0598 16.7109 28.7171 16.7109 28.2982C16.7109 27.8793 17.0536 27.5366 17.4725 27.5366H26.0021C26.421 27.5366 26.7637 27.8793 26.7637 28.2982C26.7637 28.7171 26.421 29.0598 26.0021 29.0598Z" />
-<path fill-rule="evenodd" clip-rule="evenodd" d="M31.4856 36.6755H28.5916C28.1728 36.6755 27.8301 36.3328 27.8301 35.9139V27.232C27.8301 26.8132 28.1728 26.4705 28.5916 26.4705H31.4856C31.9045 26.4705 32.2472 26.8132 32.2472 27.232V35.9139C32.2472 36.3328 31.9045 36.6755 31.4856 36.6755Z" />
-<path fill-rule="evenodd" clip-rule="evenodd" d="M38.6829 36.6754H35.7889C35.3701 36.6754 35.0273 36.3327 35.0273 35.9138V21.7867C35.0273 21.3679 35.3701 21.0251 35.7889 21.0251H38.6829C39.1017 21.0251 39.4444 21.3679 39.4444 21.7867V35.9138C39.4444 36.3327 39.1017 36.6754 38.6829 36.6754Z" />
-<path fill-rule="evenodd" clip-rule="evenodd" d="M45.8801 36.6755H42.9862C42.5673 36.6755 42.2246 36.3328 42.2246 35.9139V19.6163C42.2246 19.1974 42.5673 18.8547 42.9862 18.8547H45.8801C46.299 18.8547 46.6417 19.1974 46.6417 19.6163V35.9139C46.6417 36.3328 46.299 36.6755 45.8801 36.6755Z" />
-<path fill-rule="evenodd" clip-rule="evenodd" d="M53.0755 36.6754H50.1815C49.7626 36.6754 49.4199 36.3327 49.4199 35.9138V18.0169C49.4199 17.56 49.7626 17.2554 50.1815 17.2554H53.0755C53.4943 17.2554 53.837 17.56 53.837 18.0169V35.9138C53.837 36.3327 53.4943 36.6754 53.0755 36.6754Z" />
-</svg>
-
-`,
-    icon: "/services/digital-marketing.json",
-    images: [
+    title: "Digital Marketing Strategy Development",
+    icon: "/services/tab-icon.svg",
+    para: "A well-crafted plan makes everything else easier. We begin with a thorough audit of your digital presence and competitive landscape. Then, we build a channel-specific strategy designed to drive lead generation, engagement, and conversions.",
+    subHeading2: "What to expect:",
+    lists: [
       {
-        src: "/services/web-one.png",
-        alt: "Website Development Image 1",
+        para: `Clear insights into what's working and what needs improvement`,
       },
       {
-        src: "/services/web-two.png",
-        alt: "Website Development Image 2",
+        para: `Priorities aligned with your business goals and timeline`,
+      },
+      {
+        para: `A strategy focused on long-term growth, not just quick wins`,
       },
     ],
-    para: "HT-Solutions provides you Website Designing, Web Development, SEO Services, Graphic Designing, Mobile Application Development Video Production, Voice Over.n.",
+  },
+  {
+    title: "Search Engine Optimization (SEO)",
+    icon: "/services/tab-icon.svg",
+    para: "SEO is more than just adding keywords. We combine AI-powered automation with proven SEO techniques to enhance your visibility in organic search results.",
+    subHeading2: "Our approach covers:",
+    lists: [
+      {
+        para: `Technical and on-page improvements to ensure search engines can properly index your site`,
+      },
+      {
+        para: `Content updates that put real users first`,
+      },
+      {
+        para: `Local and global strategies to reach the right audience`,
+      },
+      {
+        para: `Ongoing adjustments to adapt to evolving search algorithms`,
+      },
+    ],
+  },
+  {
+    title: "Social Media Marketing",
+    icon: "/services/tab-icon.svg",
+    para: "Social Media Marketing should be intentional and consistent. We ensure your presence is clear and effective across platforms like Facebook, Instagram, LinkedIn, and Twitter, with messaging tailored to your brand and audience.",
+    subHeading2: "Our approach includes:",
+    lists: [
+      {
+        para: `Audience insights`,
+      },
+      {
+        para: `Competitor benchmarking`,
+      },
+      {
+        para: `Proven methods that deliver measurable growth without gimmicks`,
+      },
+    ],
+  },
+  {
+    title: "PPC Campaign Management",
+    icon: "/services/tab-icon.svg",
+    para: "Effective PPC campaigns require strategic budget allocation and continuous optimization. We specialize in building targeted Pay-Per-Click campaigns on Google Ads and Facebook Ads, using testing to refine performance.",
+    subHeading2: "Services include:",
+    lists: [
+      {
+        para: `In-depth keyword research to target high-intent searches`,
+      },
+      {
+        para: `Ad structures and targeting aligned with buyer behavior`,
+      },
+      {
+        para: `Ongoing testing, including A/B testing, to optimize performance over time`,
+      },
+      {
+        para: `Continuous refinements to drive qualified leads and conversions`,
+      },
+    ],
+  },
+  {
+    title: "Web Design & Development",
+    icon: "/services/tab-icon.svg",
+    para: "Your website should be easy to navigate and trust. At HTSOL Inc., we build mobile-friendly, user-centric websites designed to guide visitors smoothly toward their goals. <br/><br/>Whether you're starting from scratch or revamping an existing site, we focus on:",
+    lists: [
+      {
+        para: `A structure that reinforces your brand identity and business goals`,
+      },
+      {
+        para: `Websites optimized for search engines`,
+      },
+      {
+        para: `Intuitive navigation and clear calls-to-action`,
+      },
+      {
+        para: `A seamless user experience on all devices`,
+      },
+    ],
+  },
+  {
+    title: "Ecommerce Development & Marketing",
+    icon: "/services/tab-icon.svg",
+    para: `When it comes to eCommerce, details matter. We specialize in developing custom eCommerce websites and supporting strategies that simplify the shopping experience and help your store perform consistently.
+    <br/><br/>
+    We develop on platforms like:
+  `,
+    lists: [
+      {
+        para: `Shopify, WooCommerce, and Magento`,
+      },
+    ],
+    botPara: `To drive growth, we provide:`,
+    lists2: [
+      {
+        para: `Targeted eCommerce SEO and PPC campaigns tailored to online retail success`,
+      },
+      {
+        para: `Conversion optimization based on real customer behavior`,
+      },
+    ],
+  },
+  {
+    title: "Content Marketing",
+    icon: "/services/tab-icon.svg",
+    para: `Great content should engage and inform—not just fill space. Our team creates high-quality, SEO-optimized content that resonates with both your audience and search engines.
+    <br/><br/>
+    We assist with:
+  `,
+    lists: [
+      {
+        para: `Blog posts and articles`,
+      },
+      {
+        para: `Landing pages`,
+      },
+      {
+        para: `Video scripts`,
+      },
+      {
+        para: `Messaging that aligns with your brand voice`,
+      },
+    ],
+  },
+  {
+    title: "Technical SEO",
+    icon: "/services/tab-icon.svg",
+    para: `Even the best content can be hindered by technical issues. Our Technical SEO services ensure your website runs smoothly and is fully optimized for search engines.
+    <br/><br/>
+    We focus on:
+  `,
+    lists: [
+      {
+        para: `Fixing crawl errors`,
+      },
+      {
+        para: `Speeding up page load times`,
+      },
+      {
+        para: `Resolving indexing issues to ensure complete search engine visibility`,
+      },
+      {
+        para: `Addressing duplicate content and improving site architecture`,
+      },
+    ],
+  },
+  {
+    title: "Email Marketing",
+    icon: "/services/tab-icon.svg",
+    para: `Email marketing is most effective when it feels relevant and personal. We help you connect with your audience, converting interest into lasting relationships.
+    <br/><br/>
+    Our services include:
+  `,
+    lists: [
+      {
+        para: `Building segmented email lists`,
+      },
+      {
+        para: `Crafting compelling, natural-sounding messages`,
+      },
+      {
+        para: `Improving open and click-through rates through testing and refinement`,
+      },
+    ],
+  },
+  {
+    title: "Online Reputation Management (ORM)",
+    icon: "/services/tab-icon.svg",
+    para: `Your online reputation is often the first impression people have of your business. With ORM, we help you stay on top of reviews and feedback in a professional and proactive manner.
+    <br/><br/>
+    We offer:
+  `,
+    lists: [
+      {
+        para: `Monitoring reviews on key platforms`,
+      },
+      {
+        para: `Thoughtful and consistent responses`,
+      },
+      {
+        para: `Managing your presence on review sites and social media`,
+      },
+      {
+        para: `Ongoing support to maintain a positive online reputation`,
+      },
+    ],
+  },
+  {
+    title: "AI-Driven Marketing Solutions",
+    icon: "/services/tab-icon.svg",
+    para: `AI is a powerful tool when used wisely. At HTSOL Inc., we incorporate AI into our marketing strategies to improve decision-making and efficiency without replacing the human touch.
+    <br/><br/>
+    We use AI for:
+  `,
+    lists: [
+      {
+        para: `Predictive analytics to spot trends and opportunities`,
+      },
+      {
+        para: `Personalized content recommendations`,
+      },
+      {
+        para: `Data-backed insights to optimize time and budget allocation`,
+      },
+    ],
+  },
+  {
+    title: "Franchise SEO",
+    icon: "/services/tab-icon.svg",
+    para: `Franchises face unique challenges, especially with multiple locations to manage. Our Franchise SEO service ensures local visibility while maintaining consistency across all franchise pages.
+    <br/><br/>
+    Services include:
+  `,
+    lists: [
+      {
+        para: `AI-driven insights to find local opportunities`,
+      },
+      {
+        para: `Optimizing both corporate sites and individual franchise locations`,
+      },
+      {
+        para: `Boosting visibility in organic search results`,
+      },
+      {
+        para: `Ensuring consistent branding and visibility across all locations`,
+      },
+    ],
   },
 ];
+
+export const SERVICES_WHY = [
+  {
+    icon: "/services/why-icon-1.svg",
+    heading: "Proven Track Record of Success",
+    para: "We don’t rely on vague promises. Instead, we focus on tracking real performance metrics like lead quality, conversions, and revenue growth. With HTSOL, you’ll always see measurable progress.",
+  },
+  {
+    icon: "/services/why-icon-2.svg",
+    heading: "Custom Strategies Tailored to Your Business",
+    para: "Every business is unique. That's why we craft strategies tailored specifically to your industry, goals, and target audience. When you need flexibility, we adapt our approach to meet your changing priorities.",
+  },
+  {
+    icon: "/services/why-icon-3.svg",
+    heading: "Human-Driven AI",
+    para: "While AI can enhance efficiency, all our decisions are still made by experienced professionals. Our strategies, messaging, and priorities are always human-led to ensure your brand’s voice remains authentic.",
+  },
+  {
+    icon: "/services/why-icon-2.svg",
+    heading: "Cross-Industry Expertise",
+    para: "We support businesses across various industries, including healthcare and eCommerce. This diverse experience helps us recognize challenges quickly while respecting what makes your business special.",
+  },
+  {
+    icon: "/services/why-icon-3.svg",
+    heading: "Competitive Pricing",
+    para: "Your budget matters, and we're here to offer flexible pricing options that align with your goals. We ensure you get the best value without overcommitting.",
+  },
+];
+
+export const SERVICES_FAQS = [
+  {
+    question:
+      "How do I know which digital marketing service my business actually needs?",
+    answer:
+      "We begin by having a discovery conversation with you and reviewing your current performance. From there, we recommend the channels that best align with your goals, budget, and timeline. We won’t push services you don’t need.",
+  },
+  {
+    question: "How long does it take to see results from SEO in Canada?",
+    answer:
+      "Generally, businesses start seeing measurable results within 3 to 6 months. However, this can vary depending on factors like local competition, your website's health, and demand in your industry.",
+  },
+  {
+    question: "Can you work with our in-house marketing or development team?",
+    answer:
+      "Absolutely. We often collaborate with internal teams, acting as an extension of your staff. Whether it's offering strategy, technical support, or specialized expertise, we’re here to help however you need us.",
+  },
+  {
+    question:
+      "What’s the difference between hiring staff augmentation and outsourcing a project?",
+    answer:
+      "With staff augmentation, we integrate our professionals directly into your team, giving you more control while filling in skill gaps. Outsourcing, on the other hand, means we take full ownership of the project, handling everything from start to finish.",
+  },
+  {
+    question:
+      "Do small businesses benefit from digital transformation, or is it only for large companies?",
+    answer:
+      "In fact, small and mid-sized businesses often see the biggest benefits. Automation and better workflows save time, cut costs, and enhance the customer experience right away.",
+  },
+  {
+    question:
+      "How can CGI help my business generate more sales?",
+    answer:
+      "CGI helps your customers visualize products, spaces, or concepts before they commit to a purchase. This boosts confidence, speeds up decision-making, and often leads to higher conversion rates, especially in real estate, manufacturing, and eCommerce.",
+  },
+  {
+    question:
+      "Will switching to a new website affect my Google rankings?",
+    answer:
+      "When done right, a website redesign can actually protect and sometimes improve your rankings. We ensure proper redirects, technical SEO, and structure to keep your traffic intact during the migration.",
+  },
+  {
+    question:
+      "How do you measure whether marketing campaigns are actually working?",
+    answer:
+      "We track the key metrics that matter: qualified leads, cost per acquisition, conversion rates, and revenue trends, not just impressions or clicks. You’ll always get clear, honest reporting.",
+  },
+  {
+    question: "Can you support businesses operating in multiple cities or provinces?",
+    answer:
+      "Yes, we create tailored strategies for each region while keeping your brand consistent. This is particularly important for franchises and multi-location businesses across Canada.",
+  },
+  {
+    question: "What budget should a business realistically start with?",
+    answer:
+      "Budgets vary based on goals and competition, but we help you prioritize the most impactful actions first. Many clients start with a focused plan and expand once we have performance data to support that growth.",
+  },
+];
+
+export const SERVICE_BUISNESS = [
+  {
+    heading: "Comprehensive Audits",
+    image: "/website/service-icon-2.svg",
+    para: "We assess what’s working and identify any roadblocks.",
+  },
+  {
+    heading: "Practical Roadmap",
+    image: "/website/service-icon-2.svg",
+    para: "A clear, actionable plan—no jargon, just a path forward.",
+  },
+  {
+    heading: "Continuous Improvements",
+    image: "/website/service-icon-3.svg",
+    para: "We help drive qualified leads, conversions, and long-term growth.",
+  },
+];
+
 export const DELIVERING_SOLUTIONS = [
   {
     name: "OPTIMIZE",
