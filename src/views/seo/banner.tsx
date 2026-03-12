@@ -55,7 +55,7 @@ const Banner = () => {
           </div>
 
           <div className="order-1 lg:order-2 h-full flex flex-col justify-center">
-            <p className="text-xs sm:text-sm uppercase tracking-widest mb-3 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent inline-block">
+            <p className=" uppercase tracking-widest mb-3 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent inline-block">
               Search Engine Optimization Services
             </p>
             <h1 className="font-primary font-semibold text-3xl sm:text-4xl lg:text-5xl uppercase leading-tight mb-4">
@@ -63,7 +63,7 @@ const Banner = () => {
               <span className="text-white">Growth Problems</span>
             </h1>
             <div
-              className="inline-block px-4 py-2 rounded-lg text-white text-xs sm:text-sm font-medium uppercase tracking-wide mb-6"
+              className="inline-block px-4 py-2 rounded-lg text-white font-medium uppercase tracking-wide mb-6"
               style={{ background: tealGradient }}
             >
               Focused on Growing Qualified Traffic, Leads, and Revenue
@@ -124,7 +124,7 @@ const Banner = () => {
                         aria-hidden
                       />
                     )}
-                    <span className="text-white/90 text-xs sm:text-sm uppercase tracking-wide whitespace-nowrap">
+                    <span className="text-white  uppercase tracking-wide whitespace-nowrap">
                       {topic}
                     </span>
                   </div>
