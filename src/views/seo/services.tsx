@@ -93,11 +93,11 @@ const Services = () => {
                                         />
                                     </div>
 
-                                    <h3 className="font-primary uppercase text-white text-[13px] sm:text-[14px] leading-[1.2] font-semibold mb-2">
+                                    <h3 className="font-primary uppercase text-white text-[18px] tracking-wide font-semibold mb-2">
                                         {item.heading}
                                     </h3>
 
-                                    <p className="text-white/55 text-[11px] sm:text-[12px] leading-[1.5]">
+                                    <p className="text-white leading-normal">
                                         {item.para}
                                     </p>
                                 </div>
@@ -115,11 +115,11 @@ const Services = () => {
                                     />
                                 </div>
 
-                                <h3 className="font-primary uppercase text-white text-[13px] sm:text-[14px] leading-[1.2] font-semibold mb-2">
+                                <h3 className="font-primary font-semibold uppercase text-[18px] tracking-wide mb-2">
                                     {BOTTOM_LEFT_CARD.heading}
                                 </h3>
 
-                                <p className="text-white/55 text-[11px] sm:text-[12px] leading-[1.5]">
+                                <p className="text-white leading-normal">
                                     {BOTTOM_LEFT_CARD.para}
                                 </p>
                             </div>

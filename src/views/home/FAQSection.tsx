@@ -19,7 +19,8 @@ interface FAQSectionProps {
   faqs?: FAQItem[];
   heading?: boolean;
   form?: boolean;
-  bgColor?: boolean;
+  bgColor?: string;
+  accordionbgtransparent?: boolean;
 }
 
 const defaultFAQs: FAQItem[] = [
@@ -84,8 +85,9 @@ const defaultFAQs: FAQItem[] = [
 export const FAQSection: React.FC<FAQSectionProps> = ({
   faqs = defaultFAQs,
   heading = false,
-  bgColor = false,
+  bgColor,
   form = false,
+  accordionbgtransparent = false,
 }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(1);
   const [customQuestion, setCustomQuestion] = useState("");
@@ -104,7 +106,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
     <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
       <section className=" py-24 relative "
         style={{
-          background: bgColor ? "black" : `url(/get-in-touch-bg.jpg)`,
+          background: bgColor ? bgColor : `url(/get-in-touch-bg.jpg)`,
           backgroundSize: "cover",
         }}>
         {/* Top accent line */}
@@ -137,11 +139,13 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
-                  className="
-    border border-white border-b! px-4 bg-transparent rounded-lg transition-all
-    data-[state=open]:border-tertiary  data-[state=open]:shadow-[0_0_5px_#00838A] 
-    data-[state=open]:bg-tertiary
-  "
+                  className={`
+                    border border-white border-b! px-4 bg-transparent rounded-lg transition-all
+                   ${accordionbgtransparent
+                      ? "bg-transparent data-[state=open]:bg-transparent data-[state=open]:border-transparent data-[state=open]:shadow-none"
+                      : " data-[state=open]:border-tertiary data-[state=open]:shadow-[0_0_5px_#00838A] data-[state=open]:bg-tertiary"
+                    }
+                  `}
                   value={String(index)}
                 >
                   <AccordionTrigger className="text-white font-secondary text-lg uppercase hover:no-underline cursor-pointer">

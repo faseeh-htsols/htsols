@@ -11,9 +11,8 @@ const HeadingTwo = forwardRef<HTMLHeadingElement, HeadingTwoProps>(
     return (
       <h2
         ref={ref}
-        className={`text-4xl lg:text-5xl text-white font-medium font-primary uppercase ${
-          className ? className : ""
-        }`}
+        className={`text-[30px] md:text-4xl lg:text-5xl text-white font-medium font-primary uppercase ${className ? className : ""
+          }`}
       >
         {children}{" "}
         {span && (

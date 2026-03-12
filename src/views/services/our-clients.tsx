@@ -42,7 +42,7 @@ export const ClientsSection: React.FC = () => {
         ></div>
 
         {/* Top accent line */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-primary to-transparent" />
 
         <Container>
           {/* Header */}

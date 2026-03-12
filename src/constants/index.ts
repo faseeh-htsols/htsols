@@ -447,6 +447,65 @@ export const SERVICE_BUISNESS = [
   },
 ];
 
+export const SEO_FAQS = [
+  {
+    question:
+      "Why does my website show on Google sometimes but disappear other days?",
+    answer:
+      "Search rankings fluctuate due to algorithm updates, competitors updating content, or indexing changes. If your site lacks authority or consistent optimisation, it can temporarily rank and then drop. A stable SEO strategy helps maintain consistent visibility instead of short spikes.",
+  },
+  {
+    question: "I get website traffic but no calls or leads. What’s going wrong?",
+    answer:
+      "Traffic alone does not guarantee conversions. Often the keywords attract the wrong audience or the page does not answer the visitor’s intent clearly. Improving content relevance, layout, and calls-to-action usually fixes this issue.",
+  },
+  {
+    question: "My competitors rank higher even though their website looks worse than mine. Why?",
+    answer:
+      "Google ranks relevance and trust, not design quality. Older domains, stronger backlinks, and better keyword targeting often outweigh visual appearance. SEO focuses on credibility signals search engines can measure.",
+  },
+  {
+    question:
+      "Does changing my website design hurt my Google rankings?",
+    answer:
+      "It can if URLs, content structure, or internal links change without proper redirects. Many redesigns accidentally remove SEO value built over years. Careful migration planning protects rankings during updates.",
+  },
+  {
+    question:
+      "Why is my Google Business Profile visible in one city but not nearby towns?",
+    answer:
+      "Local rankings depend on proximity, relevance, and local signals like reviews and location pages. Without targeted optimisation for each service area, Google limits visibility outside your immediate location.",
+  },
+  {
+    question:
+      "Can negative reviews affect my search ranking?",
+    answer:
+      "Yes, indirectly. Poor reviews reduce trust and lower engagement rates, which can impact local visibility. Responding professionally and improving review volume often improves both reputation and rankings.",
+  },
+  {
+    question:
+      "How long does it take to recover from a ranking drop?",
+    answer:
+      "Recovery depends on the cause. Technical issues may take weeks after fixes, while authority losses can take months. Consistent optimisation and monitoring help prevent repeated drops.",
+  },
+  {
+    question:
+      "Why does my paid advertising work but SEO doesn’t?",
+    answer:
+      "Paid ads appear instantly because you pay for placement. SEO requires proving relevance and trust over time. Once established, organic traffic continues without ongoing ad spend.",
+  },
+  {
+    question: "Do I need different pages for different Canadian cities I serve?",
+    answer:
+      "Usually yes. Google prefers location-specific pages that clearly explain services for each area. A single generic page rarely ranks across multiple cities competitively.",
+  },
+  {
+    question: "Can AI tools write all my website content for SEO?",
+    answer:
+      "AI can help draft content, but search engines still prioritise expertise, accuracy, and usefulness. Human editing, local relevance, and experience-based information are needed for reliable rankings.",
+  },
+];
+
 export const DELIVERING_SOLUTIONS = [
   {
     name: "OPTIMIZE",
