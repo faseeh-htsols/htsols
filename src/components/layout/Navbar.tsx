@@ -6,41 +6,95 @@ import React from "react";
 import Button from "../ui/Button";
 
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
-import { NAV_ITEMS } from "@/constants"; // adjust path if needed
+import { NAV_ITEMS } from "@/constants";
 
 export const Navbar: React.FC = () => {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <nav className="fixed w-full bg-black top-0 left-0 right-0 z-50 px-6 md:px-12 py-6">
-      <div className="flex items-center justify-between max-w-[1600px] mx-auto">
-        {/* Logo */}
-        <div className="flex items-center">
-          <Link href="/" className="flex items-center gap-0">
-            <Image
-              className="w-[150px] md:w-[250px] h-[50px] object-contain"
-              src={"/footer-logo.png"}
-              width={300}
-              height={100}
-              alt="logo"
-              priority
-            />
-          </Link>
+    <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-black px-6 py-6 md:px-12">
+      <div className="mx-auto flex max-w-[1600px] items-center gap-6">
+        <Link href="/" className="flex items-center gap-0">
+          <Image
+            className="h-[50px] w-[150px] object-contain md:w-[250px]"
+            src="/footer-logo.png"
+            width={300}
+            height={100}
+            alt="logo"
+            priority
+          />
+        </Link>
+
+        <div className="hidden flex-1 justify-center lg:flex">
+          <div className="flex items-center gap-8">
+            {NAV_ITEMS.map((item) => {
+              const hasDrop = item.drop && item.subItems?.length;
+
+              if (!hasDrop) {
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.link}
+                    className="text-sm font-medium uppercase tracking-wide text-white/85 transition-colors hover:text-white"
+                  >
+                    {item.name}
+                  </Link>
+                );
+              }
+
+              return (
+                <div key={item.name} className="group relative">
+                  <Link
+                    href={item.link}
+                    className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-white/85 transition-colors hover:text-white"
+                  >
+                    {item.name}
+                    <svg
+                      className="h-3 w-3 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M4 6L8 10L12 6"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </Link>
+
+                  <div className="invisible absolute top-full left-1/2 z-50 mt-3 w-64 -translate-x-1/2 translate-y-2 rounded-xl border border-white/10 bg-black/95 p-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                    <div className="flex flex-col">
+                      {item.subItems?.map((sub) => (
+                        <Link
+                          key={sub.name}
+                          href={sub.link}
+                          className="rounded-md px-3 py-2 text-sm text-white/80 transition-colors hover:bg-white/5 hover:text-white"
+                        >
+                          {sub.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
-        {/* Center/Right Section */}
-        <div className="flex items-center gap-6">
-          {/* Book Consultation Button */}
-          <div className="md:block hidden">
+        <div className="ml-auto flex items-center gap-4">
+          <div className="hidden lg:block">
             <Button href="/contact-us">Book a Free Consultation</Button>
           </div>
 
-          {/* Menu Icon -> Drawer */}
           <Drawer open={open} direction="right" onOpenChange={setOpen}>
             <DrawerTrigger asChild>
               <button
                 aria-label="Open menu"
-                className="text-white hover:text-primary transition-colors cursor-pointer"
+                className="cursor-pointer text-white transition-colors hover:text-primary lg:hidden"
               >
                 <svg
                   width="53"
@@ -48,7 +102,7 @@ export const Navbar: React.FC = () => {
                   viewBox="0 0 53 53"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-8 h-8"
+                  className="h-8 w-8"
                 >
                   <path
                     d="M13.9711 23.0826H9.11156C3.23157 23.0826 0 19.8511 0 13.9711V9.11157C0 3.23157 3.23157 7.62939e-06 9.11156 7.62939e-06H13.9711C19.8511 7.62939e-06 23.0826 3.23157 23.0826 9.11157V13.9711C23.0826 19.8511 19.8511 23.0826 13.9711 23.0826ZM9.11156 3.64463C5.27256 3.64463 3.64462 5.27256 3.64462 9.11157V13.9711C3.64462 17.8101 5.27256 19.438 9.11156 19.438H13.9711C17.8101 19.438 19.438 17.8101 19.438 13.9711V9.11157C19.438 5.27256 17.8101 3.64463 13.9711 3.64463H9.11156Z"
@@ -70,24 +124,22 @@ export const Navbar: React.FC = () => {
               </button>
             </DrawerTrigger>
 
-            <DrawerContent className="bg-black text-white border-t border-white/10">
+            <DrawerContent className="border-t border-white/10 bg-black text-white">
               <div className="px-6 py-6">
-                {/* Header */}
-                <div className="flex items-center justify-between mb-6">
+                <div className="mb-6 flex items-center justify-between">
                   <p className="text-sm uppercase tracking-wider text-white/70">
                     Menu
                   </p>
 
                   <button
                     onClick={() => setOpen(false)}
-                    className="text-white/70 hover:text-white transition"
+                    className="text-white/70 transition hover:text-white"
                     aria-label="Close menu"
                   >
-                    ✕
+                    X
                   </button>
                 </div>
 
-                {/* Links */}
                 <div className="flex flex-col">
                   {NAV_ITEMS.map((item) => {
                     const hasDrop = item.drop && item.subItems?.length;
@@ -98,7 +150,7 @@ export const Navbar: React.FC = () => {
                           key={item.name}
                           href={item.link}
                           onClick={() => setOpen(false)}
-                          className="py-4 border-b border-white/10 text-white font-medium"
+                          className="border-b border-white/10 py-4 font-medium text-white"
                         >
                           {item.name}
                         </Link>
@@ -110,22 +162,22 @@ export const Navbar: React.FC = () => {
                         key={item.name}
                         className="border-b border-white/10"
                       >
-                        <summary className="list-none cursor-pointer py-4 flex items-center justify-between">
-                          <span className="text-white font-medium">
+                        <summary className="flex list-none cursor-pointer items-center justify-between py-4">
+                          <span className="font-medium text-white">
                             {item.name}
                           </span>
                           <span className="text-white/70 transition-transform group-open:rotate-180">
-                            ▼
+                            v
                           </span>
                         </summary>
 
-                        <div className="pb-4 pl-3 flex flex-col gap-2">
-                          {item.subItems!.map((sub) => (
+                        <div className="flex flex-col gap-2 pb-4 pl-3">
+                          {item.subItems?.map((sub) => (
                             <Link
                               key={sub.name}
                               href={sub.link}
                               onClick={() => setOpen(false)}
-                              className="py-2 text-sm text-white/80 hover:text-white transition"
+                              className="py-2 text-sm text-white/80 transition hover:text-white"
                             >
                               {sub.name}
                             </Link>
@@ -136,8 +188,7 @@ export const Navbar: React.FC = () => {
                   })}
                 </div>
 
-                {/* CTA (Mobile) */}
-                <div className="mt-6 md:hidden">
+                <div className="mt-6 lg:hidden">
                   <Button href="/contact-us">Book a Free Consultation</Button>
                 </div>
               </div>

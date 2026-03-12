@@ -506,6 +506,68 @@ export const SEO_FAQS = [
   },
 ];
 
+export const WEB_DEV_FAQS = [
+  {
+    question:
+      "How much does it cost to hire a Web Development Company in Canada?",
+    answer:
+      "Costs vary based on pages, features, content work, and integrations. A good quote should break down scope clearly so you know what you are paying for and what you are not.",
+  },
+  {
+    question:
+      "How long does a typical website build take from kickoff to launch?",
+    answer:
+      "Timelines usually depend on approvals and how quickly content is ready. A clear project plan with milestones helps you avoid slowdowns and last-minute surprises.",
+  },
+  {
+    question:
+      "Will I own my domain, hosting, and website when the project is finished?",
+    answer:
+      "You should. Make sure your business controls the domain registrar account and has admin access to hosting, CMS, and key logins so you are never locked out later.",
+  },
+  {
+    question:
+      "Can a redesign hurt my rankings even if the new site looks better?",
+    answer:
+      "Yes, it can if URLs, content, internal links, or tracking change without a plan. A proper migration approach protects key pages, redirects, and measurement so you can recover faster.",
+  },
+  {
+    question:
+      "Why is my current site slow even though it is not \"big\"?",
+    answer:
+      "Common causes are heavy images, too many scripts, poorly built themes or plugins, and weak hosting. A performance audit can identify the biggest bottleneck instead of guessing.",
+  },
+  {
+    question:
+      "Do I need to write all the website copy myself before we start?",
+    answer:
+      "Not always. Many businesses start with existing pages, notes, and competitor examples, then refine messaging during the project so the final copy sounds clear and credible.",
+  },
+  {
+    question: "What ongoing costs should I expect after launch?",
+    answer:
+      "Most sites still need hosting, renewals, updates, and occasional fixes. A simple maintenance plan can prevent security issues and unexpected downtime when something breaks.",
+  },
+  {
+    question:
+      "Should I choose Shopify, WooCommerce, or a bespoke e-commerce build?",
+    answer:
+      "It depends on how you manage products, payments, shipping, and reporting. The right choice is the one your team can run reliably without constant developer help.",
+  },
+  {
+    question:
+      "Will a new website automatically bring in more leads?",
+    answer:
+      "A new site helps, but results usually come from matching the site to intent, improving offer clarity, and tracking what visitors do. Without measurement, it is hard to know what is working.",
+  },
+  {
+    question:
+      "For ads, should I send people to my homepage or a dedicated landing page?",
+    answer:
+      "For many campaigns, a focused landing page converts better because it removes distractions and matches the ad. In trust-heavy services, you may still want easy access to proof pages from that landing page.",
+  },
+];
+
 export const DELIVERING_SOLUTIONS = [
   {
     name: "OPTIMIZE",

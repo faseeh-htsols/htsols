@@ -13,6 +13,8 @@ import WhatToExpect from "./what-to-expect";
 import ServicesWeOfferCanada from "./services-we-offer-canada";
 import WebDesignSolutions from "./web-design-solutions";
 import WhyChooseHtsol from "./why-choose-htsol";
+import FAQSection from "../home/FAQSection";
+import { WEB_DEV_FAQS } from "@/constants";
 
 const WebDevMain = () => {
   return (
@@ -23,6 +25,7 @@ const WebDevMain = () => {
       <WebDesignSolutions />
       <Benefits />
       <SeoReadyWebsite />
+      
       <PrivacyAccessibilityTrust />
       <WhatToExpect />
       <ServicesWeOfferCanada />
@@ -30,6 +33,13 @@ const WebDevMain = () => {
       {/* <OurProcess />            */}
       <CallBackFromUs />
       {/* <WhatsIncluded /> */}
+      <FAQSection
+        bgColor="#0F0F0F"
+        faqs={WEB_DEV_FAQS}
+        heading={true}
+        form={true}
+        accordionbgtransparent
+      />
       <ClientsSection />
       <ContactForm />
     </>

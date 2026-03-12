@@ -195,14 +195,24 @@ export const Footer: React.FC = () => {
               <ul className="space-y-4">
                 <li>
                   <p className="text-white/60 text-sm">
-                    <span className="text-white/80">CALL AT:</span> (+1)
-                    437-937-1235
+                    <span className="text-white/80">CALL AT:</span>{" "}
+                    <a
+                      href="tel:+14379371235"
+                      className="hover:text-white transition-colors duration-200"
+                    >
+                      (+1) 437-937-1235
+                    </a>
                   </p>
                 </li>
                 <li>
                   <p className="text-white/60 text-sm">
                     <span className="text-white/80">Email Us:</span>{" "}
-                    hello@htsol.ca
+                    <a
+                      href="mailto:hello@htsol.ca"
+                      className="hover:text-white transition-colors duration-200"
+                    >
+                      hello@htsol.ca
+                    </a>
                   </p>
                 </li>
                 <li>

@@ -4,31 +4,32 @@ import React, { useEffect, useRef, useState } from "react";
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
+import Button from "@/components/ui/Button";
 import gsap from "gsap";
 const WHY_CHOOSE_ITEMS = [
     {
         heading: "SEO Health Check",
         description:
             "Technical and on-page diagnostics identifying crawl errors, indexing issues, speed gaps, and missed opportunities.",
-        image: "/rectangle.png",
+        image: "/seo-bannerr.png",
     },
     {
         heading: "Keyword & Content Map",
         description:
             "A plan connecting keywords to pages so your content matches real search intent, not assumptions.",
-        image: "/rectangle.png",
+        image: "/seo-service-img.png",
     },
     {
         heading: "Local Visibility Tracker",
         description:
             "Monitor map rankings and location-based searches across Canadian cities and service areas.",
-        image: "/rectangle.png",
+        image: "/seo-services.png",
     },
     {
         heading: "Performance Dashboard & Monthly Reporting",
         description:
             "Track rankings, traffic, conversions, and lead quality with clear explanations of what changed and what comes next.",
-        image: "/rectangle.png",
+        image: "/seo-ball.png",
     },
 ];
 
@@ -103,16 +104,23 @@ const ToolsAndReporting = () => {
                         ))}
                     </div>
 
-                    {/* Right: image that changes with selection */}
-                    <div className="relative w-full aspect-4/3 lg:aspect-5/4 rounded-2xl bg-[#191919] overflow-hidden border border-white/10">
-                        <div ref={imageRef} className="absolute inset-0">
-                            <Image
-                                src={activeItem.image}
-                                alt={activeItem.heading}
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 1024px) 100vw, 40vw"
-                            />
+                    {/* Right: image that changes with selection + CTA */}
+                    <div>
+                        <div className="relative w-full aspect-4/3 lg:aspect-5/4 rounded-2xl bg-[#191919] overflow-hidden border border-white/10">
+                            <div ref={imageRef} className="absolute inset-0">
+                                <Image
+                                    src={activeItem.image}
+                                    alt={activeItem.heading}
+                                    fill
+                                    className="object-cover"
+                                    sizes="(max-width: 1024px) 100vw, 40vw"
+                                />
+                            </div>
+                        </div>
+                        <div className="mt-6 flex justify-center lg:justify-start">
+                            <Button href="/contact-us" variant="outline">
+                                LEARN HOW OUR SEO REPORTING WORKS
+                            </Button>
                         </div>
                     </div>
                 </div>
