@@ -5,6 +5,7 @@ import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
+import DoubleCurves from "@/components/ui/double-curves";
 const data = [
   {
     heading: "1: Service Businesses",
@@ -44,75 +45,77 @@ const RecentlyDoneProjects = () => {
     setActiveSrc(null);
   };
   return (
-    <div className="py-24 relative -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[1%] [clip-path:polygon(0_1%,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_100%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)]">
-      <div
+    <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[2%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+      <div className="py-24 relative ">
+        {/* <div
         className="pointer-events-none absolute z-2 top-6 lg:top-[4%] left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[1.7%] -rotate-3 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
           "
-      ></div>
-      <Container>
-        <div className="mb-10">
-          <HeadingTwo className="text-center">
-            Is CGI / 3D Right for Your Business?
-          </HeadingTwo>{" "}
-        </div>
-      </Container>
-      <div className="bg-[url(/cgi/reccently-done-bg.png)] bg-center">
+      ></div> */}
         <Container>
-          <div className="max-w-[300px] mx-auto">
-            {/* <Image
+          <div className="mb-10">
+            <HeadingTwo className="text-center">
+              Is CGI / 3D Right for Your Business?
+            </HeadingTwo>{" "}
+          </div>
+        </Container>
+        <div className="bg-[url(/cgi/reccently-done-bg.png)] bg-center">
+          <Container>
+            <div className="max-w-[300px] mx-auto">
+              {/* <Image
               width={300}
               height={1000}
               src={"/cgi/reccently-done.png"}
               alt="image"
               className="w-full h-[450px] object-contain object-center"
             /> */}
-          </div>
-        </Container>
-      </div>
-      <video
-        webkit-playsinline="true"
-        playsInline
-        autoPlay
-        muted
-        loop
-        className="w-full h-[563px] object-cover"
-      >
-        <source src="/cgi/ball-animation.mp4" type="video/mp4" />
-      </video>
-      <Container>
-        <div className="grid relative  -mt-[280px] grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-8 lg:gap-y-0 gap-x-4 mb-8">
-          {data.map((item, idx) => (
-            <div key={idx} className="relative  p-0.5 rounded-lg">
-              <div
-                className="ms-auto w-fit -mt-5 z-10 relative cursor-pointer "
-                onClick={() => openPopup(item.href)}
-              >
-                <Image
-                  src={"/cgi/play-btn.svg"}
-                  alt="images"
-                  width={48}
-                  height={48}
-                  className="w-[45px] h-[45px]"
-                />
-              </div>
-              <div className=" absolute inset-0  bg-transparent opacity-50 backdrop-blur-[250px] rounded-lg"></div>
-              <div className=" h-full relative p-4 flex flex-col gap-3 rounded-lg ">
-                <div className="flex flex-col gap-3">
-                  <h3 className="text-xl font-primary">{item.heading}</h3>
-                  <h4 className="font-semibold">{item.smallHeading}</h4>
-                  <p>{item.para}</p>
+            </div>
+          </Container>
+        </div>
+        <video
+          webkit-playsinline="true"
+          playsInline
+          autoPlay
+          muted
+          loop
+          className="w-full h-[563px] object-cover"
+        >
+          <source src="/cgi/ball-animation.mp4" type="video/mp4" />
+        </video>
+        <Container>
+          <div className="grid relative  -mt-[280px] grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-8 lg:gap-y-0 gap-x-4 mb-8">
+            {data.map((item, idx) => (
+              <div key={idx} className="relative  p-0.5 rounded-lg">
+                <div
+                  className="ms-auto w-fit -mt-5 z-10 relative cursor-pointer "
+                  onClick={() => openPopup(item.href)}
+                >
+                  <Image
+                    src={"/cgi/play-btn.svg"}
+                    alt="images"
+                    width={48}
+                    height={48}
+                    className="w-[45px] h-[45px]"
+                  />
+                </div>
+                <div className=" absolute inset-0  bg-transparent opacity-50 backdrop-blur-[250px] rounded-lg"></div>
+                <div className=" h-full relative p-4 flex flex-col gap-3 rounded-lg ">
+                  <div className="flex flex-col gap-3">
+                    <h3 className="text-xl font-primary">{item.heading}</h3>
+                    <h4 className="font-semibold">{item.smallHeading}</h4>
+                    <p>{item.para}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-        <div className="flex justify-center">
-          <Button href="/">Book 1:1 Consultation With Us</Button>
-        </div>
-      </Container>
-      <PopUp open={open} src={activeSrc} onClose={closePopup} />
-    </div>
+            ))}
+          </div>
+          <div className="flex justify-center">
+            <Button href="/">Book 1:1 Consultation With Us</Button>
+          </div>
+        </Container>
+        <PopUp open={open} src={activeSrc} onClose={closePopup} />
+      </div>
+    </DoubleCurves>
   );
 };
 
