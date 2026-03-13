@@ -50,7 +50,7 @@ const MeetOurTeam = () => {
                     />
                   </div>
                   <div className=" relative  p-4">
-                    <div className="absolute -top-10 -left-10 h-[calc(100%+40px)] w-[calc(100%+40px)] bg-[url(/about-us/ball-team.png)]"></div>
+                    <div className="absolute -top-10 -left-10 h-[calc(100%+40px)] w-[calc(100%+40px)] bg-[url(/about-us/ball-team.webp)] bg-cover bg-center bg-no-repeat"></div>
                     <h3 className="text-2xl relative text-center font-primary uppercase">
                       {member.name}
                     </h3>

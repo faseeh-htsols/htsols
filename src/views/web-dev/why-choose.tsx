@@ -30,7 +30,7 @@ const WhyChoose = () => {
           <div className="grid lg:grid-cols-2 gap-10">
             <div className="relative py-10 lg:py-0 shrink-0">
               <Image
-                src={"/website/choose-us.png"}
+                src={"/website/choose-us.webp"}
                 alt="why choose us"
                 width={800}
                 height={800}

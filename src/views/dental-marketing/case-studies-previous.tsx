@@ -4,23 +4,23 @@ import Image from "next/image";
 import React from "react";
 const data = [
   {
-    src: "/dental/case1.png",
+    src: "/dental/case1.webp",
     alt: "image",
   },
   {
-    src: "/dental/case2.png",
+    src: "/dental/case2.webp",
     alt: "image",
   },
   {
-    src: "/dental/case3.png",
+    src: "/dental/case3.webp",
     alt: "image",
   },
   {
-    src: "/dental/case4.png",
+    src: "/dental/case4.webp",
     alt: "image",
   },
   {
-    src: "/dental/case5.png",
+    src: "/dental/case5.webp",
     alt: "image",
   },
 ];

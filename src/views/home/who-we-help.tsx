@@ -2,14 +2,43 @@
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
 import { HOW_WE_HELP_HOME } from "@/constants";
-import Image from "next/image";
 import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import DoubleCurves from "@/components/ui/double-curves";
+import {
+  Briefcase,
+  Code2,
+  Cpu,
+  Hammer,
+  Hospital,
+  MapPin,
+  Megaphone,
+  Scale,
+  ShoppingCart,
+  Stethoscope,
+  type LucideIcon,
+} from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const getIndustryIcon = (name: string): LucideIcon => {
+  const normalized = name.toLowerCase();
+
+  if (normalized.includes("healthcare")) return Stethoscope;
+  if (normalized.includes("professional services")) return Briefcase;
+  if (normalized.includes("e-commerce") || normalized.includes("retail")) return ShoppingCart;
+  if (normalized.includes("construction") || normalized.includes("trades")) return Hammer;
+  if (normalized.includes("saas") || normalized.includes("technology")) return Cpu;
+  if (normalized.includes("local service")) return MapPin;
+  if (normalized.includes("legal")) return Scale;
+  if (normalized.includes("marketing agencies")) return Megaphone;
+  if (normalized.includes("software companies")) return Code2;
+  if (normalized.includes("dental")) return Hospital;
+
+  return Briefcase;
+};
 
 const WhoWeHelp = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -53,7 +82,7 @@ const WhoWeHelp = () => {
     <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[3%] xl:-mt-[2%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
       <div
         ref={containerRef}
-        className="py-24 bg-[url(/how-we-help.png)] bg-cover relative"
+        className="py-24 bg-[url(/how-we-help.webp)] bg-cover relative"
       >
         {/* Top accent line */}
         {/* <div
@@ -99,15 +128,17 @@ const WhoWeHelp = () => {
                   key={item.name}
                   className="relative z-10 py-5"
                 >
-                  <div className="flex justify-center">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={89}
-                      height={72}
-                      className="w-20 h-[65px]"
-                    />
-                  </div>
+                  {(() => {
+                    const Icon = getIndustryIcon(item.name);
+                    return (
+                      <div className="flex justify-center">
+                        <Icon
+                          className="w-20 h-[65px] text-white/90"
+                          strokeWidth={1.5}
+                        />
+                      </div>
+                    );
+                  })()}
 
                   <h3 className="font-primary text-center uppercase font-semibold">
                     {item.name}

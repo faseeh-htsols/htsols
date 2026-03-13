@@ -17,7 +17,7 @@ export const Navbar: React.FC = () => {
         <Link href="/" className="flex items-center gap-0">
           <Image
             className="h-[50px] w-[150px] object-contain md:w-[250px]"
-            src="/footer-logo.png"
+            src="/footer-logo.webp"
             width={300}
             height={100}
             alt="logo"

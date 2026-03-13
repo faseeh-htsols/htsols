@@ -36,8 +36,8 @@ const ServicesWeOfferCanada = () => {
                 </div>
               </div>
             ))}
-            <div className="flex relative  grow flex-col gap-6 bg-[url(/website/cta-bg.jpg)] rounded-2xl p-5">
-              <div className="absolute top-0 right-0 w-[25%] h-full bg-[url(/website/cta-circle.png)] bg-cover"></div>
+            <div className="flex relative  grow flex-col gap-6 bg-[url(/website/cta-bg.webp)] bg-cover bg-center bg-no-repeat rounded-2xl p-5">
+              <div className="absolute top-0 right-0 w-[25%] h-full bg-[url(/website/cta-circle.webp)] bg-cover bg-center bg-no-repeat"></div>
               <h3 className="uppercase font-primary text-[22px] relative font-medium ">
                 Looking for <br /> Professional Growth?
               </h3>

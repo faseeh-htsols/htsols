@@ -91,7 +91,7 @@ export const AboutSection: React.FC = () => {
 
             <div className="w-full relative h-full min-h-[300px]">
               <Image
-                src={"/about-two.png"}
+                src={"/about-two.webp"}
                 alt="image"
                 className="object-cover rounded-lg"
                 fill
@@ -134,7 +134,7 @@ export const AboutSection: React.FC = () => {
                 className="relative w-full h-[300px] rounded-lg overflow-hidden border-2 border-primary/30"
               >
                 <Image
-                  src="/about-htsols.jpg"
+                  src="/about-htsols.webp"
                   alt="Team collaboration"
                   fill
                   className="object-cover"

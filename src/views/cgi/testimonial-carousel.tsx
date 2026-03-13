@@ -29,11 +29,11 @@ const AUTOPLAY_DELAY = 5000;
 export const TESTIMONIAL_CAROUSEL_DATA: TestimonialSlide[] = [
   {
     id: "t1",
-    mediaImage: "/cgi/kaybees.png",
+    mediaImage: "/cgi/kaybees.webp",
     video: "/cgi1.mp4",
     mediaAlt: "Kaybees",
     watermark: "MACCO",
-    brandLogo: "/cgi/kaybees-logo.png",
+    brandLogo: "/cgi/kaybees-logo.webp",
     brandName: "Kaybees",
     personName: "ABRAHAM",
     personRole: "CEO | Tech Innovators",

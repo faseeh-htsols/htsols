@@ -56,7 +56,7 @@ const WhatHappensAfterLaunch = () => {
   return (
     <div
       ref={sectionRef}
-      className="py-24 bg-[url(/what-happens-after-launch.jpg)] bg-cover"
+      className="py-24 bg-[url(/what-happens-after-launch.webp)] bg-cover"
     >
       <Container>
         <div>
@@ -77,7 +77,7 @@ const WhatHappensAfterLaunch = () => {
                 After launch, we remain actively involved. We continue to:
               </p>
 
-              <div className="border-[#5C5C5C] rounded-2xl bg-[url(/happens-after-bg.png)] bg-bottom bg-no-repeat border-2 py-10 px-3">
+              <div className="border-[#5C5C5C] rounded-2xl bg-[url(/happens-after-bg.webp)] bg-cover bg-bottom bg-no-repeat border-2 py-10 px-3">
                 <div className="flex flex-col gap-3 pb-6 border-b border-white">
                   {lists.map((list, idx) => (
                     <div key={idx} className="flex gap-3">
@@ -105,7 +105,7 @@ const WhatHappensAfterLaunch = () => {
 
             <div ref={rightRef} className="grow">
               <Image
-                src={"/happens-after.png"}
+                src={"/happens-after.webp"}
                 alt="image"
                 className="w-full min-h-[300px] rounded-3xl h-full object-cover"
                 width={600}

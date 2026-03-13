@@ -90,7 +90,7 @@ export const Button: React.FC<ButtonProps> = ({
           </defs>
         </svg> */}
         <Image
-          src={"/right-arrow-btn.png"}
+          src={"/right-arrow-btn.webp"}
           alt="aroow"
           width={30}
           height={30}

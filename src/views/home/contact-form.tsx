@@ -183,7 +183,7 @@ const ContactForm = () => {
   return (
     <section
       ref={scopeRef}
-      className="bg-[url(/get-in-touch-bg.jpg)] bg-cover relative py-20   "
+      className="bg-[url(/get-in-touch-bg.webp)] bg-cover relative py-20   "
     >
       {/* <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
@@ -236,7 +236,7 @@ const ContactForm = () => {
                     <Field
                       type="text"
                       name="firstName"
-                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                       placeholder="First Name"
                     />
                     <ErrorMessage
@@ -249,7 +249,7 @@ const ContactForm = () => {
                     <Field
                       type="text"
                       name="lastName"
-                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                       placeholder="Last Name"
                     />
                     <ErrorMessage
@@ -264,7 +264,7 @@ const ContactForm = () => {
                     <Field
                       type="text"
                       name="contactNumber"
-                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                       placeholder="Contact No"
                     />
                     <ErrorMessage
@@ -277,7 +277,7 @@ const ContactForm = () => {
                     <Field
                       name="email"
                       type="text"
-                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                       placeholder="Email Address"
                     />
                     <ErrorMessage
@@ -292,7 +292,7 @@ const ContactForm = () => {
                     <Field
                       name="city"
                       type="text"
-                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                       placeholder="City/Area"
                     />
                     <ErrorMessage
@@ -306,7 +306,7 @@ const ContactForm = () => {
                       as="select"
                       name="services"
                       id=""
-                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-sm px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-sm px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                     >
                       <option value=" web dev" className="bg-white text-black">
                         web dev
@@ -344,7 +344,7 @@ const ContactForm = () => {
                   <Field
                     as="textarea"
                     name="message"
-                    className="h-28 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 py-3 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+                    className="h-28 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 py-3 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                     placeholder="Enquiry  details"
                     id=""
                   ></Field>

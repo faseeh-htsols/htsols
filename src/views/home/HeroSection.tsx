@@ -68,7 +68,10 @@ export const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative lg:min-h-screen overflow-hidden bg-[url(/home-header.jpg)]">
+    <section
+      className="relative lg:min-h-screen overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/home-header.webp')" }}
+    >
       {/* Background with 3D terrain effect */}
       {/* <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#111] to-[#0a1a1a]" />

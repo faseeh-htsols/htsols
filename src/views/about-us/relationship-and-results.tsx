@@ -10,7 +10,7 @@ const lists = [
 ];
 const RelationshipAndResults = () => {
   return (
-    <div className="py-24 bg-[url(/what-happens-after-launch.jpg)] bg-cover">
+    <div className="py-24 bg-[url(/what-happens-after-launch.webp)] bg-cover">
       <Container>
         <div className="flex flex-col gap-6">
           <HeadingTwo className="text-center mb-10" span="Results">
@@ -25,7 +25,7 @@ const RelationshipAndResults = () => {
                 consistency, and true partnership.
               </p>
               <p className="font-semibold">We take the time to understand: </p>
-              <div className="border-[#5C5C5C] rounded-2xl bg-[url(/happens-after-bg.png)] bg-bottom bg-no-repeat border-2 py-10 px-3">
+              <div className="border-[#5C5C5C] rounded-2xl bg-[url(/happens-after-bg.webp)] bg-cover bg-bottom bg-no-repeat border-2 py-10 px-3">
                 <div className="flex flex-col gap-3 pb-6 border-b border-white">
                   {lists.map((list, idx) => (
                     <div key={idx} className="flex gap-3">
@@ -50,7 +50,7 @@ const RelationshipAndResults = () => {
             </div>
             <div className="grow">
               <Image
-                src={"/happens-after.png"}
+                src={"/happens-after.webp"}
                 alt="image"
                 className="w-full min-h-[300px] rounded-3xl lg:h-full object-cover"
                 width={600}

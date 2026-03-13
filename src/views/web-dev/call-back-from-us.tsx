@@ -22,7 +22,7 @@ const CallBackFromUs = () => {
           </div>
           <div className="lg:w-[37%] lg:absolute lg:-top-10 lg:right-0">
             <Image
-              src={"/call-back-from-us.png"}
+              src={"/call-back-from-us.webp"}
               alt="Call back from us"
               width={700}
               height={700}

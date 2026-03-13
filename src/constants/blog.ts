@@ -79,7 +79,7 @@ export const BLOGS: BlogPost[] = [
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       authorName: "John Doe",
-      authorImage: "/author.png",
+      authorImage: "/author.webp",
       scheduledDate: "2025-01-20",
       tags: ["marketing", "seo", "growth"],
     },
@@ -101,7 +101,7 @@ export const BLOGS: BlogPost[] = [
         sectionIndex: 1,
         cta: {
           id: 1,
-          imageUrl: "/blog-cta.png",
+          imageUrl: "/blog-cta.webp",
           heading: "Need Help With Digital Marketing?",
           paragraph:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Talk to our experts today.",
@@ -119,7 +119,7 @@ export const BLOGS: BlogPost[] = [
     ],
     author: {
       name: "Author Details",
-    pictureUrl: "/author-avatar.png",
+    pictureUrl: "/author-avatar.webp",
       bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc",
       scheduledDate: "2025-01-20",
     },
@@ -145,7 +145,7 @@ export const BLOGS: BlogPost[] = [
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       authorName: "John Doe",
-      authorImage: "/author.png",
+      authorImage: "/author.webp",
       scheduledDate: "2025-01-20",
       tags: ["marketing", "seo", "growth"],
     },
@@ -167,7 +167,7 @@ export const BLOGS: BlogPost[] = [
         sectionIndex: 1,
         cta: {
           id: 1,
-          imageUrl: "/blog-cta.png",
+          imageUrl: "/blog-cta.webp",
           heading: "Need Help With Digital Marketing?",
           paragraph:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Talk to our experts today.",
@@ -185,7 +185,7 @@ export const BLOGS: BlogPost[] = [
     ],
     author: {
       name: "John Doe",
-      pictureUrl: "/author-avatar.png",
+      pictureUrl: "/author-avatar.webp",
       bio: "John is a digital marketing strategist with 10+ years of experience.",
       scheduledDate: "2025-01-20",
     },

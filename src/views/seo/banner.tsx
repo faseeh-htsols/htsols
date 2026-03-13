@@ -24,7 +24,7 @@ const Banner = () => {
     <div className="bg-black text-white relative overflow-hidden pb-20 pt-30 md:pb-20 md:pt-40">
       <div className="absolute top-20 left-0">
         <Image
-          src={"/left-gradient.png"}
+          src={"/left-gradient.webp"}
           width={500}
           height={500}
           className="w-[350px] h-[350px]"
@@ -36,7 +36,7 @@ const Banner = () => {
           <div className="relative order-2 lg:order-1 flex h-full items-center justify-center lg:justify-start">
             <div className="relative w-full h-full min-h-[300px] sm:min-h-[400px]">
               <Image
-                src="/seo-bannerr.png"
+                src="/seo-bannerr.webp"
                 alt="SEO growth metrics and Page 1 Rankings"
                 fill
                 className="object-cover rounded-[20px]"

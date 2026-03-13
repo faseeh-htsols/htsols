@@ -11,7 +11,7 @@ const FUNDAMENTALS = [
 
 const PrivacyAccessibilityTrust = () => {
   return (
-    <section className="relative min-h-[600px] lg:min-h-[700px] bg-[url(/design-web-dev.png)] bg-cover bg-right overflow-hidden">
+    <section className="relative min-h-[600px] lg:min-h-[700px] bg-[url(/design-web-dev.webp)] bg-cover bg-right overflow-hidden">
       <Container>
         <div className="relative z-10 flex py-16 lg:py-24">
           <div className="">

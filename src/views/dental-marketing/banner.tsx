@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Banner() {
   return (
     <div className="bg-white">
-      <section className="relative overflow-hidden bg-[url(/dental/banner-bgs.jpg)] bg-center bg-cover pb-36 ">
+      <section className="relative overflow-hidden bg-[url(/dental/banner-bgs.webp)] bg-center bg-cover pb-36 ">
         {/* Background overlay */}
         {/* <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent z-0" /> */}
 
@@ -36,7 +36,7 @@ export default function Banner() {
           {/* Right Image */}
           <div className="relative">
             <Image
-              src="/dental/banner.png"
+              src="/dental/banner.webp"
               alt="Dental website mockup"
               width={500}
               height={500}

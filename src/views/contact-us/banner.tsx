@@ -10,7 +10,7 @@ const Banner = () => {
       </div> */}
       <div className="absolute top-20 left-0">
         <Image
-          src={"/left-gradient.png"}
+          src={"/left-gradient.webp"}
           width={500}
           height={500}
           className="w-[350px] h-[350px]"
@@ -19,7 +19,7 @@ const Banner = () => {
       </div>
       <div className="absolute top-20 right-0">
         <Image
-          src={"/right-gradient.png"}
+          src={"/right-gradient.webp"}
           width={500}
           height={500}
           className="w-[350px] h-[350px]"
@@ -53,14 +53,14 @@ const Banner = () => {
             <div>
               <input
                 type="text"
-                className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+                className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                 placeholder="First Name"
               />
             </div>
             <div>
               <input
                 type="text"
-                className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+                className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                 placeholder="Last Name"
               />
             </div>
@@ -69,14 +69,14 @@ const Banner = () => {
             <div>
               <input
                 type="text"
-                className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+                className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                 placeholder="Contact No"
               />
             </div>
             <div>
               <input
                 type="text"
-                className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+                className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                 placeholder="Email Address"
               />
             </div>
@@ -85,14 +85,14 @@ const Banner = () => {
             <div>
               <input
                 type="text"
-                className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+                className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                 placeholder="City/Area"
               />
             </div>
             <select
               name=""
               id=""
-              className="h-10 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-sm px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+              className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-sm px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
             >
               <option value="" className="bg-black text-white">
                 web dev
@@ -114,7 +114,7 @@ const Banner = () => {
           <div className="mb-3">
             <textarea
               name=""
-              className="h-28 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 py-3 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+              className="h-28 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 py-3 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
               placeholder="Enquiry  details"
               id=""
             ></textarea>

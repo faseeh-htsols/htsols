@@ -6,13 +6,13 @@ const projects = [
   {
     name: "Website Name Here",
     subname: "View Live Website",
-    image: "/services/web-one.png",
+    image: "/services/web-one.webp",
     href: "#",
   },
   {
     name: "Website Name Here",
     subname: "View Live Website",
-    image: "/services/web-two.png",
+    image: "/services/web-two.webp",
     href: "#",
   },
 ];

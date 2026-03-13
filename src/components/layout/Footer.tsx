@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
               <div className="flex md:justify-start justify-center items-center">
                 <Link href="/" className="flex items-center gap-0">
                   <Image
-                    src={"/footer-logo.png"}
+                    src={"/footer-logo.webp"}
                     width={300}
                     height={300}
                     className="w-[260px] h-[70px] object-contain"

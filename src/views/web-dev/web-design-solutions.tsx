@@ -14,58 +14,40 @@ type SolutionItem = {
 const ITEMS: SolutionItem[] = [
   {
     title: "UI AND UX DESIGN, PLUS WIREFRAMES",
-    image: "/web-solutions/ui-ux.jpg",
+    image: "/design-web-dev.webp",
     alt: "UI/UX design and wireframes",
   },
   {
     title: "FULL DEVELOPMENT AND CMS SETUP",
-    image: "/web-solutions/development-cms.jpg",
+    image: "/website-development-services.webp",
     alt: "Full development and CMS setup",
   },
   {
     title: "CONVERSION-FOCUSED LAYOUTS AND FORMS",
-    image: "/web-solutions/conversion-forms.jpg",
+    image: "/services/web-one.webp",
     alt: "Conversion-focused layouts and forms",
   },
   {
     title: "TECHNICAL SEO FOUNDATIONS",
-    image: "/web-solutions/technical-seo.jpg",
+    image: "/website/seo-ready.webp",
     alt: "Technical SEO foundations",
   },
   {
     title: "ANALYTICS AND TRACKING SETUP",
-    image: "/web-solutions/analytics-tracking.jpg",
+    image: "/seo-bannerr.webp",
     alt: "Analytics and tracking setup",
   },
   {
     title: "PERFORMANCE OPTIMIZATION",
-    image: "/web-solutions/performance.jpg",
+    image: "/web-dev-ser-home.webp",
     alt: "Performance optimization",
   },
   {
     title: "LAUNCH SUPPORT AND TRAINING",
-    image: "/web-solutions/launch-support.jpg",
+    image: "/what-happens-after-launch.webp",
     alt: "Launch support and training",
   },
 ];
-
-const ArrowRight = ({ className = "" }: { className?: string }) => (
-  <svg
-    className={className}
-    width="18"
-    height="18"
-    viewBox="0 0 24 24"
-    fill="none"
-    aria-hidden="true">
-    <path
-      d="M10 7l5 5-5 5"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
 
 const WebDesignSolutions = () => {
   const [active, setActive] = useState(0);
@@ -97,7 +79,7 @@ const WebDesignSolutions = () => {
           </div>
 
           {/* Content */}
-          <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
+          <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
             {/* Left list */}
             <div className="space-y-3">
               {ITEMS.map((item, idx) => {
@@ -147,7 +129,7 @@ const WebDesignSolutions = () => {
             </div>
 
             {/* Right image */}
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] h-[360px] sm:h-[420px] lg:h-[520px]">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] min-h-[360px] sm:min-h-[420px] lg:min-h-[520px] h-full">
               <div className="absolute inset-0">
                 <Image
                   key={ITEMS[active].image} // re-mount for instant swap

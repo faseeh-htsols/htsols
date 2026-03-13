@@ -18,31 +18,31 @@ const STEPS = [
     no: "01",
     title: "CREATIVE",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "/cgi/burger-o-clock.png",
+    image: "/cgi/burger-o-clock.webp",
   },
   {
     no: "02",
     title: "SHOOTING",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "/cgi/piza-hits.png",
+    image: "/cgi/piza-hits.webp",
   },
   {
     no: "03",
     title: "3D SCENE",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "/cgi/burger-o-clock.png",
+    image: "/cgi/burger-o-clock.webp",
   },
   {
     no: "04",
     title: "ANIMATION",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "/cgi/piza-hits.png",
+    image: "/cgi/piza-hits.webp",
   },
   {
     no: "05",
     title: "POST-PRODUCTION",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "/cgi/burger-o-clock.png",
+    image: "/cgi/burger-o-clock.webp",
   },
 ];
 

@@ -9,22 +9,22 @@ import PopUp from "@/components/ui/popup";
 const TRENDING_ITEMS = [
   {
     title: "Burger O Clock",
-    img: "/cgi/burger-o-clockp.png",
+    img: "/cgi/burger-o-clockp.webp",
     video: "/cgi1.mp4",
   },
   {
     title: "DOG CHOW",
-    img: "/cgi/piza-hits.png",
+    img: "/cgi/piza-hits.webp",
     video: "/cgi2.mp4",
   },
   {
     title: "Burger O Clock",
-    img: "/cgi/burger-o-clockp.png",
+    img: "/cgi/burger-o-clockp.webp",
     video: "/cgi1.mp4",
   },
   {
     title: "DOG CHOW",
-    img: "/cgi/piza-hits.png",
+    img: "/cgi/piza-hits.webp",
     video: "/cgi2.mp4",
   },
 ];

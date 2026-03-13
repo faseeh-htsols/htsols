@@ -100,7 +100,7 @@ const ShowingUp = () => {
                             <div className="relative h-full rounded-[20px] p-px bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] shadow-[0_0_25px_rgba(0,131,138,0.18)]">
                                 <div className="relative h-full rounded-[20px] bg-[#071014] px-5 sm:px-6 py-6 overflow-hidden min-h-[220px] flex flex-col justify-center">
                                     <div
-                                        className="absolute inset-0 bg-[url('/seo-ball.png')] bg-cover bg-center bg-no-repeat opacity-40"
+                                        className="absolute inset-0 bg-[url('/seo-ball.webp')] bg-cover bg-center bg-no-repeat opacity-40"
                                         aria-hidden
                                     />
 

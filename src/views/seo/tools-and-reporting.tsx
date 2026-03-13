@@ -6,30 +6,34 @@ import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import gsap from "gsap";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 const WHY_CHOOSE_ITEMS = [
     {
         heading: "SEO Health Check",
         description:
             "Technical and on-page diagnostics identifying crawl errors, indexing issues, speed gaps, and missed opportunities.",
-        image: "/seo-bannerr.png",
+        image: "/seo-bannerr.webp",
     },
     {
         heading: "Keyword & Content Map",
         description:
             "A plan connecting keywords to pages so your content matches real search intent, not assumptions.",
-        image: "/seo-service-img.png",
+        image: "/seo-service-img.webp",
     },
     {
         heading: "Local Visibility Tracker",
         description:
             "Monitor map rankings and location-based searches across Canadian cities and service areas.",
-        image: "/seo-services.png",
+        image: "/seo-services.webp",
     },
     {
         heading: "Performance Dashboard & Monthly Reporting",
         description:
             "Track rankings, traffic, conversions, and lead quality with clear explanations of what changed and what comes next.",
-        image: "/seo-ball.png",
+        image: "/seo-ball.webp",
     },
 ];
 
@@ -82,8 +86,47 @@ const ToolsAndReporting = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] gap-10 lg:gap-14 items-start">
-                    <div className="flex flex-col gap-20">
+                <div className="md:hidden">
+                    <Swiper
+                        modules={[Pagination]}
+                        slidesPerView={1}
+                        spaceBetween={16}
+                        pagination={{ clickable: true }}
+                        className="seo-tools-mobile-swiper [&_.swiper-pagination]:!static [&_.swiper-pagination]:!mt-4"
+                    >
+                        {WHY_CHOOSE_ITEMS.map((item) => (
+                            <SwiperSlide key={item.heading}>
+                                <div className="rounded-2xl bg-[#191919] border border-white/10 overflow-hidden">
+                                    <div className="p-5 pb-4">
+                                        <h3 className="font-primary font-medium uppercase text-base tracking-wide text-white">
+                                            {item.heading}
+                                        </h3>
+                                        <p className="mt-2 text-sm leading-relaxed text-white/80">
+                                            {item.description}
+                                        </p>
+                                    </div>
+                                    <div className="relative w-full aspect-4/3 border-t border-white/10">
+                                        <Image
+                                            src={item.image}
+                                            alt={item.heading}
+                                            fill
+                                            className="object-cover"
+                                            sizes="100vw"
+                                        />
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                    <div className="mt-6 flex justify-center">
+                        <Button href="/contact-us" variant="outline">
+                            LEARN HOW OUR SEO REPORTING WORKS
+                        </Button>
+                    </div>
+                </div>
+
+                <div className="hidden md:grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] gap-10 lg:gap-14 items-start">
+                    <div className="flex flex-col gap-10">
                         {WHY_CHOOSE_ITEMS.map((item, index) => (
                             <button
                                 key={item.heading}

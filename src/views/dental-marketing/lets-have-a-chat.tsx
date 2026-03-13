@@ -92,7 +92,7 @@ const LetsHaveAChat = () => {
           <div className="mb-3">
             <textarea
               name=""
-              className="h-28 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border border-black rounded-md px-4 py-3 backdrop:backdrop-blur-2xl placeholder:text-[#020202] text-black"
+              className="h-28 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border border-black rounded-md px-4 py-3 backdrop:backdrop-blur-2xl placeholder:text-[#020202] text-black"
               placeholder="Enquiry  details"
               id=""
             ></textarea>

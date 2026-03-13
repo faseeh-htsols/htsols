@@ -33,7 +33,7 @@ const About = () => {
       </Container>
       <div>
         {/* <Image
-          src={"/cgi/about.png"}
+          src={"/cgi/about.webp"}
           alt="image"
           width={1000}
           height={1000}

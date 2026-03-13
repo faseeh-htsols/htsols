@@ -22,37 +22,37 @@ const services: ServiceCard[] = [
     title: "WEBSITE DEVELOPMENT SERVICES",
     description:
       "Design and development that turns visitors into leads with speed, clarity, and clean UX.",
-    image: "/web-dev-ser-home.png",
+    image: "/web-dev-ser-home.webp",
   },
   {
     title: "SEO SERVICES",
     description:
       "Smart SEO, content, and campaigns that get you seen in Google, ChatGPT, and where buyers search.",
-    image: "/seo-ser-home.png",
+    image: "/seo-ser-home.webp",
   },
   {
     title: "CGI SERVICES",
     description:
       "Scroll-stopping CGI and 3D visuals that make your product look premium and earn attention fast.",
-    image: "/cgi-ser-home.png",
+    image: "/cgi-ser-home.webp",
   },
   {
     title: "STAFF AUGMENTATION",
     description:
       "Add vetted developers and designers to your team, without the hiring delays or overhead.",
-    image: "/staff-aug.png",
+    image: "/staff-aug.webp",
   },
   {
     title: "DIGITAL TRANSFORMATION",
     description:
       "Strategy and execution that modernises your business without disrupting day-to-day delivery.",
-    image: "/digital-transformations.png",
+    image: "/digital-transformations.webp",
   },
   {
     title: "DIGITAL MARKETING",
     description:
       "Performance marketing that drives qualified traffic, better leads, and stronger ROI across channels.",
-    image: "/digital-marketing.png",
+    image: "/digital-marketing.webp",
   },
 ];
 

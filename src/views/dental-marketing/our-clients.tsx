@@ -3,39 +3,39 @@ import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
 const data = [
   {
-    logo: "/dental/clients1.png",
+    logo: "/dental/clients1.webp",
     name: "image",
   },
   {
-    logo: "/dental/clients2.png",
+    logo: "/dental/clients2.webp",
     name: "image",
   },
   {
-    logo: "/dental/clients3.png",
+    logo: "/dental/clients3.webp",
     name: "image",
   },
   {
-    logo: "/dental/clients4.png",
+    logo: "/dental/clients4.webp",
     name: "image",
   },
   {
-    logo: "/dental/clients5.png",
+    logo: "/dental/clients5.webp",
     name: "image",
   },
   {
-    logo: "/dental/clients6.png",
+    logo: "/dental/clients6.webp",
     name: "image",
   },
   {
-    logo: "/dental/clients7.png",
+    logo: "/dental/clients7.webp",
     name: "image",
   },
   {
-    logo: "/dental/clients8.png",
+    logo: "/dental/clients8.webp",
     name: "image",
   },
   {
-    logo: "/dental/clients9.png",
+    logo: "/dental/clients9.webp",
     name: "image",
   },
 ];

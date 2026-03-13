@@ -5,25 +5,25 @@ import Image from "next/image";
 import Link from "next/link";
 const data = [
   {
-    image: "/dental/strategy-visual.jpg",
+    image: "/dental/strategy-visual.webp",
     heading: "High-Conversion Website Design & UI/UX",
     para: `We build stunning, mobile-responsive dental websites that turn visitors into patients. By focusing on intuitive navigation and ultra-fast load times (under 3 seconds), we eliminate user frustration and can increase your patient bookings by up to 29%. Every site is strategically designed with clear "Book Now" actions to maximize your ROI.`,
     icon: "/dental/uiux.json",
   },
   {
-    image: "/dental/strategy-visual.jpg",
+    image: "/dental/strategy-visual.webp",
     heading: "Strategic Branding & Visual Identity",
     para: `Build immediate trust with a professional brand that reflects clinical excellence. Since 75% of patients choose a dentist based on their visual branding, we craft cohesive logos, color palettes, and brand voices that set you apart. Our branding strategies don't just look good—they can increase revenue by up to 23% by building long-term patient credibility. `,
     icon: "/dental/strategic-branding-visual-identity.json",
   },
   {
-    image: "/dental/custom-software-automation.jpg",
+    image: "/dental/custom-software-automation.webp",
     heading: "Local SEO & Search Authority",
     para: `Dominate your local market and ensure you are the first choice when patients search for a "dentist near me." With 93% of all web traffic flowing through Google, we use specialized dental SEO and Google Business Profile optimization to rank your practice at the top. We focus on qualified local traffic to ensure more patients walk through your doors.`,
     icon: "/dental/local-seo-search-authority.json",
   },
   {
-    image: "/dental/custom-software-automation.jpg",
+    image: "/dental/custom-software-automation.webp",
     heading: "Custom Software & Practice Automation",
     para: `Modernize your practice with tailored technology designed to streamline operations. From online appointment scheduling—which 77% of patients now prefer—to custom patient intake forms and automated reminder systems, we build tools that save your staff time, reduce no-shows, and provide a cutting-edge experience for your patients.`,
     icon: "/dental/custom-software-practice-automation.json",

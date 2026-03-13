@@ -26,12 +26,12 @@ const showcaseItems: ShowcaseItem[] = [
     variant: "blur",
     name: "Website Name Here",
     subname: "View Live Website",
-    image: "/services/web-one.png",
+    image: "/services/web-one.webp",
     href: "#",
   },
   {
     variant: "dual",
-    image: "/two_laptops.png",
+    image: "/two_laptops.webp",
     labels: [
       {
         name: "Website Name Here",

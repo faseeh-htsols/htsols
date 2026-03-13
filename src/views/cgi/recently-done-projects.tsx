@@ -59,13 +59,13 @@ const RecentlyDoneProjects = () => {
             </HeadingTwo>{" "}
           </div>
         </Container>
-        <div className="bg-[url(/cgi/reccently-done-bg.png)] bg-center">
+        <div className="bg-[url(/cgi/reccently-done-bg.webp)] bg-cover bg-center bg-no-repeat">
           <Container>
             <div className="max-w-[300px] mx-auto">
               {/* <Image
               width={300}
               height={1000}
-              src={"/cgi/reccently-done.png"}
+              src={"/cgi/reccently-done.webp"}
               alt="image"
               className="w-full h-[450px] object-contain object-center"
             /> */}

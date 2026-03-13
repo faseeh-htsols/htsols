@@ -32,7 +32,7 @@ const PlanNextStep = () => {
   return (
     <div className="bg-black py-20" ref={mainRef}>
       <Container>
-        <div className="bg-[url(/next-step.png)] bg-cover rounded-2xl overflow-hidden">
+        <div className="bg-[url(/next-step.webp)] bg-cover rounded-2xl overflow-hidden">
           <div className="flex relative">
             <div className="max-w-[980px] py-10 px-4 flex flex-col gap-5">
               <HeadingTwo className="relative text-white z-1">
@@ -53,7 +53,7 @@ const PlanNextStep = () => {
             </div>
             <div ref={divRef} className="absolute  h-full w-[40%] right-0">
               <Image
-                src={"/right-next-step.png"}
+                src={"/right-next-step.webp"}
                 alt="image"
                 width={100}
                 height={100}

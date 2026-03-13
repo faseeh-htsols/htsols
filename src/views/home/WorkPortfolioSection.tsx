@@ -26,7 +26,7 @@ const portfolioSlides: PortfolioSlide[] = [
     description:
       "High-performing teams that plug seamlessly into your workflows so you can scale faster.High-performing teams that plug",
     stats: ["UI/UX", "E-COMMERCE", "PERFORMANCE"],
-    image: "/web-dev.png",
+    image: "/web-dev.webp",
   },
   {
     label: "VERTEX DASH",
@@ -34,7 +34,7 @@ const portfolioSlides: PortfolioSlide[] = [
     description:
       "High-performing teams that plug seamlessly into your workflows so you can scale faster.High-performing teams that plug",
     stats: ["PRODUCT DESIGN", "SAAS", "MOBILE"],
-    image: "/web-dev.png",
+    image: "/web-dev.webp",
   },
   {
     label: "NOVA GRID",
@@ -42,7 +42,7 @@ const portfolioSlides: PortfolioSlide[] = [
     description:
       "High-performing teams that plug seamlessly into your workflows so you can scale faster.High-performing teams that plug",
     stats: ["DEDICATED TEAMS", "STRATEGY", "DELIVERY"],
-    image: "/web-dev.png",
+    image: "/web-dev.webp",
   },
   {
     label: "AERO SCULPT",
@@ -50,7 +50,7 @@ const portfolioSlides: PortfolioSlide[] = [
     description:
       "High-performing teams that plug seamlessly into your workflows so you can scale faster.High-performing teams that plug",
     stats: ["UI/UX", "E-COMMERCE", "PERFORMANCE"],
-    image: "/web-dev.png",
+    image: "/web-dev.webp",
   },
   {
     label: "VERTEX DASH",
@@ -58,7 +58,7 @@ const portfolioSlides: PortfolioSlide[] = [
     description:
       "High-performing teams that plug seamlessly into your workflows so you can scale faster.High-performing teams that plug",
     stats: ["PRODUCT DESIGN", "SAAS", "MOBILE"],
-    image: "/web-dev.png",
+    image: "/web-dev.webp",
   },
   {
     label: "NOVA GRID",
@@ -66,7 +66,7 @@ const portfolioSlides: PortfolioSlide[] = [
     description:
       "High-performing teams that plug seamlessly into your workflows so you can scale faster.High-performing teams that plug",
     stats: ["DEDICATED TEAMS", "STRATEGY", "DELIVERY"],
-    image: "/web-dev.png",
+    image: "/web-dev.webp",
   },
 ];
 

@@ -7,10 +7,10 @@ import React from "react";
 
 const ViewOnInstgram = () => {
   const instaPosts = [
-    { image: "/ceo/cgi-cgiadds.png", alt: "Instagram post 1" },
-    { image: "/ceo/cgi-burger.png", alt: "Instagram post 2" },
-    { image: "/ceo/cgi-watch.png", alt: "Instagram post 3" },
-    { image: "/ceo/cgi-hoodie.png", alt: "Instagram post 4" },
+    { image: "/ceo/cgi-cgiadds.webp", alt: "Instagram post 1" },
+    { image: "/ceo/cgi-burger.webp", alt: "Instagram post 2" },
+    { image: "/ceo/cgi-watch.webp", alt: "Instagram post 3" },
+    { image: "/ceo/cgi-hoodie.webp", alt: "Instagram post 4" },
   ];
 
   return (

@@ -7,7 +7,7 @@ import Image from "next/image";
 const InnovativeProblem = () => {
   const displayText = useTypewriterHeadings();
   return (
-    <div className="py-24 bg-[url(/cgi/innovative-bg.png)] bg-cover">
+    <div className="py-24 bg-[url(/cgi/innovative-bg.webp)] bg-cover">
       <Container>
         <div>
           <HeadingTwo className="text-center mb-10 h-[100px]">
@@ -17,7 +17,7 @@ const InnovativeProblem = () => {
           <div className="relative">
             <div className="flex justify-center">
               {/* <Image
-                src={"/cgi/inovative-logo.png"}
+                src={"/cgi/inovative-logo.webp"}
                 alt="logo"
                 width={200}
                 height={200}
@@ -53,7 +53,7 @@ const InnovativeProblem = () => {
               />
             </div>
             <div className="flex mb-16 lg:mb-0 gap-16 lg:gap-0 flex-col lg:flex-row mt-14 justify-between">
-              <div className="lg:w-[30%] p-4 relative bg-center bg-[url(/cgi/innovative-problem-card.png)] bg-cover border-2 border-white/20 rounded-2xl">
+              <div className="lg:w-[30%] p-4 relative bg-center bg-[url(/cgi/innovative-problem-card.webp)] bg-cover border-2 border-white/20 rounded-2xl">
                 <div className="mx-auto mb-5 -mt-14 rounded-full w-[70px] h-[70px] flex justify-center items-center bg-[linear-gradient(180deg,#00838A_0%,#00A1A5_100%)]">
                   {/* <Image
                     width={40}
@@ -96,7 +96,7 @@ const InnovativeProblem = () => {
                   credibility and trust with your audience.
                 </p>
               </div>
-              <div className="lg:w-[30%] relative p-4 bg-center bg-[url(/cgi/innovative-problem-card.png)] bg-cover border-2 border-white/20 rounded-2xl">
+              <div className="lg:w-[30%] relative p-4 bg-center bg-[url(/cgi/innovative-problem-card.webp)] bg-cover border-2 border-white/20 rounded-2xl">
                 <div className="mx-auto mb-5 -mt-14 rounded-full w-[70px] h-[70px] flex justify-center items-center bg-[linear-gradient(180deg,#00838A_0%,#00A1A5_100%)]">
                   {/* <Image
                     width={40}
@@ -143,7 +143,7 @@ const InnovativeProblem = () => {
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="lg:w-[30%] relative p-4 bg-[url(/cgi/innovative-problem-card.png)] bg-cover border-2 border-white/20 rounded-2xl">
+              <div className="lg:w-[30%] relative p-4 bg-[url(/cgi/innovative-problem-card.webp)] bg-cover border-2 border-white/20 rounded-2xl">
                 <div className="mx-auto mb-5 -mt-14 rounded-full w-[70px] h-[70px] flex justify-center items-center bg-[linear-gradient(180deg,#00838A_0%,#00A1A5_100%)]">
                   {/* <Image
                     width={40}

@@ -25,11 +25,6 @@ const ClearStrategy = () => {
                                 Real Results.
                             </HeadingTwo>
 
-                            <p className="mt-5 text-white max-w-5xl mx-auto">
-                                HTSOL Inc. prioritises clarity, execution, and measurable outcomes.
-                                You should always know what we are doing, why it matters, and how
-                                it affects your growth.
-                            </p>
                         </div>
 
                         <div className="">

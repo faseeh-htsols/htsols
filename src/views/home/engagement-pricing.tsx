@@ -105,7 +105,7 @@ const EngagementPricing = () => {
             <div ref={leftRef}>
               <div>
                 <Image
-                  src={"/engagement-pricing1.png"}
+                  src={"/engagement-pricing1.webp"}
                   alt="image"
                   width={400}
                   height={400}
@@ -114,7 +114,7 @@ const EngagementPricing = () => {
               </div>
               <div className="-mt-24">
                 <Image
-                  src={"/engagement-pricing2.png"}
+                  src={"/engagement-pricing2.webp"}
                   alt="image"
                   width={400}
                   height={400}

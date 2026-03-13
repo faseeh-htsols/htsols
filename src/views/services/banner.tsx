@@ -8,7 +8,7 @@ const Banner = () => {
     <div className="bg-black relative py-10 pt-32 [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]">
       <div className="absolute top-20 left-0">
         <Image
-          src={"/left-gradient.png"}
+          src={"/left-gradient.webp"}
           width={500}
           height={500}
           className="w-[350px] h-[350px]"
@@ -17,7 +17,7 @@ const Banner = () => {
       </div>
       <div className="absolute top-20 right-0">
         <Image
-          src={"/right-gradient.png"}
+          src={"/right-gradient.webp"}
           width={500}
           height={500}
           className="w-[350px] h-[350px]"
@@ -30,7 +30,7 @@ const Banner = () => {
             <span className="flex uppercase items-center font-primary gap-3">
               <span className="border-b-2 border-white">Digital</span>
               <Image
-                src={"/services-header.png"}
+                src={"/services-header.webp"}
                 width={200}
                 height={200}
                 alt="services header"

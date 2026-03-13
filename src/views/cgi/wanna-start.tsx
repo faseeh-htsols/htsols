@@ -3,7 +3,7 @@ import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
 const WannaStart = () => {
   return (
-    <div className="py-20 rounded-t-4xl bg-[url('/cgi/new-lines.png'),linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-cover                                       ">
+    <div className="py-20 rounded-t-4xl bg-[url('/cgi/new-lines.webp'),linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-cover                                       ">
       <Container>
         <div className="flex flex-col gap-20">
           <HeadingTwo className="text-center">

@@ -5,6 +5,10 @@ import DoubleCurves from "@/components/ui/double-curves";
 import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const TOP_CARDS = [
     {
@@ -73,14 +77,70 @@ const Services = () => {
                     </div>
 
                     <div className="rounded-[10px] p-px bg-[linear-gradient(90deg,rgba(7,91,101,0.9)_0%,rgba(0,131,138,0.9)_37.02%,rgba(50,138,153,0.9)_81.25%)]">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px lg:gap-0 bg-[#0a4f57] lg:bg-black rounded-[10px] overflow-hidden">
+                        <div className="md:hidden bg-[#0a4f57] rounded-[10px] overflow-hidden p-3">
+                            <Swiper
+                                modules={[Pagination]}
+                                slidesPerView={1}
+                                spaceBetween={16}
+                                pagination={{ clickable: true }}
+                                className="seo-services-mobile-swiper [&_.swiper-pagination]:!static [&_.swiper-pagination]:!mt-4"
+                            >
+                                {TOP_CARDS.map((item) => (
+                                    <SwiperSlide key={item.heading}>
+                                        <div className="bg-black px-4 sm:px-5 py-5 min-h-[210px] flex flex-col rounded-[8px]">
+                                            <div className="mb-3">
+                                                <Image
+                                                    src="/icon-1.svg"
+                                                    alt="icon"
+                                                    width={40}
+                                                    height={40}
+                                                    className="object-contain"
+                                                    aria-hidden="true"
+                                                />
+                                            </div>
+
+                                            <h3 className="font-primary uppercase text-white text-[18px] tracking-wide font-semibold mb-2">
+                                                {item.heading}
+                                            </h3>
+
+                                            <p className="text-white leading-normal">
+                                                {item.para}
+                                            </p>
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
+
+                                <SwiperSlide key={BOTTOM_LEFT_CARD.heading}>
+                                    <div className="bg-black px-4 sm:px-5 py-5 min-h-[210px] flex flex-col rounded-[8px]">
+                                        <div className="mb-3">
+                                            <Image
+                                                src="/icon-1.svg"
+                                                alt="icon"
+                                                width={40}
+                                                height={40}
+                                                className="object-contain"
+                                                aria-hidden="true"
+                                            />
+                                        </div>
+
+                                        <h3 className="font-primary font-semibold uppercase text-[18px] tracking-wide mb-2 text-white">
+                                            {BOTTOM_LEFT_CARD.heading}
+                                        </h3>
+
+                                        <p className="text-white leading-normal">
+                                            {BOTTOM_LEFT_CARD.para}
+                                        </p>
+                                    </div>
+                                </SwiperSlide>
+                            </Swiper>
+                        </div>
+
+                        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px lg:gap-0 bg-[#0a4f57] lg:bg-black rounded-[10px] overflow-hidden">
                             {TOP_CARDS.map((item, index) => (
                                 <div
                                     key={item.heading}
-                                    className={`bg-black px-4 sm:px-5 py-5 min-h-[150px] flex flex-col
-      lg:border-b lg:border-[#0a4f57]
-      ${index % 3 === 0 ? "lg:border-r lg:border-[#0a4f57]" : ""}
-    `}
+                                    className={`bg-black px-4 sm:px-5 py-5 min-h-[150px] flex flex-col lg:border-b lg:border-[#0a4f57] ${(index + 1) % 3 !== 0 ? "lg:border-r lg:border-[#0a4f57]" : ""
+                                        }`}
                                 >
                                     <div className="mb-3">
                                         <Image
@@ -128,7 +188,7 @@ const Services = () => {
                                 <div className="grid grid-cols-2 h-full">
                                     <div className="relative min-h-[150px] overflow-hidden col-span-2">
                                         <Image
-                                            src="/seo-service-img.png"
+                                            src="/seo-service-img.webp"
                                             alt="SEO visual"
                                             fill
                                             className="object-cover"

@@ -18,7 +18,7 @@ const AboutMe = () => {
               // }}
             ></div>
             <Image
-              src={"/ceo/about-me.png"}
+              src={"/ceo/about-me.webp"}
               width={600}
               height={600}
               className="relative"
@@ -44,7 +44,7 @@ const AboutMe = () => {
             </div>
             <div>
               <Image
-                src={"/ceo/signature.png"}
+                src={"/ceo/signature.webp"}
                 width={165}
                 height={100}
                 className="w-40 h-[100px] object-contain"

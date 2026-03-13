@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function WhyChooseAgency() {
   return (
-    <section className="relative bg-[url(/dental/bg-why-choose.jpg)] bg-cover py-10 overflow-hidden">
+    <section className="relative bg-[url(/dental/bg-why-choose.webp)] bg-cover py-10 overflow-hidden">
       {/* subtle gradient */}
       {/* <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/30 to-transparent" /> */}
 
@@ -58,7 +58,7 @@ export default function WhyChooseAgency() {
         {/* RIGHT IMAGE */}
         <div className="relative ">
           {/* <Image
-            src="/dental/macbook-air.jpg"
+            src="/dental/macbook-air.webp"
             alt="Agency laptop showcase"
             width={600}
             height={600}

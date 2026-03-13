@@ -6,7 +6,7 @@ const Banner = () => {
     <section className="bg-black relative pt-32 pb-20 overflow-hidden">
       <div className="absolute top-20 left-0">
         <Image
-          src={"/left-gradient.png"}
+          src={"/left-gradient.webp"}
           width={500}
           height={500}
           className="w-[350px] h-[350px]"
@@ -15,7 +15,7 @@ const Banner = () => {
       </div>
       <div className="absolute top-20 right-0">
         <Image
-          src={"/right-gradient.png"}
+          src={"/right-gradient.webp"}
           width={500}
           height={500}
           className="w-[350px] h-[350px]"
@@ -32,7 +32,7 @@ const Banner = () => {
             <div className="relative rounded-[28px] border border-white/10 bg-[#050505] p-3">
               <div className="relative h-[220px] sm:h-[320px] md:h-[420px] rounded-[22px] overflow-hidden">
                 <Image
-                  src="/web-dev.png"
+                  src="/web-dev.webp"
                   alt="Web development preview"
                   fill
                   sizes="(max-width: 768px) 100vw, 1020px"

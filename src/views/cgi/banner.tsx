@@ -26,11 +26,11 @@ const Banner = () => {
   return (
     <div
       ref={containerRef}
-      className="bg-[url(/cgi/banner.png)] h-screen bg-center flex items-center relative pb-36 bg-cover  "
+      className="bg-[url(/cgi/banner.webp)] h-screen bg-center flex items-center relative pb-36 bg-cover  "
     >
       <div className="absolute top-20 left-0">
         <Image
-          src={"/left-gradient.png"}
+          src={"/left-gradient.webp"}
           width={500}
           height={500}
           className="w-[350px] h-[350px]"
@@ -39,7 +39,7 @@ const Banner = () => {
       </div>
       <div className="absolute top-20 right-0">
         <Image
-          src={"/right-gradient.png"}
+          src={"/right-gradient.webp"}
           width={500}
           height={500}
           className="w-[350px] h-[350px]"

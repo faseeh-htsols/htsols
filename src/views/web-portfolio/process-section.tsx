@@ -12,28 +12,28 @@ const steps = [
     title: "Planning",
     description:
       "We define goals, requirements, and the right path to deliver a clear outcome.",
-    image: "/website-development-services.png",
+    image: "/website-development-services.webp",
   },
   {
     id: "02",
     title: "Design",
     description:
       "We craft the experience, visuals, and layout to match the brand direction.",
-    image: "/seo-services.png",
+    image: "/seo-services.webp",
   },
   {
     id: "03",
     title: "Development",
     description:
       "We build responsive, performant interfaces and solid backend workflows.",
-    image: "/digital-transformations.png",
+    image: "/digital-transformations.webp",
   },
   {
     id: "04",
     title: "Testing",
     description:
       "We validate quality, accessibility, and performance before launch.",
-    image: "/digital-marketing.png",
+    image: "/digital-marketing.webp",
   },
 ];
 
@@ -134,7 +134,7 @@ const ProcessSection = () => {
               <div className="rounded-3xl border border-[#0f7b84] bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] p-5 h-[320px] sm:h-[380px] lg:h-[440px] flex flex-col">
                 <div className="relative h-[160px] sm:h-[200px] lg:h-[230px] rounded-2xl overflow-hidden border border-white/10">
                   <Image
-                    src="/about-htsols.jpg"
+                    src="/about-htsols.webp"
                     alt="Expert preview"
                     fill
                     sizes="(max-width: 1024px) 100vw, 320px"

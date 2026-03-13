@@ -12,18 +12,18 @@ interface Client {
   logo: string;
 }
 const clients: Client[] = [
-  { name: "Client 1", logo: "/client-sections/logo.png" },
-  { name: "Rachel White", logo: "/client-sections/rachel.png" },
-  { name: "Client 3", logo: "/client-sections/logo.png" },
-  { name: "Client 4", logo: "/client-sections/rachel.png" },
-  { name: "Rachel White", logo: "/client-sections/logo.png" },
-  { name: "Client 6", logo: "/client-sections/rachel.png" },
-  { name: "Client 7", logo: "/client-sections/logo.png" },
-  { name: "Rachel White", logo: "/client-sections/rachel.png" },
-  { name: "Client 9", logo: "/client-sections/logo.png" },
-  { name: "Client 10", logo: "/client-sections/rachel.png" },
-  { name: "Rachel White", logo: "/client-sections/logo.png" },
-  { name: "Client 12", logo: "/client-sections/rachel.png" },
+  { name: "Client 1", logo: "/client-sections/logo.webp" },
+  { name: "Rachel White", logo: "/client-sections/rachel.webp" },
+  { name: "Client 3", logo: "/client-sections/logo.webp" },
+  { name: "Client 4", logo: "/client-sections/rachel.webp" },
+  { name: "Rachel White", logo: "/client-sections/logo.webp" },
+  { name: "Client 6", logo: "/client-sections/rachel.webp" },
+  { name: "Client 7", logo: "/client-sections/logo.webp" },
+  { name: "Rachel White", logo: "/client-sections/rachel.webp" },
+  { name: "Client 9", logo: "/client-sections/logo.webp" },
+  { name: "Client 10", logo: "/client-sections/rachel.webp" },
+  { name: "Rachel White", logo: "/client-sections/logo.webp" },
+  { name: "Client 12", logo: "/client-sections/rachel.webp" },
 ];
 const ProjectToDiscuss = () => {
   return (
@@ -58,7 +58,7 @@ const ProjectToDiscuss = () => {
               />
             </div>
             <Image
-              src={"/services/ball.png"}
+              src={"/services/ball.webp"}
               alt="ball"
               width={1000}
               height={1000}

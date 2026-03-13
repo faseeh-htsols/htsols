@@ -10,31 +10,31 @@ const WHY_CHOOSE_ITEMS = [
     heading: "ONE TEAM FOR DEVELOPMENT AND MARKETING",
     description:
       "Your website should work with your SEO, ads, and content strategy. We build with your full digital ecosystem in mind.",
-    image: "/rectangle.png",
+    image: "/rectangle.webp",
   },
   {
     heading: "PERFORMANCE-FIRST BUILDS",
     description:
       "Speed, stability, and mobile usability are treated as requirements, not optional extras. This supports better user experience and more reliable Core Web Vitals.",
-    image: "/rectangle.png",
+    image: "/rectangle.webp",
   },
   {
     heading: "CLEAR, TRANSPARENT PROCESS",
     description:
       "You get clear milestones, practical guidance, and a build process that stays organized.",
-    image: "/rectangle.png",
+    image: "/rectangle.webp",
   },
   {
     heading: "DESIGNED FOR TRUST",
     description:
       "We help you present your services clearly, build credibility, and reduce friction for users who are ready to contact you.",
-    image: "/rectangle.png",
+    image: "/rectangle.webp",
   },
   {
     heading: "BUILT TO SCALE",
     description:
       "Your site should support new services, new locations, and future campaigns without needing a rebuild every year.",
-    image: "/rectangle.png",
+    image: "/rectangle.webp",
   },
 ];
 

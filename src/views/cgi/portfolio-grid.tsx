@@ -3,7 +3,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
-import Flip from "gsap/Flip";
+import { Flip } from "gsap/all";
 import Wrapper from "@/components/ui/container";
 import React from "react";
 import Image from "next/image";
@@ -35,7 +35,7 @@ const WORKS: Work[] = [
   {
     id: 1,
     title: "Burger O Clock",
-    img: "/cgi/burger-o-clockp.png",
+    img: "/cgi/burger-o-clockp.webp",
     video: "/cgi1.mp4",
     year: "2025",
     categories: ["LOGO & BRAND DESIGN"],
@@ -45,7 +45,7 @@ const WORKS: Work[] = [
   {
     id: 2,
     title: "DOG CHOW",
-    img: "/cgi/piza-hits.png",
+    img: "/cgi/piza-hits.webp",
     video: "/cgi2.mp4",
     year: "2025",
     categories: ["PHOTOGRAPHY & VIDEOGRAPHY", "WEBSITE DEVELOPMENT"],
@@ -54,7 +54,7 @@ const WORKS: Work[] = [
   {
     id: 3,
     title: "OPEN RUN",
-    img: "/cgi/burger-o-clockp.png",
+    img: "/cgi/burger-o-clockp.webp",
     video: "/cgi1.mp4",
     year: "2025",
     categories: ["PRINT"],
@@ -65,7 +65,7 @@ const WORKS: Work[] = [
     id: 4,
     title: "AUDI RS",
     year: "2025",
-    img: "/cgi/piza-hits.png",
+    img: "/cgi/piza-hits.webp",
     video: "/cgi2.mp4",
     categories: ["SOCIAL MEDIA"],
     h: 2,
@@ -73,7 +73,7 @@ const WORKS: Work[] = [
   {
     id: 5,
     title: "MEN FASHION",
-    img: "/cgi/burger-o-clockp.png",
+    img: "/cgi/burger-o-clockp.webp",
     video: "/cgi1.mp4",
     year: "2025",
     categories: ["WEBSITE DEVELOPMENT"],
@@ -81,7 +81,7 @@ const WORKS: Work[] = [
   {
     id: 6,
     title: "VISIONAID",
-    img: "/cgi/piza-hits.png",
+    img: "/cgi/piza-hits.webp",
     video: "/cgi2.mp4",
     year: "2025",
     categories: ["PRINT", "LOGO & BRAND DESIGN"],

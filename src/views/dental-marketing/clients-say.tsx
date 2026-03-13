@@ -8,31 +8,31 @@ import "swiper/css";
 import Image from "next/image";
 const data = [
   {
-    image: "/dental/dr-jd.png",
+    image: "/dental/dr-jd.webp",
     para: "Our patient flow improved and we even lowered our marketing spend while getting better results. It was a game-changer for our practice.",
     name: "Dr. J.D.,",
     position: "Dental Practice Partner",
   },
   {
-    image: "/dental/dr-jd.png",
+    image: "/dental/dr-jd.webp",
     para: "Our patient flow improved and we even lowered our marketing spend while getting better results. It was a game-changer for our practice.",
     name: "Dr. J.D.,",
     position: "Dental Practice Partner",
   },
   {
-    image: "/dental/dr-jd.png",
+    image: "/dental/dr-jd.webp",
     para: "Our patient flow improved and we even lowered our marketing spend while getting better results. It was a game-changer for our practice.",
     name: "Dr. J.D.,",
     position: "Dental Practice Partner",
   },
   {
-    image: "/dental/dr-jd.png",
+    image: "/dental/dr-jd.webp",
     para: "Our patient flow improved and we even lowered our marketing spend while getting better results. It was a game-changer for our practice.",
     name: "Dr. J.D.,",
     position: "Dental Practice Partner",
   },
   {
-    image: "/dental/dr-jd.png",
+    image: "/dental/dr-jd.webp",
     para: "Our patient flow improved and we even lowered our marketing spend while getting better results. It was a game-changer for our practice.",
     name: "Dr. J.D.,",
     position: "Dental Practice Partner",

@@ -171,7 +171,7 @@ const NoLimitations = () => {
                   >
                     Watch Full video
                     <Image
-                      src={"/right-arrow-btn.png"}
+                      src={"/right-arrow-btn.webp"}
                       alt="aroow"
                       width={30}
                       height={30}
@@ -217,7 +217,7 @@ const NoLimitations = () => {
                   >
                     Watch Full video
                     <Image
-                      src={"/right-arrow-btn.png"}
+                      src={"/right-arrow-btn.webp"}
                       alt="aroow"
                       width={30}
                       height={30}
@@ -265,7 +265,7 @@ const NoLimitations = () => {
                   >
                     Watch Full video
                     <Image
-                      src={"/right-arrow-btn.png"}
+                      src={"/right-arrow-btn.webp"}
                       alt="aroow"
                       width={30}
                       height={30}
@@ -311,7 +311,7 @@ const NoLimitations = () => {
                   >
                     Watch Full video
                     <Image
-                      src={"/right-arrow-btn.png"}
+                      src={"/right-arrow-btn.webp"}
                       alt="aroow"
                       width={30}
                       height={30}
@@ -348,7 +348,7 @@ const NoLimitations = () => {
                   >
                     Watch Full video
                     <Image
-                      src={"/right-arrow-btn.png"}
+                      src={"/right-arrow-btn.webp"}
                       alt="aroow"
                       width={30}
                       height={30}
@@ -385,7 +385,7 @@ const NoLimitations = () => {
                   >
                     Watch Full video
                     <Image
-                      src={"/right-arrow-btn.png"}
+                      src={"/right-arrow-btn.webp"}
                       alt="aroow"
                       width={30}
                       height={30}
@@ -422,7 +422,7 @@ const NoLimitations = () => {
                   >
                     Watch Full video
                     <Image
-                      src={"/right-arrow-btn.png"}
+                      src={"/right-arrow-btn.webp"}
                       alt="aroow"
                       width={30}
                       height={30}

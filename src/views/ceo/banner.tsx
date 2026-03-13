@@ -4,11 +4,11 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="bg-[url(/ceo/header-bg.png)] bg-cover bg-center pt-14 sm:pt-20">
+    <div className="bg-[url(/ceo/header-bg.webp)] bg-cover bg-center pt-14 sm:pt-20">
       <Container>
         <div className="flex justify-center relative">
           <Image
-            src={"/ceo/ceo.png"}
+            src={"/ceo/ceo.webp"}
             className="
               w-[320px] h-[420px]
               sm:w-[420px] sm:h-[560px]

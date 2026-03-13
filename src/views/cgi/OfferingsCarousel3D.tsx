@@ -226,7 +226,7 @@ export default function OfferingsPinnedEllipse() {
                     {/* sphere (replace with your real asset path) */}
                     <div className="pointer-events-none absolute bottom-0 right-0">
                       <Image
-                        src="/cgi/half-ball.png"
+                        src="/cgi/half-ball.webp"
                         width={140}
                         height={140}
                         className="w-[140px] h-[150px] object-contain object-bottom-right opacity-95"

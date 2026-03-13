@@ -7,12 +7,8 @@ import DoubleCurves from "@/components/ui/double-curves";
 
 const FEATURES = [
     {
-        heading: "Process, Quality, and Transparency",
-        para: "Good SEO is consistent work guided by real data, not shortcuts.",
-    },
-    {
         heading: "Transparent Reporting",
-        para: " Clear monthly updates and next steps. No confusion.",
+        para: "Clear monthly updates and next steps. No confusion.",
     },
     {
         heading: "White-Hat, Long-Term Approach",
@@ -28,7 +24,7 @@ const FEATURES = [
     },
     {
         heading: "Canada-Aware Compliance",
-        para: " When outreach or email is involved, we follow CASL and Canadian privacy practices.",
+        para: "When outreach or email is involved, we follow CASL and Canadian privacy practices.",
     },
 ];
 
@@ -39,7 +35,7 @@ const SeoWorks = () => {
                 {/* Background */}
                 <div className="">
                     <Image
-                        src="/website/seo-ready.jpg"
+                        src="/website/seo-ready.webp"
                         alt=""
                         className="w-full h-[400px] object-cover"
                         width={1000}
@@ -65,14 +61,22 @@ const SeoWorks = () => {
                                     </HeadingTwo>
 
                                     <p className="mt-4  text-white ">
-                                        Every HTSOL Inc. website is built with technical SEO foundations baked in from the start, not added as an afterthought. This matters because strong foundations make it easier for search engines to understand your site, and easier for customers to use it.
+                                        Good SEO is consistent work guided by real data, not shortcuts.
                                     </p>
 
                                     <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
-                                        {FEATURES.map((item) => (
-                                            <div
-                                                key={item.heading}
-                                                className="flex flex-col items-start gap-3 rounded-[5px] bg-[#191919] px-5 py-3 text-left border-l-2 border-[#075B65]">
+                                        {FEATURES.map((item, index) => {
+                                            const isLastOddCard =
+                                                FEATURES.length % 2 === 1 &&
+                                                index === FEATURES.length - 1;
+
+                                            return (
+                                                <div
+                                                    key={item.heading}
+                                                    className={`flex flex-col items-start gap-3 rounded-[5px] bg-[#191919] px-5 py-3 text-left border-l-2 border-[#075B65] ${isLastOddCard
+                                                        ? "md:col-span-2 md:mx-auto md:w-full md:max-w-[calc(50%-0.5rem)]"
+                                                        : ""
+                                                        }`}>
                                                 <h3 className="font-primary uppercase text-white  font-semibold mb-2">
                                                     {item.heading}
                                                 </h3>
@@ -80,8 +84,9 @@ const SeoWorks = () => {
                                                 <p className="text-white leading-normal">
                                                     {item.para}
                                                 </p>
-                                            </div>
-                                        ))}
+                                                </div>
+                                            );
+                                        })}
                                     </div>
                                 </div>
                             </div>

@@ -4,7 +4,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="bg-[url(/cto/cto-banner-back.png)] bg-cover bg-center pt-14 sm:pt-20">
+    <div className="bg-[url(/cto/cto-banner-back.webp)] bg-cover bg-center pt-14 sm:pt-20">
       <Container>
         <div className="relative flex flex-col lg:flex-row items-center justify-between min-h-[520px] md:min-h-[560px]">
           <div className="relative z-10 w-[80%]">
@@ -74,7 +74,7 @@ const Banner = () => {
           </div>
           <div className="hidden lg:block absolute right-0 bottom-0 z-20">
             <Image
-              src={"/cto/cto-banner.png"}
+              src={"/cto/cto-banner.webp"}
               className="w-[520px] h-[560px] object-contain"
               width={520}
               height={560}
@@ -84,7 +84,7 @@ const Banner = () => {
           </div>
           <div className="relative z-10 mt-10 flex justify-center lg:hidden w-full">
             <Image
-              src={"/cto/cto-banner.png"}
+              src={"/cto/cto-banner.webp"}
               className="w-[280px] sm:w-[340px] h-auto object-contain"
               width={700}
               height={900}

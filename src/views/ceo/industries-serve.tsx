@@ -15,7 +15,7 @@ const IndustriesServe = () => {
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
           "></div> */}
 
-          <div className="bg-[url(/ceo/industries-serve.png)] bg-cover py-24 bg-black">
+          <div className="bg-[url(/ceo/industries-serve.webp)] bg-cover py-24 bg-black">
             <Container>
               <HeadingTwo className="text-center mb-7">
                 Industries I Serve

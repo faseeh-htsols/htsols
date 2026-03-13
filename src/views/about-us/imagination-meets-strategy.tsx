@@ -50,7 +50,7 @@ const ImaginationMeetsStrategy = () => {
                 />
                 <h3 className="uppercase">Our value</h3>
               </div>
-              <div className=" bg-[url(/about-us/ball-background.png)] p-4">
+              <div className=" bg-[url(/about-us/ball-background.webp)] bg-cover bg-center bg-no-repeat p-4">
                 <h3 className="text-lg font-primary uppercase mb-3">
                   Building trust, inspiring creativity
                 </h3>
@@ -71,7 +71,7 @@ const ImaginationMeetsStrategy = () => {
             </div>
             <div className="lg:w-[45%] shrink-0">
               <Image
-                src={"/about-us/imagination.png"}
+                src={"/about-us/imagination.webp"}
                 width={1000}
                 height={1000}
                 className="w-full h-[500px] rounded-lg object-cover"

@@ -97,7 +97,7 @@ const FillForm = () => {
                       <Field
                         type="text"
                         name="fullName"
-                        className="h-14 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+                        className="h-14 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                         placeholder="Full Name"
                       />
                       <ErrorMessage
@@ -111,7 +111,7 @@ const FillForm = () => {
                       <Field
                         type="text"
                         name="contactNumber"
-                        className="h-14 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+                        className="h-14 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                         placeholder="Phone Number"
                       />
                       <ErrorMessage
@@ -126,7 +126,7 @@ const FillForm = () => {
                       <Field
                         type="text"
                         name="companyName"
-                        className="h-14 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+                        className="h-14 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                         placeholder="Company Name/URL"
                       />
                       <ErrorMessage
@@ -140,7 +140,7 @@ const FillForm = () => {
                       <Field
                         type="text"
                         name="email"
-                        className="h-14 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+                        className="h-14 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                         placeholder="Email"
                       />
                       <ErrorMessage
@@ -154,7 +154,7 @@ const FillForm = () => {
                     <Field
                       as="textarea"
                       name="message"
-                      className="h-28 w-full relative outline-0 bg-[url(/input-bg.png)] bg-cover border-0 rounded-md px-4 py-3 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+                      className="h-28 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 py-3 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                       placeholder="Notes "
                       id=""
                     ></Field>

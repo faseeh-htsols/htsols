@@ -9,7 +9,7 @@ const ContactDetails = () => {
         <div className="flex mb-10 justify-center">
           <Image
             className="w-[150px] md:w-[250px] h-[50px] object-contain"
-            src={"/footer-logo.png"}
+            src={"/footer-logo.webp"}
             width={300}
             height={100}
             alt="logo"

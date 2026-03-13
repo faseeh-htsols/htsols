@@ -36,7 +36,7 @@ const Approach = () => {
             />
           </div> */}
             <Image
-              src={"/services/service-img.png"}
+              src={"/services/service-img.webp"}
               alt="ball"
               width={1000}
               height={1000}

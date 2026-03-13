@@ -21,7 +21,7 @@ const SeoReadyWebsite = () => {
         {/* Background */}
         <div className="">
           <Image
-            src="/website/seo-ready.jpg"
+            src="/website/seo-ready.webp"
             alt=""
             className="w-full h-[400px] object-cover"
             width={1000}

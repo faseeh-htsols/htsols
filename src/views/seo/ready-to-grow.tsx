@@ -91,10 +91,10 @@ const ReadyToGrow = () => {
                         {/* Bottom CTA */}
                         <div className="relative mt-10 overflow-hidden rounded-[10px] border border-white/25 bg-[linear-gradient(90deg,#075B65_0%,#00838A_50%,#328A99_100%)] px-5 py-10 md:px-10 md:py-12">
                             {/* top right bg image */}
-                            <div className="pointer-events-none absolute right-0 top-0 h-[480px] w-[280px] bg-[url('/top-effect.png')] bg-contain bg-no-repeat" />
+                            <div className="pointer-events-none absolute right-0 top-0 h-[480px] w-[280px] bg-[url('/top-effect.webp')] bg-contain bg-no-repeat" />
 
                             {/* bottom left bg image */}
-                            <div className="pointer-events-none absolute bottom-0 left-0 h-[180px] w-[180px] bg-[url('/bottom-effect.png')] bg-contain bg-no-repeat" />
+                            <div className="pointer-events-none absolute bottom-0 left-0 h-[180px] w-[180px] bg-[url('/bottom-effect.webp')] bg-contain bg-no-repeat" />
 
                             <div className="relative mx-auto max-w-[760px] text-center">
                                 <h3 className="font-primary text-[28px] font-semibold uppercase leading-none text-white md:text-[42px]">
