@@ -1,5 +1,6 @@
 import ServicesMain from "@/views/services/main";
 import { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "",
   description: "",
@@ -18,7 +19,7 @@ const ServicesPage = () => {
         name: "How do I know which digital marketing service my business actually needs?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We begin by having a discovery conversation with you and reviewing your current performance. From there, we recommend the channels that best align with your goals, budget, and timeline. We won’t push services you don’t need.",
+          text: "We begin by having a discovery conversation with you and reviewing your current performance. From there, we recommend the channels that best align with your goals, budget, and timeline. We won't push services you don't need.",
         },
       },
       {
@@ -39,7 +40,7 @@ const ServicesPage = () => {
       },
       {
         "@type": "Question",
-        name: "What’s the difference between hiring staff augmentation and outsourcing a project?",
+        name: "What's the difference between hiring staff augmentation and outsourcing a project?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "With staff augmentation, our professionals work alongside your internal team, helping fill skill gaps while you maintain control. Outsourcing means we manage the entire project from planning to delivery.",

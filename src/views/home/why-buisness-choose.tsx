@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import DoubleCurves from "@/components/ui/double-curves";
 
 gsap.registerPlugin(ScrollTrigger);
+
 const lists = [
   "One accountable partner",
   "Consistent communication",
@@ -16,23 +17,25 @@ const lists = [
 export default function WhyBuisnessChoose() {
   const mainRef = useRef<HTMLDivElement | null>(null);
   const sectionRef = useRef<HTMLDivElement | null>(null);
-  useGSAP(
-    () => {
-      if (!sectionRef.current) return;
 
-      gsap.from(sectionRef.current, {
-        clipPath: "inset(0 0 100% 0)",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 100%",
-          end: "bottom 20%",
-          toggleActions: "play none none none",
-          scrub: true,
-        },
-      });
-    },
-    { scope: mainRef },
-  );
+useGSAP(
+  () => {
+    if (!sectionRef.current) return;
+
+    gsap.from(sectionRef.current, {
+      clipPath: "inset(0 0 100% 0)",
+      scrollTrigger: {
+  trigger: sectionRef.current,
+  start: "top 85%",   // wait until section is clearly in view before starting
+  end: "top 15%",     // complete the reveal well before it hits the top
+  toggleActions: "play none none none",
+  scrub: true,
+},
+    });
+  },
+  { scope: mainRef },
+);
+
   return (
     <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
       <section

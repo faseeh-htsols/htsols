@@ -10,11 +10,11 @@ const About = () => {
           <p className="text-xl font-primary uppercase bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">
             About
           </p>
-          <h2 className="text-[28px] font-primary uppercase">
+          <p >
             Specialists in Creative Direction, CGI, VFX, 3D Modelling, and
             Motion Animation. We engineer viral visual moments that transform
             brands into trends.
-          </h2>
+          </p>
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 lg:justify-between">
             <p className="text-xl bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">
               Based in Mississauga, <br className="lg:block hidden" /> Canada

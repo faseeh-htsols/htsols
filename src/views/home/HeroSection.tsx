@@ -31,7 +31,7 @@ const slides: Slide[] = [
     href: "/",
   },
   {
-    headline: ["Website Redesign and Branding "],
+    headline: ["Website Redesign and Branding"],
     outlineWord: "Services",
     subHeading:
       "Design That Communicates Clearly and Feels Consistent &Trustworthy",
@@ -41,7 +41,7 @@ const slides: Slide[] = [
     href: "/",
   },
   {
-    headline: ["Your Business Needs To Be Understood, Not "],
+    headline: ["Your Business Needs To Be Understood, Not"],
     outlineWord: "Only Indexed",
     description:
       "Search engines and AI systems now evaluate meaning, credibility, and usefulness before showing results. HTSOL Inc. prepares your website for modern discovery, including traditional rankings and AI generated answers.<br/><br/>Through technical SEO, structured content, and authority development, we help your business appear where customers are already searching and asking questions.<br/><br/>Our focus is to help your content be recognised as relevant and dependable over time.",
@@ -49,7 +49,7 @@ const slides: Slide[] = [
     href: "/",
   },
   {
-    headline: ["CGI THAT BREAKS THE INTERNET NOT YOUR "],
+    headline: ["CGI THAT BREAKS THE INTERNET NOT YOUR"],
     outlineWord: "BUDGET",
     subHeading: "Your Business Now Needs To Be Understood, Not Just Indexed",
     description:
@@ -192,7 +192,7 @@ export const HeroSection: React.FC = () => {
                           }}
                         ></span>
                         <span className="relative text-white">
-                          {slide.outlineWord}
+                          {` ${slide.outlineWord}`}
                         </span>
                       </span>
                     </h1>
@@ -213,7 +213,7 @@ export const HeroSection: React.FC = () => {
                           }}
                         ></span>
                         <span className="relative text-white">
-                          {slide.outlineWord}
+                          {` ${slide.outlineWord}`}
                         </span>
                       </span>
                     </h2>
