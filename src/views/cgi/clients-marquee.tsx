@@ -12,8 +12,8 @@ const IMAGES_CLIENTS_CGI = [
   { image: "/cgi/burgeroclock.webp", alt: "Burger O Clock" },
   { image: "/cgi/avlinc.webp", alt: "Avlinc" },
   { image: "/cgi/borjan.webp", alt: "Borjan" },
-  { image: "/cgi/dentopia.webp", alt: "Dentopia" },
-  { image: "/cgi/kaybees.webp", alt: "Kaybees" },
+  // { image: "/cgi/dentopia.webp", alt: "Dentopia" },
+  // { image: "/cgi/kaybees.webp", alt: "Kaybees" },
   { image: "/cgi/meiidz.webp", alt: "Meiidz" },
   { image: "/cgi/nayza.webp", alt: "Nayza" },
   { image: "/cgi/pizzahutt.webp", alt: "Pizza Hut" },
@@ -44,7 +44,7 @@ export default function ClientsMarquee() {
         className="marquee-swiper"
       >
         {items.map((item, idx) => (
-          <SwiperSlide key={`${item.image}-${idx}`} className="!w-auto">
+          <SwiperSlide key={`${item.image}-${idx}`} className="w-auto!">
             <div className="flex items-center justify-center">
               <Image
                 src={item.image}

@@ -170,7 +170,7 @@ const EngagementPricing = () => {
                   <p className="mt-4 text-white">{tab.botPara}</p>
 
                   <div className="mt-6 flex">
-                    <Button href="/">Get Started</Button>
+                    <Button href="#contact-form">Get Started</Button>
                   </div>
                 </div>
               </div>

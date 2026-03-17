@@ -37,7 +37,6 @@ const WebDevMain = () => {
         bgColor="#0F0F0F"
         faqs={WEB_DEV_FAQS}
         heading={true}
-        form={true}
         accordionbgtransparent
       />
       <ClientsSection />

@@ -175,7 +175,7 @@ export default function WorkPortfolioSectionTwo() {
               </p>
 
               <div className="flex">
-                <Button href="/" variant="outline">
+                <Button href="#contact-form" variant="outline">
                   Get A Free Consultation
                 </Button>
               </div>
@@ -196,7 +196,7 @@ export default function WorkPortfolioSectionTwo() {
               {portfolioSlides.map((slide, idx) => (
                 <article
                   key={idx}
-                  className="flex-shrink-0 rounded-[26px] bg-[#111] border border-white/10 p-6 shadow-lg flex flex-col gap-6
+                  className="shrink-0 rounded-[26px] bg-[#111] border border-white/10 p-6 shadow-lg flex flex-col gap-6
                   w-[85vw] sm:w-[70vw] md:w-[52vw] lg:w-[420px] 2xl:w-[480px]"
                 >
                   <div className="bg-black rounded-[22px] p-4 shadow">

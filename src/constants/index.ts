@@ -972,37 +972,44 @@ export const WEB_DEV_BENEFITS = [
 ];
 export const WEB_DEV_SERVICES_WE_OFFER = [
   {
-    icon: "/ceo/full-stack-architecture.json",
+    icon: "",
+    // icon: "/ceo/full-stack-architecture.json",
     heading: "Custom website design and development",
     para: "Sites built around your brand, your audience, and your marketing goals. ",
   },
   {
-    icon: "/ceo/strategic-custom-solutions.json",
+    icon: "",
+    // icon: "/ceo/strategic-custom-solutions.json",
     heading: "Website redesigns and rebuilds",
     para: "If your site is slow, outdated, or hard to manage, we rebuild with better structure and performance while protecting SEO value.",
   },
   {
-    icon: "/ceo/cutting-edge.json",
+    // icon: "/ceo/cutting-edge.json",
+    icon: "",
     heading: "CMS implementation and training",
     para: "We set up an easy-to-manage CMS so your team can update pages, add content, and publish with confidence. ",
   },
   {
-    icon: "/ceo/full-stack-architecture.json",
+    // icon: "/ceo/full-stack-architecture.json",
+    icon: "",
     heading: "E-commerce development",
     para: "Secure, conversion-focused e-commerce builds on platforms that match your needs, including Shopify and WooCommerce. ",
   },
   {
-    icon: "/ceo/strategic-custom-solutions.json",
+    // icon: "/ceo/strategic-custom-solutions.json",
+    icon: "",
     heading: "Ongoing maintenance and support",
     para: "Updates, fixes, performance monitoring, backups, and continuous improvements so your website stays stable and secure. ",
   },
   {
-    icon: "/ceo/cutting-edge.json",
+    // icon: "/ceo/cutting-edge.json",
+    icon: "",
     heading: "Third-party integrations",
     para: "Payment, booking, CRM, email marketing, analytics, maps, chat, inventory tools, and more.",
   },
   {
-    icon: "/ceo/full-stack-architecture.json",
+    // icon: "/ceo/full-stack-architecture.json",
+    icon: "",
     heading: "Optional bilingual support",
     para: "If your site is slow, outdated, or hard to manage, we rebuild with better structure and performance while protecting SEO value.",
   },

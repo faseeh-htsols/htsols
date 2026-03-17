@@ -14,10 +14,10 @@ import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);
 const validationSchema = Yup.object({
-    firstName: Yup.string()
+    fullName: Yup.string()
         .min(2, "Full name must be at least 2 characters")
         .required("Full name is required"),
-    lastName: Yup.string()
+    companyName: Yup.string()
         .min(2, "Company name/URL must be at least 2 characters")
         .required("Company name/URL is required"),
     email: Yup.string().email("Invalid email").required("Email is required"),
@@ -29,8 +29,8 @@ const validationSchema = Yup.object({
         .required("Message is required"),
 });
 type FormValues = {
-    firstName: string;
-    lastName: string;
+    fullName: string;
+    companyName: string;
     email: string;
     contactNumber: string;
     message: string;
@@ -142,36 +142,43 @@ const ContactForm = () => {
         },
         { scope: scopeRef },
     );
-    const sendEmail = (
+    const sendEmail = async (
         values: FormValues,
         formikHelpers: FormikHelpers<FormValues>,
     ) => {
         setIsSending(true);
 
-        emailjs
-            .sendForm(
-                "service_qm3kdpd",
-                "template_4svdbpi",
-                formRef.current!,
-                "Mr3TWOsrrdm099Kef",
-            )
-            .then(
-                () => {
-                    setIsSending(false);
-                    setPopupType("success");
-                    setPopupMsg(
-                        "Thanks — we’ve received your message and will get back to you shortly.",
-                    );
-                    setPopupOpen(true);
-                    formikHelpers.resetForm();
+        try {
+            await emailjs.send(
+                "service_4ls6ayf",
+                "template_1sux4xj",
+                {
+                    fullName: values.fullName,
+                    companyName: values.companyName,
+                    email: values.email,
+                    contactNumber: values.contactNumber,
+                    message: values.message,
                 },
-                () => {
-                    setIsSending(false);
-                    setPopupType("error");
-                    setPopupMsg("Failed to send message, please try again.");
-                    setPopupOpen(true);
-                },
+                {
+                    publicKey: "Mr3TWOsrrdm099Kef",
+                }
             );
+
+            setPopupType("success");
+            setPopupMsg(
+                "Thanks — we’ve received your message and will get back to you shortly."
+            );
+            setPopupOpen(true);
+            formikHelpers.resetForm();
+        } catch (error) {
+            console.error("EMAILJS ERROR:", error);
+            setPopupType("error");
+            setPopupMsg("Failed to send message, please try again.");
+            setPopupOpen(true);
+        } finally {
+            setIsSending(false);
+            formikHelpers.setSubmitting(false);
+        }
     };
     const closePopup = () => setPopupOpen(false);
     return (
@@ -209,8 +216,8 @@ const ContactForm = () => {
                 <div className="relative mt-8" ref={formWrapRef}>
                     <Formik
                         initialValues={{
-                            firstName: "",
-                            lastName: "",
+                            fullName: "",
+                            companyName: "",
                             email: "",
                             contactNumber: "",
                             message: "",
@@ -224,12 +231,12 @@ const ContactForm = () => {
                                     <div>
                                         <Field
                                             type="text"
-                                            name="firstName"
+                                            name="fullName"
                                             className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                                             placeholder="Full name"
                                         />
                                         <ErrorMessage
-                                            name="firstName"
+                                            name="fullName"
                                             component="p"
                                             className="text-red-600 text-xs mt-2"
                                         />
@@ -253,12 +260,12 @@ const ContactForm = () => {
                                     <div>
                                         <Field
                                             type="text"
-                                            name="lastName"
+                                            name="companyName"
                                             className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                                             placeholder="Company Name/URL"
                                         />
                                         <ErrorMessage
-                                            name="lastName"
+                                            name="companyName"
                                             component="p"
                                             className="text-red-600 text-xs mt-2"
                                         />
@@ -440,7 +447,7 @@ const ContactForm = () => {
                                 type="button"
                                 aria-label="Close popup"
                                 onClick={closePopup}
-                                className="w-9 h-9 flex items-center justify-center rounded-md border border-gray-200 hover:bg-gray-50"
+                                className="w-9 h-9 flex items-center justify-center rounded-md border border-gray-200 hover:bg-gray-50 text-black"
                             >
                                 <span className="text-xl leading-none">&times;</span>
                             </button>
@@ -450,7 +457,7 @@ const ContactForm = () => {
                             <button
                                 type="button"
                                 onClick={closePopup}
-                                className="px-5 py-2 rounded-full bg-secondary text-white font-medium"
+                                className="px-5 py-2 rounded-full bg-secondary font-medium text-black"
                             >
                                 OK
                             </button>
