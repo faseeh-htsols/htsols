@@ -8,6 +8,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import DoubleCurves from "@/components/ui/double-curves";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,6 +16,7 @@ interface ServiceCard {
   title: string;
   description: string;
   image: string;
+  link: string;
 }
 
 const services: ServiceCard[] = [
@@ -23,36 +25,42 @@ const services: ServiceCard[] = [
     description:
       "Design and development that turns visitors into leads with speed, clarity, and clean UX.",
     image: "/web-dev-ser-home.webp",
+    link: "/services/website-development",
   },
   {
     title: "SEO SERVICES",
     description:
       "Smart SEO, content, and campaigns that get you seen in Google, ChatGPT, and where buyers search.",
     image: "/seo-ser-home.webp",
+    link: "/services/seo-services",
   },
   {
     title: "CGI SERVICES",
     description:
       "Scroll-stopping CGI and 3D visuals that make your product look premium and earn attention fast.",
     image: "/cgi-ser-home.webp",
+    link: "/services/cgi",
   },
   {
     title: "STAFF AUGMENTATION",
     description:
       "Add vetted developers and designers to your team, without the hiring delays or overhead.",
     image: "/staff-aug.webp",
+    link: "/services/staff-augmentation",
   },
   {
     title: "DIGITAL TRANSFORMATION",
     description:
       "Strategy and execution that modernises your business without disrupting day-to-day delivery.",
     image: "/digital-transformations.webp",
+    link: "/services/digital-transformation",
   },
   {
     title: "DIGITAL MARKETING",
     description:
       "Performance marketing that drives qualified traffic, better leads, and stronger ROI across channels.",
     image: "/digital-marketing.webp",
+    link: "/services/digital-marketing",
   },
 ];
 
@@ -128,6 +136,12 @@ export const ServicesSection: React.FC = () => {
                 key={index}
                 className="group relative bg-black py-7 pl-7 group hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-300"
               >
+                <Link
+                  href={service.link}
+                  aria-label={service.title}
+                  className="absolute inset-0 z-10"
+                />
+
                 {/* Number Label */}
                 <div className=" text-[20px] mb-3">
                   <span className="text-secondary font-primary font-medium">

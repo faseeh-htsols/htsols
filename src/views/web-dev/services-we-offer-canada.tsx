@@ -22,7 +22,7 @@ const ServicesWeOfferCanada = () => {
                   0 {index + 1}
                 </div>
                 <div className="flex flex-col gap-4">
-                  <div className="p-4 border border-[#075B65] group-hover:bg-white w-fit rounded-full group-hover:[&_svg_path]:!fill-black">
+                  <div className="p-4 border border-[#075B65] group-hover:bg-white w-fit rounded-full group-hover:[&_svg_path]:fill-black!">
                     {/* {parse(item.svg)} */}
                     <LottiePlayer
                       className="w-[45px] h-[45px]"

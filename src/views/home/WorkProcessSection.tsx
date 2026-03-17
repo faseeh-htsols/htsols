@@ -57,7 +57,7 @@ export const WorkProcessSection: React.FC = () => {
       ></div> */}
 
         <div className=" container-for-work-process mx-auto px-5  relative z-10">
-          <div className="">
+          <div className="relative z-20">
             {/* Left Column */}
             <div className="space-y-6">
               <HeadingTwo>OUR WORK PROCESS</HeadingTwo>
@@ -67,7 +67,7 @@ export const WorkProcessSection: React.FC = () => {
                 next steps.
               </p>
               <div className="flex">
-                <Button href="/" variant="outline">
+                <Button href="#contact-form" variant="outline">
                   Get A Free Consultation
                 </Button>
               </div>

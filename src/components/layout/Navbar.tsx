@@ -50,7 +50,7 @@ export const Navbar: React.FC = () => {
                   >
                     {item.name}
                     <svg
-                      className="h-3 w-3 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
+                      className="h-3 w-3 transition-transform duration-200 group-hover:rotate-180"
                       viewBox="0 0 16 16"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@ export const Navbar: React.FC = () => {
                     </svg>
                   </Link>
 
-                  <div className="invisible absolute top-full left-1/2 z-50 mt-3 w-64 -translate-x-1/2 translate-y-2 rounded-xl border border-white/10 bg-black/95 p-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                  <div className="invisible absolute top-full left-1/2 z-50 mt-3 w-64 -translate-x-1/2 translate-y-2 rounded-xl border border-white/10 bg-black/95 p-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                     <div className="flex flex-col">
                       {item.subItems?.map((sub) => (
                         <Link

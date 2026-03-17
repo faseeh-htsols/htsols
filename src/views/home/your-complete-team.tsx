@@ -40,7 +40,7 @@ const YourCompleteTeam = () => {
                 height={800}
                 className="w-[80%] mx-auto h-[400px] lg:h-[650px] rounded-2xl object-cover"
               />
-              <div className="absolute left-0 -bottom-0 lg:bottom-[20%] rounded-full border border-[#328A99]">
+              <div className="absolute left-0 bottom-0 lg:bottom-[20%] rounded-full border border-[#328A99]">
                 <div
                   className="p-3 bg-[linear-gradient(90deg,rgba(217,217,217,0.6)_0%,rgba(115,115,115,0.7)_100%)] rounded-full
 "
@@ -78,7 +78,7 @@ const YourCompleteTeam = () => {
             </div>
             <div>
               <div className="border-b pb-9 border-white">
-                <HeadingTwo className="lg:!text-4xl">
+                <HeadingTwo className="lg:text-4xl!">
                   Your Complete Digital Team, Without the Hiring
                 </HeadingTwo>
               </div>
@@ -117,7 +117,7 @@ const YourCompleteTeam = () => {
                     with you.
                   </p>
                   <div className="flex">
-                    <Button href="/">Get Started</Button>
+                    <Button href="/contact-us">Get Started</Button>
                   </div>
                 </div>
               </div>

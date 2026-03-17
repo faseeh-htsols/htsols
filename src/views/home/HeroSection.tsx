@@ -218,9 +218,12 @@ export const HeroSection: React.FC = () => {
                       </span>
                     </h2>
                   )}
-                  <div className="flex">
-                    <Button variant="primary" href="#contact">
+                  <div className="flex flex-wrap gap-4 items-center">
+                    <Button variant="primary" href="#contact-form">
                       Start Your Project
+                    </Button>
+                    <Button variant="outline" href="/services">
+                      View All Services
                     </Button>
                   </div>
                 </div>
@@ -260,9 +263,8 @@ export const HeroSection: React.FC = () => {
             <button
               key={index}
               onClick={() => handleDotClick(index)}
-              className={`lg:w-2 w-8 h-2 lg:h-8 rounded-full transition-all duration-300 ${
-                index === selectedIndex ? "w-14 lg:w-2 lg:h-14" : ""
-              }`}
+              className={`lg:w-2 w-8 h-2 lg:h-8 rounded-full transition-all duration-300 ${index === selectedIndex ? "w-14 lg:w-2 lg:h-14" : ""
+                }`}
               style={{
                 background: isActive
                   ? "linear-gradient(90deg, #075B65 0%, #00838A 37.02%, #328A99 81.25%)"

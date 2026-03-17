@@ -48,7 +48,7 @@ const PlanNextStep = () => {
                 the most practical way to move forward together.
               </p>
               <div className="flex relative z-1">
-                <Button href="/">Get In Touch With us</Button>
+                <Button href="#contact-form">Get In Touch With us</Button>
               </div>
             </div>
             <div ref={divRef} className="absolute  h-full w-[40%] right-0">

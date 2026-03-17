@@ -33,8 +33,10 @@ const Main = () => {
       <EngagementPricing />
       <WhyBuisnessChoose />
       <PlanNextStep />
-      <ContactForm />
-      <FAQSection />
+      <div id="contact-form">
+        <ContactForm />
+      </div>
+      <FAQSection accordionbgtransparent bgColor="#0F0F0F" heading={true}/>
       <ClientsSection />
       <LogosMarquee />
     </>

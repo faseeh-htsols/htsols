@@ -34,36 +34,43 @@ const FillForm = () => {
   const [popupOpen, setPopupOpen] = useState(false);
   const [popupType, setPopupType] = useState<"success" | "error">("success");
   const [popupMsg, setPopupMsg] = useState("");
-  const sendEmail = (
+  const sendEmail = async (
     values: FormValues,
     formikHelpers: FormikHelpers<FormValues>,
   ) => {
     setIsSending(true);
 
-    emailjs
-      .sendForm(
-        "service_qm3kdpd",
-        "template_4svdbpi",
-        formRef.current!,
-        "Mr3TWOsrrdm099Kef",
-      )
-      .then(
-        () => {
-          setIsSending(false);
-          setPopupType("success");
-          setPopupMsg(
-            "Thanks — we’ve received your message and will get back to you shortly.",
-          );
-          setPopupOpen(true);
-          formikHelpers.resetForm();
+    try {
+      await emailjs.send(
+        "service_4ls6ayf",
+        "template_1sux4xj",
+        {
+          fullName: values.fullName,
+          companyName: values.companyName,
+          email: values.email,
+          contactNumber: values.contactNumber,
+          message: values.message,
         },
-        () => {
-          setIsSending(false);
-          setPopupType("error");
-          setPopupMsg("Failed to send message, please try again.");
-          setPopupOpen(true);
-        },
+        {
+          publicKey: "Mr3TWOsrrdm099Kef",
+        }
       );
+
+      setPopupType("success");
+      setPopupMsg(
+        "Thanks — we’ve received your message and will get back to you shortly."
+      );
+      setPopupOpen(true);
+      formikHelpers.resetForm();
+    } catch (error) {
+      console.error("EMAILJS ERROR:", error);
+      setPopupType("error");
+      setPopupMsg("Failed to send message, please try again.");
+      setPopupOpen(true);
+    } finally {
+      setIsSending(false);
+      formikHelpers.setSubmitting(false);
+    }
   };
   const closePopup = () => setPopupOpen(false);
   return (
@@ -236,7 +243,7 @@ const FillForm = () => {
         </div>
       </Container>
       {popupOpen && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center px-4">
+        <div className="fixed inset-0 z-9999 flex items-center justify-center px-4">
           <button
             type="button"
             aria-label="Close popup backdrop"
@@ -247,9 +254,8 @@ const FillForm = () => {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p
-                  className={`text-lg font-semibold ${
-                    popupType === "success" ? "text-green-700" : "text-red-700"
-                  }`}
+                  className={`text-lg font-semibold ${popupType === "success" ? "text-green-700" : "text-red-700"
+                    }`}
                 >
                   {popupType === "success"
                     ? "Message sent"
@@ -262,7 +268,7 @@ const FillForm = () => {
                 type="button"
                 aria-label="Close popup"
                 onClick={closePopup}
-                className="w-9 h-9 flex items-center justify-center rounded-md border border-gray-200 hover:bg-gray-50"
+                className="w-9 h-9 flex items-center justify-center rounded-md border border-gray-200 hover:bg-gray-50 text-black"
               >
                 <span className="text-xl leading-none">&times;</span>
               </button>
@@ -272,7 +278,7 @@ const FillForm = () => {
               <button
                 type="button"
                 onClick={closePopup}
-                className="px-5 py-2 rounded-full bg-secondary text-white font-medium"
+                className="px-5 py-2 rounded-full bg-secondary text-black font-medium"
               >
                 OK
               </button>

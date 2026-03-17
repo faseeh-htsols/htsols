@@ -156,8 +156,8 @@ const ContactForm = () => {
 
     emailjs
       .sendForm(
-        "service_qm3kdpd",
-        "template_4svdbpi",
+        "service_4ls6ayf",
+        "template_1sux4xj",
         formRef.current!,
         "Mr3TWOsrrdm099Kef",
       )
@@ -436,9 +436,8 @@ const ContactForm = () => {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p
-                  className={`text-lg font-semibold ${
-                    popupType === "success" ? "text-green-700" : "text-red-700"
-                  }`}
+                  className={`text-lg font-semibold ${popupType === "success" ? "text-green-700" : "text-red-700"
+                    }`}
                 >
                   {popupType === "success"
                     ? "Message sent"
@@ -451,7 +450,7 @@ const ContactForm = () => {
                 type="button"
                 aria-label="Close popup"
                 onClick={closePopup}
-                className="w-9 h-9 flex items-center justify-center rounded-md border border-gray-200 hover:bg-gray-50"
+                className="w-9 h-9 flex items-center justify-center rounded-md border border-gray-200 hover:bg-gray-50 text-black"
               >
                 <span className="text-xl leading-none">&times;</span>
               </button>
@@ -461,7 +460,7 @@ const ContactForm = () => {
               <button
                 type="button"
                 onClick={closePopup}
-                className="px-5 py-2 rounded-full bg-secondary text-white font-medium"
+                className="px-5 py-2 rounded-full bg-secondary text-black font-medium"
               >
                 OK
               </button>
