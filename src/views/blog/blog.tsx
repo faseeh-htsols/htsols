@@ -2,24 +2,33 @@ import React from "react";
 import Container from "@/components/ui/container";
 import Image from "next/image";
 import Link from "next/link";
-import { BLOGS } from "@/constants/blog";
+import type { CmsBlogListItem } from "@/lib/cms/blog";
 
-function Blog() {
+type BlogProps = {
+  posts: CmsBlogListItem[];
+};
+
+function Blog({ posts }: BlogProps) {
+  const featured = posts[0];
+  const rest = posts.slice(1);
   return (
     <div className="pb-10 bg-tertiary">
       <Container>
-        {BLOGS.length > 0 && (
+        {featured?.slug && (
           <div className="relative overflow-hidden rounded-2xl h-auto md:h-[500px] mb-10">
             <div className="absolute inset-0">
-              <Image
-                src={BLOGS[0].banner.image}
-                alt={BLOGS[0].banner.title}
-                fill
+              <img
+                src={
+                  featured.pictureUrl ||
+                  featured.banner?.image ||
+                  "/blog-banner.webp"
+                }
+                alt={featured.title || featured.banner?.title || "Blog"}
                 className="w-full h-full object-cover"
               />
             </div>
             <Link
-              href={`/blog/${BLOGS[0].slug}`}
+              href={`/blog/${featured.slug}`}
               className="absolute inset-0 mt-60">
               <div className="w-full md:w-1/2 h-full backdrop-blur-md bg-black/60 p-3 flex flex-col justify-center border-l border-[#00A1A5]/20">
                 <div className="flex items-center justify-between gap-3 mb-4">
@@ -28,44 +37,51 @@ function Blog() {
                   </span>
 
                   <div className="flex flex-wrap gap-2">
-                    {BLOGS[0].banner.tags.slice(0, 3).map((tag, index) => (
-                      <span
-                        key={index}
-                        className="text-xs text-gray-300 bg-white/10 px-3 py-1.5 rounded-full border border-gray-500/30">
-                        #{tag}
-                      </span>
-                    ))}
+                    {(featured.banner?.tags ?? [])
+                      .slice(0, 3)
+                      .map((tag, index) => (
+                        <span
+                          key={index}
+                          className="text-xs text-gray-300 bg-white/10 px-3 py-1.5 rounded-full border border-gray-500/30">
+                          #{tag}
+                        </span>
+                      ))}
                   </div>
                 </div>
 
                 <h2 className="text-white font-primary text-2xl font-bold mb-4 leading-tight">
-                  {BLOGS[0].banner.title}
+                  {featured.title || featured.banner?.title}
                 </h2>
 
                 <p className="text-gray-200 text-sm md:text-base mb-6 leading-relaxed">
-                  {BLOGS[0].banner.description}
+                  {featured.banner?.description ?? ""}
                 </p>
 
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <Image
-                      src={BLOGS[0].banner.authorImage}
-                      alt={BLOGS[0].banner.authorName}
-                      width={40}
-                      height={40}
-                      className="w-10 h-10 rounded-full object-cover"
-                    />
-                    <div>
-                      <p className="text-[#00A1A5] text-sm font-medium">
-                        {BLOGS[0].banner.authorName}
-                      </p>
-                      <p className="text-gray-300 text-xs">
-                        {new Date(
-                          BLOGS[0].banner.scheduledDate,
-                        ).toLocaleDateString()}
-                      </p>
+                  {featured.banner?.authorName &&
+                  featured.banner?.authorImage ? (
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={featured.banner.authorImage}
+                        alt={featured.banner.authorName}
+                        width={40}
+                        height={40}
+                        className="w-10 h-10 rounded-full object-cover"
+                      />
+                      <div>
+                        <p className="text-[#00A1A5] text-sm font-medium">
+                          {featured.banner.authorName}
+                        </p>
+                        <p className="text-gray-300 text-xs">
+                          {new Date(
+                            featured.banner.scheduledDate || 0,
+                          ).toLocaleDateString()}
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  ) : (
+                    <div />
+                  )}
 
                   <div className="w-12 h-12 bg-[#00A1A5] hover:bg-[#00A1A5]/80 rounded-full flex items-center justify-center transition-all shadow-lg shadow-[#00A1A5]/50">
                     <svg
@@ -87,16 +103,17 @@ function Blog() {
           </div>
         )}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {BLOGS.slice(1).map((post) => (
+          {rest.map((post) => (
             <Link
-              key={post.slug}
+              key={post.id || post.slug || post.title || ""}
               href={`/blog/${post.slug}`}
               className="group rounded-2xl overflow-hidden transition-all">
               <div className="relative h-[200px] md:h-[250px] overflow-hidden">
-                <Image
-                  src={post.banner.image}
-                  alt={post.banner.title}
-                  fill
+                <img
+                  src={
+                    post.pictureUrl || post.banner?.image || "/blog-banner.webp"
+                  }
+                  alt={post.title || post.banner?.title || "Blog"}
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -108,7 +125,7 @@ function Blog() {
                   </span>
 
                   <div className="flex flex-wrap gap-2">
-                    {post.banner.tags.slice(0, 3).map((tag, index) => (
+                    {(post.banner?.tags ?? []).slice(0, 3).map((tag, index) => (
                       <span
                         key={index}
                         className="text-xs text-gray-400 bg-white/5 px-2 py-1 rounded-full border border-gray-700">
@@ -119,33 +136,37 @@ function Blog() {
                 </div>
 
                 <h3 className="text-white font-primary text-lg font-bold mb-2 leading-tight">
-                  {post.banner.title}
+                  {post.title || post.banner?.title}
                 </h3>
 
                 <p className="text-gray-400 text-sm mb-4 leading-relaxed line-clamp-2">
-                  {post.banner.description}
+                  {post.banner?.description ?? ""}
                 </p>
 
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <Image
-                      src={post.banner.authorImage}
-                      alt={post.banner.authorName}
-                      width={32}
-                      height={32}
-                      className="w-8 h-8 rounded-full object-cover"
-                    />
-                    <div>
-                      <p className="text-[#00A1A5] text-xs font-medium">
-                        {post.banner.authorName}
-                      </p>
-                      <p className="text-gray-400 text-xs">
-                        {new Date(
-                          post.banner.scheduledDate,
-                        ).toLocaleDateString()}
-                      </p>
+                  {post.banner?.authorName && post.banner?.authorImage ? (
+                    <div className="flex items-center gap-2">
+                      <img
+                        src={post.banner.authorImage}
+                        alt={post.banner.authorName}
+                        width={32}
+                        height={32}
+                        className="w-8 h-8 rounded-full object-cover"
+                      />
+                      <div>
+                        <p className="text-[#00A1A5] text-xs font-medium">
+                          {post.banner.authorName}
+                        </p>
+                        <p className="text-gray-400 text-xs">
+                          {new Date(
+                            post.banner.scheduledDate || 0,
+                          ).toLocaleDateString()}
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  ) : (
+                    <div />
+                  )}
 
                   <div className="w-10 h-10 bg-[#00A1A5] group-hover:bg-[#00A1A5]/80 rounded-full flex items-center justify-center transition-all">
                     <svg

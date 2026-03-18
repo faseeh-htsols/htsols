@@ -3,7 +3,6 @@ import React, { useRef } from "react";
 import { IRelatedBlog } from "./main";
 import Link from "next/link";
 import Image from "next/image";
-import { BLOGS } from "@/constants/blog";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -14,24 +13,22 @@ import HeadingTwo from "@/components/ui/heading-two";
 import DoubleCurves from "@/components/ui/double-curves";
 
 const Card = ({ post }: { post: IRelatedBlog }) => {
-  const fullPost = BLOGS.find((b) => b.slug === post.slug);
-  const tags = fullPost?.banner.tags ?? [];
-  const authorName = fullPost?.banner.authorName ?? "HTSOL Inc.";
-  const authorImage = fullPost?.banner.authorImage ?? "/author.webp";
-  const description = fullPost?.banner.description ?? "";
-  const scheduledDate = fullPost?.banner.scheduledDate ?? post.scheduledDate;
-  const image = fullPost?.banner.image ?? post.pictureUrl;
-  const title = fullPost?.banner.title ?? post.title;
+  const tags = post.tags ?? [];
+  const authorName = post.authorName ?? "";
+  const authorImage = post.authorImage ?? "";
+  const description = post.description ?? "";
+  const scheduledDate = post.scheduledDate;
+  const image = post.pictureUrl || "/blog-banner.webp";
+  const title = post.title;
 
   return (
     <Link
       href={`/blog/${post.slug}`}
       className="group rounded-2xl overflow-hidden transition-all block h-full">
       <div className="relative h-[200px] md:h-[250px] overflow-hidden">
-        <Image
+        <img
           src={image}
           alt={title}
-          fill
           className="object-cover group-hover:scale-105 transition-transform duration-300"
         />
       </div>
@@ -62,21 +59,27 @@ const Card = ({ post }: { post: IRelatedBlog }) => {
         </p>
 
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Image
-              src={authorImage}
-              alt={authorName}
-              width={32}
-              height={32}
-              className="w-8 h-8 rounded-full object-cover"
-            />
-            <div>
-              <p className="text-[#00A1A5] text-xs font-medium">{authorName}</p>
-              <p className="text-gray-400 text-xs">
-                {new Date(scheduledDate).toLocaleDateString()}
-              </p>
+          {authorName && authorImage ? (
+            <div className="flex items-center gap-2">
+              <img
+                src={authorImage}
+                alt={authorName}
+                width={32}
+                height={32}
+                className="w-8 h-8 rounded-full object-cover"
+              />
+              <div>
+                <p className="text-[#00A1A5] text-xs font-medium">
+                  {authorName}
+                </p>
+                <p className="text-gray-400 text-xs">
+                  {new Date(scheduledDate || 0).toLocaleDateString()}
+                </p>
+              </div>
             </div>
-          </div>
+          ) : (
+            <div />
+          )}
 
           <div className="w-10 h-10 bg-[#00A1A5] group-hover:bg-[#00A1A5]/80 rounded-full flex items-center justify-center transition-all">
             <svg

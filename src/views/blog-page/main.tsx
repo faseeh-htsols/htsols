@@ -9,6 +9,10 @@ export type IRelatedBlog = {
   scheduledDate: string;
   pictureUrl: string;
   slug: string;
+  description?: string;
+  tags?: string[];
+  authorName?: string;
+  authorImage?: string;
 };
 type Section = {
   heading?: string;

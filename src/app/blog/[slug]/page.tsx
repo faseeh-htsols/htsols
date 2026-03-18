@@ -1,15 +1,13 @@
 import Main from "@/views/blog-page/main";
-import type { BlogPost as MainBlogPost } from "@/views/blog-page/main";
+import type { BlogPost as MainBlogPost, IRelatedBlog } from "@/views/blog-page/main";
 import type { Metadata } from "next";
-import { BLOGS } from "@/constants/blog";
 import { notFound } from "next/navigation";
-import type { IRelatedBlog } from "@/views/blog-page/main";
+import { cache } from "react";
+import Script from "next/script";
+import { fetchCmsBlogBySlug, fetchCmsBlogs } from "@/lib/cms/blog";
 
-export async function generateStaticParams() {
-  return BLOGS.map((blog) => ({
-    slug: blog.slug,
-  }));
-}
+const getBlog = cache(async (slug: string) => fetchCmsBlogBySlug(slug));
+const getBlogs = cache(async () => fetchCmsBlogs());
 
 export async function generateMetadata({
   params,
@@ -17,7 +15,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = BLOGS.find((blog) => blog.slug === slug);
+  const post = await getBlog(slug);
 
   if (!post) {
     return {
@@ -26,9 +24,8 @@ export async function generateMetadata({
     };
   }
 
-  const title = post.seo?.seoTitle || post.banner.title || "Blog Post";
-  const description =
-    post.seo?.seoDescription || post.banner.description || "Blog Description";
+  const title = post?.seo?.seoTitle || post?.title || "Blog Post";
+  const description = post?.seo?.seoDescription || post?.description || "";
   const canonicalPath = `https://www.htsol.ca/blog/${slug}`;
 
   return {
@@ -41,49 +38,81 @@ export async function generateMetadata({
 
 const BlogPost = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
-  const post = BLOGS.find((blog) => blog.slug === slug);
+  const post = await getBlog(slug);
 
-  if (!post) {
-    notFound();
-  }
+  if (!post) notFound();
 
-  // Transform tags to match the IBlogtags structure
-  const blogTags: MainBlogPost["blogTags"] = post.banner.tags.map(
-    (tag, index) => ({
-      id: index + 1,
-      tag: {
-        id: index + 1,
-        name: tag,
-      },
-    }),
-  );
+  // Enrich related blogs: if API provides only minimal fields, fill from list.
+  const all = await getBlogs();
+  const bySlug = new Map(all.map((b) => [b.slug || "", b]));
 
-  // Get all blogs except the current one for related blogs carousel
-  const relatedBlogs: IRelatedBlog[] = BLOGS.filter(
-    (blog) => blog.slug !== slug,
-  ) // Exclude current blog
-    .map((blog) => ({
-      title: blog.banner.title,
-      scheduledDate: blog.banner.scheduledDate,
-      pictureUrl: blog.banner.image,
-      slug: blog.slug,
-    }));
+  const relatedBlogs: IRelatedBlog[] = (post.relatedBlogs ?? [])
+    .filter((b): b is NonNullable<typeof b> => Boolean(b?.slug))
+    .map((b) => {
+      const slugKey = b!.slug!;
+      const listItem = bySlug.get(slugKey);
+      return {
+        slug: slugKey,
+        title: b?.title || listItem?.title || listItem?.banner?.title || "",
+        pictureUrl:
+          b?.pictureUrl ||
+          listItem?.pictureUrl ||
+          listItem?.banner?.image ||
+          "",
+        scheduledDate:
+          b?.scheduledDate ||
+          listItem?.scheduledDate ||
+          listItem?.banner?.scheduledDate ||
+          "",
+        description: listItem?.banner?.description ?? undefined,
+        tags: listItem?.banner?.tags ?? undefined,
+        authorName: listItem?.banner?.authorName ?? undefined,
+        authorImage: listItem?.banner?.authorImage ?? undefined,
+      };
+    })
+    .filter((b) => b.slug !== slug);
 
-  const data: MainBlogPost = {
-    title: post.banner.title,
-    description: post.banner.description,
-    pictureUrl: post.banner.image,
-    sections: post.sections,
-    author: post.author,
-    faqs: post.faq ?? [],
-    contentHtml: {} as JSON,
-    scheduledDate: post.banner.scheduledDate,
-    blogTags: blogTags,
-    blogCTAs: post.blogCTAs ?? [],
-    relatedBlogs: relatedBlogs, // All other blogs
+  const blogTags: MainBlogPost["blogTags"] = (post.blogTags ?? []).map((t) => ({
+    id: t.id,
+    tag: { id: t.tag.id, name: t.tag.name },
+  }));
+
+  const author: MainBlogPost["author"] = {
+    name: post.author?.name ?? post.authorName ?? "",
+    pictureUrl: post.author?.pictureUrl ?? post.author?.image?.url ?? "",
+    bio: post.author?.bio ?? "",
+    scheduledDate: post.scheduledDate ?? post.publishedAt ?? "",
   };
 
-  return <Main data={data} />;
+  const data: MainBlogPost = {
+    title: post.title ?? "",
+    description: post.description ?? "",
+    pictureUrl: post.pictureUrl ?? "",
+    sections: post.sections ?? [],
+    author,
+    faqs: post.faqs ?? [],
+    contentHtml: (post.contentHtml ?? "") as unknown as JSON,
+    scheduledDate: post.scheduledDate ?? post.publishedAt ?? "",
+    blogTags,
+    blogCTAs: post.blogCTAs ?? [],
+    relatedBlogs,
+  };
+
+  return (
+    <>
+      {Array.isArray(post.seo?.schemaJson) &&
+        (post.seo!.schemaJson as unknown[]).map((schemaData, i) => (
+          <Script
+            key={i}
+            id={`ldjson-${i}`}
+            type="application/ld+json"
+            strategy="beforeInteractive"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+        ))}
+      <Main data={data} />
+    </>
+  );
 };
 
 export default BlogPost;

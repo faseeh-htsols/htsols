@@ -29,7 +29,11 @@ function extractFirstImage(html: string) {
   // This lets us render a consistent, styled image block (like the design)
   // while keeping the rest of the content intact.
   const imgTagMatch = html.match(/<img\b[^>]*>/i);
-  if (!imgTagMatch) return { cleanedHtml: html, image: null as null | { src: string; alt: string } };
+  if (!imgTagMatch)
+    return {
+      cleanedHtml: html,
+      image: null as null | { src: string; alt: string },
+    };
 
   const imgTag = imgTagMatch[0];
   const srcMatch = imgTag.match(/\bsrc\s*=\s*["']([^"']+)["']/i);
@@ -38,7 +42,8 @@ function extractFirstImage(html: string) {
   const alt = altMatch?.[1]?.trim() ?? "";
   const cleanedHtml = html.replace(imgTag, "");
 
-  if (!src) return { cleanedHtml, image: null as null | { src: string; alt: string } };
+  if (!src)
+    return { cleanedHtml, image: null as null | { src: string; alt: string } };
   return { cleanedHtml, image: { src, alt } };
 }
 
