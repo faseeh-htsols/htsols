@@ -64,11 +64,26 @@ const services: ServiceCard[] = [
   },
 ];
 
-export const ServicesSection: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const headingRef = useRef<HTMLHeadingElement | null>(null);
-  const methodsRef = useRef<(HTMLDivElement | null)[]>([]);
+// ─── Card stack visual states (index 0 = front/active) ─────────────────────
+// Each successive card is offset right, rotated clockwise, and scaled down
+const STACK_STATES = [
+  { x: 0,  y: 0,  rotation: 0,  scale: 1,    opacity: 1    },
+  { x: 12, y: 8,  rotation: 5,  scale: 0.97, opacity: 0.85 },
+  { x: 22, y: 14, rotation: 9,  scale: 0.94, opacity: 0.7  },
+  { x: 30, y: 18, rotation: 13, scale: 0.91, opacity: 0.55 },
+];
+const VISIBLE_DEPTH = STACK_STATES.length;
 
+export const ServicesSection: React.FC = () => {
+  const containerRef   = useRef<HTMLDivElement | null>(null);
+  const headingRef     = useRef<HTMLHeadingElement | null>(null);
+  const methodsRef     = useRef<(HTMLDivElement | null)[]>([]);
+
+  // ── mobile card stack refs ────────────────────────────────────────────────
+  const stackPinRef    = useRef<HTMLDivElement | null>(null);
+  const stackCardRefs  = useRef<(HTMLDivElement | null)[]>([]);
+
+  // ── existing heading + desktop card animations (UNTOUCHED) ────────────────
   useGSAP(
     () => {
       gsap.from(headingRef.current, {
@@ -102,32 +117,205 @@ export const ServicesSection: React.FC = () => {
     },
     { scope: containerRef },
   );
+
+  // ── mobile card stack animation (mobile only via matchMedia) ──────────────
+  useGSAP(
+    () => {
+      const mm = gsap.matchMedia();
+
+      mm.add("(max-width: 767px)", () => {
+        const pinEl   = stackPinRef.current;
+        if (!pinEl) return;
+
+        const cardEls = stackCardRefs.current.filter(Boolean) as HTMLDivElement[];
+        const numCards = cardEls.length;
+        const numExits = numCards - 1; // last card never exits
+
+        // Set initial fan positions
+        cardEls.forEach((card, i) => {
+          const stateIdx = Math.min(i, VISIBLE_DEPTH - 1);
+          const state    = STACK_STATES[stateIdx];
+          gsap.set(card, {
+            x:               state.x,
+            y:               state.y,
+            rotation:        state.rotation,
+            scale:           state.scale,
+            opacity:         i < VISIBLE_DEPTH ? state.opacity : 0,
+            zIndex:          numCards - i,
+            transformOrigin: "bottom center",
+          });
+        });
+
+        // Build scroll-driven timeline
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger:       pinEl,
+            start:         "top top",
+            // 650px of scroll travel per card exit
+            end:           `+=${numExits * 650}`,
+            pin:           true,
+            pinSpacing:    true,
+            scrub:         1.2,
+            anticipatePin: 1,
+          },
+        });
+
+        for (let step = 0; step < numExits; step++) {
+          // Exit front card: slide left + fade + slight counter-rotation
+          tl.to(
+            cardEls[step],
+            {
+              x:        "-115%",
+              opacity:  0,
+              rotation: -10,
+              duration: 1,
+              ease:     "power2.inOut",
+            },
+            step, // timeline label = step index
+          );
+
+          // Promote all remaining cards one slot forward simultaneously
+          for (let j = step + 1; j < numCards; j++) {
+            const newPos   = j - step - 1;
+            const stateIdx = Math.min(newPos, VISIBLE_DEPTH - 1);
+            const target   = STACK_STATES[stateIdx];
+
+            tl.to(
+              cardEls[j],
+              {
+                x:        target.x,
+                y:        target.y,
+                rotation: target.rotation,
+                scale:    target.scale,
+                opacity:  newPos < VISIBLE_DEPTH ? target.opacity : 0,
+                duration: 1,
+                ease:     "power2.inOut",
+              },
+              step, // same position → simultaneous with exit
+            );
+          }
+        }
+
+        return () => {
+          tl.scrollTrigger?.kill();
+          tl.kill();
+        };
+      });
+
+      return () => mm.revert();
+    },
+    { scope: containerRef },
+  );
+
   return (
     <DoubleCurves up className=" -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
       <section
         ref={containerRef}
-        className="bg-tertiary relative py-20"
+        className="bg-tertiary relative pt-6 pb-20 md:py-20"
       >
-        {/* <div
-        className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[2.5%] -rotate-3 sm:-rotate-1 w-full
-           bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] animate-pulse
-          "
-      ></div> */}
-
-        {/* Top accent line */}
-        {/* <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-primary via-primary to-transparent" /> */}
-
         <Container>
-          {/* Section Heading */}
-          <div className="text-center mb-16">
+          {/* Section Heading — desktop only, mobile heading lives inside the pin */}
+          <div className="hidden md:block text-center mb-16">
             <HeadingTwo span="OFFER" ref={headingRef}>
               {" "}
               WHAT WE
             </HeadingTwo>
           </div>
 
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* ── MOBILE: card stack ─────────────────────────────────────────
+               stackPinRef wraps heading + cards so BOTH stay visible
+               while the pin is active. Pin triggers when this div hits
+               the top of the viewport.
+          ─────────────────────────────────────────────────────────────── */}
+          <div className="md:hidden">
+            <div
+              ref={stackPinRef}
+              className="relative flex flex-col"
+              style={{ height: "100vh" }}
+            >
+              {/* Heading — pinned alongside cards so it never scrolls away */}
+              <div className="shrink-0 pt-30 pb-6 text-center">
+                <HeadingTwo span="OFFER">
+                  {" "}
+                  WHAT WE
+                </HeadingTwo>
+              </div>
+
+              {/* Cards centred in the remaining viewport space */}
+              <div className="relative flex-1 flex items-start justify-center pt-4">
+                {services.map((service, index) => (
+                  <div
+                    key={service.title}
+                    ref={(el) => { stackCardRefs.current[index] = el; }}
+                    className="absolute w-[85vw] sm:w-[70vw] bg-black rounded-2xl overflow-hidden border border-white/10"
+                    style={{ willChange: "transform, opacity" }}
+                  >
+                    <Link
+                      href={service.link}
+                      aria-label={service.title}
+                      className="absolute inset-0 z-10"
+                    />
+
+                    {/* Number */}
+                    <div className="px-7 pt-7 pb-3">
+                      <span className="text-secondary font-primary font-medium text-[20px]">
+                        0{index + 1}
+                      </span>
+                    </div>
+
+                    {/* Image */}
+                    <div className="px-7 mb-4">
+                      <div className="relative w-full h-[200px] rounded-2xl overflow-hidden">
+                        <Image
+                          src={service.image}
+                          alt={service.title}
+                          fill
+                          className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-linear-to-t from-[#111] via-transparent to-transparent" />
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="px-10 pb-10">
+                      <h3 className="text-white mb-3 font-primary font-bold text-sm tracking-wide">
+                        {service.title}
+                      </h3>
+                      <div className="flex gap-3 items-center justify-between">
+                        <p className="text-white/50 text-sm leading-relaxed w-[65%]">
+                          {service.description}
+                        </p>
+                        <button className="w-10 h-10 shrink-0 rounded-full border border-white/20 flex items-center justify-center">
+                          <svg
+                            width="22"
+                            height="22"
+                            viewBox="0 0 25 25"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="fill-secondary"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M5.32725 18.4846C4.90706 18.027 4.93743 17.3153 5.3951 16.8951L17.5493 5.736C18.007 5.31581 18.7187 5.34619 19.1389 5.80386C19.5591 6.26152 19.5287 6.97321 19.071 7.3934L6.91679 18.5525C6.45912 18.9727 5.74744 18.9423 5.32725 18.4846Z"
+                            />
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M7.64913 6.10673C7.67563 5.48597 8.20036 5.0042 8.82112 5.0307L18.3584 5.43778C18.9791 5.46433 19.4608 5.98906 19.4344 6.60978L19.0273 16.147C19.0007 16.7678 18.476 17.2495 17.8553 17.2231C17.2346 17.1965 16.7528 16.6718 16.7793 16.0511L17.1384 7.63779L8.72512 7.27869C8.10441 7.25215 7.62268 6.72745 7.64913 6.10673Z"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* ── DESKTOP: original grid (COMPLETELY UNTOUCHED) ─────────────── */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <div
                 ref={(el) => {
