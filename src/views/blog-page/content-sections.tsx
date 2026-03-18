@@ -244,7 +244,7 @@ function ContentSections({
                   {image && (
                     <div className="relative w-full h-[260px] sm:h-[320px] md:h-[380px] lg:h-[420px] rounded-2xl overflow-hidden mb-6 border border-white/10">
                       <Image
-                        src={image.src}
+                        src={"/blog-cta.webp"}
                         alt={image.alt || sec.heading || "Blog image"}
                         fill
                         className="object-cover"
@@ -265,14 +265,13 @@ function ContentSections({
                     const paragraph = item.cta.paragraph?.trim() ?? "";
                     const buttonText = item.cta.buttonText?.trim() ?? "";
                     const buttonHref = item.cta.buttonHref?.trim() ?? "";
-                    const imageUrl = item.cta.imageUrl?.trim() ?? "";
-
-                    const hasImage = Boolean(imageUrl);
+                    const imageUrl =
+                      item.cta.imageUrl?.trim() || "/blog-cta.webp";
 
                     return (
                       <div
                         key={item.id}
-                        className="my-8 rounded-2xl relative w-full border border-[#00A1A5]">
+                        className="my-24 rounded-2xl relative w-full border border-[#00A1A5]">
                         <div className="flex flex-col md:flex-row">
                           {/* TEXT CONTENT */}
                           <div className=" p-8 flex flex-col justify-center w-full lg:w-[60%]">
@@ -294,18 +293,15 @@ function ContentSections({
                               </Button>
                             </div>
                           </div>
-                          {hasImage && (
-                            <div className="absolute -right-10 top-1/2 -translate-y-1/2 pointer-events-none lg:block hidden">
-                              <Image
-                                src={imageUrl}
-                                alt={heading || "CTA image"}
-                                width={400}
-                                height={300}
-                                quality={100}
-                                className="w-[520px] h-full"
-                              />
-                            </div>
-                          )}
+                          <div className="absolute -right-10 top-1/2 -translate-y-1/2 pointer-events-none lg:block hidden">
+                            <img
+                              src={"/blog-cta.webp"}
+                              alt={heading || "CTA image"}
+                              width={400}
+                              height={300}
+                              className="w-[520px] h-full object-cover"
+                            />
+                          </div>
                         </div>
                       </div>
                     );

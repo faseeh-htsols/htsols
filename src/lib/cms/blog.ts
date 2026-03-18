@@ -14,11 +14,13 @@ export type CmsBlogListItem = {
   id?: number | null;
   title?: string | null;
   slug?: string | null;
+  description?: string | null;
   pictureUrl?: string | null;
   scheduledDate?: string | null;
   publishedDate?: string | null;
   createdAt?: string | null;
   updatedAt?: string | null;
+  author?: CmsAuthor | null;
   banner?: {
     title?: string | null;
     image?: string | null;
