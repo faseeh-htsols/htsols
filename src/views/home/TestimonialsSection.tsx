@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -113,12 +113,17 @@ const TestimonialsSection = () => {
         </div>
         <div className=" mt-6 relative">
           <Swiper
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
             loop
             centeredSlides
             spaceBetween={32}
             slidesPerGroup={1}
             slidesPerView={1}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
             breakpoints={{
               768: {
                 slidesPerView: 2,
@@ -169,7 +174,7 @@ const TestimonialsSection = () => {
 
           {/* navigation buttons (exactly like design) */}
           <div className="flex items-center justify-center gap-5 mt-10">
-            <button className="testi-prev w-10 h-10 rounded-full border border-white/55 flex items-center justify-center text-white hover:border-[#00A1A5] hover:text-[#00A1A5] transition-colors">
+            <button className="testi-prev w-10 h-10 rounded-full border border-white/55 flex items-center justify-center text-white hover:border-[#00A1A5] hover:text-[#00A1A5] transition-colors hover:cursor-pointer">
               <svg
                 width="48"
                 height="48"
@@ -190,7 +195,7 @@ const TestimonialsSection = () => {
                 />
               </svg>
             </button>
-            <button className="testi-next w-10 h-10 rounded-full border border-white/55 flex items-center justify-center text-white hover:border-[#00A1A5] hover:text-[#00A1A5] transition-colors">
+            <button className="testi-next w-10 h-10 rounded-full border border-white/55 flex items-center justify-center text-white hover:border-[#00A1A5] hover:text-[#00A1A5] transition-colors hover:cursor-pointer">
               <svg
                 width="48"
                 height="48"

@@ -857,27 +857,27 @@ export const NAV_ITEMS = [
 ];
 export const WEBSITE_NEEDS_BUISNESS = [
   {
-    image: "/website/1.json",
+    image: "/website/web-services-icon-1-1.svg",
     para: "Marketing websites that generate leads",
   },
   {
-    image: "/website/2.json",
+    image: "/website/web-services-icon-2.svg",
     para: "Service business websites built around bookings and inquiries",
   },
   {
-    image: "/website/3.json",
+    image: "/website/web-services-icon-3.svg",
     para: "Corporate websites with strong structure and content",
   },
   {
-    image: "/website/1.json",
+    image: "/website/web-services-icon-4.svg",
     para: "E-commerce sites designed for conversion and retention",
   },
   {
-    image: "/website/2.json",
+    image: "/website/web-services-icon-5.svg",
     para: "Landing pages for paid campaigns",
   },
   {
-    image: "/website/3.json",
+    image: "/website/web-services-icon-6.svg",
     para: "Web apps and portals when your workflow needs more than a standard site",
   },
 ];
@@ -945,74 +945,74 @@ export const WEB_DEV_BENEFITS = [
   {
     name: "Enhanced user <br/> experience",
     para: "A well-structured website helps people find what they need quickly. That improves engagement and increases the chance they contact you.",
-    image: "/about-us/optimize.json",
+    image: "/website/enhanced-user-experience.json",
   },
   {
     name: "Strong visual<br/> credibility",
     para: "Design affects trust. Consistent branding, clean layout, and quality visuals help visitors feel confident in your business.",
-    image: "/about-us/generate.json",
+    image: "/website/strong-visual-credibility.json",
   },
   {
     name: "Evergreen content<br/> that supports SEO",
     para: "We help you organize content so it stays relevant, supports search visibility, and answers customer questions clearly.",
-    image: "/about-us/grow.json",
+    image: "/website/evergreen-content-that-supports.json",
   },
   {
     name: "Better conversion <br/> rates",
     para: "A good site is not just attractive. It guides users to action through strong pages, clear CTAs, and fewer distractions.",
-    image: "/about-us/optimize.json",
+    image: "/website/better-conversion-rates.json",
   },
   {
     name: "SEO-ready <br/> foundations",
     para: "Fast load times, mobile-first layouts, clean code, and on-page structure support better rankings and stronger results from marketing. This improves visibility because search engines and real users can move through your site with less friction.",
-    image: "/about-us/generate.json",
+    image: "/website/seo-ready-foundations.json",
   },
   {
     name: "Custom <br/> functionality",
     para: "We can build and integrate features like booking systems, quote forms, configurators, calculators, gated content, and customer portals.",
-    image: "/about-us/grow.json",
+    image: "/website/custom-functionality.json",
   },
 ];
 export const WEB_DEV_SERVICES_WE_OFFER = [
   {
-    icon: "",
+    icon: "/website/services-icon-1-1.svg",
     // icon: "/ceo/full-stack-architecture.json",
     heading: "Custom website design and development",
     para: "Sites built around your brand, your audience, and your marketing goals. ",
   },
   {
-    icon: "",
+    icon: "/website/services-icon-2.svg",
     // icon: "/ceo/strategic-custom-solutions.json",
     heading: "Website redesigns and rebuilds",
     para: "If your site is slow, outdated, or hard to manage, we rebuild with better structure and performance while protecting SEO value.",
   },
   {
     // icon: "/ceo/cutting-edge.json",
-    icon: "",
+    icon: "/website/services-icon-3.svg",
     heading: "CMS implementation and training",
     para: "We set up an easy-to-manage CMS so your team can update pages, add content, and publish with confidence. ",
   },
   {
     // icon: "/ceo/full-stack-architecture.json",
-    icon: "",
+    icon: "/website/services-icon-4.svg",
     heading: "E-commerce development",
     para: "Secure, conversion-focused e-commerce builds on platforms that match your needs, including Shopify and WooCommerce. ",
   },
   {
     // icon: "/ceo/strategic-custom-solutions.json",
-    icon: "",
+    icon: "/website/services-icon-5.svg",
     heading: "Ongoing maintenance and support",
     para: "Updates, fixes, performance monitoring, backups, and continuous improvements so your website stays stable and secure. ",
   },
   {
     // icon: "/ceo/cutting-edge.json",
-    icon: "",
+    icon: "/website/services-icon-6.svg",
     heading: "Third-party integrations",
     para: "Payment, booking, CRM, email marketing, analytics, maps, chat, inventory tools, and more.",
   },
   {
     // icon: "/ceo/full-stack-architecture.json",
-    icon: "",
+    icon: "/website/services-icon-7.svg",
     heading: "Optional bilingual support",
     para: "If your site is slow, outdated, or hard to manage, we rebuild with better structure and performance while protecting SEO value.",
   },

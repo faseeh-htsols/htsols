@@ -14,37 +14,37 @@ type SolutionItem = {
 const ITEMS: SolutionItem[] = [
   {
     title: "UI AND UX DESIGN, PLUS WIREFRAMES",
-    image: "/design-web-dev.webp",
+    image: "/website/ui-ux.png",
     alt: "UI/UX design and wireframes",
   },
   {
     title: "FULL DEVELOPMENT AND CMS SETUP",
-    image: "/website-development-services.webp",
+    image: "/website/full-development.png",
     alt: "Full development and CMS setup",
   },
   {
     title: "CONVERSION-FOCUSED LAYOUTS AND FORMS",
-    image: "/services/web-one.webp",
+    image: "/website/conversion-focused.png",
     alt: "Conversion-focused layouts and forms",
   },
   {
     title: "TECHNICAL SEO FOUNDATIONS",
-    image: "/website/seo-ready.webp",
+    image: "/website/technical-seo.png",
     alt: "Technical SEO foundations",
   },
   {
     title: "ANALYTICS AND TRACKING SETUP",
-    image: "/seo-bannerr.webp",
+    image: "/website/analytics.png",
     alt: "Analytics and tracking setup",
   },
   {
     title: "PERFORMANCE OPTIMIZATION",
-    image: "/web-dev-ser-home.webp",
+    image: "/website/performance.png",
     alt: "Performance optimization",
   },
   {
     title: "LAUNCH SUPPORT AND TRAINING",
-    image: "/what-happens-after-launch.webp",
+    image: "/website/launch- support.png",
     alt: "Launch support and training",
   },
 ];
@@ -91,23 +91,20 @@ const WebDesignSolutions = () => {
                     type="button"
                     onClick={() => setActive(idx)}
                     aria-pressed={isActive}
-                    className={`w-full rounded-lg border px-4 cursor-pointer  py-4 text-left transition ${
-                      isActive
+                    className={`w-full rounded-lg border px-4 cursor-pointer  py-4 text-left transition ${isActive
                         ? "border-[#2C2C2C] bg-black"
                         : "border-white/10 bg-black hover:bg-white/[0.05]"
-                    }`}>
+                      }`}>
                     <div className="flex items-center justify-between gap-4">
                       <span
-                        className={`uppercase text-lg font-primary  ${
-                          isActive ? "text-white" : "text-white/60"
-                        }`}>
+                        className={`uppercase text-lg font-primary  ${isActive ? "text-white" : "text-white/60"
+                          }`}>
                         {item.title}
                       </span>
 
                       <span
-                        className={`shrink-0 ${
-                          isActive ? "text-[#0B6F7A]" : "text-white/45"
-                        }`}>
+                        className={`shrink-0 ${isActive ? "text-[#0B6F7A]" : "text-white/45"
+                          }`}>
                         <svg
                           width="18"
                           height="32"

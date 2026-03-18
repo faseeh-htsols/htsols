@@ -70,20 +70,20 @@ const NeedsBuisness = () => {
                 <div className="p-2 rounded-[20px] bg-tertiary h-full">
                   <div className="flex rounded-[20px] h-full flex-col gap-5 px-5  py-10 items-center bg-black transition-all duration-200 group-hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] ">
                     <div className="w-[70px] h-[70px] bg-white rounded-full flex justify-center items-center">
-                      {/* <Image
+                      <Image
                         width={27}
                         height={34}
                         src={item.image}
-                        alt={item.heading}
+                        alt={item.para}
                         className="w-10 h-10"
-                      /> */}
-                      <LottiePlayer
+                      />
+                      {/* <LottiePlayer
                         src={item.image} // e.g. "/search_17569494_edited.json"
                         loop={true}
                         autoplay={true}
                         className="w-13 h-13"
                         onReady={handleLottieReady(index)}
-                      />
+                      /> */}
                     </div>
                     {/* <h3
                       className="uppercase text-center font-primary text-[20px]"
