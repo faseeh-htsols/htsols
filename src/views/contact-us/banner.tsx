@@ -1,7 +1,6 @@
 "use client";
 
 import Container from "@/components/ui/container";
-import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -40,14 +39,7 @@ type FormValues = {
 };
 
 const Banner = () => {
-
-  const scopeRef = useRef<HTMLElement | null>(null);
   const formRef = useRef<HTMLFormElement | null>(null);
-  // 👇 for split text
-  const headingSplitRef = useRef<HTMLHeadingElement | null>(null);
-  const paraSplitRef = useRef<HTMLParagraphElement | null>(null);
-  const iconWrapRef = useRef<HTMLDivElement | null>(null);
-  // 👇 for form fade
   const formWrapRef = useRef<HTMLDivElement | null>(null);
   const [isSending, setIsSending] = useState(false);
   const [popupOpen, setPopupOpen] = useState(false);
@@ -88,7 +80,7 @@ const Banner = () => {
   const closePopup = () => setPopupOpen(false);
 
   return (
-    <div className="bg-black relative py-10 pt-24 ">
+    <div className="bg-black relative py-10 pt-24 overflow-hidden">
       {/* <div className="pointer-events-none h-full w-full absolute inset-x-0 top-0 flex justify-center">
         <div className="w-full h-full  max-w-[1600px] bg-gradient-to-r from-transparent via-[#00A1A5] to-transparent" />
       </div> */}
@@ -111,7 +103,7 @@ const Banner = () => {
         />
       </div>
       <Container>
-        <div className="relative py-10 flex gap-8 flex-col max-w-5xl mx-auto">
+        <div className="relative py-10 flex gap-6 flex-col max-w-6xl mx-auto">
           <div className="flex justify-center">
             <Image
               src={"/chat.svg"}
@@ -122,17 +114,19 @@ const Banner = () => {
             />
           </div>
 
-          <h1 className="text-4xl lg:text-5xl font-medium uppercase text-center font-primary">
-            Let’s have a chat
+          <h1 className="text-4xl lg:text-5xl font-semibold uppercase text-center font-primary">
+            Get in touch with HTSOL Inc.
           </h1>
-          <p className="text-white text-[20px] text-center">
-            HT-Solutions provides you Website Designing, Web Development, SEO
-            Services, Graphic Designing, Mobile Application Development Video
-            Production, Voice Over, Digital Marketing and Network Solutions in
-            Lahore, Pakistan.
+          <p className="text-white/80 text-[16px] sm:text-[18px] text-center max-w-3xl mx-auto leading-relaxed">
+            Are you ready to propel your business forward? It all begins with
+            reaching out to us and sharing your goals. Whether you already have
+            a clear vision or are still finalizing the details, our team is here
+            to listen and guide you with confidence every step of the way.
           </p>
+          <div className="w-full max-w-3xl mx-auto h-px bg-white/20 mt-3" />
         </div>
-        <div className="relative mt-8" ref={formWrapRef}>
+
+        <div className="relative mt-10" ref={formWrapRef}>
           <Formik
             initialValues={{
               firstName: "",
@@ -148,193 +142,242 @@ const Banner = () => {
           >
             {({ isSubmitting }) => (
               <Form ref={formRef}>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-5">
-                  <div>
-                    <Field
-                      type="text"
-                      name="firstName"
-                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
-                      placeholder="First Name"
-                    />
-                    <ErrorMessage
-                      name="firstName"
-                      component="p"
-                      className="text-red-600 text-xs mt-2"
-                    />
-                  </div>
-                  <div>
-                    <Field
-                      type="text"
-                      name="lastName"
-                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
-                      placeholder="Last Name"
-                    />
-                    <ErrorMessage
-                      name="lastName"
-                      component="p"
-                      className="text-red-600 text-xs mt-2"
-                    />
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-5">
-                  <div>
-                    <Field
-                      type="text"
-                      name="contactNumber"
-                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
-                      placeholder="Contact No"
-                    />
-                    <ErrorMessage
-                      name="contactNumber"
-                      component="p"
-                      className="text-red-600 text-xs mt-2"
-                    />
-                  </div>
-                  <div>
-                    <Field
-                      name="email"
-                      type="text"
-                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
-                      placeholder="Email Address"
-                    />
-                    <ErrorMessage
-                      name="email"
-                      component="p"
-                      className="text-red-600 text-xs mt-2"
-                    />
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-5">
-                  <div>
-                    <Field
-                      name="city"
-                      type="text"
-                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
-                      placeholder="City/Area"
-                    />
-                    <ErrorMessage
-                      name="city"
-                      component="p"
-                      className="text-red-600 text-xs mt-2"
-                    />
-                  </div>
-                  <div>
-                    <Field
-                      as="select"
-                      name="services"
-                      id=""
-                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-sm px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
-                    >
-                      <option value=" web dev" className="bg-black text-white">
-                        web dev
-                      </option>
-                      <option
-                        value=" cgi / vfx /3d animations"
-                        className="bg-black text-white"
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                  {/* LEFT COLUMN */}
+                  <div className="flex flex-col gap-8">
+                    <div className="p-px rounded-2xl bg-linear-to-br from-[#00A1A5] via-white/10 to-transparent">
+                      <div className="rounded-2xl bg-[#0f0f0f]/90 shadow-[0_20px_80px_rgba(0,0,0,0.55)] p-6 sm:p-8">
+                        <h2 className="font-primary uppercase text-2xl mb-4">
+                          Share your goals
+                        </h2>
+                        <p className="text-white/75 text-sm leading-relaxed mb-4">
+                          Let us know about your business, the challenges you’re
+                          facing, and where you want to go. To help us understand
+                          your needs better, consider including:
+                        </p>
+                        <ul className="space-y-2 text-white/85 text-sm">
+                          <li className="flex gap-2">
+                            <span className="text-[#00A1A5]">•</span>
+                            <span>What you’d like to improve right now</span>
+                          </li>
+                          <li className="flex gap-2">
+                            <span className="text-[#00A1A5]">•</span>
+                            <span>Your target audience</span>
+                          </li>
+                          <li className="flex gap-2">
+                            <span className="text-[#00A1A5]">•</span>
+                            <span>
+                              What’s worked well for you (and what hasn’t)
+                            </span>
+                          </li>
+                          <li className="flex gap-2">
+                            <span className="text-[#00A1A5]">•</span>
+                            <span>Any specific timelines or priorities</span>
+                          </li>
+                        </ul>
+                        <p className="text-white/75 text-sm leading-relaxed mt-5">
+                          We’ll listen carefully and create a customized strategy
+                          that aligns with your goals, using your insights as the
+                          foundation for what’s best for your business.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3 className="font-primary uppercase text-2xl mb-3">
+                        Let’s get started
+                      </h3>
+                      <p className="text-white/70 text-sm leading-relaxed mb-5 max-w-lg">
+                        Once we have a clear understanding of your objectives,
+                        we’ll guide you through the next steps. We’ll outline a
+                        solid plan to bring your vision to life, ensuring you
+                        know exactly what happens next, what we’ll need from
+                        you, and how we’ll move forward in a clear and
+                        manageable way.
+                      </p>
+                      <a
+                        href="#contact-form"
+                        className="inline-flex items-center bg-white gap-2 px-6 py-3 text-sm text-primary font-medium uppercase rounded-full tracking-wider transition-all duration-300 border border-white hover:bg-transparent hover:text-white"
                       >
-                        {" "}
-                        cgi / vfx /3d animations{" "}
-                      </option>
-                      <option
-                        value="staff augmentation"
-                        className="bg-black text-white"
-                      >
-                        {" "}
-                        staff augmentation{" "}
-                      </option>
-                      <option
-                        value="Complete digital transformation"
-                        className="bg-black text-white"
-                      >
-                        {" "}
-                        Complete digital transformation{" "}
-                      </option>
-                    </Field>
-                    <ErrorMessage
-                      name="services"
-                      component="p"
-                      className="text-red-600 text-xs mt-2"
-                    />
+                        Request a call back
+                        <span className="text-base">↗</span>
+                      </a>
+                    </div>
                   </div>
-                </div>
-                <div className="mb-3">
-                  <Field
-                    as="textarea"
-                    name="message"
-                    className="h-28 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 py-3 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
-                    placeholder="Enquiry  details"
-                    id=""
-                  ></Field>
-                  <ErrorMessage
-                    name="message"
-                    component="p"
-                    className="text-red-600 text-xs mt-2"
-                  />
-                </div>
-                <div className="flex mt-6 justify-center">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting || isSending}
-                    className="inline-flex cursor-pointer items-center bg-white gap-2 px-6 py-3 text-sm text-primary font-medium uppercase rounded-full tracking-wider transition-all duration-300 border"
+
+                  {/* RIGHT COLUMN */}
+                  <div
+                    id="contact-form"
+                    className="rounded-2xl border border-white/10 bg-[#0f0f0f]/90 shadow-[0_20px_80px_rgba(0,0,0,0.55)] p-6 sm:p-8"
                   >
-                    {isSending ? "Sending..." : "Send Message"}
-                    <svg
-                      width="34"
-                      height="34"
-                      viewBox="0 0 34 34"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clipPath="url(#clip0_397_144)">
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M5.56991 23.5995C5.13058 23.1602 5.13057 22.4479 5.56991 22.0085L17.2372 10.3413C17.6765 9.90193 18.3888 9.90193 18.8282 10.3413C19.2675 10.7806 19.2675 11.4929 18.8282 11.9322L7.1609 23.5995C6.72156 24.0389 6.00923 24.0388 5.56991 23.5995Z"
-                          fill="#000"
+                    <h2 className="font-primary uppercase text-2xl mb-3">
+                      Fill out the form
+                    </h2>
+                    <p className="text-white/75 text-sm leading-relaxed mb-6">
+                      Start by filling out the simple contact form below. Just
+                      share the basics, and we’ll take it from there. We’ll
+                      review your information and get back to you soon with
+                      follow-up questions or next steps, tailored to your
+                      needs.
+                    </p>
+
+                    {/*
+                      Field styling to match the screenshot:
+                      soft dark gradient, large radius, no harsh borders.
+                    */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                      <div>
+                        <Field
+                          type="text"
+                          name="firstName"
+                          className="h-14 w-full outline-0 rounded-xl px-5 text-white placeholder:text-white/60 bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
+                          placeholder="Full name"
                         />
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M7.36147 11.1338C7.36147 10.5125 7.86518 10.0088 8.48651 10.0088L18.0324 10.0088C18.6537 10.0088 19.1574 10.5125 19.1575 11.1338L19.1575 20.6797C19.1574 21.301 18.6537 21.8047 18.0324 21.8048C17.4111 21.8047 16.9074 21.301 16.9074 20.6797L16.9074 12.2588L8.48647 12.2588C7.86519 12.2588 7.36151 11.7551 7.36147 11.1338Z"
-                          fill="#000"
+                        <ErrorMessage
+                          name="firstName"
+                          component="p"
+                          className="text-red-600 text-xs mt-2"
                         />
-                      </g>
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_397_144"
-                          x1="5.56991"
-                          y1="23.5995"
-                          x2="18.8282"
-                          y2="10.3413"
-                          gradientUnits="userSpaceOnUse"
+                      </div>
+                      <div>
+                        <Field
+                          type="text"
+                          name="contactNumber"
+                          className="h-14 w-full outline-0 rounded-xl px-5 text-white placeholder:text-white/60 bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
+                          placeholder="Contact Number"
+                        />
+                        <ErrorMessage
+                          name="contactNumber"
+                          component="p"
+                          className="text-red-600 text-xs mt-2"
+                        />
+                      </div>
+                      <div>
+                        <Field
+                          name="email"
+                          type="text"
+                          className="h-14 w-full outline-0 rounded-xl px-5 text-white placeholder:text-white/60 bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
+                          placeholder="Email"
+                        />
+                        <ErrorMessage
+                          name="email"
+                          component="p"
+                          className="text-red-600 text-xs mt-2"
+                        />
+                      </div>
+                      <div>
+                        <Field
+                          name="city"
+                          type="text"
+                          className="h-14 w-full outline-0 rounded-xl px-5 text-white placeholder:text-white/60 bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
+                          placeholder="City/Area"
+                        />
+                        <ErrorMessage
+                          name="city"
+                          component="p"
+                          className="text-red-600 text-xs mt-2"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Keep lastName + services to preserve logic/fields */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                      <div>
+                        <Field
+                          type="text"
+                          name="lastName"
+                          className="h-14 w-full outline-0 rounded-xl px-5 text-white placeholder:text-white/60 bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
+                          placeholder="Last name"
+                        />
+                        <ErrorMessage
+                          name="lastName"
+                          component="p"
+                          className="text-red-600 text-xs mt-2"
+                        />
+                      </div>
+                      <div />
+                    </div>
+
+                    <div className="mb-5 relative">
+                      <Field
+                        as="select"
+                        name="services"
+                        className="h-14 w-full outline-0 rounded-xl px-5 pr-12 text-white bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] appearance-none"
+                      >
+                        <option value="" className="bg-black text-white">
+                          Service are you interested in
+                        </option>
+                        <option value="web dev" className="bg-black text-white">
+                          web dev
+                        </option>
+                        <option
+                          value="cgi / vfx /3d animations"
+                          className="bg-black text-white"
                         >
-                          <stop stopColor="#075B65" />
-                          <stop offset="0.370192" stopColor="#00838A" />
-                          <stop offset="0.8125" stopColor="#328A99" />
-                        </linearGradient>
-                        <linearGradient
-                          id="paint1_linear_397_144"
-                          x1="12.464"
-                          y1="16.7022"
-                          x2="18.8279"
-                          y2="10.3383"
-                          gradientUnits="userSpaceOnUse"
+                          cgi / vfx /3d animations
+                        </option>
+                        <option
+                          value="staff augmentation"
+                          className="bg-black text-white"
                         >
-                          <stop stopColor="#075B65" />
-                          <stop offset="0.370192" stopColor="#00838A" />
-                          <stop offset="0.8125" stopColor="#328A99" />
-                        </linearGradient>
-                        <clipPath id="clip0_397_144">
-                          <rect
-                            width="24"
-                            height="24"
-                            fill="white"
-                            transform="translate(0 16.9706) rotate(-45)"
+                          staff augmentation
+                        </option>
+                        <option
+                          value="Complete digital transformation"
+                          className="bg-black text-white"
+                        >
+                          Complete digital transformation
+                        </option>
+                      </Field>
+                      <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/70">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 9l6 6 6-6"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </button>
+                        </svg>
+                      </div>
+                      <ErrorMessage
+                        name="services"
+                        component="p"
+                        className="text-red-600 text-xs mt-2"
+                      />
+                    </div>
+
+                    <div className="mb-4">
+                      <Field
+                        as="textarea"
+                        name="message"
+                        className="h-44 w-full outline-0 rounded-xl px-5 py-4 text-white placeholder:text-white/60 bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] resize-none"
+                        placeholder="Notes"
+                      />
+                      <ErrorMessage
+                        name="message"
+                        component="p"
+                        className="text-red-600 text-xs mt-2"
+                      />
+                    </div>
+
+                    <div className="flex mt-6 justify-start">
+                      <button
+                        type="submit"
+                        disabled={isSubmitting || isSending}
+                        className="inline-flex cursor-pointer items-center bg-white gap-2 px-6 py-3 text-sm text-primary font-semibold uppercase rounded-full tracking-wider transition-all duration-300 border border-white hover:bg-transparent hover:text-white disabled:opacity-60 disabled:cursor-not-allowed"
+                      >
+                        {isSending ? "Sending..." : "Submit form"}
+                        <span className="text-base">↗</span>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </Form>
             )}
