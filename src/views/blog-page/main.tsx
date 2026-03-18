@@ -1,16 +1,18 @@
 import React from "react";
 import Banner from "./banner";
 import ContentSections from "./content-sections";
-import AuthorCard from "./author-card";
 import RelatedBlogs from "./related-blogs";
-import FAQSection from "../home/FAQSection";
-import FaqsSimple from "./faqs";
-import ViewOnInstgram from "../ceo/view-on-instgram";
+import FAQSection from "./faqs";
+import ViewOnInstgram from "./view-on-instgram";
 export type IRelatedBlog = {
   title: string;
   scheduledDate: string;
   pictureUrl: string;
   slug: string;
+  description?: string;
+  tags?: string[];
+  authorName?: string;
+  authorImage?: string;
 };
 type Section = {
   heading?: string;
@@ -61,6 +63,7 @@ export type IBlogCta = {
   cta: ICta;
 };
 function Main({ data }: { data: BlogPost }) {
+  const related = data.relatedBlogs ?? [];
   return (
     <div>
       <Banner
@@ -79,8 +82,15 @@ function Main({ data }: { data: BlogPost }) {
         author={data.author}
         scheduledDate={data.scheduledDate}
       />
-      {data.faqs && data.faqs.length > 0 && <FaqsSimple data={data.faqs} />}
-      <RelatedBlogs posts={data.relatedBlogs} />
+      {data.faqs && data.faqs.length > 0 && (
+        <FAQSection
+          bgColor="#0F0F0F"
+          faqs={data.faqs}
+          heading={true}
+          accordionbgtransparent
+        />
+      )}
+      <RelatedBlogs posts={related} />
       <ViewOnInstgram />
     </div>
   );

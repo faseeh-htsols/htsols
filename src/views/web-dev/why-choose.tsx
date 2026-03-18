@@ -14,27 +14,29 @@ export const WHY_CHOOSE_WEB_DEV = [
 ];
 const WhyChoose = () => {
   return (
-    <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+    <DoubleCurves
+      up
+      className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
       <Container>
         <div className="py-10 md:py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 pb-8 border-b border-white mb-10 md:mb-12 mt-6 md:mt-10">
             <HeadingTwo className="text-[32px] leading-[1.05] sm:text-[38px] md:text-4xl lg:text-[33px]">
               Why Professional Web Development Matters in Canada
             </HeadingTwo>
-            <p className="text-base sm:text-lg leading-relaxed">
-              Your website is your strongest owned channel. Ads stop the moment you
-              stop paying. Social posts fade quickly. A well-built website keeps
-              working every day, as long as the foundations are solid.
+            <p>
+              Your website is your strongest owned channel. Ads stop the moment
+              you stop paying. Social posts fade quickly. A well-built website
+              keeps working every day, as long as the foundations are solid.
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
-            <div className="relative py-2 sm:py-6 lg:py-0 shrink-0">
+          <div className="flex flex-col-reverse lg:flex-row gap-2">
+            <div className="relative py-10 lg:py-0 shrink-0 w-full lg:w-[60%]">
               <Image
-                src={"/website/choose.png"}
+                src={"/web-dev-new.webp"}
                 alt="why choose us"
                 width={800}
                 height={800}
-                className="w-full sm:w-[88%] mx-auto h-[320px] sm:h-[420px] lg:h-[650px] rounded-2xl object-cover"
+                className="w-[80%] mx-auto h-[400px] lg:h-[650px] rounded-2xl object-cover border-[#00A1A5] border"
               />
               {/* <div className="absolute left-0 -bottom-0 lg:bottom-[20%] rounded-full border border-[#328A99]">
               <div
@@ -73,12 +75,12 @@ const WhyChoose = () => {
               </div>
             </div>
             <div>
-              <div className="ps-4 sm:ps-5 relative mt-4 sm:mt-9 flex flex-col gap-6 sm:gap-8 lg:gap-10">
-                <div className="absolute top-0 left-0 bg-white/20 w-[2px] h-full"></div>
+              <div className="ps-5 relative mt-9 flex flex-col gap-10 ">
+                <div className="absolute top-0 left-0 bg-white/20 w-1 h-full"></div>
                 {WHY_CHOOSE_WEB_DEV.map((item, index) => (
                   <div key={index} className="relative group flex flex-col gap-2">
-                    <div className="absolute top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 -left-6 sm:-left-7 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] rounded-full"></div>
-                    <p className="text-base sm:text-lg lg:text-xl ps-2">{item}</p>
+                    <div className="absolute top-1/2 -translate-y-1/2 w-5 h-5 -left-7 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] rounded-full"></div>
+                    <p className="text-xl ps-2">{item}</p>
                   </div>
                 ))}
               </div>

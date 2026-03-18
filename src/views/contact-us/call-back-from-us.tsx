@@ -5,7 +5,9 @@ import DoubleCurves from "@/components/ui/double-curves";
 
 const CallBackFromUs = () => {
   return (
-    <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_100%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)]">
+    <DoubleCurves
+      up
+      className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_100%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)]">
       <div className="bg-black relative py-20">
         {/* <div
           className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
@@ -23,7 +25,7 @@ const CallBackFromUs = () => {
             />
           </div>
         </Container>
-        <div className="py-18">
+        {/* <div className="py-18">
           <Container>
             <div className="border border-[#5C5C5C] rounded-lg px-4 flex lg:flex-row flex-col gap-4 relative text-white">
               <div className="lg:w-[56%] py-8 flex flex-col gap-4">
@@ -49,7 +51,7 @@ const CallBackFromUs = () => {
               </div>
             </div>
           </Container>
-        </div>
+        </div> */}
       </div>
     </DoubleCurves>
   );
