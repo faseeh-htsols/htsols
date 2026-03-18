@@ -1,3 +1,4 @@
+import CTA from "@/components/ui/cta";
 import LogosMarquee from "../home/logos-marquee";
 import AboutMe from "./about-me";
 import Achievements from "./achievements";
@@ -19,8 +20,9 @@ const CtoMain = () => {
       <WhyHireMe />
       <IndustriesServe />
       <ClientsAboutMe />
-      <BlogCurate />
-      <ViewOnInstgram />
+      {/* <BlogCurate /> */}
+      {/* <ViewOnInstgram /> */}
+      <CTA />
       <LogosMarquee />
     </>
   );
