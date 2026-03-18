@@ -35,7 +35,7 @@ export default function OurStory() {
               also means fewer handoffs, fewer gaps, and more consistency from
               planning to delivery.
             </p>
-            <div className="flex">
+            <div className="flex mt-3">
               <Button href="/">Get Started</Button>
             </div>
           </div>

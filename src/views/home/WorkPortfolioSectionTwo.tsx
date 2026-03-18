@@ -71,21 +71,17 @@ const portfolioSlides: PortfolioSlide[] = [
 ];
 
 export default function WorkPortfolioSectionTwo() {
-  const sectionRef = useRef<HTMLElement | null>(null);
-
-  // Mobile pin trigger (only cards area)
+  const sectionRef  = useRef<HTMLElement | null>(null);
   const cardsPinRef = useRef<HTMLDivElement | null>(null);
-
-  // Shared viewport/track
   const viewportRef = useRef<HTMLDivElement | null>(null);
-  const trackRef = useRef<HTMLDivElement | null>(null);
+  const trackRef    = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
     () => {
-      const section = sectionRef.current;
+      const section  = sectionRef.current;
       const cardsPin = cardsPinRef.current;
       const viewport = viewportRef.current;
-      const track = trackRef.current;
+      const track    = trackRef.current;
 
       if (!section || !viewport || !track || !cardsPin) return;
 
@@ -94,35 +90,33 @@ export default function WorkPortfolioSectionTwo() {
         return amount > 0 ? amount : 0;
       };
 
-      const buildHorizontal = (triggerEl: Element) => {
+      const mm = gsap.matchMedia();
+
+      // ── DESKTOP lg+: pin whole section, transform pinType, top top ───────
+      mm.add("(min-width: 1024px)", () => {
         gsap.set(track, { x: 0 });
 
         const tween = gsap.to(track, {
           x: () => -getScrollAmount(),
           ease: "none",
           scrollTrigger: {
-            trigger: triggerEl,
+            trigger: section,
             start: "top top",
-            // never allow 0 length, otherwise pin can be flaky
             end: () => `+=${Math.max(1, getScrollAmount())}`,
             scrub: 1,
             pin: true,
             pinSpacing: true,
             anticipatePin: 1,
             invalidateOnRefresh: true,
-            // helps on phones / some layouts
-            pinType: ScrollTrigger.isTouch ? "transform" : "fixed",
-            // markers: true, // <- enable temporarily to debug
+            pinType: "transform",
           },
         });
 
         const ro = new ResizeObserver(() => ScrollTrigger.refresh());
         ro.observe(viewport);
         ro.observe(track);
-
         const onLoad = () => ScrollTrigger.refresh();
         window.addEventListener("load", onLoad);
-
         requestAnimationFrame(() => ScrollTrigger.refresh());
 
         return () => {
@@ -131,15 +125,42 @@ export default function WorkPortfolioSectionTwo() {
           tween.scrollTrigger?.kill();
           tween.kill();
         };
-      };
+      });
 
-      const mm = gsap.matchMedia();
+      // ── MOBILE/TABLET <1024px: doc 18 config — exactly as it was working ─
+      mm.add("(max-width: 1023px)", () => {
+        gsap.set(track, { x: 0 });
 
-      // LG+: pin the whole section (left stays visible)
-      mm.add("(min-width: 1024px)", () => buildHorizontal(section));
+        const tween = gsap.to(track, {
+          x: () => -getScrollAmount(),
+          ease: "none",
+          scrollTrigger: {
+            trigger: cardsPin,
+            start: "top 20%",
+            end: () => `+=${Math.max(1, getScrollAmount())}`,
+            scrub: 1,
+            pin: true,
+            pinSpacing: true,
+            anticipatePin: 1,
+            invalidateOnRefresh: true,
+            pinType: ScrollTrigger.isTouch ? "transform" : "fixed",
+          },
+        });
 
-      // Mobile/Tablet: pin only the cards area
-      mm.add("(max-width: 1023px)", () => buildHorizontal(cardsPin));
+        const ro = new ResizeObserver(() => ScrollTrigger.refresh());
+        ro.observe(viewport);
+        ro.observe(track);
+        const onLoad = () => ScrollTrigger.refresh();
+        window.addEventListener("load", onLoad);
+        requestAnimationFrame(() => ScrollTrigger.refresh());
+
+        return () => {
+          window.removeEventListener("load", onLoad);
+          ro.disconnect();
+          tween.scrollTrigger?.kill();
+          tween.kill();
+        };
+      });
 
       return () => mm.revert();
     },
@@ -160,7 +181,7 @@ export default function WorkPortfolioSectionTwo() {
       />
 
       <div className="flex h-full flex-col lg:flex-row relative justify-end items-center gap-10 lg:gap-0 lg:min-h-[650px]">
-        {/* LEFT SIDE (same behavior: normal on mobile, absolute on lg) */}
+        {/* LEFT SIDE — untouched */}
         <div className="relative lg:absolute top-0 left-0 w-full flex items-center h-full">
           <div className="w-[calc(100%-((100vw-1600px)/2)+(50px/2)+(15px/2))] mx-auto max-w-[1600px] px-5">
             <div className="space-y-6">
@@ -183,7 +204,7 @@ export default function WorkPortfolioSectionTwo() {
           </div>
         </div>
 
-        {/* RIGHT SIDE (pinned on mobile, section pinned on lg) */}
+        {/* RIGHT SIDE — untouched */}
         <div
           ref={cardsPinRef}
           className="relative w-full lg:w-[55%] px-2 lg:px-0"
@@ -191,7 +212,7 @@ export default function WorkPortfolioSectionTwo() {
           <div ref={viewportRef} className="overflow-hidden">
             <div
               ref={trackRef}
-              className="flex lg:h-auto h-screen gap-8 md:gap-10 lg:gap-12 pr-10 will-change-transform"
+              className="flex lg:h-auto items-start gap-8 md:gap-10 lg:gap-12 pr-10 will-change-transform"
             >
               {portfolioSlides.map((slide, idx) => (
                 <article
