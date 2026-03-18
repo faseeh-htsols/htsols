@@ -7,14 +7,12 @@ import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import type { FormikHelpers } from "formik";
 import { useRef, useState } from "react";
+import HeadingTwo from "@/components/ui/heading-two";
 
 const validationSchema = Yup.object({
   firstName: Yup.string()
     .min(2, "First name must be at least 2 characters")
     .required("First name is required"),
-  lastName: Yup.string()
-    .min(2, "Last name must be at least 2 characters")
-    .required("Last name is required"),
   city: Yup.string()
     .min(2, "City/Area must be at least 2 characters")
     .required("City/Area is required"),
@@ -30,7 +28,6 @@ const validationSchema = Yup.object({
 
 type FormValues = {
   firstName: string;
-  lastName: string;
   email: string;
   contactNumber: string;
   services: string;
@@ -80,7 +77,7 @@ const Banner = () => {
   const closePopup = () => setPopupOpen(false);
 
   return (
-    <div className="bg-black relative py-10 pt-24 overflow-hidden">
+    <div className="bg-black relative pb-20 pt-24 overflow-hidden">
       {/* <div className="pointer-events-none h-full w-full absolute inset-x-0 top-0 flex justify-center">
         <div className="w-full h-full  max-w-[1600px] bg-gradient-to-r from-transparent via-[#00A1A5] to-transparent" />
       </div> */}
@@ -130,7 +127,6 @@ const Banner = () => {
           <Formik
             initialValues={{
               firstName: "",
-              lastName: "",
               email: "",
               contactNumber: "",
               services: "",
@@ -138,8 +134,7 @@ const Banner = () => {
               city: "",
             }}
             validationSchema={validationSchema}
-            onSubmit={sendEmail}
-          >
+            onSubmit={sendEmail}>
             {({ isSubmitting }) => (
               <Form ref={formRef}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
@@ -152,8 +147,8 @@ const Banner = () => {
                         </h2>
                         <p className="text-white/75 text-sm leading-relaxed mb-4">
                           Let us know about your business, the challenges you’re
-                          facing, and where you want to go. To help us understand
-                          your needs better, consider including:
+                          facing, and where you want to go. To help us
+                          understand your needs better, consider including:
                         </p>
                         <ul className="space-y-2 text-white/85 text-sm">
                           <li className="flex gap-2">
@@ -176,9 +171,10 @@ const Banner = () => {
                           </li>
                         </ul>
                         <p className="text-white/75 text-sm leading-relaxed mt-5">
-                          We’ll listen carefully and create a customized strategy
-                          that aligns with your goals, using your insights as the
-                          foundation for what’s best for your business.
+                          We’ll listen carefully and create a customized
+                          strategy that aligns with your goals, using your
+                          insights as the foundation for what’s best for your
+                          business.
                         </p>
                       </div>
                     </div>
@@ -197,28 +193,27 @@ const Banner = () => {
                       </p>
                       <a
                         href="#contact-form"
-                        className="inline-flex items-center bg-white gap-2 px-6 py-3 text-sm text-primary font-medium uppercase rounded-full tracking-wider transition-all duration-300 border border-white hover:bg-transparent hover:text-white"
-                      >
+                        className="inline-flex items-center bg-white gap-2 px-6 py-3 text-sm text-primary font-medium uppercase rounded-full tracking-wider transition-all duration-300 border border-white hover:bg-transparent hover:text-white">
                         Request a call back
-                        <span className="text-base">↗</span>
+                        <Image
+                          src={"/right-arrow-btn.webp"}
+                          alt="arrow"
+                          width={18}
+                          height={18}
+                          className="w-[18px] h-[18px]"
+                        />
                       </a>
                     </div>
                   </div>
 
                   {/* RIGHT COLUMN */}
-                  <div
-                    id="contact-form"
-                    className="rounded-2xl border border-white/10 bg-[#0f0f0f]/90 shadow-[0_20px_80px_rgba(0,0,0,0.55)] p-6 sm:p-8"
-                  >
-                    <h2 className="font-primary uppercase text-2xl mb-3">
-                      Fill out the form
-                    </h2>
+                  <div id="contact-form">
+                    <HeadingTwo className="mb-3">Fill out the form</HeadingTwo>
                     <p className="text-white/75 text-sm leading-relaxed mb-6">
                       Start by filling out the simple contact form below. Just
                       share the basics, and we’ll take it from there. We’ll
                       review your information and get back to you soon with
-                      follow-up questions or next steps, tailored to your
-                      needs.
+                      follow-up questions or next steps, tailored to your needs.
                     </p>
 
                     {/*
@@ -227,12 +222,14 @@ const Banner = () => {
                     */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
                       <div>
-                        <Field
-                          type="text"
-                          name="firstName"
-                          className="h-14 w-full outline-0 rounded-xl px-5 text-white placeholder:text-white/60 bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
-                          placeholder="Full name"
-                        />
+                        <div className="h-14 w-full rounded-md bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)]">
+                          <Field
+                            type="text"
+                            name="firstName"
+                            className="h-full rounded-md w-full outline-0 bg-transparent border-0  px-5 text-white placeholder:text-white/60"
+                            placeholder="Full name"
+                          />
+                        </div>
                         <ErrorMessage
                           name="firstName"
                           component="p"
@@ -240,12 +237,14 @@ const Banner = () => {
                         />
                       </div>
                       <div>
-                        <Field
-                          type="text"
-                          name="contactNumber"
-                          className="h-14 w-full outline-0 rounded-xl px-5 text-white placeholder:text-white/60 bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
-                          placeholder="Contact Number"
-                        />
+                        <div className="h-14 w-full  bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)]">
+                          <Field
+                            type="text"
+                            name="contactNumber"
+                            className="h-full rounded-md w-full outline-0 bg-transparent border-0  px-5 text-white placeholder:text-white/60"
+                            placeholder="Contact Number"
+                          />
+                        </div>
                         <ErrorMessage
                           name="contactNumber"
                           component="p"
@@ -253,12 +252,14 @@ const Banner = () => {
                         />
                       </div>
                       <div>
-                        <Field
-                          name="email"
-                          type="text"
-                          className="h-14 w-full outline-0 rounded-xl px-5 text-white placeholder:text-white/60 bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
-                          placeholder="Email"
-                        />
+                        <div className="h-14 w-full  bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)]">
+                          <Field
+                            name="email"
+                            type="text"
+                            className="h-full rounded-md w-full outline-0 bg-transparent border-0  px-5 text-white placeholder:text-white/60"
+                            placeholder="Email"
+                          />
+                        </div>
                         <ErrorMessage
                           name="email"
                           component="p"
@@ -266,12 +267,14 @@ const Banner = () => {
                         />
                       </div>
                       <div>
-                        <Field
-                          name="city"
-                          type="text"
-                          className="h-14 w-full outline-0 rounded-xl px-5 text-white placeholder:text-white/60 bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
-                          placeholder="City/Area"
-                        />
+                        <div className="h-14 w-full  bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)]">
+                          <Field
+                            name="city"
+                            type="text"
+                            className="h-full rounded-md w-full outline-0 bg-transparent border-0  px-5 text-white placeholder:text-white/60"
+                            placeholder="City/Area"
+                          />
+                        </div>
                         <ErrorMessage
                           name="city"
                           component="p"
@@ -279,64 +282,44 @@ const Banner = () => {
                         />
                       </div>
                     </div>
-
-                    {/* Keep lastName + services to preserve logic/fields */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
-                      <div>
-                        <Field
-                          type="text"
-                          name="lastName"
-                          className="h-14 w-full outline-0 rounded-xl px-5 text-white placeholder:text-white/60 bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
-                          placeholder="Last name"
-                        />
-                        <ErrorMessage
-                          name="lastName"
-                          component="p"
-                          className="text-red-600 text-xs mt-2"
-                        />
-                      </div>
-                      <div />
-                    </div>
-
                     <div className="mb-5 relative">
-                      <Field
-                        as="select"
-                        name="services"
-                        className="h-14 w-full outline-0 rounded-xl px-5 pr-12 text-white bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] appearance-none"
-                      >
-                        <option value="" className="bg-black text-white">
-                          Service are you interested in
-                        </option>
-                        <option value="web dev" className="bg-black text-white">
-                          web dev
-                        </option>
-                        <option
-                          value="cgi / vfx /3d animations"
-                          className="bg-black text-white"
-                        >
-                          cgi / vfx /3d animations
-                        </option>
-                        <option
-                          value="staff augmentation"
-                          className="bg-black text-white"
-                        >
-                          staff augmentation
-                        </option>
-                        <option
-                          value="Complete digital transformation"
-                          className="bg-black text-white"
-                        >
-                          Complete digital transformation
-                        </option>
-                      </Field>
+                      <div className="h-14 w-full rounded-md bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)]">
+                        <Field
+                          as="select"
+                          name="services"
+                          className="h-full w-full outline-0 bg-transparent border-0 rounded-md px-5 pr-12 text-white appearance-none">
+                          <option value="" className="bg-black text-white">
+                            Service are you interested in
+                          </option>
+                          <option
+                            value="web dev"
+                            className="bg-black text-white">
+                            web dev
+                          </option>
+                          <option
+                            value="cgi / vfx /3d animations"
+                            className="bg-black text-white">
+                            cgi / vfx /3d animations
+                          </option>
+                          <option
+                            value="staff augmentation"
+                            className="bg-black text-white">
+                            staff augmentation
+                          </option>
+                          <option
+                            value="Complete digital transformation"
+                            className="bg-black text-white">
+                            Complete digital transformation
+                          </option>
+                        </Field>
+                      </div>
                       <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/70">
                         <svg
                           width="18"
                           height="18"
                           viewBox="0 0 24 24"
                           fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
+                          xmlns="http://www.w3.org/2000/svg">
                           <path
                             d="M6 9l6 6 6-6"
                             stroke="currentColor"
@@ -354,12 +337,14 @@ const Banner = () => {
                     </div>
 
                     <div className="mb-4">
-                      <Field
-                        as="textarea"
-                        name="message"
-                        className="h-44 w-full outline-0 rounded-xl px-5 py-4 text-white placeholder:text-white/60 bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] resize-none"
-                        placeholder="Notes"
-                      />
+                      <div className="w-full rounded-md bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)]">
+                        <Field
+                          as="textarea"
+                          name="message"
+                          className="h-44 w-full outline-0 bg-transparent border-0 rounded-md px-5 py-4 text-white placeholder:text-white/60 resize-none"
+                          placeholder="Notes"
+                        />
+                      </div>
                       <ErrorMessage
                         name="message"
                         component="p"
@@ -371,10 +356,15 @@ const Banner = () => {
                       <button
                         type="submit"
                         disabled={isSubmitting || isSending}
-                        className="inline-flex cursor-pointer items-center bg-white gap-2 px-6 py-3 text-sm text-primary font-semibold uppercase rounded-full tracking-wider transition-all duration-300 border border-white hover:bg-transparent hover:text-white disabled:opacity-60 disabled:cursor-not-allowed"
-                      >
+                        className="inline-flex cursor-pointer items-center bg-white gap-2 px-6 py-3 text-sm text-primary font-semibold uppercase rounded-full tracking-wider transition-all duration-300 border border-white hover:bg-transparent hover:text-white disabled:opacity-60 disabled:cursor-not-allowed">
                         {isSending ? "Sending..." : "Submit form"}
-                        <span className="text-base">↗</span>
+                        <Image
+                          src={"/right-arrow-btn.webp"}
+                          alt="arrow"
+                          width={18}
+                          height={18}
+                          className="w-[18px] h-[18px]"
+                        />
                       </button>
                     </div>
                   </div>
@@ -397,9 +387,9 @@ const Banner = () => {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p
-                  className={`text-lg font-semibold ${popupType === "success" ? "text-green-700" : "text-red-700"
-                    }`}
-                >
+                  className={`text-lg font-semibold ${
+                    popupType === "success" ? "text-green-700" : "text-red-700"
+                  }`}>
                   {popupType === "success"
                     ? "Message sent"
                     : "Something went wrong"}
@@ -411,8 +401,7 @@ const Banner = () => {
                 type="button"
                 aria-label="Close popup"
                 onClick={closePopup}
-                className="w-9 h-9 flex items-center justify-center rounded-md border border-gray-200 hover:bg-gray-50 text-black"
-              >
+                className="w-9 h-9 flex items-center justify-center rounded-md border border-gray-200 hover:bg-gray-50 text-black">
                 <span className="text-xl leading-none">&times;</span>
               </button>
             </div>
@@ -421,8 +410,7 @@ const Banner = () => {
               <button
                 type="button"
                 onClick={closePopup}
-                className="px-5 py-2 rounded-full bg-secondary font-medium text-black"
-              >
+                className="px-5 py-2 rounded-full bg-secondary font-medium text-black">
                 OK
               </button>
             </div>

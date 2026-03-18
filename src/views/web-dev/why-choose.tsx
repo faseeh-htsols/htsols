@@ -78,11 +78,9 @@ const WhyChoose = () => {
               <div className="ps-5 relative mt-9 flex flex-col gap-10 ">
                 <div className="absolute top-0 left-0 bg-white/20 w-1 h-full"></div>
                 {WHY_CHOOSE_WEB_DEV.map((item, index) => (
-                  <div
-                    key={index}
-                    className="relative group flex flex-col gap-2">
+                  <div key={index} className="relative group flex flex-col gap-2">
                     <div className="absolute top-1/2 -translate-y-1/2 w-5 h-5 -left-7 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] rounded-full"></div>
-                    <p className="text-base ps-2">{item}</p>
+                    <p className="text-xl ps-2">{item}</p>
                   </div>
                 ))}
               </div>
