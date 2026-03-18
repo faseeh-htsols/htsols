@@ -30,7 +30,7 @@ function Blog({ posts }: BlogProps) {
             <Link
               href={`/blog/${featured.slug}`}
               className="absolute inset-0 mt-60">
-              <div className="w-full md:w-1/2 h-full backdrop-blur-md bg-black/60 p-3 flex flex-col justify-center border-l border-[#00A1A5]/20">
+              <div className="w-full md:w-[70%] h-full backdrop-blur-md bg-black/60 p-3 flex flex-col justify-center border-l border-[#00A1A5]/20">
                 <div className="flex items-center justify-between gap-3 mb-4">
                   <span className="text-white text-xs uppercase tracking-wider font-semibold bg-linear-to-r from-[#00A1A5]/50 to-[#00A1A5] px-4 py-1.5 rounded-full ">
                     Category
@@ -54,27 +54,41 @@ function Blog({ posts }: BlogProps) {
                 </h2>
 
                 <p className="text-gray-200 text-sm md:text-base mb-6 leading-relaxed">
-                  {featured.banner?.description ?? ""}
+                  {featured.description ?? featured.banner?.description ?? ""}
                 </p>
 
                 <div className="flex items-center justify-between">
-                  {featured.banner?.authorName &&
-                  featured.banner?.authorImage ? (
+                  {(featured.banner?.authorName &&
+                    featured.banner?.authorImage) ||
+                  (featured.author?.name &&
+                    (featured.author?.pictureUrl ||
+                      featured.author?.image?.url)) ? (
                     <div className="flex items-center gap-3">
                       <img
-                        src={featured.banner.authorImage}
-                        alt={featured.banner.authorName}
+                        src={
+                          featured.banner?.authorImage ??
+                          featured.author?.pictureUrl ??
+                          featured.author?.image?.url ??
+                          ""
+                        }
+                        alt={
+                          featured.banner?.authorName ??
+                          featured.author?.name ??
+                          "Author"
+                        }
                         width={40}
                         height={40}
                         className="w-10 h-10 rounded-full object-cover"
                       />
                       <div>
                         <p className="text-[#00A1A5] text-sm font-medium">
-                          {featured.banner.authorName}
+                          {featured.banner?.authorName ?? featured.author?.name}
                         </p>
                         <p className="text-gray-300 text-xs">
                           {new Date(
-                            featured.banner.scheduledDate || 0,
+                            featured.banner?.scheduledDate ??
+                              featured.scheduledDate ??
+                              0,
                           ).toLocaleDateString()}
                         </p>
                       </div>
@@ -140,26 +154,39 @@ function Blog({ posts }: BlogProps) {
                 </h3>
 
                 <p className="text-gray-400 text-sm mb-4 leading-relaxed line-clamp-2">
-                  {post.banner?.description ?? ""}
+                  {post.description ?? post.banner?.description ?? ""}
                 </p>
 
                 <div className="flex items-center justify-between">
-                  {post.banner?.authorName && post.banner?.authorImage ? (
+                  {(post.banner?.authorName && post.banner?.authorImage) ||
+                  (post.author?.name &&
+                    (post.author?.pictureUrl || post.author?.image?.url)) ? (
                     <div className="flex items-center gap-2">
                       <img
-                        src={post.banner.authorImage}
-                        alt={post.banner.authorName}
+                        src={
+                          post.banner?.authorImage ??
+                          post.author?.pictureUrl ??
+                          post.author?.image?.url ??
+                          ""
+                        }
+                        alt={
+                          post.banner?.authorName ??
+                          post.author?.name ??
+                          "Author"
+                        }
                         width={32}
                         height={32}
                         className="w-8 h-8 rounded-full object-cover"
                       />
                       <div>
                         <p className="text-[#00A1A5] text-xs font-medium">
-                          {post.banner.authorName}
+                          {post.banner?.authorName ?? post.author?.name}
                         </p>
                         <p className="text-gray-400 text-xs">
                           {new Date(
-                            post.banner.scheduledDate || 0,
+                            post.banner?.scheduledDate ??
+                              post.scheduledDate ??
+                              0,
                           ).toLocaleDateString()}
                         </p>
                       </div>
