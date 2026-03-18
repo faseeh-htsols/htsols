@@ -21,7 +21,7 @@ const AboutUsMain = () => {
       <HtsolCoreValue />
       <OurStory />
       <ImaginationMeetsStrategy />
-      <MeetOurTeam />
+      {/* <MeetOurTeam /> */}
       <ProjectToDiscuss />
     </>
   );
