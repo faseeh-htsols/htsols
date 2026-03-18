@@ -74,7 +74,7 @@ const Banner = () => {
           </div>
           <div className="hidden lg:block absolute right-0 bottom-0 z-20">
             <Image
-              src={"/cto/cto-banner.webp"}
+              src={"/cto/qamar-cto.png"}
               className="w-[520px] h-[560px] object-contain"
               width={520}
               height={560}
@@ -84,7 +84,7 @@ const Banner = () => {
           </div>
           <div className="relative z-10 mt-10 flex justify-center lg:hidden w-full">
             <Image
-              src={"/cto/cto-banner.webp"}
+              src={"/cto/qamar-cto.png"}
               className="w-[280px] sm:w-[340px] h-auto object-contain"
               width={700}
               height={900}

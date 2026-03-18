@@ -227,7 +227,7 @@ export const Footer: React.FC = () => {
               <div className="flex items-center gap-3 mt-6">
                 <a
                   href="mailto:hello@htsol.ca"
-                  className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center text-white hover:text-black transition-all duration-300"
+                  className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center text-white/60 hover:text-white transition-all duration-300"
                   aria-label="Email"
                 >
                   <svg
@@ -245,7 +245,7 @@ export const Footer: React.FC = () => {
                   href="http://instagram.com/htsol.ca"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center text-white hover:text-black transition-all duration-300"
+                  className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center text-white/60 hover:text-white transition-all duration-300"
                   aria-label="Instagram"
                 >
                   <svg
@@ -263,7 +263,7 @@ export const Footer: React.FC = () => {
                   href="https://www.linkedin.com/company/htsol"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center text-white hover:text-black transition-all duration-300"
+                  className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center text-white/60 hover:text-white transition-all duration-300"
                   aria-label="LinkedIn"
                 >
                   <svg

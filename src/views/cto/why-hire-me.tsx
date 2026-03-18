@@ -5,6 +5,7 @@ import HeadingTwo from "@/components/ui/heading-two";
 import LottiePlayer from "@/components/ui/lottie-player";
 import { WHY_HIRE_ME_CEO } from "@/constants";
 import parse from "html-react-parser";
+import Image from "next/image";
 const WhyHireMe = () => {
   return (
     <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
@@ -38,14 +39,21 @@ const WhyHireMe = () => {
                   0 {index + 1}
                 </div>
                 <div className="flex flex-col gap-4">
-                  <div className="p-4 border border-[#075B65] group-hover:bg-white w-fit rounded-full group-hover:[&_svg_path]:!fill-black">
+                  <div className="p-4 border border-[#075B65] group-hover:bg-white w-fit rounded-full group-hover:[&_svg_path]:fill-black!">
                     {/* {parse(item.svg)} */}
-                    <LottiePlayer
+                    <Image
+                      width={27}
+                      height={34}
+                      src={item.icon}
+                      alt={item.heading}
+                      className="w-[45px] h-[45px]"
+                    />
+                    {/* <LottiePlayer
                       className="w-[45px] h-[45px]"
                       src={item.icon}
                       autoplay
                       loop
-                    />
+                    /> */}
                   </div>
                   <h3 className="font-primary uppercase">{item.heading}</h3>
                   <p>{item.para}</p>
