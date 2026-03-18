@@ -10,6 +10,7 @@ import { NAV_ITEMS } from "@/constants";
 
 export const Navbar: React.FC = () => {
   const [open, setOpen] = React.useState(false);
+  const [hideDesktopDropdown, setHideDesktopDropdown] = React.useState(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-black px-6 py-6 md:px-12">
@@ -43,7 +44,7 @@ export const Navbar: React.FC = () => {
               }
 
               return (
-                <div key={item.name} className="group relative">
+                <div key={item.name} className="group relative" onMouseLeave={() => setHideDesktopDropdown(false)}>
                   <Link
                     href={item.link}
                     className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-white/85 transition-colors hover:text-white"
@@ -66,12 +67,18 @@ export const Navbar: React.FC = () => {
                     </svg>
                   </Link>
 
-                  <div className="invisible absolute top-full left-1/2 z-50 mt-3 w-64 -translate-x-1/2 translate-y-2 rounded-xl border border-white/10 bg-black/95 p-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                  <div
+                    className={`absolute top-3 left-1/2 z-50 mt-3 w-64 -translate-x-1/2 translate-y-2 rounded-xl border border-white/10 bg-black/95 p-3 transition-all duration-200 ${hideDesktopDropdown
+                      ? "invisible opacity-0"
+                      : "invisible opacity-0 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
+                      }`}
+                  >
                     <div className="flex flex-col">
                       {item.subItems?.map((sub) => (
                         <Link
                           key={sub.name}
                           href={sub.link}
+                          onClick={() => setHideDesktopDropdown(true)}
                           className="rounded-md px-3 py-2 text-sm text-white/80 transition-colors hover:bg-white/5 hover:text-white"
                         >
                           {sub.name}

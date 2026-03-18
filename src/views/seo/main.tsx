@@ -24,7 +24,7 @@ const SeoMain = () => {
       <SeoMethodology />
       <ReadyToGrow />
       <FAQSection bgColor="#0F0F0F" faqs={SEO_FAQS} heading={true} accordionbgtransparent />
-      <ClientsSection />
+      {/* <ClientsSection /> */}
       <ContactForm />
       <LogosMarquee />
     </>
