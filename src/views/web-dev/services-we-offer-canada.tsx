@@ -6,6 +6,7 @@ import DoubleCurves from "@/components/ui/double-curves";
 import HeadingTwo from "@/components/ui/heading-two";
 import LottiePlayer from "@/components/ui/lottie-player";
 import { WEB_DEV_SERVICES_WE_OFFER } from "@/constants";
+import Image from "next/image";
 
 const ServicesWeOfferCanada = () => {
   return (
@@ -28,12 +29,19 @@ const ServicesWeOfferCanada = () => {
                 <div className="flex flex-col gap-4">
                   <div className="p-4 border border-[#075B65] group-hover:bg-white w-fit rounded-full min-w-[77px] min-h-[77px] flex items-center justify-center group-hover:[&_svg_path]:fill-black!">
                     {item.icon ? (
-                      <LottiePlayer
-                        className="w-[45px] h-[45px]"
+                      <Image
+                        width={27}
+                        height={34}
                         src={item.icon}
-                        autoplay
-                        loop
+                        alt={item.heading}
+                        className="w-[45px] h-[45px]"
                       />
+                      // <LottiePlayer
+                      //   className="w-[45px] h-[45px]"
+                      //   src={item.icon}
+                      //   autoplay
+                      //   loop
+                      // />
                     ) : (
                       <span className="font-primary text-sm text-white group-hover:text-black">
                         {String(index + 1).padStart(2, "0")}

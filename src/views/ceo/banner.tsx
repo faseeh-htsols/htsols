@@ -56,7 +56,7 @@ const Banner = () => {
               </h2>
 
               <div className="flex gap-3 sm:gap-4 justify-center w-full">
-                <a href="" className="w-8 h-8 flex items-center justify-center">
+                <a href="" className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100">
                   <Image
                     src={"/ceo/instag.svg"}
                     alt="Faseeh Ullah"
@@ -65,7 +65,7 @@ const Banner = () => {
                     className="w-4 h-4 sm:w-5 sm:h-5"
                   />
                 </a>
-                <a href="" className="w-8 h-8 flex items-center justify-center">
+                <a href="" className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100">
                   <Image
                     src={"/ceo/linkedin.svg"}
                     alt="Faseeh Ullah"
@@ -74,7 +74,7 @@ const Banner = () => {
                     className="w-4 h-4 sm:w-5 sm:h-5"
                   />
                 </a>
-                <a href="" className="w-8 h-8 flex items-center justify-center">
+                <a href="" className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100">
                   <Image
                     src={"/ceo/facebook-svg.svg"}
                     alt="Faseeh Ullah"
@@ -83,7 +83,7 @@ const Banner = () => {
                     className="w-4 h-4 sm:w-5 sm:h-5"
                   />
                 </a>
-                <a href="" className="w-8 h-8 flex items-center justify-center">
+                <a href="" className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100">
                   <Image
                     src={"/ceo/twitter.svg"}
                     alt="Faseeh Ullah"

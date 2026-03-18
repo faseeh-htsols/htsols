@@ -21,7 +21,7 @@ const ServicesMain = () => {
       <WhatWeOffer />
       <WhyChoose />
       <Approach />
-      <FAQSection bgColor="black" faqs={SERVICES_FAQS} heading={true} form={true} />
+      <FAQSection bgColor="black" faqs={SERVICES_FAQS} heading={true} />
       <LogosMarquee />
       {/* <ProjectToDiscuss /> */}
       {/* <ClientsSection /> */}

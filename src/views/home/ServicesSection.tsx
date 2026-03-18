@@ -31,7 +31,7 @@ const services: ServiceCard[] = [
     title: "SEO SERVICES",
     description:
       "Smart SEO, content, and campaigns that get you seen in Google, ChatGPT, and where buyers search.",
-    image: "/seo-ser-home.webp",
+    image: "/seo-srevices.png",
     link: "/services/seo-services",
   },
   {
@@ -45,21 +45,21 @@ const services: ServiceCard[] = [
     title: "STAFF AUGMENTATION",
     description:
       "Add vetted developers and designers to your team, without the hiring delays or overhead.",
-    image: "/staff-aug.webp",
+    image: "/staff.png",
     link: "/services/staff-augmentation",
   },
   {
     title: "DIGITAL TRANSFORMATION",
     description:
       "Strategy and execution that modernises your business without disrupting day-to-day delivery.",
-    image: "/digital-transformations.webp",
+    image: "/digital-transformation.png",
     link: "/services/digital-transformation",
   },
   {
     title: "DIGITAL MARKETING",
     description:
       "Performance marketing that drives qualified traffic, better leads, and stronger ROI across channels.",
-    image: "/digital-marketing.webp",
+    image: "/marketing.png",
     link: "/services/digital-marketing",
   },
 ];
@@ -67,21 +67,21 @@ const services: ServiceCard[] = [
 // ─── Card stack visual states (index 0 = front/active) ─────────────────────
 // Each successive card is offset right, rotated clockwise, and scaled down
 const STACK_STATES = [
-  { x: 0,  y: 0,  rotation: 0,  scale: 1,    opacity: 1    },
-  { x: 12, y: 8,  rotation: 5,  scale: 0.97, opacity: 0.85 },
-  { x: 22, y: 14, rotation: 9,  scale: 0.94, opacity: 0.7  },
+  { x: 0, y: 0, rotation: 0, scale: 1, opacity: 1 },
+  { x: 12, y: 8, rotation: 5, scale: 0.97, opacity: 0.85 },
+  { x: 22, y: 14, rotation: 9, scale: 0.94, opacity: 0.7 },
   { x: 30, y: 18, rotation: 13, scale: 0.91, opacity: 0.55 },
 ];
 const VISIBLE_DEPTH = STACK_STATES.length;
 
 export const ServicesSection: React.FC = () => {
-  const containerRef   = useRef<HTMLDivElement | null>(null);
-  const headingRef     = useRef<HTMLHeadingElement | null>(null);
-  const methodsRef     = useRef<(HTMLDivElement | null)[]>([]);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const headingRef = useRef<HTMLHeadingElement | null>(null);
+  const methodsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   // ── mobile card stack refs ────────────────────────────────────────────────
-  const stackPinRef    = useRef<HTMLDivElement | null>(null);
-  const stackCardRefs  = useRef<(HTMLDivElement | null)[]>([]);
+  const stackPinRef = useRef<HTMLDivElement | null>(null);
+  const stackCardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // ── existing heading + desktop card animations (UNTOUCHED) ────────────────
   useGSAP(
@@ -124,7 +124,7 @@ export const ServicesSection: React.FC = () => {
       const mm = gsap.matchMedia();
 
       mm.add("(max-width: 767px)", () => {
-        const pinEl   = stackPinRef.current;
+        const pinEl = stackPinRef.current;
         if (!pinEl) return;
 
         const cardEls = stackCardRefs.current.filter(Boolean) as HTMLDivElement[];
@@ -134,14 +134,14 @@ export const ServicesSection: React.FC = () => {
         // Set initial fan positions
         cardEls.forEach((card, i) => {
           const stateIdx = Math.min(i, VISIBLE_DEPTH - 1);
-          const state    = STACK_STATES[stateIdx];
+          const state = STACK_STATES[stateIdx];
           gsap.set(card, {
-            x:               state.x,
-            y:               state.y,
-            rotation:        state.rotation,
-            scale:           state.scale,
-            opacity:         i < VISIBLE_DEPTH ? state.opacity : 0,
-            zIndex:          numCards - i,
+            x: state.x,
+            y: state.y,
+            rotation: state.rotation,
+            scale: state.scale,
+            opacity: i < VISIBLE_DEPTH ? state.opacity : 0,
+            zIndex: numCards - i,
             transformOrigin: "bottom center",
           });
         });
@@ -149,13 +149,13 @@ export const ServicesSection: React.FC = () => {
         // Build scroll-driven timeline
         const tl = gsap.timeline({
           scrollTrigger: {
-            trigger:       pinEl,
-            start:         "top top",
+            trigger: pinEl,
+            start: "top top",
             // 650px of scroll travel per card exit
-            end:           `+=${numExits * 650}`,
-            pin:           true,
-            pinSpacing:    true,
-            scrub:         1.2,
+            end: `+=${numExits * 650}`,
+            pin: true,
+            pinSpacing: true,
+            scrub: 1.2,
             anticipatePin: 1,
           },
         });
@@ -165,31 +165,31 @@ export const ServicesSection: React.FC = () => {
           tl.to(
             cardEls[step],
             {
-              x:        "-115%",
-              opacity:  0,
+              x: "-115%",
+              opacity: 0,
               rotation: -10,
               duration: 1,
-              ease:     "power2.inOut",
+              ease: "power2.inOut",
             },
             step, // timeline label = step index
           );
 
           // Promote all remaining cards one slot forward simultaneously
           for (let j = step + 1; j < numCards; j++) {
-            const newPos   = j - step - 1;
+            const newPos = j - step - 1;
             const stateIdx = Math.min(newPos, VISIBLE_DEPTH - 1);
-            const target   = STACK_STATES[stateIdx];
+            const target = STACK_STATES[stateIdx];
 
             tl.to(
               cardEls[j],
               {
-                x:        target.x,
-                y:        target.y,
+                x: target.x,
+                y: target.y,
                 rotation: target.rotation,
-                scale:    target.scale,
-                opacity:  newPos < VISIBLE_DEPTH ? target.opacity : 0,
+                scale: target.scale,
+                opacity: newPos < VISIBLE_DEPTH ? target.opacity : 0,
                 duration: 1,
-                ease:     "power2.inOut",
+                ease: "power2.inOut",
               },
               step, // same position → simultaneous with exit
             );

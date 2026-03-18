@@ -10,31 +10,31 @@ const WHY_CHOOSE_ITEMS = [
     heading: "ONE TEAM FOR DEVELOPMENT AND MARKETING",
     description:
       "Your website should work with your SEO, ads, and content strategy. We build with your full digital ecosystem in mind.",
-    image: "/rectangle.webp",
+    image: "/website/one-team.png",
   },
   {
     heading: "PERFORMANCE-FIRST BUILDS",
     description:
       "Speed, stability, and mobile usability are treated as requirements, not optional extras. This supports better user experience and more reliable Core Web Vitals.",
-    image: "/rectangle.webp",
+    image: "/website/performance-first.png",
   },
   {
     heading: "CLEAR, TRANSPARENT PROCESS",
     description:
       "You get clear milestones, practical guidance, and a build process that stays organized.",
-    image: "/rectangle.webp",
+    image: "/website/clear-transparent.png",
   },
   {
     heading: "DESIGNED FOR TRUST",
     description:
       "We help you present your services clearly, build credibility, and reduce friction for users who are ready to contact you.",
-    image: "/rectangle.webp",
+    image: "/website/designed-trust.png",
   },
   {
     heading: "BUILT TO SCALE",
     description:
       "Your site should support new services, new locations, and future campaigns without needing a rebuild every year.",
-    image: "/rectangle.webp",
+    image: "/website/built-to-scale.png",
   },
 ];
 
@@ -86,15 +86,13 @@ const WhyChooseHtsol = () => {
                 onClick={() => handleSelect(index)}
                 className="text-left transition-colors px-1">
                 <h3
-                  className={`font-primary font-medium uppercase text-sm sm:text-base md:text-lg tracking-wide ${
-                    activeIndex === index ? "text-white" : "text-white/80"
-                  }`}>
+                  className={`font-primary font-medium uppercase text-sm sm:text-base md:text-lg tracking-wide ${activeIndex === index ? "text-white" : "text-white/80"
+                    }`}>
                   {item.heading}
                 </h3>
                 <p
-                  className={`mt-2 text-xs sm:text-sm leading-relaxed max-w-xl ${
-                    activeIndex === index ? "text-white" : "text-white/70"
-                  }`}>
+                  className={`mt-2 text-xs sm:text-sm leading-relaxed max-w-xl ${activeIndex === index ? "text-white" : "text-white/70"
+                    }`}>
                   {item.description}
                 </p>
               </button>
