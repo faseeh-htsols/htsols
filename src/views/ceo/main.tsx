@@ -7,6 +7,7 @@ import ClientsAboutMe from "./clients-about-me";
 import IndustriesServe from "./industries-serve";
 import Skills from "./skills";
 import ViewOnInstgram from "./view-on-instgram";
+import WhatACall from "./what-a-call";
 import WhyHireMe from "./why-hire-me";
 
 const CeoMain = () => {
@@ -19,6 +20,7 @@ const CeoMain = () => {
       <WhyHireMe />
       <IndustriesServe />
       <ClientsAboutMe />
+      <WhatACall />
       <BlogCurate />
       <ViewOnInstgram />
       <LogosMarquee />

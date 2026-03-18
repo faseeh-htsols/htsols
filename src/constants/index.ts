@@ -626,17 +626,20 @@ export const CEO_ACHIEVEMENTS = [
 ];
 export const WHY_HIRE_ME_CEO = [
   {
-    icon: "/ceo/full-stack-architecture.json",
+    // icon: "/ceo/full-stack-architecture.json",
+    icon: "/services/why-icon-1.svg",
     heading: "Scalable Full-Stack Architecture",
     para: "I lead the development of robust ecosystems using Next.js and Node.js, ensuring your platform is engineered to handle massive growth while maintaining peak performance.",
   },
   {
-    icon: "/ceo/strategic-custom-solutions.json",
+    // icon: "/ceo/strategic-custom-solutions.json",
+    icon: "/services/why-icon-2.svg",
     heading: "Strategic Custom Solutions",
     para: "By combining TypeScript and Express.js, I translate complex business requirements into secure, high-speed software solutions that drive measurable ROI.",
   },
   {
-    icon: "/ceo/cutting-edge.json",
+    // icon: "/ceo/cutting-edge.json",
+    icon: "/services/why-icon-3.svg",
     heading: "Cutting-Edge User Experiences",
     para: "I leverage Three.js and React to build immersive, future-proof interfaces that set your brand apart and keep you ahead of the digital competition.",
   },

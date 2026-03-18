@@ -18,7 +18,7 @@ const AboutMe = () => {
               // }}
             ></div>
             <Image
-              src={"/ceo/about-me.webp"}
+              src={"/cto/about-cto.png"}
               width={600}
               height={600}
               className="relative"
