@@ -37,7 +37,7 @@ const Main = () => {
         <ContactForm />
       </div>
       <FAQSection accordionbgtransparent bgColor="#0F0F0F" heading={true}/>
-      <ClientsSection />
+      {/* <ClientsSection /> */}
       <LogosMarquee />
     </>
   );

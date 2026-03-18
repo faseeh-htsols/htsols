@@ -66,14 +66,13 @@ const ProjectToDiscuss = () => {
               className="w-full h-[620x] object-cover rounded-lg"
             />
           </div>
-          <div className="pt-20">
+          {/* <div className="pt-20">
             <div className="text-center mb-16">
               <HeadingTwo className=" text-white tracking-wider">
                 OUR CLIENTS
               </HeadingTwo>
             </div>
             <div className="relative w-full max-w-[1100px] mx-auto">
-              {/* === Vertical Lines (Y-Axis) === */}
               <div
                 className="hidden lg:block absolute top-0 bottom-0 left-1/3 w-px "
                 style={{
@@ -87,7 +86,6 @@ const ProjectToDiscuss = () => {
                 }}
               ></div>
 
-              {/* === Horizontal Lines (X-Axis) === */}
               <div
                 className="hidden lg:block absolute left-0 right-0 top-1/4 h-px "
                 style={{
@@ -107,7 +105,6 @@ const ProjectToDiscuss = () => {
                 }}
               ></div>
 
-              {/* === Grid Content === */}
               <div className="hidden lg:grid grid-cols-1 sm:grid-cols-3 sm:grid-rows-4">
                 {clients.map((client, index) => (
                   <div
@@ -168,7 +165,7 @@ const ProjectToDiscuss = () => {
                 </Swiper>
               </div>
             </div>
-          </div>
+          </div> */}
         </Container>
       </div>
     </DoubleCurves>

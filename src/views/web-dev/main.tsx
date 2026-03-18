@@ -39,7 +39,7 @@ const WebDevMain = () => {
         heading={true}
         accordionbgtransparent
       />
-      <ClientsSection />
+      {/* <ClientsSection /> */}
       <ContactForm />
     </>
   );
