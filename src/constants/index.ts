@@ -342,6 +342,268 @@ export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
   },
 ];
 
+export const DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
+  {
+    title: "Search Engine Optimization (SEO)",
+    icon: "/services/tab-icon.svg",
+    para: `Search engine optimization forms the foundation of long-term online visibility. When your website appears in relevant search results, it becomes easier for potential customers to find and trust your business.
+    <br/><br/>
+    Our <b>SEO specialists</b> focus on improving your website’s presence on search engines such as Google so your business can attract users who are actively searching for your services.
+    <br/><br/>
+    Our SEO services include:
+    `,
+    lists: [
+      {
+        para: `Keyword research and search intent analysis`,
+      },
+      {
+        para: `On-page SEO optimization`,
+      },
+      {
+        para: `Technical SEO improvements`,
+      },
+      {
+        para: `Website performance optimization`,
+      },
+      {
+        para: `Link building and domain authority development`,
+      },
+      {
+        para: `Local SEO strategies for regional businesses`,
+      },
+    ],
+    botPara: `By improving website structure, content relevance, and technical performance, our team helps your business strengthen search visibility and generate consistent organic traffic over time.`,
+  },
+  {
+    title: "Pay-Per-Click Advertising (PPC)",
+    icon: "/services/tab-icon.svg",
+    para: `Pay-per-click advertising allows businesses to reach targeted audiences quickly through platforms such as <b>Google Ads</b> and <b>Microsoft Ads.</b>
+    <br/><br/>
+    When campaigns are planned correctly, PPC can help businesses generate qualified leads while maintaining control over advertising budgets.
+    <br/><br/>
+    Our PPC specialists focus on campaigns designed to reduce wasted ad spend while improving campaign performance.
+    <br/><br/>
+    Our PPC services include:
+    `,
+    lists: [
+      {
+        para: `Campaign strategy development`,
+      },
+      {
+        para: `Keyword targeting and audience segmentation`,
+      },
+      {
+        para: `Landing page optimization`,
+      },
+      {
+        para: `Conversion tracking setup`,
+      },
+      {
+        para: `Continuous campaign monitoring and optimization`,
+      },
+    ],
+    botPara: `Through ongoing performance analysis and careful targeting, our team helps businesses generate high-quality leads through paid advertising.`,
+  },
+  {
+    title: "Social Media Marketing",
+    icon: "/services/tab-icon.svg",
+    para: `Social media plays an important role in how businesses build relationships with their audiences. It allows companies to communicate directly with customers while strengthening brand recognition.
+    <br/><br/>
+    Our <b>social media marketing</b> team helps businesses connect with their audience through thoughtful content and consistent engagement.
+    <br/><br/>
+    Our services include:
+    `,
+    lists: [
+      {
+        para: `Social media strategy development`,
+      },
+      {
+        para: `Content planning and creation`,
+      },
+      {
+        para: `Paid social media advertising campaigns`,
+      },
+      {
+        title: `Community engagement and brand monitoring`,
+        para: ``,
+      },
+      {
+        para: `Performance analytics and reporting`,
+      },
+    ],
+    botPara: `With the right strategy in place, social media can strengthen brand awareness and support long-term customer loyalty.`,
+  },
+  {
+    title: "Social Media Management",
+    icon: "/services/tab-icon.svg",
+    para: `Effective social media management requires more than occasional posts. It requires strategic planning, creative content and consistent engagement.
+    <br/><br/>
+    At HTSOL, we develop comprehensive social media management strategies designed to grow your audience and strengthen your brand identity.
+    <br/><br/>
+    Our social media management services include:
+    `,
+    lists: [
+      {
+        para: `Social media strategy and planning`,
+      },
+      {
+        para: `Content creation and creative design`,
+      },
+      {
+        para: `Community management and audience engagement`,
+      },
+      {
+        para: `Influencer marketing support`,
+      },
+      {
+        para: `Paid social media campaign management`,
+      },
+      {
+        para: `Social media analytics and performance reporting`,
+      },
+    ],
+    botPara: `By combining strategic planning with engaging content, we help businesses build strong relationships with their audiences while increasing visibility across social platforms.`,
+  },
+  {
+    title: "Digital Marketing Strategy",
+    icon: "/services/tab-icon.svg",
+    para: `Successful digital marketing begins with a clear strategy. Without a well-defined plan, marketing campaigns often lack direction and measurable outcomes.
+    <br/><br/>
+    HTSOL develops comprehensive digital marketing strategies based on research, analytics and industry insights. We analyze your brand positioning, competitive landscape and target audience to determine the most effective marketing channels.
+    <br/><br/>
+    Our strategy development includes:
+    `,
+    lists: [
+      {
+        para: `Brand and market analysis`,
+      },
+      {
+        para: `Competitive landscape evaluation`,
+      },
+      {
+        para: `Customer journey mapping`,
+      },
+      {
+        para: `Channel strategy development`,
+      },
+      {
+        para: `Media planning and budget allocation`,
+      },
+      {
+        para: `Campaign performance frameworks`,
+      },
+    ],
+    botPara: `This strategic foundation ensures that every marketing initiative supports your long-term business objectives.`,
+  },
+  {
+    title: "Affiliate Marketing",
+    icon: "/services/tab-icon.svg",
+    para: `Affiliate marketing allows businesses to expand their reach and increase sales through trusted partners and publishers.
+    <br/><br/>
+    HTSOL manages affiliate marketing programs that connect your brand with relevant websites, review platforms and content creators who promote your products or services.
+    <br/><br/>
+    Our affiliate marketing services include:
+    `,
+    lists: [
+      {
+        para: `Affiliate program strategy and setup`,
+      },
+      {
+        para: `Partner recruitment and relationship management`,
+      },
+      {
+        para: `Affiliate network coordination`,
+      },
+      {
+        para: `Commission structure planning`,
+      },
+      {
+        para: `Campaign monitoring and fraud prevention`,
+      },
+      {
+        para: `Performance tracking and optimization`,
+      },
+    ],
+    botPara: `Affiliate marketing operates on a performance-based model, allowing businesses to pay only when sales or conversions occur.`,
+  },
+  {
+    title: "Content Marketing",
+    icon: "/services/tab-icon.svg",
+    para: `Content marketing helps businesses educate their audience while building trust and improving search engine visibility.
+    <br/><br/>
+    Well-written content answers real questions and helps potential customers understand how your services can support their needs.
+    <br/><br/>
+    Our <b>content marketing</b> services include:`,
+    lists: [
+      {
+        para: `Blog writing and article development`,
+      },
+      {
+        para: `Website content creation`,
+      },
+      {
+        para: `SEO content optimization`,
+      },
+      {
+        para: `Industry research and thought leadership content`,
+      },
+      {
+        para: `Local area pages for local seo`,
+      },
+    ],
+    botPara: `When content is created strategically, it positions your business as a knowledgeable and trustworthy resource within your industry.`,
+  },
+  {
+    title: "Email Marketing",
+    icon: "/services/tab-icon.svg",
+    para: `Email marketing remains one of the most effective ways to maintain communication with customers and nurture potential leads.
+    <br/><br/>
+    A thoughtful email strategy helps businesses share useful information, strengthen customer relationships, and encourage repeat engagement.
+    <br/><br/>
+    Our <b>email marketing services</b> include:`,
+    lists: [
+      {
+        para: `Email marketing strategy and campaign planning`,
+      },
+      {
+        para: `Newsletter design and content creation`,
+      },
+      {
+        para: `Audience segmentation and marketing automation`,
+      },
+      {
+        para: `Campaign performance analysis and reporting`,
+      },
+    ],
+    botPara: `With consistent messaging and careful audience targeting, email campaigns can support long-term customer retention.`,
+  },
+  {
+    title: "Conversion Rate Optimization (CRO)",
+    icon: "/services/tab-icon.svg",
+    para: `Driving traffic to your website is only one part of digital marketing. Turning visitors into leads and customers is equally important.
+    <br/><br/>
+    <b>Conversion rate optimization (CRO)</b> focuses on improving the elements of your website that influence user decisions.
+    <br/><br/>
+    Our CRO services include:
+    `,
+    lists: [
+      {
+        para: `Landing page optimization`,
+      },
+      {
+        para: `A/B testing and performance analysis`,
+      },
+      {
+        para: `User behaviour tracking and insights`,
+      },
+      {
+        para: `Funnel optimization`,
+      },
+    ],
+    botPara: `Even small improvements to conversion rates can significantly improve the overall performance of your marketing strategy.`,
+  },
+];
+
 export const SERVICES_WHY = [
   {
     icon: "/services/why-icon-1.svg",
@@ -426,6 +688,65 @@ export const SERVICES_FAQS = [
     question: "What budget should a business realistically start with?",
     answer:
       "Budgets vary based on goals and competition, but we help you prioritize the most impactful actions first. Many clients start with a focused plan and expand once we have performance data to support that growth.",
+  },
+];
+
+export const DIGITAL_MARKETING_FAQS = [
+  {
+    question:
+      "Why am I getting website traffic but no enquiries or calls?",
+    answer:
+      "This usually means the issue is not traffic volume, it is conversion friction. Review your offer clarity, contact form length, page speed, and call-to-action placement, and make sure the traffic matches the service you want to sell.",
+  },
+  {
+    question: "How long should I wait before deciding a digital marketing campaign is not working?",
+    answer:
+      "Do not judge too early, especially when tracking and targeting are still being refined. Wait until you have enough data, then assess lead quality, conversion rate, and cost per lead, not only clicks.",
+  },
+  {
+    question: "Should I fix my website first or start ads first if I need leads quickly?",
+    answer:
+      "If your website is difficult to use, ads may send paid traffic to a page that does not convert well. A practical option is to run ads to one strong landing page while improving the rest of the site in stages.",
+  },
+  {
+    question:
+      "Why are my Google Ads getting clicks, but the leads are poor quality?",
+    answer:
+      "Poor lead quality often comes from broad targeting, weak keyword intent, or unclear ad messaging. Tighten keyword targeting, add negative keywords, and clearly state pricing, service area, and audience on the landing page.",
+  },
+  {
+    question:
+      "How do I know if my agency is actually helping revenue, not just generating reports?",
+    answer:
+      "Ask for reporting tied to business outcomes, such as qualified leads, booked calls, sales opportunities, and revenue impact. If the reports only show impressions and clicks, the performance picture may be incomplete.",
+  },
+  {
+    question:
+      "I serve multiple Canadian cities, should I use one page or separate pages for each area?",
+    answer:
+      "If each city has different demand, services, or local relevance, separate pages often perform better. Each page should provide useful local information, not duplicated copy with only the city name changed.",
+  },
+  {
+    question:
+      "Can I switch digital marketing agencies without losing my ad data or accounts?",
+    answer:
+      "Yes, if your accounts are set up under your business ownership. Keep admin access to Google Ads, Analytics, Search Console, Meta, and your website before making the switch.",
+  },
+  {
+    question:
+      "I have a limited budget, should I split it across SEO, PPC, and social media right away?",
+    answer:
+      "Usually, no. Smaller budgets often perform better when focused on one or two channels first, then expanded after you identify which channels bring qualified leads.",
+  },
+  {
+    question: "Why did my local ad leads suddenly drop after changes to my business profile or account?",
+    answer:
+      "Lead volume can drop after profile verification issues, mismatched business details, or account compliance changes. Check your Google Business Profile and ad account settings to confirm everything is accurate and active.",
+  },
+  {
+    question: "Do I need separate English and French landing pages for Canada?",
+    answer:
+      "Not always, but bilingual pages can improve trust and conversions in some markets. Start with your highest priority regions, then expand based on traffic and lead data.",
   },
 ];
 
