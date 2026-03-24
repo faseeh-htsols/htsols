@@ -10,7 +10,9 @@ import Image from "next/image";
 
 const ServicesWeOfferCanada = () => {
   return (
-    <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+    <DoubleCurves
+      up
+      className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
       <Container>
         <div className="py-20">
           <HeadingTwo className="text-center mb-8">
@@ -21,8 +23,7 @@ const ServicesWeOfferCanada = () => {
             {WEB_DEV_SERVICES_WE_OFFER.map((item, index) => (
               <div
                 key={item.heading}
-                className="relative group bg-tertiary rounded-lg px-4 py-6 hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]"
-              >
+                className="relative group bg-tertiary rounded-lg px-4 py-6 hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]">
                 <div className="p-3 absolute right-0 top-0 text-xl rounded-bl-2xl font-primary bg-black">
                   0 {index + 1}
                 </div>
@@ -36,13 +37,13 @@ const ServicesWeOfferCanada = () => {
                         alt={item.heading}
                         className="w-[45px] h-[45px]"
                       />
+                    ) : (
                       // <LottiePlayer
                       //   className="w-[45px] h-[45px]"
                       //   src={item.icon}
                       //   autoplay
                       //   loop
                       // />
-                    ) : (
                       <span className="font-primary text-sm text-white group-hover:text-black">
                         {String(index + 1).padStart(2, "0")}
                       </span>
@@ -61,12 +62,14 @@ const ServicesWeOfferCanada = () => {
               Looking for <br /> Professional Growth?
             </h3>
             <p className="relative">
-              We&apos;re always open to connecting with driven designers, developers,
-              marketers, and strategists who want to do meaningful work with a
-              supportive team.
+              We&apos;re always open to connecting with driven designers,
+              developers, marketers, and strategists who want to do meaningful
+              work with a supportive team.
             </p>
             <div className="flex relative">
-              <Button href="/">Get Started</Button>
+              <Button variant="white" href="/">
+                Get Started
+              </Button>
             </div>
           </div>
         </div>

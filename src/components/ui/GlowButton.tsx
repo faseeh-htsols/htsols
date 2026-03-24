@@ -3,7 +3,7 @@ import React from "react";
 
 interface GlowButtonProps {
   children: React.ReactNode;
-  variant?: "primary" | "outline";
+  variant?: "primary" | "outline" | "white";
   className?: string;
   onClick?: () => void;
   href?: string;
@@ -16,10 +16,47 @@ export const GlowButton: React.FC<GlowButtonProps> = ({
   onClick,
   href,
 }) => {
-  const isPrimary = variant === "primary";
+  /* ── WHITE variant: solid white + black arrow; hover → transparent, white text/border, white arrow ── */
+  if (variant === "white") {
+    const whiteClasses = [
+      "group flex items-center gap-2 px-6 py-3 text-sm font-sans font-semibold uppercase rounded-full tracking-wider",
+      "border-2 border-white bg-white text-black",
+      "transition-[background-color,color,border-color] duration-300 ease-out",
+      "hover:bg-transparent hover:text-white hover:border-white",
+      className,
+    ].join(" ");
 
-  /* ── OUTLINE variant: original white-stroke + arrow style ── */
-  if (!isPrimary) {
+    const content = (
+      <>
+        {children}
+        <Image
+          src="/black-arrow.svg"
+          alt=""
+          width={30}
+          height={30}
+          unoptimized
+          className="h-[30px] w-[30px] shrink-0 object-contain transition-[filter] duration-300 ease-out group-hover:invert"
+        />
+      </>
+    );
+
+    if (href) {
+      return (
+        <a href={href} className={whiteClasses}>
+          {content}
+        </a>
+      );
+    }
+
+    return (
+      <button type="button" onClick={onClick} className={whiteClasses}>
+        {content}
+      </button>
+    );
+  }
+
+  /* ── OUTLINE variant: white-stroke + arrow style ── */
+  if (variant === "outline") {
     const outlineClasses = `flex items-center gap-2 px-6 py-3 text-sm font-sans font-semibold uppercase rounded-full tracking-wider transition-all duration-300 border bg-transparent border-white/30 text-white hover:border-white hover:bg-white hover:text-black ${className}`;
 
     const content = (
@@ -44,7 +81,7 @@ export const GlowButton: React.FC<GlowButtonProps> = ({
     }
 
     return (
-      <button onClick={onClick} className={outlineClasses}>
+      <button type="button" onClick={onClick} className={outlineClasses}>
         {content}
       </button>
     );
@@ -85,7 +122,7 @@ export const GlowButton: React.FC<GlowButtonProps> = ({
   }
 
   return (
-    <button onClick={onClick} className={baseClasses} style={style}>
+    <button type="button" onClick={onClick} className={baseClasses} style={style}>
       {buttonContent}
     </button>
   );
