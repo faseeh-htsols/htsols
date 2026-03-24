@@ -6,10 +6,18 @@ import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import gsap from "gsap";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+gsap.registerPlugin(ScrollTrigger);
+
+const STACK_STATES = [
+    { x: 0, y: 0, rotation: 0, scale: 1, opacity: 1 },
+    { x: 12, y: 8, rotation: 5, scale: 0.97, opacity: 0.85 },
+    { x: 22, y: 14, rotation: 9, scale: 0.94, opacity: 0.7 },
+    { x: 30, y: 18, rotation: 13, scale: 0.91, opacity: 0.55 },
+];
+const VISIBLE_DEPTH = STACK_STATES.length;
+
 const WHY_CHOOSE_ITEMS = [
     {
         heading: "SEO Health Check",
@@ -44,6 +52,8 @@ const ToolsAndReporting = () => {
     );
     const activeItem = WHY_CHOOSE_ITEMS[activeIndex];
     const imageRef = useRef<HTMLDivElement | null>(null);
+    const stackPinRef = useRef<HTMLDivElement | null>(null);
+    const stackCardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
     const handleSelect = (index: number) => {
         if (index === activeIndex) return;
@@ -69,6 +79,89 @@ const ToolsAndReporting = () => {
         );
     }, [activeIndex, slideDirection]);
 
+    useGSAP(() => {
+        const mm = gsap.matchMedia();
+
+        mm.add("(max-width: 767px)", () => {
+            const pinEl = stackPinRef.current;
+            if (!pinEl) return;
+
+            const cardEls = stackCardRefs.current.filter(Boolean) as HTMLDivElement[];
+            const numCards = cardEls.length;
+            if (numCards === 0) return;
+
+            const numExits = numCards - 1;
+
+            cardEls.forEach((card, i) => {
+                const stateIdx = Math.min(i, VISIBLE_DEPTH - 1);
+                const state = STACK_STATES[stateIdx];
+                gsap.set(card, {
+                    x: state.x,
+                    y: state.y,
+                    rotation: state.rotation,
+                    scale: state.scale,
+                    opacity: i < VISIBLE_DEPTH ? state.opacity : 0,
+                    zIndex: numCards - i,
+                    transformOrigin: "bottom center",
+                });
+            });
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: pinEl,
+                    // Pin after cards are fully in view (accounts for fixed mobile header)
+                    start: "top 96px",
+                    end: `+=${Math.max(1, numExits) * 650}`,
+                    pin: true,
+                    pinSpacing: true,
+                    scrub: 1.1,
+                    anticipatePin: 1,
+                },
+            });
+
+            for (let step = 0; step < numExits; step++) {
+                tl.to(
+                    cardEls[step],
+                    {
+                        x: "-115%",
+                        opacity: 0,
+                        rotation: -10,
+                        duration: 1,
+                        ease: "power2.inOut",
+                    },
+                    step,
+                );
+
+                for (let j = step + 1; j < numCards; j++) {
+                    const newPos = j - step - 1;
+                    const stateIdx = Math.min(newPos, VISIBLE_DEPTH - 1);
+                    const target = STACK_STATES[stateIdx];
+
+                    tl.to(
+                        cardEls[j],
+                        {
+                            x: target.x,
+                            y: target.y,
+                            rotation: target.rotation,
+                            scale: target.scale,
+                            opacity: newPos < VISIBLE_DEPTH ? target.opacity : 0,
+                            duration: 1,
+                            ease: "power2.inOut",
+                        },
+                        step,
+                    );
+                }
+            }
+
+            return () => {
+                tl.scrollTrigger?.kill();
+                tl.kill();
+            };
+        });
+
+        return () => mm.revert();
+    }, []);
+
     return (
         <section className="py-20 bg-tertiary">
             <Container>
@@ -87,16 +180,17 @@ const ToolsAndReporting = () => {
                 </div>
 
                 <div className="md:hidden">
-                    <Swiper
-                        modules={[Pagination]}
-                        slidesPerView={1}
-                        spaceBetween={16}
-                        pagination={{ clickable: true }}
-                        className="seo-tools-mobile-swiper [&_.swiper-pagination]:!static [&_.swiper-pagination]:!mt-4"
-                    >
-                        {WHY_CHOOSE_ITEMS.map((item) => (
-                            <SwiperSlide key={item.heading}>
-                                <div className="rounded-2xl bg-[#191919] border border-white/10 overflow-hidden">
+                    <div ref={stackPinRef} className="relative" style={{ height: "100svh", minHeight: "620px" }}>
+                        <div className="relative h-full flex items-center justify-center pt-4">
+                            {WHY_CHOOSE_ITEMS.map((item, index) => (
+                                <div
+                                    key={item.heading}
+                                    ref={(el) => {
+                                        stackCardRefs.current[index] = el;
+                                    }}
+                                    className="absolute w-[88vw] max-w-[430px] rounded-2xl bg-[#191919] border border-white/10 overflow-hidden"
+                                    style={{ willChange: "transform, opacity" }}
+                                >
                                     <div className="p-5 pb-4">
                                         <h3 className="font-primary font-medium uppercase text-base tracking-wide text-white">
                                             {item.heading}
@@ -115,9 +209,9 @@ const ToolsAndReporting = () => {
                                         />
                                     </div>
                                 </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
+                            ))}
+                        </div>
+                    </div>
                     <div className="mt-6 flex justify-center">
                         <Button href="/contact-us" variant="outline">
                             LEARN HOW OUR SEO REPORTING WORKS
