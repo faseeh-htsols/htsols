@@ -44,8 +44,10 @@ const processSteps: ProcessStep[] = [
 //               }
 export const WorkProcessSection: React.FC = () => {
   return (
-    <DoubleCurves up className=" -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
-      <section className="relative bg-[#0a0a0a] py-24">
+    <DoubleCurves
+      up
+      className=" -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+      <section className="relative bg-[#0a0a0a] py-24 lg:py-40">
         {/* Top accent line */}
         {/* <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" /> */}
         {/* Bottom accent line */}
@@ -84,8 +86,7 @@ export const WorkProcessSection: React.FC = () => {
             {processSteps.map((item, index) => (
               <div
                 key={item.title}
-                className={`absolute ${`item-${index}`} text-white `}
-              >
+                className={`absolute ${`item-${index}`} text-white `}>
                 <div className="bg-white w-[65px] h-[65px] rounded-3xl flex justify-center items-center">
                   <div className="gradient-box w-5 h-5 rounded-lg " />
                 </div>
@@ -109,8 +110,7 @@ export const WorkProcessSection: React.FC = () => {
             {processSteps.map((item, index) => (
               <div
                 key={item.title}
-                className={`relative  ${`item-${index}`} text-white `}
-              >
+                className={`relative  ${`item-${index}`} text-white `}>
                 {/* <div className=" absolute left-0 h-full w-1 bg-white sm:hidden"></div> */}
                 <div className="bg-white w-[65px] h-[65px] rounded-3xl flex justify-center items-center">
                   <div className="gradient-box w-5 h-5 rounded-lg " />

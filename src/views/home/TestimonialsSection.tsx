@@ -69,8 +69,10 @@ const testimonials: Testimonial[] = [
 
 const TestimonialsSection = () => {
   return (
-    <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
-      <section className="relative bg-[#050505] py-24">
+    <DoubleCurves
+      up
+      className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+      <section className="relative bg-[#050505] py-24 lg:py-40">
         {/* <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] animate-pulse
@@ -104,8 +106,8 @@ const TestimonialsSection = () => {
 
             <p className="mt-5  text-[#DBDBDB] max-w-[700px] mx-auto leading-relaxed">
               Read through our testimonials to see why our clients love working
-              with us and how we can help you achieve your business goals through
-              creative and effective design.
+              with us and how we can help you achieve your business goals
+              through creative and effective design.
             </p>
           </div>
 
@@ -136,8 +138,7 @@ const TestimonialsSection = () => {
               nextEl: ".testi-next",
               prevEl: ".testi-prev",
             }}
-            className="testimonials-swiper"
-          >
+            className="testimonials-swiper">
             {testimonials.map((t, i) => (
               <SwiperSlide key={i}>
                 <div className="relative testimonial-card h-full bg-[#111111] rounded-[24px] px-10 py-10 flex flex-col border border-white/6 shadow-[0_28px_80px_rgba(0,0,0,0.8)]">
@@ -165,8 +166,7 @@ const TestimonialsSection = () => {
 
                   <p
                     dangerouslySetInnerHTML={{ __html: t.content }}
-                    className="text-white/80 text-[12px] leading-relaxed mb-9"
-                  ></p>
+                    className="text-white/80 text-[12px] leading-relaxed mb-9"></p>
                 </div>
               </SwiperSlide>
             ))}
@@ -180,8 +180,7 @@ const TestimonialsSection = () => {
                 height="48"
                 viewBox="0 0 48 48"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+                xmlns="http://www.w3.org/2000/svg">
                 <circle
                   cx="24"
                   cy="24"
@@ -201,8 +200,7 @@ const TestimonialsSection = () => {
                 height="48"
                 viewBox="0 0 48 48"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+                xmlns="http://www.w3.org/2000/svg">
                 <circle cx="24" cy="24" r="23.5" stroke="white" />
                 <path
                   d="M36.7071 24.7071C37.0976 24.3166 37.0976 23.6834 36.7071 23.2929L30.3431 16.9289C29.9526 16.5384 29.3195 16.5384 28.9289 16.9289C28.5384 17.3195 28.5384 17.9526 28.9289 18.3431L34.5858 24L28.9289 29.6569C28.5384 30.0474 28.5384 30.6805 28.9289 31.0711C29.3195 31.4616 29.9526 31.4616 30.3431 31.0711L36.7071 24.7071ZM12 24V25H36V24V23H12V24Z"

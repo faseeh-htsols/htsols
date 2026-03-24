@@ -37,7 +37,9 @@ const marqueeClients = Array(8).fill("HTSOL INC.");
 export const ClientsSection: React.FC = () => {
   return (
     <>
-      <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+      <DoubleCurves
+        up
+        className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
         <section className="relative bg-black py-20">
           {/* <div
           className="pointer-events-none absolute z-2 top-0 left-0 h-[4%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-2 sm:-rotate-1 w-full
@@ -60,43 +62,42 @@ export const ClientsSection: React.FC = () => {
               <div
                 className="hidden lg:block absolute top-0 bottom-0 left-1/3 w-px "
                 style={{
-                  background: "linear-gradient(180deg, #00A1A5 0%, #1A2626 100%)",
-                }}
-              ></div>
+                  background:
+                    "linear-gradient(180deg, #00A1A5 0%, #1A2626 100%)",
+                }}></div>
               <div
                 className="hidden lg:block  absolute top-0 bottom-0 left-2/3 w-px "
                 style={{
-                  background: "linear-gradient(180deg, #00A1A5 0%, #1A2626 100%)",
-                }}
-              ></div>
+                  background:
+                    "linear-gradient(180deg, #00A1A5 0%, #1A2626 100%)",
+                }}></div>
 
               {/* === Horizontal Lines (X-Axis) === */}
               <div
                 className="hidden lg:block absolute left-0 right-0 top-1/4 h-px "
                 style={{
-                  background: "linear-gradient(90deg, #00A1A5 0%, #1A2626 100%)",
-                }}
-              ></div>
+                  background:
+                    "linear-gradient(90deg, #00A1A5 0%, #1A2626 100%)",
+                }}></div>
               <div
                 className="hidden lg:block absolute left-0 right-0 top-2/4 h-px "
                 style={{
-                  background: "linear-gradient(90deg, #00A1A5 0%, #1A2626 100%)",
-                }}
-              ></div>
+                  background:
+                    "linear-gradient(90deg, #00A1A5 0%, #1A2626 100%)",
+                }}></div>
               <div
                 className="hidden lg:block absolute left-0 right-0 top-3/4 h-px"
                 style={{
-                  background: "linear-gradient(90deg, #00A1A5 0%, #1A2626 100%)",
-                }}
-              ></div>
+                  background:
+                    "linear-gradient(90deg, #00A1A5 0%, #1A2626 100%)",
+                }}></div>
 
               {/* === Grid Content === */}
               <div className="hidden lg:grid grid-cols-1 sm:grid-cols-3 sm:grid-rows-4">
                 {clients.map((client, index) => (
                   <div
                     key={index}
-                    className="flex items-center justify-center py-12"
-                  >
+                    className="flex items-center justify-center py-12">
                     <Image
                       src={client.logo}
                       alt={client.name}
@@ -131,14 +132,12 @@ export const ClientsSection: React.FC = () => {
                         spaceBetween: 50,
                       },
                     }}
-                    modules={[Autoplay]}
-                  >
+                    modules={[Autoplay]}>
                     {clients.map((client, index) => (
                       <SwiperSlide key={`${index}-mob`}>
                         <div
                           key={index}
-                          className="flex items-center justify-center "
-                        >
+                          className="flex items-center justify-center ">
                           <Image
                             src={client.logo}
                             alt={client.name}

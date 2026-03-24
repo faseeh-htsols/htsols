@@ -78,11 +78,10 @@ const EverythingDigitalWorking = () => {
     { scope: containerRef },
   );
   return (
-    <DoubleCurves up className=" -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[2%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
-      <div
-        ref={containerRef}
-        className="bg-tertiary py-20 relative"
-      >
+    <DoubleCurves
+      up
+      className=" -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[2%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+      <div ref={containerRef} className="bg-tertiary py-20 lg:py-40 relative">
         {/* <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] animate-pulse
@@ -101,29 +100,26 @@ const EverythingDigitalWorking = () => {
                 ref={(el) => {
                   methodsRef.current[0] = el;
                 }}
-                className="text-center"
-              >
+                className="text-center">
                 Many businesses struggle because their website, marketing, and
                 internal systems are managed separately. When platforms don’t
                 connect properly, performance becomes inconsistent and harder to
-                measure. In many cases, fixing disconnected tools costs more than
-                building the right foundation from the start.
+                measure. In many cases, fixing disconnected tools costs more
+                than building the right foundation from the start.
               </p>
               <p
                 ref={(el) => {
                   methodsRef.current[1] = el;
                 }}
-                className="text-center font-semibold "
-              >
-                At HTSOL Inc., we keep everything under one coordinated structure
-                so each decision supports the next.
+                className="text-center font-semibold ">
+                At HTSOL Inc., we keep everything under one coordinated
+                structure so each decision supports the next.
               </p>
               <p
                 ref={(el) => {
                   methodsRef.current[2] = el;
                 }}
-                className="text-center"
-              >
+                className="text-center">
                 We support the full digital lifecycle:
               </p>
             </div>
@@ -131,8 +127,7 @@ const EverythingDigitalWorking = () => {
               {data.map((item) => (
                 <div
                   key={item.heading}
-                  className="rounded-[20px] group p-px bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]"
-                >
+                  className="rounded-[20px] group p-px bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]">
                   <div className="p-2 rounded-[20px] h-full bg-tertiary">
                     <div className="flex rounded-[20px] flex-col px-6 gap-5 py-10  h-full  bg-black transition-all duration-200 group-hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] ">
                       <div className="w-[70px] h-[70px] bg-white rounded-full flex justify-center items-center">
@@ -152,8 +147,7 @@ const EverythingDigitalWorking = () => {
                       </div>
                       <h3
                         className="uppercase font-primary text-[20px]"
-                        dangerouslySetInnerHTML={{ __html: item.heading }}
-                      ></h3>
+                        dangerouslySetInnerHTML={{ __html: item.heading }}></h3>
                       <ul className="list-disc ps-5">
                         {item.lists.map((list, idx) => (
                           <li key={idx}>{list}</li>

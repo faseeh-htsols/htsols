@@ -28,9 +28,12 @@ const getIndustryIcon = (name: string): LucideIcon => {
 
   if (normalized.includes("healthcare")) return Stethoscope;
   if (normalized.includes("professional services")) return Briefcase;
-  if (normalized.includes("e-commerce") || normalized.includes("retail")) return ShoppingCart;
-  if (normalized.includes("construction") || normalized.includes("trades")) return Hammer;
-  if (normalized.includes("saas") || normalized.includes("technology")) return Cpu;
+  if (normalized.includes("e-commerce") || normalized.includes("retail"))
+    return ShoppingCart;
+  if (normalized.includes("construction") || normalized.includes("trades"))
+    return Hammer;
+  if (normalized.includes("saas") || normalized.includes("technology"))
+    return Cpu;
   if (normalized.includes("local service")) return MapPin;
   if (normalized.includes("legal")) return Scale;
   if (normalized.includes("marketing agencies")) return Megaphone;
@@ -79,11 +82,12 @@ const WhoWeHelp = () => {
     { scope: containerRef },
   );
   return (
-    <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[3%] xl:-mt-[2%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+    <DoubleCurves
+      up
+      className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[3%] xl:-mt-[2%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
       <div
         ref={containerRef}
-        className="py-24 bg-[url(/how-we-help.webp)] bg-cover relative"
-      >
+        className="py-24 lg:py-40 bg-[url(/how-we-help.webp)] bg-cover relative">
         {/* Top accent line */}
         {/* <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
@@ -99,8 +103,7 @@ const WhoWeHelp = () => {
               className="text-center"
               ref={(el) => {
                 methodsRef.current[0] = el;
-              }}
-            >
+              }}>
               We work with organisations where credibility, clarity, and
               reliability are essential. Businesses often come to us when they
               want <br /> consistent enquiries and a dependable online presence.
@@ -109,8 +112,7 @@ const WhoWeHelp = () => {
               className="text-center font-semibold"
               ref={(el) => {
                 methodsRef.current[1] = el;
-              }}
-            >
+              }}>
               Our experience includes:
             </p>
             <div className="relative grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-7">
@@ -126,8 +128,7 @@ const WhoWeHelp = () => {
                     methodsRef.current[idx + 2] = el;
                   }}
                   key={item.name}
-                  className="relative z-10 py-5"
-                >
+                  className="relative z-10 py-5">
                   {(() => {
                     const Icon = getIndustryIcon(item.name);
                     return (
