@@ -56,8 +56,7 @@ const WhatHappensAfterLaunch = () => {
   return (
     <div
       ref={sectionRef}
-      className="py-24 bg-[url(/what-happens-after-launch.webp)] bg-cover"
-    >
+      className="py-24 lg:py-40 bg-[url(/what-happens-after-launch.webp)] bg-cover">
       <Container>
         <div>
           <div ref={headingRef}>

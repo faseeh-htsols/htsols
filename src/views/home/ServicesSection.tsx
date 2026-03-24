@@ -127,7 +127,9 @@ export const ServicesSection: React.FC = () => {
         const pinEl = stackPinRef.current;
         if (!pinEl) return;
 
-        const cardEls = stackCardRefs.current.filter(Boolean) as HTMLDivElement[];
+        const cardEls = stackCardRefs.current.filter(
+          Boolean,
+        ) as HTMLDivElement[];
         const numCards = cardEls.length;
         const numExits = numCards - 1; // last card never exits
 
@@ -208,11 +210,12 @@ export const ServicesSection: React.FC = () => {
   );
 
   return (
-    <DoubleCurves up className=" -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+    <DoubleCurves
+      up
+      className=" -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
       <section
         ref={containerRef}
-        className="bg-tertiary relative pt-6 pb-20 md:py-20"
-      >
+        className="bg-tertiary relative pt-6 pb-20 lg:py-40">
         <Container>
           {/* Section Heading — desktop only, mobile heading lives inside the pin */}
           <div className="hidden md:block text-center mb-16">
@@ -231,14 +234,10 @@ export const ServicesSection: React.FC = () => {
             <div
               ref={stackPinRef}
               className="relative flex flex-col"
-              style={{ height: "100vh" }}
-            >
+              style={{ height: "100vh" }}>
               {/* Heading — pinned alongside cards so it never scrolls away */}
               <div className="shrink-0 pt-30 pb-6 text-center">
-                <HeadingTwo span="OFFER">
-                  {" "}
-                  WHAT WE
-                </HeadingTwo>
+                <HeadingTwo span="OFFER"> WHAT WE</HeadingTwo>
               </div>
 
               {/* Cards centred in the remaining viewport space */}
@@ -246,10 +245,11 @@ export const ServicesSection: React.FC = () => {
                 {services.map((service, index) => (
                   <div
                     key={service.title}
-                    ref={(el) => { stackCardRefs.current[index] = el; }}
+                    ref={(el) => {
+                      stackCardRefs.current[index] = el;
+                    }}
                     className="absolute w-[85vw] sm:w-[70vw] bg-black rounded-2xl overflow-hidden border border-white/10"
-                    style={{ willChange: "transform, opacity" }}
-                  >
+                    style={{ willChange: "transform, opacity" }}>
                     <Link
                       href={service.link}
                       aria-label={service.title}
@@ -293,8 +293,7 @@ export const ServicesSection: React.FC = () => {
                             viewBox="0 0 25 25"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                            className="fill-secondary"
-                          >
+                            className="fill-secondary">
                             <path
                               fillRule="evenodd"
                               clipRule="evenodd"
@@ -323,8 +322,7 @@ export const ServicesSection: React.FC = () => {
                   methodsRef.current[index] = el;
                 }}
                 key={index}
-                className="group relative bg-black py-7 pl-7 group hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-300"
-              >
+                className="group relative bg-black py-7 pl-7 group hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-300">
                 <Link
                   href={service.link}
                   aria-label={service.title}
@@ -370,8 +368,7 @@ export const ServicesSection: React.FC = () => {
                           viewBox="0 0 25 25"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
-                          className="fill-secondary transition-all duration-150 group-hover:fill-[#328A99]"
-                        >
+                          className="fill-secondary transition-all duration-150 group-hover:fill-[#328A99]">
                           <path
                             fillRule="evenodd"
                             clipRule="evenodd"

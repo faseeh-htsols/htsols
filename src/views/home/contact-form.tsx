@@ -183,8 +183,7 @@ const ContactForm = () => {
   return (
     <section
       ref={scopeRef}
-      className="bg-[url(/get-in-touch-bg.webp)] bg-cover relative py-20   "
-    >
+      className="bg-[url(/get-in-touch-bg.webp)] bg-cover relative py-20  lg:py-40 ">
       {/* <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
@@ -194,7 +193,7 @@ const ContactForm = () => {
         <div className="w-full h-full  max-w-[1600px] bg-gradient-to-r from-transparent via-[#00A1A5] to-transparent" />
       </div> */}
       <Container>
-        <div className="relative py-5 lg:py-10 flex gap-8 flex-col max-w-5xl mx-auto">
+        <div className="relative  flex gap-8 flex-col max-w-5xl mx-auto">
           <div className="flex justify-center" ref={iconWrapRef}>
             <Image
               src={"/chat.svg"}
@@ -227,8 +226,7 @@ const ContactForm = () => {
               city: "",
             }}
             validationSchema={validationSchema}
-            onSubmit={sendEmail}
-          >
+            onSubmit={sendEmail}>
             {({ isSubmitting }) => (
               <Form ref={formRef}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-5">
@@ -306,29 +304,25 @@ const ContactForm = () => {
                       as="select"
                       name="services"
                       id=""
-                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-sm px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
-                    >
+                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-sm px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white">
                       <option value=" web dev" className="bg-white text-black">
                         web dev
                       </option>
                       <option
                         value=" cgi / vfx /3d animations"
-                        className="bg-white text-black"
-                      >
+                        className="bg-white text-black">
                         {" "}
                         cgi / vfx /3d animations{" "}
                       </option>
                       <option
                         value="staff augmentation"
-                        className="bg-white text-black"
-                      >
+                        className="bg-white text-black">
                         {" "}
                         staff augmentation{" "}
                       </option>
                       <option
                         value="Complete digital transformation"
-                        className="bg-white text-black"
-                      >
+                        className="bg-white text-black">
                         {" "}
                         Complete digital transformation{" "}
                       </option>
@@ -346,8 +340,7 @@ const ContactForm = () => {
                     name="message"
                     className="h-28 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 py-3 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                     placeholder="Enquiry  details"
-                    id=""
-                  ></Field>
+                    id=""></Field>
                   <ErrorMessage
                     name="message"
                     component="p"
@@ -358,16 +351,14 @@ const ContactForm = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting || isSending}
-                    className="inline-flex cursor-pointer items-center bg-white gap-2 px-6 py-3 text-sm text-primary font-medium uppercase rounded-full tracking-wider transition-all duration-300 border"
-                  >
+                    className="inline-flex cursor-pointer items-center bg-white gap-2 px-6 py-3 text-sm text-primary font-medium uppercase rounded-full tracking-wider transition-all duration-300 border">
                     {isSending ? "Sending..." : "Send Message"}
                     <svg
                       width="34"
                       height="34"
                       viewBox="0 0 34 34"
                       fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                      xmlns="http://www.w3.org/2000/svg">
                       <g clipPath="url(#clip0_397_144)">
                         <path
                           fillRule="evenodd"
@@ -389,8 +380,7 @@ const ContactForm = () => {
                           y1="23.5995"
                           x2="18.8282"
                           y2="10.3413"
-                          gradientUnits="userSpaceOnUse"
-                        >
+                          gradientUnits="userSpaceOnUse">
                           <stop stopColor="#075B65" />
                           <stop offset="0.370192" stopColor="#00838A" />
                           <stop offset="0.8125" stopColor="#328A99" />
@@ -401,8 +391,7 @@ const ContactForm = () => {
                           y1="16.7022"
                           x2="18.8279"
                           y2="10.3383"
-                          gradientUnits="userSpaceOnUse"
-                        >
+                          gradientUnits="userSpaceOnUse">
                           <stop stopColor="#075B65" />
                           <stop offset="0.370192" stopColor="#00838A" />
                           <stop offset="0.8125" stopColor="#328A99" />
@@ -436,9 +425,9 @@ const ContactForm = () => {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p
-                  className={`text-lg font-semibold ${popupType === "success" ? "text-green-700" : "text-red-700"
-                    }`}
-                >
+                  className={`text-lg font-semibold ${
+                    popupType === "success" ? "text-green-700" : "text-red-700"
+                  }`}>
                   {popupType === "success"
                     ? "Message sent"
                     : "Something went wrong"}
@@ -450,8 +439,7 @@ const ContactForm = () => {
                 type="button"
                 aria-label="Close popup"
                 onClick={closePopup}
-                className="w-9 h-9 flex items-center justify-center rounded-md border border-gray-200 hover:bg-gray-50 text-black"
-              >
+                className="w-9 h-9 flex items-center justify-center rounded-md border border-gray-200 hover:bg-gray-50 text-black">
                 <span className="text-xl leading-none">&times;</span>
               </button>
             </div>
@@ -460,8 +448,7 @@ const ContactForm = () => {
               <button
                 type="button"
                 onClick={closePopup}
-                className="px-5 py-2 rounded-full bg-secondary text-black font-medium"
-              >
+                className="px-5 py-2 rounded-full bg-secondary text-black font-medium">
                 OK
               </button>
             </div>

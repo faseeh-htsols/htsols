@@ -18,30 +18,31 @@ export default function WhyBuisnessChoose() {
   const mainRef = useRef<HTMLDivElement | null>(null);
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
-useGSAP(
-  () => {
-    if (!sectionRef.current) return;
+  useGSAP(
+    () => {
+      if (!sectionRef.current) return;
 
-    gsap.from(sectionRef.current, {
-      clipPath: "inset(0 0 100% 0)",
-      scrollTrigger: {
-  trigger: sectionRef.current,
-  start: "top 85%",   // wait until section is clearly in view before starting
-  end: "top 15%",     // complete the reveal well before it hits the top
-  toggleActions: "play none none none",
-  scrub: true,
-},
-    });
-  },
-  { scope: mainRef },
-);
+      gsap.from(sectionRef.current, {
+        clipPath: "inset(0 0 100% 0)",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 85%", // wait until section is clearly in view before starting
+          end: "top 15%", // complete the reveal well before it hits the top
+          toggleActions: "play none none none",
+          scrub: true,
+        },
+      });
+    },
+    { scope: mainRef },
+  );
 
   return (
-    <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+    <DoubleCurves
+      up
+      className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
       <section
         ref={mainRef}
-        className="relative bg-[url(/dental/bg-why-choose.webp)] bg-cover py-20 overflow-hidden"
-      >
+        className="relative bg-[url(/dental/bg-why-choose.webp)] bg-cover py-20  overflow-hidden">
         {/* <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[4%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-2 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] animate-pulse
@@ -54,8 +55,7 @@ useGSAP(
           {/* LEFT CONTENT */}
           <div
             className="bg-[#252528] overflow-hidden relative rounded-xl p-10 lg:p-12 text-white max-w-xl"
-            ref={sectionRef}
-          >
+            ref={sectionRef}>
             <div className="absolute top-0 left-0 bg-[#00A1A5] h-14 w-24 rounded-full blur-2xl"></div>
             <h2 className="text-3xl uppercase lg:text-3xl font-semibold font-primary leading-tight mb-10">
               Why Businesses Choose HTSOL Inc.
@@ -73,8 +73,7 @@ useGSAP(
                 {lists.map((list, idx) => (
                   <li
                     key={idx}
-                    className="font-semibold text-[22px] bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent"
-                  >
+                    className="font-semibold text-[22px] bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">
                     {list}
                   </li>
                 ))}

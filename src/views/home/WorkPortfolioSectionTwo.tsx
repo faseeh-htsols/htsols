@@ -71,17 +71,17 @@ const portfolioSlides: PortfolioSlide[] = [
 ];
 
 export default function WorkPortfolioSectionTwo() {
-  const sectionRef  = useRef<HTMLElement | null>(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
   const cardsPinRef = useRef<HTMLDivElement | null>(null);
   const viewportRef = useRef<HTMLDivElement | null>(null);
-  const trackRef    = useRef<HTMLDivElement | null>(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
     () => {
-      const section  = sectionRef.current;
+      const section = sectionRef.current;
       const cardsPin = cardsPinRef.current;
       const viewport = viewportRef.current;
-      const track    = trackRef.current;
+      const track = trackRef.current;
 
       if (!section || !viewport || !track || !cardsPin) return;
 
@@ -173,8 +173,7 @@ export default function WorkPortfolioSectionTwo() {
       className="bg-[#050505] lg:min-h-screen py-24 relative -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%]
       [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)]
       md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)]
-      lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]"
-    >
+      lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
       <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
         bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] animate-pulse"
@@ -207,19 +206,16 @@ export default function WorkPortfolioSectionTwo() {
         {/* RIGHT SIDE — untouched */}
         <div
           ref={cardsPinRef}
-          className="relative w-full lg:w-[55%] px-2 lg:px-0"
-        >
+          className="relative w-full lg:w-[55%] px-2 lg:px-0">
           <div ref={viewportRef} className="overflow-hidden">
             <div
               ref={trackRef}
-              className="flex lg:h-auto items-start gap-8 md:gap-10 lg:gap-12 pr-10 will-change-transform"
-            >
+              className="flex lg:h-auto items-start gap-8 md:gap-10 lg:gap-12 pr-10 will-change-transform">
               {portfolioSlides.map((slide, idx) => (
                 <article
                   key={idx}
                   className="shrink-0 rounded-[26px] bg-[#111] border border-white/10 p-6 shadow-lg flex flex-col gap-6
-                  w-[85vw] sm:w-[70vw] md:w-[52vw] lg:w-[420px] 2xl:w-[480px]"
-                >
+                  w-[85vw] sm:w-[70vw] md:w-[52vw] lg:w-[420px] 2xl:w-[480px]">
                   <div className="bg-black rounded-[22px] p-4 shadow">
                     <div className="relative h-[280px] md:h-[300px] rounded-xl overflow-hidden border border-black">
                       <Image
@@ -252,8 +248,7 @@ export default function WorkPortfolioSectionTwo() {
                           viewBox="0 0 29 29"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
-                          className="w-5 h-5 fill-white group-hover:fill-[#075B65]"
-                        >
+                          className="w-5 h-5 fill-white group-hover:fill-[#075B65]">
                           <path
                             fillRule="evenodd"
                             clipRule="evenodd"

@@ -104,8 +104,11 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
 
   return (
     // <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
-    <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_100%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)]">
-      <section className=" py-24 relative "
+    <DoubleCurves
+      up
+      className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_100%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)]">
+      <section
+        className=" py-24 lg:py-40 relative "
         style={{
           background: bgColor ? bgColor : `url(/get-in-touch-bg.webp)`,
           backgroundSize: "cover",
@@ -136,19 +139,22 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
 
           {/* FAQ Accordion */}
           <div className={`space-y-4 ${form ? "mb-4" : "mb-12"}`}>
-            <Accordion type="single" className={`space-y-4 ${form ? "mb-0" : "mb-12"}`} collapsible>
+            <Accordion
+              type="single"
+              className={`space-y-4 ${form ? "mb-0" : "mb-12"}`}
+              collapsible>
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   className={`
                     border border-white border-b! px-4 bg-transparent rounded-lg transition-all
-                   ${accordionbgtransparent
-                      ? "bg-transparent data-[state=open]:bg-transparent data-[state=open]:border-transparent data-[state=open]:shadow-none"
-                      : " data-[state=open]:border-tertiary data-[state=open]:shadow-[0_0_5px_#00838A] data-[state=open]:bg-tertiary"
-                    }
+                   ${
+                     accordionbgtransparent
+                       ? "bg-transparent data-[state=open]:bg-transparent data-[state=open]:border-transparent data-[state=open]:shadow-none"
+                       : " data-[state=open]:border-tertiary data-[state=open]:shadow-[0_0_5px_#00838A] data-[state=open]:bg-tertiary"
+                   }
                   `}
-                  value={String(index)}
-                >
+                  value={String(index)}>
                   <AccordionTrigger className="text-white font-secondary text-lg uppercase hover:no-underline cursor-pointer">
                     {faq.question}
                   </AccordionTrigger>
@@ -165,20 +171,17 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
                 name=""
                 className="h-28 w-full relative outline-0 bg-transparent border border-white border-b! px-4 rounded-lg transition-all py-3 backdrop:backdrop-blur-2xl placeholder:text-white text-white"
                 placeholder="Ask us what you want to know..."
-                id=""
-              ></textarea>
+                id=""></textarea>
               <div className="flex flex-col-reverse items-center gap-8 md:gap-0 md:flex-row-reverse w-full md:w-1/2 mt-4 md:items-start justify-between">
                 <button className="inline-flex items-center bg-transparent hover:bg-white gap-2 p-3 py-2 text-sm text-white hover:text-primary font-medium uppercase rounded-full tracking-wider transition-all duration-300 border">
                   Send Message
-
                   <svg
                     width="34"
                     height="34"
                     viewBox="0 0 34 34"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="transition-colors duration-300"
-                  >
+                    className="transition-colors duration-300">
                     <g clipPath="url(#clip0_397_144)">
                       <path
                         fillRule="evenodd"
@@ -207,7 +210,8 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
                 </button>
 
                 <p className="text-white/60 text-sm text-center md:text-start">
-                  We will answer your questions via<br className="hidden md:block" /> email within 48 hours.
+                  We will answer your questions via
+                  <br className="hidden md:block" /> email within 48 hours.
                 </p>
               </div>
             </div>

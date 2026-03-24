@@ -67,19 +67,16 @@ export const AboutSection: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-black py-25 [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]"
-    >
+      className="relative bg-black py-20 lg:py-40 [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]">
       <Container>
         <div className="flex lg:flex-row-reverse flex-col gap-12">
           {/* Right */}
           <div
             data-anim="right"
-            className="lg:w-[30%] shrink-0 justify-end items-start relative"
-          >
+            className="lg:w-[30%] shrink-0 justify-end items-start relative">
             <div
               data-anim="star"
-              className="absolute -top-[25px] lg:-top-[50px] -right-[25px] lg:-right-[50px] z-1"
-            >
+              className="absolute -top-[25px] lg:-top-[50px] -right-[25px] lg:-right-[50px] z-1">
               <Image
                 src={"/star.svg"}
                 alt="decorative star"
@@ -131,8 +128,7 @@ export const AboutSection: React.FC = () => {
             <div className="relative mt-8 flex gap-4">
               <div
                 data-anim="bottom-img"
-                className="relative w-full h-[300px] rounded-lg overflow-hidden border-2 border-primary/30"
-              >
+                className="relative w-full h-[300px] rounded-lg overflow-hidden border-2 border-primary/30">
                 <Image
                   src="/about-htsols.webp"
                   alt="Team collaboration"
