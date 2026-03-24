@@ -33,7 +33,7 @@ export const TESTIMONIAL_CAROUSEL_DATA: TestimonialSlide[] = [
     video: "/cgi1.mp4",
     mediaAlt: "Kaybees",
     watermark: "MACCO",
-    brandLogo: "/cgi/kaybees-logo.webp",
+    brandLogo: "/cgi/kaybees-logo-hq.png",
     brandName: "Kaybees",
     personName: "ABRAHAM",
     personRole: "CEO | Tech Innovators",
@@ -42,10 +42,10 @@ export const TESTIMONIAL_CAROUSEL_DATA: TestimonialSlide[] = [
   },
   {
     id: "t2",
-    mediaImage: "/testimonials/kaybees-2.webp",
+    mediaImage: "/cgi/kaybees.webp",
     mediaAlt: "Kaybees",
     watermark: "MACCO",
-    brandLogo: "/testimonials/kaybees-logo.webp",
+    brandLogo: "/cgi/kaybees-logo-hq.png",
     video: "/cgi1.mp4",
     brandName: "Kaybees",
     personName: "SOPHIA",
@@ -56,10 +56,10 @@ export const TESTIMONIAL_CAROUSEL_DATA: TestimonialSlide[] = [
   {
     id: "t3",
     video: "/cgi1.mp4",
-    mediaImage: "/testimonials/kaybees-3.webp",
+    mediaImage: "/cgi/kaybees.webp",
     mediaAlt: "Kaybees",
     watermark: "MACCO",
-    brandLogo: "/testimonials/kaybees-logo.webp",
+    brandLogo: "/cgi/kaybees-logo-hq.png",
     brandName: "Kaybees",
     personName: "DANIEL",
     personRole: "Operations Manager",
@@ -252,13 +252,14 @@ export default function TestimonialCarousel({
                     <div className="flex items-center justify-between gap-4">
                       <div className="flex items-center gap-3">
                         {slide.brandLogo ? (
-                          <div className="relative w-[140px] h-18 shrink-0 rounded-md overflow-hidden  ">
+                          <div className="relative w-[180px] h-[72px] shrink-0 rounded-md overflow-hidden">
                             <Image
                               src={slide.brandLogo}
                               alt={slide.brandName || "brand"}
                               fill
-                              className="object-contain "
-                              sizes="40px"
+                              className="object-contain"
+                              sizes="(max-width: 1024px) 160px, 180px"
+                              quality={100}
                             />
                           </div>
                         ) : (

@@ -13,6 +13,52 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/contact",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/testimonials",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/services/seo",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/services/staff-augmentation",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/services/digital-transformation",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/services/digital-marketing",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/_next/image",
+        has: [
+          {
+            type: "query",
+            key: "url",
+            value: ".*kaybees-(2|3|logo)\\.webp",
+          },
+        ],
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
