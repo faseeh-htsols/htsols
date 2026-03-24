@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Button from "../ui/Button";
+import GlowButton from "../ui/GlowButton";
 
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { NAV_ITEMS } from "@/constants";
@@ -94,7 +95,7 @@ export const Navbar: React.FC = () => {
 
         <div className="ml-auto flex items-center gap-4">
           <div className="hidden lg:block">
-            <Button href="/contact-us">Book a Free Consultation</Button>
+            <GlowButton href="/contact-us">Book a Free Consultation</GlowButton>
           </div>
 
           <Drawer open={open} direction="right" onOpenChange={setOpen}>
@@ -196,7 +197,7 @@ export const Navbar: React.FC = () => {
                 </div>
 
                 <div className="mt-6 lg:hidden">
-                  <Button href="/contact-us">Book a Free Consultation</Button>
+                  <GlowButton href="/contact-us">Book a Free Consultation</GlowButton>
                 </div>
               </div>
             </DrawerContent>
