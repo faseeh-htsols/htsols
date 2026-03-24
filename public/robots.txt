@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://www.htsol.ca/sitemap.xml
+Disallow: /
