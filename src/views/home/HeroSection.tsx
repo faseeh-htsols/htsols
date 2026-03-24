@@ -8,6 +8,7 @@ import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 
 import Button from "../../components/ui/Button";
+import GlowButton from "../../components/ui/GlowButton";
 import CircularText from "../../components/ui/CircularText";
 import Container from "@/components/ui/container";
 

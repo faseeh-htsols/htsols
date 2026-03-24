@@ -23,7 +23,9 @@ export const WHY_CHOOSE_WEB_DEV = [
 ];
 const YourCompleteTeam = () => {
   return (
-    <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+    <DoubleCurves
+      up
+      className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
       <div className="py-20 relative">
         {/* <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
@@ -43,11 +45,10 @@ const YourCompleteTeam = () => {
               <div className="absolute left-0 bottom-0 lg:bottom-[20%] rounded-full border border-[#328A99]">
                 <div
                   className="p-3 bg-[linear-gradient(90deg,rgba(217,217,217,0.6)_0%,rgba(115,115,115,0.7)_100%)] rounded-full
-"
-                >
+">
                   <div className="p-1 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] rounded-full">
                     <div className="bg-black flex items-center gap-4 py-2 px-3 rounded-full">
-                      <div className="bg-[linear-gradient(270deg,#F4EAE3_0%,#C48A66_100%)] rounded-full w-10 h-10 flex justify-center items-center">
+                      <div className="bg-white rounded-full w-10 h-10 flex justify-center items-center">
                         <Image
                           src={"/website/service-provider.svg"}
                           alt="image"
@@ -95,26 +96,26 @@ const YourCompleteTeam = () => {
                   <p>
                     We manage development, design, marketing, and ongoing
                     technical oversight in one coordinated structure. You won’t
-                    need to juggle freelancers, manage multiple vendors, or decide
-                    what to prioritise next. We handle the execution so you can
-                    stay focused on running your business. Our team includes
-                    designers, web and software developers, digital marketers, and
-                    AI specialists working together as one unit. Instead of
-                    separate providers pulling in different directions, you work
-                    with a single Canadian-led partner who keeps every initiative
-                    aligned with your goals. We plan thoroughly. We communicate
-                    clearly. And we move forward at a steady, accountable pace.
-                    This reduces delays, prevents misalignment, and helps control
-                    costs.
+                    need to juggle freelancers, manage multiple vendors, or
+                    decide what to prioritise next. We handle the execution so
+                    you can stay focused on running your business. Our team
+                    includes designers, web and software developers, digital
+                    marketers, and AI specialists working together as one unit.
+                    Instead of separate providers pulling in different
+                    directions, you work with a single Canadian-led partner who
+                    keeps every initiative aligned with your goals. We plan
+                    thoroughly. We communicate clearly. And we move forward at a
+                    steady, accountable pace. This reduces delays, prevents
+                    misalignment, and helps control costs.
                   </p>
                   <p>
                     We typically work with growing businesses, startups,
-                    professional firms, and organisations across Canada that need
-                    dependable digital support without building an internal
+                    professional firms, and organisations across Canada that
+                    need dependable digital support without building an internal
                     department.
                     <br />
-                    Tell us where you want to go. We’ll map the path and build it
-                    with you.
+                    Tell us where you want to go. We’ll map the path and build
+                    it with you.
                   </p>
                   <div className="flex">
                     <Button href="/contact-us">Get Started</Button>
