@@ -24,7 +24,7 @@ const services: ServiceCard[] = [
     title: "WEBSITE DEVELOPMENT SERVICES",
     description:
       "Design and development that turns visitors into leads with speed, clarity, and clean UX.",
-    image: "/web-dev-ser-home.webp",
+    image: "/web-dev-ser-home.png",
     link: "/services/website-development",
   },
   {
@@ -270,6 +270,7 @@ export const ServicesSection: React.FC = () => {
                           src={service.image}
                           alt={service.title}
                           fill
+                          unoptimized
                           className="object-cover"
                         />
                         <div className="absolute inset-0 bg-linear-to-t from-[#111] via-transparent to-transparent" />
