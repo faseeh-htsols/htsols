@@ -33,7 +33,7 @@ const Main = () => {
       <EngagementPricing />
       <WhyBuisnessChoose />
       <PlanNextStep />
-      <div id="contact-form lg:py-40">
+      <div id="contact-form">
         <ContactForm />
       </div>
       <FAQSection accordionbgtransparent bgColor="#0F0F0F" heading={true} />

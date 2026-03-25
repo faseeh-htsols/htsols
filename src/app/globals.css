@@ -238,6 +238,11 @@ body {
   animation-play-state: paused;
 }
 
+/* Marquee that keeps moving on hover (e.g. CEO skills strip) */
+.marquee-content.marquee-content--always-run:hover {
+  animation-play-state: running;
+}
+
 /* 
 .swiper-slide {
   flex: initial !important;

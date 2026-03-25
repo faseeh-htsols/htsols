@@ -35,7 +35,7 @@ const StrategyFirstResult = () => {
                 >
                   <div className="p-1 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] rounded-full">
                     <div className="bg-black flex items-center gap-4 py-2 px-3 rounded-full">
-                      <div className="bg-[linear-gradient(270deg,#F4EAE3_0%,#C48A66_100%)] rounded-full w-10 h-10 flex justify-center items-center">
+                      <div className="bg-white rounded-full w-10 h-10 flex justify-center items-center">
                         <Image
                           src={"/website/service-provider.svg"}
                           alt="image"
