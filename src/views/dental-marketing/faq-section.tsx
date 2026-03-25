@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function FAQSection() {
   const [leftOpen, setLeftOpen] = useState<number | null>(0);
-  const [rightOpen, setRightOpen] = useState<number | null>(null);
+  const [rightOpen, setRightOpen] = useState<number | null>(0);
 
   return (
     <section className="bg-black py-24">
@@ -14,105 +15,159 @@ export default function FAQSection() {
           Frequently Asked Questions
         </h2>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 relative">
-          {/* vertical divider */}
-          <div className="hidden lg:block absolute left-1/2 top-0 h-full w-px border-l border-dashed border-[#4f8fa0]" />
-
-          {/* LEFT COLUMN */}
-          <div className="space-y-4">
-            {[
-              {
-                q: "Why does my dental practice need a new website?",
-                a: "62% of patients ignore businesses without an online presence, and 39% judge your clinical quality based on your website’s design.",
-              },
-              {
-                q: "Will my website work on mobile phones?",
-                a: "Yes. All our websites are fully responsive and optimized for mobile, tablet, and desktop devices.",
-              },
-              {
-                q: "Can you help with online bookings?",
-                a: "Absolutely. We integrate seamless online booking systems that reduce friction and increase patient conversions.",
-              },
-              {
-                q: "Do you only work with dentists?",
-                a: "Yes. We specialize exclusively in dental practices, allowing us to apply industry-specific strategies.",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className={`rounded-full border transition ${
-                  leftOpen === index
-                    ? "border-[#4f8fa0] bg-[#0f1a1f]"
-                    : "border-white/20"
-                }`}
-              >
-                <button
-                  onClick={() => setLeftOpen(leftOpen === index ? null : index)}
-                  className="w-full flex items-center justify-between px-6 py-4 text-left text-white text-sm"
-                >
-                  {item.q}
-                  <span className="text-[#4f8fa0]">
-                    {leftOpen === index ? "–" : "+"}
-                  </span>
-                </button>
-
-                {leftOpen === index && (
-                  <div className="px-6 pb-4 text-sm text-white/70">
-                    {item.a}
-                  </div>
-                )}
-              </div>
-            ))}
+        <div className="relative">
+          <div className="absolute -left-10 -top-10 hidden lg:block">
+            <Image
+              src="/faq-bg-glow.png"
+              alt="faq left bg"
+              width={120}
+              height={120}
+              className="w-[120px] h-[120px] object-contain"
+            />
           </div>
 
-          {/* RIGHT COLUMN */}
-          <div className="space-y-4">
-            {[
-              {
-                q: "How fast should my website load?",
-                a: "Ideally, under 3 seconds. 40% of users abandon sites that take longer, and every extra second can cost you conversions.",
-              },
-              {
-                q: "How does SEO help my clinic?",
-                a: "SEO improves your visibility on Google so patients searching for local dentists find you first.",
-              },
-              {
-                q: "Does branding really impact my revenue?",
-                a: "Yes. Strong branding builds trust and credibility, directly influencing patient choice and long-term loyalty.",
-              },
-              {
-                q: "How quickly can I see results?",
-                a: "Website and conversion improvements are immediate, while SEO results typically appear within 60–90 days.",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className={`rounded-full border transition ${
-                  rightOpen === index
-                    ? "border-[#4f8fa0] bg-[#0f1a1f]"
-                    : "border-white/20"
-                }`}
-              >
-                <button
-                  onClick={() =>
-                    setRightOpen(rightOpen === index ? null : index)
-                  }
-                  className="w-full flex items-center justify-between px-6 py-4 text-left text-white text-sm"
-                >
-                  {item.q}
-                  <span className="text-[#4f8fa0]">
-                    {rightOpen === index ? "–" : "+"}
-                  </span>
-                </button>
+          <div className="absolute -right-10 -bottom-10 hidden lg:block">
+            <Image
+              src="/faq-bg-glow.png"
+              alt="faq right bg"
+              width={120}
+              height={120}
+              className="w-[120px] h-[120px] object-contain"
+            />
+          </div>
 
-                {rightOpen === index && (
-                  <div className="px-6 pb-4 text-sm text-white/70">
-                    {item.a}
-                  </div>
-                )}
-              </div>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 relative bg-tertiary p-8 rounded-[20px] overflow-hidden">
+            <div className="absolute top-0 left-0">
+              <Image
+                src={"/left-gradient.webp"}
+                width={500}
+                height={500}
+                className="w-[150px] h-[150px]"
+                alt="left gradient"
+              />
+            </div>
+            <div className="absolute -bottom-20 right-0">
+              <Image
+                src={"/right-gradient.webp"}
+                width={500}
+                height={500}
+                className="w-[150px] h-[150px]"
+                alt="left gradient"
+              />
+            </div>
+
+            {/* vertical divider */}
+            {/* <div className="hidden lg:block absolute left-1/2 top-0 h-full w-px border-l border-dashed border-[#4f8fa0]" /> */}
+
+            {/* LEFT COLUMN */}
+            <div className="space-y-4">
+              {[
+                {
+                  q: "Why does my dental practice need a new website?",
+                  a: "62% of patients ignore businesses without an online presence, and 39% judge your clinical quality based on your website’s design.",
+                },
+                {
+                  q: "Will my website work on mobile phones?",
+                  a: "Yes. All our websites are fully responsive and optimized for mobile, tablet, and desktop devices.",
+                },
+                {
+                  q: "Can you help with online bookings?",
+                  a: "Absolutely. We integrate seamless online booking systems that reduce friction and increase patient conversions.",
+                },
+                {
+                  q: "Do you only work with dentists?",
+                  a: "Yes. We specialize exclusively in dental practices, allowing us to apply industry-specific strategies.",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className={`rounded-full border transition ${leftOpen === index ? "border-0" : "border-white/80"
+                    }`}
+                >
+                  <button
+                    onClick={() => {
+                      const newIndex = leftOpen === index ? null : index;
+                      setLeftOpen(newIndex);
+                      setRightOpen(newIndex);
+                    }}
+                    className={`w-full flex items-center justify-between px-6 py-4 text-left text-white text-sm ${leftOpen === index
+                      ? "rounded-full bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]"
+                      : ""
+                      }`}
+                  >
+                    {item.q}
+                    <Image
+                      src={leftOpen === index ? "/dental/open-arrow.svg" : "/dental/close-arrow.svg"}
+                      alt={leftOpen === index ? "minus icon" : "plus icon"}
+                      width={20}
+                      height={20}
+                      className="w-8 h-8 object-contain"
+                    />
+                  </button>
+
+                  {leftOpen === index && (
+                    <div className="px-6 pb-4 text-sm text-white/70 mt-4">
+                      {item.a}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* RIGHT COLUMN */}
+            <div className="space-y-4">
+              {[
+                {
+                  q: "How fast should my website load?",
+                  a: "Ideally, under 3 seconds. 40% of users abandon sites that take longer, and every extra second can cost you conversions.",
+                },
+                {
+                  q: "How does SEO help my clinic?",
+                  a: "SEO improves your visibility on Google so patients searching for local dentists find you first.",
+                },
+                {
+                  q: "Does branding really impact my revenue?",
+                  a: "Yes. Strong branding builds trust and credibility, directly influencing patient choice and long-term loyalty.",
+                },
+                {
+                  q: "How quickly can I see results?",
+                  a: "Website and conversion improvements are immediate, while SEO results typically appear within 60–90 days.",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className={`rounded-full border transition ${leftOpen === index ? "border-0" : "border-white/80"
+                    }`}
+                >
+                  <button
+                    onClick={() => {
+                      const newIndex = rightOpen === index ? null : index;
+                      setLeftOpen(newIndex);
+                      setRightOpen(newIndex);
+                    }}
+                    className={`w-full flex items-center justify-between px-6 py-4 text-left text-white text-sm ${leftOpen === index
+                      ? "rounded-full bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]"
+                      : ""
+                      }`}
+                  >
+                    {item.q}
+                    <Image
+                      src={leftOpen === index ? "/dental/open-arrow.svg" : "/dental/close-arrow.svg"}
+                      alt={leftOpen === index ? "minus icon" : "plus icon"}
+                      width={20}
+                      height={20}
+                      className="w-8 h-8 object-contain"
+                    />
+                  </button>
+
+                  {rightOpen === index && (
+                    <div className="px-6 pb-4 text-sm text-white/70 mt-4">
+                      {item.a}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
