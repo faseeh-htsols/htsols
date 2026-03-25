@@ -53,6 +53,7 @@ const ClientsSay = () => {
           <Swiper
             modules={[Pagination]}
             pagination={{ clickable: true }}
+            loop={true}
             className="mySwiper pb-10!">
             {data.map((item, index) => (
               <SwiperSlide key={index}>

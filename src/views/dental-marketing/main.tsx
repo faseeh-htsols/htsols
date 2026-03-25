@@ -10,6 +10,8 @@ import FAQSection from "./faq-section";
 import ContactDetails from "./contact-details";
 import ClientsSay from "./clients-say";
 import PricingPlan from "./our-pricing-plan";
+import Navbar from "./navbar";
+import Footer from "./footer";
 
 const DentalMain = () => {
   return (
@@ -22,7 +24,9 @@ const DentalMain = () => {
       <FAQSection />
       <CaseStudiesPrevious />
       <PricingPlan />
-      <LetsHaveAChat />
+      <div id="contact-us">
+        <LetsHaveAChat />
+      </div>
       <OurClients />
       <ContactDetails />
     </>
