@@ -31,21 +31,6 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/services/staff-augmentation",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/services/digital-transformation",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/services/digital-marketing",
-        destination: "/",
-        permanent: true,
-      },
-      {
         source: "/_next/image",
         has: [
           {
