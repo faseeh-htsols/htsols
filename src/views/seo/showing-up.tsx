@@ -2,6 +2,7 @@
 
 import Container from "@/components/ui/container";
 import DoubleCurves from "@/components/ui/double-curves";
+import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
 import React from "react";
 
@@ -80,9 +81,9 @@ const ShowingUp = () => {
 
                         <div className="grid grid-cols-1 lg:grid-cols-[50%_50%] gap-10 lg:gap-16 items-stretch">
                             <div className="h-full max-w-none flex flex-col justify-center">
-                                <h2 className="font-primary font-semibold uppercase text-[28px] sm:text-[34px] lg:text-[38px] leading-[1.02] mb-5">
+                                <HeadingTwo className="font-primary font-semibold uppercase text-[28px] sm:text-[34px] lg:text-[38px] leading-[1.02] mb-5">
                                     Are You Showing Up Where Your Customers Are Searching?
-                                </h2>
+                                </HeadingTwo>
 
                                 <div className="text-white leading-relaxed">
                                     <p>

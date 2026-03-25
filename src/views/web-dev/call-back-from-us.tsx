@@ -1,6 +1,7 @@
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/container";
 import DoubleCurves from "@/components/ui/double-curves";
+import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
 
 const CallBackFromUs = () => {
@@ -9,9 +10,9 @@ const CallBackFromUs = () => {
       <div className="py-20">
         <div className="border border-[#5C5C5C] rounded-lg px-4 flex lg:flex-row flex-col gap-0 lg:gap-4 relative text-white mb-20">
           <div className="lg:w-[56%] py-8 flex flex-col gap-4">
-            <h2 className="font-primary uppercase text-2xl">
+            <HeadingTwo className="font-primary uppercase">
               Ready to Build a Website That Supports Growth?
-            </h2>
+            </HeadingTwo>
             <p className="text-xl">
               If you want a website that looks modern, loads fast, supports SEO,
               and helps your marketing work harder, HTSOL Inc. can help.

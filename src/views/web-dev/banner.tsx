@@ -1,7 +1,12 @@
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/container";
+import HeadingTwo from "@/components/ui/heading-two";
 import Wrapper from "@/components/ui/wrapper";
 import Image from "next/image";
+
+
+const tealGradient =
+  "linear-gradient(90deg, #075B65 0%, #00838A 37.02%, #328A99 81.25%)";
 
 const Banner = () => {
   return (
@@ -26,10 +31,16 @@ const Banner = () => {
       </div>
       <Wrapper>
         <div>
-          <h1 className="text-4xl lg:text-[53px] font-primary mb-8 font-semibold text-white text-center uppercase">
-            Websites Built For Speed, Search Visibility, And Real Business
-            Growth
+          <h1 className="text-4xl lg:text-[53px] font-primary mb-4 font-semibold text-white text-center uppercase">
+            Web Development Company in Canada
           </h1>
+          <div style={{ background: tealGradient }}>
+              <HeadingTwo
+                className="inline-block px-4 py-2 rounded-lg text-white font-medium uppercase tracking-wide text-center "
+              >
+                Websites Built For Speed, Search Visibility, And Real Business Growth
+              </HeadingTwo>
+            </div>
         </div>
 
         <p className="text-lg text-center mb-8">

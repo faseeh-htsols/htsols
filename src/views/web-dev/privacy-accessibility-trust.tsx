@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "@/components/ui/container";
 import Button from "@/components/ui/Button";
+import HeadingTwo from "@/components/ui/heading-two";
 
 const FUNDAMENTALS = [
   "Consent-friendly analytics and cookie setups when required",
@@ -16,9 +17,9 @@ const PrivacyAccessibilityTrust = () => {
         <div className="relative z-10 flex py-16 lg:py-24">
           <div className="">
             <div className="max-w-xl rounded-2xl bg-[#1a1a1a]/95 border border-white/10 p-6 sm:p-8 lg:p-10 shadow-xl">
-              <h2 className="font-primary font-medium text-2xl sm:text-3xl lg:text-4xl text-white uppercase tracking-wide mb-4">
-                Privacy, Accessibility, and Trust
-              </h2>
+              <HeadingTwo className="font-primary font-semibold uppercase text-[28px] sm:text-[34px] lg:text-[38px] leading-[1.02] mb-5">
+               Privacy, Accessibility, and Trust
+              </HeadingTwo>
               <p className="text-white/90 text-sm sm:text-base leading-relaxed mb-6">
                 Canadian users expect clear, respectful handling of their data,
                 and a site that works well for everyone. We build with practical

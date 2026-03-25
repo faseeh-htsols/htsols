@@ -7,6 +7,7 @@ import Button from "@/components/ui/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import HeadingTwo from "@/components/ui/heading-two";
 
 const SEO_TOPICS = [
   "On-Page SEO",
@@ -62,12 +63,13 @@ const Banner = () => {
               SEO Solutions Built to Solve Real{" "}
               <span className="text-white">Growth Problems</span>
             </h1>
-            <h2
-              className="inline-block px-4 py-2 rounded-lg text-white font-medium uppercase tracking-wide mb-6"
-              style={{ background: tealGradient }}
-            >
-              Focused on Growing Qualified Traffic, Leads, and Revenue
-            </h2>
+            <div style={{ background: tealGradient }}>
+              <HeadingTwo
+                className="inline-block px-4 py-2 rounded-lg text-white font-medium uppercase tracking-wide mb-6"
+              >
+                Focused on Growing Qualified Traffic, Leads, and Revenue
+              </HeadingTwo>
+            </div>
             <div className="space-y-4 text-white/90 text-sm sm:text-base leading-relaxed mb-8">
               <p>
                 When people in Canada search for your services, you want to
