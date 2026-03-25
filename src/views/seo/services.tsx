@@ -129,12 +129,13 @@ const Services = () => {
             <section className="relative bg-black py-20">
                 <Container>
                     <div className="text-center mb-10 lg:mb-12 max-w-[860px] mx-auto">
-                        <p className="uppercase tracking-widest mb-5 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent inline-block font-primary text-xs sm:text-sm">
-                            SEO Services From HTSOL Inc.
-                        </p>
-                        <HeadingTwo className="text-center">
+                    <p className="uppercase tracking-widest mb-5 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent inline-block font-primary text-xs sm:text-sm">
                             Increase Rankings, Build Trust, Convert Traffic
+                        </p>
+                        <HeadingTwo className="text-center ">
+                        SEO Services From HTSOL Inc.
                         </HeadingTwo>
+                       
                         <p className="mt-5 text-white text-center leading-relaxed">
                             Every business operates in a different market. We build a bespoke strategy focused on what will move the needle for you.
                         </p>

@@ -25,13 +25,13 @@ const ClearStrategy = () => {
           <div className="">
             <div className="text-center mb-10">
               <p className="uppercase tracking-widest mb-5 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent inline-block  font-primary">
-                A Canadian SEO Partner You Can Measure
+              Clear Strategy.
+                Real Results.
               </p>
 
               <HeadingTwo className="text-center">
-                Clear Strategy.
-                <br />
-                Real Results.
+               
+                A Canadian SEO <br/> Partner You Can Measure
               </HeadingTwo>
             </div>
 

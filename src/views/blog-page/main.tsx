@@ -51,11 +51,11 @@ export type BlogPost = {
 };
 export type ICta = {
   id: number;
-  imageUrl: string;
-  heading: string;
-  paragraph: string;
-  buttonText: string;
-  buttonHref: string;
+  imageUrl?: string | null;
+  heading?: string | null;
+  paragraph?: string | null;
+  buttonText?: string | null;
+  buttonHref?: string | null;
 };
 export type IBlogCta = {
   id: number;

@@ -53,11 +53,11 @@ const SeoWorks = () => {
 
                                 <div className="relative mx-auto max-w-6xl text-center">
                                     <p className="uppercase tracking-widest mb-5 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent inline-block  font-primary">
-                                        Why HTSOL SEO Works
+                                    Process, Quality, and Transparency
                                     </p>
 
                                     <HeadingTwo className="text-center">
-                                        Process, Quality, and Transparency
+                                        Why HTSOL SEO Works
                                     </HeadingTwo>
 
                                     <p className="mt-4  text-white ">
