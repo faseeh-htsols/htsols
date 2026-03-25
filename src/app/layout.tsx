@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import DefaultProviders from "@/providers/default-providers";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 const unbounded = Unbounded({
   variable: "--font-unbounded",
   subsets: ["latin"],
@@ -53,6 +53,7 @@ export default function RootLayout({
       <body
         className={`${unbounded.variable} bg-black text-white ${inter.variable} ${popins.variable} ${jost.variable} ${open_Sans.variable} antialiased`}
       >
+        <GoogleAnalytics gaId="G-G1VLXCBDQW" />
         {/* <Navbar /> */}
         <DefaultProviders>{children}</DefaultProviders>
         {/* <Footer /> */}
