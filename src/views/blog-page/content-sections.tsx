@@ -295,7 +295,7 @@ function ContentSections({
                           </div>
                           <div className="absolute -right-10 top-1/2 -translate-y-1/2 pointer-events-none lg:block hidden">
                             <img
-                              src={"/blog-cta.webp"}
+                              src={imageUrl}
                               alt={heading || "CTA image"}
                               width={400}
                               height={300}
@@ -313,15 +313,15 @@ function ContentSections({
             {/* AUTHOR DETAILS SECTION */}
             <div className="mt-16 mb-12 border-t border-b border-white  p-8">
               <div className="flex flex-col md:flex-row items-center justify-center md:items-start gap-6">
-                {/* Author Image */}
-                <div className="relative w-40 h-40 p-1 shrink-0">
+                {/* Author image: same treatment as blog banner — contain in circle (logos/avatars aren’t cropped like object-cover) */}
+                <div className="flex h-40 w-40 shrink-0 items-center justify-center rounded-full bg-primary ring-1 ring-white/15">
                   <Image
                     src={author.pictureUrl || "/user-placeholder.webp"}
                     alt={author.name || "Author"}
-                    width={128}
-                    height={128}
+                    width={136}
+                    height={136}
                     unoptimized
-                    className="w-full h-full object-cover rounded-full"
+                    className="h-[86%] w-[86%] object-contain"
                   />
                 </div>
 

@@ -166,14 +166,13 @@ const ToolsAndReporting = () => {
         <section className="py-20 bg-tertiary">
             <Container>
                 <div className="text-center mb-10 pb-5 border-b border-white">
-                    <p className="uppercase tracking-widest mb-5 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent inline-block  font-primary">
+                <p className="uppercase tracking-widest mb-5 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent inline-block  font-primary">
+                       Make Better Marketing Decisions With Real Data
+                       </p>
+                    <HeadingTwo className="text-center ">
                         Tools and Reporting That Keep SEO Accountable
-                    </p>
-
-                    <HeadingTwo className="text-center">
-                        Make Better Marketing Decisions With Real Data
                     </HeadingTwo>
-
+                   
                     <p className="mt-5 text-white max-w-5xl mx-auto">
                         SEO works best when structured and measurable. We follow a practical workflow supported by reliable tools. Depending on your needs, your campaign may include:
                     </p>
@@ -226,7 +225,7 @@ const ToolsAndReporting = () => {
                                 key={item.heading}
                                 type="button"
                                 onClick={() => handleSelect(index)}
-                                className="text-left transition-colors px-1">
+                                className="text-left transition-colors px-1 cursor-pointer">
                                 <h3
                                     className={`font-primary font-medium uppercase text-sm sm:text-base md:text-lg tracking-wide ${activeIndex === index ? "text-white" : "text-white/80"
                                         }`}>

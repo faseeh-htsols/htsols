@@ -124,11 +124,18 @@ export default function WorkPortfolioSectionTwo() {
           ro.disconnect();
           tween.scrollTrigger?.kill();
           tween.kill();
+          gsap.set(track, { clearProps: "transform" });
         };
       });
 
-      // ── MOBILE/TABLET <1024px: doc 18 config — exactly as it was working ─
+      // ── MOBILE/TABLET <1024px: scroll-scrub + pin
+      // normalizeScroll: iOS Safari often misreports scroll/touch with pin+scrub → up/down jitter.
+      // GSAP moves scroll to the JS thread while this breakpoint is active (see gsap.com normalizeScroll docs).
       mm.add("(max-width: 1023px)", () => {
+        ScrollTrigger.normalizeScroll({
+          allowNestedScroll: true,
+        });
+
         gsap.set(track, { x: 0 });
 
         const tween = gsap.to(track, {
@@ -138,12 +145,13 @@ export default function WorkPortfolioSectionTwo() {
             trigger: cardsPin,
             start: "top 20%",
             end: () => `+=${Math.max(1, getScrollAmount())}`,
-            scrub: 1,
+            // Slight smoothing damps noisy touch deltas; works well with normalizeScroll
+            scrub: 0.35,
             pin: true,
             pinSpacing: true,
             anticipatePin: 1,
             invalidateOnRefresh: true,
-            pinType: ScrollTrigger.isTouch ? "transform" : "fixed",
+            pinType: "transform",
           },
         });
 
@@ -155,10 +163,12 @@ export default function WorkPortfolioSectionTwo() {
         requestAnimationFrame(() => ScrollTrigger.refresh());
 
         return () => {
+          ScrollTrigger.normalizeScroll(false);
           window.removeEventListener("load", onLoad);
           ro.disconnect();
           tween.scrollTrigger?.kill();
           tween.kill();
+          gsap.set(track, { clearProps: "transform" });
         };
       });
 
@@ -170,7 +180,7 @@ export default function WorkPortfolioSectionTwo() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#050505] lg:min-h-screen py-24 relative -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%]
+      className="bg-[#050505] lg:min-h-screen py-24 relative [overflow-anchor:none] -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%]
       [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)]
       md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)]
       lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
@@ -203,14 +213,16 @@ export default function WorkPortfolioSectionTwo() {
           </div>
         </div>
 
-        {/* RIGHT SIDE — untouched */}
+        {/* RIGHT: scroll-scrub horizontal on all breakpoints; touch-pan-y reduces axis fighting on phones */}
         <div
           ref={cardsPinRef}
-          className="relative w-full lg:w-[55%] px-2 lg:px-0">
-          <div ref={viewportRef} className="overflow-hidden">
+          className="relative w-full lg:w-[55%] px-2 lg:px-0 max-lg:touch-pan-y max-lg:overscroll-y-contain">
+          <div
+            ref={viewportRef}
+            className="overflow-hidden max-lg:touch-pan-y">
             <div
               ref={trackRef}
-              className="flex lg:h-auto items-start gap-8 md:gap-10 lg:gap-12 pr-10 will-change-transform">
+              className="flex lg:h-auto items-start gap-8 md:gap-10 lg:gap-12 pr-10 will-change-transform max-lg:touch-pan-y">
               {portfolioSlides.map((slide, idx) => (
                 <article
                   key={idx}

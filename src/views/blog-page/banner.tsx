@@ -82,7 +82,7 @@ const BannerReuse = ({
                 <div className="flex lg:flex-row flex-col gap-3 justify-between">
                   <div className="flex justify-center gap-6">
                     <div className="flex gap-2 items-center">
-                      <div className="w-[70px] h-[70px] rounded-full flex justify-center items-center bg-primary">
+                      <div className="w-[70px] h-[70px] rounded-full flex justify-center items-center bg-primary shrink-0">
                         <img
                           src={authorImage}
                           className="w-[60px] h-[60px] object-contain"

@@ -62,12 +62,12 @@ const Banner = () => {
               SEO Solutions Built to Solve Real{" "}
               <span className="text-white">Growth Problems</span>
             </h1>
-            <div
+            <h2
               className="inline-block px-4 py-2 rounded-lg text-white font-medium uppercase tracking-wide mb-6"
               style={{ background: tealGradient }}
             >
               Focused on Growing Qualified Traffic, Leads, and Revenue
-            </div>
+            </h2>
             <div className="space-y-4 text-white/90 text-sm sm:text-base leading-relaxed mb-8">
               <p>
                 When people in Canada search for your services, you want to

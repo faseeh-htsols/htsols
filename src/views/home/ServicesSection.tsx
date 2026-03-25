@@ -148,13 +148,16 @@ export const ServicesSection: React.FC = () => {
           });
         });
 
+        const PX_PER_STACK_UNIT = 650;
+        // Extra timeline + scroll after last card before unpin (feels like a short pause)
+        const HOLD_AFTER_LAST_UNITS = 0.75;
+
         // Build scroll-driven timeline
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: pinEl,
             start: "top top",
-            // 650px of scroll travel per card exit
-            end: `+=${numExits * 650}`,
+            end: `+=${(numExits + HOLD_AFTER_LAST_UNITS) * PX_PER_STACK_UNIT}`,
             pin: true,
             pinSpacing: true,
             scrub: 1.2,
@@ -198,6 +201,13 @@ export const ServicesSection: React.FC = () => {
           }
         }
 
+        // Hold final frame: no visual change, only consumes scroll time before unpin
+        tl.to(
+          pinEl,
+          { opacity: 1, duration: HOLD_AFTER_LAST_UNITS, ease: "none" },
+          numExits,
+        );
+
         return () => {
           tl.scrollTrigger?.kill();
           tl.kill();
@@ -233,15 +243,14 @@ export const ServicesSection: React.FC = () => {
           <div className="md:hidden">
             <div
               ref={stackPinRef}
-              className="relative flex flex-col"
-              style={{ height: "100vh" }}>
-              {/* Heading — pinned alongside cards so it never scrolls away */}
-              <div className="shrink-0 pt-30 pb-6 text-center">
+              className="relative flex flex-col items-center min-h-[100dvh]">
+              {/* Top padding when pinned (flush to viewport top) — centers the block visually */}
+              <div className="shrink-0 w-full pt-16 pb-5 text-center px-2 sm:pt-20">
                 <HeadingTwo span="OFFER"> WHAT WE</HeadingTwo>
               </div>
 
-              {/* Cards centred in the remaining viewport space */}
-              <div className="relative flex-1 flex items-start justify-center pt-4">
+              {/* Stack vertically + horizontally centered in remaining space */}
+              <div className="relative flex-1 w-full flex items-center justify-center px-2 pb-6 min-h-0">
                 {services.map((service, index) => (
                   <div
                     key={service.title}
