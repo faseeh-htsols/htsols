@@ -225,7 +225,7 @@ const ToolsAndReporting = () => {
                                 key={item.heading}
                                 type="button"
                                 onClick={() => handleSelect(index)}
-                                className="text-left transition-colors px-1">
+                                className="text-left transition-colors px-1 cursor-pointer">
                                 <h3
                                     className={`font-primary font-medium uppercase text-sm sm:text-base md:text-lg tracking-wide ${activeIndex === index ? "text-white" : "text-white/80"
                                         }`}>
