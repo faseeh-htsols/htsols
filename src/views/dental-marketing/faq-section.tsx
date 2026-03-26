@@ -90,7 +90,7 @@ export default function FAQSection() {
                       setLeftOpen(newIndex);
                       setRightOpen(newIndex);
                     }}
-                    className={`w-full flex items-center justify-between px-6 py-4 text-left text-white text-sm hover:cursor-pointer ${leftOpen === index
+                    className={`w-full flex items-center justify-between px-6 py-4 text-left text-white text-sm ${leftOpen === index
                       ? "rounded-full bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]"
                       : ""
                       }`}
@@ -145,7 +145,7 @@ export default function FAQSection() {
                       setLeftOpen(newIndex);
                       setRightOpen(newIndex);
                     }}
-                    className={`w-full flex items-center justify-between px-6 py-4 text-left text-white text-sm hover:cursor-pointer ${leftOpen === index
+                    className={`w-full flex items-center justify-between px-6 py-4 text-left text-white text-sm ${leftOpen === index
                       ? "rounded-full bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]"
                       : ""
                       }`}

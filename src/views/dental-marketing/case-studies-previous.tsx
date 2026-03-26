@@ -11,7 +11,6 @@ import type { Swiper as SwiperType } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import Container from "@/components/ui/container";
-import Link from "next/link";
 
 const data = [
   {
@@ -53,7 +52,7 @@ const CaseStudiesPrevious = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
 
-            <Link href="#contact-us" className="border border-[#0F8B8D] rounded-full pl-6 pr-2 py-2 flex items-center gap-4 text-black font-medium text-sm hover:bg-[#f7f7f7] transition w-fit">
+            <button className="border border-[#0F8B8D] rounded-full pl-6 pr-2 py-2 flex items-center gap-4 text-black font-medium text-sm hover:bg-[#f7f7f7] transition">
               <span>Book a Free Discovery Call</span>
               <span className="w-8 h-8 rounded-full bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] flex items-center justify-center">
                 <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +60,7 @@ const CaseStudiesPrevious = () => {
                 </svg>
 
               </span>
-            </Link>
+            </button>
           </div>
 
           {/* Right Side */}

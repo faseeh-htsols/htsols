@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -64,11 +64,9 @@ const Banner = () => {
               <span className="text-white">Growth Problems</span>
             </h1>
             <div style={{ background: tealGradient }}>
-              <HeadingTwo
-                className="inline-block px-4 py-2 rounded-lg text-white font-medium uppercase tracking-wide mb-6"
-              >
+              <span className="inline-block px-4 py-2 rounded-lg text-white font-medium uppercase tracking-wide mb-6">
                 Focused on Growing Qualified Traffic, Leads, and Revenue
-              </HeadingTwo>
+              </span>
             </div>
             <div className="space-y-4 text-white/90 text-sm sm:text-base leading-relaxed mb-8">
               <p>
@@ -114,8 +112,7 @@ const Banner = () => {
                 disableOnInteraction: false,
                 pauseOnMouseEnter: false,
               }}
-              className="seo-topics-swiper"
-            >
+              className="seo-topics-swiper">
               {[...SEO_TOPICS, ...SEO_TOPICS, ...SEO_TOPICS].map((topic, i) => (
                 <SwiperSlide key={`${topic}-${i}`} className="w-auto!">
                   <div className="flex items-center gap-2">
