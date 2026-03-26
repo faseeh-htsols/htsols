@@ -53,7 +53,7 @@ const OurClients = () => {
           {/* === Grid Content === */}
           <div className=" flex flex-row gap-y-6 flex-wrap justify-center">
             {data.map((client, index) => (
-              <div key={index} className="px-5 w-[20%]">
+              <div key={index} className="px-5 w-[50%] md:w-[20%]">
                 <Image
                   src={client.logo}
                   alt={client.name}
