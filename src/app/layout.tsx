@@ -32,6 +32,9 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
+  verification: {
+    google: "TH_L-Ksg9FClpQN94jCRTKe1hBGcT1HI60tlub3V0_M",
+  },
   icons: {
     icon: [
       {
