@@ -9,7 +9,7 @@ import Image from "next/image";
 const WhyChoose = () => {
     return (
         <Container>
-            <div className="bg-black pt-12 pb-16">
+            <div className="bg-black py-20 lg:py-40">
                 <div className="flex flex-col justify-center items-center gap-8 ">
                     <HeadingTwo className="text-center">
                         Why Choose HTSOL as Your Digital Marketing Partner in Canada?

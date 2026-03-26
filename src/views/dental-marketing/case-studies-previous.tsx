@@ -39,7 +39,7 @@ const CaseStudiesPrevious = () => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
-    <div className="bg-white py-24 overflow-hidden">
+    <div className="bg-white py-24 lg:py-40 overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side */}

@@ -19,7 +19,7 @@ const projects = [
 
 const PortfolioSection = () => {
   return (
-    <section className="relative py-16">
+    <section className="relative py-20 lg:py-40">
       <Container>
         <div className="grid gap-16 lg:grid-cols-2">
           {projects.map((project, index) => (

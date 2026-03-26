@@ -7,7 +7,7 @@ import Image from "next/image";
 const CallBackFromUs = () => {
   return (
     <Container>
-      <div className="py-20">
+      <div className="py-20 lg:py-40">
         <div className="border border-[#5C5C5C] rounded-lg px-4 flex lg:flex-row flex-col gap-0 lg:gap-4 relative text-white mb-20">
           <div className="lg:w-[56%] py-8 flex flex-col gap-4">
             <HeadingTwo className="font-primary uppercase">

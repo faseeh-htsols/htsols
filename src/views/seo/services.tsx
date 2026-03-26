@@ -126,7 +126,7 @@ const Services = () => {
             up
             className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]"
         >
-            <section className="relative bg-black py-20">
+            <section className="relative bg-black py-20 lg:py-40">
                 <Container>
                     <div className="text-center mb-10 lg:mb-12 max-w-[860px] mx-auto">
                         <HeadingTwo className="text-center mb-3">

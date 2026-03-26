@@ -31,7 +31,7 @@ const data = [
 ];
 export default function OurSpecializedServices() {
   return (
-    <section className="bg-black py-24">
+    <section className="bg-black py-24 lg:py-40">
       <Container>
         {/* Heading */}
         <HeadingTwo className="mb-10 text-center">

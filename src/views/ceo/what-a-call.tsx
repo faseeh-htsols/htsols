@@ -6,7 +6,7 @@ import Image from "next/image";
 const WhatACall = () => {
     return (
         <DoubleCurves up className="-mt-[2%] sm:-mt-[3%] md:-mt-[3%] lg:-mt-[2%] xl:-mt-[1%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_-5px,100%_97%,0_100%)]">
-            <div className="py-20">
+            <div className="py-20 lg:py-40">
                 <Container>
                     <div className="border border-[#5C5C5C] rounded-lg px-4 flex lg:flex-row flex-col gap-0 lg:gap-4 relative text-white mb-20">
                         <div className="lg:w-[56%] py-8 flex flex-col gap-4">

@@ -14,7 +14,7 @@ const WhyHireMe = () => {
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
           "
       ></div> */}
-      <div className="bg-tertiary py-24 relative">
+      <div className="bg-tertiary py-24 lg:py-40 relative">
         <Container>
           <div>
             <div className="max-w-[1124px] mx-auto flex flex-col gap-5 mb-4">

@@ -31,7 +31,7 @@ function SkillPill({ skill }: { skill: (typeof SKILLS)[number] }) {
 
 const Skills = () => {
   return (
-    <div className="lg:pt-40 pt-20 relative">
+    <div className="relative py-20">
       <div className="bg-radial from-[#00A1A5] to-[#075B65] blur-[120px] absolute w-[150px] h-[150px] -top-10 -left-10 pointer-events-none" />
       <div className="max-w-[1770px] mx-auto px-5">
         <div className="marquee-wrapper">

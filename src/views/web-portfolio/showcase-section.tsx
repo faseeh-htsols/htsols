@@ -49,7 +49,7 @@ const showcaseItems: ShowcaseItem[] = [
 
 const ShowcaseSection = () => {
   return (
-    <section className="bg-black py-16">
+    <section className="bg-black py-20 lg:py-40">
       <Container>
         <div className="grid gap-8">
           {showcaseItems.map((item) => (

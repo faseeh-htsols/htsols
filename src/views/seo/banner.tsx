@@ -21,7 +21,7 @@ const tealGradient =
 
 const Banner = () => {
   return (
-    <div className="bg-black text-white relative overflow-hidden pb-20 pt-30 md:pb-20 md:pt-40">
+    <div className="bg-black text-white relative overflow-hidden py-20 lg:py-40">
       <div className="absolute top-20 left-0">
         <Image
           src={"/left-gradient.webp"}

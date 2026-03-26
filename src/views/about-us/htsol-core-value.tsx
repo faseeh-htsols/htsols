@@ -101,7 +101,7 @@ const HtsolCoreValue = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-black py-14">
+    <section className="relative overflow-hidden bg-black py-20">
       <Container>
         {/* Heading */}
         <div className="text-center">
@@ -112,8 +112,8 @@ const HtsolCoreValue = () => {
             CORE VALUES
           </HeadingTwo>
           <p className="mx-auto mt-2 max-w-xl text-xs text-white/55">
-            Over the years, we&apos;ve stayed committed to the principles that guide
-            our work and our culture.
+            Over the years, we&apos;ve stayed committed to the principles that
+            guide our work and our culture.
           </p>
           <div className="mx-auto mt-8 h-px w-full max-w-5xl bg-white" />
         </div>
@@ -141,8 +141,7 @@ const HtsolCoreValue = () => {
               onSlideChange={(swiper) => {
                 setSelectedIndex(swiper.realIndex);
                 setProgress(0); // restart progress for new slide
-              }}
-            >
+              }}>
               {VALUES.map((v) => (
                 <SwiperSlide key={v.title}>
                   <div className="flex flex-col items-center text-center py-2">
@@ -151,7 +150,9 @@ const HtsolCoreValue = () => {
                     <div className="relative z-10 mt-3 flex h-8 items-center justify-center">
                       <span className="h-3.5 w-3.5 rounded-full bg-[#0B6B76] ring-8 ring-tertiary shadow-[0_0_0_1px_rgba(255,255,255,0.10)]" />
                     </div>
-                    <h3 className="mt-3 font-primary text-xl text-white">{v.title}</h3>
+                    <h3 className="mt-3 font-primary text-xl text-white">
+                      {v.title}
+                    </h3>
                     <p className="mt-2 text-white">{v.desc}</p>
                   </div>
                 </SwiperSlide>
@@ -164,13 +165,24 @@ const HtsolCoreValue = () => {
               <button
                 type="button"
                 onClick={handleTogglePlay}
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/20 flex items-center justify-center text-white hover:bg-white/10 transition"
-              >
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/20 flex items-center justify-center text-white hover:bg-white/10 transition">
                 {isPlaying ? (
                   // pause icon
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <rect x="2" y="2" width="3" height="10" fill="currentColor" />
-                    <rect x="9" y="2" width="3" height="10" fill="currentColor" />
+                    <rect
+                      x="2"
+                      y="2"
+                      width="3"
+                      height="10"
+                      fill="currentColor"
+                    />
+                    <rect
+                      x="9"
+                      y="2"
+                      width="3"
+                      height="10"
+                      fill="currentColor"
+                    />
                   </svg>
                 ) : (
                   // play icon
@@ -189,8 +201,7 @@ const HtsolCoreValue = () => {
                       key={i}
                       type="button"
                       onClick={() => handleDotClick(i)}
-                      className="relative h-[4px] w-16 rounded-full bg-white/15 overflow-hidden"
-                    >
+                      className="relative h-[4px] w-16 rounded-full bg-white/15 overflow-hidden">
                       <span
                         className="absolute inset-y-0 left-0 bg-white"
                         style={{ width: `${progress}%` }}
@@ -212,13 +223,17 @@ const HtsolCoreValue = () => {
           {/* ── DESKTOP: original 5-column grid (UNTOUCHED) ─────────────── */}
           <div className="hidden md:grid md:grid-cols-2 gap-12 lg:grid-cols-5 lg:gap-10">
             {VALUES.map((v) => (
-              <div key={v.title} className="flex flex-col items-center text-center">
+              <div
+                key={v.title}
+                className="flex flex-col items-center text-center">
                 <CoreValueBadge letter={v.letter} />
                 <div className="mt-4 h-0 w-0 border-l-[10px] border-r-[10px] border-t-[12px] border-l-transparent border-r-transparent border-t-white" />
                 <div className="relative z-10 mt-3 flex h-8 items-center justify-center">
                   <span className="h-3.5 w-3.5 rounded-full bg-[#0B6B76] ring-8 ring-tertiary shadow-[0_0_0_1px_rgba(255,255,255,0.10)]" />
                 </div>
-                <h3 className="mt-3 font-primary text-xl text-white">{v.title}</h3>
+                <h3 className="mt-3 font-primary text-xl text-white">
+                  {v.title}
+                </h3>
                 <p className="mt-2 text-white">{v.desc}</p>
               </div>
             ))}

@@ -28,7 +28,7 @@ export default function ClientsMarquee() {
   const items = [...IMAGES_CLIENTS_CGI, ...IMAGES_CLIENTS_CGI];
 
   return (
-    <div className="relative w-full overflow-hidden py-14">
+    <div className="relative w-full overflow-hidden py-20 lg:py-40">
       <Swiper
         modules={[Autoplay]}
         onSwiper={(s) => (swiperRef.current = s)}

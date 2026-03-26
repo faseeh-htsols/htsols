@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <section className="bg-black relative pt-32 pb-20 overflow-hidden">
+    <section className="bg-black relative py-20 lg:py-40 overflow-hidden">
       <div className="absolute top-20 left-0">
         <Image
           src={"/left-gradient.webp"}

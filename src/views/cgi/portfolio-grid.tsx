@@ -283,7 +283,7 @@ const PortfolioGrid = () => {
         </div>
 
         {/* Grid */}
-        <section className="pb-20">
+        <section className="py-20 lg:py-40">
           <div ref={containerRef}>
             <div
               ref={gridRef}

@@ -8,7 +8,7 @@ export default function FAQSection() {
   const [rightOpen, setRightOpen] = useState<number | null>(0);
 
   return (
-    <section className="bg-black py-24">
+    <section className="bg-black py-24 lg:py-40">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Heading */}
         <h2 className="text-center text-white text-3xl lg:text-4xl font-semibold mb-16">

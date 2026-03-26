@@ -65,7 +65,7 @@ export default function PricingPlan() {
     const [activeTab, setActiveTab] = useState("bundle");
 
     return (
-        <section className="bg-black py-20">
+        <section className="bg-black py-20 lg:py-40">
             <div className="max-w-[1200px] mx-auto px-4">
                 <div className="text-center mb-8">
                     <HeadingTwo className="capitalize">

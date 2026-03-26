@@ -31,7 +31,7 @@ const FEATURES = [
 const SeoWorks = () => {
     return (
         <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
-            <section className="relative overflow-hidden pb-10">
+            <section className="relative overflow-hidden py-20 lg:py-40">
                 {/* Background */}
                 <div className="">
                     <Image

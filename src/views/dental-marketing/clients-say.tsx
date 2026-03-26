@@ -42,7 +42,7 @@ const data = [
 ];
 const ClientsSay = () => {
   return (
-    <div className="bg-white py-20">
+    <div className="bg-white py-20 lg:py-40">
       <Container>
         <div>
           <HeadingTwo className="text-black! text-center mb-8">

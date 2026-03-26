@@ -13,7 +13,7 @@ const BlogCurate = () => {
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
           "></div> */}
-        <div className="py-20">
+        <div className="py-20 lg:py-40">
           <Container>
             <HeadingTwo className="text-center mb-10">A blog I curate</HeadingTwo>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-7  ">

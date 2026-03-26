@@ -4,7 +4,7 @@ import React from "react";
 
 const Achievements = () => {
   return (
-    <div className="py-20">
+    <div className="py-20 lg:py-40">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-3 bg-tertiary rounded-lg border border-[#075B65]">
           {CEO_ACHIEVEMENTS.map((item, index) => (

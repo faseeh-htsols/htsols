@@ -101,7 +101,7 @@ function GradientConnector() {
 }
 export default function ClearProcess() {
   return (
-    <section className="bg-black py-16 sm:py-20">
+    <section className="bg-black py-20 lg:py-40">
       <Container>
         <div className="text-center">
           <p className="bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent font-primary font-semibold text-[22px]">

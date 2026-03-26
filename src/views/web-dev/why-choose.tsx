@@ -18,7 +18,7 @@ const WhyChoose = () => {
       up
       className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
       <Container>
-        <div className="py-10 md:py-12">
+        <div className="py-20 lg:py-40">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 pb-8 border-b border-white mb-10 md:mb-12 mt-6 md:mt-10">
             <HeadingTwo className="text-[32px] leading-[1.05] sm:text-[38px] md:text-4xl lg:text-[33px]">
               Why Professional Web Development Matters in Canada
