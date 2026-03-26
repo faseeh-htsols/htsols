@@ -63,10 +63,10 @@ const Banner = () => {
               SEO Solutions Built to Solve Real{" "}
               <span className="text-white">Growth Problems</span>
             </h1>
-            <div style={{ background: tealGradient }}>
-              <span className="inline-block px-4 py-2 rounded-lg text-white font-medium uppercase tracking-wide mb-6">
-                Focused on Growing Qualified Traffic, Leads, and Revenue
-              </span>
+            <div
+              style={{ background: tealGradient }}
+              className="inline-block px-2 py-2 rounded-md text-white font-primary font-medium uppercase tracking-wide mb-6 text-[13px]">
+              Focused on Growing Qualified Traffic, Leads, and Revenue
             </div>
             <div className="space-y-4 text-white/90 text-sm sm:text-base leading-relaxed mb-8">
               <p>
