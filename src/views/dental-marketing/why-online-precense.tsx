@@ -25,9 +25,9 @@ const data = [
 export default function WhyOnlinePresenceMatters() {
   return (
     <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="max-w-7xl mx-auto px-5">
         {/* Heading */}
-        <HeadingTwo className="!text-black mb-24 text-center">
+        <HeadingTwo className="text-black! mb-24 text-center">
           Why Online Presence Matters
         </HeadingTwo>
 
