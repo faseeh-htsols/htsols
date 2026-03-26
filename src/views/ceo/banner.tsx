@@ -1,5 +1,6 @@
 import Container from "@/components/ui/container";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Banner = () => {
@@ -56,7 +57,10 @@ const Banner = () => {
               </h2>
 
               <div className="flex gap-3 sm:gap-4 justify-center w-full">
-                <a href="" className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100">
+                <Link
+                  href="https://www.instagram.com/faseeh3d"
+                  target="_blank"
+                  className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100">
                   <Image
                     src={"/ceo/instag.svg"}
                     alt="Faseeh Ullah"
@@ -64,8 +68,11 @@ const Banner = () => {
                     height={16}
                     className="w-4 h-4 sm:w-5 sm:h-5"
                   />
-                </a>
-                <a href="" className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100">
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/in/mfaseehullah/"
+                  target="_blank"
+                  className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100">
                   <Image
                     src={"/ceo/linkedin.svg"}
                     alt="Faseeh Ullah"
@@ -73,8 +80,10 @@ const Banner = () => {
                     height={16}
                     className="w-4 h-4 sm:w-5 sm:h-5"
                   />
-                </a>
-                <a href="" className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100">
+                </Link>
+                {/* <Link
+                  href=""
+                  className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100">
                   <Image
                     src={"/ceo/facebook-svg.svg"}
                     alt="Faseeh Ullah"
@@ -82,8 +91,11 @@ const Banner = () => {
                     height={16}
                     className="w-4 h-4 sm:w-5 sm:h-5"
                   />
-                </a>
-                <a href="" className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100">
+                </Link> */}
+                <Link
+                  href="https://x.com/mfaseeh3d"
+                  target="_blank"
+                  className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100">
                   <Image
                     src={"/ceo/twitter.svg"}
                     alt="Faseeh Ullah"
@@ -91,7 +103,7 @@ const Banner = () => {
                     height={16}
                     className="w-4 h-4 sm:w-5 sm:h-5"
                   />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
