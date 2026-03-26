@@ -1,5 +1,6 @@
 import Container from "@/components/ui/container";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Banner = () => {
@@ -11,16 +12,10 @@ const Banner = () => {
             <div className="relative mb-6 sm:mb-8 flex items-center justify-center gap-6">
               <div className="h-px w-[80%] bg-white/25" />
               <div className="flex items-center gap-4 bg-transparent">
-                <a href="" className="w-8 h-8 opacity-90 hover:opacity-100">
-                  <Image
-                    src={"/ceo/instag.svg"}
-                    alt="Instagram"
-                    width={16}
-                    height={16}
-                    className="w-4 h-4"
-                  />
-                </a>
-                <a href="" className="w-8 h-8 opacity-90 hover:opacity-100">
+                <Link
+                  href="https://www.linkedin.com/in/qamar-rafique-736b7b210/"
+                  target="_blank"
+                  className="w-8 h-8 opacity-90 hover:opacity-100">
                   <Image
                     src={"/ceo/linkedin.svg"}
                     alt="LinkedIn"
@@ -28,25 +23,7 @@ const Banner = () => {
                     height={16}
                     className="w-4 h-4"
                   />
-                </a>
-                <a href="" className="w-8 h-8 opacity-90 hover:opacity-100">
-                  <Image
-                    src={"/ceo/facebook-svg.svg"}
-                    alt="Facebook"
-                    width={16}
-                    height={16}
-                    className="w-4 h-4"
-                  />
-                </a>
-                <a href="" className="w-8 h-8 opacity-90 hover:opacity-100">
-                  <Image
-                    src={"/ceo/twitter.svg"}
-                    alt="Twitter"
-                    width={16}
-                    height={16}
-                    className="w-4 h-4"
-                  />
-                </a>
+                </Link>
               </div>
               <div className="h-px w-[80%] bg-white/25" />
             </div>
