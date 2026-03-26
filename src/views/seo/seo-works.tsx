@@ -52,13 +52,12 @@ const SeoWorks = () => {
                                 <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.05)_0%,rgba(255,255,255,0.02)_40%,rgba(0,0,0,0.35)_100%)]" />
 
                                 <div className="relative mx-auto max-w-6xl text-center">
-                                    <p className="uppercase tracking-widest mb-5 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent inline-block  font-primary">
-                                    Process, Quality, and Transparency
-                                    </p>
-
-                                    <HeadingTwo className="text-center">
+                                    <HeadingTwo className="text-center mb-3">
                                         Why HTSOL SEO Works
                                     </HeadingTwo>
+                                    <h3 className="uppercase tracking-widest mb-0 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent inline-block font-primary">
+                                    Process, Quality, and Transparency
+                                    </h3>
 
                                     <p className="mt-4  text-white ">
                                         Good SEO is consistent work guided by real data, not shortcuts.

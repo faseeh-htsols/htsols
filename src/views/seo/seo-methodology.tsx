@@ -58,14 +58,12 @@ const SeoMethodology = () => {
         <Container>
           <div className="mx-auto max-w-6xl">
             <div className="text-center">
-              <p className="mb-5 inline-block bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text font-primary font-semibold uppercase tracking-[0.18em] text-transparent">
-              A System Designed to Build Momentum
-              </p>
-
-              <HeadingTwo className="text-center text-white uppercase">
-               
+              <HeadingTwo className="text-center text-white uppercase mb-3">
                 Our SEO Methodology
               </HeadingTwo>
+              <h3 className="mb-0 inline-block bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text font-primary font-semibold uppercase tracking-[0.18em] text-transparent">
+              A System Designed to Build Momentum
+              </h3>
 
               <p className="mt-5 text-white">
                 We follow a structured process so you always know where things

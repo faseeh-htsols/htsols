@@ -40,7 +40,7 @@ const ContactForm = () => {
     const formRef = useRef<HTMLFormElement | null>(null);
     // 👇 for split text
     const headingSplitRef = useRef<HTMLHeadingElement | null>(null);
-    const paraSplitRef = useRef<HTMLParagraphElement | null>(null);
+    const paraSplitRef = useRef<HTMLHeadingElement | null>(null);
     const iconWrapRef = useRef<HTMLDivElement | null>(null);
     // 👇 for form fade
     const formWrapRef = useRef<HTMLDivElement | null>(null);
@@ -206,12 +206,12 @@ const ContactForm = () => {
                         />
                     </div> */}
 
-                    <HeadingTwo ref={headingSplitRef} className="text-center">
+                    <HeadingTwo ref={headingSplitRef} className="text-center mb-3">
                         Ready To Discuss your project?
                     </HeadingTwo>
-                    <p ref={paraSplitRef} className="text-white text-[20px] text-center">
+                    <h3 ref={paraSplitRef} className="text-white text-[20px] text-center font-normal">
                         Katalyst Studio offers a range of design services that are tailored to meet the unique needs of each client Katalyst Studio offers a range of design services.
-                    </p>
+                    </h3>
                 </div>
                 <div className="relative mt-8" ref={formWrapRef}>
                     <Formik

@@ -7,7 +7,6 @@ import Button from "@/components/ui/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import HeadingTwo from "@/components/ui/heading-two";
 
 const SEO_TOPICS = [
   "On-Page SEO",
