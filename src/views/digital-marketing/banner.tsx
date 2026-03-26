@@ -7,7 +7,7 @@ import Button from "@/components/ui/Button";
 
 const Banner = () => {
   return (
-    <div className="bg-black text-white relative overflow-hidden py-20 md:py-30">
+    <div className="bg-black text-white relative overflow-hidden py-20 lg:py-40">
       {/* Corner gradient glows */}
       <div className="absolute top-20 left-0">
         <Image

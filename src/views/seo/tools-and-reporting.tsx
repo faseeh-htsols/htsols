@@ -163,7 +163,7 @@ const ToolsAndReporting = () => {
     }, []);
 
     return (
-        <section className="py-20 bg-tertiary">
+        <section className="py-20 lg:py-40 bg-tertiary">
             <Container>
                 <div className="text-center mb-10 pb-5 border-b border-white">
                     <HeadingTwo className="text-center mb-3">

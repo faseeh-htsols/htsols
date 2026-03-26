@@ -8,7 +8,7 @@ const ClearStrategy = () => {
     <DoubleCurves
       up
       className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
-      <section className="relative bg-black pb-10 pt-16 md:py-20 overflow-hidden">
+      <section className="relative bg-black py-20 lg:py-40 overflow-hidden">
         <Container>
           <div className="">
             <div className="text-center mb-10">
@@ -19,8 +19,7 @@ const ClearStrategy = () => {
                 Clear Strategy. Real Results.
               </h3>
             </div>
-
-            <div className="">
+            <div>
               <div className="w-full rounded-[12px] p-px bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] shadow-[0_0_30px_rgba(0,131,138,0.16)]">
                 <div className="rounded-[12px] bg-black p-2">
                   <div className="relative rounded-[10px] bg-tertiary h-full px-5 sm:px-8 md:px-14 py-8 md:py-10 overflow-hidden flex flex-col items-center justify-center text-center gap-6">

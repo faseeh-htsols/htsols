@@ -4,7 +4,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div>
+    <div className="py-20 lg:py-40">
       <Container>
         <div className="flex flex-col gap-5 mb-18 ">
           <p className="text-xl font-primary uppercase bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">

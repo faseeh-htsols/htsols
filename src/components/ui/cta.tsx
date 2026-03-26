@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const CTA = () => {
   return (
-    <div className="pt-24 pb-32">
+    <div className="py-20 lg:py-40">
       <Container>
         <div className="border border-[#5C5C5C] rounded-lg px-4 flex lg:flex-row flex-col gap-4 relative text-white">
           <div className="lg:w-[56%] py-8 flex flex-col gap-4">

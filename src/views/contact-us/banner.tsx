@@ -77,7 +77,7 @@ const Banner = () => {
   const closePopup = () => setPopupOpen(false);
 
   return (
-    <div className="bg-black relative pb-20 pt-24 overflow-hidden">
+    <div className="bg-black relative py-20 lg:py-40 overflow-hidden">
       {/* <div className="pointer-events-none h-full w-full absolute inset-x-0 top-0 flex justify-center">
         <div className="w-full h-full  max-w-[1600px] bg-gradient-to-r from-transparent via-[#00A1A5] to-transparent" />
       </div> */}

@@ -14,7 +14,7 @@ import Link from "next/link";
 
 const OurServices = () => {
     return (
-        <div className="bg-tertiary py-12">
+        <div className="bg-tertiary py-20 lg:py-40">
             <Container>
                 <div className="flex flex-col lg:flex-row items-start gap-5">
                     <div className="lg:w-[250px] shrink-0 lg:pr-5 lg:border-r border-white h-full">

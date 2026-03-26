@@ -14,7 +14,7 @@ const PrivacyAccessibilityTrust = () => {
   return (
     <section className="relative min-h-[600px] lg:min-h-[700px] bg-[url(/design-web-dev.webp)] bg-cover bg-right overflow-hidden">
       <Container>
-        <div className="relative z-10 flex py-16 lg:py-24">
+        <div className="relative z-10 flex py-20 lg:py-40">
           <div className="">
             <div className="max-w-xl rounded-2xl bg-[#1a1a1a]/95 border border-white/10 p-6 sm:p-8 lg:p-10 shadow-xl">
               <HeadingTwo className="font-primary font-semibold uppercase text-[28px] sm:text-[34px] lg:text-[38px] leading-[1.02] mb-5">

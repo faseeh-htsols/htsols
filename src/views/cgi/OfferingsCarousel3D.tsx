@@ -163,7 +163,7 @@ export default function OfferingsPinnedEllipse() {
       />
 
       <Container>
-        <div className="py-16">
+        <div className="py-20 lg:py-40">
           <HeadingTwo className="text-center relative">
             Our Creative Services
           </HeadingTwo>

@@ -12,7 +12,7 @@ const lists = [
 
 const RelationshipAndResults = () => {
   return (
-    <div className="py-24 bg-[url(/what-happens-after-launch.webp)] bg-cover">
+    <div className="py-24 lg:py-40 bg-[url(/what-happens-after-launch.webp)] bg-cover">
       <Container>
         <div className="flex flex-col gap-6">
           <HeadingTwo className="text-center mb-6 md:mb-10" span="Results">

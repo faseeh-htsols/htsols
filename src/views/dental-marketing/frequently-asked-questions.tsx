@@ -4,7 +4,7 @@ import React from "react";
 
 const FrequentlyAskedQuestions = () => {
   return (
-    <div className="py-24">
+    <div className="py-24 lg:py-40">
       <Container>
         <div>
           <HeadingTwo>Frequently Asked Questions</HeadingTwo>

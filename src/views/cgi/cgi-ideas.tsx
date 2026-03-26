@@ -60,7 +60,7 @@ export default function CgiIdeasSection() {
     setActiveSrc(null);
   };
   return (
-    <section className="bg-black py-10">
+    <section className="bg-black py-20 lg:py-40">
       <Container>
         {/* Heading */}
         <div className="text-center">

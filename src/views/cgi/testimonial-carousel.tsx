@@ -180,7 +180,7 @@ export default function TestimonialCarousel({
   };
 
   return (
-    <section className={cx("bg-black py-12", className)}>
+    <section className={cx("bg-black py-20 lg:py-40", className)}>
       <Container>
         <div className=" overflow-hidden">
           <Swiper

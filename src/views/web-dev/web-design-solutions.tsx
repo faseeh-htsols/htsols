@@ -53,7 +53,7 @@ const WebDesignSolutions = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative overflow-hidden bg-tertiary py-16 sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-tertiary py-20 lg:py-40">
       {/* vignette */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.06)_0%,rgba(0,0,0,0.9)_55%,rgba(0,0,0,1)_100%)]" />
 

@@ -74,7 +74,7 @@ const FillForm = () => {
   };
   const closePopup = () => setPopupOpen(false);
   return (
-    <div className="py-24">
+    <div className="py-24 lg:py-40">
       <Container>
         <div className="grid lg:grid-cols-2 gap-20">
           <div className="flex flex-col gap-10">

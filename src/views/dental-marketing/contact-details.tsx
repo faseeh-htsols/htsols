@@ -4,7 +4,7 @@ import React from "react";
 
 const ContactDetails = () => {
   return (
-    <div className="bg-black py-24">
+    <div className="bg-black py-24 lg:py-40">
       <Container>
         <div className="flex mb-10 justify-center">
           <Image

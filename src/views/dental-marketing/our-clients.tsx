@@ -41,7 +41,7 @@ const data = [
 ];
 const OurClients = () => {
   return (
-    <div className="bg-[linear-gradient(99.4deg,#000000_0.35%,#0F272A_98.5%)] py-24 text-white">
+    <div className="bg-[linear-gradient(99.4deg,#000000_0.35%,#0F272A_98.5%)] py-24 lg:py-40 text-white">
       <Container>
         {/* Header */}
         <div className="text-center mb-16">

@@ -53,7 +53,7 @@ const TheWayWeWork = () => {
   const [openIndex, setOpenIndex] = useState<number>(0);
 
   return (
-    <section className="bg-[#0B0B0B] text-white py-14 lg:py-20">
+    <section className="bg-[#0B0B0B] text-white py-20 lg:py-40">
       <Container>
         <HeadingTwo className="text-center mb-7">THE WAY WE WORK</HeadingTwo>
         <div className="flex items-start justify-between gap-10">

@@ -71,7 +71,7 @@ const WhyChooseHtsol = () => {
   }, [activeIndex, slideDirection]);
 
   return (
-    <section className="py-20 bg-tertiary">
+    <section className="py-20 lg:py-40 bg-tertiary">
       <Container>
         <HeadingTwo className="text-center pb-4 border-b border-white mb-10">
           Why Choose HTSOL Inc. for Web Development

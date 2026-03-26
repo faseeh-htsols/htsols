@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const LetsHaveAChat = () => {
   return (
-    <div className="py-24 bg-[#F5F5F5]">
+    <div className="py-24 lg:py-40 bg-[#F5F5F5]">
       <Container>
         <div className="flex flex-col gap-6">
           <div className="flex justify-center">
