@@ -902,36 +902,3 @@ body {
 .clear-strategy-swiper {
   overflow: hidden;
 }
-
-
-
-
-.custom-container {
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (min-width: 768px) {
-  .custom-container {
-    max-width: 94%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .custom-container {
-    max-width: 95%;
-  }
-}
-
-@media (min-width: 1280px) {
-  .custom-container {
-    max-width: 91%;
-  }
-}
-
-@media (min-width: 1400px) {
-  .custom-container {
-    max-width: 86%;
-  }
-}
