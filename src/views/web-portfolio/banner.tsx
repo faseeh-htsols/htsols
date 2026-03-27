@@ -1,9 +1,15 @@
-import Container from "@/components/ui/container";
-import Image from "next/image";
+"use client";
 
-const Banner = () => {
+import { useState } from "react";
+import Image from "next/image";
+import HeadingTwo from "@/components/ui/heading-two";
+import Container from "@/components/ui/container";
+
+export default function Banner() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <section className="bg-black relative py-20 lg:py-40 overflow-hidden">
+    <section className=" relative">
       <div className="absolute top-20 left-0">
         <Image
           src={"/left-gradient.webp"}
@@ -19,53 +25,60 @@ const Banner = () => {
           width={500}
           height={500}
           className="w-[350px] h-[350px]"
-          alt="right gradient"
+          alt="left gradient"
         />
       </div>
       <Container>
-        <div className="flex flex-col items-center text-center gap-10">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-primary font-bold uppercase text-white  tracking-wide">
-            Web Development
+        <div className="flex flex-col items-center gap-8 py-20 lg:py-40">
+          <h1 className="font-primary font-semibold text-3xl sm:text-4xl lg:text-5xl uppercase leading-tight mb-4 text-center">
+            OUR PORTFOLIO
           </h1>
-
-          <div className="w-full max-w-[1020px]">
-            <div className="relative rounded-[28px] border border-white/10 bg-[#050505] p-3">
-              <div className="relative h-[220px] sm:h-[320px] md:h-[420px] rounded-[22px] overflow-hidden">
-                <Image
-                  src="/web-dev.webp"
-                  alt="Web development preview"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 1020px"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-black/20" />
-                <button
-                  type="button"
-                  aria-label="Play preview"
-                  className="absolute inset-0 flex items-center justify-center"
-                >
-                  <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/70 bg-black/40 shadow-[0_0_30px_rgba(0,0,0,0.6)]">
-                    <svg
-                      width="18"
-                      height="20"
-                      viewBox="0 0 18 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M2 1.5L16 10L2 18.5V1.5Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </span>
-                </button>
-              </div>
+          <div
+            className="relative w-full h-full cursor-pointer"
+            onClick={() => setIsOpen(true)}>
+            <Image
+              src="/portfolio-banner.png"
+              alt="Portfolio preview"
+              width={1280}
+              height={720}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 flex items-center justify-center transition-colors duration-300 group-hover:bg-black/20">
+              <Image
+                src="/play-button.svg"
+                alt="Play"
+                width={72}
+                height={72}
+                className=""
+              />
             </div>
           </div>
+          {isOpen && (
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 backdrop-blur-md animate-[fadeIn_0.25s_ease]"
+              onClick={() => setIsOpen(false)}>
+              <div
+                className="relative w-[90vw] max-w-4xl rounded-xl overflow-hidden shadow-[0_0_60px_rgba(0,0,0,0.8)] animate-[scaleUp_0.3s_cubic-bezier(0.34,1.56,0.64,1)]"
+                onClick={(e) => e.stopPropagation()}>
+                {/* Close button */}
+                <button
+                  className="absolute top-3 right-3 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm text-white text-sm hover:bg-white/25 hover:rotate-90 transition-all duration-200"
+                  onClick={() => setIsOpen(false)}
+                  aria-label="Close video">
+                  ✕
+                </button>
+
+                <video
+                  src="/portfolio-video.mp4"
+                  controls
+                  autoPlay
+                  className="w-full h-auto aspect-video bg-black block"
+                />
+              </div>
+            </div>
+          )}
         </div>
       </Container>
     </section>
   );
-};
-
-export default Banner;
+}

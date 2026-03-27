@@ -11,39 +11,43 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "www.cms.dentopia.marketing",
       },
+      {
+        protocol: "https",
+        hostname: "img.youtube.com",
+      },
     ],
   },
-  async redirects() {
-    return [
-      {
-        source: "/contact",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/testimonials",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/services/seo",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/_next/image",
-        has: [
-          {
-            type: "query",
-            key: "url",
-            value: ".*kaybees-(2|3|logo)\\.webp",
-          },
-        ],
-        destination: "/",
-        permanent: true,
-      },
-    ];
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: "/contact",
+  //       destination: "/",
+  //       permanent: true,
+  //     },
+  //     {
+  //       source: "/testimonials",
+  //       destination: "/",
+  //       permanent: true,
+  //     },
+  //     {
+  //       source: "/services/seo",
+  //       destination: "/",
+  //       permanent: true,
+  //     },
+  //     {
+  //       source: "/_next/image",
+  //       has: [
+  //         {
+  //           type: "query",
+  //           key: "url",
+  //           value: ".*kaybees-(2|3|logo)\\.webp",
+  //         },
+  //       ],
+  //       destination: "/",
+  //       permanent: true,
+  //     },
+  //   ];
+  // },
 };
 
 export default nextConfig;
