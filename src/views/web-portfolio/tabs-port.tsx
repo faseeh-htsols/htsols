@@ -26,91 +26,101 @@ const designCards: DesignCard[] = [
     label: "Dental",
   },
   {
-    image: "/services/web-two.webp",
+    image: "/web-design-2.png",
     category: "Website Design",
-    label: "E-Commerce",
+    label: "THERAPIST",
   },
   {
-    image: "/services/web-one.webp",
+    image: "/web-design-3.png",
     category: "Website Design",
-    label: "Real Estate",
+    label: "DENTIST",
   },
   {
-    image: "/services/web-two.webp",
+    image: "/web-design-6.png",
     category: "Website Design",
-    label: "Healthcare",
+    label: "DENTIST",
   },
   {
-    image: "/services/web-one.webp",
+    image: "/web-design-4.png",
     category: "Website Design",
-    label: "Restaurant",
+    label: "LOGISTICS",
   },
   {
-    image: "/services/web-two.webp",
+    image: "/web-design-5.png",
     category: "Website Design",
-    label: "Education",
+    label: "SMART HOME",
   },
   {
-    image: "/services/web-one.webp",
+    image: "/web-design-1.png",
     category: "Website Design",
-    label: "Fitness",
+    label: "DENTAL",
   },
   {
-    image: "/services/web-two.webp",
+    image: "/web-design-1.png",
     category: "Website Design",
-    label: "Finance",
+    label: "DIGITAL MARKETING",
   },
   {
-    image: "/services/web-one.webp",
+    image: "/web-design-9.png",
     category: "Website Design",
-    label: "Legal",
+    label: "DENTAL",
+  },
+   {
+    image: "/web-design-1.png",
+    category: "Website Design",
+    label: "DENTAL",
   },
 ];
 const devCards: DesignCard[] = [
   {
-    image: "/services/web-two.webp",
+    image: "/web-dev-1.png",
     category: "Website Development",
-    label: "SaaS Platform",
+    label: "SMILEFAST",
   },
   {
     image: "/services/web-one.webp",
     category: "Website Development",
-    label: "CMS Build",
+    label: "DENTAL",
   },
   {
     image: "/services/web-two.webp",
     category: "Website Development",
-    label: "E-Commerce",
+    label: "NUYU DENTAL",
   },
   {
     image: "/services/web-one.webp",
     category: "Website Development",
-    label: "Portal",
+    label: "DENTIST",
   },
   {
-    image: "/services/web-two.webp",
+    image: "/web-dev-2.png",
     category: "Website Development",
-    label: "Dashboard",
-  },
-  {
-    image: "/services/web-one.webp",
-    category: "Website Development",
-    label: "Booking System",
-  },
-  {
-    image: "/services/web-two.webp",
-    category: "Website Development",
-    label: "LMS",
+    label: "BRITISH ACADEMY",
   },
   {
     image: "/services/web-one.webp",
     category: "Website Development",
-    label: "Marketplace",
+    label: "DENTAL MARKETING AGENCY",
   },
   {
     image: "/services/web-two.webp",
     category: "Website Development",
-    label: "Corporate",
+    label: "DENTAL",
+  },
+  {
+    image: "/services/web-one.webp",
+    category: "Website Development",
+    label: "DENTAL SOLUTIONS",
+  },
+  {
+    image: "/services/web-two.webp",
+    category: "Website Development",
+    label: "SPORTS DENTAL THERAPIST",
+  },
+  {
+    image: "/services/web-one.webp",
+    category: "Website Development",
+    label: "DENTIST",
   },
 ];
 interface CgiVideo {
@@ -231,7 +241,7 @@ const caseStudies: CaseStudy[] = [
       "Branding & Design",
       "Performance SEO",
     ],
-    images: ["/services/web-one.webp", "/services/web-two.webp"],
+    images: ["/mockup.png"],
     accent: "/marketing-1.png",
   },
   {
@@ -263,7 +273,7 @@ const caseStudies: CaseStudy[] = [
       "Social Media Management",
       "Performance SEO",
     ],
-    images: ["/services/web-one.webp", "/services/web-two.webp"],
+    images: ["/mockup 3.png"],
     accent: "/marketing-3.webp",
   },
 ];
@@ -339,7 +349,7 @@ export default function TabsPort() {
 }
 function PortfolioGrid({ cards }: { cards: DesignCard[] }) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
       {cards.map((card, i) => (
         <div
           key={`${card.label}-${i}`}
@@ -424,9 +434,9 @@ function MarketingCaseStudies({ studies }: { studies: CaseStudy[] }) {
       {studies.map((study, i) => (
         <div
           key={`${study.company}-${i}`}
-          className={`relative rounded-3xl overflow-hidden border border-white/8 bg-cover bg-center p-8 md:p-10 lg:p-14`}
+          className={`relative rounded-3xl overflow-hidden border border-white/8 bg-cover bg-center p-8 md:p-10 lg:py-14 lg:pl-14 lg:pr-0`}
           style={{ backgroundImage: `url(${study.accent})` }}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-6 items-center">
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <div className="relative h-9 w-9 rounded-full overflow-hidden border border-white/15">
@@ -466,26 +476,26 @@ function MarketingCaseStudies({ studies }: { studies: CaseStudy[] }) {
             </div>
 
             {/* Right — Images */}
-            <div className="relative flex items-center justify-center gap-4">
+            <div className="relative flex items-center justify-end lg:-mr-8 xl:-mr-12">
               {/* Main laptop image */}
-              <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden">
+              <div className="relative ml-auto w-[112%] max-w-none aspect-[4/3]">
                 <Image
                   src={study.images[0]}
                   alt={`${study.heading} preview`}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
+                  className="object-contain object-right"
                 />
               </div>
               {/* Secondary phone/tablet image */}
               {study.images[1] && (
-                <div className="hidden sm:block absolute -bottom-4 -right-2 lg:-right-6 w-[40%] aspect-[3/4] rounded-xl overflow-hidden border-2 border-black/40 shadow-2xl">
+                <div className="hidden sm:block absolute -bottom-4 right-0 lg:right-2 xl:right-4 w-[40%] aspect-[3/4] rounded-xl overflow-hidden border-2 border-black/40 shadow-2xl">
                   <Image
                     src={study.images[1]}
                     alt={`${study.heading} mobile preview`}
                     fill
                     sizes="200px"
-                    className="object-cover"
+                    className="object-cover object-right"
                   />
                 </div>
               )}
