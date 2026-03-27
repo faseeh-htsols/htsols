@@ -232,7 +232,7 @@ const caseStudies: CaseStudy[] = [
       "Performance SEO",
     ],
     images: ["/services/web-one.webp", "/services/web-two.webp"],
-    accent: "marketing-1.png",
+    accent: "/marketing-1.png",
   },
   {
     logo: "/logo.webp",
@@ -248,7 +248,7 @@ const caseStudies: CaseStudy[] = [
       "Performance SEO",
     ],
     images: ["/services/web-two.webp", "/services/web-one.webp"],
-    accent: "marketing-2.webp",
+    accent: "/marketing-2.webp",
   },
   {
     logo: "/logo.webp",
@@ -264,7 +264,7 @@ const caseStudies: CaseStudy[] = [
       "Performance SEO",
     ],
     images: ["/services/web-one.webp", "/services/web-two.webp"],
-    accent: "from-[#0a2a2a] to-[#0f3d3d]",
+    accent: "/marketing-3.webp",
   },
 ];
 export default function TabsPort() {
@@ -424,11 +424,10 @@ function MarketingCaseStudies({ studies }: { studies: CaseStudy[] }) {
       {studies.map((study, i) => (
         <div
           key={`${study.company}-${i}`}
-          className={`relative rounded-3xl overflow-hidden border border-white/8 bg-[url(${study.accent})] p-8 md:p-10 lg:p-14`}>
+          className={`relative rounded-3xl overflow-hidden border border-white/8 bg-cover bg-center p-8 md:p-10 lg:p-14`}
+          style={{ backgroundImage: `url(${study.accent})` }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            {/* Left — Text */}
             <div className="space-y-6">
-              {/* Company logo + name */}
               <div className="flex items-center gap-3">
                 <div className="relative h-9 w-9 rounded-full overflow-hidden border border-white/15">
                   <Image
