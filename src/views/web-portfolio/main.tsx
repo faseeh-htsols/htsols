@@ -1,4 +1,5 @@
 import Banner from "./banner";
+import TabsPort from "./tabs-port";
 import PortfolioSection from "./portfolio-section";
 import ShowcaseSection from "./showcase-section";
 import TestimonialsIntro from "./testimonials-intro";
@@ -10,10 +11,7 @@ const WebPortfolioMain = () => {
   return (
     <>
       <Banner />
-      <PortfolioSection />
-      <ShowcaseSection />
-      <TestimonialsIntro />
-      <ProcessSection />
+      <TabsPort />
       <Contact />
       <LogosMarquee />
     </>
