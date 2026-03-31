@@ -1,59 +1,34 @@
 "use client";
+
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
-import emailjs from "@emailjs/browser";
 import type { FormikHelpers } from "formik";
 import { useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
+import {
+  contactSchema as validationSchema,
+  type ContactFormValues,
+} from "@/lib/contact-form";
 
 gsap.registerPlugin(ScrollTrigger);
-const validationSchema = Yup.object({
-  firstName: Yup.string()
-    .min(2, "First name must be at least 2 characters")
-    .required("First name is required"),
-  lastName: Yup.string()
-    .min(2, "Last name must be at least 2 characters")
-    .required("Last name is required"),
-  city: Yup.string()
-    .min(2, "City/Area must be at least 2 characters")
-    .required("City/Area is required"),
-  email: Yup.string().email("Invalid email").required("Email is required"),
-  contactNumber: Yup.string()
-    .matches(/^[0-9]{10,15}$/, "Contact number must be 10–15 digits")
-    .required("Contact number is required"),
-  services: Yup.string().required("Please select a services"),
-  message: Yup.string()
-    .min(10, "Message must be at least 10 characters")
-    .required("Message is required"),
-});
-type FormValues = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  contactNumber: string;
-  services: string;
-  message: string;
-  city: string;
-};
+
 const ContactForm = () => {
   const scopeRef = useRef<HTMLElement | null>(null);
-  const formRef = useRef<HTMLFormElement | null>(null);
-  // 👇 for split text
   const headingSplitRef = useRef<HTMLHeadingElement | null>(null);
   const paraSplitRef = useRef<HTMLParagraphElement | null>(null);
   const iconWrapRef = useRef<HTMLDivElement | null>(null);
-  // 👇 for form fade
   const formWrapRef = useRef<HTMLDivElement | null>(null);
+
   const [isSending, setIsSending] = useState(false);
   const [popupOpen, setPopupOpen] = useState(false);
   const [popupType, setPopupType] = useState<"success" | "error">("success");
   const [popupMsg, setPopupMsg] = useState("");
+
   useGSAP(
     () => {
       const headingEl = headingSplitRef.current;
@@ -61,7 +36,6 @@ const ContactForm = () => {
       const formEl = formWrapRef.current;
       if (!headingEl || !paraEl || !formEl) return;
 
-      // Split into words
       const headingSplit = new SplitType(headingEl, { types: "words" });
       const paraSplit = new SplitType(paraEl, { types: "words" });
       const iconEl = iconWrapRef.current;
@@ -82,25 +56,23 @@ const ContactForm = () => {
               toggleActions: "play none none reverse",
               invalidateOnRefresh: true,
             },
-          },
+          }
         );
       }
-      // Make sure words can move independently
+
       gsap.set([headingSplit.words, paraSplit.words], {
         display: "inline-block",
         opacity: 0,
         y: 18,
       });
 
-      // Heading + para reveal by words on scroll
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: headingEl, // top block
+          trigger: headingEl,
           start: "top 80%",
           end: "bottom 55%",
           scrub: true,
           invalidateOnRefresh: true,
-          // markers: true,
         },
       });
 
@@ -119,10 +91,9 @@ const ContactForm = () => {
           ease: "power2.out",
           duration: 0.6,
         },
-        "-=0.25",
+        "-=0.25"
       );
 
-      // Form fade from bottom
       gsap.fromTo(
         formEl,
         { opacity: 0, y: 40 },
@@ -137,63 +108,68 @@ const ContactForm = () => {
             toggleActions: "play none none reverse",
             invalidateOnRefresh: true,
           },
-        },
+        }
       );
 
-      // ✅ cleanup SplitType DOM changes
       return () => {
         headingSplit.revert();
         paraSplit.revert();
       };
     },
-    { scope: scopeRef },
+    { scope: scopeRef }
   );
-  const sendEmail = (
-    values: FormValues,
-    formikHelpers: FormikHelpers<FormValues>,
+
+  const sendEmail = async (
+    values: ContactFormValues,
+    formikHelpers: FormikHelpers<ContactFormValues>
   ) => {
     setIsSending(true);
 
-    emailjs
-      .sendForm(
-        "service_4ls6ayf",
-        "template_1sux4xj",
-        formRef.current!,
-        "Mr3TWOsrrdm099Kef",
-      )
-      .then(
-        () => {
-          setIsSending(false);
-          setPopupType("success");
-          setPopupMsg(
-            "Thanks — we’ve received your message and will get back to you shortly.",
-          );
-          setPopupOpen(true);
-          formikHelpers.resetForm();
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        () => {
-          setIsSending(false);
-          setPopupType("error");
-          setPopupMsg("Failed to send message, please try again.");
-          setPopupOpen(true);
-        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data?.message || "Failed to send message.");
+      }
+
+      setPopupType("success");
+      setPopupMsg(
+        data?.message ||
+          "Thanks — we’ve received your message and will get back to you shortly."
       );
+      setPopupOpen(true);
+      formikHelpers.resetForm();
+    } catch (error) {
+      setPopupType("error");
+      setPopupMsg(
+        error instanceof Error
+          ? error.message
+          : "Failed to send message, please try again."
+      );
+      setPopupOpen(true);
+    } finally {
+      setIsSending(false);
+      formikHelpers.setSubmitting(false);
+    }
   };
+
   const closePopup = () => setPopupOpen(false);
+
   return (
     <section
       ref={scopeRef}
-      className="bg-[url(/get-in-touch-bg.webp)] bg-cover relative py-20  lg:py-40 ">
-      {/* <div
-        className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
-           bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
-          "
-      ></div> */}
-      {/* <div className="pointer-events-none h-full w-full absolute inset-x-0 top-0 flex justify-center">
-        <div className="w-full h-full  max-w-[1600px] bg-gradient-to-r from-transparent via-[#00A1A5] to-transparent" />
-      </div> */}
+      className="bg-[url(/get-in-touch-bg.webp)] bg-cover relative py-20 lg:py-40"
+    >
       <Container>
-        <div className="relative  flex gap-8 flex-col max-w-5xl mx-auto">
+        <div className="relative flex gap-8 flex-col max-w-5xl mx-auto">
           <div className="flex justify-center" ref={iconWrapRef}>
             <Image
               src={"/chat.svg"}
@@ -207,6 +183,7 @@ const ContactForm = () => {
           <HeadingTwo ref={headingSplitRef} className="text-center">
             Let’s have a chat
           </HeadingTwo>
+
           <p ref={paraSplitRef} className="text-white text-[20px] text-center">
             HT-Solutions provides you Website Designing, Web Development, SEO
             Services, Graphic Designing, Mobile Application Development Video
@@ -214,8 +191,9 @@ const ContactForm = () => {
             Lahore, Pakistan.
           </p>
         </div>
+
         <div className="relative mt-8" ref={formWrapRef}>
-          <Formik
+          <Formik<ContactFormValues>
             initialValues={{
               firstName: "",
               lastName: "",
@@ -226,9 +204,10 @@ const ContactForm = () => {
               city: "",
             }}
             validationSchema={validationSchema}
-            onSubmit={sendEmail}>
+            onSubmit={sendEmail}
+          >
             {({ isSubmitting }) => (
-              <Form ref={formRef}>
+              <Form>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-5">
                   <div>
                     <Field
@@ -243,6 +222,7 @@ const ContactForm = () => {
                       className="text-red-600 text-xs mt-2"
                     />
                   </div>
+
                   <div>
                     <Field
                       type="text"
@@ -257,10 +237,11 @@ const ContactForm = () => {
                     />
                   </div>
                 </div>
+
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-5">
                   <div>
                     <Field
-                      type="text"
+                      type="tel"
                       name="contactNumber"
                       className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                       placeholder="Contact No"
@@ -271,10 +252,11 @@ const ContactForm = () => {
                       className="text-red-600 text-xs mt-2"
                     />
                   </div>
+
                   <div>
                     <Field
                       name="email"
-                      type="text"
+                      type="email"
                       className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                       placeholder="Email Address"
                     />
@@ -285,6 +267,7 @@ const ContactForm = () => {
                     />
                   </div>
                 </div>
+
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-5">
                   <div>
                     <Field
@@ -299,32 +282,36 @@ const ContactForm = () => {
                       className="text-red-600 text-xs mt-2"
                     />
                   </div>
+
                   <div>
                     <Field
                       as="select"
                       name="services"
-                      id=""
-                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-sm px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white">
-                      <option value=" web dev" className="bg-white text-black">
+                      className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-sm px-4 backdrop:backdrop-blur-2xl text-white"
+                    >
+                      <option value="" disabled className="bg-white text-black">
+                        Select a service
+                      </option>
+                      <option value="web dev" className="bg-white text-black">
                         web dev
                       </option>
                       <option
-                        value=" cgi / vfx /3d animations"
-                        className="bg-white text-black">
-                        {" "}
-                        cgi / vfx /3d animations{" "}
+                        value="cgi / vfx / 3d animations"
+                        className="bg-white text-black"
+                      >
+                        cgi / vfx / 3d animations
                       </option>
                       <option
                         value="staff augmentation"
-                        className="bg-white text-black">
-                        {" "}
-                        staff augmentation{" "}
+                        className="bg-white text-black"
+                      >
+                        staff augmentation
                       </option>
                       <option
                         value="Complete digital transformation"
-                        className="bg-white text-black">
-                        {" "}
-                        Complete digital transformation{" "}
+                        className="bg-white text-black"
+                      >
+                        Complete digital transformation
                       </option>
                     </Field>
                     <ErrorMessage
@@ -334,31 +321,36 @@ const ContactForm = () => {
                     />
                   </div>
                 </div>
+
                 <div className="mb-3">
                   <Field
                     as="textarea"
                     name="message"
                     className="h-28 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 py-3 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
-                    placeholder="Enquiry  details"
-                    id=""></Field>
+                    placeholder="Enquiry details"
+                  />
                   <ErrorMessage
                     name="message"
                     component="p"
                     className="text-red-600 text-xs mt-2"
                   />
                 </div>
+
                 <div className="flex mt-6 justify-center">
                   <button
                     type="submit"
                     disabled={isSubmitting || isSending}
-                    className="inline-flex cursor-pointer items-center bg-white gap-2 px-6 py-3 text-sm text-primary font-medium uppercase rounded-full tracking-wider transition-all duration-300 border">
+                    className="inline-flex cursor-pointer items-center bg-white gap-2 px-6 py-3 text-sm text-primary font-medium uppercase rounded-full tracking-wider transition-all duration-300 border disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
                     {isSending ? "Sending..." : "Send Message"}
+
                     <svg
                       width="34"
                       height="34"
                       viewBox="0 0 34 34"
                       fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
                       <g clipPath="url(#clip0_397_144)">
                         <path
                           fillRule="evenodd"
@@ -374,28 +366,6 @@ const ContactForm = () => {
                         />
                       </g>
                       <defs>
-                        <linearGradient
-                          id="paint0_linear_397_144"
-                          x1="5.56991"
-                          y1="23.5995"
-                          x2="18.8282"
-                          y2="10.3413"
-                          gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#075B65" />
-                          <stop offset="0.370192" stopColor="#00838A" />
-                          <stop offset="0.8125" stopColor="#328A99" />
-                        </linearGradient>
-                        <linearGradient
-                          id="paint1_linear_397_144"
-                          x1="12.464"
-                          y1="16.7022"
-                          x2="18.8279"
-                          y2="10.3383"
-                          gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#075B65" />
-                          <stop offset="0.370192" stopColor="#00838A" />
-                          <stop offset="0.8125" stopColor="#328A99" />
-                        </linearGradient>
                         <clipPath id="clip0_397_144">
                           <rect
                             width="24"
@@ -413,6 +383,7 @@ const ContactForm = () => {
           </Formik>
         </div>
       </Container>
+
       {popupOpen && (
         <div className="fixed inset-0 z-9999 flex items-center justify-center px-4">
           <button
@@ -427,7 +398,8 @@ const ContactForm = () => {
                 <p
                   className={`text-lg font-semibold ${
                     popupType === "success" ? "text-green-700" : "text-red-700"
-                  }`}>
+                  }`}
+                >
                   {popupType === "success"
                     ? "Message sent"
                     : "Something went wrong"}
@@ -439,7 +411,8 @@ const ContactForm = () => {
                 type="button"
                 aria-label="Close popup"
                 onClick={closePopup}
-                className="w-9 h-9 flex items-center justify-center rounded-md border border-gray-200 hover:bg-gray-50 text-black">
+                className="w-9 h-9 flex items-center justify-center rounded-md border border-gray-200 hover:bg-gray-50 text-black"
+              >
                 <span className="text-xl leading-none">&times;</span>
               </button>
             </div>
@@ -448,7 +421,8 @@ const ContactForm = () => {
               <button
                 type="button"
                 onClick={closePopup}
-                className="px-5 py-2 rounded-full bg-secondary text-black font-medium">
+                className="px-5 py-2 rounded-full bg-secondary text-black font-medium"
+              >
                 OK
               </button>
             </div>
