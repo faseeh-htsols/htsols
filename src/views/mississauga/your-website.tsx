@@ -3,21 +3,30 @@ import HeadingTwo from "@/components/ui/heading-two";
 import Container from "@/components/ui/container";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
-const YourWebsite = () => {
+
+interface YourWebsiteData {
+    data: {
+        title: string;
+        highLight: string;
+        para: string;
+        cardIcon: string;
+        cardHeading: string;
+        cardPara: string;
+    }
+}
+
+const YourWebsite = ({ data }: YourWebsiteData) => {
     return (
         <section className="relative bg-black py-20 overflow-hidden">
             <Container>
                 <div className="">
                     <div className="text-center mb-10">
                         <HeadingTwo className="text-center mb-3">
-                            Your Website Is Your Hardest-Working Employee — <span className="bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">Is It Pulling Its Weight?</span>
+                            {data.title} {" "}
+                            <span className="bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">{data.highLight}</span>
                         </HeadingTwo>
-                        <p className="space-y-4 text-white/90 text-sm sm:text-base leading-relaxed mb-8">
-                            When a potential customer in Mississauga searches for your service, they're going to land somewhere. If that somewhere isn't a fast, clear, trustworthy website, they'll click away and hire the competitor who showed up better.
-                            <br /><br />
-                            A professionally built website doesn't just look good — it works. It loads in seconds, answers the right questions immediately, guides visitors to take action, and supports every other piece of your marketing. SEO, paid ads, social media — all of it performs better when the website underneath is solid.
-                            <br /><br />
-                            That's exactly what we build.
+                        <p className="space-y-4 text-white/90 text-sm sm:text-base leading-relaxed mb-8"
+                            dangerouslySetInnerHTML={{ __html: data.para }}>
                         </p>
                     </div>
                     <div>
@@ -30,7 +39,7 @@ const YourWebsite = () => {
                                         <div className="flex flex-col  gap-5 w-full">
                                             <div className="flex justify-end items-end w-full">
                                                 <Image
-                                                    src="/location-quote.svg"
+                                                    src={data.cardIcon}
                                                     alt="quote"
                                                     width={44}
                                                     height={44}
@@ -39,10 +48,10 @@ const YourWebsite = () => {
                                             </div>
                                             <div className="flex flex-col items-start justify-start gap-6 w-full md:max-w-[90%]">
                                                 <p className="text-white uppercase font-primary font-semibold md:text-[18px] leading-[1.35] text-start">
-                                                    "A website that looks pretty but doesn't rank is just a digital business card in a drawer. We build tools that actually grow businesses."
+                                                    {data.cardHeading}
                                                 </p>
                                                 <p className=" uppercase tracking-widest bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent inline-block font-primary font-semibold">
-                                                    — HTSOL Strategy Team
+                                                    {data.cardPara}
                                                 </p>
                                             </div>
                                         </div>
