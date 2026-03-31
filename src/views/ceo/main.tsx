@@ -1,3 +1,5 @@
+import { CEO_FAQS } from "@/constants";
+import FAQSection from "../home/FAQSection";
 import LogosMarquee from "../home/logos-marquee";
 import AboutMe from "./about-me";
 import Achievements from "./achievements";
@@ -25,6 +27,7 @@ const CeoMain = () => {
       <BlogCurate />
       {/* <LinkedInPosts /> */}
       <ViewOnInstgram />
+      <FAQSection faqs={CEO_FAQS} />
       <LogosMarquee />
     </>
   );

@@ -342,42 +342,43 @@ export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
   },
 ];
 
-export const DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
-  {
-    title: "Search Engine Optimization (SEO)",
-    icon: "/services/tab-icon.svg",
-    para: `Search engine optimization forms the foundation of long-term online visibility. When your website appears in relevant search results, it becomes easier for potential customers to find and trust your business.
+export const DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION: AccordionItemType[] =
+  [
+    {
+      title: "Search Engine Optimization (SEO)",
+      icon: "/services/tab-icon.svg",
+      para: `Search engine optimization forms the foundation of long-term online visibility. When your website appears in relevant search results, it becomes easier for potential customers to find and trust your business.
     <br/><br/>
     Our <b>SEO specialists</b> focus on improving your website’s presence on search engines such as Google so your business can attract users who are actively searching for your services.
     <br/><br/>
     Our SEO services include:
     `,
-    lists: [
-      {
-        para: `Keyword research and search intent analysis`,
-      },
-      {
-        para: `On-page SEO optimization`,
-      },
-      {
-        para: `Technical SEO improvements`,
-      },
-      {
-        para: `Website performance optimization`,
-      },
-      {
-        para: `Link building and domain authority development`,
-      },
-      {
-        para: `Local SEO strategies for regional businesses`,
-      },
-    ],
-    botPara: `By improving website structure, content relevance, and technical performance, our team helps your business strengthen search visibility and generate consistent organic traffic over time.`,
-  },
-  {
-    title: "Pay-Per-Click Advertising (PPC)",
-    icon: "/services/tab-icon.svg",
-    para: `Pay-per-click advertising allows businesses to reach targeted audiences quickly through platforms such as <b>Google Ads</b> and <b>Microsoft Ads.</b>
+      lists: [
+        {
+          para: `Keyword research and search intent analysis`,
+        },
+        {
+          para: `On-page SEO optimization`,
+        },
+        {
+          para: `Technical SEO improvements`,
+        },
+        {
+          para: `Website performance optimization`,
+        },
+        {
+          para: `Link building and domain authority development`,
+        },
+        {
+          para: `Local SEO strategies for regional businesses`,
+        },
+      ],
+      botPara: `By improving website structure, content relevance, and technical performance, our team helps your business strengthen search visibility and generate consistent organic traffic over time.`,
+    },
+    {
+      title: "Pay-Per-Click Advertising (PPC)",
+      icon: "/services/tab-icon.svg",
+      para: `Pay-per-click advertising allows businesses to reach targeted audiences quickly through platforms such as <b>Google Ads</b> and <b>Microsoft Ads.</b>
     <br/><br/>
     When campaigns are planned correctly, PPC can help businesses generate qualified leads while maintaining control over advertising budgets.
     <br/><br/>
@@ -385,224 +386,224 @@ export const DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION: AccordionItemType[] =
     <br/><br/>
     Our PPC services include:
     `,
-    lists: [
-      {
-        para: `Campaign strategy development`,
-      },
-      {
-        para: `Keyword targeting and audience segmentation`,
-      },
-      {
-        para: `Landing page optimization`,
-      },
-      {
-        para: `Conversion tracking setup`,
-      },
-      {
-        para: `Continuous campaign monitoring and optimization`,
-      },
-    ],
-    botPara: `Through ongoing performance analysis and careful targeting, our team helps businesses generate high-quality leads through paid advertising.`,
-  },
-  {
-    title: "Social Media Marketing",
-    icon: "/services/tab-icon.svg",
-    para: `Social media plays an important role in how businesses build relationships with their audiences. It allows companies to communicate directly with customers while strengthening brand recognition.
+      lists: [
+        {
+          para: `Campaign strategy development`,
+        },
+        {
+          para: `Keyword targeting and audience segmentation`,
+        },
+        {
+          para: `Landing page optimization`,
+        },
+        {
+          para: `Conversion tracking setup`,
+        },
+        {
+          para: `Continuous campaign monitoring and optimization`,
+        },
+      ],
+      botPara: `Through ongoing performance analysis and careful targeting, our team helps businesses generate high-quality leads through paid advertising.`,
+    },
+    {
+      title: "Social Media Marketing",
+      icon: "/services/tab-icon.svg",
+      para: `Social media plays an important role in how businesses build relationships with their audiences. It allows companies to communicate directly with customers while strengthening brand recognition.
     <br/><br/>
     Our <b>social media marketing</b> team helps businesses connect with their audience through thoughtful content and consistent engagement.
     <br/><br/>
     Our services include:
     `,
-    lists: [
-      {
-        para: `Social media strategy development`,
-      },
-      {
-        para: `Content planning and creation`,
-      },
-      {
-        para: `Paid social media advertising campaigns`,
-      },
-      {
-        title: `Community engagement and brand monitoring`,
-        para: ``,
-      },
-      {
-        para: `Performance analytics and reporting`,
-      },
-    ],
-    botPara: `With the right strategy in place, social media can strengthen brand awareness and support long-term customer loyalty.`,
-  },
-  {
-    title: "Social Media Management",
-    icon: "/services/tab-icon.svg",
-    para: `Effective social media management requires more than occasional posts. It requires strategic planning, creative content and consistent engagement.
+      lists: [
+        {
+          para: `Social media strategy development`,
+        },
+        {
+          para: `Content planning and creation`,
+        },
+        {
+          para: `Paid social media advertising campaigns`,
+        },
+        {
+          title: `Community engagement and brand monitoring`,
+          para: ``,
+        },
+        {
+          para: `Performance analytics and reporting`,
+        },
+      ],
+      botPara: `With the right strategy in place, social media can strengthen brand awareness and support long-term customer loyalty.`,
+    },
+    {
+      title: "Social Media Management",
+      icon: "/services/tab-icon.svg",
+      para: `Effective social media management requires more than occasional posts. It requires strategic planning, creative content and consistent engagement.
     <br/><br/>
     At HTSOL, we develop comprehensive social media management strategies designed to grow your audience and strengthen your brand identity.
     <br/><br/>
     Our social media management services include:
     `,
-    lists: [
-      {
-        para: `Social media strategy and planning`,
-      },
-      {
-        para: `Content creation and creative design`,
-      },
-      {
-        para: `Community management and audience engagement`,
-      },
-      {
-        para: `Influencer marketing support`,
-      },
-      {
-        para: `Paid social media campaign management`,
-      },
-      {
-        para: `Social media analytics and performance reporting`,
-      },
-    ],
-    botPara: `By combining strategic planning with engaging content, we help businesses build strong relationships with their audiences while increasing visibility across social platforms.`,
-  },
-  {
-    title: "Digital Marketing Strategy",
-    icon: "/services/tab-icon.svg",
-    para: `Successful digital marketing begins with a clear strategy. Without a well-defined plan, marketing campaigns often lack direction and measurable outcomes.
+      lists: [
+        {
+          para: `Social media strategy and planning`,
+        },
+        {
+          para: `Content creation and creative design`,
+        },
+        {
+          para: `Community management and audience engagement`,
+        },
+        {
+          para: `Influencer marketing support`,
+        },
+        {
+          para: `Paid social media campaign management`,
+        },
+        {
+          para: `Social media analytics and performance reporting`,
+        },
+      ],
+      botPara: `By combining strategic planning with engaging content, we help businesses build strong relationships with their audiences while increasing visibility across social platforms.`,
+    },
+    {
+      title: "Digital Marketing Strategy",
+      icon: "/services/tab-icon.svg",
+      para: `Successful digital marketing begins with a clear strategy. Without a well-defined plan, marketing campaigns often lack direction and measurable outcomes.
     <br/><br/>
     HTSOL develops comprehensive digital marketing strategies based on research, analytics and industry insights. We analyze your brand positioning, competitive landscape and target audience to determine the most effective marketing channels.
     <br/><br/>
     Our strategy development includes:
     `,
-    lists: [
-      {
-        para: `Brand and market analysis`,
-      },
-      {
-        para: `Competitive landscape evaluation`,
-      },
-      {
-        para: `Customer journey mapping`,
-      },
-      {
-        para: `Channel strategy development`,
-      },
-      {
-        para: `Media planning and budget allocation`,
-      },
-      {
-        para: `Campaign performance frameworks`,
-      },
-    ],
-    botPara: `This strategic foundation ensures that every marketing initiative supports your long-term business objectives.`,
-  },
-  {
-    title: "Affiliate Marketing",
-    icon: "/services/tab-icon.svg",
-    para: `Affiliate marketing allows businesses to expand their reach and increase sales through trusted partners and publishers.
+      lists: [
+        {
+          para: `Brand and market analysis`,
+        },
+        {
+          para: `Competitive landscape evaluation`,
+        },
+        {
+          para: `Customer journey mapping`,
+        },
+        {
+          para: `Channel strategy development`,
+        },
+        {
+          para: `Media planning and budget allocation`,
+        },
+        {
+          para: `Campaign performance frameworks`,
+        },
+      ],
+      botPara: `This strategic foundation ensures that every marketing initiative supports your long-term business objectives.`,
+    },
+    {
+      title: "Affiliate Marketing",
+      icon: "/services/tab-icon.svg",
+      para: `Affiliate marketing allows businesses to expand their reach and increase sales through trusted partners and publishers.
     <br/><br/>
     HTSOL manages affiliate marketing programs that connect your brand with relevant websites, review platforms and content creators who promote your products or services.
     <br/><br/>
     Our affiliate marketing services include:
     `,
-    lists: [
-      {
-        para: `Affiliate program strategy and setup`,
-      },
-      {
-        para: `Partner recruitment and relationship management`,
-      },
-      {
-        para: `Affiliate network coordination`,
-      },
-      {
-        para: `Commission structure planning`,
-      },
-      {
-        para: `Campaign monitoring and fraud prevention`,
-      },
-      {
-        para: `Performance tracking and optimization`,
-      },
-    ],
-    botPara: `Affiliate marketing operates on a performance-based model, allowing businesses to pay only when sales or conversions occur.`,
-  },
-  {
-    title: "Content Marketing",
-    icon: "/services/tab-icon.svg",
-    para: `Content marketing helps businesses educate their audience while building trust and improving search engine visibility.
+      lists: [
+        {
+          para: `Affiliate program strategy and setup`,
+        },
+        {
+          para: `Partner recruitment and relationship management`,
+        },
+        {
+          para: `Affiliate network coordination`,
+        },
+        {
+          para: `Commission structure planning`,
+        },
+        {
+          para: `Campaign monitoring and fraud prevention`,
+        },
+        {
+          para: `Performance tracking and optimization`,
+        },
+      ],
+      botPara: `Affiliate marketing operates on a performance-based model, allowing businesses to pay only when sales or conversions occur.`,
+    },
+    {
+      title: "Content Marketing",
+      icon: "/services/tab-icon.svg",
+      para: `Content marketing helps businesses educate their audience while building trust and improving search engine visibility.
     <br/><br/>
     Well-written content answers real questions and helps potential customers understand how your services can support their needs.
     <br/><br/>
     Our <b>content marketing</b> services include:`,
-    lists: [
-      {
-        para: `Blog writing and article development`,
-      },
-      {
-        para: `Website content creation`,
-      },
-      {
-        para: `SEO content optimization`,
-      },
-      {
-        para: `Industry research and thought leadership content`,
-      },
-      {
-        para: `Local area pages for local seo`,
-      },
-    ],
-    botPara: `When content is created strategically, it positions your business as a knowledgeable and trustworthy resource within your industry.`,
-  },
-  {
-    title: "Email Marketing",
-    icon: "/services/tab-icon.svg",
-    para: `Email marketing remains one of the most effective ways to maintain communication with customers and nurture potential leads.
+      lists: [
+        {
+          para: `Blog writing and article development`,
+        },
+        {
+          para: `Website content creation`,
+        },
+        {
+          para: `SEO content optimization`,
+        },
+        {
+          para: `Industry research and thought leadership content`,
+        },
+        {
+          para: `Local area pages for local seo`,
+        },
+      ],
+      botPara: `When content is created strategically, it positions your business as a knowledgeable and trustworthy resource within your industry.`,
+    },
+    {
+      title: "Email Marketing",
+      icon: "/services/tab-icon.svg",
+      para: `Email marketing remains one of the most effective ways to maintain communication with customers and nurture potential leads.
     <br/><br/>
     A thoughtful email strategy helps businesses share useful information, strengthen customer relationships, and encourage repeat engagement.
     <br/><br/>
     Our <b>email marketing services</b> include:`,
-    lists: [
-      {
-        para: `Email marketing strategy and campaign planning`,
-      },
-      {
-        para: `Newsletter design and content creation`,
-      },
-      {
-        para: `Audience segmentation and marketing automation`,
-      },
-      {
-        para: `Campaign performance analysis and reporting`,
-      },
-    ],
-    botPara: `With consistent messaging and careful audience targeting, email campaigns can support long-term customer retention.`,
-  },
-  {
-    title: "Conversion Rate Optimization (CRO)",
-    icon: "/services/tab-icon.svg",
-    para: `Driving traffic to your website is only one part of digital marketing. Turning visitors into leads and customers is equally important.
+      lists: [
+        {
+          para: `Email marketing strategy and campaign planning`,
+        },
+        {
+          para: `Newsletter design and content creation`,
+        },
+        {
+          para: `Audience segmentation and marketing automation`,
+        },
+        {
+          para: `Campaign performance analysis and reporting`,
+        },
+      ],
+      botPara: `With consistent messaging and careful audience targeting, email campaigns can support long-term customer retention.`,
+    },
+    {
+      title: "Conversion Rate Optimization (CRO)",
+      icon: "/services/tab-icon.svg",
+      para: `Driving traffic to your website is only one part of digital marketing. Turning visitors into leads and customers is equally important.
     <br/><br/>
     <b>Conversion rate optimization (CRO)</b> focuses on improving the elements of your website that influence user decisions.
     <br/><br/>
     Our CRO services include:
     `,
-    lists: [
-      {
-        para: `Landing page optimization`,
-      },
-      {
-        para: `A/B testing and performance analysis`,
-      },
-      {
-        para: `User behaviour tracking and insights`,
-      },
-      {
-        para: `Funnel optimization`,
-      },
-    ],
-    botPara: `Even small improvements to conversion rates can significantly improve the overall performance of your marketing strategy.`,
-  },
-];
+      lists: [
+        {
+          para: `Landing page optimization`,
+        },
+        {
+          para: `A/B testing and performance analysis`,
+        },
+        {
+          para: `User behaviour tracking and insights`,
+        },
+        {
+          para: `Funnel optimization`,
+        },
+      ],
+      botPara: `Even small improvements to conversion rates can significantly improve the overall performance of your marketing strategy.`,
+    },
+  ];
 
 export const SERVICES_WHY = [
   {
@@ -662,14 +663,12 @@ export const SERVICES_FAQS = [
       "In fact, small and mid-sized businesses often see the biggest benefits. Automation and better workflows save time, cut costs, and enhance the customer experience right away.",
   },
   {
-    question:
-      "How can CGI help my business generate more sales?",
+    question: "How can CGI help my business generate more sales?",
     answer:
       "CGI helps your customers visualize products, spaces, or concepts before they commit to a purchase. This boosts confidence, speeds up decision-making, and often leads to higher conversion rates, especially in real estate, manufacturing, and eCommerce.",
   },
   {
-    question:
-      "Will switching to a new website affect my Google rankings?",
+    question: "Will switching to a new website affect my Google rankings?",
     answer:
       "When done right, a website redesign can actually protect and sometimes improve your rankings. We ensure proper redirects, technical SEO, and structure to keep your traffic intact during the migration.",
   },
@@ -680,7 +679,8 @@ export const SERVICES_FAQS = [
       "We track the key metrics that matter: qualified leads, cost per acquisition, conversion rates, and revenue trends, not just impressions or clicks. You’ll always get clear, honest reporting.",
   },
   {
-    question: "Can you support businesses operating in multiple cities or provinces?",
+    question:
+      "Can you support businesses operating in multiple cities or provinces?",
     answer:
       "Yes, we create tailored strategies for each region while keeping your brand consistent. This is particularly important for franchises and multi-location businesses across Canada.",
   },
@@ -693,18 +693,19 @@ export const SERVICES_FAQS = [
 
 export const DIGITAL_MARKETING_FAQS = [
   {
-    question:
-      "Why am I getting website traffic but no enquiries or calls?",
+    question: "Why am I getting website traffic but no enquiries or calls?",
     answer:
       "This usually means the issue is not traffic volume, it is conversion friction. Review your offer clarity, contact form length, page speed, and call-to-action placement, and make sure the traffic matches the service you want to sell.",
   },
   {
-    question: "How long should I wait before deciding a digital marketing campaign is not working?",
+    question:
+      "How long should I wait before deciding a digital marketing campaign is not working?",
     answer:
       "Do not judge too early, especially when tracking and targeting are still being refined. Wait until you have enough data, then assess lead quality, conversion rate, and cost per lead, not only clicks.",
   },
   {
-    question: "Should I fix my website first or start ads first if I need leads quickly?",
+    question:
+      "Should I fix my website first or start ads first if I need leads quickly?",
     answer:
       "If your website is difficult to use, ads may send paid traffic to a page that does not convert well. A practical option is to run ads to one strong landing page while improving the rest of the site in stages.",
   },
@@ -739,7 +740,8 @@ export const DIGITAL_MARKETING_FAQS = [
       "Usually, no. Smaller budgets often perform better when focused on one or two channels first, then expanded after you identify which channels bring qualified leads.",
   },
   {
-    question: "Why did my local ad leads suddenly drop after changes to my business profile or account?",
+    question:
+      "Why did my local ad leads suddenly drop after changes to my business profile or account?",
     answer:
       "Lead volume can drop after profile verification issues, mismatched business details, or account compliance changes. Check your Google Business Profile and ad account settings to confirm everything is accurate and active.",
   },
@@ -776,18 +778,19 @@ export const SEO_FAQS = [
       "Search rankings fluctuate due to algorithm updates, competitors updating content, or indexing changes. If your site lacks authority or consistent optimisation, it can temporarily rank and then drop. A stable SEO strategy helps maintain consistent visibility instead of short spikes.",
   },
   {
-    question: "I get website traffic but no calls or leads. What’s going wrong?",
+    question:
+      "I get website traffic but no calls or leads. What’s going wrong?",
     answer:
       "Traffic alone does not guarantee conversions. Often the keywords attract the wrong audience or the page does not answer the visitor’s intent clearly. Improving content relevance, layout, and calls-to-action usually fixes this issue.",
   },
   {
-    question: "My competitors rank higher even though their website looks worse than mine. Why?",
+    question:
+      "My competitors rank higher even though their website looks worse than mine. Why?",
     answer:
       "Google ranks relevance and trust, not design quality. Older domains, stronger backlinks, and better keyword targeting often outweigh visual appearance. SEO focuses on credibility signals search engines can measure.",
   },
   {
-    question:
-      "Does changing my website design hurt my Google rankings?",
+    question: "Does changing my website design hurt my Google rankings?",
     answer:
       "It can if URLs, content structure, or internal links change without proper redirects. Many redesigns accidentally remove SEO value built over years. Careful migration planning protects rankings during updates.",
   },
@@ -798,25 +801,23 @@ export const SEO_FAQS = [
       "Local rankings depend on proximity, relevance, and local signals like reviews and location pages. Without targeted optimisation for each service area, Google limits visibility outside your immediate location.",
   },
   {
-    question:
-      "Can negative reviews affect my search ranking?",
+    question: "Can negative reviews affect my search ranking?",
     answer:
       "Yes, indirectly. Poor reviews reduce trust and lower engagement rates, which can impact local visibility. Responding professionally and improving review volume often improves both reputation and rankings.",
   },
   {
-    question:
-      "How long does it take to recover from a ranking drop?",
+    question: "How long does it take to recover from a ranking drop?",
     answer:
       "Recovery depends on the cause. Technical issues may take weeks after fixes, while authority losses can take months. Consistent optimisation and monitoring help prevent repeated drops.",
   },
   {
-    question:
-      "Why does my paid advertising work but SEO doesn’t?",
+    question: "Why does my paid advertising work but SEO doesn’t?",
     answer:
       "Paid ads appear instantly because you pay for placement. SEO requires proving relevance and trust over time. Once established, organic traffic continues without ongoing ad spend.",
   },
   {
-    question: "Do I need different pages for different Canadian cities I serve?",
+    question:
+      "Do I need different pages for different Canadian cities I serve?",
     answer:
       "Usually yes. Google prefers location-specific pages that clearly explain services for each area. A single generic page rarely ranks across multiple cities competitively.",
   },
@@ -853,14 +854,12 @@ export const WEB_DEV_FAQS = [
       "Yes, it can if URLs, content, internal links, or tracking change without a plan. A proper migration approach protects key pages, redirects, and measurement so you can recover faster.",
   },
   {
-    question:
-      "Why is my current site slow even though it is not \"big\"?",
+    question: 'Why is my current site slow even though it is not "big"?',
     answer:
       "Common causes are heavy images, too many scripts, poorly built themes or plugins, and weak hosting. A performance audit can identify the biggest bottleneck instead of guessing.",
   },
   {
-    question:
-      "Do I need to write all the website copy myself before we start?",
+    question: "Do I need to write all the website copy myself before we start?",
     answer:
       "Not always. Many businesses start with existing pages, notes, and competitor examples, then refine messaging during the project so the final copy sounds clear and credible.",
   },
@@ -876,8 +875,7 @@ export const WEB_DEV_FAQS = [
       "It depends on how you manage products, payments, shipping, and reporting. The right choice is the one your team can run reliably without constant developer help.",
   },
   {
-    question:
-      "Will a new website automatically bring in more leads?",
+    question: "Will a new website automatically bring in more leads?",
     answer:
       "A new site helps, but results usually come from matching the site to intent, improving offer clarity, and tracking what visitors do. Without measurement, it is hard to know what is working.",
   },
@@ -930,39 +928,39 @@ export const TEAM = [
 ];
 export const CEO_ACHIEVEMENTS = [
   {
-    number: " 150%",
-    name: "Lead Growth",
-    para: "Engineered high-performance apps that turn traffic into customers.",
+    number: "8+",
+    name: "YEARS OF EXPERIENCE",
+    para: "From full-stack development to digital strategy — building and growing digital products since 2016.",
   },
   {
-    number: "40%",
-    name: "Faster Launch",
-    para: "Rapid MVP development to get your SaaS to market ahead of schedule.",
+    number: "100+",
+    name: "PROJECTS DELIVERED",
+    para: "Websites, SaaS platforms, custom CRMs, and marketing campaigns across healthcare, e-commerce, and professional services.",
   },
   {
-    number: "7+",
-    name: "Years Scalability",
-    para: "Proven full-stack expertise in building products that grow with you.",
+    number: "5+",
+    name: "COUNTRIES SERVED",
+    para: "Canada, USA, UK, UAE, and beyond — building digital solutions for clients who expect results, not excuses.",
   },
 ];
 export const WHY_HIRE_ME_CEO = [
   {
     // icon: "/ceo/full-stack-architecture.json",
     icon: "/services/why-icon-1.svg",
-    heading: "Scalable Full-Stack Architecture",
-    para: "I lead the development of robust ecosystems using Next.js and Node.js, ensuring your platform is engineered to handle massive growth while maintaining peak performance.",
+    heading: "HEALTHCARE & DENTAL GROWTH",
+    para: " I specialize in helping dental clinics, medical practices, and mental health providers build digital systems that attract the right patients and convert them — not just look good online. From high-converting websites to custom booking systems and local SEO, I know what actually moves the needle in healthcare.",
   },
   {
     // icon: "/ceo/strategic-custom-solutions.json",
     icon: "/services/why-icon-2.svg",
-    heading: "Strategic Custom Solutions",
-    para: "By combining TypeScript and Express.js, I translate complex business requirements into secure, high-speed software solutions that drive measurable ROI.",
+    heading: "AGENCY WHITE LABEL PARTNER",
+    para: "Marketing agencies bring me in when they need delivery capacity they can trust. I work as a silent execution partner — building websites, platforms, and marketing systems under your brand, on your timelines, with full NDA protection. Your clients get enterprise-quality work. Your agency gets the credit.",
   },
   {
     // icon: "/ceo/cutting-edge.json",
     icon: "/services/why-icon-3.svg",
-    heading: "Cutting-Edge User Experiences",
-    para: "I leverage Three.js and React to build immersive, future-proof interfaces that set your brand apart and keep you ahead of the digital competition.",
+    heading: "STRATEGY BACKED BY TECHNICAL DEPTH",
+    para: "I've built full-stack MERN applications, custom CRMs, SaaS platforms, and AI-integrated systems from scratch. That technical foundation means I don't just recommend what to build — I understand how to build it, what it costs, and how long it actually takes. When I give you a strategy, I can execute it.",
   },
 ];
 
@@ -1349,7 +1347,6 @@ export const MISSISSAUGA_BANNER = {
   firstBtnLink: "/contact-us",
   secondBtnText: "View Our Work",
   secondBtnLink: "/",
-
 };
 
 export const MISSISSAUGA_WEBSITE = {
@@ -1363,7 +1360,6 @@ export const MISSISSAUGA_WEBSITE = {
   cardIcon: "/location-quote.svg",
   cardHeading: `"A website that looks pretty but doesn't rank is just a digital business card in a drawer. We build tools that actually grow businesses."`,
   cardPara: "— HTSOL Strategy Team",
-
 };
 
 export const MISSISSAUGA_AGENCY = {
@@ -1596,7 +1592,8 @@ export const MISSISSAUGA_WORK = {
     },
   ],
   endServices: {
-    heading: "If your business relies on people finding you online and trusting what they see, we can help",
+    heading:
+      "If your business relies on people finding you online and trusting what they see, we can help",
     bgImage: "/business-bg.png",
     btnText: `Book A Free Consultation`,
     btnLink: `/contact-us`,
@@ -1643,7 +1640,7 @@ export const MISSISSAUGA_Accordion = {
       description:
         "We don't hand over the keys and disappear. We monitor performance, provide reporting, and support your site as your business grows. Most of our Mississauga clients stay with us on a monthly retainer because they want a partner, not just a vendor.",
     },
-  ]
+  ],
 };
 
 export const MISSISSAUGA_WHAT_DELIVER = {
@@ -1698,31 +1695,26 @@ export const MISSISSAUGA_CTA = {
   firstBtnLink: "/contact-us",
   secondBtnText: "Talk to Our Team",
   secondBtnLink: "/contact-us",
-
 };
 
 export const MISSISSAUGA_FAQS = [
   {
-    question:
-      "How much does web design cost in Mississauga?",
+    question: "How much does web design cost in Mississauga?",
     answer:
       "Costs vary depending on the size of the project, features required, and level of ongoing involvement. A straightforward business website for a service company will be priced differently from a multi-location e-commerce build. We scope every project individually and provide a clear breakdown so you know exactly what you're paying for. We don't use standardised packages because most Mississauga businesses don't fit neatly into fixed templates.",
   },
   {
-    question:
-      "How long does it take to build a website in Mississauga?",
+    question: "How long does it take to build a website in Mississauga?",
     answer:
       "For most standard business websites, we're live within four weeks of kickoff — covering discovery, design, development, and launch. Complex builds with custom functionality, integrations, or large content volumes may take longer. We provide a clear timeline upfront so you know what to expect.",
   },
   {
-    question:
-      "Do I need to be involved in the design process?",
+    question: "Do I need to be involved in the design process?",
     answer:
       "You'll be involved at the key stages — sharing your goals and brand direction at the start, reviewing designs before we build, and approving the final site before launch. We handle the rest. Most clients find the process straightforward because we guide each step and keep communication clear throughout.",
   },
   {
-    question:
-      "Will my Mississauga website show up on Google?",
+    question: "Will my Mississauga website show up on Google?",
     answer:
       "Every website we build includes technical SEO foundations — clean architecture, proper metadata, schema markup, mobile-first structure, and Core Web Vitals optimisation. This gives your site the best possible start in search. For sustained ranking growth, a dedicated SEO strategy builds on that foundation over time.",
   },
@@ -1733,25 +1725,23 @@ export const MISSISSAUGA_FAQS = [
       "Yes — with proper migration planning. We map your existing URL structure, plan redirects, preserve key content and metadata, and monitor performance post-launch. A well-managed redesign protects the SEO value you've already built and often improves rankings by addressing technical issues on the old site.",
   },
   {
-    question:
-      "Do I own my website after it's built?",
+    question: "Do I own my website after it's built?",
     answer:
       "Yes, fully. You own your domain, your hosting account, your code, and your CMS logins. We don't hold anything hostage. Good agency relationships are built on trust, and that starts with you having full control of your own digital assets.",
   },
   {
-    question: "Can you build websites for businesses in Mississauga in specific industries?",
+    question:
+      "Can you build websites for businesses in Mississauga in specific industries?",
     answer:
       "Yes. We've built websites for professional services, healthcare, trades, retail, hospitality, technology, and more. We work to understand the specific expectations and behaviours of your industry's customers before we design a single page.",
   },
   {
-    question:
-      "What happens after my website launches?",
+    question: "What happens after my website launches?",
     answer:
       "We monitor performance, provide reporting, and remain available for updates, improvements, and technical support. Many of our clients stay on a monthly retainer for ongoing optimisation — because a website that isn't maintained and improved gradually loses ground to competitors who invest in theirs.",
   },
   {
-    question:
-      "Do you work with businesses outside of Mississauga?",
+    question: "Do you work with businesses outside of Mississauga?",
     answer:
       "Yes. While we're based in Mississauga and work closely with GTA businesses, we support clients across Ontario and Canada. If you're in the broader GTA — Brampton, Oakville, Burlington, Toronto, or further — we're happy to help.",
   },
@@ -1760,5 +1750,49 @@ export const MISSISSAUGA_FAQS = [
       "Can you integrate booking systems, CRMs, or other tools into the website?",
     answer:
       "Yes. We regularly integrate websites with booking platforms, CRM systems, email marketing tools, payment gateways, and inventory management systems. If you have an existing tool your team relies on, we'll connect it to your site so information flows automatically.",
+  },
+];
+export const CEO_FAQS = [
+  {
+    question: "Who is Faseeh Khan?",
+    answer:
+      "Faseeh Khan (Muhammad Faseeh Ullah) is the CEO and Founder of HTSOL Inc., a full-service digital agency based in Mississauga, Ontario. With 8+ years of experience as a Full-Stack MERN developer turned digital growth strategist, he specializes in building high-converting websites, custom software, and digital marketing systems for healthcare businesses, dental practices, and marketing agencies across Canada and internationally.",
+  },
+  {
+    question: "What does Faseeh Khan specialize in?",
+    answer:
+      "Faseeh specializes at the intersection of technical development and digital strategy. His core focus areas include dental and healthcare digital marketing, conversion-optimized web design, custom CRM and CMS development, AI-powered SEO, SaaS development, and white label agency partnerships. He has delivered 100+ projects across 8+ industries in 5+ countries.",
+  },
+  {
+    question:
+      "Does Faseeh Khan work directly with clients or only through HTSOL Inc.?",
+    answer:
+      "Both. Faseeh is actively involved in client strategy and works directly with businesses that need senior-level digital growth consultation. He also works with marketing agencies as a white label execution partner — delivering web design, development, and marketing work under the agency's brand with full NDA protection.",
+  },
+  {
+    question: "What industries does Faseeh Khan work with?",
+    answer:
+      "Faseeh's strongest verticals are healthcare — including dental practices, medical clinics, and mental health providers — along with e-commerce, professional services, SaaS companies, and marketing agencies. His technical background means he can serve nearly any industry that relies on digital systems to attract and retain clients.",
+  },
+  {
+    question: "Is Faseeh Khan available for consulting?",
+    answer:
+      "Yes. Faseeh is available for digital growth consulting engagements, particularly for healthcare and dental businesses looking to improve online patient acquisition, and for agencies seeking a reliable white label development and marketing partner. Book a discovery call directly through this page.",
+  },
+  {
+    question: "Where is Faseeh Khan based?",
+    answer:
+      "Faseeh is based in Mississauga, Ontario, Canada. He works with clients remotely across Canada, the United States, the United Kingdom, the UAE, and internationally. In-person meetings are available for clients in the Greater Toronto Area.",
+  },
+  {
+    question:
+      "What is the difference between working with Faseeh directly and hiring HTSOL Inc.?",
+    answer:
+      "Working directly with Faseeh means senior-level strategy involvement from day one — he leads the engagement personally rather than handing it to a junior team member. HTSOL Inc. is the agency structure that handles full-scale execution. For most clients, the two are intertwined: you get Faseeh's strategic direction delivered through HTSOL's execution team.",
+  },
+  {
+    question: "What makes HTSOL different from other digital agencies?",
+    answer:
+      "HTSOL brings design, development, and marketing under one roof — which is genuinely rare. Most agencies subcontract at least one of these disciplines. Because Faseeh has built everything himself across 8+ years, HTSOL can offer something most agencies can't: a single team that executes the full picture from strategy through technical implementation, with no handoff gaps and no blame between departments.",
   },
 ];

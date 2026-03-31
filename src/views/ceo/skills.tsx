@@ -1,17 +1,20 @@
 import Image from "next/image";
 
 const SKILLS = [
-  { src: "/ceo/figma.svg", label: "Figma" },
-  { src: "/ceo/wordpress.svg", label: "Wordpress" },
-  { src: "/ceo/elementor.svg", label: "Elementor" },
-  { src: "/ceo/vscode.svg", label: "VS Code" },
-  { src: "/ceo/visual-studio.svg", label: "Visual Studio" },
-  { src: "/ceo/photoshop.svg", label: "Photoshop" },
-  { src: "/ceo/xd.svg", label: "Adobe XD" },
-  { src: "/ceo/adobe-ai.svg", label: "Adobe Ai" },
-  { src: "/ceo/shopify.svg", label: "Shopify" },
-  { src: "/ceo/webflow.svg", label: "Web Flow" },
-  { src: "/ceo/laravel.svg", label: "Laravel" },
+  { src: "/ceo/figma.svg", label: "Digital Growth Strategy" },
+  { src: "/ceo/wordpress.svg", label: "Dental Marketing" },
+  { src: "/ceo/elementor.svg", label: "Healthcare Digital Marketing" },
+  { src: "/ceo/vscode.svg", label: "Mental Health Clinic Growth" },
+  { src: "/ceo/visual-studio.svg", label: "Conversion Rate Optimization" },
+  { src: "/ceo/photoshop.svg", label: "Custom CRM & CMS Development" },
+  { src: "/ceo/xd.svg", label: "AI-Powered SEO" },
+  { src: "/ceo/adobe-ai.svg", label: "SaaS Product Development" },
+  { src: "/ceo/shopify.svg", label: "Design Psychology" },
+  { src: "/ceo/webflow.svg", label: "Agency White Label Partner" },
+  { src: "/ceo/laravel.svg", label: "Full-Stack MERN Development" },
+  { src: "/ceo/shopify.svg", label: "E-Commerce Growth" },
+  { src: "/ceo/webflow.svg", label: "Search Engine Optimization" },
+  { src: "/ceo/laravel.svg", label: "Web Performance & Speed" },
 ] as const;
 
 function SkillPill({ skill }: { skill: (typeof SKILLS)[number] }) {
@@ -37,7 +40,8 @@ const Skills = () => {
         <div className="marquee-wrapper">
           <div
             className="marquee-content marquee-content--always-run gap-4"
-            style={{ animationDuration: "22s" }}>
+            style={{ animationDuration: "22s" }}
+          >
             {SKILLS.map((skill, i) => (
               <SkillPill key={`a-${i}`} skill={skill} />
             ))}

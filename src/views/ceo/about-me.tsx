@@ -29,17 +29,23 @@ const AboutMe = () => {
             <HeadingTwo className="mb-10">About Me</HeadingTwo>
             <div className="mb-5">
               <p className="mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                I started as a developer. Over 8 years I built websites,
+                platforms, and software for businesses across 5 countries — and
+                somewhere along the way I noticed something that bothered me:
+                technically excellent work failing because the strategy behind
+                it was wrong. Great code sitting on a website nobody could find.
+                Beautiful designs that didn&apos;t convert. Platforms launched
+                without any plan for growth.
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                That&apos;s why I built HTSOL Inc. the way I did — with design,
+                development, and marketing operating as one coordinated unit,
+                not three separate vendors pulling in different directions.
+                Today I work with healthcare practices, dental clinics, mental
+                health providers, and marketing agencies who need more than
+                execution. They need someone who understands the full picture:
+                what to build, how to market it, and how to make it grow.
+                That&apos;s what I do.
               </p>
             </div>
             <div>

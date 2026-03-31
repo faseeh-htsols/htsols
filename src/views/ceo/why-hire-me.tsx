@@ -8,7 +8,10 @@ import parse from "html-react-parser";
 import Image from "next/image";
 const WhyHireMe = () => {
   return (
-    <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+    <DoubleCurves
+      up
+      className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]"
+    >
       {/* <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
@@ -20,12 +23,11 @@ const WhyHireMe = () => {
             <div className="max-w-[1124px] mx-auto flex flex-col gap-5 mb-4">
               <HeadingTwo className="text-center">Why hire me</HeadingTwo>
               <p className="text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur
+                Most agencies separate strategy from execution. Most developers
+                don&apos;t understand marketing. Most marketers can&apos;t build
+                what they recommend. I&apos;ve spent 8 years sitting at the
+                intersection of all three — and that&apos;s exactly what my
+                clients hire me for.
               </p>
             </div>
           </div>

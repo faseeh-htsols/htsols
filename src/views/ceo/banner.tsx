@@ -28,7 +28,8 @@ const Banner = () => {
               w-[92%] max-w-[700px]
               h-[240px] sm:h-[300px] md:h-[360px] lg:h-[400px]
               -z-1
-            ">
+            "
+          >
             <div className="border-[#B7B8B8] border-4 sm:border-6 lg:border-8 absolute w-full h-full"></div>
           </div>
           <div
@@ -38,10 +39,11 @@ const Banner = () => {
               h-[240px] sm:h-[300px] md:h-[360px] lg:h-[400px]
               flex flex-col justify-end
               px-3 sm:px-6
-            ">
+            "
+          >
             <div className="flex flex-col justify-end gap-3 sm:gap-4 pb-2 sm:pb-4">
               <h1 className="uppercase relative z-3 font-primary text-3xl sm:text-4xl lg:text-5xl text-center leading-tight">
-                meet Faseeh ullah
+                MEET FASEEH KHAN
               </h1>
 
               <h2 className="font-sans font-semibold text-center">
@@ -52,7 +54,8 @@ const Banner = () => {
                     style={{
                       background:
                         "linear-gradient(90deg, #075B65 0%, #00838A 37.02%, #328A99 81.25%)",
-                    }}></span>
+                    }}
+                  ></span>
                 </span>
               </h2>
 
@@ -60,7 +63,8 @@ const Banner = () => {
                 <Link
                   href="https://www.instagram.com/faseeh3d"
                   target="_blank"
-                  className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100">
+                  className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100"
+                >
                   <Image
                     src={"/ceo/instag.svg"}
                     alt="Faseeh Ullah"
@@ -72,7 +76,8 @@ const Banner = () => {
                 <Link
                   href="https://www.linkedin.com/in/mfaseehullah/"
                   target="_blank"
-                  className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100">
+                  className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100"
+                >
                   <Image
                     src={"/ceo/linkedin.svg"}
                     alt="Faseeh Ullah"
@@ -95,7 +100,8 @@ const Banner = () => {
                 <Link
                   href="https://x.com/mfaseeh3d"
                   target="_blank"
-                  className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100">
+                  className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100"
+                >
                   <Image
                     src={"/ceo/twitter.svg"}
                     alt="Faseeh Ullah"
