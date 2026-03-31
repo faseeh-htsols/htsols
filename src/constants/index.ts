@@ -1338,3 +1338,427 @@ export const WEB_DEV_SERVICES_WE_OFFER = [
     para: "If your site is slow, outdated, or hard to manage, we rebuild with better structure and performance while protecting SEO value.",
   },
 ];
+
+export const MISSISSAUGA_BANNER = {
+  highLight: "Premier Mississauga Digital Agency",
+  title: "Web Design Mississauga — Built to Convert, Not Just to Impress",
+  para: `Mississauga businesses move fast. Your website should keep up. HTSOL Inc. designs and builds custom websites for local businesses — fast to launch, built for search, and designed to turn visitors into enquiries. 
+  <br/><br/>
+  We're based right here in Mississauga. We know the market, we know the competition, and we know what it takes for a local business to stand out online in the GTA.`,
+  firstBtnText: "Book a Free Consultation",
+  firstBtnLink: "/contact-us",
+  secondBtnText: "View Our Work",
+  secondBtnLink: "/",
+
+};
+
+export const MISSISSAUGA_WEBSITE = {
+  title: "Your Website Is Your Hardest-Working Employee —",
+  highLight: "Is It Pulling Its Weight?",
+  para: `When a potential customer in Mississauga searches for your service, they're going to land somewhere. If that somewhere isn't a fast, clear, trustworthy website, they'll click away and hire the competitor who showed up better.
+  <br /><br />
+  A professionally built website doesn't just look good — it works. It loads in seconds, answers the right questions immediately, guides visitors to take action, and supports every other piece of your marketing. SEO, paid ads, social media — all of it performs better when the website underneath is solid.
+  <br /><br />
+  That's exactly what we build.`,
+  cardIcon: "/location-quote.svg",
+  cardHeading: `"A website that looks pretty but doesn't rank is just a digital business card in a drawer. We build tools that actually grow businesses."`,
+  cardPara: "— HTSOL Strategy Team",
+
+};
+
+export const MISSISSAUGA_AGENCY = {
+  title: " A Mississauga Web Design Agency That Handles the Whole Picture",
+  para: `Most web design companies hand you a finished site and move on. We                         don't work that way.`,
+  cards: [
+    {
+      id: "agency-intro",
+      para: `HTSOL Inc. brings design, development, and digital marketing together in one team. That means your website isn't built in isolation — it's built as part of your broader digital strategy, with SEO foundations baked in from the start, conversion-focused layouts informed by real user behaviour, and a structure that supports your marketing long after launch day.
+      <br/><br/>
+      We're also based in Mississauga, which means we're not a distant agency managing your project from across the country. We're local, we're reachable, and we have a genuine stake in helping Mississauga businesses succeed.`,
+      fullWidth: true,
+      hideOnMobile: true,
+    },
+    {
+      id: "rapid-launch",
+      heading: "Rapid Launch",
+      para: "Your site is typically live within four weeks—from discovery to launch.",
+    },
+    {
+      id: "seo-optimized",
+      heading: "SEO Optimized",
+      para: "Every page is structured for both search engines and real humans.",
+    },
+    {
+      id: "full-ownership",
+      heading: "Full Ownership",
+      para: "You own everything: your domain, hosting, code, and CMS logins.",
+    },
+    {
+      id: "strategic-growth",
+      heading: "Strategic Growth",
+      para: "We stay involved after launch—monitoring performance, making improvements, scaling with you.",
+    },
+    {
+      id: "agency-image",
+      mainImage: "/location-agency.png",
+      imageAlt: "Mississauga web design agency",
+    },
+    {
+      id: "dedicated-support",
+      heading: "Dedicated Support",
+      para: "One point of contact for design, development, and marketing questions.",
+    },
+  ],
+};
+
+export const MISSISSAUGA_SERVICES = {
+  title: "Web Design Services We Offer in",
+  highlight: "Mississauga",
+  services: [
+    {
+      icon: "/services/why-icon-1.svg",
+      heading: "Custom Website Design",
+      para: `Every site we build starts from scratch — no templates, no page builders, no recycled layouts. We design around your brand, your audience, and your specific business goals. Whether you're a service business, professional firm, clinic, or local retailer, the design reflects who you are and what you want visitors to do.`,
+    },
+    {
+      icon: "/services/why-icon-2.svg",
+      heading: "Web Development",
+      para: `Clean, performant code built on modern frameworks. We develop sites that load fast, run reliably, and can grow with your business. Built on Next.js and modern web standards — not WordPress themes stitched together and hoped for the best.`,
+    },
+    {
+      icon: "/services/why-icon-3.svg",
+      heading: "Mobile-First Design",
+      para: `More than half of your visitors will find you on a phone. We build mobile-first as a baseline — not as an afterthought. Every layout, every button, every form works exactly as intended on any screen size.`,
+    },
+    {
+      icon: "/services/why-icon-2.svg",
+      heading: "SEO-Ready Foundations",
+      para: `Every HTSOL website ships with clean site architecture, proper metadata, schema markup where relevant, fast Core Web Vitals, and a structure that makes it easy for Google to understand and rank your pages. You won't need to hire someone to 'fix the SEO' six months after launch.`,
+    },
+    {
+      icon: "/services/why-icon-2.svg",
+      heading: "CMS Setup & Training",
+      para: `We set up a content management system that your team can actually use — no developer needed for everyday updates. Add blog posts, update service pages, change images, swap out offers — all without touching a line of code.`,
+    },
+    {
+      icon: "/services/why-icon-3.svg",
+      heading: "Landing Pages for Campaigns",
+      para: `Running Google Ads or Meta campaigns? A dedicated landing page purpose-built for a specific offer converts significantly better than sending paid traffic to your homepage. We design and build campaign-specific landing pages that work with your ads, not against them.`,
+    },
+    {
+      icon: "/services/why-icon-2.svg",
+      heading: "Website Redesigns",
+      para: `If your current site is slow, outdated, or losing you leads, we can redesign it — while protecting your existing SEO value through proper migration planning, redirect strategy, and content preservation.`,
+    },
+    {
+      icon: "/services/why-icon-2.svg",
+      heading: "E-Commerce Development",
+      para: `We build conversion-focused e-commerce sites on Shopify and WooCommerce for Mississauga retailers looking to sell online with a store that's easy to manage and built to grow.`,
+    },
+  ],
+  endServices: {
+    heading: "Looking for Professional Growth?",
+    para: `We’re always open to connecting with driven designers, developers, marketers, and strategists who want to do meaningful work with a supportive team.`,
+    btnText: `Get Started`,
+    btnLink: `/contact-us`,
+  },
+};
+
+export const MISSISSAUGA_OUR_WORK = {
+  topic: "OUR WORK",
+  title: "Websites Built<br /> for Mississauga Businesses",
+  slides: [
+    {
+      company: "Dentopia Marketing Agency",
+      heading: "HIGH-PERFORMANCE UX FOR DENTAL MARKETING",
+      description:
+        "Built for a specialist dental marketing agency, this project focused on creating a polished digital experience that reflects authority, clarity, and growth. We developed a conversion-focused interface designed to support lead generation, showcase services effectively, and strengthen trust with dental clients.",
+      services: [
+        "Custom Build",
+        "UI/UX Design",
+        "Agency Website",
+        "Conversion Focused",
+        "Lead Generation",
+        "Dental Marketing",
+      ],
+      images: ["/mockup.png"],
+      accent: "/marketing-1.png",
+    },
+    {
+      company: "518 Dental",
+      heading: "MODERN WEBSITE EXPERIENCE FOR A PRIVATE DENTAL CLINIC",
+      description:
+        "Designed for a patient-focused dental clinic, this project centred on trust, usability, and local visibility. We created a clean, professional website experience that helps present treatments clearly, improve patient confidence, and support appointment-driven conversions.",
+      services: [
+        "Custom Website",
+        "Dental Clinic",
+        "UI/UX Design",
+        "Local SEO",
+        "Patient Journey",
+        "Conversion Ready",
+      ],
+      images: ["/dental.png"],
+      accent: "/marketing-1.png",
+    },
+    {
+      company: "Grange Green Dental",
+      heading: "TRUST-LED DIGITAL PRESENCE FOR A GROWING DENTAL PRACTICE",
+      description:
+        "This project was developed to give the practice a more refined and accessible online presence. The focus was on improving service presentation, strengthening credibility, and creating a smooth user experience that supports enquiries and long-term patient engagement.",
+      services: [
+        "Website Design",
+        "Dental Practice",
+        "UX Strategy",
+        "Local Visibility",
+        "Service Showcase",
+        "Patient Enquiries",
+      ],
+      images: ["/mockup 3.png"],
+      accent: "/marketing-1.png",
+    },
+  ],
+};
+
+export const MISSISSAUGA_BUSINESSES = {
+  highlight: "Mississauga",
+  title: "Businesses We Work With",
+  para: `We build conversion-focused e-commerce sites on Shopify and WooCommerce for Mississauga retailers looking to sell online with a store that's easy to manage and built to grow.`,
+  services: [
+    {
+      icon: "/location-icon-1.svg",
+      para: `Professional Services`,
+    },
+    {
+      icon: "/location-icon-2.svg",
+      para: `Healthcare`,
+    },
+    {
+      icon: "/location-icon-3.svg",
+      para: `Healthcare`,
+    },
+    {
+      icon: "/location-icon-4.svg",
+      para: `Retail & E-commerce`,
+    },
+    {
+      icon: "/location-icon-5.svg",
+      para: `Hospitality`,
+    },
+    {
+      icon: "/location-icon-6.svg",
+      para: `Technology & SaaS`,
+    },
+    {
+      icon: "/location-icon-7.svg",
+      para: `Real Estate`,
+    },
+  ],
+};
+
+export const MISSISSAUGA_WORK = {
+  title: "Mississauga Businesses We Work With",
+  para: `We work with a wide range of local businesses across Mississauga and the wider GTA. A few of the industries we work with regularly:`,
+  services: [
+    {
+      icon: "/website/web-services-icon-1-1.svg",
+      heading: "Professional services",
+      para: `accountants, lawyers, consultants, financial advisors`,
+    },
+    {
+      icon: "/website/web-services-icon-2.svg",
+      heading: "Healthcare and wellness",
+      para: `clinics, dental practices, physio, specialists`,
+    },
+    {
+      icon: "/website/web-services-icon-3.svg",
+      heading: "Trades and home services",
+      para: `contractors, electricians, plumbers, landscapers`,
+    },
+    {
+      icon: "/website/web-services-icon-3.svg",
+      heading: "Retail and e-commerce",
+      para: `local shops, product brands, online stores`,
+    },
+    {
+      icon: "/website/web-services-icon-3.svg",
+      heading: "Restaurants and hospitality",
+      para: `cafes, catering, event venues`,
+    },
+    {
+      icon: "/website/web-services-icon-3.svg",
+      heading: "Technology and SaaS",
+      para: `startups and scale-ups needing a platform to match their product`,
+    },
+    {
+      icon: "/website/web-services-icon-3.svg",
+      heading: "Real estate professionals",
+      para: `agents, developers, property managers`,
+    },
+  ],
+  endServices: {
+    heading: "If your business relies on people finding you online and trusting what they see, we can help",
+    bgImage: "/business-bg.png",
+    btnText: `Book A Free Consultation`,
+    btnLink: `/contact-us`,
+  },
+};
+
+export const MISSISSAUGA_Accordion = {
+  title: "How a Mississauga Web Design Project Works With HTSOL",
+  para: "We keep the process clear and structured so you always know what's happening and what's next. No disappearing for weeks, no surprise scope changes, no launch-day drama.",
+  accordion: [
+    {
+      number: "01",
+      title: "Discovery & Planning",
+      description:
+        "We start by understanding your business: your goals, your customers, your competitors, and what you need the site to do. We map the structure before anything is designed.",
+    },
+    {
+      number: "02",
+      title: "Content & Wireframes",
+      description:
+        "We define the page hierarchy, messaging, and layouts. If you need help with copy, we can assist — or work with what you have and sharpen it for clarity and conversion.",
+    },
+    {
+      number: "03",
+      title: "DESIGN",
+      description:
+        "We design your site with a mobile-first approach, building a system that's consistent with your brand and purpose-built for your audience. You review and provide feedback before anything goes to development.",
+    },
+    {
+      number: "04",
+      title: "Development & SEO Setup",
+      description:
+        "We build the site using clean, performance-first code. Technical SEO foundations and tracking are configured during the build — not added as an afterthought.",
+    },
+    {
+      number: "05",
+      title: "Testing & Launch",
+      description:
+        "We test across devices, browsers, and screen sizes. Forms are validated. Speed is checked. Accessibility basics are confirmed. Then we launch cleanly.",
+    },
+    {
+      number: "06",
+      title: "Ongoing Support",
+      description:
+        "We don't hand over the keys and disappear. We monitor performance, provide reporting, and support your site as your business grows. Most of our Mississauga clients stay with us on a monthly retainer because they want a partner, not just a vendor.",
+    },
+  ]
+};
+
+export const MISSISSAUGA_WHAT_DELIVER = {
+  title: "What a Well-Built Website Actually Delivers",
+  para: `A well-built website is the foundation everything else builds on. When the foundations are right, every other channel performs better — SEO gets traction faster, paid ads convert at lower cost, and referrals turn into enquiries instead of bouncing away.
+  <br/><br/>
+  For Mississauga businesses specifically, local visibility matters. A site built with proper local SEO signals — city-specific content, Google Business Profile alignment, fast mobile performance — helps you show up when someone nearby is actively searching for what you offer.`,
+  image: "/what-deliver-img.png",
+};
+
+export const MISSISSAUGA_WHY_CHOOSE = {
+  highlight: "Why HTSOL Inc.",
+  title: "Why Mississauga Businesses Choose HTSOL Inc.",
+  accordion: [
+    {
+      heading: "We're Local",
+      description:
+        "We're based in Mississauga at 3400 Riverspray Crescent. We understand the local business landscape, the GTA market, and what Mississauga customers expect from a business online. This isn't a generic pitch — it's local knowledge applied to local strategy.",
+      image: "/website/one-team.png",
+    },
+    {
+      heading: "Design, Development, and Marketing Under One Roof",
+      description:
+        "Most agencies specialise in one thing. We bring all three together, which means your website is built with your marketing strategy in mind from day one — not retrofitted with SEO six months later by a different team.",
+      image: "/website/performance-first.png",
+    },
+    {
+      heading: "Built for Performance, Not Just Appearance",
+      description:
+        "Our builds use modern frameworks and performance-first practices. Fast load times, stable Core Web Vitals, clean code, and a CMS your team can manage without developer help.",
+      image: "/website/clear-transparent.png",
+    },
+    {
+      heading: "Live in Under a Month",
+      description:
+        "Most standard business websites are live within four weeks of kickoff — design, development, and launch. We're not slow. We're structured.",
+      image: "/website/designed-trust.png",
+    },
+    {
+      heading: "We Stay Involved",
+      description:
+        "We don't deliver and disappear. After launch, we monitor performance, recommend improvements, and stay engaged as your business grows. Your site should evolve — and we're here to make sure it does.",
+      image: "/website/built-to-scale.png",
+    },
+  ],
+};
+
+export const MISSISSAUGA_CTA = {
+  title: "Ready to Build a Website That Works for Your Mississauga Business?",
+  para: `Tell us about your business, what you're trying to achieve, and what's not working with your current online presence. We'll review your situation and share a clear, practical path forward — no jargon, no pressure.`,
+  firstBtnText: "Book a Free Consultation",
+  firstBtnLink: "/contact-us",
+  secondBtnText: "Talk to Our Team",
+  secondBtnLink: "/contact-us",
+
+};
+
+export const MISSISSAUGA_FAQS = [
+  {
+    question:
+      "How much does web design cost in Mississauga?",
+    answer:
+      "Costs vary depending on the size of the project, features required, and level of ongoing involvement. A straightforward business website for a service company will be priced differently from a multi-location e-commerce build. We scope every project individually and provide a clear breakdown so you know exactly what you're paying for. We don't use standardised packages because most Mississauga businesses don't fit neatly into fixed templates.",
+  },
+  {
+    question:
+      "How long does it take to build a website in Mississauga?",
+    answer:
+      "For most standard business websites, we're live within four weeks of kickoff — covering discovery, design, development, and launch. Complex builds with custom functionality, integrations, or large content volumes may take longer. We provide a clear timeline upfront so you know what to expect.",
+  },
+  {
+    question:
+      "Do I need to be involved in the design process?",
+    answer:
+      "You'll be involved at the key stages — sharing your goals and brand direction at the start, reviewing designs before we build, and approving the final site before launch. We handle the rest. Most clients find the process straightforward because we guide each step and keep communication clear throughout.",
+  },
+  {
+    question:
+      "Will my Mississauga website show up on Google?",
+    answer:
+      "Every website we build includes technical SEO foundations — clean architecture, proper metadata, schema markup, mobile-first structure, and Core Web Vitals optimisation. This gives your site the best possible start in search. For sustained ranking growth, a dedicated SEO strategy builds on that foundation over time.",
+  },
+  {
+    question:
+      "Can you redesign my existing website without losing my Google rankings?",
+    answer:
+      "Yes — with proper migration planning. We map your existing URL structure, plan redirects, preserve key content and metadata, and monitor performance post-launch. A well-managed redesign protects the SEO value you've already built and often improves rankings by addressing technical issues on the old site.",
+  },
+  {
+    question:
+      "Do I own my website after it's built?",
+    answer:
+      "Yes, fully. You own your domain, your hosting account, your code, and your CMS logins. We don't hold anything hostage. Good agency relationships are built on trust, and that starts with you having full control of your own digital assets.",
+  },
+  {
+    question: "Can you build websites for businesses in Mississauga in specific industries?",
+    answer:
+      "Yes. We've built websites for professional services, healthcare, trades, retail, hospitality, technology, and more. We work to understand the specific expectations and behaviours of your industry's customers before we design a single page.",
+  },
+  {
+    question:
+      "What happens after my website launches?",
+    answer:
+      "We monitor performance, provide reporting, and remain available for updates, improvements, and technical support. Many of our clients stay on a monthly retainer for ongoing optimisation — because a website that isn't maintained and improved gradually loses ground to competitors who invest in theirs.",
+  },
+  {
+    question:
+      "Do you work with businesses outside of Mississauga?",
+    answer:
+      "Yes. While we're based in Mississauga and work closely with GTA businesses, we support clients across Ontario and Canada. If you're in the broader GTA — Brampton, Oakville, Burlington, Toronto, or further — we're happy to help.",
+  },
+  {
+    question:
+      "Can you integrate booking systems, CRMs, or other tools into the website?",
+    answer:
+      "Yes. We regularly integrate websites with booking platforms, CRM systems, email marketing tools, payment gateways, and inventory management systems. If you have an existing tool your team relies on, we'll connect it to your site so information flows automatically.",
+  },
+];
