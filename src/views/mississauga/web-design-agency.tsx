@@ -63,7 +63,12 @@ const WebDesignAgency = ({ data }: WebDesignAgencyData) => {
 
     const mobileCards = useMemo(
         () => data.cards.filter((card) => !card.hideOnMobile),
-        []
+        [data.cards]
+    );
+
+    const mobileIntroCard = useMemo(
+        () => data.cards.find((card) => card.id === "agency-intro"),
+        [data.cards]
     );
 
     useEffect(() => {
@@ -177,6 +182,14 @@ const WebDesignAgency = ({ data }: WebDesignAgencyData) => {
                     <div className="rounded-[10px] bg-[linear-gradient(90deg,rgba(7,91,101,0.9)_0%,rgba(0,131,138,0.9)_37.02%,rgba(50,138,153,0.9)_81.25%)] p-px">
                         {/* Mobile */}
                         <div className="overflow-hidden rounded-[10px] bg-black p-3 md:hidden">
+                            {mobileIntroCard?.para && (
+                                <div className="-mx-3 mb-5 border-b border-[#075B65] px-3 pb-5">
+                                    <p
+                                        className=" leading-relaxed text-white"
+                                        dangerouslySetInnerHTML={{ __html: mobileIntroCard.para }}
+                                    />
+                                </div>
+                            )}
                             <Swiper
                                 modules={[Autoplay]}
                                 slidesPerView={1}

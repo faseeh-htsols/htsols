@@ -36,7 +36,7 @@ const BusinessesWeWork = ({ data }: BusinessesWeWorkData) => {
                         {data.services.map((item, index) => (
                             <div
                                 key={item.para + index}
-                                className="relative group lg:flex-[0_0_calc((100%-15rem)/7)] bg-[#FFFFFF1A] px-6 py-4 border border-white/80 rounded-xl"
+                                className="relative group w-full lg:flex-[0_0_calc((100%-15rem)/7)] bg-[#FFFFFF1A] px-6 py-4 border border-white/80 rounded-xl"
                             >
 
                                 <div className="flex flex-col gap-4 items-center justify-center">
