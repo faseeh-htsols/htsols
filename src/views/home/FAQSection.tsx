@@ -147,7 +147,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
                 className={`
                     border border-white border-b! px-4 bg-transparent rounded-lg transition-all
                    ${accordionbgtransparent
-                    ? "bg-transparent data-[state=open]:bg-transparent data-[state=open]:border-transparent data-[state=open]:shadow-none"
+                    ? "bg-transparent data-[state=open]:bg-tertiary data-[state=open]:border-transparent data-[state=open]:shadow-none "
                     : " data-[state=open]:border-tertiary data-[state=open]:shadow-[0_0_5px_#00838A] data-[state=open]:bg-tertiary"
                   }
                   `}

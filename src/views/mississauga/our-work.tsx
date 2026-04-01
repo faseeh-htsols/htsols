@@ -91,7 +91,7 @@ const OurWork = ({ data }: OurWorkData) => {
                                                 {study.services.map((svc, idx) => (
                                                     <div
                                                         key={`${svc}-${idx}`}
-                                                        className="flex items-center gap-2 lg:w-[calc(35.50%-27px)]"
+                                                        className="flex items-center gap-2 w-full lg:w-[calc(35.50%-27px)]"
                                                     >
                                                         <span className="w-full rounded-full border-[0.5px] border-white/80 bg-[#FFFFFF0D] px-2 py-2 text-center text-white/80 text-nowrap">
                                                             {svc}

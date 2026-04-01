@@ -1,3 +1,15 @@
+import Banner from "./banner";
+import WebDesignAgency from "./web-design-agency";
+import WebDesignServices from "./web-desing-services";
+import YourWebsite from "./your-website";
+import OurWork from "./our-work";
+import BusinessesWeWork from "./businesses-we-work";
+import BusinessesWork from "./businesses-work";
+import HowWorks from "./how-works";
+import WhatAWebsiteDeliver from "./what-a-website-deliver";
+import WhyChooseHtsol from "./why-choose-htsol";
+import FAQSection from "../home/FAQSection";
+import Cta from "./cta";
 
 import {
   MISSISSAUGA_BANNER,
@@ -13,19 +25,6 @@ import {
   MISSISSAUGA_CTA,
   MISSISSAUGA_FAQS,
 } from "@/constants";
-
-import Banner from "./banner";
-import WebDesignAgency from "./web-design-agency";
-import WebDesignServices from "./web-desing-services";
-import YourWebsite from "./your-website";
-import OurWork from "./our-work";
-import BusinessesWeWork from "./businesses-we-work";
-import BusinessesWork from "./businesses-work";
-import HowWorks from "./how-works";
-import WhatAWebsiteDeliver from "./what-a-website-deliver";
-import WhyChooseHtsol from "./why-choose-htsol";
-import FAQSection from "../home/FAQSection";
-import Cta from "./cta";
 
 const Main = () => {
   return (
