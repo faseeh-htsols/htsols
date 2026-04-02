@@ -1,8 +1,8 @@
 import WebDevMain from "@/views/web-dev/main";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "Web Development Company in Canada | HTSOL Inc.",
+  description: "Bespoke, SEO-ready websites for Canadian businesses. HTSOL Inc. builds fast, secure sites that boost visibility, trust, and leads. Book a free consultation today.",
   alternates: {
     canonical: "https://www.htsol.ca/services/website-development",
   },

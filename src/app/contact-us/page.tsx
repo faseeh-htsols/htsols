@@ -2,8 +2,8 @@ import ContactUsMain from "@/views/contact-us/main";
 import { Metadata } from "next";
 import Script from "next/script";
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "Contact HTSOL Inc. | Digital Marketing & Web Design Agency",
+  description: "Reach out to HTSOL Inc. for expert digital marketing and web design services. We’ll craft a strategy tailored to your business goals and deliver measurable results.",
   alternates: {
     canonical: "https://www.htsol.ca/contact-us",
   },

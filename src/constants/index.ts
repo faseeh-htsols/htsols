@@ -1493,7 +1493,7 @@ export const MISSISSAUGA_OUR_WORK = {
         "Patient Journey",
         "Conversion Ready",
       ],
-      images: ["/dental.png"],
+      images: ["/dental-location.png"],
       accent: "/marketing-1.png",
     },
     {
