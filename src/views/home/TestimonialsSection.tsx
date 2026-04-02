@@ -18,52 +18,60 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    name: "MICHAEL CHEN",
-    title: "CTO",
+    name: "SAM",
+    title: "CO-FOUNDER, MEIIDZ",
     content:
-      "Exceptional technical expertise combined with creative vision. HtSol Inc. delivered a robust, scalable solution perfectly aligned with our business needs.",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces",
+      "Really great experience working together. Faseeh did an excellent job improving and polishing our frontend, with a strong focus on UI quality, performance optimization, and responsive behavior. They worked confidently with React.js and Next.js, translated designs and wireframes into clean, interactive components, and integrated everything smoothly with our RESTful APIs. Load times and overall responsiveness improved noticeably, and everything works consistently across browsers. Solid communication and delivery - would definitely work with them again.",
+    image: "/quoteup.svg",
   },
   {
-    name: "ALAN BAKER",
-    title: "CEO",
+    name: "MUKHLIS",
+    title: "TECHAGENCY BANGLA",
     content:
-      "Working with HtSol Inc. has been an incredible experience. They truly listened to our needs and delivered a stunning design that exceeded our expectations. We couldn't be happier with the final product!<br/><br/>Working with HtSol Inc. has been an incredible experience. They truly listened to our needs and delivered a stunning design that exceeded our expectations",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces",
+      "Really great experience working together. Faseeh did an excellent job improving and polishing our frontend, with a strong focus on UI quality, performance optimization, and responsive behavior. Load times and overall responsiveness improved noticeably, and everything works consistently across browsers.",
+    image: "/quoteup.svg",
   },
   {
-    name: "SARAH JOHNSON",
-    title: "MARKETING DIRECTOR",
+    name: "MARISS N.",
+    title: "FOUNDER / CEO, SAME DAY BUILDERS, USA",
     content:
-      "The team's attention to detail and commitment to excellence is unmatched. Our new website has significantly improved our conversion rates and user engagement.",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces",
+      "I engaged Faseeh for marketing initiatives at Same Day Builders, a company specializing in handyman services. Faseeh and his team at HtSol demonstrated remarkable flexibility by accommodating my ever-changing schedule. During our initial proposal meeting, Faseeh addressed all of my questions and objectives, which gave me confidence in partnering with him. Given the positive experience and results, I extended my collaboration with HtSol to Meiidz as well.",
+    image: "/quoteup.svg",
   },
   {
-    name: "MICHAEL CHEN",
-    title: "CTO",
+    name: "JAMES ASUNA",
+    title: "PRINCIPAL DENTIST AND FOUNDER",
     content:
-      "Exceptional technical expertise combined with creative vision. HtSol Inc. delivered a robust, scalable solution perfectly aligned with our business needs.",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces",
+      "Our Account Manager at HtSol was very punctual and very communicative when it came to the campaign. I appreciate his will to understand what the client wants and overall the company to deliver.",
+    image: "/quoteup.svg",
   },
   {
-    name: "ALAN BAKER",
-    title: "CEO",
+    name: "ASIF N.",
+    title: "FOUNDER, MARKETING AGENCY, UK",
     content:
-      "Working with HtSol Inc. has been an incredible experience. They truly listened to our needs and delivered a stunning design that exceeded our expectations. We couldn't be happier with the final product!",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces",
+      "I was immediately impressed by their prompt and clear communication. They took time to understand the nuances of my project and asked insightful questions. Great campaign execution and support made the whole process collaborative and stress-free. Perfectly executed, and I was really happy with communication throughout.",
+    image: "/quoteup.svg",
   },
   {
-    name: "SARAH JOHNSON",
-    title: "MARKETING DIRECTOR",
+    name: "MUSA",
+    title: "FOUNDER, TRAVEL AGENCY, BANGLADESH",
     content:
-      "The team's attention to detail and commitment to excellence is unmatched. Our new website has significantly improved our conversion rates and user engagement.",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces",
+      "Project title: IT Consultation. Had a very engaging and productive meeting session. Good advice. They listened to the problem, viewed it from a broader perspective, and provided a proper solution. Anyone can talk to them for IT advice.",
+    image: "/quoteup.svg",
+  },
+  {
+    name: "JAEYOON",
+    title: "SOUTH KOREA",
+    content:
+      "It was great to work with HtSol. They were very keen on details and clarified unclear parts thoroughly. I already plan to build another software product for the healthcare industry with them. Helped me a lot with a great product.",
+    image: "/quoteup.svg",
+  },
+  {
+    name: "YANIS",
+    title: "FOUNDER, YOGA STUDIO, FRANCE",
+    content:
+      "Good and fast, never disappointed with HtSol. They work quickly and take time to understand your business and business logic.",
+    image: "/quoteup.svg",
   },
 ];
 
