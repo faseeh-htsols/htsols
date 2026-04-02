@@ -101,7 +101,7 @@ const OurWork = ({ data }: OurWorkData) => {
                                             </div>
                                         </div>
 
-                                        <div className="relative flex items-center justify-end lg:-mr-8 xl:-mr-12">
+                                        <div className="relative flex items-center justify-end">
                                             <div className="relative ml-auto aspect-4/3 w-[112%] max-w-none">
                                                 <Image
                                                     src={study.images[0]}

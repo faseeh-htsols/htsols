@@ -167,7 +167,7 @@ const WhyChooseHtsol = ({ data }: WhyChooseData) => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] gap-10 lg:gap-14 items-start">
-            <div className="flex flex-col gap-20">
+            <div className="flex flex-col gap-8">
               {data.accordion.map((item, index) => (
                 <button
                   key={item.heading}

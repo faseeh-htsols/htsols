@@ -37,18 +37,37 @@ const Skills = () => {
     <div className="relative py-20">
       <div className="bg-radial from-[#00A1A5] to-[#075B65] blur-[120px] absolute w-[150px] h-[150px] -top-10 -left-10 pointer-events-none" />
       <div className="max-w-[1770px] mx-auto px-5">
-        <div className="marquee-wrapper">
-          <div
-            className="marquee-content marquee-content--always-run gap-4"
-            style={{ animationDuration: "22s" }}
-          >
-            {SKILLS.map((skill, i) => (
-              <SkillPill key={`a-${i}`} skill={skill} />
-            ))}
-            {SKILLS.map((skill, i) => (
-              <SkillPill key={`b-${i}`} skill={skill} />
-            ))}
+        <div className="flex flex-col gap-4">
+          {/* First marquee */}
+          <div className="marquee-wrapper">
+            <div
+              className="marquee-content marquee-content--always-run gap-4"
+              style={{ animationDuration: "22s" }}
+            >
+              {SKILLS.map((skill, i) => (
+                <SkillPill key={`a-${i}`} skill={skill} />
+              ))}
+              {SKILLS.map((skill, i) => (
+                <SkillPill key={`b-${i}`} skill={skill} />
+              ))}
+            </div>
           </div>
+
+          {/* Second marquee - reverse direction */}
+          <div className="marquee-wrapper">
+            <div
+              className="marquee-content marquee-content--always-run marquee-content--reverse gap-4"
+              style={{ animationDuration: "22s" }}
+            >
+              {SKILLS.map((skill, i) => (
+                <SkillPill key={`c-${i}`} skill={skill} />
+              ))}
+              {SKILLS.map((skill, i) => (
+                <SkillPill key={`d-${i}`} skill={skill} />
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
