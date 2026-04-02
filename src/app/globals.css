@@ -212,7 +212,6 @@ body {
   animation: pulse-glow 4s ease-in-out infinite;
 }
 
-/* Marquee animation */
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -221,31 +220,6 @@ body {
   100% {
     transform: translateX(-50%);
   }
-}
-
-.marquee-wrapper {
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.marquee-content {
-  display: flex;
-  animation: marquee 30s linear infinite;
-  will-change: transform;
-}
-
-.marquee-content:hover {
-  animation-play-state: paused;
-}
-
-/* Marquee that keeps moving on hover (e.g. CEO skills strip) */
-.marquee-content.marquee-content--always-run:hover {
-  animation-play-state: running;
-}
-
-/* Reverse directionquee animation */
-.marquee-content--reverse {
-  animation-name: marquee-reverse;
 }
 
 @keyframes marquee-reverse {
@@ -258,6 +232,36 @@ body {
   }
 }
 
+.marquee-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  min-width: max-content;
+  will-change: transform;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-content>* {
+  flex-shrink: 0;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+.marquee-content.marquee-content--always-run:hover {
+  animation-play-state: running;
+}
+
+.marquee-content--reverse {
+  animation-name: marquee-reverse;
+}
 
 /* 
 .swiper-slide {

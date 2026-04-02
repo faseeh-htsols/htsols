@@ -946,60 +946,102 @@ export const CEO_ACHIEVEMENTS = [
 export const WHY_HIRE_ME_CEO = [
   {
     // icon: "/ceo/full-stack-architecture.json",
-    icon: "/services/why-icon-1.svg",
+    icon: "/ceo/why-icon-1-2.svg",
+    hoverIcon: "/ceo/why-icon-1.svg",
     heading: "HEALTHCARE & DENTAL GROWTH",
     para: " I specialize in helping dental clinics, medical practices, and mental health providers build digital systems that attract the right patients and convert them — not just look good online. From high-converting websites to custom booking systems and local SEO, I know what actually moves the needle in healthcare.",
   },
   {
     // icon: "/ceo/strategic-custom-solutions.json",
-    icon: "/services/why-icon-2.svg",
+    icon: "/ceo/why-icon-2.svg",
+    hoverIcon: "/ceo/why-icon-2-2.svg",
     heading: "AGENCY WHITE LABEL PARTNER",
     para: "Marketing agencies bring me in when they need delivery capacity they can trust. I work as a silent execution partner — building websites, platforms, and marketing systems under your brand, on your timelines, with full NDA protection. Your clients get enterprise-quality work. Your agency gets the credit.",
   },
   {
     // icon: "/ceo/cutting-edge.json",
-    icon: "/services/why-icon-3.svg",
+    icon: "/ceo/why-icon-3.svg",
+    hoverIcon: "/ceo/why-icon-3-2.svg",
     heading: "STRATEGY BACKED BY TECHNICAL DEPTH",
     para: "I've built full-stack MERN applications, custom CRMs, SaaS platforms, and AI-integrated systems from scratch. That technical foundation means I don't just recommend what to build — I understand how to build it, what it costs, and how long it actually takes. When I give you a strategy, I can execute it.",
   },
 ];
 
-export const INDUSTRIES_I_SERVE_CEO = [
+export const WHAT_I_DO_CEO = [
   {
-    name: "Education",
-    image: "/ceo/education.svg",
+    // icon: "/ceo/full-stack-architecture.json",
+    icon: "/ceo/what-do-icon-1.svg",
+    heading: "Digital Growth Strategy",
+    para: "Most businesses have activity without direction — content going out, ads running, a website sitting there — but no cohesive plan tying it all together. I build the strategy first: where you are, where you need to go, which channels deserve your budget, and in what order. Everything else follows from that.",
   },
+  {
+    // icon: "/ceo/strategic-custom-solutions.json",
+    icon: "/ceo/what-do-icon-2.svg",
+    heading: "Healthcare & Dental Marketing",
+    para: "I've built digital systems specifically for dental clinics, medical practices, and mental health providers. Attracting the right patients online is a different discipline from general marketing — it requires trust signals, local visibility, booking friction reduction, and content that speaks to someone in a vulnerable moment. I understand that nuance.",
+  },
+  {
+    // icon: "/ceo/cutting-edge.json",
+    icon: "/ceo/what-do-icon-3.svg",
+    heading: "AI Adoption & Automation",
+    para: "AI isn't a feature — it's a shift in how your business operates. I help businesses identify where AI can replace manual work, reduce costs, and scale output without adding headcount. From AI-powered customer support to automated marketing workflows to custom-built AI tools, I map what's actually useful for your specific operation — not what's trending on LinkedIn.",
+  },
+  {
+    // icon: "/ceo/full-stack-architecture.json",
+    icon: "/ceo/what-do-icon-4.svg",
+    heading: "Conversion-Optimised Web Design & Development",
+    para: "A website that looks good but doesn't convert is an expensive brochure. I design and build websites with one primary objective: turning the right visitors into enquiries, bookings, or sales. Every layout decision, every headline, every CTA placement is informed by how people actually make decisions online — not by what looks impressive in a portfolio.",
+  },
+  {
+    // icon: "/ceo/strategic-custom-solutions.json",
+    icon: "/ceo/what-do-icon-5.svg",
+    heading: "Custom CRM & Software Development",
+    para: "Off-the-shelf tools work until they don't. When your business outgrows generic software — or when your workflow simply doesn't fit any existing product — I build custom. CRMs, patient management systems, internal dashboards, SaaS platforms. Built to your exact process, owned entirely by you, and designed to scale as your business grows.",
+  },
+  {
+    // icon: "/ceo/cutting-edge.json",
+    icon: "/ceo/what-do-icon-6.svg",
+    heading: "Agency White Label Partnership",
+    para: "I work with marketing agencies as a silent execution partner. You bring the client relationships. I deliver the websites, platforms, and marketing systems — under your brand, on your timelines, with full NDA protection. No competing for your clients. No corner-cutting. Just consistent, quality delivery that makes your agency look excellent.",
+  },
+];
+
+export const INDUSTRIES_I_SERVE_CEO = [
   {
     name: "Healthcare",
     image: "/ceo/healthcare.svg",
   },
   {
-    name: "E-commerce",
+    name: "Dental",
+    image: "/ceo/dental.svg",
+  },
+  {
+    name: "Mental Health",
+    image: "/ceo/mental.svg",
+  },
+  {
+    name: "E-Commerce",
     image: "/ceo/ecommerence.svg",
   },
   {
-    name: "Travel",
-    image: "/ceo/travel.svg",
+    name: "SaaS & Technology",
+    image: "/ceo/saas.svg",
   },
   {
-    name: "Construction",
-    image: "/ceo/construction.svg",
+    name: "Professional Services",
+    image: "/ceo/professional.svg",
   },
   {
-    name: "Fitness",
-    image: "/ceo/fitness.svg",
+    name: "Fitness & Wellness",
+    image: "/ceo/fitness-2.svg",
   },
   {
-    name: "Food",
-    image: "/ceo/food.svg",
+    name: "reinforces white label positioning",
+    image: "/ceo/reinforces.svg",
   },
   {
-    name: "Insurance",
-    image: "/ceo/insurance.svg",
-  },
-  {
-    name: "Automotive",
-    image: "/ceo/automotive.svg",
+    name: "Education",
+    image: "/ceo/education.svg",
   },
   {
     name: "Real Estate",
@@ -1108,17 +1150,17 @@ export const BOLG_CURATE_CEO = [
   {
     image: "/ceo/blog-one.webp",
     slug: "/blog",
-    name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    name: "Why Most Dental Practice Websites Lose Patients Before They Even Call",
   },
   {
     image: "/ceo/blog-two.webp",
     slug: "/blog",
-    name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    name: "The Real Reason Your Agency's Websites Stop Converting After Launch",
   },
   {
     image: "/ceo/blog-three.webp",
     slug: "/blog",
-    name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    name: "What 100+ Projects Taught Me About Building Websites That Actually Grow Businesses",
   },
 ];
 export const NAV_ITEMS = [
@@ -1796,3 +1838,35 @@ export const CEO_FAQS = [
       "HTSOL brings design, development, and marketing under one roof — which is genuinely rare. Most agencies subcontract at least one of these disciplines. Because Faseeh has built everything himself across 8+ years, HTSOL can offer something most agencies can't: a single team that executes the full picture from strategy through technical implementation, with no handoff gaps and no blame between departments.",
   },
 ];
+
+export const CEO_CONVERSATION = {
+  title: "From First Conversation to Real Results",
+  para: "No long onboarding documents. No waiting three weeks to hear back. Here's exactly what working with me looks like — from the first call to delivery and beyond.",
+  bgColor: `#0F0F0F`,
+  accordion: [
+    {
+      number: "01",
+      title: "Discovery Call",
+      description:
+        "Before anything else, we have a direct conversation. You tell me where you are, what's not working, and what you actually need. I ask the questions most agencies skip — about your customers, your growth constraints, your timeline, and your budget reality. No pitch deck. No pressure. Just a focused 30–45 minutes that tells both of us whether we're the right fit.",
+    },
+    {
+      number: "02",
+      title: "Strategy & Scope",
+      description:
+        "Based on our conversation, I put together a clear plan — what we're building, why, in what order, and what it costs. Not a 40-page methodology document. A focused scope that outlines deliverables, timelines, and exactly what I need from you to make it work. You know what you're getting before you commit to a single dollar.",
+    },
+    {
+      number: "03",
+      title: "Build & Launch",
+      description:
+        "Once we're aligned, we move fast. I handle the execution — whether that's a website, a marketing system, a custom platform, or a full campaign rollout — with consistent communication throughout. You're never left wondering what's happening. Progress updates, clear decision points, and a launch that's tested and ready before it goes live.",
+    },
+    {
+      number: "04",
+      title: "Optimise & Grow",
+      description:
+        "Delivery isn't the finish line — it's the starting line. After launch I monitor performance, track what's working, and refine based on real data. Whether you're on a monthly retainer or a quarterly check-in, I stay engaged with your results. A website or campaign that isn't being actively improved is gradually losing ground to someone who is.",
+    },
+  ],
+};
