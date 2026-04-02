@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import HeadingTwo from "@/components/ui/heading-two";
 import Container from "@/components/ui/container";
 
 export default function Banner() {
   const [isOpen, setIsOpen] = useState(false);
+  const portfolioBannerImage = "/portfolio-banner.png";
+  const portfolioPlayButtonImage = "/play-button.svg";
+  const portfolioVideo = "/portfolio-video.mp4";
 
   return (
     <section className=" relative">
@@ -30,26 +32,27 @@ export default function Banner() {
       </div>
       <Container>
         <div className="flex flex-col items-center gap-8 pt-30 md:pt-40">
-          <h1 className="font-primary font-semibold text-3xl sm:text-4xl lg:text-5xl uppercase leading-tight mb-4 text-center">
+          <h1 className="font-primary font-semibold text-4xl sm:text-5xl lg:text-6xl uppercase leading-tight mb-2 text-center">
             OUR PORTFOLIO
           </h1>
           <div
-            className="relative w-full h-full cursor-pointer"
+            className="group relative w-full max-w-[1080px] h-[240px] sm:h-[340px] md:h-[420px] rounded-xl border border-white/20 overflow-hidden cursor-pointer"
             onClick={() => setIsOpen(true)}>
             <Image
-              src="/portfolio-banner.png"
+              src={portfolioBannerImage}
               alt="Portfolio preview"
               width={1280}
               height={720}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 flex items-center justify-center transition-colors duration-300 group-hover:bg-black/20">
+            <div className="absolute inset-0 bg-black/35 transition-colors duration-300 group-hover:bg-black/20" />
+            <div className="absolute inset-0 flex items-center justify-center">
               <Image
-                src="/play-button.svg"
+                src={portfolioPlayButtonImage}
                 alt="Play"
                 width={72}
                 height={72}
-                className=""
+                className="w-16 h-16 sm:w-[72px] sm:h-[72px]"
               />
             </div>
           </div>
@@ -69,7 +72,7 @@ export default function Banner() {
                 </button>
 
                 <video
-                  src="/portfolio-video.mp4"
+                  src={portfolioVideo}
                   controls
                   autoPlay
                   className="w-full h-auto aspect-video bg-black block"

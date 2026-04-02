@@ -35,10 +35,10 @@ export const TESTIMONIAL_CAROUSEL_DATA: TestimonialSlide[] = [
     watermark: "MACCO",
     brandLogo: "/cgi/kaybees-logo-hq.png",
     brandName: "Kaybees",
-    personName: "ABRAHAM",
-    personRole: "CEO | Tech Innovators",
+    personName: "SAM",
+    personRole: "Co-Founder, Meiidz",
     quote:
-      "Working with Muhammad Faseeh Ullah has helped us a lot. Their AI solutions helped us automate the online customer support, which helped us focus on the other core business responsibilities.",
+      "Really great experience working together. Faseeh did an excellent job improving and polishing our frontend, with a strong focus on UI quality, performance optimization, and responsive behavior. They worked confidently with React.js and Next.js and integrated everything smoothly with our RESTful APIs.",
   },
   {
     id: "t2",
@@ -48,10 +48,10 @@ export const TESTIMONIAL_CAROUSEL_DATA: TestimonialSlide[] = [
     brandLogo: "/cgi/kaybees-logo-hq.png",
     video: "/cgi1.mp4",
     brandName: "Kaybees",
-    personName: "SOPHIA",
-    personRole: "Marketing Lead | Food & Beverage",
+    personName: "MUKHLIS",
+    personRole: "TechAgency Bangla",
     quote:
-      "They improved our workflows and delivery speed. Communication was clear, and the output matched our expectations across design and execution.",
+      "Really great experience working together. Load times and overall responsiveness improved noticeably, and everything works consistently across browsers.",
   },
   {
     id: "t3",
@@ -61,10 +61,75 @@ export const TESTIMONIAL_CAROUSEL_DATA: TestimonialSlide[] = [
     watermark: "MACCO",
     brandLogo: "/cgi/kaybees-logo-hq.png",
     brandName: "Kaybees",
-    personName: "DANIEL",
-    personRole: "Operations Manager",
+    personName: "MARISS N.",
+    personRole: "Founder / CEO, Same Day Builders, USA",
     quote:
-      "The system they delivered reduced manual work and improved response times. Solid team and very reliable delivery.",
+      "I engaged Faseeh for marketing initiatives at Same Day Builders. Faseeh and his team at HtSol showed remarkable flexibility and addressed all of my objectives clearly, which made me confident in the partnership and led me to continue collaboration for another venture.",
+  },
+  {
+    id: "t4",
+    video: "/cgi1.mp4",
+    mediaImage: "/cgi/kaybees.webp",
+    mediaAlt: "Kaybees",
+    watermark: "MACCO",
+    brandLogo: "/cgi/kaybees-logo-hq.png",
+    brandName: "Kaybees",
+    personName: "JAMES ASUNA",
+    personRole: "Principal Dentist and Founder",
+    quote:
+      "Our Account Manager at HtSol was very punctual and communicative for the campaign. I appreciate his will to understand what the client wants and overall the company to deliver.",
+  },
+  {
+    id: "t5",
+    video: "/cgi1.mp4",
+    mediaImage: "/cgi/kaybees.webp",
+    mediaAlt: "Kaybees",
+    watermark: "MACCO",
+    brandLogo: "/cgi/kaybees-logo-hq.png",
+    brandName: "Kaybees",
+    personName: "ASIF N.",
+    personRole: "Founder, Marketing Agency, UK",
+    quote:
+      "I was immediately impressed by their prompt and clear communication. Great campaign execution and support made the work collaborative and stress-free.",
+  },
+  {
+    id: "t6",
+    video: "/cgi1.mp4",
+    mediaImage: "/cgi/kaybees.webp",
+    mediaAlt: "Kaybees",
+    watermark: "MACCO",
+    brandLogo: "/cgi/kaybees-logo-hq.png",
+    brandName: "Kaybees",
+    personName: "MUSA",
+    personRole: "Founder, Travel Agency, Bangladesh",
+    quote:
+      "Project title: IT Consultation. Had a very engaging and productive meeting session. They listened to the problem from a broader perspective and gave proper advice.",
+  },
+  {
+    id: "t7",
+    video: "/cgi1.mp4",
+    mediaImage: "/cgi/kaybees.webp",
+    mediaAlt: "Kaybees",
+    watermark: "MACCO",
+    brandLogo: "/cgi/kaybees-logo-hq.png",
+    brandName: "Kaybees",
+    personName: "JAEYOON",
+    personRole: "South Korea",
+    quote:
+      "It was great to work with HtSol. They were very keen on details and clarified unclear parts thoroughly. I am planning another software project with them.",
+  },
+  {
+    id: "t8",
+    video: "/cgi1.mp4",
+    mediaImage: "/cgi/kaybees.webp",
+    mediaAlt: "Kaybees",
+    watermark: "MACCO",
+    brandLogo: "/cgi/kaybees-logo-hq.png",
+    brandName: "Kaybees",
+    personName: "YANIS",
+    personRole: "Founder, Yoga Studio, France",
+    quote:
+      "Good and fast, never disappointed with HtSol. They work quickly and take time to understand your business and business logic.",
   },
 ];
 
@@ -290,7 +355,7 @@ export default function TestimonialCarousel({
                     <div className="mt-5 h-px w-full bg-white/15" />
 
                     {/* Quote mark */}
-                    <div className="mt-7 text-[#2CA6A6] text-[60px] leading-[1] font-bold select-none">
+                    <div className="mt-7 text-[#2CA6A6] text-[60px] leading-none font-bold select-none">
                       <Image
                         src={"/cgi/qoute.svg"}
                         width={200}
