@@ -20,7 +20,7 @@ const WhyHireMe = () => {
       <div className="bg-tertiary py-24 lg:py-40 relative">
         <Container>
           <div>
-            <div className="max-w-[1124px] mx-auto flex flex-col gap-5 mb-4">
+            <div className="max-w-[1124px] mx-auto flex flex-col gap-5 mb-4 md:mb-8">
               <HeadingTwo className="text-center">Why hire me</HeadingTwo>
               <p className="text-center">
                 Most agencies separate strategy from execution. Most developers
@@ -41,14 +41,22 @@ const WhyHireMe = () => {
                   0 {index + 1}
                 </div>
                 <div className="flex flex-col gap-4">
-                  <div className="p-4 border border-[#075B65] group-hover:bg-white w-fit rounded-full group-hover:[&_svg_path]:fill-black!">
+                  <div className="relative p-4 border border-[#075B65] group-hover:bg-white w-fit rounded-full group-hover:[&_svg_path]:fill-black!">
                     {/* {parse(item.svg)} */}
                     <Image
                       width={27}
                       height={34}
                       src={item.icon}
                       alt={item.heading}
-                      className="w-[45px] h-[45px]"
+                      className="w-[45px] h-[45px] transition-opacity group-hover:opacity-0"
+                    />
+
+                    <Image
+                      width={27}
+                      height={34}
+                      src={item.hoverIcon}
+                      alt={item.heading}
+                      className="w-[45px] h-[45px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity group-hover:opacity-100"
                     />
                     {/* <LottiePlayer
                       className="w-[45px] h-[45px]"
