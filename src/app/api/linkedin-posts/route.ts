@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export const revalidate = 1800;
+export const revalidate = 18000;
 
 const RAPID_HOST = "fresh-linkedin-scraper-api.p.rapidapi.com";
 const BASE = `https://${RAPID_HOST}`;
