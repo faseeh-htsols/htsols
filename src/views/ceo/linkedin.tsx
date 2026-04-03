@@ -101,18 +101,12 @@ function PostCard({ post }: { post: LinkedInPost }) {
                     </div>
                     <div className="flex h-8 w-8 shrink-0">
                         <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
-                            <a
-                                href={post.url || ""}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Open post on LinkedIn">
-                                <Image
-                                    src="/ceo/linkedIn-img.svg"
-                                    alt="LinkedIn"
-                                    fill
-                                    className="object-contain"
-                                />
-                            </a>
+                            <Image
+                                src="/ceo/linkedIn-img.svg"
+                                alt="LinkedIn"
+                                fill
+                                className="object-contain"
+                            />
                         </div>
                     </div>
                 </div>
@@ -388,7 +382,11 @@ export default function LinkedInPosts() {
                                 className="">
                                 {posts.map((post) => (
                                     <SwiperSlide key={post.id} className="h-auto!">
-                                        <PostCard post={post} />
+                                        <a
+                                            href={post.url || ""}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Open post on LinkedIn"><PostCard post={post} /></a>
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
