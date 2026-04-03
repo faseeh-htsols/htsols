@@ -4,34 +4,30 @@ import React from "react";
 
 const Achievements = () => {
   return (
-    <div className="py-20 lg:py-40">
+    <div className="pb-24 md:pb-20 lg:pb-40 lg:pt-0">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-3 bg-tertiary rounded-lg border border-[#075B65]">
           {CEO_ACHIEVEMENTS.map((item, index) => (
             <div key={item.name} className="py-5 px-2 relative">
               {/* Desktop (right side) */}
               <div
-                className={`hidden lg:block ${
-                  CEO_ACHIEVEMENTS.length - 1 === index
-                    ? ""
-                    : "absolute top-0 right-0 h-full w-px bg-[#075B65] bg-cover shadow-[0_0_10px_#075B65]"
-                }`}></div>
+                className={`hidden lg:block ${CEO_ACHIEVEMENTS.length - 1 === index
+                  ? ""
+                  : "absolute top-0 right-0 h-full w-px bg-[#075B65] bg-cover shadow-[0_0_10px_#075B65]"
+                  }`}></div>
               <div
-                className={`hidden lg:block ${
-                  CEO_ACHIEVEMENTS.length - 1 === index
-                    ? ""
-                    : "absolute top-[37%] -right-[5px] h-2.5 rounded-full  w-2.5 bg-[#075B65] bg-cover shadow-[0_0_10px_#075B65]"
-                }`}></div>
+                className={`hidden lg:block ${CEO_ACHIEVEMENTS.length - 1 === index
+                  ? ""
+                  : "absolute top-[37%] -right-[5px] h-2.5 rounded-full  w-2.5 bg-[#075B65] bg-cover shadow-[0_0_10px_#075B65]"
+                  }`}></div>
               <div
-                className={`hidden lg:block ${
-                  CEO_ACHIEVEMENTS.length - 1 === index
-                    ? ""
-                    : "absolute top-[73%] -right-[5px] h-2.5 rounded-full  w-2.5 bg-[#075B65] bg-cover shadow-[0_0_10px_#075B65]"
-                }`}></div>
+                className={`hidden lg:block ${CEO_ACHIEVEMENTS.length - 1 === index
+                  ? ""
+                  : "absolute top-[73%] -right-[5px] h-2.5 rounded-full  w-2.5 bg-[#075B65] bg-cover shadow-[0_0_10px_#075B65]"
+                  }`}></div>
               <div
-                className={`block lg:hidden ${
-                  CEO_ACHIEVEMENTS.length - 1 === index ? "hidden" : ""
-                }`}>
+                className={`block lg:hidden ${CEO_ACHIEVEMENTS.length - 1 === index ? "hidden" : ""
+                  }`}>
                 <div className="absolute left-0 bottom-0 w-full h-px bg-[#075B65] bg-cover shadow-[0_0_10px_#075B65]" />
                 <div className="absolute bottom-[-5px] left-[27%] h-2.5 w-2.5 rounded-full bg-[#075B65] bg-cover shadow-[0_0_10px_#075B65]" />
                 <div className="absolute bottom-[-5px] left-[63%] h-2.5 w-2.5 rounded-full bg-[#075B65] bg-cover shadow-[0_0_10px_#075B65]" />

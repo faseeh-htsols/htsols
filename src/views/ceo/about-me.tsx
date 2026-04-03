@@ -4,18 +4,18 @@ import Image from "next/image";
 
 const AboutMe = () => {
   return (
-    <div className="py-20 lg:py-40">
+    <div className="pb-20 lg:pt-0">
       <Container>
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="w-full lg:w-[40%] shrink-0 p-4 pr-0 relative">
             <div
               className="absolute left-0 top-0 h-full  w-[40%] rounded-lg border-3 border-[#075B65]"
-              // style={{
-              //   border: " 5px solid",
+            // style={{
+            //   border: " 5px solid",
 
-              //   borderImageSource:
-              //     "linear-gradient(90deg, #075B65 0%, #00838A 37.02%, #328A99 81.25%)",
-              // }}
+            //   borderImageSource:
+            //     "linear-gradient(90deg, #075B65 0%, #00838A 37.02%, #328A99 81.25%)",
+            // }}
             ></div>
             <Image
               src={"/ceo/about-me.webp"}

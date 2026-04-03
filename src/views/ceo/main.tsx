@@ -6,7 +6,7 @@ import Banner from "./banner";
 import BlogCurate from "./blog-curate";
 import ClientsAboutMe from "./clients-about-me";
 import IndustriesServe from "./industries-serve";
-// import LinkedInPosts from "./linkedin-posts";
+import LinkedInPosts from "./linkedin-posts";
 import Skills from "./skills";
 import ViewOnInstgram from "./view-on-instgram";
 import WhatACall from "./what-a-call";
@@ -15,6 +15,7 @@ import WhatIDo from "./what-i-do";
 import HowWorks from "../mississauga/how-works";
 import { CEO_FAQS, CEO_CONVERSATION } from "@/constants";
 import Experties from "./experties";
+import LinkedIn from "./linkedin";
 
 const CeoMain = () => {
   return (
@@ -31,7 +32,8 @@ const CeoMain = () => {
       <WhatACall />
       <BlogCurate />
       {/* <LinkedInPosts /> */}
-      <ViewOnInstgram />
+      {/* <ViewOnInstgram /> */}
+      <LinkedIn />
       {/* <FAQSection faqs={CEO_FAQS} /> */}
       <LogosMarquee />
     </>
