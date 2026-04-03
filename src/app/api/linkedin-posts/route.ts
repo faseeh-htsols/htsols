@@ -154,30 +154,41 @@ function extractProfileUrn(body: unknown): string {
   return findMemberUrnInProfile(data ?? j);
 }
 
-function normalizePost(raw: Record<string, unknown>) {
+function normalizePost(
+  raw: Record<string, unknown>,
+  imageMap?: Map<string, string>,
+) {
   const content = raw.content as Record<string, unknown> | undefined;
   const images = content?.images as Array<{ url?: string }> | undefined;
   const article = content?.article as Record<string, unknown> | undefined;
   const articleImage = article?.image as Array<{ url?: string }> | undefined;
 
+  const id = pickString(raw.urn, raw.id, String(Math.random()));
+  const url = pickString(raw.url, raw.post_url) || null;
+
+  const mappedImage =
+    imageMap?.get(id) ||
+    (url ? imageMap?.get(url) : undefined) ||
+    null;
+
   return {
-    id: pickString(raw.urn, raw.id, String(Math.random())),
+    id,
     text: pickString(raw.text, raw.commentary),
     publishedAt: pickString(raw.published_at, raw.created_at) || null,
-    url: pickString(raw.url, raw.post_url) || null,
+    url,
     likes: pickNumber(raw.likes_count, raw.num_likes),
     comments: pickNumber(raw.comments_count, raw.num_comments),
     reposts: pickNumber(raw.reposts_count, raw.num_reposts),
-    image: pickString(images?.[0]?.url, raw.image) || null,
+    image: pickString(images?.[0]?.url, raw.image, mappedImage) || null,
     article:
       article && typeof article.title === "string"
         ? {
-            title: article.title as string,
-            url: pickString(article.article_url, article.url) || "#",
-            image: articleImage?.[0]?.url
-              ? String(articleImage[0].url)
-              : null,
-          }
+          title: article.title as string,
+          url: pickString(article.article_url, article.url) || "#",
+          image: articleImage?.[0]?.url
+            ? String(articleImage[0].url)
+            : null,
+        }
         : null,
   };
 }
@@ -197,11 +208,38 @@ export async function GET() {
   try {
     /** Documented params: `username` + `page` (avoid undocumented `count`). */
     const postsByUsernameUrl = `${BASE}/api/v1/user/posts?username=${encodeURIComponent(username)}&page=1`;
-    const postsTry = await fetch(postsByUsernameUrl, {
-      headers: rapidHeaders(apiKey),
-      next: { revalidate: POSTS_CACHE_SEC },
-    });
+    const imagesByUsernameUrl = `${BASE}/api/v1/user/images?username=${encodeURIComponent(username)}&page=1`;
+
+    const [postsTry, imagesTry] = await Promise.all([
+      fetch(postsByUsernameUrl, {
+        headers: rapidHeaders(apiKey),
+        next: { revalidate: POSTS_CACHE_SEC },
+      }),
+      fetch(imagesByUsernameUrl, {
+        headers: rapidHeaders(apiKey),
+        next: { revalidate: POSTS_CACHE_SEC },
+      }),
+    ]);
+
     const postsTryBody = (await postsTry.json()) as RapidJson;
+    const imagesTryBody = (await imagesTry.json()) as RapidJson;
+
+    const imageMap = new Map<string, string>();
+
+    if (imagesTry.ok && Array.isArray(imagesTryBody.data)) {
+      for (const item of imagesTryBody.data as Record<string, unknown>[]) {
+        const imageId = pickString(item.id);
+        const imageUrl = pickString(item.url);
+
+        const imgs = item.images as Array<{ url?: string }> | undefined;
+        const firstImage = pickString(imgs?.[0]?.url);
+
+        if (firstImage) {
+          if (imageId) imageMap.set(imageId, firstImage);
+          if (imageUrl) imageMap.set(imageUrl, firstImage);
+        }
+      }
+    }
 
     if (
       postsTry.ok &&
@@ -210,7 +248,7 @@ export async function GET() {
     ) {
       const rawList = postsTryBody.data as Record<string, unknown>[];
       return NextResponse.json({
-        posts: rawList.slice(0, POST_LIMIT).map((p) => normalizePost(p)),
+        posts: rawList.slice(0, POST_LIMIT).map((p) => normalizePost(p, imageMap)),
         fetchedAt: new Date().toISOString(),
       });
     }
@@ -295,7 +333,7 @@ export async function GET() {
 
     const rawList = postsJson.data as Record<string, unknown>[];
     return NextResponse.json({
-      posts: rawList.slice(0, POST_LIMIT).map((p) => normalizePost(p)),
+      posts: rawList.slice(0, POST_LIMIT).map((p) => normalizePost(p, imageMap)),
       fetchedAt: new Date().toISOString(),
     });
   } catch (e) {

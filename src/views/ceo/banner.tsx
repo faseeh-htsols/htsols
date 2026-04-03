@@ -5,7 +5,26 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="bg-[url(/ceo/header-bg.webp)] bg-cover bg-center pt-14 sm:pt-20">
+    <div className="bg-[url(/ceo/header-bg.webp)] bg-cover bg-center pt-14 sm:pt-20 relative">
+      {/* Corner gradient glows */}
+      <div className="absolute top-20 left-0">
+        <Image
+          src={"/left-gradient.webp"}
+          width={500}
+          height={500}
+          className="w-[350px] h-[350px]"
+          alt="left gradient"
+        />
+      </div>
+      <div className="absolute top-20 right-0">
+        <Image
+          src={"/right-gradient.webp"}
+          width={500}
+          height={500}
+          className="w-[350px] h-[350px]"
+          alt="left gradient"
+        />
+      </div>
       <Container>
         <div className="flex justify-center relative">
           <Image
