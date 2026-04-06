@@ -9,7 +9,7 @@ const lists = [
 ];
 export default function OurStory() {
   return (
-    <section className="relative bg-[url(/dental/bg-why-choose.webp)] bg-cover py-20 lg:py-40 overflow-hidden">
+    <section className="relative bg-[url(/dental/bg-why-choose.webp)] bg-cover bg-no-repeat bg-center py-20 lg:py-40 overflow-hidden">
       {/* subtle gradient */}
       {/* <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/30 to-transparent" /> */}
 
@@ -23,12 +23,12 @@ export default function OurStory() {
 
           {/* Item 1 */}
           <div className="mb-8">
-            <p className="text-sm text-white/75 leading-relaxed mb-4">
+            <p className="leading-relaxed mb-4">
               HTSOL Inc. was built on a simple belief: Canadian businesses
               deserve a digital partner that makes growth feel clear and
               achievable. Not confusing or overwhelming.
             </p>
-            <p>
+            <p className="leading-relaxed">
               We bring together the skills most companies need to grow online,
               including strategy, design, development, marketing, and AI-driven
               optimization. This helps you move faster with one aligned team. It
