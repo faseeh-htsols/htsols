@@ -52,7 +52,7 @@ const ReadyToGrow = () => {
                 </div>
 
                 <div className="flex mt-4">
-                  <Button href="/">Get a free SEO review</Button>
+                  <Button href="#contact-form">Get a free SEO review</Button>
                 </div>
               </div>
 
@@ -109,11 +109,11 @@ const ReadyToGrow = () => {
                 </p>
 
                 <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                  <Button variant="white" href="/">
+                  <Button variant="white" href="/contact-us">
                     Request an SEO consultation
                   </Button>
 
-                  <Button variant="white">Get my SEO roadmap</Button>
+                  <Button variant="white" href="#contact-form">Get my SEO roadmap</Button>
                 </div>
               </div>
             </div>

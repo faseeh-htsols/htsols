@@ -30,7 +30,9 @@ const CgiMain = () => {
       <TestimonialCarousel />
       <PortfolioGrid />
       <WannaStart />
-      <FillForm />
+      <div id="contact-form">
+        <FillForm />
+      </div>
     </>
   );
 };

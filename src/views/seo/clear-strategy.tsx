@@ -52,8 +52,8 @@ const ClearStrategy = () => {
               </div>
 
               <div className="flex flex-wrap items-center justify-center gap-4 mt-4 lg:mt-10">
-                <Button href="/">GET A FREE SEO REVIEW</Button>
-                <Button href="/" variant="outline">
+                <Button href="/contact-us">GET A FREE SEO REVIEW</Button>
+                <Button href="#contact-form" variant="outline">
                   TALK TO AN SEO EXPERT
                 </Button>
               </div>

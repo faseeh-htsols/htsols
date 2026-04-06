@@ -35,12 +35,12 @@ const Banner = () => {
             Web Development Company in Canada
           </h1>
           <div style={{ background: tealGradient }}>
-              <HeadingTwo
-                className="inline-block px-4 py-2 rounded-lg text-white font-medium uppercase tracking-wide text-center "
-              >
-                Websites Built For Speed, Search Visibility, And Real Business Growth
-              </HeadingTwo>
-            </div>
+            <HeadingTwo
+              className="inline-block px-4 py-2 rounded-lg text-white font-medium uppercase tracking-wide text-center "
+            >
+              Websites Built For Speed, Search Visibility, And Real Business Growth
+            </HeadingTwo>
+          </div>
         </div>
 
         <p className="text-lg text-center mb-8">
@@ -54,8 +54,8 @@ const Banner = () => {
           business actually needs.
         </p>
         <div className="flex gap-3 mb-8 justify-center">
-          <Button href="/">BOOK A FREE CONSULTATION</Button>
-          <Button href="/" variant="outline">
+          <Button href="/contact-us">BOOK A FREE CONSULTATION</Button>
+          <Button href="#contact-form" variant="outline">
             Request a Proposal
           </Button>
         </div>

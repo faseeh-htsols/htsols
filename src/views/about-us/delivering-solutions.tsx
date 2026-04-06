@@ -72,7 +72,7 @@ const DeliveringSolutions = () => {
             ))}
           </div>
           <div className="flex justify-center">
-            <Button href="/">Get a Free Proposal</Button>
+            <Button href="/contact-us">Get a Free Proposal</Button>
           </div>
         </Container>
       </div>

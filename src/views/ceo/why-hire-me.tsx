@@ -72,7 +72,7 @@ const WhyHireMe = () => {
             ))}
           </div>
           <div className="flex justify-center">
-            <Button href="/">Let’s discuss your project</Button>
+            <Button href="/contact-us">Let’s discuss your project</Button>
           </div>
         </Container>
       </div>

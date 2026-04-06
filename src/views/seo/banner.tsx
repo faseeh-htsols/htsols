@@ -86,8 +86,8 @@ const Banner = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Button href="/">Get a Free SEO Review</Button>
-              <Button href="/" variant="outline">
+              <Button href="/contact-us">Get a Free SEO Review</Button>
+              <Button href="#contact-form" variant="outline">
                 Talk to an SEO Expert
               </Button>
             </div>

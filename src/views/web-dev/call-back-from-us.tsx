@@ -18,7 +18,7 @@ const CallBackFromUs = () => {
               and helps your marketing work harder, HTSOL Inc. can help.
             </p>
             <div className="flex">
-              <Button href="/">Book a Free Consultation </Button>
+              <Button href="/contact-us">Book a Free Consultation </Button>
             </div>
           </div>
           <div className="lg:w-[37%] lg:absolute lg:-top-10 lg:right-0">

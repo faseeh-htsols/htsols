@@ -1,42 +1,61 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import SplitType from "split-type";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useCallback, useEffect, useRef, useState } from "react";
+import PopUp from "@/components/ui/popup-youtube";
+import { Swiper, SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperInstance } from "swiper";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const WHY_CHOOSE_ITEMS = [
   {
+    id: "oneTeam",
     heading: "ONE TEAM FOR DEVELOPMENT AND MARKETING",
     description:
       "Your website should work with your SEO, ads, and content strategy. We build with your full digital ecosystem in mind.",
     image: "/website/one-team.png",
   },
   {
+    id: "performanceFirst",
     heading: "PERFORMANCE-FIRST BUILDS",
     description:
       "Speed, stability, and mobile usability are treated as requirements, not optional extras. This supports better user experience and more reliable Core Web Vitals.",
     image: "/website/performance-first.png",
   },
   {
+    id: "clearTransparent",
     heading: "CLEAR, TRANSPARENT PROCESS",
     description:
       "You get clear milestones, practical guidance, and a build process that stays organized.",
     image: "/website/clear-transparent.png",
   },
   {
+    id: "desForTrust",
     heading: "DESIGNED FOR TRUST",
     description:
       "We help you present your services clearly, build credibility, and reduce friction for users who are ready to contact you.",
     image: "/website/designed-trust.png",
   },
   {
+    id: "builtToScale",
     heading: "BUILT TO SCALE",
     description:
       "Your site should support new services, new locations, and future campaigns without needing a rebuild every year.",
     image: "/website/built-to-scale.png",
   },
 ];
+
+const MOBILE_SLIDE_VIDEO_DELAY_MS = 450;
 
 const WhyChooseHtsol = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -70,49 +89,250 @@ const WhyChooseHtsol = () => {
     );
   }, [activeIndex, slideDirection]);
 
+
+  const mainRef = useRef<null | HTMLDivElement>(null);
+  const containerRef = useRef<null | HTMLDivElement>(null);
+  const rightRef = useRef<null | HTMLDivElement>(null);
+  const headingRef = useRef<HTMLHeadingElement | null>(null);
+  const paraRef = useRef<HTMLHeadingElement | null>(null);
+  // useGSAP(() => {
+  //   const photos = gsap.utils.toArray(".photos:not(:first-child)");
+  //   gsap.set(photos, { yPercent: 100 });
+  //   const animation = gsap.to(photos, {
+  //     yPercent: 0,
+  //     duration: 1,
+  //     stagger: 1,
+  //   });
+  //   ScrollTrigger.create({
+  //     trigger: containerRef.current,
+  //     start: "top top",
+  //     end: "bottom bottom",
+  //     pin: rightRef.current,
+  //     animation: animation,
+  //     scrub: true,
+  //   });
+  // });
+  useGSAP(
+    () => {
+      const photos = gsap.utils.toArray<HTMLElement>(".photos");
+      const mm = gsap.matchMedia();
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
+      const split = new SplitType(headingRef.current!, {
+        types: isMobile ? "words" : "words",
+      });
+      const targets = isMobile ? split.words : split.chars;
+      const splitPara = new SplitType(paraRef.current!, {
+        types: isMobile ? "words" : "words",
+      });
+      const targetsPara = isMobile ? splitPara.words : splitPara.chars;
+      gsap.from(targets, {
+        x: 2,
+        duration: 1.8,
+        opacity: 0,
+        stagger: 0.06,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: "top 100%",
+          end: "bottom bottom",
+        },
+      });
+      gsap.from(targetsPara, {
+        x: -2,
+        opacity: 0,
+        stagger: 0.006,
+        duration: 1.2,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: paraRef.current,
+          start: "top 100%",
+          end: "bottom bottom",
+          // markers: true,
+        },
+      });
+      // Tailwind lg = 1024px by default
+      mm.add("(min-width: 1024px)", () => {
+        // base states
+        gsap.set(photos, { opacity: 1 });
+        gsap.set(photos.slice(1), { yPercent: 100 });
+
+        const tl = gsap.timeline({ defaults: { ease: "none" } });
+
+        // step-by-step: bring next in + dim previous
+        for (let i = 1; i < photos.length; i++) {
+          tl.to(
+            photos[i - 1],
+            { opacity: 0.3, duration: 1 },
+            `step${i}`, // same label as next animation
+          ).to(photos[i], { yPercent: 0, duration: 1 }, `step${i}`);
+        }
+
+        ScrollTrigger.create({
+          trigger: containerRef.current,
+          start: "top top",
+          end: "bottom bottom",
+          pin: rightRef.current,
+          animation: tl,
+          scrub: true,
+          // invalidateOnRefresh: true,
+          pinSpacing: false,
+        });
+      });
+    },
+    { scope: mainRef },
+  );
+  const [open, setOpen] = useState(false);
+  const [activeSrc, setActiveSrc] = useState<string | null>(null);
+  const openPopup = (src: string) => {
+    setActiveSrc(src);
+    setOpen(true);
+  };
+
+  const closePopup = () => {
+    setOpen(false);
+    setActiveSrc(null);
+  };
+
+  const mobileVideoPlayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(
+    null,
+  );
+
+  const syncMobileSliderVideos = useCallback((swiper: SwiperInstance) => {
+    if (mobileVideoPlayTimerRef.current !== null) {
+      clearTimeout(mobileVideoPlayTimerRef.current);
+      mobileVideoPlayTimerRef.current = null;
+    }
+
+    swiper.slides.forEach((slideEl) => {
+      const video = slideEl.querySelector<HTMLVideoElement>("video");
+      if (!video) return;
+      if (!slideEl.classList.contains("swiper-slide-active")) {
+        video.pause();
+      }
+    });
+
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    const activeVideo =
+      activeSlide?.querySelector<HTMLVideoElement>("video") ?? null;
+    if (activeVideo) {
+      mobileVideoPlayTimerRef.current = setTimeout(() => {
+        mobileVideoPlayTimerRef.current = null;
+        void activeVideo.play();
+      }, MOBILE_SLIDE_VIDEO_DELAY_MS);
+    }
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (mobileVideoPlayTimerRef.current !== null) {
+        clearTimeout(mobileVideoPlayTimerRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section className="py-20 lg:py-40 bg-tertiary">
+    <section ref={mainRef} className="py-10 lg:pt-10 lg:pb-0 bg-tertiary">
       <Container>
-        <HeadingTwo className="text-center pb-4 border-b border-white mb-10">
+        <HeadingTwo className="text-center pb-4 border-b border-white mb-10 lg:mb-0" ref={headingRef}>
           Why Choose HTSOL Inc. for Web Development
         </HeadingTwo>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] gap-10 lg:gap-14 items-start">
-          <div className="flex flex-col gap-20">
-            {WHY_CHOOSE_ITEMS.map((item, index) => (
-              <button
-                key={item.heading}
-                type="button"
-                onClick={() => handleSelect(index)}
-                className="text-left transition-colors px-1">
-                <h3
-                  className={`font-primary font-medium uppercase text-sm sm:text-base md:text-lg tracking-wide ${activeIndex === index ? "text-white" : "text-white/80"
-                    }`}>
-                  {item.heading}
-                </h3>
-                <p
-                  className={`mt-2 text-xs sm:text-sm leading-relaxed max-w-xl ${activeIndex === index ? "text-white" : "text-white/70"
-                    }`}>
-                  {item.description}
-                </p>
-              </button>
-            ))}
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] gap-10 lg:gap-14 items-start" ref={containerRef}>
+
+          <div className="">
+            <div className="no-limitations-mob-slider overflow-hidden lg:hidden">
+              <Swiper
+                modules={[Pagination, Autoplay]}
+                pagination={{ clickable: true }}
+                slidesPerView={1}
+                spaceBetween={24}
+                rewind
+                roundLengths
+                speed={480}
+                autoHeight
+                autoplay={{
+                  delay: 5500,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: true,
+                  waitForTransition: true,
+                }}
+                onSwiper={syncMobileSliderVideos}
+                onSlideChangeTransitionEnd={syncMobileSliderVideos}
+                className="pb-10!"
+              >
+                {WHY_CHOOSE_ITEMS.map((item) => (
+                  <SwiperSlide key={item.id} className="h-auto!">
+                    <div className="flex flex-col gap-4">
+                      <h3 className="text-[20px] uppercase font-primary">
+                        {item.heading}
+                      </h3>
+                      <Image
+                        src={item.image}
+                        alt={item.heading}
+                        width={300}
+                        height={300}
+                        className="h-[300px] w-full rounded-2xl object-cover"
+                      />
+                      <p >{item.description}</p>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+
+            <div className="hidden flex-col gap-8 lg:flex">
+              {WHY_CHOOSE_ITEMS.map((item) => (
+                <div
+                  key={item.id}
+                  className="flex flex-col justify-center gap-4 lg:h-screen"
+                >
+                  <h3 className="text-[20px] uppercase font-primary">
+                    {item.heading}
+                  </h3>
+                  <p className=" leading-relaxed">{item.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Right: image that changes with selection */}
-          <div className="relative w-full aspect-4/3 lg:aspect-5/4 rounded-2xl bg-[#191919] overflow-hidden border border-white/10">
-            <div ref={imageRef} className="absolute inset-0">
-              <Image
-                src={activeItem.image}
-                alt={activeItem.heading}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 40vw"
-              />
+          <div
+            className="relative lg:h-screen grow hidden lg:flex items-center"
+            ref={rightRef}
+          >
+            <div className="relative w-[40vw] h-[30vw]  rounded-2xl bg-[#191919] overflow-hidden border border-white/10">
+              {WHY_CHOOSE_ITEMS.map((item) => (
+                <div
+                  key={item.id}
+                  className="photos absolute inset-0 h-full w-full"
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.heading}
+                    fill
+                    className="object-cover h-full min-w-full"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </Container>
+      <style jsx global>{`
+        .no-limitations-mob-slider .swiper-wrapper {
+          align-items: flex-start;
+        }
+        .no-limitations-mob-slider .swiper-slide {
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+        .no-limitations-mob-slider .swiper-pagination-bullet {
+          background: rgba(255, 255, 255, 0.45);
+        }
+        .no-limitations-mob-slider .swiper-pagination-bullet-active {
+          background: #00a1a5;
+          opacity: 1;
+        }
+      `}</style>
     </section>
   );
 };

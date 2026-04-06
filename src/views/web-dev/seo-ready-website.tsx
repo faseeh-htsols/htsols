@@ -69,7 +69,7 @@ const SeoReadyWebsite = () => {
                   </p>
 
                   <div className="mt-6 flex justify-center">
-                    <Button href="/">BOOK A FREE CONSULTATION</Button>
+                    <Button href="/contact-us">BOOK A FREE CONSULTATION</Button>
                   </div>
                 </div>
               </div>

@@ -56,7 +56,7 @@ const Banner = () => {
           </h1>
         </div>
         <div className="flex justify-center">
-          <Button href="/">View PitchDeck</Button>
+          <Button href="/contact-us">View PitchDeck</Button>
         </div>
       </Container>
       <div className="absolute left-1/2 -translate-x-1/2 -bottom-3 lg:-bottom-3 3xl:bottom-12">

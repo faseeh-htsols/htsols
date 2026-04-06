@@ -90,7 +90,7 @@ const WhyChoose = () => {
                   marketing costs rise.
                 </p>
                 <div className="flex ">
-                  <Button href="/">Get Started</Button>
+                  <Button href="#contact-form">Get Started</Button>
                 </div>
               </div>
             </div>

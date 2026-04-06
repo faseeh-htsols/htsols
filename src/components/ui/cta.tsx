@@ -17,7 +17,7 @@ const CTA = () => {
               Services, Graphic Designing.
             </p>
             <div className="flex">
-              <Button href="/">Schedule A call Back</Button>
+              <Button href="/contact-us">Schedule A call Back</Button>
             </div>
           </div>
           <div className="lg:w-[37%] lg:absolute lg:-top-10 lg:right-0">
