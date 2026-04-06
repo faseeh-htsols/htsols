@@ -8,6 +8,7 @@ import Button from "@/components/ui/Button";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,6 +18,7 @@ interface PortfolioSlide {
   description: string;
   stats: string[];
   image: string;
+  btnLink: string;
 }
 
 const portfolioSlides: PortfolioSlide[] = [
@@ -27,6 +29,8 @@ const portfolioSlides: PortfolioSlide[] = [
       "High-performing teams that plug seamlessly into your workflows so you can scale faster.High-performing teams that plug",
     stats: ["UI/UX", "E-COMMERCE", "PERFORMANCE"],
     image: "/web-dev.webp",
+    btnLink: "/services/website-development",
+
   },
   {
     label: "VERTEX DASH",
@@ -35,6 +39,7 @@ const portfolioSlides: PortfolioSlide[] = [
       "High-performing teams that plug seamlessly into your workflows so you can scale faster.High-performing teams that plug",
     stats: ["PRODUCT DESIGN", "SAAS", "MOBILE"],
     image: "/web-dev.webp",
+    btnLink: "/services/digital-marketing",
   },
   {
     label: "NOVA GRID",
@@ -43,6 +48,7 @@ const portfolioSlides: PortfolioSlide[] = [
       "High-performing teams that plug seamlessly into your workflows so you can scale faster.High-performing teams that plug",
     stats: ["DEDICATED TEAMS", "STRATEGY", "DELIVERY"],
     image: "/web-dev.webp",
+    btnLink: "/services/staff-augmentation",
   },
   {
     label: "AERO SCULPT",
@@ -51,6 +57,7 @@ const portfolioSlides: PortfolioSlide[] = [
       "High-performing teams that plug seamlessly into your workflows so you can scale faster.High-performing teams that plug",
     stats: ["UI/UX", "E-COMMERCE", "PERFORMANCE"],
     image: "/web-dev.webp",
+    btnLink: "/services/website-development",
   },
   {
     label: "VERTEX DASH",
@@ -59,6 +66,7 @@ const portfolioSlides: PortfolioSlide[] = [
       "High-performing teams that plug seamlessly into your workflows so you can scale faster.High-performing teams that plug",
     stats: ["PRODUCT DESIGN", "SAAS", "MOBILE"],
     image: "/web-dev.webp",
+    btnLink: "/services/digital-marketing",
   },
   {
     label: "NOVA GRID",
@@ -67,6 +75,7 @@ const portfolioSlides: PortfolioSlide[] = [
       "High-performing teams that plug seamlessly into your workflows so you can scale faster.High-performing teams that plug",
     stats: ["DEDICATED TEAMS", "STRATEGY", "DELIVERY"],
     image: "/web-dev.webp",
+    btnLink: "/services/staff-augmentation",
   },
 ];
 
@@ -251,7 +260,7 @@ export default function WorkPortfolioSectionTwo() {
                   </p>
 
                   <div className="flex">
-                    <button className="text-white group text-[12px] relative uppercase tracking-widest hover:text-[#075B65] transition flex items-center gap-2 py-2 ps-4 pr-8 border-t border-b border-white hover:border-[#075B65]">
+                    <Link href={slide.btnLink} className="text-white group text-[12px] relative uppercase tracking-widest hover:text-[#075B65] transition flex items-center gap-2 py-2 ps-4 pr-8 border-t border-b border-white hover:border-[#075B65]">
                       View Service
                       <span className="absolute bottom-1 right-0">
                         <svg
@@ -273,7 +282,7 @@ export default function WorkPortfolioSectionTwo() {
                           />
                         </svg>
                       </span>
-                    </button>
+                    </Link>
                   </div>
                 </article>
               ))}

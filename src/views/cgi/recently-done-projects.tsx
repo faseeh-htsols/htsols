@@ -110,7 +110,7 @@ const RecentlyDoneProjects = () => {
             ))}
           </div>
           <div className="flex justify-center">
-            <Button href="/">Book 1:1 Consultation With Us</Button>
+            <Button href="#contact-form">Book 1:1 Consultation With Us</Button>
           </div>
         </Container>
         <PopUp open={open} src={activeSrc} onClose={closePopup} />

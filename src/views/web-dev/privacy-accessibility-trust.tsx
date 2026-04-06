@@ -18,7 +18,7 @@ const PrivacyAccessibilityTrust = () => {
           <div className="">
             <div className="max-w-xl rounded-2xl bg-[#1a1a1a]/95 border border-white/10 p-6 sm:p-8 lg:p-10 shadow-xl">
               <HeadingTwo className="font-primary font-semibold uppercase text-[28px] sm:text-[34px] lg:text-[38px] leading-[1.02] mb-5">
-               Privacy, Accessibility, and Trust
+                Privacy, Accessibility, and Trust
               </HeadingTwo>
               <p className="text-white/90 text-sm sm:text-base leading-relaxed mb-6">
                 Canadian users expect clear, respectful handling of their data,
@@ -38,7 +38,7 @@ const PrivacyAccessibilityTrust = () => {
                 ))}
               </ul>
               <div className="w-fit">
-                <Button href="/" variant="primary">
+                <Button href="#contact-form" variant="primary">
                   Get Started
                 </Button>
               </div>

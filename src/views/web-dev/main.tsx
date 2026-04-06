@@ -25,7 +25,7 @@ const WebDevMain = () => {
       <WebDesignSolutions />
       <Benefits />
       <SeoReadyWebsite />
-      
+
       <PrivacyAccessibilityTrust />
       <WhatToExpect />
       <ServicesWeOfferCanada />
@@ -40,7 +40,9 @@ const WebDevMain = () => {
         accordionbgtransparent
       />
       {/* <ClientsSection /> */}
-      <ContactForm />
+      <div id="contact-form">
+        <ContactForm />
+      </div>
     </>
   );
 };

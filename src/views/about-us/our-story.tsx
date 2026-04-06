@@ -36,7 +36,7 @@ export default function OurStory() {
               planning to delivery.
             </p>
             <div className="flex mt-3">
-              <Button href="/">Get Started</Button>
+              <Button href="/contact-us">Get Started</Button>
             </div>
           </div>
         </div>

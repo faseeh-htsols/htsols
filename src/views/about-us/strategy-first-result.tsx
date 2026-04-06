@@ -102,7 +102,7 @@ const StrategyFirstResult = () => {
                     how it’s performing.
                   </p>
                   <div className="flex">
-                    <Button href="/">Get Started</Button>
+                    <Button href="/contact-us">Get Started</Button>
                   </div>
                 </div>
               </div>

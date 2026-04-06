@@ -67,7 +67,7 @@ const ServicesWeOfferCanada = () => {
               work with a supportive team.
             </p>
             <div className="flex relative">
-              <Button variant="white" href="/">
+              <Button variant="white" href="#contact-form">
                 Get Started
               </Button>
             </div>
