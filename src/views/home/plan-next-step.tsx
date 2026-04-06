@@ -16,16 +16,23 @@ const PlanNextStep = () => {
     () => {
       if (!divRef.current) return;
 
-      gsap.from(divRef.current, {
-        clipPath: "inset(0 0 0 100%)",
-        scrollTrigger: {
-          trigger: divRef.current,
-          start: "top 100%",
-          end: "bottom 20%",
-          toggleActions: "play none none none",
-          scrub: true,
+      gsap.fromTo(
+        divRef.current,
+        {
+          clipPath: "inset(0 0 0 100% round 220px 0 0 220px)",
         },
-      });
+        {
+          clipPath: "inset(0 0 0 0% round 220px 0 0 220px)",
+          ease: "none",
+          scrollTrigger: {
+            trigger: divRef.current,
+            start: "top 100%",
+            end: "bottom 20%",
+            toggleActions: "play none none none",
+            scrub: true,
+          },
+        },
+      );
     },
     { scope: mainRef },
   );

@@ -10,7 +10,7 @@ const tealGradient =
 
 const Banner = () => {
   return (
-    <div className="bg-black relative py-20 lg:py-40 [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]">
+    <div className="bg-black relative pb-20 pt-40 lg:pb-40 [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]">
       <div className="absolute top-20 left-0">
         <Image
           src={"/left-gradient.webp"}
@@ -30,13 +30,13 @@ const Banner = () => {
         />
       </div>
       <Wrapper>
-        <div>
+        <div className="relative z-10">
           <h1 className="text-4xl lg:text-[53px] font-primary mb-4 font-semibold text-white text-center uppercase">
             Web Development Company in Canada
           </h1>
           <div style={{ background: tealGradient }}>
             <HeadingTwo
-              className="inline-block px-4 py-2 rounded-lg text-white font-medium uppercase tracking-wide text-center "
+              className="inline-block px-4 py-2 rounded-lg text-white font-medium uppercase tracking-wide text-center"
             >
               Websites Built For Speed, Search Visibility, And Real Business Growth
             </HeadingTwo>

@@ -124,7 +124,7 @@ const DrivingBuisness = () => {
             </p>
 
             <div className="flex justify-center mt-12">
-              <Button href="/">LETS DISCUSS YOUR PROJECT</Button>
+              <Button href="/contact-us">LETS DISCUSS YOUR PROJECT</Button>
             </div>
           </div>
         </div>
