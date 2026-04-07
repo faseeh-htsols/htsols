@@ -5,9 +5,10 @@ import Image from "next/image";
 import Button from "@/components/ui/Button";
 import DoubleCurves from "@/components/ui/double-curves";
 import type { CmsBlogListItem } from "@/lib/cms/blog";
+import Link from "next/link";
 
 type BlogProps = {
-  posts: CmsBlogListItem[];
+  posts?: CmsBlogListItem[];
 };
 
 const BlogCurate = ({ posts = [] }: BlogProps) => {
@@ -23,9 +24,13 @@ const BlogCurate = ({ posts = [] }: BlogProps) => {
           <Container>
             <HeadingTwo className="text-center mb-10">A blog I curate</HeadingTwo>
             {posts.length > 0 ? (
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-7  ">
-                {posts.map((item, index) => (
-                  <div key={index} className="relative overflow-hidden group">
+              <div className="flex flex-wrap gap-7 justify-center items-center">
+                {posts.slice(0, 3).map((item, index) => (
+                  <Link
+                    href={item.slug ? `/blog/${item.slug}` : "/blog"}
+                    key={index}
+                    className="relative overflow-hidden group w-full lg:w-[calc((100%-56px)/3)]"
+                  >
                     <img
                       src={
                         item.pictureUrl ||
@@ -64,7 +69,7 @@ const BlogCurate = ({ posts = [] }: BlogProps) => {
                         </h3>
                       </div>{" "}
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             ) : (

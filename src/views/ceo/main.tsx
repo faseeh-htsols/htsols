@@ -19,7 +19,7 @@ import LinkedIn from "./linkedin";
 import { fetchCmsBlogs, getBlogDate, safeTime } from "@/lib/cms/blog";
 
 const CeoMain = async () => {
-  const posts = await fetchCmsBlogs();
+  const posts = (await fetchCmsBlogs()) ?? [];
   const sorted = [...posts].sort(
     (a, b) => safeTime(getBlogDate(b)) - safeTime(getBlogDate(a)),
   );
