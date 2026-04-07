@@ -168,7 +168,7 @@ const sendEmail = async (
 
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/common-form`,
+      `${process.env.NEXT_PUBLIC_API_URL}/form`,
       {
         method: "POST",
         headers: {
