@@ -10,29 +10,55 @@ import { useRef, useState } from "react";
 import HeadingTwo from "@/components/ui/heading-two";
 
 const validationSchema = Yup.object({
-  firstName: Yup.string()
-    .min(2, "First name must be at least 2 characters")
-    .required("First name is required"),
+  name: Yup.string()
+    .trim()
+    .min(2, "Name must be at least 2 characters")
+    .required("Name is required"),
+
+  page: Yup.string()
+    .trim()
+    .min(2, "Page name must be at least 2 characters")
+    .required("Page is required"),
+
   city: Yup.string()
+    .trim()
     .min(2, "City/Area must be at least 2 characters")
     .required("City/Area is required"),
-  email: Yup.string().email("Invalid email").required("Email is required"),
-  contactNumber: Yup.string()
+
+  email: Yup.string()
+    .trim()
+    .email("Invalid email")
+    .required("Email is required"),
+
+  contact: Yup.string()
+    .trim()
     .matches(/^[0-9]{10,15}$/, "Contact number must be 10–15 digits")
     .required("Contact number is required"),
-  services: Yup.string().required("Please select a services"),
-  message: Yup.string()
+
+  service: Yup.string()
+    .trim()
+    .required("Please select a service"),
+
+  enquiry: Yup.string()
+    .trim()
     .min(10, "Message must be at least 10 characters")
     .required("Message is required"),
 });
 
 type FormValues = {
-  firstName: string;
+  name: string;
+  page: string;
   email: string;
-  contactNumber: string;
-  services: string;
-  message: string;
+  contact: string;
+  service: string;
+  enquiry: string;
   city: string;
+  // firstName: string;
+  // email: string;
+  // contactNumber: string;
+  // services: string;
+  // message: string;
+  // city: string;
 };
 
 const Banner = () => {
@@ -126,17 +152,19 @@ const Banner = () => {
         <div className="relative mt-10" ref={formWrapRef}>
           <Formik
             initialValues={{
-              firstName: "",
+              name: "",
+              page: "Contact Us Page",
               email: "",
-              contactNumber: "",
-              services: "",
-              message: "",
+              contact: "",
+              service: "",
+              enquiry: "",
               city: "",
             }}
             validationSchema={validationSchema}
             onSubmit={sendEmail}>
             {({ isSubmitting }) => (
               <Form ref={formRef}>
+                <Field type="hidden" name="page" />
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                   {/* LEFT COLUMN */}
                   <div className="flex flex-col gap-8">
@@ -225,13 +253,13 @@ const Banner = () => {
                         <div className="h-14 w-full rounded-md bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)]">
                           <Field
                             type="text"
-                            name="firstName"
+                            name="name"
                             className="h-full rounded-md w-full outline-0 bg-transparent border-0  px-5 text-white placeholder:text-white/60"
                             placeholder="Full name"
                           />
                         </div>
                         <ErrorMessage
-                          name="firstName"
+                          name="name"
                           component="p"
                           className="text-red-600 text-xs mt-2"
                         />
@@ -240,13 +268,13 @@ const Banner = () => {
                         <div className="h-14 w-full  bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)]">
                           <Field
                             type="text"
-                            name="contactNumber"
+                            name="contact"
                             className="h-full rounded-md w-full outline-0 bg-transparent border-0  px-5 text-white placeholder:text-white/60"
                             placeholder="Contact Number"
                           />
                         </div>
                         <ErrorMessage
-                          name="contactNumber"
+                          name="contact"
                           component="p"
                           className="text-red-600 text-xs mt-2"
                         />
@@ -286,7 +314,7 @@ const Banner = () => {
                       <div className="h-14 w-full rounded-md bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)]">
                         <Field
                           as="select"
-                          name="services"
+                          name="service"
                           className="h-full w-full outline-0 bg-transparent border-0 rounded-md px-5 pr-12 text-white appearance-none">
                           <option value="" className="bg-black text-white">
                             Service are you interested in
@@ -330,7 +358,7 @@ const Banner = () => {
                         </svg>
                       </div>
                       <ErrorMessage
-                        name="services"
+                        name="service"
                         component="p"
                         className="text-red-600 text-xs mt-2"
                       />
@@ -340,13 +368,13 @@ const Banner = () => {
                       <div className="w-full rounded-md bg-[linear-gradient(180deg,#1B1B1B_0%,#121212_100%)]">
                         <Field
                           as="textarea"
-                          name="message"
+                          name="enquiry"
                           className="h-44 w-full outline-0 bg-transparent border-0 rounded-md px-5 py-4 text-white placeholder:text-white/60 resize-none"
                           placeholder="Notes"
                         />
                       </div>
                       <ErrorMessage
-                        name="message"
+                        name="enquiry"
                         component="p"
                         className="text-red-600 text-xs mt-2"
                       />
@@ -387,9 +415,8 @@ const Banner = () => {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p
-                  className={`text-lg font-semibold ${
-                    popupType === "success" ? "text-green-700" : "text-red-700"
-                  }`}>
+                  className={`text-lg font-semibold ${popupType === "success" ? "text-green-700" : "text-red-700"
+                    }`}>
                   {popupType === "success"
                     ? "Message sent"
                     : "Something went wrong"}

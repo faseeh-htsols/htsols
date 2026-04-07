@@ -61,7 +61,7 @@ const Banner = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Button href="/contact-us" variant="white">Start growing today</Button>
+              <Button href="/contact-us" >Start growing today</Button>
               <Button href="/services" variant="outline">
                 Explore Services
               </Button>

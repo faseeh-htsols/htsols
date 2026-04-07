@@ -1098,52 +1098,59 @@ export const CLIENT_SAY_ABOUT_CEO = [
     designation: "CEO | Tech Innovators",
   },
   {
-    para: "Working with Muhammad Faseeh Ullah has helped us a lot. Their AI solutions helped us automate the online customer support, which helped us focus on the other core business responsibilities.",
-    image: "/ceo/abraham.webp",
-    name: "Abraham",
-    designation: "CEO | Tech Innovators",
+    para: "Really great experience working together. Faseeh did an excellent job improving and polishing our frontend, with a strong focus on UI quality, performance optimization, and responsive behavior. They worked confidently with React.js and Next.js, translated designs and wireframes into clean, interactive components, and integrated everything smoothly with our RESTful APIs. Load times and overall responsiveness improved noticeably, and everything works consistently across browsers. Solid communication and delivery — would definitely work with them again.",
+    image: "/ceo/user-icon.png",
+    name: "SAM",
+    designation: "CO-FOUNDER, MEIIDZ",
   },
   {
-    para: "Working with Muhammad Faseeh Ullah has helped us a lot. Their AI solutions helped us automate the online customer support, which helped us focus on the other core business responsibilities.",
-    image: "/ceo/abraham.webp",
-    name: "Abraham",
-    designation: "CEO | Tech Innovators",
+    para: "Really great experience working together. Faseeh did an excellent job improving and polishing our frontend, with a strong focus on UI quality, performance optimization, and responsive behavior. Load times and overall responsiveness improved noticeably, and everything works consistently across browsers.",
+    image: "/ceo/user-icon.png",
+    name: "MUKHLIS",
+    designation: "TECHAGENCY BANGLA",
   },
   {
-    para: "Working with Muhammad Faseeh Ullah has helped us a lot. Their AI solutions helped us automate the online customer support, which helped us focus on the other core business responsibilities.",
-    image: "/ceo/abraham.webp",
-    name: "Abraham",
-    designation: "CEO | Tech Innovators",
+    para: "I engaged Faseeh for marketing initiatives at Same Day Builders, a company specializing in handyman services. Faseeh and his team at HtSol demonstrated remarkable flexibility by accommodating my ever-changing schedule, which is par for the course as a business owner. Moreover, during our initial proposal meeting, Faseeh adeptly addressed all of my questions and objectives. This instilled a level of comfort and confidence in me, affirming that I had made the right decision in partnering with him for our marketing needs. Given the positive experience and results, I've decided to extend my collaboration with HtSol to Meiidz, another venture of mine that offers semi-national house cleaning services. The professionalism and effectiveness Faseeh has shown make me optimistic about the marketing prospect.",
+    image: "/ceo/user-icon.png",
+    name: "MARISS N.",
+    designation: "FOUNDER / CEO, SAME DAY BUILDERS, USA",
   },
   {
-    para: "Working with Muhammad Faseeh Ullah has helped us a lot. Their AI solutions helped us automate the online customer support, which helped us focus on the other core business responsibilities.",
-    image: "/ceo/abraham.webp",
-    name: "Abraham",
-    designation: "CEO | Tech Innovators",
+    para: "Our Account Manager at HtSol was very punctual and very communicative when it came to the campaign. I appreciate his will to understand what the client wants and overall the company to deliver.",
+    image: "/ceo/user-icon.png",
+    name: "JAMES ASUNA",
+    designation: "PRINCIPAL DENTIST AND FOUNDER",
   },
   {
-    para: "Working with Muhammad Faseeh Ullah has helped us a lot. Their AI solutions helped us automate the online customer support, which helped us focus on the other core business responsibilities.",
-    image: "/ceo/abraham.webp",
-    name: "Abraham",
-    designation: "CEO | Tech Innovators",
+    para: `I was immediately impressed by their prompt and clear communication. They took the time to understand the nuances of my project and asked insightful questions that demonstrated their expertise in the field. This level of professionalism instantly put me at ease and assured me that I was in capable hands.
+
+    Great campaign and managed all aspects of it - really happy with the support and guidance to make it a collaborative approach as it just took a lot of the stress away from me on an area I don't know much about.
+
+    Perfectly executed and really happy with the communication throughout.
+    `,
+    image: "/ceo/user-icon.png",
+    name: "ASIF N.",
+    designation: "FOUNDER, MARKETING AGENCY, UK",
   },
   {
-    para: "Working with Muhammad Faseeh Ullah has helped us a lot. Their AI solutions helped us automate the online customer support, which helped us focus on the other core business responsibilities.",
-    image: "/ceo/abraham.webp",
-    name: "Abraham",
-    designation: "CEO | Tech Innovators",
+    para: "Project title: IT Consultation. Had a very engaging and productive meeting session. Good advice. They listened to the problem, tried to see the problem from a broader perspective to give a proper solution / advice. Anyone can can talk to them for IT advice. Best of luck !",
+    image: "/ceo/user-icon.png",
+    name: "MUSA",
+    designation: "FOUNDER, TRAVEL AGENCY, BANGLADESH",
   },
   {
-    para: "Working with Muhammad Faseeh Ullah has helped us a lot. Their AI solutions helped us automate the online customer support, which helped us focus on the other core business responsibilities.",
-    image: "/ceo/abraham.webp",
-    name: "Abraham",
-    designation: "CEO | Tech Innovators",
+    para: `It was great to work with HtSol. They very keen to do all the details and ask / noted unclear parts thoroughly. I would Love and already planning to do another Software for healthcare industry with them.
+    Helped me a lot with great product!
+    `,
+    image: "/ceo/user-icon.png",
+    name: "JAEYOON",
+    designation: "SOUTH KOREA",
   },
   {
-    para: "Working with Muhammad Faseeh Ullah has helped us a lot. Their AI solutions helped us automate the online customer support, which helped us focus on the other core business responsibilities.",
-    image: "/ceo/abraham.webp",
-    name: "Abraham",
-    designation: "CEO | Tech Innovators",
+    para: "Good and fast never disappointed with HtSol. They work quickly and take time to understand your business and business logic.",
+    image: "/ceo/user-icon.png",
+    name: "YANIS",
+    designation: "FOUNDER, YOGA STUDIO, FRANCE",
   },
 ];
 export const BOLG_CURATE_CEO = [

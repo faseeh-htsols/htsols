@@ -37,7 +37,7 @@ const StrategyFirst = () => {
                                     </p>
                                 </div>
                                 <div className="flex mt-5">
-                                    <Button href="/contact-us" variant="white">
+                                    <Button href="/contact-us">
                                         Start Growing Today
                                     </Button>
                                 </div>

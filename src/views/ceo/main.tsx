@@ -16,8 +16,13 @@ import HowWorks from "../mississauga/how-works";
 import { CEO_FAQS, CEO_CONVERSATION } from "@/constants";
 import Experties from "./experties";
 import LinkedIn from "./linkedin";
+import { fetchCmsBlogs, getBlogDate, safeTime } from "@/lib/cms/blog";
 
-const CeoMain = () => {
+const CeoMain = async () => {
+  const posts = await fetchCmsBlogs();
+  const sorted = [...posts].sort(
+    (a, b) => safeTime(getBlogDate(b)) - safeTime(getBlogDate(a)),
+  );
   return (
     <>
       <Banner />
@@ -30,7 +35,7 @@ const CeoMain = () => {
       <IndustriesServe />
       <ClientsAboutMe />
       <WhatACall />
-      <BlogCurate />
+      <BlogCurate posts={sorted} />
       {/* <LinkedInPosts /> */}
       {/* <ViewOnInstgram /> */}
       <LinkedIn />
