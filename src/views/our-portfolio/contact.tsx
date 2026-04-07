@@ -14,26 +14,31 @@ import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);
 const validationSchema = Yup.object({
-  fullName: Yup.string()
+  name: Yup.string()
     .min(2, "Full name must be at least 2 characters")
     .required("Full name is required"),
-  companyName: Yup.string()
+  page: Yup.string()
+    .trim()
+    .min(2, "Page name must be at least 2 characters")
+    .required("Page is required"),
+  companyUrl: Yup.string()
     .min(2, "Company name/URL must be at least 2 characters")
     .required("Company name/URL is required"),
   email: Yup.string().email("Invalid email").required("Email is required"),
-  contactNumber: Yup.string()
+  contact: Yup.string()
     .matches(/^[0-9]{10,15}$/, "Phone number must be 10–15 digits")
     .required("Phone number is required"),
-  message: Yup.string()
+  enquiry: Yup.string()
     .min(10, "Message must be at least 10 characters")
     .required("Message is required"),
 });
 type FormValues = {
-  fullName: string;
-  companyName: string;
+  name: string;
+  page: string;
+  companyUrl: string;
   email: string;
-  contactNumber: string;
-  message: string;
+  contact: string;
+  enquiry: string;
 };
 const Contact = () => {
   const scopeRef = useRef<HTMLElement | null>(null);
@@ -153,11 +158,12 @@ const Contact = () => {
         "service_4ls6ayf",
         "template_1sux4xj",
         {
-          fullName: values.fullName,
-          companyName: values.companyName,
+          name: values.name,
+          page: values.page,
+          companyUrl: values.companyUrl,
           email: values.email,
-          contactNumber: values.contactNumber,
-          message: values.message,
+          contact: values.contact,
+          enquiry: values.enquiry,
         },
         {
           publicKey: "Mr3TWOsrrdm099Kef",
@@ -216,27 +222,29 @@ const Contact = () => {
         <div className="relative mt-8" ref={formWrapRef}>
           <Formik
             initialValues={{
-              fullName: "",
-              companyName: "",
+              name: "",
+              page: "Our Portfolio Page",
+              companyUrl: "",
               email: "",
-              contactNumber: "",
-              message: "",
+              contact: "",
+              enquiry: "",
             }}
             validationSchema={validationSchema}
             onSubmit={sendEmail}
           >
             {({ isSubmitting }) => (
               <Form ref={formRef}>
+                <Field type="hidden" name="page" />
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-5">
                   <div>
                     <Field
                       type="text"
-                      name="fullName"
+                      name="name"
                       className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                       placeholder="Full name"
                     />
                     <ErrorMessage
-                      name="fullName"
+                      name="name"
                       component="p"
                       className="text-red-600 text-xs mt-2"
                     />
@@ -244,12 +252,12 @@ const Contact = () => {
                   <div>
                     <Field
                       type="text"
-                      name="contactNumber"
+                      name="contact"
                       className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                       placeholder="Phone Number"
                     />
                     <ErrorMessage
-                      name="contactNumber"
+                      name="contact"
                       component="p"
                       className="text-red-600 text-xs mt-2"
                     />
@@ -260,12 +268,12 @@ const Contact = () => {
                   <div>
                     <Field
                       type="text"
-                      name="companyName"
+                      name="companyUrl"
                       className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                       placeholder="Company Name/URL"
                     />
                     <ErrorMessage
-                      name="companyName"
+                      name="companyUrl"
                       component="p"
                       className="text-red-600 text-xs mt-2"
                     />
@@ -340,13 +348,13 @@ const Contact = () => {
                 <div className="mb-3">
                   <Field
                     as="textarea"
-                    name="message"
+                    name="enquiry"
                     className="h-28 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 py-3 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                     placeholder="Notes"
                     id=""
                   ></Field>
                   <ErrorMessage
-                    name="message"
+                    name="enquiry"
                     component="p"
                     className="text-red-600 text-xs mt-2"
                   />

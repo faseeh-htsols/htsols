@@ -6,6 +6,11 @@ export const contactSchema = Yup.object({
     .min(2, "First name must be at least 2 characters")
     .required("First name is required"),
 
+  page: Yup.string()
+    .trim()
+    .min(2, "Page name must be at least 2 characters")
+    .required("Page is required"),
+
   lastName: Yup.string()
     .trim()
     .min(2, "Last name must be at least 2 characters")
@@ -21,16 +26,16 @@ export const contactSchema = Yup.object({
     .email("Invalid email")
     .required("Email is required"),
 
-  contactNumber: Yup.string()
+  contact: Yup.string()
     .trim()
     .matches(/^[0-9]{10,15}$/, "Contact number must be 10–15 digits")
     .required("Contact number is required"),
 
-  services: Yup.string()
+  service: Yup.string()
     .trim()
     .required("Please select a service"),
 
-  message: Yup.string()
+  enquiry: Yup.string()
     .trim()
     .min(10, "Message must be at least 10 characters")
     .required("Message is required"),

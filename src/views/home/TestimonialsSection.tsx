@@ -21,7 +21,7 @@ const testimonials: Testimonial[] = [
     name: "SAM",
     title: "CO-FOUNDER, MEIIDZ",
     content:
-      "Really great experience working together. Faseeh did an excellent job improving and polishing our frontend, with a strong focus on UI quality, performance optimization, and responsive behavior. They worked confidently with React.js and Next.js, translated designs and wireframes into clean, interactive components, and integrated everything smoothly with our RESTful APIs. Load times and overall responsiveness improved noticeably, and everything works consistently across browsers. Solid communication and delivery - would definitely work with them again.",
+      "Really great experience working together. Faseeh did an excellent job improving and polishing our frontend, with a strong focus on UI quality, performance optimization, and responsive behavior. They worked confidently with React.js and Next.js, translated designs and wireframes into clean, interactive components, and integrated everything smoothly with our RESTful APIs. Load times and overall responsiveness improved noticeably, and everything works consistently across browsers. Solid communication and delivery — would definitely work with them again.",
     image: "/quoteup.svg",
   },
   {
@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
     name: "MARISS N.",
     title: "FOUNDER / CEO, SAME DAY BUILDERS, USA",
     content:
-      "I engaged Faseeh for marketing initiatives at Same Day Builders, a company specializing in handyman services. Faseeh and his team at HtSol demonstrated remarkable flexibility by accommodating my ever-changing schedule. During our initial proposal meeting, Faseeh addressed all of my questions and objectives, which gave me confidence in partnering with him. Given the positive experience and results, I extended my collaboration with HtSol to Meiidz as well.",
+      "I engaged Faseeh for marketing initiatives at Same Day Builders, a company specializing in handyman services. Faseeh and his team at HtSol demonstrated remarkable flexibility by accommodating my ever-changing schedule, which is par for the course as a business owner. Moreover, during our initial proposal meeting, Faseeh adeptly addressed all of my questions and objectives. This instilled a level of comfort and confidence in me, affirming that I had made the right decision in partnering with him for our marketing needs. Given the positive experience and results, I've decided to extend my collaboration with HtSol to Meiidz, another venture of mine that offers semi-national house cleaning services. The professionalism and effectiveness Faseeh has shown make me optimistic about the marketing prospect.",
     image: "/quoteup.svg",
   },
   {
@@ -49,28 +49,35 @@ const testimonials: Testimonial[] = [
     name: "ASIF N.",
     title: "FOUNDER, MARKETING AGENCY, UK",
     content:
-      "I was immediately impressed by their prompt and clear communication. They took time to understand the nuances of my project and asked insightful questions. Great campaign execution and support made the whole process collaborative and stress-free. Perfectly executed, and I was really happy with communication throughout.",
+      `I was immediately impressed by their prompt and clear communication. They took the time to understand the nuances of my project and asked insightful questions that demonstrated their expertise in the field. This level of professionalism instantly put me at ease and assured me that I was in capable hands.
+
+      Great campaign and managed all aspects of it - really happy with the support and guidance to make it a collaborative approach as it just took a lot of the stress away from me on an area I don't know much about.
+
+      Perfectly executed and really happy with the communication throughout.
+      `,
     image: "/quoteup.svg",
   },
   {
     name: "MUSA",
     title: "FOUNDER, TRAVEL AGENCY, BANGLADESH",
     content:
-      "Project title: IT Consultation. Had a very engaging and productive meeting session. Good advice. They listened to the problem, viewed it from a broader perspective, and provided a proper solution. Anyone can talk to them for IT advice.",
+      "Project title: IT Consultation. Had a very engaging and productive meeting session. Good advice. They listened to the problem, tried to see the problem from a broader perspective to give a proper solution / advice. Anyone can can talk to them for IT advice. Best of luck !",
     image: "/quoteup.svg",
   },
   {
     name: "JAEYOON",
     title: "SOUTH KOREA",
     content:
-      "It was great to work with HtSol. They were very keen on details and clarified unclear parts thoroughly. I already plan to build another software product for the healthcare industry with them. Helped me a lot with a great product.",
+      `It was great to work with HtSol. They very keen to do all the details and ask / noted unclear parts thoroughly. I would Love and already planning to do another Software for healthcare industry with them.
+      Helped me a lot with great product!
+      `,
     image: "/quoteup.svg",
   },
   {
     name: "YANIS",
     title: "FOUNDER, YOGA STUDIO, FRANCE",
     content:
-      "Good and fast, never disappointed with HtSol. They work quickly and take time to understand your business and business logic.",
+      "Good and fast never disappointed with HtSol. They work quickly and take time to understand your business and business logic.",
     image: "/quoteup.svg",
   },
 ];
@@ -153,7 +160,14 @@ const TestimonialsSection = () => {
                   {/* quote icon */}
                   <div className="flex justify-between gap-2 mb-4">
                     <div className="flex gap-3 items-center">
-                      <div className="w-16 h-15 bg-[#E5E7EC] rounded-full"></div>
+                      <div className="relative w-12 h-12 ">
+                        <Image
+                          src={"/ceo/user-icon.png"}
+                          alt="qoute icon"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                       <div>
                         <h3 className="font-primary text-white uppercase">
                           {t.name}

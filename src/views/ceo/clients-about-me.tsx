@@ -41,6 +41,7 @@ const ClientsAboutMe = () => {
                   disableOnInteraction: false,
                   pauseOnMouseEnter: true,
                 }}
+                autoHeight
                 pagination={{ clickable: true }}
                 modules={[Autoplay, Pagination]}
               >
@@ -54,7 +55,7 @@ const ClientsAboutMe = () => {
                           alt={item.name}
                           width={45}
                           height={45}
-                          className="w-[60px] relative h-[60px] object-cover"
+                          className="w-[60px] relative h-[60px] object-cover rounded-full"
                         />
                       </div>
                       <div>

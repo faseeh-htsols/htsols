@@ -143,7 +143,7 @@ const ContactForm = () => {
       setPopupType("success");
       setPopupMsg(
         data?.message ||
-          "Thanks — we’ve received your message and will get back to you shortly."
+        "Thanks — we’ve received your message and will get back to you shortly."
       );
       setPopupOpen(true);
       formikHelpers.resetForm();
@@ -197,10 +197,11 @@ const ContactForm = () => {
             initialValues={{
               firstName: "",
               lastName: "",
+              page: "Home Page",
               email: "",
-              contactNumber: "",
-              services: "",
-              message: "",
+              contact: "",
+              service: "",
+              enquiry: "",
               city: "",
             }}
             validationSchema={validationSchema}
@@ -208,6 +209,7 @@ const ContactForm = () => {
           >
             {({ isSubmitting }) => (
               <Form>
+                <Field type="hidden" name="page" />
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-5">
                   <div>
                     <Field
@@ -242,12 +244,12 @@ const ContactForm = () => {
                   <div>
                     <Field
                       type="tel"
-                      name="contactNumber"
+                      name="contact"
                       className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                       placeholder="Contact No"
                     />
                     <ErrorMessage
-                      name="contactNumber"
+                      name="contact"
                       component="p"
                       className="text-red-600 text-xs mt-2"
                     />
@@ -286,7 +288,7 @@ const ContactForm = () => {
                   <div>
                     <Field
                       as="select"
-                      name="services"
+                      name="service"
                       className="h-10 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-sm px-4 backdrop:backdrop-blur-2xl text-white"
                     >
                       <option value="" disabled className="bg-white text-black">
@@ -315,7 +317,7 @@ const ContactForm = () => {
                       </option>
                     </Field>
                     <ErrorMessage
-                      name="services"
+                      name="service"
                       component="p"
                       className="text-red-600 text-xs mt-2"
                     />
@@ -325,12 +327,12 @@ const ContactForm = () => {
                 <div className="mb-3">
                   <Field
                     as="textarea"
-                    name="message"
+                    name="enquiry"
                     className="h-28 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 py-3 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                     placeholder="Enquiry details"
                   />
                   <ErrorMessage
-                    name="message"
+                    name="enquiry"
                     component="p"
                     className="text-red-600 text-xs mt-2"
                   />
@@ -396,9 +398,8 @@ const ContactForm = () => {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p
-                  className={`text-lg font-semibold ${
-                    popupType === "success" ? "text-green-700" : "text-red-700"
-                  }`}
+                  className={`text-lg font-semibold ${popupType === "success" ? "text-green-700" : "text-red-700"
+                    }`}
                 >
                   {popupType === "success"
                     ? "Message sent"

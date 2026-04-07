@@ -41,6 +41,7 @@ const ClientsAboutMe = () => {
                   disableOnInteraction: false,
                   pauseOnMouseEnter: true,
                 }}
+                autoHeight
                 pagination={{ clickable: true }}
                 modules={[Autoplay, Pagination]}
               >
