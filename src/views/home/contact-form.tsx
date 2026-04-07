@@ -119,48 +119,102 @@ const ContactForm = () => {
     { scope: scopeRef }
   );
 
-  const sendEmail = async (
-    values: ContactFormValues,
-    formikHelpers: FormikHelpers<ContactFormValues>
-  ) => {
-    setIsSending(true);
+  // const sendEmail = async (
+  //   values: ContactFormValues,
+  //   formikHelpers: FormikHelpers<ContactFormValues>
+  // ) => {
+  //   setIsSending(true);
 
-    try {
-      const response = await fetch("/api/contact", {
+  //   try {
+  //     const response = await fetch("/api/contact", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(values),
+  //     });
+
+  //     const data = await response.json();
+
+  //     if (!response.ok) {
+  //       throw new Error(data?.message || "Failed to send message.");
+  //     }
+
+  //     setPopupType("success");
+  //     setPopupMsg(
+  //       data?.message ||
+  //       "Thanks — we’ve received your message and will get back to you shortly."
+  //     );
+  //     setPopupOpen(true);
+  //     formikHelpers.resetForm();
+  //   } catch (error) {
+  //     setPopupType("error");
+  //     setPopupMsg(
+  //       error instanceof Error
+  //         ? error.message
+  //         : "Failed to send message, please try again."
+  //     );
+  //     setPopupOpen(true);
+  //   } finally {
+  //     setIsSending(false);
+  //     formikHelpers.setSubmitting(false);
+  //   }
+  // };
+const sendEmail = async (
+  values: ContactFormValues,
+  formikHelpers: FormikHelpers<ContactFormValues>
+) => {
+  setIsSending(true);
+
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/common-form`,
+      {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(values),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data?.message || "Failed to send message.");
+        body: JSON.stringify({
+          firstName: values.firstName,
+          lastName: values.lastName,
+          email: values.email,
+          contact: values.contact,
+          city: values.city,
+          service: values.service,
+          page: values.page,
+          enquiry: values.enquiry,
+        }),
       }
+    );
 
-      setPopupType("success");
-      setPopupMsg(
-        data?.message ||
-        "Thanks — we’ve received your message and will get back to you shortly."
-      );
-      setPopupOpen(true);
-      formikHelpers.resetForm();
-    } catch (error) {
-      setPopupType("error");
-      setPopupMsg(
-        error instanceof Error
-          ? error.message
-          : "Failed to send message, please try again."
-      );
-      setPopupOpen(true);
-    } finally {
-      setIsSending(false);
-      formikHelpers.setSubmitting(false);
+    const data = await response.json();
+
+    const backendMessage =
+      data?.messages?.[0]?.message ||
+      data?.message ||
+      "Thanks — we’ve received your message and will get back to you shortly.";
+
+    if (!response.ok) {
+      throw new Error(backendMessage || "Failed to send message.");
     }
-  };
 
+    setPopupType("success");
+    setPopupMsg(backendMessage);
+    setPopupOpen(true);
+    formikHelpers.resetForm();
+  } catch (error) {
+    setPopupType("error");
+    setPopupMsg(
+      error instanceof Error
+        ? error.message
+        : "Failed to send message, please try again."
+    );
+    setPopupOpen(true);
+  } finally {
+    setIsSending(false);
+    formikHelpers.setSubmitting(false);
+  }
+};
   const closePopup = () => setPopupOpen(false);
 
   return (
