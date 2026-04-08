@@ -14,7 +14,7 @@ async function Main() {
     <div>
       <Banner />
       <Blog posts={sorted} />
-      <ContactForm />
+      <ContactForm pageName="Blog Page" />
       <LogosMarquee />
     </div>
   );

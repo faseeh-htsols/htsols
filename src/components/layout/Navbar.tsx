@@ -27,7 +27,7 @@ export const Navbar: React.FC = () => {
           />
         </Link>
 
-        <div className="hidden flex-1 justify-center lg:flex">
+        <div className="hidden flex-1 justify-center xl:flex">
           <div className="flex items-center gap-8">
             {NAV_ITEMS.map((item) => {
               const hasDrop = item.drop && item.subItems?.length;
@@ -94,7 +94,7 @@ export const Navbar: React.FC = () => {
         </div>
 
         <div className="ml-auto flex items-center gap-4">
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <GlowButton href="/contact-us">Book a Free Consultation</GlowButton>
           </div>
 
@@ -102,7 +102,7 @@ export const Navbar: React.FC = () => {
             <DrawerTrigger asChild>
               <button
                 aria-label="Open menu"
-                className="cursor-pointer text-white transition-colors hover:text-primary lg:hidden"
+                className="cursor-pointer text-white transition-colors hover:text-primary xl:hidden"
               >
                 <svg
                   width="53"
@@ -196,7 +196,7 @@ export const Navbar: React.FC = () => {
                   })}
                 </div>
 
-                <div className="mt-6 lg:hidden">
+                <div className="mt-6 xl:hidden">
                   <GlowButton href="/contact-us">Book a Free Consultation</GlowButton>
                 </div>
               </div>

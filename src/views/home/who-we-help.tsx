@@ -84,7 +84,8 @@ const WhoWeHelp = () => {
   return (
     <DoubleCurves
       up
-      className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[3%] xl:-mt-[2%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+      className="-mt-[5%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[3%] xl:-mt-[2%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_2%,100%_0,100%_97%,0_100%)] xl:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]"
+      innerClassName="-rotate-2 top-3 md:top-0 md:-rotate-2 lg:-rotate-2 lg:top-4 xl:top-0 lg:h-[1%] xl:h-[3%] xl:-rotate-1">
       <div
         ref={containerRef}
         className="py-24 lg:py-40 bg-[url(/how-we-help.webp)] bg-cover relative">

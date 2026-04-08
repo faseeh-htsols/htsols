@@ -147,39 +147,93 @@ const ContactForm = () => {
         },
         { scope: scopeRef },
     );
+    // const sendEmail = async (
+    //     values: FormValues,
+    //     formikHelpers: FormikHelpers<FormValues>,
+    // ) => {
+    //     setIsSending(true);
+
+    //     try {
+    //         await emailjs.send(
+    //             "service_4ls6ayf",
+    //             "template_1sux4xj",
+    //             {
+    //                 name: values.name,
+    //                 page: values.page,
+    //                 companyUrl: values.companyUrl,
+    //                 email: values.email,
+    //                 contact: values.contact,
+    //                 enquiry: values.enquiry,
+    //             },
+    //             {
+    //                 publicKey: "Mr3TWOsrrdm099Kef",
+    //             }
+    //         );
+
+    //         setPopupType("success");
+    //         setPopupMsg(
+    //             "Thanks — we’ve received your message and will get back to you shortly."
+    //         );
+    //         setPopupOpen(true);
+    //         formikHelpers.resetForm();
+    //     } catch (error) {
+    //         console.error("EMAILJS ERROR:", error);
+    //         setPopupType("error");
+    //         setPopupMsg("Failed to send message, please try again.");
+    //         setPopupOpen(true);
+    //     } finally {
+    //         setIsSending(false);
+    //         formikHelpers.setSubmitting(false);
+    //     }
+    // };
+
     const sendEmail = async (
         values: FormValues,
-        formikHelpers: FormikHelpers<FormValues>,
+        formikHelpers: FormikHelpers<FormValues>
     ) => {
         setIsSending(true);
 
         try {
-            await emailjs.send(
-                "service_4ls6ayf",
-                "template_1sux4xj",
+            const response = await fetch(
+                `${process.env.NEXT_PUBLIC_API_URL}/form/submit-form`,
                 {
-                    name: values.name,
-                    page: values.page,
-                    companyUrl: values.companyUrl,
-                    email: values.email,
-                    contact: values.contact,
-                    enquiry: values.enquiry,
-                },
-                {
-                    publicKey: "Mr3TWOsrrdm099Kef",
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        name: values.name,
+                        page: values.page,
+                        companyUrl: values.companyUrl,
+                        email: values.email,
+                        contact: values.contact,
+                        enquiry: values.enquiry,
+                    }),
                 }
             );
 
+            const data = await response.json();
+
+            const backendMessage =
+                data?.messages?.[0]?.message ||
+                data?.message ||
+                "Thanks — we’ve received your message and will get back to you shortly.";
+
+            if (!response.ok) {
+                throw new Error(backendMessage || "Failed to send message.");
+            }
+
             setPopupType("success");
-            setPopupMsg(
-                "Thanks — we’ve received your message and will get back to you shortly."
-            );
+            setPopupMsg(backendMessage);
             setPopupOpen(true);
             formikHelpers.resetForm();
         } catch (error) {
-            console.error("EMAILJS ERROR:", error);
             setPopupType("error");
-            setPopupMsg("Failed to send message, please try again.");
+            setPopupMsg(
+                error instanceof Error
+                    ? error.message
+                    : "Failed to send message, please try again."
+            );
             setPopupOpen(true);
         } finally {
             setIsSending(false);

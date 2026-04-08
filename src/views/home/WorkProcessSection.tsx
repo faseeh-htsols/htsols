@@ -46,7 +46,8 @@ export const WorkProcessSection: React.FC = () => {
   return (
     <DoubleCurves
       up
-      className=" -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+      className="-mt-[12%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]"
+      innerClassName="-rotate-1 top-1 md:top-0 md:-rotate-2 xl:-rotate-1 xl:h-[1.8%] xl:top-4">
       <section className="relative bg-[#0a0a0a] py-24 lg:py-40">
         {/* Top accent line */}
         {/* <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" /> */}

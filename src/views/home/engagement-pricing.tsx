@@ -89,7 +89,8 @@ const EngagementPricing = () => {
   return (
     <DoubleCurves
       up
-      className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+      className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]"
+      innerClassName="-rotate-2 sm:-rotate-2 md:-rotate-1 lg:-rotate-1 xl:-rotate-1">
       <section ref={sectionRef} className="bg-tertiary relative py-24 lg:py-40">
         {/* Top accent line */}
         {/* <div

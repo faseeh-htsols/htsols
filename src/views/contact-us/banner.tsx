@@ -69,37 +69,92 @@ const Banner = () => {
   const [popupType, setPopupType] = useState<"success" | "error">("success");
   const [popupMsg, setPopupMsg] = useState("");
 
-  const sendEmail = (
+  // const sendEmail = (
+  //   values: FormValues,
+  //   formikHelpers: FormikHelpers<FormValues>,
+  // ) => {
+  //   setIsSending(true);
+
+  //   emailjs
+  //     .sendForm(
+  //       "service_4ls6ayf",
+  //       "template_1sux4xj",
+  //       formRef.current!,
+  //       "Mr3TWOsrrdm099Kef",
+  //     )
+  //     .then(
+  //       () => {
+  //         setIsSending(false);
+  //         setPopupType("success");
+  //         setPopupMsg(
+  //           "Thanks — we’ve received your message and will get back to you shortly.",
+  //         );
+  //         setPopupOpen(true);
+  //         formikHelpers.resetForm();
+  //       },
+  //       () => {
+  //         setIsSending(false);
+  //         setPopupType("error");
+  //         setPopupMsg("Failed to send message, please try again.");
+  //         setPopupOpen(true);
+  //       },
+  //     );
+  // };
+  const sendEmail = async (
     values: FormValues,
-    formikHelpers: FormikHelpers<FormValues>,
+    formikHelpers: FormikHelpers<FormValues>
   ) => {
     setIsSending(true);
 
-    emailjs
-      .sendForm(
-        "service_4ls6ayf",
-        "template_1sux4xj",
-        formRef.current!,
-        "Mr3TWOsrrdm099Kef",
-      )
-      .then(
-        () => {
-          setIsSending(false);
-          setPopupType("success");
-          setPopupMsg(
-            "Thanks — we’ve received your message and will get back to you shortly.",
-          );
-          setPopupOpen(true);
-          formikHelpers.resetForm();
-        },
-        () => {
-          setIsSending(false);
-          setPopupType("error");
-          setPopupMsg("Failed to send message, please try again.");
-          setPopupOpen(true);
-        },
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/form/submit-form`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: values.name,
+            email: values.email,
+            contact: values.contact,
+            city: values.city,
+            service: values.service,
+            page: values.page,
+            enquiry: values.enquiry,
+          }),
+        }
       );
+
+      const data = await response.json();
+
+      const backendMessage =
+        data?.messages?.[0]?.message ||
+        data?.message ||
+        "Thanks — we’ve received your message and will get back to you shortly.";
+
+      if (!response.ok) {
+        throw new Error(backendMessage || "Failed to send message.");
+      }
+
+      setPopupType("success");
+      setPopupMsg(backendMessage);
+      setPopupOpen(true);
+      formikHelpers.resetForm();
+    } catch (error) {
+      setPopupType("error");
+      setPopupMsg(
+        error instanceof Error
+          ? error.message
+          : "Failed to send message, please try again."
+      );
+      setPopupOpen(true);
+    } finally {
+      setIsSending(false);
+      formikHelpers.setSubmitting(false);
+    }
   };
+
   const closePopup = () => setPopupOpen(false);
 
   return (
