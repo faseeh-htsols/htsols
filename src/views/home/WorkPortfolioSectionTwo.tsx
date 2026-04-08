@@ -194,7 +194,7 @@ export default function WorkPortfolioSectionTwo() {
       md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)]
       lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
       <div
-        className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
+        className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[1%] lg:h-[3%] -rotate-4 sm:-rotate-1 md:-rotate-4 md:top-4 lg:top-0 lg:-rotate-1 w-full
         bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] animate-pulse"
       />
 

@@ -34,7 +34,7 @@ const Main = () => {
       <WhyBuisnessChoose />
       <PlanNextStep />
       <div id="contact-form">
-        <ContactForm />
+        <ContactForm pageName="Home Page" />
       </div>
       <FAQSection accordionbgtransparent bgColor="#0F0F0F" heading={true} />
       {/* <ClientsSection /> */}

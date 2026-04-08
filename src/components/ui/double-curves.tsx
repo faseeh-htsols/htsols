@@ -3,11 +3,12 @@ import React from "react";
 type DoubleCurvesProps = {
   children: React.ReactNode;
   className?: string;
+  innerClassName?: string;
   up?: boolean;
   down?: boolean;
 };
 
-const DoubleCurves = ({ children, className, up, down }: DoubleCurvesProps) => {
+const DoubleCurves = ({ children, className, innerClassName, up, down }: DoubleCurvesProps) => {
   let showTop = true;
   let showBottom = true;
 
@@ -23,14 +24,16 @@ const DoubleCurves = ({ children, className, up, down }: DoubleCurvesProps) => {
     <div className={`relative  ${className ?? ""}`}>
       {showTop && (
         <div
-          className="pointer-events-none absolute top-0 left-0 z-2 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] w-full -rotate-3 sm:-rotate-1 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] animate-pulse"
+          className={`pointer-events-none absolute top-0 left-0 z-2 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] w-full -rotate-3 sm:-rotate-1 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] animate-pulse ${innerClassName ?? ""
+            }`}
           aria-hidden
         />
       )}
 
       {showBottom && (
         <div
-          className="pointer-events-none absolute bottom-0 left-0 z-2 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] w-full -rotate-3 sm:rotate-1 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] animate-pulse"
+          className={`pointer-events-none absolute bottom-0 left-0 z-2 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] w-full -rotate-3 sm:rotate-1 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] animate-pulse ${innerClassName ?? ""
+            }`}
           aria-hidden
         />
       )}

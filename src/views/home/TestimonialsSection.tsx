@@ -86,7 +86,8 @@ const TestimonialsSection = () => {
   return (
     <DoubleCurves
       up
-      className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+      className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_2%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]"
+      innerClassName="-rotate-3 top-3 sm:-rotate-1 md:-rotate-2 md:top-0 xl:-rotate-1 xl:top-0">
       <section className="relative bg-[#050505] py-24 lg:py-40">
         {/* <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
@@ -160,19 +161,21 @@ const TestimonialsSection = () => {
                   {/* quote icon */}
                   <div className="flex justify-between gap-2 mb-4">
                     <div className="flex gap-3 items-center">
-                      <div className="relative w-12 h-12 ">
-                        <Image
-                          src={"/ceo/user-icon.png"}
-                          alt="qoute icon"
-                          fill
-                          className="object-cover"
-                        />
+                      <div className="flex h-15 w-15 shrink-0 rounded-full">
+                        <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full ">
+                          <Image
+                            src={"/ceo/user-icon.png"}
+                            alt="qoute icon"
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
                       </div>
                       <div>
-                        <h3 className="font-primary text-white uppercase">
+                        <h3 className="font-primary text-white uppercase text-[14px] md:text-[16px]">
                           {t.name}
                         </h3>
-                        <p className="uppercase text-[#DDDDDD]">{t.title}</p>
+                        <p className="uppercase text-[#DDDDDD] text-[14px] md:text-[16px]">{t.title}</p>
                       </div>
                     </div>
                     <div>

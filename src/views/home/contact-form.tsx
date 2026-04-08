@@ -17,7 +17,11 @@ import {
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ContactForm = () => {
+type ContactFormProps = {
+  pageName: string;
+};
+
+const ContactForm = ({ pageName }: ContactFormProps) => {
   const scopeRef = useRef<HTMLElement | null>(null);
   const headingSplitRef = useRef<HTMLHeadingElement | null>(null);
   const paraSplitRef = useRef<HTMLParagraphElement | null>(null);
@@ -160,61 +164,61 @@ const ContactForm = () => {
   //     formikHelpers.setSubmitting(false);
   //   }
   // };
-const sendEmail = async (
-  values: ContactFormValues,
-  formikHelpers: FormikHelpers<ContactFormValues>
-) => {
-  setIsSending(true);
+  const sendEmail = async (
+    values: ContactFormValues,
+    formikHelpers: FormikHelpers<ContactFormValues>
+  ) => {
+    setIsSending(true);
 
-  try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/form/submit-form`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstName: values.firstName,
-          lastName: values.lastName,
-          email: values.email,
-          contact: values.contact,
-          city: values.city,
-          service: values.service,
-          page: values.page,
-          enquiry: values.enquiry,
-        }),
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/form/submit-form`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName: values.firstName,
+            lastName: values.lastName,
+            email: values.email,
+            contact: values.contact,
+            city: values.city,
+            service: values.service,
+            page: values.page,
+            enquiry: values.enquiry,
+          }),
+        }
+      );
+
+      const data = await response.json();
+
+      const backendMessage =
+        data?.messages?.[0]?.message ||
+        data?.message ||
+        "Thanks — we’ve received your message and will get back to you shortly.";
+
+      if (!response.ok) {
+        throw new Error(backendMessage || "Failed to send message.");
       }
-    );
 
-    const data = await response.json();
-
-    const backendMessage =
-      data?.messages?.[0]?.message ||
-      data?.message ||
-      "Thanks — we’ve received your message and will get back to you shortly.";
-
-    if (!response.ok) {
-      throw new Error(backendMessage || "Failed to send message.");
+      setPopupType("success");
+      setPopupMsg(backendMessage);
+      setPopupOpen(true);
+      formikHelpers.resetForm();
+    } catch (error) {
+      setPopupType("error");
+      setPopupMsg(
+        error instanceof Error
+          ? error.message
+          : "Failed to send message, please try again."
+      );
+      setPopupOpen(true);
+    } finally {
+      setIsSending(false);
+      formikHelpers.setSubmitting(false);
     }
-
-    setPopupType("success");
-    setPopupMsg(backendMessage);
-    setPopupOpen(true);
-    formikHelpers.resetForm();
-  } catch (error) {
-    setPopupType("error");
-    setPopupMsg(
-      error instanceof Error
-        ? error.message
-        : "Failed to send message, please try again."
-    );
-    setPopupOpen(true);
-  } finally {
-    setIsSending(false);
-    formikHelpers.setSubmitting(false);
-  }
-};
+  };
   const closePopup = () => setPopupOpen(false);
 
   return (
@@ -251,7 +255,7 @@ const sendEmail = async (
             initialValues={{
               firstName: "",
               lastName: "",
-              page: "Home Page",
+              page: pageName,
               email: "",
               contact: "",
               service: "",

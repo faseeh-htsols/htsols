@@ -67,7 +67,7 @@ export const AboutSection: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-black py-20 lg:py-40 [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]">
+      className="relative bg-black py-20 lg:py-30 [clip-path:polygon(0_0,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_0,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]">
       <Container>
         <div className="flex lg:flex-row-reverse flex-col gap-12">
           {/* Right */}

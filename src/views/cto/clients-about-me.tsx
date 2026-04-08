@@ -49,14 +49,15 @@ const ClientsAboutMe = () => {
                   <SwiperSlide key={index}>
                     <p className="text-center text-lg mb-6">{item.para}</p>
                     <div className="flex justify-center items-center gap-6">
-                      <div className="w-[60px]">
-                        <Image
-                          src={item.image}
-                          alt={item.name}
-                          width={45}
-                          height={45}
-                          className="w-[60px] relative h-[60px] object-cover"
-                        />
+                      <div className="flex h-15 w-15 shrink-0 rounded-full">
+                        <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full ">
+                          <Image
+                            src={item.image}
+                            alt={item.name}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
                       </div>
                       <div>
                         <h3 className="font-primary">{item.name}</h3>
