@@ -39,7 +39,7 @@ const CeoMain = async () => {
       {/* <LinkedInPosts /> */}
       {/* <ViewOnInstgram /> */}
       <LinkedIn />
-      {/* <FAQSection faqs={CEO_FAQS} /> */}
+      <FAQSection faqs={CEO_FAQS} />
       <LogosMarquee />
     </>
   );
