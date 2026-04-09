@@ -38,7 +38,7 @@ const CeoMain = async () => {
       <BlogCurate posts={sorted} />
       {/* <LinkedInPosts /> */}
       {/* <ViewOnInstgram /> */}
-      <LinkedIn />
+      {/* <LinkedIn /> */}
       <FAQSection faqs={CEO_FAQS} />
       <LogosMarquee />
     </>

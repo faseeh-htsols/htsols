@@ -1,11 +1,14 @@
 import { NextResponse } from "next/server";
 
-export const revalidate = 1800;
+// export const revalidate = 18000;
+export const revalidate = 172800;
 
 const RAPID_HOST = "fresh-linkedin-scraper-api.p.rapidapi.com";
 const BASE = `https://${RAPID_HOST}`;
-const PROFILE_CACHE_SEC = 86_400;
-const POSTS_CACHE_SEC = 1800;
+// const PROFILE_CACHE_SEC = 86_400;
+const PROFILE_CACHE_SEC = 2592000;
+// const POSTS_CACHE_SEC = 1800;
+const POSTS_CACHE_SEC = 172800;
 const POST_LIMIT = 4;
 
 /**
