@@ -39,7 +39,7 @@ const BlogCurate = ({ posts = [] }: BlogProps) => {
                       alt={item.title || item.banner?.title || "Blog"}
                       // width={500}
                       // height={500}
-                      className="h-[470px] w-full rounded-xl"
+                      className="h-[200px] md:h-[270px] w-full rounded-xl"
                     />
                     <div className="absolute inset-0 w-full h-full">
                       <div className="p-5 flex flex-col h-full justify-between">

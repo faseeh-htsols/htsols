@@ -9,6 +9,9 @@ import IndustriesServe from "./industries-serve";
 import Skills from "./skills";
 import ViewOnInstgram from "./view-on-instgram";
 import WhyHireMe from "./why-hire-me";
+import Services from "./services";
+import HowWorks from "../mississauga/how-works";
+import { CEO_FAQS, CTO_CONVERSATION } from "@/constants";
 
 const CtoMain = () => {
   return (
@@ -17,6 +20,8 @@ const CtoMain = () => {
       <Skills />
       <AboutMe />
       <Achievements />
+      <Services />
+      <HowWorks data={CTO_CONVERSATION} />
       <WhyHireMe />
       <IndustriesServe />
       <ClientsAboutMe />

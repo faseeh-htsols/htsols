@@ -943,6 +943,24 @@ export const CEO_ACHIEVEMENTS = [
     para: "Canada, USA, UK, UAE, and beyond — building digital solutions for clients who expect results, not excuses.",
   },
 ];
+
+export const CTO_ACHIEVEMENTS = [
+  {
+    number: "6+",
+    name: "YEARS IN SOFTWARE DEVELOPMENT",
+    para: "From software engineering and system architecture to building production-grade web applications for businesses in the UK and Canada.",
+  },
+  {
+    number: "UK ",
+    name: "DENTAL TRACK RECORD",
+    para: "Helped dental practices across Manchester, Birmingham, London, Leeds, Bristol, and Edinburgh turn underperforming websites into consistent patient acquisition systems.",
+  },
+  {
+    number: "100+",
+    name: "TECHNOLOGIES INTEGRATED",
+    para: "From custom MERN stack builds and Django back-ends to AI-optimised SEO systems, booking integrations, and practice management software.",
+  },
+];
 export const WHY_HIRE_ME_CEO = [
   {
     // icon: "/ceo/full-stack-architecture.json",
@@ -966,6 +984,31 @@ export const WHY_HIRE_ME_CEO = [
     para: "I've built full-stack MERN applications, custom CRMs, SaaS platforms, and AI-integrated systems from scratch. That technical foundation means I don't just recommend what to build — I understand how to build it, what it costs, and how long it actually takes. When I give you a strategy, I can execute it.",
   },
 ];
+
+export const WHY_HIRE_ME_CTO = [
+  {
+    // icon: "/ceo/full-stack-architecture.json",
+    icon: "/ceo/why-icon-1-2.svg",
+    hoverIcon: "/ceo/why-icon-1.svg",
+    heading: "BUILT FOR DENTAL — NOT ADAPTED FROM GENERIC",
+    para: " I have spent years building specifically for dental practices. I understand PIPEDA and patient data compliance. I know how booking systems need to work for a clinical front desk. I understand the local SEO signals that matter for dental searches — 'dentist near me', 'Invisalign [city]', 'emergency dental'. When I build for a dental practice, I am not starting from a generic template and adapting it. I am building from dental-specific knowledge.",
+  },
+  {
+    // icon: "/ceo/strategic-custom-solutions.json",
+    icon: "/ceo/why-icon-2.svg",
+    hoverIcon: "/ceo/why-icon-2-2.svg",
+    heading: "PROVEN IN COMPETITIVE DENTAL MARKETS",
+    para: "I built and optimised dental websites across Manchester, Birmingham, London, Leeds, Bristol, and Edinburgh — some of the most competitive dental markets in the English-speaking world. UK dental patients are demanding, UK Google rankings are hard-fought, and the practices I worked with saw measurable patient acquisition improvements. That track record is what I bring to every Canadian engagement.",
+  },
+  {
+    // icon: "/ceo/cutting-edge.json",
+    icon: "/ceo/why-icon-3.svg",
+    hoverIcon: "/ceo/why-icon-3-2.svg",
+    heading: "ARCHITECTURE THINKING IN EVERY BUILD",
+    para: "Six years as a Senior Software Architect means I think about systems, not just pages. Before I write code, I think about how the components interact, where the performance bottlenecks will be, how the system will behave under load, and what changes the practice will need to make in two years. That architectural thinking prevents technical debt and produces websites and software that work properly — and keep working.",
+  },
+];
+
 
 export const WHAT_I_DO_CEO = [
   {
@@ -1003,6 +1046,45 @@ export const WHAT_I_DO_CEO = [
     icon: "/ceo/what-do-icon-6.svg",
     heading: "Agency White Label Partnership",
     para: "I work with marketing agencies as a silent execution partner. You bring the client relationships. I deliver the websites, platforms, and marketing systems — under your brand, on your timelines, with full NDA protection. No competing for your clients. No corner-cutting. Just consistent, quality delivery that makes your agency look excellent.",
+  },
+];
+
+export const CTO_SERVICES = [
+  {
+    // icon: "/ceo/full-stack-architecture.json",
+    icon: "/ceo/what-do-icon-1.svg",
+    heading: "High-Performance Dental Websites",
+    para: "I build dental websites that are fast, mobile-first, and technically structured for SEO from the ground up — not templated, not slowed by bloated plugins, not built on platforms that create performance debt. Core Web Vitals, clean architecture, conversion-focused structure. The technical foundation that makes every other marketing effort more effective.",
+  },
+  {
+    // icon: "/ceo/strategic-custom-solutions.json",
+    icon: "/ceo/what-do-icon-2.svg",
+    heading: "Custom CRM & Practice Management Software",
+    para: "Off-the-shelf practice management tools cost more than they solve. I build custom CRM systems, booking platforms, and patient management tools tailored to how a dental team actually works — from front-desk workflows to treatment tracking to automated recall systems. Built to your exact process, owned entirely by your practice.",
+  },
+  {
+    // icon: "/ceo/cutting-edge.json",
+    icon: "/ceo/what-do-icon-3.svg",
+    heading: "AI-Optimised SEO Systems",
+    para: "SEO for dental practices is not generic blog writing and keyword stuffing. It is technical infrastructure — site architecture that search engines can crawl properly, local signals that put your practice in the map pack, schema markup that communicates exactly what you offer and where. I build the technical SEO layer that makes everything else rank.",
+  },
+  {
+    // icon: "/ceo/full-stack-architecture.json",
+    icon: "/ceo/what-do-icon-4.svg",
+    heading: "CMS Architecture & Setup",
+    para: "A poorly architected CMS becomes a bottleneck — slow to update, prone to breaking, and difficult to scale. I design and build CMS systems that give your team full control over content without touching code, keep the site fast, and support your long-term marketing operations. Built to grow with your practice, not fight it.",
+  },
+  {
+    // icon: "/ceo/strategic-custom-solutions.json",
+    icon: "/ceo/what-do-icon-5.svg",
+    heading: "API Development & Third-Party Integrations",
+    para: "Booking systems, payment processors, email marketing platforms, practice management software, analytics — I connect your digital systems so they share data automatically, eliminate manual work, and give you a single coherent view of your practice's digital performance. Custom API development and third-party integrations that actually work reliably.",
+  },
+  {
+    // icon: "/ceo/cutting-edge.json",
+    icon: "/ceo/what-do-icon-6.svg",
+    heading: "Web Performance & Technical Audits",
+    para: "A slow website loses patients before they book. I conduct in-depth technical audits that identify exactly what is limiting your site's performance — load speed, Core Web Vitals, crawlability, indexation, security, and conversion friction — and fix them in order of impact. The technical health of your website directly affects your rankings and your bookings.",
   },
 ];
 
@@ -1889,6 +1971,39 @@ export const CEO_CONVERSATION = {
       title: "Optimise & Grow",
       description:
         "Delivery isn't the finish line — it's the starting line. After launch I monitor performance, track what's working, and refine based on real data. Whether you're on a monthly retainer or a quarterly check-in, I stay engaged with your results. A website or campaign that isn't being actively improved is gradually losing ground to someone who is.",
+    },
+  ],
+};
+
+
+export const CTO_CONVERSATION = {
+  title: "From Brief to Build — How the Technical Work Actually Happens",
+  para: "Every system I build starts with understanding what it needs to do — then I build the right way to do it. No shortcuts that create problems later. No handovers that leave gaps.",
+  bgColor: `#0F0F0F`,
+  accordion: [
+    {
+      number: "01",
+      title: "Technical Discovery",
+      description:
+        "Before writing a line of code, I map what needs to be built, how it connects to existing systems, what the performance requirements are, and what constraints matter. For dental practices, that means understanding your booking flow, your patient journey, your staff workflows, and how your website needs to support all of it. I do not start building until the technical picture is complete.<br/><br/>Typically 2–3 days for a full technical brief",
+    },
+    {
+      number: "02",
+      title: "System Architecture",
+      description:
+        "I design the technical architecture before development starts — database structure, system components, API design, CMS setup, performance strategy, and security model. Getting this right at the start prevents the kind of technical debt that makes websites slow, difficult to maintain, and expensive to update later. The architecture document is reviewed and agreed before any build begins.<br/><br/>Architecture review included on all projects",
+    },
+    {
+      number: "03",
+      title: "Development & Testing",
+      description:
+        "I build in stages with testing at each point — not a single large delivery at the end. You see working components as they are completed, which means issues are caught early and the final delivery is not the first time you see the product. Performance benchmarks, cross-device testing, security basics, and SEO foundations are validated before any page goes live.<br/><br/>Stage-by-stage delivery, no surprises at launch",
+    },
+    {
+      number: "04",
+      title: "Deployment & Ongoing Performance",
+      description:
+        "Launch is not the finish line. After deployment I monitor technical performance — load speed, Core Web Vitals, crawl health, error logs — and address anything that affects the site's performance or rankings. For ongoing retainer clients, I provide monthly technical health checks and implement improvements as the business grows and evolves.<br/><br/>Post-launch monitoring included",
     },
   ],
 };
