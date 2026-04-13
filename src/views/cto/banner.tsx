@@ -38,7 +38,7 @@ const Banner = () => {
               </h1>
               <h2 className="font-sans font-semibold text-center mt-5">
                 <span className="relative text-2xl sm:text-3xl lg:text-4xl inline-block">
-                  <span className="relative z-2">CEO & FOUNDER</span>
+                  <span className="relative z-2">CTO & TECHNICAL ARCHITECT</span>
                   <span
                     className="absolute bottom-1.5 left-0 w-full h-2 sm:h-3 bg-primary"
                     style={{

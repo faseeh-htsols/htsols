@@ -3,7 +3,7 @@ import Container from "@/components/ui/container";
 import DoubleCurves from "@/components/ui/double-curves";
 import HeadingTwo from "@/components/ui/heading-two";
 import LottiePlayer from "@/components/ui/lottie-player";
-import { WHY_HIRE_ME_CEO } from "@/constants";
+import { WHY_HIRE_ME_CTO } from "@/constants";
 import parse from "html-react-parser";
 import Image from "next/image";
 const WhyHireMe = () => {
@@ -18,19 +18,14 @@ const WhyHireMe = () => {
         <Container>
           <div>
             <div className="max-w-[1124px] mx-auto flex flex-col gap-5 mb-4">
-              <HeadingTwo className="text-center">Why hire me</HeadingTwo>
+              <HeadingTwo className="text-center">WHY WORK WITH ME</HeadingTwo>
               <p className="text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur
+                Most web developers build websites. I build dental digital systems — the technical infrastructure that makes a practice visible, bookable, and operationally efficient. There is a difference, and it shows in every project I deliver.
               </p>
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-6">
-            {WHY_HIRE_ME_CEO.map((item, index) => (
+            {WHY_HIRE_ME_CTO.map((item, index) => (
               <div
                 key={item.heading}
                 className="relative group  bg-black rounded-lg px-4 py-6 hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]"
@@ -70,7 +65,7 @@ const WhyHireMe = () => {
             ))}
           </div>
           <div className="flex justify-center">
-            <Button href="/contact-us">Let’s discuss your project</Button>
+            <Button href="/contact-us">Let's Discuss Your Technical Requirements</Button>
           </div>
         </Container>
       </div>

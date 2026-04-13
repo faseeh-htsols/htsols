@@ -134,7 +134,7 @@ const HowWorks = ({ data }: HowWorksData) => {
                                                 : "mt-0 max-h-0 opacity-0"
                                                 } overflow-hidden`}>
                                             <div />
-                                            <p className="text-white pr-4">{step.description}</p>
+                                            <p className="text-white pr-4" dangerouslySetInnerHTML={{ __html: step.description }}></p>
                                             <div />
                                         </div>
                                     </button>
