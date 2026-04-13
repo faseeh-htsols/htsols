@@ -1943,6 +1943,51 @@ export const CEO_FAQS = [
   },
 ];
 
+export const CTO_FAQS = [
+  {
+    question: "Who is Qamar Rafique?",
+    answer:
+      "Qamar Rafique is the Chief Technology Officer of HTSOL Inc., a full-service digital agency based in Mississauga, Ontario. He is a software architect and full-stack engineer with over six years of experience in web application development and systems architecture. At HTSOL, Qamar leads all technical delivery — website development, custom CRM and practice management software, AI-optimised SEO implementation, and technical infrastructure for dental practices and healthcare businesses.",
+  },
+  {
+    question: "What does a CTO do at a digital agency like HTSOL?",
+    answer:
+      "Qamar's role is to ensure that every technical output HTSOL delivers is built properly — fast, secure, scalable, and structured to support long-term growth. Where Faseeh Khan (CEO) leads strategy, client relationships, and growth direction, Qamar leads technical architecture, development quality, and delivery execution. He works on every website build, CRM project, and technical SEO implementation — ensuring the engineering underneath HTSOL's work is done to a high standard.",
+  },
+  {
+    question:
+      "What is Qamar's specific experience with dental practices?",
+    answer:
+      "Qamar has worked with dental practices across the United Kingdom — including practices in Manchester, Birmingham, London, Leeds, Bristol, and Edinburgh — helping them rebuild underperforming websites into consistent patient acquisition systems. His focus has been on the technical systems specific to dental: conversion-optimised website architecture, AI-assisted local SEO, custom CRM and practice management software, and the booking and patient flow integrations that clinical teams actually need. He brings that UK delivery track record to every Canadian engagement.",
+  },
+  {
+    question: "What technical stack does Qamar work with?",
+    answer:
+      "Qamar's primary stack is MERN (MongoDB, Express.js, React, Node.js) and Next.js for web applications and custom software. He also works with Python and Django for back-end systems, and has formal Meta certifications in Python programming, Django web framework, and back-end database development. For dental-specific builds, he integrates booking systems, patient management platforms, CMS architectures, and the local SEO technical layer that supports Google Business Profile and map pack rankings.",
+  },
+  {
+    question: "Can Qamar build custom software for our dental practice — not just a website?",
+    answer:
+      "Yes — custom software is one of Qamar's core capabilities. He designs and builds bespoke CRM systems, patient management platforms, booking tools, and administrative dashboards tailored to how a specific dental practice operates. Unlike off-the-shelf solutions that require your team to adapt to the software, Qamar builds systems that adapt to your team. These are custom builds owned entirely by your practice — not subscription software with monthly fees that increase each year.",
+  },
+  {
+    question: "Why does Qamar have an Avionics degree rather than a Computer Science degree?",
+    answer:
+      "Qamar studied B.E. Avionics (Aviation Electronics Engineering) at PAF Karachi Institute of Economics and Technology — a rigorous engineering discipline that demands the kind of systematic, precise thinking that good software architecture requires. Aviation electronics engineers are trained to build systems where failures have serious consequences, which translates directly into how Qamar approaches software architecture: methodically, with careful consideration of how systems fail and how to prevent it. His software expertise was developed through six years of professional practice as a software architect and engineer.",
+  },
+  {
+    question:
+      "Does Qamar work with dental marketing agencies on a white label basis?",
+    answer:
+      "Yes. Qamar leads the technical side of HTSOL's white label partnerships with dental marketing agencies. If your agency handles the client relationships and strategy but needs a reliable technical partner to build the websites, implement the SEO infrastructure, and develop any custom software — Qamar's team delivers that under your brand. He has specific experience working as a technical partner behind dental marketing agencies in the UK, and that experience informs how HTSOL operates its white label technical partnerships in Canada.",
+  },
+  {
+    question: "How does Qamar approach technical SEO for dental practices?",
+    answer:
+      "Technical SEO for dental is a specific discipline. Qamar's approach focuses on the infrastructure that search engines use to understand and rank dental practices: clean site architecture that allows Google to crawl every page efficiently, schema markup that clearly communicates practice information, services, and location, Core Web Vitals performance that meets Google's quality thresholds, Google Business Profile technical optimisation, and local citation consistency. These are the technical signals that determine whether a dental practice appears in the map pack for searches like 'dentist near me' — and they require technical implementation, not just content creation.",
+  },
+];
+
 export const CEO_CONVERSATION = {
   title: "From First Conversation to Real Results",
   para: "No long onboarding documents. No waiting three weeks to hear back. Here's exactly what working with me looks like — from the first call to delivery and beyond.",
