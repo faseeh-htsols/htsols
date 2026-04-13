@@ -1,21 +1,11 @@
 import Image from "next/image";
 
 const SKILLS = [
-    { src: "/ceo/google.svg", label: " Google Analytics Certified", subLabel: "From: Google" },
-    { src: "/ceo/meta.svg", label: "Meta Blueprint Certified", subLabel: "From: Meta" },
-    { src: "/ceo/hubspot.svg", label: "HubSpot Inbound Marketing", subLabel: "From: HubSpot Academy" },
-    { src: "/ceo/semrush.svg", label: "SEO Toolkit Certified", subLabel: "From: Semrush Academy" },
-    { src: "/ceo/bsc.svg", label: "B.Sc. Software Engineering", subLabel: "From: COMSATS University" },
-    { src: "/ceo/google.svg", label: " Google Analytics Certified", subLabel: "From: Google" },
-    { src: "/ceo/meta.svg", label: "Meta Blueprint Certified", subLabel: "From: Meta" },
-    { src: "/ceo/hubspot.svg", label: "HubSpot Inbound Marketing", subLabel: "From: HubSpot Academy" },
-    { src: "/ceo/semrush.svg", label: "SEO Toolkit Certified", subLabel: "From: Semrush Academy" },
-    { src: "/ceo/bsc.svg", label: "B.Sc. Software Engineering", subLabel: "From: COMSATS University" },
-    { src: "/ceo/google.svg", label: " Google Analytics Certified", subLabel: "From: Google" },
-    { src: "/ceo/meta.svg", label: "Meta Blueprint Certified", subLabel: "From: Meta" },
-    { src: "/ceo/hubspot.svg", label: "HubSpot Inbound Marketing", subLabel: "From: HubSpot Academy" },
-    { src: "/ceo/semrush.svg", label: "SEO Toolkit Certified", subLabel: "From: Semrush Academy" },
-    { src: "/ceo/bsc.svg", label: "B.Sc. Software Engineering", subLabel: "From: COMSATS University" },
+    { src: "/ceo/meta.svg", label: "Back-End Database Development", subLabel: "From: Meta" },
+    { src: "/ceo/meta.svg", label: "Python Programming", subLabel: "From: Meta" },
+    { src: "/ceo/meta.svg", label: " Django Web Framework", subLabel: "From: Meta" },
+    { src: "/ceo/bsc.svg", label: "B.E. Avionics Engineering", subLabel: "From: PAF Karachi Institute of Economics and Technology" },
+    { src: "/ceo/hubspot.svg", label: "Chief Technology Officer", subLabel: "From: HTSOL Inc. — Since Dec 2024" },
 ] as const;
 
 function SkillPill({ skill }: { skill: (typeof SKILLS)[number] }) {
