@@ -314,7 +314,7 @@ const PortfolioGrid = () => {
                             alt={w.title}
                             className={`absolute inset-0 h-full w-full z-10 object-cover`}
                             loading="lazy"
-                            // quality={100}
+                          // quality={100}
                           />
                           <div className="absolute top-1/2 z-10 left-1/2 -translate-x-1/2 -translate-y-1/2">
                             <Image
@@ -340,7 +340,7 @@ const PortfolioGrid = () => {
             </div>
           </div>
           <div className="flex justify-center mt-8">
-            <Button href="/">More projects</Button>
+            <Button href="/services/website-development">More projects</Button>
           </div>
         </section>
       </Wrapper>

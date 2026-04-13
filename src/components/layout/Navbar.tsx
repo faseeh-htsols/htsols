@@ -46,27 +46,51 @@ export const Navbar: React.FC = () => {
 
               return (
                 <div key={item.name} className="group relative" onMouseLeave={() => setHideDesktopDropdown(false)}>
-                  <Link
-                    href={item.link}
-                    className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-white/85 transition-colors hover:text-white"
-                  >
-                    {item.name}
-                    <svg
-                      className="h-3 w-3 transition-transform duration-200 group-hover:rotate-180"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
+                  {item.link ? (
+                    <Link
+                      href={item.link}
+                      className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-white/85 transition-colors hover:text-white"
                     >
-                      <path
-                        d="M4 6L8 10L12 6"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </Link>
+                      {item.name}
+                      <svg
+                        className="h-3 w-3 transition-transform duration-200 group-hover:rotate-180"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M4 6L8 10L12 6"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </Link>
+
+                  ) : (
+                    <div
+                      className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-white/85 transition-colors hover:text-white hover:cursor-pointer"
+                    >
+                      {item.name}
+                      <svg
+                        className="h-3 w-3 transition-transform duration-200 group-hover:rotate-180"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M4 6L8 10L12 6"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  )}
 
                   <div
                     className={`absolute top-3 left-1/2 z-50 mt-3 w-64 -translate-x-1/2 translate-y-2 rounded-xl border border-white/10 bg-black/95 p-3 transition-all duration-200 ${hideDesktopDropdown
