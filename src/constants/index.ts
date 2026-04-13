@@ -1176,8 +1176,23 @@ export const NAV_ITEMS = [
     link: "/",
   },
   {
-    name: "About Us",
-    link: "/about-us",
+    name: "About",
+    link: "",
+    drop: true,
+    subItems: [
+      {
+        name: "About Us",
+        link: "/about-us",
+      },
+      {
+        name: "About the CEO",
+        link: "/ceo",
+      },
+      {
+        name: "About the CTO",
+        link: "/cto",
+      },
+    ],
   },
   {
     name: "Services",
@@ -1189,24 +1204,28 @@ export const NAV_ITEMS = [
         link: "/services/website-development",
       },
       {
-        name: "SEO services",
+        name: "SEO Services",
         link: "/services/seo-services",
       },
       {
-        name: "CGI services",
-        link: "/services/cgi",
+        name: "White Label",
+        link: "/services/white-label",
       },
       {
         name: "Staff Augmentation",
         link: "/services/staff-augmentation",
       },
       {
+        name: "Digital Marketing",
+        link: "/services/digital-marketing",
+      },
+      {
         name: "Digital Transformation",
         link: "/services/digital-transformation",
       },
       {
-        name: "Digital Marketing",
-        link: "/services/digital-marketing",
+        name: "CGI Services",
+        link: "/services/cgi",
       },
     ],
   },
@@ -1215,12 +1234,8 @@ export const NAV_ITEMS = [
     link: "/contact-us",
   },
   {
-    name: "About CEO",
-    link: "/ceo",
-  },
-  {
-    name: "About CTO",
-    link: "/cto",
+    name: "Blog",
+    link: "/blog",
   },
 ];
 export const WEBSITE_NEEDS_BUISNESS = [
@@ -1395,7 +1410,7 @@ export const MISSISSAUGA_BANNER = {
   firstBtnText: "Book a Free Consultation",
   firstBtnLink: "/contact-us",
   secondBtnText: "View Our Work",
-  secondBtnLink: "/",
+  secondBtnLink: "/services/website-development",
 };
 
 export const MISSISSAUGA_WEBSITE = {

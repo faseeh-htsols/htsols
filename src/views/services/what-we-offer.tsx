@@ -118,7 +118,7 @@ const WhatWeOffer = () => {
                         )}
                         <div className="flex justify-center items-center gap-8">
                           <Link
-                            href="/"
+                            href="/services/website-development"
                             className="inline-flex items-center gap-2 group"
                           >
                             <span className="text-transparent bg-clip-text bg-linear-to-r from-[#075B65] via-[#00838A] to-[#328A99] font-semibold uppercase text-[18px]">
@@ -133,7 +133,7 @@ const WhatWeOffer = () => {
                             />
                           </Link>
                           <Link
-                            href="/"
+                            href="/services/website-development"
                             className="inline-flex items-center gap-2 group"
                           >
                             <span className="text-white font-semibold uppercase text-[18px] underline">

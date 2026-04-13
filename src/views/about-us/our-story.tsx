@@ -9,7 +9,7 @@ const lists = [
 ];
 export default function OurStory() {
   return (
-    <section className="relative bg-[url(/dental/bg-why-choose.webp)] bg-cover bg-no-repeat bg-center py-20 lg:py-40 overflow-hidden">
+    <section className="relative bg-[url(/about-us/our-story-bg.png)] bg-cover bg-no-repeat bg-center py-20 lg:py-40 overflow-hidden">
       {/* subtle gradient */}
       {/* <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/30 to-transparent" /> */}
 
