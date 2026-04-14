@@ -19,6 +19,7 @@ const staticPaths = [
   "/services/seo-services",
   "/services/website-development",
   "/web-portfolio",
+  "/services/white-label",
 ] as const;
 
 function lastModFromBlog(b: {

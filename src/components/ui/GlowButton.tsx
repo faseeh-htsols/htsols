@@ -19,7 +19,7 @@ export const GlowButton: React.FC<GlowButtonProps> = ({
   /* ── WHITE variant: solid white + black arrow; hover → transparent, white text/border, white arrow ── */
   if (variant === "white") {
     const whiteClasses = [
-      "group flex items-center gap-2 px-6 py-3 text-sm font-sans font-semibold uppercase rounded-full tracking-wider",
+      "group inline-flex items-center gap-2 px-6 py-3 text-sm font-sans font-semibold uppercase rounded-full tracking-wider",
       "border-2 border-white bg-white text-black",
       "transition-[background-color,color,border-color] duration-300 ease-out",
       "hover:bg-transparent hover:text-white hover:border-white",
