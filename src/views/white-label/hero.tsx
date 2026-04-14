@@ -61,7 +61,7 @@ const inputClasses =
   "h-12 w-full rounded-xl border border-white/20 bg-white/[0.05] px-4 text-[15px] text-white outline-0 transition-colors placeholder:text-white/72 focus:border-[#00A1A5]/70 focus:bg-white/[0.08]";
 
 const submitButtonClasses =
-  "inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-full border border-white bg-white px-5 py-3 text-center text-[12px] font-semibold uppercase tracking-[0.08em] text-black transition-all duration-300 hover:bg-transparent hover:text-white disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:px-6 sm:text-sm sm:tracking-wider";
+  "group inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-full border border-white bg-white px-5 py-3 text-center text-[12px] font-semibold uppercase tracking-[0.08em] text-black transition-all duration-300 hover:bg-transparent hover:text-white disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:px-6 sm:text-sm sm:tracking-wider";
 
 const WhiteLabelHero = () => {
   const [isSending, setIsSending] = useState(false);
@@ -424,7 +424,7 @@ const WhiteLabelHero = () => {
                               alt=""
                               width={22}
                               height={22}
-                              className="h-[22px] w-[22px]"
+                              className="h-[22px] w-[22px] transition-[filter] duration-300 group-hover:invert"
                             />
                           </button>
                         </div>
