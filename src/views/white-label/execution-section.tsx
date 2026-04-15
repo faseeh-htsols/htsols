@@ -1,12 +1,8 @@
+import ArrowLinkButton from "@/components/ui/arrow-link-button";
 import Button from "@/components/ui/Button";
 import Wrapper from "@/components/ui/wrapper";
 import Image from "next/image";
-import {
-  ArrowUpRight,
-  Layers3,
-  Tag,
-  type LucideIcon,
-} from "lucide-react";
+import { Layers3, Tag, type LucideIcon } from "lucide-react";
 
 const serviceRows = [
   [
@@ -48,9 +44,6 @@ const trustItems: TrustItem[] = [
 
 const chipClasses =
   "inline-flex min-h-[50px] shrink-0 items-center gap-3 rounded-full border border-[#00A1A5] bg-[rgba(5,13,16,0.9)] px-5 py-3 text-center font-sans text-[15px] font-normal leading-none text-white sm:min-h-[56px] sm:px-6 sm:text-[17px] lg:px-7 lg:text-[18px]";
-
-const outlineButtonClasses =
-  "group inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/35 bg-transparent px-6 py-3 text-center font-sans text-[12px] font-semibold uppercase tracking-[0.08em] text-white transition-all duration-300 hover:border-white hover:bg-white hover:text-black sm:w-auto sm:text-sm sm:tracking-wider";
 
 const ctaSizingClasses =
   "w-full justify-center px-8 py-4 text-[12px] tracking-[0.08em] sm:w-[390px] sm:min-w-[390px] sm:px-8 sm:py-5 sm:text-[15px] sm:tracking-[0.06em]";
@@ -146,13 +139,13 @@ const WhiteLabelExecutionSection = () => {
             >
               Start A Partner Conversation
             </Button>
-            <a
+            <ArrowLinkButton
               href="#white-label-capabilities"
-              className={`${outlineButtonClasses} ${ctaSizingClasses}`}
+              variant="outline"
+              className={ctaSizingClasses}
             >
-              <span>See What We Deliver</span>
-              <ArrowUpRight className="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-            </a>
+              See What We Deliver
+            </ArrowLinkButton>
           </div>
 
           <div className="relative mx-auto mt-16 max-w-[1480px] sm:mt-24">
