@@ -10,9 +10,9 @@ type ArrowLinkButtonProps = {
 };
 
 const variantClasses = {
-  teal: "border border-[#00A1A5] bg-[#00A1A5] text-white hover:bg-transparent hover:text-[#00A1A5]",
+  teal: "border border-[#00A1A5] bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] text-white transition-all duration-300 hover:bg-none hover:bg-transparent hover:text-[#00A1A5]",
   outline:
-    "border border-white/40 bg-transparent text-white hover:border-white hover:bg-white hover:text-black",
+    "border border-white/40 bg-transparent text-white hover:border-white hover:bg-white transition-all duration-300 hover:text-black",
 } as const;
 
 const ArrowLinkButton = ({

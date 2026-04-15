@@ -35,7 +35,7 @@ export default function Banner() {
           <h1 className="font-primary font-semibold text-4xl sm:text-5xl lg:text-6xl uppercase leading-tight mb-2 text-center">
             OUR PORTFOLIO
           </h1>
-          <div
+          {/* <div
             className="group relative w-full max-w-[1080px] h-[240px] sm:h-[340px] md:h-[420px] rounded-xl border border-white/20 overflow-hidden cursor-pointer"
             onClick={() => setIsOpen(true)}>
             <Image
@@ -55,15 +55,16 @@ export default function Banner() {
                 className="w-16 h-16 sm:w-[72px] sm:h-[72px]"
               />
             </div>
-          </div>
-          {isOpen && (
+          </div> */}
+          {/* {isOpen && (
             <div
               className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 backdrop-blur-md animate-[fadeIn_0.25s_ease]"
               onClick={() => setIsOpen(false)}>
               <div
                 className="relative w-[90vw] max-w-4xl rounded-xl overflow-hidden shadow-[0_0_60px_rgba(0,0,0,0.8)] animate-[scaleUp_0.3s_cubic-bezier(0.34,1.56,0.64,1)]"
                 onClick={(e) => e.stopPropagation()}>
-                {/* Close button */}
+
+
                 <button
                   className="absolute top-3 right-3 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm text-white text-sm hover:bg-white/25 hover:rotate-90 transition-all duration-200"
                   onClick={() => setIsOpen(false)}
@@ -79,7 +80,7 @@ export default function Banner() {
                 />
               </div>
             </div>
-          )}
+          )} */}
         </div>
       </Container>
     </section>

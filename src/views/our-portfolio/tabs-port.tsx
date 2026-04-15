@@ -7,12 +7,12 @@ import { GlowButton } from "@/components/ui/GlowButton";
 import PopUpYoutube from "@/components/ui/popup-youtube";
 import { motion, useScroll, useTransform } from "framer-motion";
 const TABS = [
-  "All",
+  "Digital Transformation",
   "Website Design",
   "Website Development",
-  "CGI Adds",
+  "CGI Ads",
   "Digital Marketing",
-  "Digital Transformation",
+  "Search Engine Optimization",
   "Custom Software Dev",
 ] as const;
 
@@ -55,12 +55,12 @@ const designCards: DesignCard[] = [
     label: "SMART HOME",
   },
   {
-    image: "/web-design-1.png",
+    image: "/w-design-7.png",
     category: "Website Design",
     label: "DENTAL",
   },
   {
-    image: "/web-design-1.png",
+    image: "/w-design-8.png",
     category: "Website Design",
     label: "DIGITAL MARKETING",
   },
@@ -70,7 +70,7 @@ const designCards: DesignCard[] = [
     label: "DENTAL",
   },
   {
-    image: "/web-design-1.png",
+    image: "/w-design-10.png",
     category: "Website Design",
     label: "DENTAL",
   },
@@ -127,110 +127,110 @@ const devCards: DesignCard[] = [
     label: "DENTIST",
   },
 ];
-const transformationCards: DesignCard[] = [
-  {
-    image: "/web-design-5.png",
-    category: "Digital Transformation",
-    label: "SMART HOME",
-  },
-  {
-    image: "/web-design-1.png",
-    category: "Digital Transformation",
-    label: "DENTAL",
-  },
-  {
-    image: "/web-design-1.png",
-    category: "Digital Transformation",
-    label: "DIGITAL MARKETING",
-  },
-  {
-    image: "/web-design-9.png",
-    category: "Digital Transformation",
-    label: "DENTAL",
-  },
-  {
-    image: "/web-design-1.png",
-    category: "Digital Transformation",
-    label: "DENTAL",
-  },
-  {
-    image: "/web-design-1.png",
-    category: "Digital Transformation",
-    label: "Dental",
-  },
-  {
-    image: "/web-design-2.png",
-    category: "Digital Transformation",
-    label: "THERAPIST",
-  },
-  {
-    image: "/web-design-3.png",
-    category: "Digital Transformation",
-    label: "DENTIST",
-  },
-  {
-    image: "/web-design-6.png",
-    category: "Digital Transformation",
-    label: "DENTIST",
-  },
-  {
-    image: "/web-design-4.png",
-    category: "Digital Transformation",
-    label: "LOGISTICS",
-  },
-];
-const customDevCards: DesignCard[] = [
-  {
-    image: "/services/web-one.webp",
-    category: "Custom Software Development",
-    label: "DENTAL MARKETING AGENCY",
-  },
-  {
-    image: "/services/web-two.webp",
-    category: "Custom Software Development",
-    label: "DENTAL",
-  },
-  {
-    image: "/services/web-one.webp",
-    category: "Custom Software Development",
-    label: "DENTAL SOLUTIONS",
-  },
-  {
-    image: "/services/web-two.webp",
-    category: "Custom Software Development",
-    label: "SPORTS DENTAL THERAPIST",
-  },
-  {
-    image: "/services/web-one.webp",
-    category: "Custom Software Development",
-    label: "DENTIST",
-  },
-  {
-    image: "/web-dev-1.png",
-    category: "Custom Software Development",
-    label: "SMILEFAST",
-  },
-  {
-    image: "/services/web-one.webp",
-    category: "Custom Software Development",
-    label: "DENTAL",
-  },
-  {
-    image: "/services/web-two.webp",
-    category: "Custom Software Development",
-    label: "NUYU DENTAL",
-  },
-  {
-    image: "/services/web-one.webp",
-    category: "Custom Software Development",
-    label: "DENTIST",
-  },
-  {
-    image: "/web-dev-2.png",
-    category: "Custom Software Development",
-    label: "BRITISH ACADEMY",
-  },
-];
+// const searchEngineOptimizationCards: DesignCard[] = [
+//   {
+//     image: "/web-design-5.png",
+//     category: "Search Engine Optimization",
+//     label: "SMART HOME",
+//   },
+//   {
+//     image: "/web-design-1.png",
+//     category: "Search Engine Optimization",
+//     label: "DENTAL",
+//   },
+//   {
+//     image: "/web-design-1.png",
+//     category: "Search Engine Optimization",
+//     label: "DIGITAL MARKETING",
+//   },
+//   {
+//     image: "/web-design-9.png",
+//     category: "Search Engine Optimization",
+//     label: "DENTAL",
+//   },
+//   {
+//     image: "/web-design-1.png",
+//     category: "Search Engine Optimization",
+//     label: "DENTAL",
+//   },
+//   {
+//     image: "/web-design-1.png",
+//     category: "Search Engine Optimization",
+//     label: "Dental",
+//   },
+//   {
+//     image: "/web-design-2.png",
+//     category: "Search Engine Optimization",
+//     label: "THERAPIST",
+//   },
+//   {
+//     image: "/web-design-3.png",
+//     category: "Search Engine Optimization",
+//     label: "DENTIST",
+//   },
+//   {
+//     image: "/web-design-6.png",
+//     category: "Search Engine Optimization",
+//     label: "DENTIST",
+//   },
+//   {
+//     image: "/web-design-4.png",
+//     category: "Search Engine Optimization",
+//     label: "LOGISTICS",
+//   },
+// ];
+// const customDevCards: DesignCard[] = [
+//   {
+//     image: "/services/web-one.webp",
+//     category: "Custom Software Development",
+//     label: "DENTAL MARKETING AGENCY",
+//   },
+//   {
+//     image: "/services/web-two.webp",
+//     category: "Custom Software Development",
+//     label: "DENTAL",
+//   },
+//   {
+//     image: "/services/web-one.webp",
+//     category: "Custom Software Development",
+//     label: "DENTAL SOLUTIONS",
+//   },
+//   {
+//     image: "/services/web-two.webp",
+//     category: "Custom Software Development",
+//     label: "SPORTS DENTAL THERAPIST",
+//   },
+//   {
+//     image: "/services/web-one.webp",
+//     category: "Custom Software Development",
+//     label: "DENTIST",
+//   },
+//   {
+//     image: "/web-dev-1.png",
+//     category: "Custom Software Development",
+//     label: "SMILEFAST",
+//   },
+//   {
+//     image: "/services/web-one.webp",
+//     category: "Custom Software Development",
+//     label: "DENTAL",
+//   },
+//   {
+//     image: "/services/web-two.webp",
+//     category: "Custom Software Development",
+//     label: "NUYU DENTAL",
+//   },
+//   {
+//     image: "/services/web-one.webp",
+//     category: "Custom Software Development",
+//     label: "DENTIST",
+//   },
+//   {
+//     image: "/web-dev-2.png",
+//     category: "Custom Software Development",
+//     label: "BRITISH ACADEMY",
+//   },
+// ];
 interface CgiVideo {
   thumbnail: string;
   title: string;
@@ -384,9 +384,132 @@ const caseStudies: CaseStudy[] = [
     images: ["/mockup 3.png"],
     accent: "/marketing-3.webp",
   },
+  {
+    logo: "/logo.webp",
+    company: "Wriste Watch",
+    heading: "ELEVATING ATHLETE\nORAL PERFORMANCE",
+    description:
+      "As a leader in the UK Sports Dentistry Association, Imogen Johnson required a digital platform that bridged elite sports science with patient-centered care. We built a high-performance, calm-centric interface that showcases her clinical research and advanced aesthetic treatments for the modern athlete.",
+    services: [
+      "Social Media Management",
+      "Content Creation",
+      "Branding & Design",
+    ],
+    images: ["/watch.png"],
+    accent: "/marketing-3.webp",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Diamond Medical",
+    heading: "ELEVATING ATHLETE\nORAL PERFORMANCE",
+    description:
+      "As a leader in the UK Sports Dentistry Association, Imogen Johnson required a digital platform that bridged elite sports science with patient-centered care. We built a high-performance, calm-centric interface that showcases her clinical research and advanced aesthetic treatments for the modern athlete.",
+    services: [
+      "Social Media Management",
+      "Content Creation",
+      "Branding & Design",
+    ],
+    images: ["/diamond.png"],
+    accent: "/diamond-bg.png",
+  },
+];
+
+const customDevCards: CaseStudy[] = [
+  {
+    logo: "/cust-dev-logo.png",
+    company: "Htsol.ca",
+    heading: "HIGH-IMPACT UX FOR\nDENTAL PROFESSIONALS",
+    description:
+      "With over a decade of clinical expertise, this international consultancy needed a digital ecosystem that matched their authority. We delivered a conversion-focused, award-nominated platform that turns professional trust into measurable practice growth.",
+    services: [
+      "Web Design & Development",
+      "Social Media Management",
+    ],
+    images: ["/htsol.png"],
+    accent: "/cus-dev-1.png",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Smile Fast",
+    heading: "HIGH-IMPACT UX FOR\nDENTAL PROFESSIONALS",
+    description:
+      "With over a decade of clinical expertise, this international consultancy needed a digital ecosystem that matched their authority. We delivered a conversion-focused, award-nominated platform that turns professional trust into measurable practice growth.",
+    services: [
+      "Web Design & Development",
+      "Social Media Management",
+    ],
+    images: ["/cust-dev-2.png"],
+    accent: "/cus-dev-1.png",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Start Smiling",
+    heading: "HIGH-IMPACT UX FOR\nDENTAL PROFESSIONALS",
+    description:
+      "With over a decade of clinical expertise, this international consultancy needed a digital ecosystem that matched their authority. We delivered a conversion-focused, award-nominated platform that turns professional trust into measurable practice growth.",
+    services: [
+      "Web Design & Development",
+      "Social Media Management",
+    ],
+    images: ["/cust-dev-3.png"],
+    accent: "/cus-dev-1.png",
+  },
+];
+
+
+const searchEngineOptimizationCards: CaseStudy[] = [
+  {
+    logo: "/logo.webp",
+    company: "Dr. sean",
+    heading: "Dr Sean Roberts",
+    description:
+      "With over a decade of clinical expertise, this international consultancy needed a digital ecosystem that matched their authority. We delivered a conversion-focused, award-nominated platform that turns professional trust into measurable practice growth.",
+    services: [
+      "Web Design & Development",
+      "Content Creation",
+      "CMS Management",
+      "Social Media Management",
+      "Branding & Design",
+      "Performance SEO",
+    ],
+    images: ["/seo-1.png"],
+    accent: "/cus-dev-1.png",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Nuyu Dental",
+    heading: "Nuyu Dental & Clinic",
+    description:
+      "As a leader in the UK Sports Dentistry Association, Imogen Johnson required a digital platform that bridged elite sports science with patient-centered care. We built a high-performance, calm-centric interface that showcases her clinical research and advanced aesthetic treatments for the modern athlete.",
+    services: [
+      "Web Design & Development",
+      "Content Creation",
+      "Branding & Design",
+      "Social Media Management",
+      "Performance SEO",
+    ],
+    images: ["/seo-1.png"],
+    accent: "/cus-dev-1.png",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Dentopia",
+    heading: "DEntopia marketing",
+    description:
+      "As a leader in the UK Sports Dentistry Association, Imogen Johnson required a digital platform that bridged elite sports science with patient-centered care. We built a high-performance, calm-centric interface that showcases her clinical research and advanced aesthetic treatments for the modern athlete.",
+    services: [
+      "Web Design & Development",
+      "Content Creation",
+      "Branding & Design",
+      "Social Media Management",
+      "Performance SEO",
+    ],
+    images: ["/seo-1.png"],
+    accent: "/cus-dev-1.png",
+  },
 ];
 export default function TabsPort() {
-  const [activeTab, setActiveTab] = useState<TabName>("All");
+  const [activeTab, setActiveTab] = useState<TabName>("Digital Transformation");
   const [popupSrc, setPopupSrc] = useState<string | null>(null);
   const [popupOpen, setPopupOpen] = useState(false);
 
@@ -516,13 +639,11 @@ export default function TabsPort() {
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`
-              relative px-6 py-3 text-xs sm:text-sm font-semibold uppercase tracking-wider
-              transition-all duration-300 cursor-pointer whitespace-nowrap bg-[#010101] rounded-xl font-primary
-              ${isActive
-                        ? "text-white border border-white"
-                        : "text-[#636363] hover:text-white"}
-            `}
+                    className={`relative px-6 py-3 text-xs sm:text-sm font-semibold uppercase tracking-wider  cursor-pointer whitespace-nowrap bg-[#010101] rounded-xl font-primary w-fit
+                    ${isActive
+                        ? "text-white border border-[#00838A] bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]"
+                        : "text-[#636363] hover:text-white border border-tertiary"}
+                    `}
                   >
                     {tab}
                   </button>
@@ -544,7 +665,7 @@ export default function TabsPort() {
                 </button>
 
                 <div className="flex-1 flex flex-wrap justify-center gap-3">
-                  {TABS.slice(0, 4).map((tab) => {
+                  {TABS.map((tab) => {
                     const isActive = activeTab === tab;
                     return (
                       <button
@@ -554,7 +675,7 @@ export default function TabsPort() {
                   relative px-6 py-3 text-xs sm:text-sm font-semibold uppercase tracking-wider
                   transition-all duration-300 cursor-pointer whitespace-nowrap bg-[#010101] rounded-xl font-primary
                   ${isActive
-                            ? "text-white border border-white"
+                            ? "text-white bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]"
                             : "text-[#636363] hover:text-white"}
                 `}
                       >
@@ -595,14 +716,14 @@ export default function TabsPort() {
         {/* ── TAB CONTENT ── */}
         <div className="min-h-[400px]">
           {/* All Cards */}
-          {activeTab === "All" && (
+          {activeTab === "Digital Transformation" && (
             <div className="space-y-10">
-              <PortfolioGrid cards={devCards} />
               <PortfolioGrid cards={designCards} />
-              <CgiGrid videos={cgiVideos} onPlay={openVideo} />
+              <PortfolioGrid cards={devCards} />
               <MarketingCaseStudies studies={caseStudies} />
-              <PortfolioGrid cards={transformationCards} />
-              <PortfolioGrid cards={customDevCards} />
+              <MarketingCaseStudies studies={customDevCards} />
+              <MarketingCaseStudies studies={searchEngineOptimizationCards} />
+              <CgiGrid videos={cgiVideos} onPlay={openVideo} />
             </div>
           )}
 
@@ -616,8 +737,8 @@ export default function TabsPort() {
             <PortfolioGrid cards={devCards} />
           )}
 
-          {/* CGI Adds */}
-          {activeTab === "CGI Adds" && (
+          {/* CGI Ads */}
+          {activeTab === "CGI Ads" && (
             <CgiGrid videos={cgiVideos} onPlay={openVideo} />
           )}
 
@@ -626,14 +747,14 @@ export default function TabsPort() {
             <MarketingCaseStudies studies={caseStudies} />
           )}
 
-          {/* Digital Transformation */}
-          {activeTab === "Digital Transformation" && (
-            <PortfolioGrid cards={transformationCards} />
+          {/* Search Engine Optimization */}
+          {activeTab === "Search Engine Optimization" && (
+            <MarketingCaseStudies studies={searchEngineOptimizationCards} />
           )}
 
           {/* Custom Software Dev */}
           {activeTab === "Custom Software Dev" && (
-            <PortfolioGrid cards={customDevCards} />
+            <MarketingCaseStudies studies={customDevCards} />
           )}
         </div>
       </Container>
@@ -701,7 +822,7 @@ function PortfolioGrid({ cards }: { cards: DesignCard[] }) {
             {/* Middle category text */}
             <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
               <span className="px-5 py-2 rounded-full text-white text-sm sm:text-base font-semibold uppercase tracking-wider backdrop-blur-[2px]">
-                {card.category}
+                {card.label}
               </span>
             </div>
 
