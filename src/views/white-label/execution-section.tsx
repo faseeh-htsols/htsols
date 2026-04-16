@@ -84,7 +84,7 @@ const WhiteLabelExecutionSection = () => {
         <div className="mx-auto mt-16 max-w-[1080px] text-center sm:mt-20">
           <div className="flex items-center justify-center gap-3">
             <span className="h-px w-14 bg-[#00A1A5]/70 sm:w-16" />
-            <span className="font-sans text-xs font-semibold uppercase tracking-[0.18em] text-[#00A1A5] sm:text-sm">
+            <span className="bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text font-sans text-xs font-semibold uppercase tracking-[0.18em] text-transparent sm:text-sm">
               Since 2017
             </span>
           </div>
@@ -98,7 +98,7 @@ const WhiteLabelExecutionSection = () => {
             </span>
           </h2>
 
-          <p className="mx-auto mt-6 flex max-w-[846px] flex-col items-center justify-center text-center font-sans text-[13px] font-semibold uppercase leading-[1.45] tracking-[0.08em] text-[#00A1A5] sm:min-h-[52px] sm:text-[15px]">
+          <p className="mx-auto mt-6 flex max-w-[846px] flex-col items-center justify-center bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-center font-sans text-[13px] font-semibold uppercase leading-[1.45] tracking-[0.08em] text-transparent sm:min-h-[52px] sm:text-[15px]">
             <span className="block sm:whitespace-nowrap">
               We deliver agency-quality websites, SEO, and digital marketing
               under your brand

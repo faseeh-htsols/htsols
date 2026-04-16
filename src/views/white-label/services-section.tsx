@@ -1,21 +1,10 @@
+import Image from "next/image";
 import Wrapper from "@/components/ui/wrapper";
-import {
-  ChartNoAxesColumn,
-  CodeXml,
-  FileText,
-  Mail,
-  Monitor,
-  Paintbrush,
-  Search,
-  SearchCode,
-  Share2,
-  type LucideIcon,
-} from "lucide-react";
 
 type ServiceCard = {
   titleLines: string[];
   description: string;
-  icon: LucideIcon;
+  iconSrc: string;
   tone: "muted" | "base";
 };
 
@@ -24,63 +13,63 @@ const serviceCards: ServiceCard[] = [
     titleLines: ["White Label Web", "Design & Development"],
     description:
       "Custom website design and development delivered under your agency's brand. From wireframes through to a live, tested, and fully optimised website. We follow your design brief, your brand standards, and your client's requirements and hand over a finished product that reflects the quality your agency is known for.",
-    icon: Monitor,
+    iconSrc: "/services/Frame(0).svg",
     tone: "muted",
   },
   {
     titleLines: ["White Label SEO", "Delivery"],
     description:
       "Full-service SEO delivered as your agency's work. Technical audits, on-page optimisation, content creation, local SEO, link building, and monthly reporting are all produced under your brand. We follow your reporting format, your client communication style, and your timelines.",
-    icon: SearchCode,
+    iconSrc: "/services/Frame%20(1).svg",
     tone: "base",
   },
   {
     titleLines: ["White Label Google", "Ads & PPC"],
     description:
       "Campaign setup, management, optimisation, and branded reporting for Google Ads, Meta Ads, and other paid channels are all delivered under your agency's name. We manage the complexity. You take the credit.",
-    icon: Search,
+    iconSrc: "/services/Frame%20(2).svg",
     tone: "muted",
   },
   {
     titleLines: ["White Label Social", "Media Management"],
     description:
       "Content creation, scheduling, community management, and performance reporting for your clients' social channels are delivered as your agency's service. Strategy, captions, graphics, and monthly reports all stay branded to you.",
-    icon: Share2,
+    iconSrc: "/services/Frame%20(3).svg",
     tone: "base",
   },
   {
     titleLines: ["White Label Content", "Marketing"],
     description:
       "Blog posts, service pages, location pages, email sequences, and content strategies are written for your clients and delivered under your agency's brand. We research, write, optimise, and hand over work in your voice, your format, and ready to publish.",
-    icon: FileText,
+    iconSrc: "/services/Frame%20(4).svg",
     tone: "muted",
   },
   {
     titleLines: ["White Label Branding", "& Visual Identity"],
     description:
       "Logo design, brand guidelines, colour systems, typography, and visual identity are created for your clients and delivered as your agency's creative output. We execute to your brief and your client's vision.",
-    icon: Paintbrush,
+    iconSrc: "/services/Frame%20(5).svg",
     tone: "base",
   },
   {
     titleLines: ["White Label Email", "Marketing"],
     description:
       "Email campaigns, automation sequences, newsletter design, list management, and performance reporting are all produced for your clients and branded under your agency. We handle the strategy, the copy, the design, and the technical setup.",
-    icon: Mail,
+    iconSrc: "/services/Frame%20(6).svg",
     tone: "muted",
   },
   {
     titleLines: ["White Label", "Reporting & Analytics"],
     description:
       "Branded monthly performance reports, Google Analytics configuration, conversion tracking, and dashboard setup are delivered under your agency's name. We produce reports that look like your team wrote them.",
-    icon: ChartNoAxesColumn,
+    iconSrc: "/services/Frame%20(7).svg",
     tone: "base",
   },
   {
     titleLines: ["White Label Custom", "Development"],
     description:
       "Custom web applications, CRMs, client portals, booking systems, and bespoke software are built for your clients and delivered as your agency's development capability. If your client needs something built, we build it.",
-    icon: CodeXml,
+    iconSrc: "/services/Frame%20(8).svg",
     tone: "muted",
   },
 ];
@@ -104,7 +93,7 @@ const ServicesSection = () => {
                 White Label Services From HTSOL Inc.
               </h2>
 
-              <p className="mt-6 font-sans text-[16px] font-semibold leading-[1.35] tracking-[-0.02em] text-[#00A1A5] sm:text-[20px] lg:text-[22px]">
+              <p className="mt-6 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text font-sans text-[16px] font-semibold leading-[1.35] tracking-[-0.02em] text-transparent sm:text-[20px] lg:text-[22px]">
                 Everything Your Clients Need. All Delivered Under Your Brand.
               </p>
 
@@ -117,15 +106,18 @@ const ServicesSection = () => {
             </div>
 
             <div className="mt-14 grid gap-px bg-[#1E1E1E] lg:mt-16 lg:grid-cols-3">
-              {serviceCards.map(({ titleLines, description, icon: Icon, tone }) => (
+              {serviceCards.map(({ titleLines, description, iconSrc, tone }) => (
                 <article
                   key={titleLines.join(" ")}
                   className={`flex min-h-[280px] flex-col items-center px-6 py-10 text-center sm:px-10 lg:min-h-[315px] lg:px-8 lg:py-11 ${tone === "muted" ? "bg-[#262626]" : "bg-[#111111]"
                     }`}
                 >
-                  <Icon
-                    className="h-11 w-11 text-[#00A1A5] lg:h-12 lg:w-12"
-                    strokeWidth={1.6}
+                  <Image
+                    src={iconSrc}
+                    alt=""
+                    width={48}
+                    height={48}
+                    className="h-11 w-11 lg:h-12 lg:w-12"
                   />
 
                   <h3 className="mt-6 font-primary text-[20px] font-semibold uppercase leading-[1.02] tracking-[-0.035em] text-white sm:text-[22px]">
