@@ -11,6 +11,17 @@ type Step = {
     description: string;
 };
 
+type WhyBusinessChooseData = {
+    highLight?: string;
+    title: string;
+    para: string;
+    accordion: Step[];
+};
+
+type WhyBusinessChooseProps = {
+    data: WhyBusinessChooseData;
+};
+
 const STEPS: Step[] = [
     {
         number: "01",
@@ -85,7 +96,7 @@ const CloseIcon = ({ className = "" }: { className?: string }) => (
     </svg>
 );
 
-const WhyBusinessChoose = () => {
+const WhyBusinessChoose = ({ data }: WhyBusinessChooseProps) => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
     const baseId = useId();
 
@@ -95,23 +106,23 @@ const WhyBusinessChoose = () => {
                 <div className="relative py-20 lg:py-40">
                     {/* Header */}
                     <div className="text-center">
+                        {data.highLight && (
+                            <p className=" uppercase tracking-widest mb-6 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent text-[18px] text-center">
+                                {data.highLight}
+                            </p>
+                        )}
+
                         <HeadingTwo className="text-center">
-                            Why Businesses Choose HTSOL Digital Marketing Agency
+                            {data.title}
                         </HeadingTwo>
-                        <p className="mt-8 mb-9 text-white text-lg">
-                            Businesses choose <b>HTSOL Inc. Digital Marketing Agency</b> because our work focuses on meaningful outcomes rather than activity alone.
-                            <br />
-                            Our team combines technical expertise, strategic thinking, and creative marketing solutions to support long-term digital growth.
-                            <br />
-                            When you work with <b>HTSOL Inc</b>., you gain access to:
-                        </p>
+                        <p className="mt-8 mb-9 text-white text-lg" dangerouslySetInnerHTML={{ __html: data.para }} />
 
                         <div className="mt-6 h-px w-full bg-white" />
                     </div>
 
                     {/* Accordion */}
                     <div className="">
-                        {STEPS.map((step, idx) => {
+                        {data.accordion.map((step, idx) => {
                             const isOpen = idx === activeIndex;
                             const panelId = `${baseId}-panel-${idx}`;
                             const buttonId = `${baseId}-button-${idx}`;

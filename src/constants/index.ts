@@ -2052,3 +2052,158 @@ export const CTO_CONVERSATION = {
     },
   ],
 };
+
+
+export const WEB_DEV_WHY_CHOOSE = {
+  title: "Why Choose HTSOL Inc. for Web Development",
+  cards: [
+    {
+      id: "oneTeam",
+      heading: "ONE TEAM FOR DEVELOPMENT AND MARKETING",
+      description:
+        "Your website should work with your SEO, ads, and content strategy. We build with your full digital ecosystem in mind.",
+      image: "/website/one-team.png",
+    },
+    {
+      id: "performanceFirst",
+      heading: "PERFORMANCE-FIRST BUILDS",
+      description:
+        "Speed, stability, and mobile usability are treated as requirements, not optional extras. This supports better user experience and more reliable Core Web Vitals.",
+      image: "/website/performance-first.png",
+    },
+    {
+      id: "clearTransparent",
+      heading: "CLEAR, TRANSPARENT PROCESS",
+      description:
+        "You get clear milestones, practical guidance, and a build process that stays organized.",
+      image: "/website/clear-transparent.png",
+    },
+    {
+      id: "desForTrust",
+      heading: "DESIGNED FOR TRUST",
+      description:
+        "We help you present your services clearly, build credibility, and reduce friction for users who are ready to contact you.",
+      image: "/website/designed-trust.png",
+    },
+    {
+      id: "builtToScale",
+      heading: "BUILT TO SCALE",
+      description:
+        "Your site should support new services, new locations, and future campaigns without needing a rebuild every year.",
+      image: "/website/built-to-scale.png",
+    },
+  ],
+};
+
+export const DIGITAL_MARKETING_WHY_CHOOSE = {
+  title: " Why Businesses Choose HTSOL Digital Marketing Agency",
+  para: `Businesses choose <b>HTSOL Inc. Digital Marketing Agency</b> because our work focuses on meaningful outcomes rather than activity alone. <br /> Our team combines technical expertise, strategic thinking, and creative marketing solutions to support long-term digital growth. <br />     When you work with <b>HTSOL Inc</b>., you gain access to:`,
+  accordion: [
+    {
+      number: "01",
+      title: "Data-Driven Strategies",
+      description:
+        "Every campaign begins with research and analytics. This ensures marketing decisions are based on measurable insights.",
+    },
+    {
+      number: "02",
+      title: "Experienced Digital Marketing Specialists",
+      description:
+        "Our team stays informed about search engine updates, marketing technology, and industry trends so your strategy remains current.",
+    },
+    {
+      number: "03",
+      title: "Custom Marketing Plans",
+      description:
+        "We develop bespoke marketing strategies based on your industry, your audience, and your business goals.",
+    },
+    {
+      number: "04",
+      title: "Transparent Reporting",
+      description:
+        "You receive clear performance reports that explain how campaigns are progressing and where improvements can be made.",
+    },
+    {
+      number: "05",
+      title: "Scalable Solutions",
+      description:
+        "As your business grows, your marketing strategy can evolve alongside it.",
+    },
+  ],
+};
+
+export const STAFF_AUGMENTATION_WHY_CHOOSE = {
+  title: "Why Businesses Choose HTSOL for Staff Augmentation",
+  highLight: "Why HTSOL",
+  bgColor: true,
+  curveLine: true,
+  cards: [
+    {
+      id: "oneTeam",
+      heading: "Not Just Developers — The Full Digital Stack",
+      description:
+        "Most staff augmentation providers give you developers. HTSOL gives you the full range of digital talent — developers, designers, SEO specialists, paid ads managers, content writers, and project managers. One relationship. Every discipline.",
+      image: "/staff-augmentation/why-img-1.png",
+    },
+    {
+      id: "performanceFirst",
+      heading: "Senior Talent from Day One",
+      description:
+        "We do not send you a junior resource to learn on your project. Every HTSOL placement is a practitioner with real experience — someone who has done the work before, asks the right questions, and needs minimal hand-holding. You should see a meaningful contribution in week one, not week six.",
+      image: "/website/performance-first.png",
+    },
+    {
+      id: "clearTransparent",
+      heading: "Accessible to Startups and SMEs",
+      description:
+        "Enterprise offshore providers have enterprise minimums — six-figure annual contracts, complex onboarding. HTSOL works with startups, growing agencies, and SMBs. Our model scales to your size, whether you need one person for three months or a small team ongoing.",
+      image: "/website/clear-transparent.png",
+    },
+    {
+      id: "desForTrust",
+      heading: "You Own the Output Completely",
+      description:
+        "Everything produced by your HTSOL resource belongs to you. Code, designs, content, strategies — it is all yours. We do not retain any rights to work produced during an engagement, and you are not locked into any platform or tooling we own.",
+      image: "/website/designed-trust.png",
+    },
+    {
+      id: "builtToScale",
+      heading: "Honest Matching — Not Just Fast Placement",
+      description:
+        "We would rather take an extra few days to match you with the right person than place the wrong one quickly. Before we place anyone, we match their skills, experience, and working style to your actual requirements. If we do not have the right person, we tell you.",
+      image: "/website/built-to-scale.png",
+    },
+  ],
+};
+
+export const STAFF_AUGMENTATION_WHY_CHOOSE_Accordion = {
+  highLight: "Engagement Models",
+  title: "How to Engage HTSOL Talent",
+  para: `Every business has different needs, different timelines, and different levels of certainty. We offer four engagement models so you can<br/> start in a way that makes sense for where you are right now.`,
+  accordion: [
+    {
+      number: "01",
+      title: "DEDICATED FULL-TIME RESOURCE",
+      description:
+        "One professional, working for your business exclusively, full-time (40 hours per week). This is the closest equivalent to an employee — they are fully embedded in your team, attend all relevant meetings, and have no competing priorities from other clients. Best for businesses that have a sustained workload that requires consistent daily availability. Typically engaged on a minimum three-month basis.",
+    },
+    {
+      number: "02",
+      title: "DEDICATED PART-TIME RESOURCE",
+      description:
+        "Our team stays informed about search engine updates, marketing technology, and industry trends so your strategy remains current.",
+    },
+    {
+      number: "03",
+      title: "PROJECT-BASED ENGAGEMENT",
+      description:
+        "We develop bespoke marketing strategies based on your industry, your audience, and your business goals.",
+    },
+    {
+      number: "04",
+      title: "SMALL EMBEDDED TEAM",
+      description:
+        "You receive clear performance reports that explain how campaigns are progressing and where improvements can be made.",
+    },
+  ],
+};
