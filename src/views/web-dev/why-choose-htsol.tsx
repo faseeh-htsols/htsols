@@ -14,55 +14,38 @@ import type { Swiper as SwiperInstance } from "swiper";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import DoubleCurves from "@/components/ui/double-curves";
+
+interface whyChooseCards {
+  id: string;
+  heading: string;
+  description: string;
+  image: string;
+};
+
+interface WhyChooseData {
+  highLight?: string;
+  bgColor?: boolean;
+  title: string;
+  cards: whyChooseCards[];
+  curveLine?: boolean;
+};
+
+interface WhyChooseProps {
+  data: WhyChooseData;
+};
 
 gsap.registerPlugin(ScrollTrigger);
 
-const WHY_CHOOSE_ITEMS = [
-  {
-    id: "oneTeam",
-    heading: "ONE TEAM FOR DEVELOPMENT AND MARKETING",
-    description:
-      "Your website should work with your SEO, ads, and content strategy. We build with your full digital ecosystem in mind.",
-    image: "/website/one-team.png",
-  },
-  {
-    id: "performanceFirst",
-    heading: "PERFORMANCE-FIRST BUILDS",
-    description:
-      "Speed, stability, and mobile usability are treated as requirements, not optional extras. This supports better user experience and more reliable Core Web Vitals.",
-    image: "/website/performance-first.png",
-  },
-  {
-    id: "clearTransparent",
-    heading: "CLEAR, TRANSPARENT PROCESS",
-    description:
-      "You get clear milestones, practical guidance, and a build process that stays organized.",
-    image: "/website/clear-transparent.png",
-  },
-  {
-    id: "desForTrust",
-    heading: "DESIGNED FOR TRUST",
-    description:
-      "We help you present your services clearly, build credibility, and reduce friction for users who are ready to contact you.",
-    image: "/website/designed-trust.png",
-  },
-  {
-    id: "builtToScale",
-    heading: "BUILT TO SCALE",
-    description:
-      "Your site should support new services, new locations, and future campaigns without needing a rebuild every year.",
-    image: "/website/built-to-scale.png",
-  },
-];
 
 const MOBILE_SLIDE_VIDEO_DELAY_MS = 450;
 
-const WhyChooseHtsol = () => {
+const WhyChooseHtsol = ({ data }: WhyChooseProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState<"left" | "right" | null>(
     null,
   );
-  const activeItem = WHY_CHOOSE_ITEMS[activeIndex];
+  const activeItem = data.cards[activeIndex];
   const imageRef = useRef<HTMLDivElement | null>(null);
 
   const handleSelect = (index: number) => {
@@ -230,11 +213,16 @@ const WhyChooseHtsol = () => {
     };
   }, []);
 
-  return (
-    <section ref={mainRef} className="py-10 lg:pt-10 lg:pb-0 bg-tertiary">
+  const content = (
+    <section ref={mainRef} className={`py-10 ${data.curveLine ? "lg:pt-30" : "lg:pt-10"} lg:pb-0 ${data.bgColor ? "bg-black" : "bg-tertiary"}`}>
       <Container>
+        {data.highLight && (
+          <p className=" uppercase tracking-widest mb-6 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent text-[18px] text-center">
+            {data.highLight}
+          </p>
+        )}
         <HeadingTwo className="text-center pb-4 border-b border-white mb-10 lg:mb-0" ref={headingRef}>
-          Why Choose HTSOL Inc. for Web Development
+          {data.title}
         </HeadingTwo>
 
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] gap-10 lg:gap-14 items-start" ref={containerRef}>
@@ -260,7 +248,7 @@ const WhyChooseHtsol = () => {
                 onSlideChangeTransitionEnd={syncMobileSliderVideos}
                 className="pb-10!"
               >
-                {WHY_CHOOSE_ITEMS.map((item) => (
+                {data.cards.map((item) => (
                   <SwiperSlide key={item.id} className="h-auto!">
                     <div className="flex flex-col gap-4">
                       <h3 className="text-[20px] uppercase font-primary">
@@ -281,7 +269,7 @@ const WhyChooseHtsol = () => {
             </div>
 
             <div className="hidden flex-col gap-8 lg:flex">
-              {WHY_CHOOSE_ITEMS.map((item) => (
+              {data.cards.map((item) => (
                 <div
                   key={item.id}
                   className="flex flex-col justify-center gap-4 lg:h-screen"
@@ -300,7 +288,7 @@ const WhyChooseHtsol = () => {
             ref={rightRef}
           >
             <div className="relative w-[40vw] h-[30vw]  rounded-2xl bg-[#191919] overflow-hidden border border-white/10">
-              {WHY_CHOOSE_ITEMS.map((item) => (
+              {data.cards.map((item) => (
                 <div
                   key={item.id}
                   className="photos absolute inset-0 h-full w-full"
@@ -334,6 +322,17 @@ const WhyChooseHtsol = () => {
         }
       `}</style>
     </section>
+  );
+
+  return data.curveLine ? (
+    <DoubleCurves
+      up
+      className="-mt-[12%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[6%] xl:-mt-[8%] [clip-path:polygon(0_1.5%,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_100%,0_100%)] lg:[clip-path:polygon(0_2%,100%_0,100%_100%,0_100%)]"
+      innerClassName="-rotate-2! top-2! md:top-1! lg:md:top-0! h-[1.5%]! md:-rotate-1! md:h-[1.5%]! lg:-rotate-3! lg:h-[1.5%]! xl:-rotate-3! xl:h-[1.5%]!">
+      {content}
+    </DoubleCurves>
+  ) : (
+    content
   );
 };
 

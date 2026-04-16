@@ -6,7 +6,7 @@ import OurServices from "./our-services";
 import WhyBusinessChoose from "./why-business-choose";
 import StartGrowing from "./start-growing";
 import FAQSection from "../home/FAQSection";
-import { DIGITAL_MARKETING_FAQS } from "@/constants";
+import { DIGITAL_MARKETING_FAQS, DIGITAL_MARKETING_WHY_CHOOSE } from "@/constants";
 import LogosMarquee from "../home/logos-marquee";
 
 function DigitalMarketingMain() {
@@ -16,7 +16,7 @@ function DigitalMarketingMain() {
       <StrategyFirst />
       <HowDigitalMarketingHelps />
       <OurServices />
-      <WhyBusinessChoose />
+      <WhyBusinessChoose data={DIGITAL_MARKETING_WHY_CHOOSE} />
       <StartGrowing />
       <FAQSection bgColor="black" faqs={DIGITAL_MARKETING_FAQS} heading={true} accordionbgtransparent curveLine={false} />
       <LogosMarquee />

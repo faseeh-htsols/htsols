@@ -14,7 +14,7 @@ import ServicesWeOfferCanada from "./services-we-offer-canada";
 import WebDesignSolutions from "./web-design-solutions";
 import WhyChooseHtsol from "./why-choose-htsol";
 import FAQSection from "../home/FAQSection";
-import { WEB_DEV_FAQS } from "@/constants";
+import { WEB_DEV_FAQS, WEB_DEV_WHY_CHOOSE } from "@/constants";
 
 const WebDevMain = () => {
   return (
@@ -29,7 +29,7 @@ const WebDevMain = () => {
       <PrivacyAccessibilityTrust />
       <WhatToExpect />
       <ServicesWeOfferCanada />
-      <WhyChooseHtsol />
+      <WhyChooseHtsol data={WEB_DEV_WHY_CHOOSE} />
       {/* <OurProcess />            */}
       <CallBackFromUs />
       {/* <WhatsIncluded /> */}
