@@ -205,7 +205,7 @@ const WhiteLabelHero = () => {
               </div>
             </div>
 
-            <div className="mb-8 inline-flex h-[48px] w-fit items-center gap-[10px] rounded-full border border-[#00A1A5] px-[12px] py-[10px] sm:h-[53px] sm:px-[14px] [&>span:first-child]:hidden">
+            <div className="mb-8 inline-flex h-12 not-odd:w-fit items-center gap-2.5 rounded-full border border-[#00A1A5] px-3 py-2.5 sm:h-[53px] sm:px-3.5 [&>span:first-child]:hidden">
               <span className="mr-3 text-[#00A1A5]">•</span>
               <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#00A1A5]" />
               <span className="inline-flex h-[33px] min-w-0 flex-1 items-center whitespace-nowrap font-sans text-[13px] font-light leading-none tracking-[0.02em] text-white sm:text-[16px] lg:text-[18px]">
@@ -244,7 +244,7 @@ const WhiteLabelHero = () => {
             <div className="rounded-[30px] border border-[#00A1A5] bg-transparent">
               <div className="overflow-hidden rounded-[30px] bg-[linear-gradient(180deg,rgba(38,38,38,0.8)_0%,rgba(20,20,20,0.84)_100%)] shadow-[0_30px_90px_rgba(0,0,0,0.45)] backdrop-blur-xl">
                 <div className="bg-[linear-gradient(180deg,rgba(10,98,103,0.48)_0%,rgba(8,62,66,0.28)_100%)] px-6 py-5 text-center">
-                  <h2 className="mx-auto flex min-h-16 w-full max-w-[420px] flex-col items-center justify-center font-primary text-[19px] font-semibold uppercase leading-[1] tracking-[-0.03em] text-white sm:text-[24px] lg:text-[30px]">
+                  <h2 className="mx-auto flex min-h-16 w-full max-w-[420px] flex-col items-center justify-center font-primary text-[19px] font-semibold uppercase leading-none tracking-[-0.03em] text-white sm:text-[24px] lg:text-[30px]">
                     <span className="block whitespace-nowrap">
                       Get the Talent You Need to
                     </span>
@@ -362,7 +362,7 @@ const WhiteLabelHero = () => {
                           <Field
                             as="textarea"
                             name="enquiry"
-                            className="h-28 w-full rounded-xl border border-white/20 bg-white/[0.05] px-4 py-4 text-[15px] text-white outline-0 transition-colors placeholder:text-white/72 focus:border-[#00A1A5]/70 focus:bg-white/[0.08]"
+                            className="h-28 w-full rounded-xl border border-white/20 bg-white/5 px-4 py-4 text-[15px] text-white outline-0 transition-colors placeholder:text-white/72 focus:border-[#00A1A5]/70 focus:bg-white/8"
                             placeholder="Message"
                           />
                           <ErrorMessage
@@ -377,10 +377,10 @@ const WhiteLabelHero = () => {
                             <Field
                               type="checkbox"
                               name="smsConsent"
-                              className="peer absolute inset-0 h-full w-full cursor-pointer appearance-none bg-white/[0.08] checked:border-[#00A1A5] checked:bg-[#00A1A5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A1A5]/50"
+                              className="peer absolute inset-0 h-full w-full cursor-pointer appearance-none bg-white/8 checked:border-[#00A1A5] checked:bg-[#00A1A5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A1A5]/50"
                             />
                             <svg
-                              className="pointer-events-none absolute inset-0 m-auto hidden h-[20px] w-[20px] text-white peer-checked:block"
+                              className="pointer-events-none absolute inset-0 m-auto hidden h-5 w-5 text-white peer-checked:block"
                               viewBox="0 0 16 16"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
@@ -438,7 +438,7 @@ const WhiteLabelHero = () => {
       </Container>
 
       {popupOpen && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center px-4">
+        <div className="fixed inset-0 z-9999flex items-center justify-center px-4">
           <button
             type="button"
             aria-label="Close popup backdrop"

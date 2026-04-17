@@ -1,4 +1,4 @@
-import { STAFF_AUGMENTATION_FAQS, STAFF_AUGMENTATION_WHY_CHOOSE, STAFF_AUGMENTATION_WHY_CHOOSE_Accordion } from "@/constants";
+import { STAFF_AUGMENTATION_FAQS, STAFF_AUGMENTATION_GROWTH, STAFF_AUGMENTATION_PROTECTION, STAFF_AUGMENTATION_SERVICES, STAFF_AUGMENTATION_WHY_CHOOSE, STAFF_AUGMENTATION_WHY_CHOOSE_Accordion, } from "@/constants";
 import CapacitySection from "./capacity-section";
 import ExecutionSection from "./execution-section";
 import Hero from "./hero";
@@ -18,10 +18,10 @@ const WhiteLabelMain = () => {
     <>
       <Hero />
       <ExecutionSection />
-      <CapacitySection />
-      <ProtectionSection />
+      <CapacitySection data={STAFF_AUGMENTATION_GROWTH} />
+      <ProtectionSection data={STAFF_AUGMENTATION_PROTECTION} />
       <WorkflowSection />
-      <ServicesSection />
+      <ServicesSection data={STAFF_AUGMENTATION_SERVICES} />
       <WhyChooseHtsol data={STAFF_AUGMENTATION_WHY_CHOOSE} />
       <WhyBusinessChoose data={STAFF_AUGMENTATION_WHY_CHOOSE_Accordion} />
       <DigitalAgency />

@@ -1,3 +1,5 @@
+import { ServiceData } from "@/views/staff-augmentation/services-section";
+
 interface ListItem {
   title?: string;
   para: string;
@@ -2132,6 +2134,104 @@ export const DIGITAL_MARKETING_WHY_CHOOSE = {
   ],
 };
 
+export const STAFF_AUGMENTATION_GROWTH = {
+  title: " Growth Should Not Stop Because You Cannot Afford to Hire — or Take the Risk",
+  para: `Every growing business hits the same wall. The workload has outgrown the team. You need a developer to build that feature. A designer to produce that campaign. An SEO specialist to finally get the site ranking. But hiring full-time is expensive, slow, and permanent — and the work you need done might only last three months.
+  <br/><br/>
+  Most businesses end up stuck between bad options: overpaying a generalist agency, taking a chance on a freelancer who disappears halfway through, or leaving the work undone while the opportunity passes. There is a better model — one where you get a dedicated professional who is actually accountable, without the full-time commitment.`,
+  img: "/staff-augmentation/growth-imge.png",
+  highlight: "The Real Cost of the Wrong Talent Decision:",
+  list: [
+    "Months wasted on a hiring process for a role that might not need to be permanent",
+    "Freelancers who take the brief, disappear for a week, and deliver something you did not ask for",
+    "Agency retainers where you pay a premium to speak to a junior who changes every quarter",
+    "Workload sitting undone while the people you need are tied up on other priorities",
+    "Projects delayed, launches missed, and growth slowed — not from lack of strategy, but lack of hands",
+    "Key person dependency when one team member carries too much and eventually burns out or leaves",
+  ],
+};
+
+export const STAFF_AUGMENTATION_PROTECTION = {
+  bgImg: "/services/protection-bg.png",
+  text1: "HTSOL Talent Works for You — Under Your Direction, in Your Tools, on Your Schedule. They Are an Extension of Your Team, Not a Vendor You Manage at Arm's Length.",
+  text2: "You Set the Priorities. You Run the Standups. You Own the Output. We Provide the Person — Screened, Skilled, and Ready to Contribute from Week One.",
+  btnText1: " tell us what you need",
+  btnLink1: "#white-label-form",
+  btnText2: "talk to a talent specialist",
+  btnLink2: "#white-label-form",
+};
+
+export const STAFF_AUGMENTATION_SERVICES: ServiceData = {
+  title: "Roles Available Through HTSOL Staff Augmentation",
+  highLight: "FULL-STACK DIGITAL TALENT. ONE ENGAGEMENT MODEL.",
+  para: "Whether you need a single specialist or a small embedded team, HTSOL provides senior digital talent across every discipline your business relies on. All roles are available on a dedicated, part-time, or project basis.",
+  cards: [
+    {
+      titleLines: ["Full-Stack Developer"],
+      description:
+        "A developer who can build across the front and back end — React, Next.js, Node.js, MERN stack. Whether you are building a new feature or accelerating a stalled roadmap, a full-stack developer moves things forward fast.",
+      icon: "/staff-augmentation/role-icon-1.svg",
+      tone: "muted",
+    },
+    {
+      titleLines: ["Front-End Developer"],
+      description:
+        "Pixel-perfect implementation of your designs in React, Next.js, HTML, and CSS. Ideal for startups and agencies that have designs ready but need someone to build them properly — responsive, performant, and accessible across every device and browser.",
+      icon: "/staff-augmentation/role-icon-2.svg",
+      tone: "base",
+    },
+    {
+      titleLines: ["Back-End Developer"],
+      description:
+        "API development, database architecture, server-side logic, third-party integrations, and performance optimisation. If your product has backend complexity that your current team cannot handle at pace, a dedicated back-end developer changes that equation immediately.",
+      icon: "/staff-augmentation/role-icon-3.svg",
+      tone: "muted",
+    },
+    {
+      titleLines: ["UI / UX Designer"],
+      description:
+        "User interface design, user experience flows, wireframing, prototyping, and design systems — in Figma or your tool of choice. A dedicated designer embedded in your team ensures every product decision has a design perspective, and nothing ships looking like it was built by a developer in a hurry.",
+      icon: "/staff-augmentation/role-icon-4.svg",
+      tone: "base",
+    },
+    {
+      titleLines: ["SEO Specialist"],
+      description:
+        "Technical SEO, on-page optimisation, local SEO, keyword strategy, content planning, and monthly reporting — all executed by someone who works for you, not for an agency managing fifteen other clients at the same time. Your rankings, your priorities, your dedicated resource.",
+      icon: "/staff-augmentation/role-icon-5.svg",
+      tone: "muted",
+    },
+    {
+      titleLines: ["Paid Ads Manager"],
+      description:
+        "Google Ads, Meta Ads, and paid search campaign management — strategy, setup, ongoing optimisation, and clear reporting. A dedicated ads manager embedded in your team means campaigns get the consistent daily attention they need to perform, instead of being checked once a week by an agency account manager.",
+      icon: "/staff-augmentation/role-icon-6.svg",
+      tone: "base",
+    },
+    {
+      titleLines: ["Social Media Manager"],
+      description:
+        "Content creation, scheduling, community management, and performance tracking across your social channels. A dedicated social media manager who understands your brand, follows your voice guidelines, and treats your channels as if they are their primary job — because they are.",
+      icon: "/staff-augmentation/role-icon-7.svg",
+      tone: "muted",
+    },
+    {
+      titleLines: ["Content Writer & Strategist"],
+      description:
+        "Blog posts, website copy, email sequences, product descriptions, and content strategies — written by someone who is dedicated to your brand, knows your audience, and produces work that ranks and converts. Not a content mill. A professional content resource who is genuinely embedded in your content operations.",
+      icon: "/staff-augmentation/role-icon-8.svg",
+      tone: "base",
+    },
+    {
+      titleLines: ["Project Manager"],
+      description:
+        "A dedicated project manager who owns your delivery process — running sprints, managing backlogs, coordinating between teams, tracking timelines, and keeping stakeholders aligned. Ideal for startups and agencies that have the talent but need someone to ensure everything ships on time and to spec.",
+      icon: "/staff-augmentation/role-icon-9.svg",
+      tone: "muted",
+    },
+  ],
+};
+
 export const STAFF_AUGMENTATION_WHY_CHOOSE = {
   title: "Why Businesses Choose HTSOL for Staff Augmentation",
   highLight: "Senior Talent. Real Accountability. No Fluff.",
@@ -2269,3 +2369,93 @@ export const STAFF_AUGMENTATION_FAQS = [
       "Every resource goes through an internal technical and professional evaluation before we make a placement. We assess their skills against the role requirements, review examples of their work, and conduct a structured interview process. We also match for working style, communication quality, and remote work capability — not just technical ability. If we are not confident someone is the right fit for your specific requirements, we will not place them and will keep looking. A bad placement creates more work for you and damages the relationship — we would rather take more time to get it right.",
   },
 ];
+
+
+export const DIGITAL_TRANSFORMATION_GROWTH = {
+  title: "Your Competitors Are Getting Customers You Should Be Getting",
+  para: `Every day, people in your area search for the exact services you offer. A dentist near me. A physio open on Saturday. An electrician available today. A family lawyer I can trust. These are real, high-intent searches from people ready to book, call, or enquire. If your business is not showing up properly, those leads go somewhere else 
+  <br/><br/>
+  The problem is not demand. The problem is visibility, trust, and follow-through. Without the right website, local SEO, messaging, and systems in place, your business stays harder to find and harder to choose. Over time, that gap grows — competitors build more reviews, better rankings, stronger authority, and better client journeys while you rely on inconsistent referrals.`,
+  img: "/digital-transformation/growth-img.png",
+  highlight: "Here Is What Digital Invisibility Actually Costs You:",
+  list: [
+    "Clients choosing a competitor because they found them first on Google",
+    "Growth that depends too heavily on referrals instead of a predictable pipeline",
+    "No reliable inbound channel if your best referral source slows down",
+    "Higher acquisition costs because you lack organic visibility and smart automation",
+    "Slower growth because your website, SEO, and internal systems are not working together",
+    "A business that is harder to scale, harder to sell, and more vulnerable than it should be",
+  ],
+};
+
+export const DIGITAL_TRANSFORMATION_ACHIEVEMENTS = [
+  {
+    img: "/digital-transformation/build-icon-1.svg",
+    name: "One Complete System",
+    para: "Brand, website, SEO, marketing, and operations — connected, not cobbled together",
+  },
+  {
+    img: "/digital-transformation/build-icon-2.svg",
+    name: "0 to 100 Online",
+    para: "From no digital presence to a fully functioning online growth engine — start to finish",
+  },
+  {
+    img: "/digital-transformation/build-icon-3.svg",
+    name: "All Under One Roof",
+    para: "Strategy, design, development, marketing, and automation — one partner, one plan",
+  },
+];
+
+export const DIGITAL_TRANSFORMATION_PROTECTION = {
+  bgImg: "/services/protection-bg.png",
+  text1: "HTSOL Inc. Handles the Full Journey — From Brand Strategy and Website Launch to SEO, Automation, and the Systems That Support Growth.",
+  text2: "You Do Not Need Five Different Vendors. You Do Not Need to Figure Out Digital Marketing or Internal Systems on Your Own. You Need One Team That Builds the Right Foundation, Connects Everything Properly, and Shows You Real Results.",
+  btnText1: "Book A free consultation",
+  btnLink1: "/contact-us",
+  btnText2: "see what is included",
+  btnLink2: "/contact-us",
+};
+
+export const DIGITAL_TRANSFORMATION_EVERYTHING = {
+  title: "FROM INVISIBLE TO IN-DEMAND: THE COMPLETE JOURNEY",
+  highLight: "EVERYTHING YOUR BUSINESS NEEDS. NOTHING IT DOESN'T",
+  para: `We do not overload your business with random tactics. We build your digital presence in the right order, so every stage strengthens the next one. That is how effective digital transformation for service businesses works: one connected system, not a collection of disconnected tasks.`,
+  bgColor: true,
+  cards: [
+    {
+      id: "oneTeam",
+      heading: "BRAND IDENTITY",
+      description:
+        "Before people trust your website, ads, or Google listing, they judge your brand. We create a professional logo, visual identity, messaging direction, and positioning that make your business feel credible, established, and worth contacting from the first impression.",
+      image: "/digital-transformation/everything-img-1.png",
+    },
+    {
+      id: "performanceFirst",
+      heading: "WEBSITE DESIGN & DEVELOPMENT",
+      description:
+        "Your website is your digital storefront. We design and build a fast, mobile-ready, conversion-focused website that clearly explains what you do, who you help, and why people should choose you. Every page is built to support trust, SEO, and action.",
+      image: "/website/performance-first.png",
+    },
+    {
+      id: "clearTransparent",
+      heading: "LOCAL SEO & GOOGLE VISIBILITY",
+      description:
+        "Once your site is live, we help the right people find it. We improve your Google Business Profile, local relevance, service pages, and search visibility so your business appears for the searches that matter in your city and service area.",
+      image: "/website/clear-transparent.png",
+    },
+    {
+      id: "desForTrust",
+      heading: "DIGITAL MARKETING & PAID GROWTH",
+      description:
+        "SEO builds long-term momentum. Paid campaigns can generate demand sooner. We use the right mix of Google Ads, content, local search strategy, and social visibility to support growth based on your goals, timeline, and budget.",
+      image: "/website/designed-trust.png",
+    },
+    {
+      id: "builtToScale",
+      heading: "SYSTEMS, AUTOMATION & SOFTWARE",
+      description:
+        "Growth only works when your operations can handle it. This is where our workflow automation consulting, digital systems consulting, and software modernization consulting come in. If your business needs better booking flows, CRM integration, reporting dashboards, internal tools, or more efficient processes, we build and connect the systems that support growth behind the scenes.",
+      image: "/website/built-to-scale.png",
+    },
+  ],
+};
