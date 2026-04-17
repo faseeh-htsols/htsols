@@ -26,6 +26,7 @@ interface whyChooseCards {
 interface WhyChooseData {
   highLight?: string;
   bgColor?: boolean;
+  para?: string;
   title: string;
   cards: whyChooseCards[];
   curveLine?: boolean;
@@ -216,13 +217,19 @@ const WhyChooseHtsol = ({ data }: WhyChooseProps) => {
   const content = (
     <section ref={mainRef} className={`py-10 ${data.curveLine ? "lg:pt-30" : "lg:pt-10"} lg:pb-0 ${data.bgColor ? "bg-black" : "bg-tertiary"}`}>
       <Container>
-        <HeadingTwo className={`text-center  ${data.highLight ? "" : "border-b border-white "} pb-4 mb-10 lg:mb-0`} ref={headingRef}>
+        {data.highLight && (
+          <p className=" uppercase tracking-widest bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent text-[18px] text-center mb-6">
+            {data.highLight}
+          </p>
+        )}
+
+        <HeadingTwo className={`text-center  ${data.para ? "" : "border-b border-white "} pb-4 mb-10 lg:mb-0`} ref={headingRef}>
           {data.title}
         </HeadingTwo>
 
-        {data.highLight && (
-          <p className=" uppercase tracking-widest bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent text-[18px] text-center border-b border-white pb-4">
-            {data.highLight}
+        {data.para && (
+          <p className=" text-center border-b border-white pb-6 mt-5">
+            {data.para}
           </p>
         )}
 

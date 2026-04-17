@@ -16,80 +16,25 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
-type ServiceCard = {
+export type ServiceCard = {
   titleLines: string[];
   description: string;
   icon: string;
   tone: "muted" | "base";
 };
 
-const serviceCards: ServiceCard[] = [
-  {
-    titleLines: ["Full-Stack Developer"],
-    description:
-      "A developer who can build across the front and back end — React, Next.js, Node.js, MERN stack. Whether you are building a new feature or accelerating a stalled roadmap, a full-stack developer moves things forward fast.",
-    icon: "/staff-augmentation/role-icon-1.svg",
-    tone: "muted",
-  },
-  {
-    titleLines: ["Front-End Developer"],
-    description:
-      "Pixel-perfect implementation of your designs in React, Next.js, HTML, and CSS. Ideal for startups and agencies that have designs ready but need someone to build them properly — responsive, performant, and accessible across every device and browser.",
-    icon: "/staff-augmentation/role-icon-2.svg",
-    tone: "base",
-  },
-  {
-    titleLines: ["Back-End Developer"],
-    description:
-      "API development, database architecture, server-side logic, third-party integrations, and performance optimisation. If your product has backend complexity that your current team cannot handle at pace, a dedicated back-end developer changes that equation immediately.",
-    icon: "/staff-augmentation/role-icon-3.svg",
-    tone: "muted",
-  },
-  {
-    titleLines: ["UI / UX Designer"],
-    description:
-      "User interface design, user experience flows, wireframing, prototyping, and design systems — in Figma or your tool of choice. A dedicated designer embedded in your team ensures every product decision has a design perspective, and nothing ships looking like it was built by a developer in a hurry.",
-    icon: "/staff-augmentation/role-icon-4.svg",
-    tone: "base",
-  },
-  {
-    titleLines: ["SEO Specialist"],
-    description:
-      "Technical SEO, on-page optimisation, local SEO, keyword strategy, content planning, and monthly reporting — all executed by someone who works for you, not for an agency managing fifteen other clients at the same time. Your rankings, your priorities, your dedicated resource.",
-    icon: "/staff-augmentation/role-icon-5.svg",
-    tone: "muted",
-  },
-  {
-    titleLines: ["Paid Ads Manager"],
-    description:
-      "Google Ads, Meta Ads, and paid search campaign management — strategy, setup, ongoing optimisation, and clear reporting. A dedicated ads manager embedded in your team means campaigns get the consistent daily attention they need to perform, instead of being checked once a week by an agency account manager.",
-    icon: "/staff-augmentation/role-icon-6.svg",
-    tone: "base",
-  },
-  {
-    titleLines: ["Social Media Manager"],
-    description:
-      "Content creation, scheduling, community management, and performance tracking across your social channels. A dedicated social media manager who understands your brand, follows your voice guidelines, and treats your channels as if they are their primary job — because they are.",
-    icon: "/staff-augmentation/role-icon-7.svg",
-    tone: "muted",
-  },
-  {
-    titleLines: ["Content Writer & Strategist"],
-    description:
-      "Blog posts, website copy, email sequences, product descriptions, and content strategies — written by someone who is dedicated to your brand, knows your audience, and produces work that ranks and converts. Not a content mill. A professional content resource who is genuinely embedded in your content operations.",
-    icon: "/staff-augmentation/role-icon-8.svg",
-    tone: "base",
-  },
-  {
-    titleLines: ["Project Manager"],
-    description:
-      "A dedicated project manager who owns your delivery process — running sprints, managing backlogs, coordinating between teams, tracking timelines, and keeping stakeholders aligned. Ideal for startups and agencies that have the talent but need someone to ensure everything ships on time and to spec.",
-    icon: "/staff-augmentation/role-icon-9.svg",
-    tone: "muted",
-  },
-];
+export type ServiceData = {
+  title: string;
+  highLight?: string;
+  para: string;
+  cards: ServiceCard[];
+};
 
-const ServicesSection = () => {
+type ServiceProps = {
+  data: ServiceData;
+};
+
+const ServicesSection = ({ data }: ServiceProps) => {
   return (
     <DoubleCurves
       up
@@ -100,20 +45,22 @@ const ServicesSection = () => {
         <Container>
           <div className="text-center">
             <HeadingTwo className="text-center">
-              Roles Available Through HTSOL Staff Augmentation
+              {data.title}
             </HeadingTwo>
 
-            <p className=" uppercase tracking-widest mt-6 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent text-[18px] text-center">
-              FULL-STACK DIGITAL TALENT. ONE ENGAGEMENT MODEL.
-            </p>
+            {data.highLight && (
+              <p className=" uppercase tracking-widest mt-6 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent text-[18px] text-center">
+                {data.highLight}
+              </p>
+            )}
 
             <p className="mt-8  leading-[1.6] text-[#FFFFFFCC]">
-              Whether you need a single specialist or a small embedded team, HTSOL provides senior digital talent across every discipline your business relies on. All roles are available on a dedicated, part-time, or project basis.
+              {data.para}
             </p>
           </div>
 
           <div className="mt-14 grid gap-px bg-[#1E1E1E] lg:mt-16 lg:grid-cols-3">
-            {serviceCards.map(({ titleLines, description, icon, tone }) => (
+            {data.cards.map(({ titleLines, description, icon, tone }) => (
               <article
                 key={titleLines.join(" ")}
                 className={`flex min-h-[280px] flex-col items-center px-6 py-10 text-center sm:px-10 lg:min-h-[315px] lg:px-8 lg:py-11 ${tone === "muted" ? "bg-[#262626]" : "bg-[#111111]"
