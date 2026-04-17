@@ -22,6 +22,7 @@ interface FAQSectionProps {
   bgColor?: string;
   accordionbgtransparent?: boolean;
   curveLine?: boolean;
+  defaultOpenIndex?: number;
 }
 
 const defaultFAQs: FAQItem[] = [
@@ -90,13 +91,12 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
   form = false,
   accordionbgtransparent = false,
   curveLine = true,
+  defaultOpenIndex,
 }) => {
-  const [openIndex, setOpenIndex] = useState<number | null>(1);
+  const [openItem, setOpenItem] = useState<string | undefined>(
+    defaultOpenIndex !== undefined ? String(defaultOpenIndex) : undefined,
+  );
   const [customQuestion, setCustomQuestion] = useState("");
-
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -139,6 +139,8 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
         <div className={`space-y-4 ${form ? "mb-4" : "mb-12"}`}>
           <Accordion
             type="single"
+            value={openItem}
+            onValueChange={(value) => setOpenItem(value || undefined)}
             className={`space-y-4 ${form ? "mb-0" : "mb-12"}`}
             collapsible>
             {faqs.map((faq, index) => (
@@ -163,14 +165,18 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
           </Accordion>
         </div>
         {form && (
-          <div className="">
+          <form className="" onSubmit={handleSubmit}>
             <textarea
-              name=""
+              name="customQuestion"
               className="h-28 w-full relative outline-0 bg-transparent border border-white border-b! px-4 rounded-lg transition-all py-3 backdrop:backdrop-blur-2xl placeholder:text-white text-white"
               placeholder="Ask us what you want to know..."
-              id=""></textarea>
+              id="customQuestion"
+              value={customQuestion}
+              onChange={(e) => setCustomQuestion(e.target.value)}></textarea>
             <div className="flex flex-col-reverse items-center gap-8 md:gap-0 md:flex-row-reverse w-full md:w-1/2 mt-4 md:items-start justify-between">
-              <button className="inline-flex items-center bg-transparent hover:bg-white gap-2 p-3 py-2 text-sm text-white hover:text-primary font-medium uppercase rounded-full tracking-wider transition-all duration-300 border">
+              <button
+                type="submit"
+                className="inline-flex items-center bg-transparent hover:bg-white gap-2 p-3 py-2 text-sm text-white hover:text-primary font-medium uppercase rounded-full tracking-wider transition-all duration-300 border">
                 Send Message
                 <svg
                   width="34"
@@ -211,7 +217,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
                 <br className="hidden md:block" /> email within 48 hours.
               </p>
             </div>
-          </div>
+          </form>
         )}
       </Container>
     </section>

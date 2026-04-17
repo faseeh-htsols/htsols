@@ -263,6 +263,45 @@ body {
   animation-name: marquee-reverse;
 }
 
+@keyframes portfolio-marquee {
+  0% {
+    transform: translateX(calc(-1 * var(--portfolio-offset, 0px)));
+  }
+
+  100% {
+    transform: translateX(
+      calc(
+        -1 *
+          (
+            var(--portfolio-sequence-width, 0px) +
+              var(--portfolio-offset, 0px)
+          )
+      )
+    );
+  }
+}
+
+.portfolio-marquee-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  min-width: max-content;
+  will-change: transform;
+  animation: portfolio-marquee var(--portfolio-duration, 38s) linear infinite;
+}
+
+.portfolio-marquee-track > * {
+  flex-shrink: 0;
+}
+
+.portfolio-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.portfolio-marquee-track.portfolio-marquee-track--always-run:hover {
+  animation-play-state: running;
+}
+
 /* 
 .swiper-slide {
   flex: initial !important;

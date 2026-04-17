@@ -54,7 +54,7 @@ const WhiteLabelCapacitySection = () => {
             </div>
 
             <div className="absolute left-0 top-2 z-20 w-[210px] max-w-[calc(100%-12px)] rounded-[22px] bg-[#2C2A2A] px-4 py-5 text-center shadow-[0_24px_60px_rgba(0,0,0,0.35)] sm:left-0 sm:top-8 sm:w-[300px] sm:max-w-none sm:-translate-x-8 sm:px-6 sm:py-6 lg:left-[-146px] lg:translate-x-0 lg:w-[340px] lg:px-8 lg:py-7 xl:left-[-172px]">
-              <p className="font-sans text-[40px] font-semibold leading-none tracking-[-0.05em] text-[#00A1A5] sm:text-[54px] lg:text-[68px]">
+              <p className="bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text font-sans text-[40px] font-semibold leading-none tracking-[-0.05em] text-transparent sm:text-[54px] lg:text-[68px]">
                 100%
               </p>
               <p className="mx-auto mt-3 max-w-[178px] font-sans text-[16px] leading-[1.2] tracking-[-0.03em] text-white/96 sm:mt-4 sm:max-w-[220px] sm:text-[21px] lg:max-w-[240px] lg:text-[19px]">
@@ -67,7 +67,7 @@ const WhiteLabelCapacitySection = () => {
           </div>
 
           <div className="self-start text-left">
-            <h3 className="max-w-[568px] font-primary text-[28px] font-semibold leading-[1.02] tracking-[-0.035em] text-[#00A1A5] sm:text-[32px] lg:text-[34px]">
+            <h3 className="max-w-[568px] bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text font-primary text-[28px] font-semibold leading-[1.02] tracking-[-0.035em] text-transparent sm:text-[32px] lg:text-[34px]">
               The Cost of Not Having a White Label Partner:
             </h3>
 

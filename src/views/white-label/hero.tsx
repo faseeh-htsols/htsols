@@ -217,11 +217,11 @@ const WhiteLabelHero = () => {
               <span className="block whitespace-nowrap">Your Agency&apos;s</span>
               <span className="block whitespace-nowrap">
                 Reputation.{" "}
-                <span className="bg-[linear-gradient(90deg,#075B65_0%,#00A1A5_37.02%,#33C7D1_81.25%)] bg-clip-text text-transparent">
+                <span className="bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">
                   Our
                 </span>
               </span>
-              <span className="block whitespace-nowrap bg-[linear-gradient(90deg,#075B65_0%,#00A1A5_37.02%,#33C7D1_81.25%)] bg-clip-text text-transparent">
+              <span className="block whitespace-nowrap bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">
                 Team&apos;s Execution
               </span>
             </h1>

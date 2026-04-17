@@ -48,7 +48,7 @@ const WhiteLabelWorkflowSection = () => {
                 </span>
               </h2>
 
-              <p className="mt-7 font-sans text-[15px] font-semibold uppercase leading-[1.3] tracking-[0.04em] text-[#00A1A5] sm:text-[18px]">
+              <p className="mt-7 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text font-sans text-[15px] font-semibold uppercase leading-[1.3] tracking-[0.04em] text-transparent sm:text-[18px]">
                 <span className="block">Your Workflow. Your Brand Standards.</span>
                 <span className="mt-1 block">Our Execution.</span>
               </p>
