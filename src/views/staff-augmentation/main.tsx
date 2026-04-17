@@ -1,4 +1,4 @@
-import { DIGITAL_MARKETING_FAQS, STAFF_AUGMENTATION_WHY_CHOOSE, STAFF_AUGMENTATION_WHY_CHOOSE_Accordion } from "@/constants";
+import { STAFF_AUGMENTATION_FAQS, STAFF_AUGMENTATION_WHY_CHOOSE, STAFF_AUGMENTATION_WHY_CHOOSE_Accordion } from "@/constants";
 import CapacitySection from "./capacity-section";
 import ExecutionSection from "./execution-section";
 import Hero from "./hero";
@@ -27,7 +27,7 @@ const WhiteLabelMain = () => {
       <DigitalAgency />
       <SmartWay />
       <ExpertSupport />
-      <FAQSection bgColor="black" faqs={DIGITAL_MARKETING_FAQS} heading={true} accordionbgtransparent curveLine={false} />
+      <FAQSection bgColor="black" faqs={STAFF_AUGMENTATION_FAQS} heading={true} accordionbgtransparent curveLine={false} />
       <LogosMarquee />
     </>
   );

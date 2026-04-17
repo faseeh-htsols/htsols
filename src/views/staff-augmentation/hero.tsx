@@ -213,7 +213,7 @@ const WhiteLabelHero = () => {
               </span>
             </div>
 
-            <h1 className="max-w-[780px] font-primary text-[34px] font-semibold uppercase leading-[0.92] tracking-[-0.04em] text-white sm:text-5xl sm:tracking-[-0.045em] lg:text-[56px] xl:text-[64px]">The
+            <h1 className="max-w-[780px] font-primary text-[34px] font-semibold uppercase leading-[0.92] tracking-[-0.04em] text-white sm:text-5xl sm:tracking-[-0.045em] lg:text-[60px]">The
               {" "}
               <span className="bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">
                 Talent Your Team Needs.
@@ -221,8 +221,13 @@ const WhiteLabelHero = () => {
               None of the Hiring Headaches.
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/82 sm:mt-8 sm:text-xl">
-              Dedicated Developers, Designers, SEO Specialists, and Marketers — Working for Your Business, on Your Schedule, Without a Full-Time Hire
+            <p className="mt-6 max-w-2xl leading-relaxed text-white/82 sm:mt-8">
+              Hiring takes months. Freelancers are unreliable. Agencies charge for work you cannot control. And your business still needs the work done — right now, to a real standard, by someone who actually shows up.
+              <br /><br />
+              Staff augmentation is the practical answer. You get a dedicated professional — a developer, a designer, a marketer, an SEO specialist — who integrates directly into your team, works under your direction, attends your standups, and delivers exactly what you tell them to.
+              <br /><br />
+              HTSOL Inc. gives startups, agencies, and growing businesses access to senior digital talent across the full stack — without the six-month hiring process, the employer taxes, the benefits package, or the risk of a permanent hire you are not sure about yet.
+
             </p>
 
             <div className="mt-8 flex justify-center sm:mt-10 sm:justify-start">

@@ -216,14 +216,15 @@ const WhyChooseHtsol = ({ data }: WhyChooseProps) => {
   const content = (
     <section ref={mainRef} className={`py-10 ${data.curveLine ? "lg:pt-30" : "lg:pt-10"} lg:pb-0 ${data.bgColor ? "bg-black" : "bg-tertiary"}`}>
       <Container>
+        <HeadingTwo className={`text-center  ${data.highLight ? "" : "border-b border-white "} pb-4 mb-10 lg:mb-0`} ref={headingRef}>
+          {data.title}
+        </HeadingTwo>
+
         {data.highLight && (
-          <p className=" uppercase tracking-widest mb-6 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent text-[18px] text-center">
+          <p className=" uppercase tracking-widest bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent text-[18px] text-center border-b border-white pb-4">
             {data.highLight}
           </p>
         )}
-        <HeadingTwo className="text-center pb-4 border-b border-white mb-10 lg:mb-0" ref={headingRef}>
-          {data.title}
-        </HeadingTwo>
 
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] gap-10 lg:gap-14 items-start" ref={containerRef}>
 
@@ -321,7 +322,7 @@ const WhyChooseHtsol = ({ data }: WhyChooseProps) => {
           opacity: 1;
         }
       `}</style>
-    </section>
+    </section >
   );
 
   return data.curveLine ? (

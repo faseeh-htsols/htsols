@@ -2134,56 +2134,56 @@ export const DIGITAL_MARKETING_WHY_CHOOSE = {
 
 export const STAFF_AUGMENTATION_WHY_CHOOSE = {
   title: "Why Businesses Choose HTSOL for Staff Augmentation",
-  highLight: "Why HTSOL",
+  highLight: "Senior Talent. Real Accountability. No Fluff.",
   bgColor: true,
   curveLine: true,
   cards: [
     {
       id: "oneTeam",
-      heading: "Not Just Developers — The Full Digital Stack",
+      heading: "NOT JUST DEVELOPERS — THE FULL DIGITAL STACK",
       description:
-        "Most staff augmentation providers give you developers. HTSOL gives you the full range of digital talent — developers, designers, SEO specialists, paid ads managers, content writers, and project managers. One relationship. Every discipline.",
+        "Most staff augmentation providers give you developers. HTSOL gives you the full range of digital talent your business actually needs — developers, designers, SEO specialists, paid ads managers, content writers, and project managers. One relationship. Every discipline. No need to find a separate provider for each role.",
       image: "/staff-augmentation/why-img-1.png",
     },
     {
       id: "performanceFirst",
-      heading: "Senior Talent from Day One",
+      heading: "SENIOR TALENT FROM DAY ONE",
       description:
-        "We do not send you a junior resource to learn on your project. Every HTSOL placement is a practitioner with real experience — someone who has done the work before, asks the right questions, and needs minimal hand-holding. You should see a meaningful contribution in week one, not week six.",
+        "We do not send you a junior resource to learn on your project. Every HTSOL placement is a practitioner with real experience — someone who has done the work before, asks the right questions, and needs minimal hand-holding to deliver. You should see a meaningful contribution in week one, not week six.",
       image: "/website/performance-first.png",
     },
     {
       id: "clearTransparent",
-      heading: "Accessible to Startups and SMEs",
+      heading: "ACCESSIBLE TO STARTUPS AND SMES",
       description:
-        "Enterprise offshore providers have enterprise minimums — six-figure annual contracts, complex onboarding. HTSOL works with startups, growing agencies, and SMBs. Our model scales to your size, whether you need one person for three months or a small team ongoing.",
+        "Enterprise offshore providers have enterprise minimums — six-figure annual contracts, complex onboarding, and governance structures built for Fortune 500 companies. HTSOL works with startups, growing agencies, and SMBs. Our model scales to your size. Whether you need one person for three months or a small team ongoing, we can accommodate it.",
       image: "/website/clear-transparent.png",
     },
     {
       id: "desForTrust",
-      heading: "You Own the Output Completely",
+      heading: "YOU OWN THE OUTPUT COMPLETELY",
       description:
-        "Everything produced by your HTSOL resource belongs to you. Code, designs, content, strategies — it is all yours. We do not retain any rights to work produced during an engagement, and you are not locked into any platform or tooling we own.",
+        "Everything produced by your HTSOL resource belongs to you. Code, designs, content, strategies — it is all yours. We do not retain any rights to work produced during an engagement, and you are not locked into any platform or tooling we own. Your intellectual property is your intellectual property.",
       image: "/website/designed-trust.png",
     },
     {
       id: "builtToScale",
-      heading: "Honest Matching — Not Just Fast Placement",
+      heading: "HONEST MATCHING — NOT JUST FAST PLACEMENT",
       description:
-        "We would rather take an extra few days to match you with the right person than place the wrong one quickly. Before we place anyone, we match their skills, experience, and working style to your actual requirements. If we do not have the right person, we tell you.",
+        "We would rather take an extra few days to match you with the right person than place the wrong one quickly and have you managing a performance problem three weeks in. Before we place anyone, we match their skills, experience, and working style to your actual requirements. If we do not have the right person, we tell you — not try to sell you someone who almost fits.",
       image: "/website/built-to-scale.png",
     },
   ],
 };
 
 export const STAFF_AUGMENTATION_WHY_CHOOSE_Accordion = {
-  highLight: "Engagement Models",
+  highLight: "FLEXIBLE MODELS. NO UNNECESSARY COMMITMENTS.",
   title: "How to Engage HTSOL Talent",
-  para: `Every business has different needs, different timelines, and different levels of certainty. We offer four engagement models so you can<br/> start in a way that makes sense for where you are right now.`,
+  para: `Every business has different needs, different timelines, and different levels of certainty about what they require. We offer four engagement models so you can start in a way that makes sense for where you are right now.`,
   accordion: [
     {
       number: "01",
-      title: "DEDICATED FULL-TIME RESOURCE",
+      title: " DEDICATED FULL-TIME RESOURCE",
       description:
         "One professional, working for your business exclusively, full-time (40 hours per week). This is the closest equivalent to an employee — they are fully embedded in your team, attend all relevant meetings, and have no competing priorities from other clients. Best for businesses that have a sustained workload that requires consistent daily availability. Typically engaged on a minimum three-month basis.",
     },
@@ -2191,19 +2191,81 @@ export const STAFF_AUGMENTATION_WHY_CHOOSE_Accordion = {
       number: "02",
       title: "DEDICATED PART-TIME RESOURCE",
       description:
-        "Our team stays informed about search engine updates, marketing technology, and industry trends so your strategy remains current.",
+        "One professional, working for your business on a set part-time schedule — typically 20 hours per week. Ideal for businesses that need consistent, reliable support but do not have full-time volume. The resource is dedicated to you during their agreed hours and is not splitting time between competing clients in an unstructured way. Best for growing businesses adding a specialist discipline for the first time.",
     },
     {
       number: "03",
       title: "PROJECT-BASED ENGAGEMENT",
       description:
-        "We develop bespoke marketing strategies based on your industry, your audience, and your business goals.",
+        "A dedicated resource or small team assigned to a specific project with a defined scope and timeline — a website build, a product sprint, a marketing campaign, a content rollout. The resource works full-time on your project until it is complete. Best for businesses with a clear, time-bound piece of work that requires dedicated focus rather than ongoing support.",
     },
     {
       number: "04",
       title: "SMALL EMBEDDED TEAM",
       description:
-        "You receive clear performance reports that explain how campaigns are progressing and where improvements can be made.",
+        "A cross-functional team of two to four HTSOL specialists embedded in your operation — for example, a developer, a designer, and an SEO specialist working together on a product or growth initiative. The team is coordinated internally by HTSOL and managed by you at the strategic level. Best for startups or agencies that need to rapidly build out a capability across multiple disciplines simultaneously.",
     },
   ],
 };
+
+
+export const STAFF_AUGMENTATION_FAQS = [
+  {
+    question: "What is the difference between staff augmentation and hiring a freelancer?",
+    answer:
+      "A freelancer works for themselves — on their schedule, across multiple clients, with their own tools, and with limited accountability to your process. A staff augmentation resource works for you — inside your tools, on your hours, under your direct management, with full accountability to your team and your deliverables. The key difference is integration and dedication. A freelancer is a contractor you work with. An augmented resource is a professional who becomes part of your team for the duration of the engagement.",
+  },
+  {
+    question:
+      "How is this different from using an agency?",
+    answer:
+      "When you hire an agency, they own the work. They assign whoever is available, you communicate through an account manager, and you often have limited visibility into who is actually doing the work. With staff augmentation, you get a named individual who works for you directly. You manage them, you set the priorities, you see the output as it is produced. There is no account manager in between, no markup for overhead you do not need, and no risk that your project is being deprioritised because the agency is busy with a bigger client.",
+  },
+  {
+    question:
+      "How quickly can someone start?",
+    answer:
+      "In most cases, within five business days of confirming the engagement. The timeline depends on the specific role and experience level required — some specialist roles take a few additional days to match correctly. We prioritise placing the right person over placing someone fast, but we move quickly. If you have a hard start date, tell us upfront and we will work backwards from it.",
+  },
+  {
+    question:
+      "What roles can I hire through HTSOL staff augmentation?",
+    answer:
+      "Full-stack, front-end, and back-end developers. UI/UX designers and graphic designers. SEO specialists. Paid ads managers for Google and Meta. Social media managers. Content writers and content strategists. Email marketing specialists. Project managers. If you need a digital role that is not listed, ask us — we may still be able to help, or we can be honest if we cannot.",
+  },
+  {
+    question:
+      "Do I need to provide equipment or software licences?",
+    answer:
+      "It depends on the role and your preference. Most HTSOL resources work with their own hardware. For software licences — design tools, development environments, SEO platforms — we can work within your existing licences, source our own where appropriate, or advise on the most cost-effective approach for your situation. We will clarify this before the engagement starts so there are no surprises.",
+  },
+  {
+    question:
+      "Can I end an engagement early if it is not working?",
+    answer:
+      "Yes. We do not lock clients into long-term contracts they cannot exit. Our standard engagements have a two-week notice period for ending or adjusting scope. If the placement is genuinely not working — the match is wrong, the output is not meeting your standard — we address it directly and, if necessary, make a replacement. We would rather solve the problem than hold you to a contract that is not delivering value.",
+  },
+  {
+    question:
+      "Who manages the HTSOL resource — us or you?",
+    answer:
+      "You manage them. You set the work priorities, run the standups, assign the tasks, and provide feedback. HTSOL handles the employment relationship — compensation, compliance, HR matters. Think of it as us being the employer of record while you are the day-to-day manager. You get all the control of a direct report without any of the employment administration.",
+  },
+  {
+    question:
+      "Can a staff augmentation arrangement become a permanent hire?",
+    answer:
+      "Yes — this is actually one of the advantages of the model. An augmentation engagement is an effective way to trial a person before committing to a permanent role. If after three to six months you want to convert the relationship to a direct permanent hire, we can facilitate that. The terms of conversion are agreed upfront so there are no ambiguities later.",
+  },
+  {
+    question:
+      "Is there a minimum engagement length?",
+    answer:
+      "We ask for a minimum commitment of one month for dedicated full-time and part-time resources — this ensures there is enough runway for the person to contribute meaningfully and for you to evaluate the value of the engagement. For project-based work, the minimum is the scope of the project itself. We do not offer day rates or week-by-week arrangements — the value of augmentation comes from consistency and integration, which requires a minimum time commitment to establish.",
+  },
+  {
+    question: "How do you ensure the person you place is actually as experienced as described?",
+    answer:
+      "Every resource goes through an internal technical and professional evaluation before we make a placement. We assess their skills against the role requirements, review examples of their work, and conduct a structured interview process. We also match for working style, communication quality, and remote work capability — not just technical ability. If we are not confident someone is the right fit for your specific requirements, we will not place them and will keep looking. A bad placement creates more work for you and damages the relationship — we would rather take more time to get it right.",
+  },
+];

@@ -14,25 +14,25 @@ const workflowCards: WorkflowCard[] = [
   {
     title: "Works Inside Your Tools",
     description:
-      "Your Slack, your Jira, your Asana, your Figma, your GitHub — whatever your team runs on, your HTSOL resource works inside it from day one. No new software to learn. No separate communication channels to manage.",
+      "Your Slack, your Jira, your Asana, your Figma, your GitHub — whatever your team runs on, your HTSOL resource works inside it from day one. No new software to learn. No separate communication channels to manage. They are in your environment, visible to your team, contributing to your workflow.",
     iconSrc: "/staff-augmentation/talent-icon-1.svg",
   },
   {
     title: "Your Hours, Your Standups",
     description:
-      "Your HTSOL resource works the hours you set, attends the meetings you run, and follows the sprint cycles, review processes, and team rhythms you have already established.",
+      "Your HTSOL resource works the hours you set, attends the meetings you run, and follows the sprint cycles, review processes, and team rhythms you have already established. This is not a freelancer on their own schedule — this is a professional working for you, your way.",
     iconSrc: "/staff-augmentation/talent-icon-2.svg",
   },
   {
     title: "Direct Communication",
     description:
-      "You manage the person directly. No account manager in between. No weekly status call with a middleman. You communicate with your resource the same way you communicate with anyone else on your team.",
+      "You manage the person directly. No account manager in between. No weekly status call with a middleman. You communicate with your resource the same way you communicate with anyone else on your team — and you get the same level of accountability you would expect from an internal hire.",
     iconSrc: "/staff-augmentation/talent-icon-3.svg",
   },
   {
     title: "Fast to Start. Easy to Scale.",
     description:
-      "Most HTSOL resources can start within five business days. If your workload increases, we scale up. If a project wraps, you scale back down — no recruitment process, no notice period, no severance risk.",
+      "Most HTSOL resources can start within five business days of a confirmed engagement. If your workload increases, we scale up. If a project wraps, you scale back down. There is no recruitment process to repeat, no notice period to manage, and no severance risk. You get exactly the capacity you need, exactly when you need it.",
     iconSrc: "/staff-augmentation/talent-icon-4.svg",
   },
 ];
@@ -45,6 +45,11 @@ const WhiteLabelWorkflowSection = () => {
           <HeadingTwo className="text-center">
             Talent That Feels Like Your Team — Because It Is
           </HeadingTwo>
+
+          <p className=" uppercase tracking-widest mt-6 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent text-[18px] text-center">
+            YOUR TOOLS. YOUR PROCESSES. YOUR DIRECTION.
+          </p>
+
 
           <p className="mx-auto mt-8 w-full md:max-w-[90%] leading-[1.7] text-[#FFFFFFCC]">
             Staff augmentation is not outsourcing. You are adding a skilled professional to your existing team — someone who works inside your operation, follows your lead, and gets things done the way you want them done.

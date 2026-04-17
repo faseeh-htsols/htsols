@@ -34,56 +34,56 @@ const serviceCards: ServiceCard[] = [
   {
     titleLines: ["Front-End Developer"],
     description:
-      "Pixel-perfect implementation of your designs in React, Next.js, HTML, and CSS. Ideal for startups and agencies that have designs ready but need someone to build them properly — responsive, performant, and accessible.",
+      "Pixel-perfect implementation of your designs in React, Next.js, HTML, and CSS. Ideal for startups and agencies that have designs ready but need someone to build them properly — responsive, performant, and accessible across every device and browser.",
     icon: "/staff-augmentation/role-icon-2.svg",
     tone: "base",
   },
   {
     titleLines: ["Back-End Developer"],
     description:
-      "API development, database architecture, server-side logic, third-party integrations, and performance optimisation. If your product has backend complexity your current team cannot handle at pace, a dedicated back-end developer changes that equation immediately.",
+      "API development, database architecture, server-side logic, third-party integrations, and performance optimisation. If your product has backend complexity that your current team cannot handle at pace, a dedicated back-end developer changes that equation immediately.",
     icon: "/staff-augmentation/role-icon-3.svg",
     tone: "muted",
   },
   {
     titleLines: ["UI / UX Designer"],
     description:
-      "User interface design, UX flows, wireframing, prototyping, and design systems — in Figma or your tool of choice. A dedicated designer ensures every product decision has a design perspective, and nothing ships looking like it was built by a developer in a hurry.",
+      "User interface design, user experience flows, wireframing, prototyping, and design systems — in Figma or your tool of choice. A dedicated designer embedded in your team ensures every product decision has a design perspective, and nothing ships looking like it was built by a developer in a hurry.",
     icon: "/staff-augmentation/role-icon-4.svg",
     tone: "base",
   },
   {
     titleLines: ["SEO Specialist"],
     description:
-      "Technical SEO, on-page optimisation, local SEO, keyword strategy, content planning, and monthly reporting — executed by someone who works for you, not for an agency managing fifteen other clients at the same time.",
+      "Technical SEO, on-page optimisation, local SEO, keyword strategy, content planning, and monthly reporting — all executed by someone who works for you, not for an agency managing fifteen other clients at the same time. Your rankings, your priorities, your dedicated resource.",
     icon: "/staff-augmentation/role-icon-5.svg",
     tone: "muted",
   },
   {
     titleLines: ["Paid Ads Manager"],
     description:
-      "Google Ads, Meta Ads, and paid search campaign management — strategy, setup, ongoing optimisation, and clear reporting. A dedicated ads manager means campaigns get the consistent daily attention they need to perform.",
+      "Google Ads, Meta Ads, and paid search campaign management — strategy, setup, ongoing optimisation, and clear reporting. A dedicated ads manager embedded in your team means campaigns get the consistent daily attention they need to perform, instead of being checked once a week by an agency account manager.",
     icon: "/staff-augmentation/role-icon-6.svg",
     tone: "base",
   },
   {
     titleLines: ["Social Media Manager"],
     description:
-      "Content creation, scheduling, community management, and performance tracking across your social channels. A dedicated social media manager who understands your brand, follows your voice guidelines, and treats your channels as their primary job — because they are.",
+      "Content creation, scheduling, community management, and performance tracking across your social channels. A dedicated social media manager who understands your brand, follows your voice guidelines, and treats your channels as if they are their primary job — because they are.",
     icon: "/staff-augmentation/role-icon-7.svg",
     tone: "muted",
   },
   {
     titleLines: ["Content Writer & Strategist"],
     description:
-      "Blog posts, website copy, email sequences, product descriptions, and content strategies — written by someone dedicated to your brand, knows your audience, and produces work that ranks and converts. Not a content mill. A genuine professional.",
+      "Blog posts, website copy, email sequences, product descriptions, and content strategies — written by someone who is dedicated to your brand, knows your audience, and produces work that ranks and converts. Not a content mill. A professional content resource who is genuinely embedded in your content operations.",
     icon: "/staff-augmentation/role-icon-8.svg",
     tone: "base",
   },
   {
     titleLines: ["Project Manager"],
     description:
-      "A dedicated project manager who owns your delivery process — running sprints, managing backlogs, coordinating between teams, tracking timelines, and keeping stakeholders aligned. Ideal for startups and agencies that need everything to ship on time.",
+      "A dedicated project manager who owns your delivery process — running sprints, managing backlogs, coordinating between teams, tracking timelines, and keeping stakeholders aligned. Ideal for startups and agencies that have the talent but need someone to ensure everything ships on time and to spec.",
     icon: "/staff-augmentation/role-icon-9.svg",
     tone: "muted",
   },
@@ -103,8 +103,12 @@ const ServicesSection = () => {
               Roles Available Through HTSOL Staff Augmentation
             </HeadingTwo>
 
+            <p className=" uppercase tracking-widest mt-6 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent text-[18px] text-center">
+              FULL-STACK DIGITAL TALENT. ONE ENGAGEMENT MODEL.
+            </p>
+
             <p className="mt-8  leading-[1.6] text-[#FFFFFFCC]">
-              Whether you need a single specialist or a small embedded team, HTSOL provides senior digital talent across every discipline your business relies on.
+              Whether you need a single specialist or a small embedded team, HTSOL provides senior digital talent across every discipline your business relies on. All roles are available on a dedicated, part-time, or project basis.
             </p>
           </div>
 
