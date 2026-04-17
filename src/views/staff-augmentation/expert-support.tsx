@@ -19,7 +19,7 @@ const ExpertSupport = () => {
             <Container>
                 <div className="relative z-10 flex flex-col justify-start items-start gap-6 py-16 lg:py-24 max-w-2xl">
                     <HeadingTwo className="">
-                        Expert Support on Demand, Instantly
+                        NEED AN EXTRA PAIR OF HANDS — OR AN ENTIRE CAPABILITY YOU DO NOT HAVE YET?
                     </HeadingTwo>
                     <p className="text-white leading-relaxed">
                         Tell us what you need, what your timeline looks like, and what a successful engagement means for your business. We will match you with the right talent and get you started fast — no lengthy procurement process, no enterprise contract, no unnecessary complexity.
@@ -30,7 +30,7 @@ const ExpertSupport = () => {
                             variant="teal"
                             className="h-[60px] w-fit px-4 text-[13px] tracking-[0.05em] md:min-w-[220px] md:text-[18px]"
                         >
-                            Book a discovery call
+                            Tell Us What You Need
                         </ArrowLinkButton>
                     </div>
                 </div>

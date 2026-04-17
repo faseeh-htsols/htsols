@@ -35,17 +35,17 @@ type TrustItem = {
 const trustItems: TrustItem[] = [
   {
     lines: ["START IN 5", "DAYS"],
-    para: `From confirmed engagement to day one — no lengthy procurement process`,
+    // para: `From confirmed engagement to day one — no lengthy procurement process`,
     iconSrc: "/staff-augmentation/friction-icon-1.svg",
   },
   {
     lines: ["FULL DIGITAL", "STACK"],
-    para: `Developers, designers, SEO, ads, content, and project managers — one partner`,
+    // para: `Developers, designers, SEO, ads, content, and project managers — one partner`,
     iconSrc: "/staff-augmentation/friction-icon-2.svg",
   },
   {
     lines: ["YOU DIRECT", "THE WORK"],
-    para: `Your tools, your hours, your standups — they are an extension of your team`,
+    // para: `Your tools, your hours, your standups — they are an extension of your team`,
     iconSrc: "/staff-augmentation/friction-icon-3.svg",
   },
 ];
