@@ -17,7 +17,20 @@ const SKILLS = [
   { src: "/ceo/laravel.svg", label: "Web Performance & Speed" },
 ] as const;
 
-function SkillPill({ skill }: { skill: (typeof SKILLS)[number] }) {
+interface Skill {
+  src: string;
+  label: string;
+};
+
+interface SkillsData {
+  skills: Skill[];
+};
+
+interface SkillProps {
+  data: SkillsData;
+};
+
+function SkillPill({ skill }: { skill: Skill }) {
   return (
     <div className="shrink-0 px-9 py-3 flex gap-3 items-center border-[#075B65] border-2 rounded-full text-white">
       <Image
@@ -32,7 +45,7 @@ function SkillPill({ skill }: { skill: (typeof SKILLS)[number] }) {
   );
 }
 
-const Skills = () => {
+const Skills = ({ data }: SkillProps) => {
   return (
     <div className="relative py-20">
       <div className="bg-radial from-[#00A1A5] to-[#075B65] blur-[120px] absolute w-[150px] h-[150px] -top-10 -left-10 pointer-events-none" />
@@ -44,10 +57,10 @@ const Skills = () => {
             className="marquee-content marquee-content--always-run gap-4"
             style={{ animationDuration: "150s" }}
           >
-            {SKILLS.map((skill, i) => (
+            {data.skills.map((skill, i) => (
               <SkillPill key={`a-${i}`} skill={skill} />
             ))}
-            {SKILLS.map((skill, i) => (
+            {data.skills.map((skill, i) => (
               <SkillPill key={`b-${i}`} skill={skill} />
             ))}
           </div>
@@ -59,10 +72,10 @@ const Skills = () => {
             className="marquee-content marquee-content--always-run marquee-content--reverse gap-4"
             style={{ animationDuration: "150s" }}
           >
-            {SKILLS.map((skill, i) => (
+            {data.skills.map((skill, i) => (
               <SkillPill key={`c-${i}`} skill={skill} />
             ))}
-            {SKILLS.map((skill, i) => (
+            {data.skills.map((skill, i) => (
               <SkillPill key={`d-${i}`} skill={skill} />
             ))}
           </div>
