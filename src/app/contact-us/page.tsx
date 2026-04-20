@@ -7,6 +7,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.htsol.ca/contact-us",
   },
+  openGraph: {
+    title: "Contact HTSOL Inc. | Digital Marketing & Web Design Agency",
+    description: "Reach out to HTSOL Inc. for expert digital marketing and web design services. We’ll craft a strategy tailored to your business goals and deliver measurable results.",
+    url: "https://www.htsol.ca/contact-us",
+    images: ["/htsol-ball-favicon.svg"],
+  },
 };
 
 const schemaData = {

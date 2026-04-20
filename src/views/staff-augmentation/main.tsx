@@ -1,4 +1,4 @@
-import { STAFF_AUGMENTATION_FAQS, STAFF_AUGMENTATION_GROWTH, STAFF_AUGMENTATION_PROTECTION, STAFF_AUGMENTATION_SERVICES, STAFF_AUGMENTATION_WHY_CHOOSE, STAFF_AUGMENTATION_WHY_CHOOSE_Accordion, } from "@/constants";
+import { STAFF_AUGMENTATION_AGENCY, STAFF_AUGMENTATION_EXPERT, STAFF_AUGMENTATION_FAQS, STAFF_AUGMENTATION_GROWTH, STAFF_AUGMENTATION_PROTECTION, STAFF_AUGMENTATION_SERVICES, STAFF_AUGMENTATION_SMART_WAY, STAFF_AUGMENTATION_WHY_CHOOSE, STAFF_AUGMENTATION_WHY_CHOOSE_Accordion, } from "@/constants";
 import CapacitySection from "./capacity-section";
 import ExecutionSection from "./execution-section";
 import Hero from "./hero";
@@ -24,9 +24,9 @@ const WhiteLabelMain = () => {
       <ServicesSection data={STAFF_AUGMENTATION_SERVICES} />
       <WhyChooseHtsol data={STAFF_AUGMENTATION_WHY_CHOOSE} />
       <WhyBusinessChoose data={STAFF_AUGMENTATION_WHY_CHOOSE_Accordion} />
-      <DigitalAgency />
-      <SmartWay />
-      <ExpertSupport />
+      <DigitalAgency data={STAFF_AUGMENTATION_AGENCY} />
+      <SmartWay data={STAFF_AUGMENTATION_SMART_WAY} />
+      <ExpertSupport data={STAFF_AUGMENTATION_EXPERT} />
       <FAQSection bgColor="black" faqs={STAFF_AUGMENTATION_FAQS} heading={true} accordionbgtransparent curveLine={false} />
       <LogosMarquee />
     </>

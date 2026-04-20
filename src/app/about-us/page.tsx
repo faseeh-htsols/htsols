@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.htsol.ca/about-us",
   },
+  openGraph: {
+    title: "About HTSOL Inc. Digital Marketing Agency",
+    description:
+      "HTSOL Inc. is a Canada-based digital marketing agency delivering strategy-led marketing, high-performing websites, and measurable growth for businesses.",
+    url: "https://www.htsol.ca/about-us",
+    images: ["/htsol-ball-favicon.svg"],
+  },
 };
 const page = () => {
   return (

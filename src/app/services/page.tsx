@@ -2,10 +2,16 @@ import ServicesMain from "@/views/services/main";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "Digital Growth Services in Canada | SEO, Web Dev & CGI | HTSOL",
+  description: "Explore HTSOL’s digital growth services in Canada, including SEO, web development, CGI, digital marketing, staff augmentation, and transformation solutions.",
   alternates: {
     canonical: "https://www.htsol.ca/services",
+  },
+  openGraph: {
+    title: "Digital Growth Services in Canada | SEO, Web Dev & CGI | HTSOL",
+    description: "Explore HTSOL’s digital growth services in Canada, including SEO, web development, CGI, digital marketing, staff augmentation, and transformation solutions.",
+    url: "https://www.htsol.ca/services",
+    images: ["/htsol-ball-favicon.svg"],
   },
 };
 

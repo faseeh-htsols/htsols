@@ -7,6 +7,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.htsol.ca/services/seo-services",
   },
+  openGraph: {
+    title: "Search Engine Optimization Services | HTSOL Inc.",
+    description: "Grow traffic and leads with HTSOL Inc.’s SEO services across Canada. Technical SEO, content strategy, and clear reporting focused on measurable monthly ROI.",
+    url: "https://www.htsol.ca/services/seo-services",
+    images: ["/htsol-ball-favicon.svg"],
+  },
 };
 const SeoPage = () => {
   const faqSchema = {

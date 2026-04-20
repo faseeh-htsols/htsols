@@ -228,9 +228,8 @@ const WhyChooseHtsol = ({ data }: WhyChooseProps) => {
         </HeadingTwo>
 
         {data.para && (
-          <p className=" text-center border-b border-white pb-6 mt-5">
-            {data.para}
-          </p>
+          <p className=" text-center border-b border-white pb-6 mt-5"
+            dangerouslySetInnerHTML={{ __html: data.para }} />
         )}
 
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] gap-10 lg:gap-14 items-start" ref={containerRef}>

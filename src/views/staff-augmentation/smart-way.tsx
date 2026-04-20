@@ -5,6 +5,7 @@ import Image from "next/image";
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
 import ArrowLinkButton from "@/components/ui/arrow-link-button";
+import DoubleCurves from "@/components/ui/double-curves";
 
 type SolutionItem = {
     title: string;
@@ -12,44 +13,30 @@ type SolutionItem = {
     alt: string;
 };
 
-const ITEMS: SolutionItem[] = [
-    {
-        title: "Senior talent available in days, not months",
-        image: "/staff-augmentation/smart-way-img-1.png",
-        alt: "Senior talent available in days, not months",
-    },
-    {
-        title: "Pay for the hours and skills you actually need — nothing more",
-        image: "/website/full-development.png",
-        alt: "Pay for the hours and skills you actually need — nothing more",
-    },
-    {
-        title: "Scale up and down as your workload demands without the hiring and firing cycle",
-        image: "/website/conversion-focused.png",
-        alt: "Scale up and down as your workload demands without the hiring and firing cycle",
-    },
-    {
-        title: "Eliminate employer taxes, benefits, office costs, and equipment overhead",
-        image: "/website/technical-seo.png",
-        alt: "Eliminate employer taxes, benefits, office costs, and equipment overhead",
-    },
-    {
-        title: "Test a role before you commit to making it permanent",
-        image: "/website/analytics.png",
-        alt: "Test a role before you commit to making it permanent",
-    },
-    {
-        title: "Keep your core team lean and focused while augmented talent handles specific workloads",
-        image: "/website/performance.png",
-        alt: "Keep your core team lean and focused while augmented talent handles specific workloads",
-    },
-];
+type SmartWayData = {
+    title: string;
+    para: string;
+    btnText: string;
+    btnLink: string;
+    bgImage?: string;
+    items: SolutionItem[];
+    curveLine?: boolean;
+    className?: string;
+};
 
-const SmartWay = () => {
+type SmartWayProps = {
+    data: SmartWayData;
+};
+
+const SmartWay = ({ data }: SmartWayProps) => {
     const [active, setActive] = useState(0);
 
-    return (
-        <section className="relative overflow-hidden bg-[url('/staff-augmentation/smart-way-bg.png')] bg-cover bg-center bg-no-repeat py-20 lg:py-40">
+
+    const content = (
+        <section
+            className={`relative overflow-hidden py-20 lg:py-40 ${data.bgImage ? "bg-cover bg-center bg-no-repeat" : "bg-black"} ${data.className}`}
+            style={data.bgImage ? { backgroundImage: `url(${data.bgImage})` } : {}}
+        >
             {/* vignette */}
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.06)_0%,rgba(0,0,0,0.9)_55%,rgba(0,0,0,1)_100%)]" />
 
@@ -58,21 +45,17 @@ const SmartWay = () => {
                     {/* Header */}
                     <div className="text-center flex flex-col gap-7">
                         <HeadingTwo className="text-center">
-                            THE SMARTEST WAY TO SCALE YOUR TEAM WITHOUT SCALING YOUR RISK
+                            {data.title}
                         </HeadingTwo>
 
-                        <p className="">
-                            The traditional hiring model is built for a different era. Permanent headcount, six-month hiring cycles, expensive onboarding, and the constant risk that your new hire does not work out — none of that is suited to the speed at which businesses need to move today.
-                            <br /><br />
-                            Staff augmentation is the modern alternative. You get the talent when you need it, at the level you need it, for as long as you need it. Then you scale back when the project ends or the workload changes — without a restructure, without a redundancy, without any of the legal and emotional complexity that comes with letting people go.
-                        </p>
+                        <p dangerouslySetInnerHTML={{ __html: data.para }} />
                         <div className="flex justify-center">
                             <ArrowLinkButton
-                                href="#white-label-form"
+                                href={data.btnLink}
                                 variant="teal"
                                 className="h-[73px] w-fit px-7 text-[13px] tracking-[0.05em] md:min-w-[220px] sm:text-[19px]"
                             >
-                                Tell Us What You Need
+                                {data.btnText}
                             </ArrowLinkButton>
                         </div>
                     </div>
@@ -84,9 +67,9 @@ const SmartWay = () => {
                         <div className="relative overflow-hidden rounded-2xl min-h-[460px] md:min-h-[720px] lg:min-h-[620px] h-full">
                             <div className="absolute inset-0">
                                 <Image
-                                    key={ITEMS[active].image} // re-mount for instant swap
-                                    src={ITEMS[active].image}
-                                    alt={ITEMS[active].alt}
+                                    key={data.items[active].image} // re-mount for instant swap
+                                    src={data.items[active].image}
+                                    alt={data.items[active].alt}
                                     fill
                                     className="object-cover"
                                     sizes="(max-width: 1024px) 100vw, 60vw"
@@ -96,7 +79,7 @@ const SmartWay = () => {
 
                         {/* Right list */}
                         <div className="flex h-full flex-col gap-3">
-                            {ITEMS.map((item, idx) => {
+                            {data.items.map((item, idx) => {
                                 const isActive = idx === active;
 
                                 return (
@@ -137,6 +120,17 @@ const SmartWay = () => {
                 </div>
             </Container>
         </section>
+    );
+
+    return data.curveLine ? (
+        <DoubleCurves
+            up
+            className="-mt-[12%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_100%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)]"
+            innerClassName="-rotate-3! top-2.5! md:top-0! h-[0.5%]! md:-rotate-6! md:h-[1.3%]! lg:-rotate-3! lg:h-[2.5%]! xl:-rotate-2! xl:h-[2.5%]!">
+            {content}
+        </DoubleCurves>
+    ) : (
+        content
     );
 };
 

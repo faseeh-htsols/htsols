@@ -8,6 +8,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.htsol.ca/services/digital-transformation",
   },
+  openGraph: {
+    title: "Digital Transformation Consulting for Service Businesses | HTSOL",
+    description:
+      "HTSOL provides digital transformation consulting for service businesses, including websites, SEO, automation, CRM integration, and software modernization.",
+    url: "https://www.htsol.ca/services/digital-transformation",
+    images: ["/htsol-ball-favicon.svg"],
+  },
 };
 
 const WhiteLabelPage = () => {

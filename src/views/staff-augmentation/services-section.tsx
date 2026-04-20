@@ -38,7 +38,7 @@ const ServicesSection = ({ data }: ServiceProps) => {
   return (
     <DoubleCurves
       up
-      className="-mt-[12%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_100%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)]"
+      className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_100%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)]"
       innerClassName="-rotate-5! top-5! md:top-0! h-[0.5%]! md:-rotate-6! md:h-[1.3%]! lg:-rotate-3! lg:h-[2.5%]! xl:-rotate-2! xl:h-[2.5%]!">
 
       <section className="relative overflow-hidden bg-tertiary py-20  md:py-28 xl:pb-44 xl:pt-28">

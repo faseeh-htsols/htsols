@@ -13,24 +13,37 @@ const FUNDAMENTALS = [
     "Security basics like SSL, updates, and form protection",
 ];
 
-const ExpertSupport = () => {
+interface ExpertSupportData {
+    bgImage: string;
+    title: string;
+    para: string;
+    btnText: string;
+    btnLink: string;
+    className?: string;
+};
+
+interface ExpertSupportProps {
+    data: ExpertSupportData;
+};
+
+const ExpertSupport = ({ data }: ExpertSupportProps) => {
     return (
-        <section className="relative bg-[url(/staff-augmentation/expert-bg.png)] bg-cover bg-center overflow-hidden bg-no-repeat">
+        <section className="relative bg-cover bg-center overflow-hidden bg-no-repeat"
+            style={{ backgroundImage: `url(${data.bgImage})` }}
+        >
             <Container>
-                <div className="relative z-10 flex flex-col justify-start items-start gap-6 py-16 lg:py-24 max-w-2xl">
+                <div className={`relative z-10 flex flex-col justify-start items-start gap-6 py-16 lg:py-24 max-w-2xl ${data.className}`}>
                     <HeadingTwo className="">
-                        NEED AN EXTRA PAIR OF HANDS — OR AN ENTIRE CAPABILITY YOU DO NOT HAVE YET?
+                        {data.title}
                     </HeadingTwo>
-                    <p className="text-white leading-relaxed">
-                        Tell us what you need, what your timeline looks like, and what a successful engagement means for your business. We will match you with the right talent and get you started fast — no lengthy procurement process, no enterprise contract, no unnecessary complexity.
-                    </p>
+                    <p className="text-white leading-relaxed" dangerouslySetInnerHTML={{ __html: data.para }} />
                     <div className="flex justify-start">
                         <ArrowLinkButton
-                            href="#white-label-form"
+                            href={data.btnLink}
                             variant="teal"
                             className="h-[60px] w-fit px-4 text-[13px] tracking-[0.05em] md:min-w-[220px] md:text-[18px]"
                         >
-                            Tell Us What You Need
+                            {data.btnText}
                         </ArrowLinkButton>
                     </div>
                 </div>
