@@ -25,7 +25,8 @@ interface WebDesignAgencyCards {
 interface WebDesignAgencyData {
     data: {
         title: string;
-        para: string;
+        highLight?: string;
+        para?: string;
         cards: WebDesignAgencyCards[];
     }
 }
@@ -163,20 +164,27 @@ const WebDesignAgency = ({ data }: WebDesignAgencyData) => {
     };
 
     return (
-        <DoubleCurves
-            up
-            className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]"
-        >
+        <DoubleCurves up className="bg-tertiary -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]"
+            innerClassName="-rotate-1! top-1! md:top-2! h-[1.5%]! md:-rotate-2! md:h-[1.3%]! lg:-rotate-2! lg:h-[2.5%]! xl:-rotate-1! xl:top-3! xl:h-[2%]!">
             <section className="relative bg-black py-20 lg:py-40">
                 <Container>
                     <div className="mx-auto mb-10 max-w-6xl text-center lg:mb-12">
+
+                        {data.highLight && (
+                            <p className=" uppercase tracking-widest mb-5 bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent text-[18px] text-center">
+                                {data.highLight}
+                            </p>
+                        )}
+
                         <HeadingTwo className="mb-3 text-center">
                             {data.title}
                         </HeadingTwo>
 
-                        <p className="mt-5 text-center leading-relaxed text-white">
-                            {data.para}
-                        </p>
+                        {data.para && (
+                            <p className="mt-5 text-center leading-relaxed text-white">
+                                {data.para}
+                            </p>
+                        )}
                     </div>
 
                     <div className="rounded-[10px] bg-[linear-gradient(90deg,rgba(7,91,101,0.9)_0%,rgba(0,131,138,0.9)_37.02%,rgba(50,138,153,0.9)_81.25%)] p-px">

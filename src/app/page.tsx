@@ -7,6 +7,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.htsol.ca",
   },
+  openGraph: {
+    title: "HTSOL Digital Marketing Agency | Web Design & Growth",
+    description: "Canadian digital partner for web design, UI/UX, CGI, AI SEO, and performance marketing - helping businesses build, improve, and scale online.",
+    url: "https://www.htsol.ca",
+    images: ["/htsol-ball-favicon.svg"],
+  },
 };
 export default function Home() {
   const faqSchema = {

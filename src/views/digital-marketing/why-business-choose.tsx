@@ -101,7 +101,8 @@ const WhyBusinessChoose = ({ data }: WhyBusinessChooseProps) => {
     const baseId = useId();
 
     return (
-        <DoubleCurves up className="bg-tertiary -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+        <DoubleCurves up className="bg-tertiary -mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]"
+            innerClassName="-rotate-2! top-1! md:top-2! h-[1%]! md:-rotate-1! md:h-[1.3%]! lg:-rotate-2! lg:h-[2.5%]! xl:-rotate-1! xl:top-3! xl:h-[2%]!">
             <Container>
                 <div className="relative py-20 lg:py-40">
                     {/* Header */}

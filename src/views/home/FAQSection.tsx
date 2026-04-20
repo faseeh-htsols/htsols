@@ -18,6 +18,7 @@ interface FAQItem {
 interface FAQSectionProps {
   faqs?: FAQItem[];
   heading?: boolean;
+  className?: string;
   form?: boolean;
   bgColor?: string;
   accordionbgtransparent?: boolean;
@@ -92,6 +93,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
   accordionbgtransparent = false,
   curveLine = true,
   defaultOpenIndex,
+  className,
 }) => {
   const [openItem, setOpenItem] = useState<string | undefined>(
     defaultOpenIndex !== undefined ? String(defaultOpenIndex) : undefined,
@@ -106,7 +108,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
 
   const content = (
     <section
-      className=" py-24 lg:py-40 relative "
+      className={` py-24 lg:py-40 relative ${className}`}
       style={{
         background: bgColor ? bgColor : `url(/get-in-touch-bg.webp)`,
         backgroundSize: "cover",
@@ -136,12 +138,12 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
         </div>
 
         {/* FAQ Accordion */}
-        <div className={`space-y-4 ${form ? "mb-4" : "mb-12"}`}>
+        <div className={`space-y-4 `}>
           <Accordion
             type="single"
             value={openItem}
             onValueChange={(value) => setOpenItem(value || undefined)}
-            className={`space-y-4 ${form ? "mb-0" : "mb-12"}`}
+            className={`space-y-4 `}
             collapsible>
             {faqs.map((faq, index) => (
               <AccordionItem

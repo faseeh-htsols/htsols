@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.htsol.ca/web-design-mississauga",
   },
+  openGraph: {
+    title: "Web Design Mississauga | Custom Websites | HTSOL Inc.",
+    description:
+      "Professional web design in Mississauga, ON. HTSOL Inc. builds fast, custom websites for local businesses — SEO-ready, mobile-first, live in under a month. Book a free consultation.",
+    url: "https://www.htsol.ca/web-design-mississauga",
+    images: ["/htsol-ball-favicon.svg"],
+  },
 };
 export default function LocationPage() {
   return (

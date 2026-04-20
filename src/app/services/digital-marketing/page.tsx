@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.htsol.ca/services/digital-marketing",
   },
+  openGraph: {
+    title: "Digital Marketing Services Canada | HTSOL Inc.",
+    description: "Drive growth with data-driven digital marketing services in Canada. HTSOL Inc. delivers SEO, PPC, social media, and strategy to generate leads and scale your business.",
+    url: "https://www.htsol.ca/services/digital-marketing",
+    images: ["/htsol-ball-favicon.svg"],
+  },
 };
 
 const schemaData = {

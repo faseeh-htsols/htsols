@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "",
   description: "",
   alternates: {
-    canonical: "https://www.htsol.ca/services/our-portfolio",
+    canonical: "https://www.htsol.ca/our-portfolio",
   },
 };
 export default function WebPortfolioPage() {

@@ -2308,6 +2308,68 @@ export const STAFF_AUGMENTATION_WHY_CHOOSE_Accordion = {
   ],
 };
 
+export const STAFF_AUGMENTATION_AGENCY = {
+  curveLine: true,
+  title: " Loved by Digital Agencies across Canada and the US!",
+  highLight: "Alan Baker",
+  para: `Working with HtSolutions has been an incredible experience. They truly listened to our needs and delivered a stunning design that exceeded our expectations. We couldn't be happier with the final product!
+  <br /><br />
+  Working with HtSolutions has been an incredible experience. They truly listened to our needs and delivered a stunning design that exceeded our expectations.`,
+  bottomPara: "CEO",
+  className: "pb-10! md:pb-20! lg:pt-40!",
+};
+
+export const STAFF_AUGMENTATION_SMART_WAY = {
+  bgImage: "/staff-augmentation/smart-way-bg.png",
+  title: "THE SMARTEST WAY TO SCALE YOUR TEAM WITHOUT SCALING YOUR RISK",
+  para: `The traditional hiring model is built for a different era. Permanent headcount, six-month hiring cycles, expensive onboarding, and the constant risk that your new hire does not work out — none of that is suited to the speed at which businesses need to move today.
+  <br /><br />
+  Staff augmentation is the modern alternative. You get the talent when you need it, at the level you need it, for as long as you need it. Then you scale back when the project ends or the workload changes — without a restructure, without a redundancy, without any of the legal and emotional complexity that comes with letting people go.`,
+  btnText: "  Tell Us What You Need",
+  btnLink: "#white-label-form",
+  items: [
+    {
+      title: "Senior talent available in days, not months",
+      image: "/staff-augmentation/smart-way-img-1.png",
+      alt: "Senior talent available in days, not months",
+    },
+    {
+      title: "Pay for the hours and skills you actually need — nothing more",
+      image: "/website/full-development.png",
+      alt: "Pay for the hours and skills you actually need — nothing more",
+    },
+    {
+      title: "Scale up and down as your workload demands without the hiring and firing cycle",
+      image: "/website/conversion-focused.png",
+      alt: "Scale up and down as your workload demands without the hiring and firing cycle",
+    },
+    {
+      title: "Eliminate employer taxes, benefits, office costs, and equipment overhead",
+      image: "/website/technical-seo.png",
+      alt: "Eliminate employer taxes, benefits, office costs, and equipment overhead",
+    },
+    {
+      title: "Test a role before you commit to making it permanent",
+      image: "/website/analytics.png",
+      alt: "Test a role before you commit to making it permanent",
+    },
+    {
+      title: "Keep your core team lean and focused while augmented talent handles specific workloads",
+      image: "/website/performance.png",
+      alt: "Keep your core team lean and focused while augmented talent handles specific workloads",
+    },
+  ],
+  className: "pb-20! pt-10! lg:pt-40!",
+};
+
+export const STAFF_AUGMENTATION_EXPERT = {
+  bgImage: "/staff-augmentation/expert-bg.png",
+  title: " NEED AN EXTRA PAIR OF HANDS — OR AN ENTIRE CAPABILITY YOU DO NOT HAVE YET?",
+  para: ` Tell us what you need, what your timeline looks like, and what a successful engagement means for your business. We will match you with the right talent and get you started fast — no lengthy procurement process, no enterprise contract, no unnecessary complexity.`,
+  btnText: "Tell Us What You Need",
+  btnLink: "#white-label-form",
+};
+
 
 export const STAFF_AUGMENTATION_FAQS = [
   {
@@ -2373,9 +2435,9 @@ export const STAFF_AUGMENTATION_FAQS = [
 
 export const DIGITAL_TRANSFORMATION_GROWTH = {
   title: "Your Competitors Are Getting Customers You Should Be Getting",
-  para: `Every day, people in your area search for the exact services you offer. A dentist near me. A physio open on Saturday. An electrician available today. A family lawyer I can trust. These are real, high-intent searches from people ready to book, call, or enquire. If your business is not showing up properly, those leads go somewhere else 
+  para: ` Every day, people in your area search for the exact services you offer. A dentist near me. A physio open on Saturday. An electrician available today. A family lawyer I can trust. These are real, high-intent searches from people ready to book, call, or enquire. If your business is not showing up properly, those leads go somewhere else.
   <br/><br/>
-  The problem is not demand. The problem is visibility, trust, and follow-through. Without the right website, local SEO, messaging, and systems in place, your business stays harder to find and harder to choose. Over time, that gap grows — competitors build more reviews, better rankings, stronger authority, and better client journeys while you rely on inconsistent referrals.`,
+  The problem is not demand. The problem is visibility, trust, and follow-through. Without the right website, local SEO, messaging, and systems in place, your business stays harder to find and harder to choose. Over time, that gap grows. Competitors build more reviews, better rankings, stronger authority, and better client journeys while you rely on inconsistent referrals.`,
   img: "/digital-transformation/growth-img.png",
   highlight: "Here Is What Digital Invisibility Actually Costs You:",
   list: [
@@ -2419,7 +2481,7 @@ export const DIGITAL_TRANSFORMATION_PROTECTION = {
 export const DIGITAL_TRANSFORMATION_EVERYTHING = {
   title: "FROM INVISIBLE TO IN-DEMAND: THE COMPLETE JOURNEY",
   highLight: "EVERYTHING YOUR BUSINESS NEEDS. NOTHING IT DOESN'T",
-  para: `We do not overload your business with random tactics. We build your digital presence in the right order, so every stage strengthens the next one. That is how effective digital transformation for service businesses works: one connected system, not a collection of disconnected tasks.`,
+  para: ` We do not overload your business with random tactics. We build your digital presence in the right order, so every stage strengthens the next one. That is how effective <b>digital transformation for service businesses</b> works: one connected system, not a collection of disconnected tasks.`,
   bgColor: true,
   cards: [
     {
@@ -2459,3 +2521,281 @@ export const DIGITAL_TRANSFORMATION_EVERYTHING = {
     },
   ],
 };
+
+export const DIGITAL_TRANSFORMATION_WHAT: ServiceData = {
+  highLight: "BRANDING. WEBSITE. MARKETING. SOFTWARE. ALL UNDER ONE ROOF.",
+  title: "WHAT IS INCLUDED IN YOUR DIGITAL TRANSFORMATION",
+  para: "Every service we provide is connected. Your brand shapes your website. Your website supports your SEO. Your marketing brings in demand. Your systems help you handle that demand efficiently. We build your growth engine as one complete system.",
+  cards: [
+    {
+      titleLines: ["Brand Identity & Logo Design"],
+      description:
+        "A professional logo, colour palette, and brand direction that make your business look consistent, trustworthy, and established. We create an identity that reflects what your business stands for and gives people confidence before they ever contact you.",
+      icon: "/staff-augmentation/role-icon-1.svg",
+      tone: "muted",
+    },
+    {
+      titleLines: ["Website Design"],
+      description:
+        "A website designed around your business, your audience, and your goals, not a generic template. Clean, modern, mobile-first layouts help visitors understand your services quickly and guide them toward booking, calling, or enquiring.",
+      icon: "/staff-augmentation/role-icon-2.svg",
+      tone: "base",
+    },
+    {
+      titleLines: ["Website Development"],
+      description:
+        "We build websites that are fast, responsive, technically sound, and ready for long-term growth. That includes strong foundations for SEO, lead capture, analytics, and future integrations, so your site supports both visibility and performance.",
+      icon: "/digital-transformation/what-icon-1.svg",
+      tone: "muted",
+    },
+    {
+      titleLines: ["Local SEO & Google Maps"],
+      description:
+        "We help your business show up where local buyers are already searching. That includes Google Business Profile optimization, local landing pages, on-site SEO, citation work, and location relevance strategies that improve local visibility.",
+      icon: "/digital-transformation/what-icon-2.svg",
+      tone: "base",
+    },
+    {
+      titleLines: ["Google Ads & Paid Search"],
+      description:
+        "SEO takes time. Paid search helps you appear sooner. We build and manage targeted Google Ads campaigns focused on high-intent searches, so your business can start generating quality enquiries while your organic visibility grows.",
+      icon: "/digital-transformation/what-icon-3.svg",
+      tone: "muted",
+    },
+    {
+      titleLines: ["Social Media Marketing"],
+      description:
+        "We keep your brand visible and consistent across social channels with the right strategy, content direction, and messaging. This helps build credibility, familiarity, and trust with the audience most likely to become clients.",
+      icon: "/staff-augmentation/role-icon-6.svg",
+      tone: "base",
+    },
+    {
+      titleLines: ["Content Marketing"],
+      description:
+        "We create service pages, blogs, FAQs, and local content that answer the questions your ideal clients are already typing into search. This improves authority, supports rankings, and gives your website more ways to attract the right traffic.",
+      icon: "/digital-transformation/what-icon-4.svg",
+      tone: "muted",
+    },
+    {
+      titleLines: ["Review & Reputation Strategy"],
+      description:
+        "Reviews influence trust and conversions. We help you build a process for requesting more genuine reviews, responding professionally, and strengthening your online reputation across Google and other relevant platforms.",
+      icon: "/digital-transformation/what-icon-5.svg",
+      tone: "base",
+    },
+    {
+      titleLines: ["Custom CRM & Booking Software"],
+      description:
+        "As leads increase, your operations need to keep up. We provide crm and workflow automation consulting, booking systems, internal tools, lead management flows, and custom software support to improve business efficiency, reduce manual work, and support scale. This is where business process automation services, systems integration services, and business systems modernization create real day-to-day value.",
+      icon: "/digital-transformation/what-icon-6.svg",
+      tone: "muted",
+    },
+  ],
+};
+
+export const DIGITAL_TRANSFORMATION_WHY = {
+  highLight: "One Team. Every Piece. Real Results.",
+  title: "Why Service Businesses Choose HTSOL Inc.",
+  cards: [
+    {
+      icon: "/digital-transformation/why-icon-1.svg",
+      id: "we-do-everything-in-house-no-handoffs",
+      heading: "We Do Everything In-House No Handoffs",
+      para: "Most providers focus on one piece only: web design, SEO, ads, or software. That leaves you managing multiple vendors who do not share one plan. HTSOL brings strategy, design, development, marketing, automation, and system improvements together under one roof, so every part supports the next.",
+    },
+    {
+      icon: "/digital-transformation/why-icon-2.svg",
+      id: "we-understand-service-businesses",
+      heading: "We Understand Service Businesses",
+      para: "We work with businesses where trust matters and buying decisions are personal. That includes clinics, healthcare providers, law firms, contractors, and other local service businesses. We understand how people search, what builds confidence, and what helps turn interest into action.",
+    },
+    {
+      icon: "/digital-transformation/why-icon-3.svg",
+      id: "we-start-where-you-are",
+      heading: "We Start Where You Are",
+      para: "You do not need a polished brand or a complete online presence before you speak with us. Whether you have nothing in place or an outdated setup that needs improvement, we assess your current position and build the right roadmap from there. That makes our digital transformation consulting for small business practical, not overwhelming.",
+    },
+    {
+      icon: "/digital-transformation/why-icon-4.svg",
+      id: "you-own-everything-we-build",
+      heading: "You Own Everything We Build",
+      para: "Your domain, website, content, accounts, and digital assets belong to you. We do not lock clients into systems they cannot control. We build assets that strengthen your business over time and remain valuable whether you continue with us or not.",
+    },
+    {
+      id: "results-image",
+      mainImage: "/digital-transformation/why-img.png",
+      imageAlt: "Mississauga web design agency",
+    },
+    {
+      icon: "/digital-transformation/why-icon-5.svg",
+      id: "results-measure",
+      heading: "Results You Can Measure from Day One",
+      para: "We track the metrics that matter: rankings, traffic, leads, calls, enquiries, and conversion performance. We also improve the operational side through reporting automation, connected tools, and better visibility into what is actually driving growth.",
+    },
+  ],
+};
+
+export const DIGITAL_TRANSFORMATION_Accordion = {
+  highLight: "A CLEAR PROCESS. NO SURPRISES. REAL PROGRESS.",
+  title: "What to Expect When You Work With HTSOL Inc.",
+  para: `We keep the process simple, organised, and transparent. You always know what is happening, what comes next, and what we need from you. That is how effective business digitization services should feel.`,
+  accordion: [
+    {
+      number: "01",
+      title: "DISCOVERY CALL",
+      description:
+        "We start with a practical conversation about your business, your services, your current setup, and your goals. We identify what is missing, what is already working, and where the biggest opportunities are.",
+    },
+    {
+      number: "02",
+      title: "AUDIT & STRATEGY",
+      description:
+        "We review your current digital footprint, competitors, search landscape, messaging, and opportunities for improvement. If needed, we also assess your internal workflows, digital tools, and client journey to identify where process redesign, automation, or modernization could improve performance.",
+    },
+    {
+      number: "03",
+      title: "BRAND & WEBSITE BUILD",
+      description:
+        "We create or refine your brand and then design and build your website around it. You review direction early, approve key decisions, and stay involved where it matters, while we handle the writing, structure, technical setup, and build.",
+    },
+    {
+      number: "04",
+      title: "SEO & MARKETING LAUNCH",
+      description:
+        "Your website goes live with the right SEO foundations in place. We optimise your Google presence, launch the agreed campaigns, and make sure your digital channels are working together to generate visibility and enquiries.",
+    },
+    {
+      number: "05",
+      title: "GROWTH & OPTIMISATION",
+      description:
+        "We monitor rankings, traffic, lead quality, campaign performance, and user behaviour. Then we refine. SEO improves over time. Ads get smarter with data. Content expands. Conversions improve. Your digital presence becomes stronger and more efficient month by month.",
+    },
+    {
+      number: "06",
+      title: "SCALE & EVOLVE",
+      description:
+        "As your business grows, your digital setup should grow with it. That may include software modernization, systems integration services, improved digital infrastructure, better internal systems, or expanded automation. We stay involved as your long-term partner, not just a launch vendor.",
+    },
+  ],
+};
+
+export const DIGITAL_TRANSFORMATION_DIGITAL_PRESENCE = {
+  curveLine: true,
+  title: "Digital Presence Is One of the Most Valuable Assets a Service Business Can Build",
+  para: `Referrals are helpful, but they are not predictable. Word of mouth matters, but it does not scale on its own. A Google Business listing is useful, but it is not a full strategy.
+  <br/><br/>
+  A well-built digital presence does something different. It compounds. It improves visibility, strengthens trust, supports lead generation, and creates a better client journey over time. When your website, SEO, marketing, and systems are working together, your business becomes easier to grow and easier to manage.`,
+  btnText: "Book a Free Consultation",
+  btnLink: "/contact-us",
+  items: [
+    {
+      title: "A brand that creates the right first impression online and offline",
+      image: "/digital-transformation/digital-presence-1.png",
+      alt: "Senior talent available in days, not months",
+    },
+    {
+      title: "A website that turns visitors into real enquiries around the clock",
+      image: "/website/full-development.png",
+      alt: "Pay for the hours and skills you actually need — nothing more",
+    },
+    {
+      title: "Google visibility that brings in leads beyond referrals alone",
+      image: "/website/conversion-focused.png",
+      alt: "Scale up and down as your workload demands without the hiring and firing cycle",
+    },
+    {
+      title: "Marketing and automation that support predictable, measurable growth",
+      image: "/website/technical-seo.png",
+      alt: "Eliminate employer taxes, benefits, office costs, and equipment overhead",
+    },
+    {
+      title: "Better workflow optimisation, stronger systems, and improved business efficiency",
+      image: "/website/analytics.png",
+      alt: "Test a role before you commit to making it permanent",
+    },
+    {
+      title: "A business that is easier to scale, easier to sell, and less dependent on luck",
+      image: "/website/performance.png",
+      alt: "Keep your core team lean and focused while augmented talent handles specific workloads",
+    },
+  ],
+  className: "pb-10! lg:pb-20! pt-20! lg:pt-40!",
+};
+
+export const DIGITAL_TRANSFORMATION_DIGITAL_SHIFT = {
+  bgImage: "/staff-augmentation/smart-way-bg.png",
+  title: "EMPOWERING MODERN BRANDS TO LEAD THE DIGITAL SHIFT",
+  para: `The transition from traditional systems to a cloud-native environment seemed daunting until we partnered with HtSolutions. Their team bridged the gap between our vision and technical execution perfectly. We are now more agile, more responsive, and miles ahead of our competitors.`,
+  highLight: "SARAH JENKINS",
+  bottomPara: "Director of Innovation",
+};
+
+export const DIGITAL_TRANSFORMATION_READY = {
+  bgImage: "/digital-transformation/ready-bg.png",
+  title: "READY TO STOP RELYING ON REFERRALS AND START GETTING CLIENTS FROM GOOGLE?",
+  para: `Whether you have no website, an outdated one, disconnected systems, or a site that is not generating results, we can help you fix it. HTSOL delivers digital transformation services that bring your brand, website, marketing, and internal systems together into one practical growth plan. Start with a free consultation and we will show you where you stand, what needs to happen next, and what the right scope looks like for your business.`,
+  btnText: "Book a free consultation",
+  btnLink: "/contact-us",
+  className: "max-w-6xl!",
+};
+
+export const DIGITAL_TRANSFORMATION_FAQS = [
+  {
+    question: "I have a Google Business listing and I get referrals — do I really need a website?",
+    answer:
+      "A Google Business listing helps people who already know what they are looking for. A website helps you win trust, explain your services clearly, rank for more searches, and convert more visitors into enquiries. It also gives you an asset you fully control. A listing alone is not a complete digital strategy.",
+  },
+  {
+    question:
+      "How much does a complete digital transformation cost?",
+    answer:
+      "It depends on your starting point and what your business needs. Some businesses need branding, a new website, local SEO, and light automation. Others also need business process automation, CRM setup, or software modernization consulting. We scope projects based on your goals, current position, and priorities, then give you a clear breakdown of cost and deliverables.",
+  },
+  {
+    question:
+      "How long does it take before I start getting clients from my website?",
+    answer:
+      "That depends on the channels involved. Google Ads can generate enquiries quickly after launch. SEO usually takes longer to build, but its value compounds over time. Automation and system improvements may not directly bring in leads, but they improve follow-up, response speed, and conversion efficiency once leads start coming in.",
+  },
+  {
+    question:
+      "Can I start with just a website and add marketing later?",
+    answer:
+      "Yes. That is a common starting point. We often begin with brand and website work, then add local SEO, paid campaigns, content, and operational improvements over time. The key is planning it properly from the start so each stage connects to the next.",
+  },
+  {
+    question:
+      "I am a dentist / physio / lawyer — do you understand my industry?",
+    answer:
+      "Yes. We work with trust-based service businesses where credibility, clarity, and local visibility matter. That includes healthcare, legal, and professional services. We understand how clients search, what information they need before contacting you, and how to structure a digital presence that supports those decisions. This also makes us a strong fit for digital transformation for healthcare clinics and other service-led businesses.",
+  },
+  {
+    question:
+      "Will I need to be heavily involved in the process?",
+    answer:
+      "Not heavily. We involve you in the decisions that need your input, such as brand direction, design approval, service details, and business priorities. We handle the strategy, writing, development, implementation, and optimisation work so you can stay focused on running the business.",
+  },
+  {
+    question:
+      "What if I already have a website but it is not working?",
+    answer:
+      "That is common. Sometimes the issue is poor messaging, weak SEO, slow performance, bad structure, or missing conversion paths. In other cases, the problem is that the website is not connected properly to your lead handling, reporting, or internal systems. We audit what is there, identify the real bottlenecks, and recommend the most practical fix.",
+  },
+  {
+    question:
+      "Do you write the website copy or do I need to provide it?",
+    answer:
+      "We write it. You give us the core information about your services, service areas, differentiators, and business goals. We turn that into clear, persuasive, SEO-friendly copy that speaks to your audience naturally and supports conversions.",
+  },
+  {
+    question:
+      "What happens to everything you build if I stop working with HTSOL?",
+    answer:
+      "It stays yours. Your website, content, accounts, domain, and digital assets remain under your control. If we build connected systems, dashboards, or automation flows, we structure them so your business is not locked out of what it paid for.",
+  },
+  {
+    question: "How do I know if digital transformation is actually working?",
+    answer:
+      "We measure it. That includes traffic, rankings, calls, form submissions, lead quality, campaign data, and operational improvements where relevant. If your project includes workflow automation consulting, reporting automation, or system changes, we also track how those improvements support faster response times, cleaner workflows, and better efficiency.",
+  },
+];
