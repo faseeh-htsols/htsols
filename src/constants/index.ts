@@ -963,29 +963,36 @@ export const CTO_ACHIEVEMENTS = [
     para: "From custom MERN stack builds and Django back-ends to AI-optimised SEO systems, booking integrations, and practice management software.",
   },
 ];
-export const WHY_HIRE_ME_CEO = [
-  {
-    // icon: "/ceo/full-stack-architecture.json",
-    icon: "/ceo/why-icon-1-2.svg",
-    hoverIcon: "/ceo/why-icon-1.svg",
-    heading: "HEALTHCARE & DENTAL GROWTH",
-    para: " I specialize in helping dental clinics, medical practices, and mental health providers build digital systems that attract the right patients and convert them — not just look good online. From high-converting websites to custom booking systems and local SEO, I know what actually moves the needle in healthcare.",
-  },
-  {
-    // icon: "/ceo/strategic-custom-solutions.json",
-    icon: "/ceo/why-icon-2.svg",
-    hoverIcon: "/ceo/why-icon-2-2.svg",
-    heading: "AGENCY WHITE LABEL PARTNER",
-    para: "Marketing agencies bring me in when they need delivery capacity they can trust. I work as a silent execution partner — building websites, platforms, and marketing systems under your brand, on your timelines, with full NDA protection. Your clients get enterprise-quality work. Your agency gets the credit.",
-  },
-  {
-    // icon: "/ceo/cutting-edge.json",
-    icon: "/ceo/why-icon-3.svg",
-    hoverIcon: "/ceo/why-icon-3-2.svg",
-    heading: "STRATEGY BACKED BY TECHNICAL DEPTH",
-    para: "I've built full-stack MERN applications, custom CRMs, SaaS platforms, and AI-integrated systems from scratch. That technical foundation means I don't just recommend what to build — I understand how to build it, what it costs, and how long it actually takes. When I give you a strategy, I can execute it.",
-  },
-];
+export const WHY_HIRE_ME_CEO = {
+  title: "Why hire me",
+  para: `Most agencies separate strategy from execution. Most developers don&apos;t understand marketing. Most marketers can&apos;t build what they recommend. I&apos;ve spent 8 years sitting at the
+  intersection of all three — and that&apos;s exactly what my clients hire me for.`,
+  btnText: "Let’s discuss your project",
+  btnLink: "/contact-us",
+  cards: [
+    {
+      // icon: "/ceo/full-stack-architecture.json",
+      icon: "/ceo/why-icon-1-2.svg",
+      hoverIcon: "/ceo/why-icon-1.svg",
+      heading: "HEALTHCARE & DENTAL GROWTH",
+      para: " I specialize in helping dental clinics, medical practices, and mental health providers build digital systems that attract the right patients and convert them — not just look good online. From high-converting websites to custom booking systems and local SEO, I know what actually moves the needle in healthcare.",
+    },
+    {
+      // icon: "/ceo/strategic-custom-solutions.json",
+      icon: "/ceo/why-icon-2.svg",
+      hoverIcon: "/ceo/why-icon-2-2.svg",
+      heading: "AGENCY WHITE LABEL PARTNER",
+      para: "Marketing agencies bring me in when they need delivery capacity they can trust. I work as a silent execution partner — building websites, platforms, and marketing systems under your brand, on your timelines, with full NDA protection. Your clients get enterprise-quality work. Your agency gets the credit.",
+    },
+    {
+      // icon: "/ceo/cutting-edge.json",
+      icon: "/ceo/why-icon-3.svg",
+      hoverIcon: "/ceo/why-icon-3-2.svg",
+      heading: "STRATEGY BACKED BY TECHNICAL DEPTH",
+      para: "I've built full-stack MERN applications, custom CRMs, SaaS platforms, and AI-integrated systems from scratch. That technical foundation means I don't just recommend what to build — I understand how to build it, what it costs, and how long it actually takes. When I give you a strategy, I can execute it.",
+    },
+  ],
+};
 
 export const WHY_HIRE_ME_CTO = [
   {
@@ -1012,44 +1019,48 @@ export const WHY_HIRE_ME_CTO = [
 ];
 
 
-export const WHAT_I_DO_CEO = [
-  {
-    // icon: "/ceo/full-stack-architecture.json",
-    icon: "/ceo/what-do-icon-1.svg",
-    heading: "Digital Growth Strategy",
-    para: "Most businesses have activity without direction — content going out, ads running, a website sitting there — but no cohesive plan tying it all together. I build the strategy first: where you are, where you need to go, which channels deserve your budget, and in what order. Everything else follows from that.",
-  },
-  {
-    // icon: "/ceo/strategic-custom-solutions.json",
-    icon: "/ceo/what-do-icon-2.svg",
-    heading: "Healthcare & Dental Marketing",
-    para: "I've built digital systems specifically for dental clinics, medical practices, and mental health providers. Attracting the right patients online is a different discipline from general marketing — it requires trust signals, local visibility, booking friction reduction, and content that speaks to someone in a vulnerable moment. I understand that nuance.",
-  },
-  {
-    // icon: "/ceo/cutting-edge.json",
-    icon: "/ceo/what-do-icon-3.svg",
-    heading: "AI Adoption & Automation",
-    para: "AI isn't a feature — it's a shift in how your business operates. I help businesses identify where AI can replace manual work, reduce costs, and scale output without adding headcount. From AI-powered customer support to automated marketing workflows to custom-built AI tools, I map what's actually useful for your specific operation — not what's trending on LinkedIn.",
-  },
-  {
-    // icon: "/ceo/full-stack-architecture.json",
-    icon: "/ceo/what-do-icon-4.svg",
-    heading: "Conversion-Optimised Web Design & Development",
-    para: "A website that looks good but doesn't convert is an expensive brochure. I design and build websites with one primary objective: turning the right visitors into enquiries, bookings, or sales. Every layout decision, every headline, every CTA placement is informed by how people actually make decisions online — not by what looks impressive in a portfolio.",
-  },
-  {
-    // icon: "/ceo/strategic-custom-solutions.json",
-    icon: "/ceo/what-do-icon-5.svg",
-    heading: "Custom CRM & Software Development",
-    para: "Off-the-shelf tools work until they don't. When your business outgrows generic software — or when your workflow simply doesn't fit any existing product — I build custom. CRMs, patient management systems, internal dashboards, SaaS platforms. Built to your exact process, owned entirely by you, and designed to scale as your business grows.",
-  },
-  {
-    // icon: "/ceo/cutting-edge.json",
-    icon: "/ceo/what-do-icon-6.svg",
-    heading: "Agency White Label Partnership",
-    para: "I work with marketing agencies as a silent execution partner. You bring the client relationships. I deliver the websites, platforms, and marketing systems — under your brand, on your timelines, with full NDA protection. No competing for your clients. No corner-cutting. Just consistent, quality delivery that makes your agency look excellent.",
-  },
-];
+export const WHAT_I_DO_CEO = {
+  title: "Services That Move the Needle",
+  para: "I don't sell packages. I solve problems. Here's where I spend my time and what I bring to the table.",
+  cards: [
+    {
+      // icon: "/ceo/full-stack-architecture.json",
+      icon: "/ceo/what-do-icon-1.svg",
+      heading: "Digital Growth Strategy",
+      para: "Most businesses have activity without direction — content going out, ads running, a website sitting there — but no cohesive plan tying it all together. I build the strategy first: where you are, where you need to go, which channels deserve your budget, and in what order. Everything else follows from that.",
+    },
+    {
+      // icon: "/ceo/strategic-custom-solutions.json",
+      icon: "/ceo/what-do-icon-2.svg",
+      heading: "Healthcare & Dental Marketing",
+      para: "I've built digital systems specifically for dental clinics, medical practices, and mental health providers. Attracting the right patients online is a different discipline from general marketing — it requires trust signals, local visibility, booking friction reduction, and content that speaks to someone in a vulnerable moment. I understand that nuance.",
+    },
+    {
+      // icon: "/ceo/cutting-edge.json",
+      icon: "/ceo/what-do-icon-3.svg",
+      heading: "AI Adoption & Automation",
+      para: "AI isn't a feature — it's a shift in how your business operates. I help businesses identify where AI can replace manual work, reduce costs, and scale output without adding headcount. From AI-powered customer support to automated marketing workflows to custom-built AI tools, I map what's actually useful for your specific operation — not what's trending on LinkedIn.",
+    },
+    {
+      // icon: "/ceo/full-stack-architecture.json",
+      icon: "/ceo/what-do-icon-4.svg",
+      heading: "Conversion-Optimised Web Design & Development",
+      para: "A website that looks good but doesn't convert is an expensive brochure. I design and build websites with one primary objective: turning the right visitors into enquiries, bookings, or sales. Every layout decision, every headline, every CTA placement is informed by how people actually make decisions online — not by what looks impressive in a portfolio.",
+    },
+    {
+      // icon: "/ceo/strategic-custom-solutions.json",
+      icon: "/ceo/what-do-icon-5.svg",
+      heading: "Custom CRM & Software Development",
+      para: "Off-the-shelf tools work until they don't. When your business outgrows generic software — or when your workflow simply doesn't fit any existing product — I build custom. CRMs, patient management systems, internal dashboards, SaaS platforms. Built to your exact process, owned entirely by you, and designed to scale as your business grows.",
+    },
+    {
+      // icon: "/ceo/cutting-edge.json",
+      icon: "/ceo/what-do-icon-6.svg",
+      heading: "Agency White Label Partnership",
+      para: "I work with marketing agencies as a silent execution partner. You bring the client relationships. I deliver the websites, platforms, and marketing systems — under your brand, on your timelines, with full NDA protection. No competing for your clients. No corner-cutting. Just consistent, quality delivery that makes your agency look excellent.",
+    },
+  ],
+};
 
 export const CTO_SERVICES = [
   {
@@ -2799,3 +2810,33 @@ export const DIGITAL_TRANSFORMATION_FAQS = [
       "We measure it. That includes traffic, rankings, calls, form submissions, lead quality, campaign data, and operational improvements where relevant. If your project includes workflow automation consulting, reporting automation, or system changes, we also track how those improvements support faster response times, cleaner workflows, and better efficiency.",
   },
 ];
+
+
+export const CEO_SKILLS = {
+  skills: [
+    { src: "/ceo/figma.svg", label: "Digital Growth Strategy" },
+    { src: "/ceo/wordpress.svg", label: "Dental Marketing" },
+    { src: "/ceo/elementor.svg", label: "Healthcare Digital Marketing" },
+    { src: "/ceo/vscode.svg", label: "Mental Health Clinic Growth" },
+    { src: "/ceo/visual-studio.svg", label: "Conversion Rate Optimization" },
+    { src: "/ceo/photoshop.svg", label: "Custom CRM & CMS Development" },
+    { src: "/ceo/xd.svg", label: "AI-Powered SEO" },
+    { src: "/ceo/adobe-ai.svg", label: "SaaS Product Development" },
+    { src: "/ceo/shopify.svg", label: "Design Psychology" },
+    { src: "/ceo/webflow.svg", label: "Agency White Label Partner" },
+    { src: "/ceo/laravel.svg", label: "Full-Stack MERN Development" },
+    { src: "/ceo/shopify.svg", label: "E-Commerce Growth" },
+    { src: "/ceo/webflow.svg", label: "Search Engine Optimization" },
+    { src: "/ceo/laravel.svg", label: "Web Performance & Speed" },
+  ]
+};
+
+export const CEO_ABOUT_ME = {
+  title: "About Me",
+  para: `I started as a developer. Over 8 years I built websites, platforms, and software for businesses across 5 countries — and somewhere along the way I noticed something that bothered me:
+  technically excellent work failing because the strategy behind it was wrong. Great code sitting on a website nobody could find. Beautiful designs that didn&apos;t convert. Platforms launched without any plan for growth.
+  <br/><br/>
+  That&apos;s why I built HTSOL Inc. the way I did — with design, development, and marketing operating as one coordinated unit, not three separate vendors pulling in different directions. Today I work with healthcare practices, dental clinics, mental health providers, and marketing agencies who need more than execution. They need someone who understands the full picture: what to build, how to market it, and how to make it grow. That&apos;s what I do.`,
+  image: "/ceo/about-me.webp",
+  signImage: "/ceo/signature.webp",
+};

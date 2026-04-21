@@ -6,7 +6,27 @@ import LottiePlayer from "@/components/ui/lottie-player";
 import { WHY_HIRE_ME_CEO } from "@/constants";
 import parse from "html-react-parser";
 import Image from "next/image";
-const WhyHireMe = () => {
+
+interface whyCard {
+  icon: string;
+  hoverIcon: string;
+  heading: string;
+  para: string;
+};
+
+interface WhyHireMeData {
+  title: string;
+  para: string;
+  btnText: string;
+  btnLink: string;
+  cards: whyCard[];
+};
+
+interface WhyHireMeProps {
+  data: WhyHireMeData;
+};
+
+const WhyHireMe = ({ data }: WhyHireMeProps) => {
   return (
     <DoubleCurves
       up
@@ -21,18 +41,12 @@ const WhyHireMe = () => {
         <Container>
           <div>
             <div className="max-w-[1124px] mx-auto flex flex-col gap-5 mb-4 md:mb-8">
-              <HeadingTwo className="text-center">Why hire me</HeadingTwo>
-              <p className="text-center">
-                Most agencies separate strategy from execution. Most developers
-                don&apos;t understand marketing. Most marketers can&apos;t build
-                what they recommend. I&apos;ve spent 8 years sitting at the
-                intersection of all three — and that&apos;s exactly what my
-                clients hire me for.
-              </p>
+              <HeadingTwo className="text-center">{data.title}</HeadingTwo>
+              <p className="text-center" dangerouslySetInnerHTML={{ __html: data.para }} />
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-6">
-            {WHY_HIRE_ME_CEO.map((item, index) => (
+            {data.cards.map((item, index) => (
               <div
                 key={item.heading}
                 className="relative group  bg-black rounded-lg px-4 py-6 hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]"
@@ -72,7 +86,7 @@ const WhyHireMe = () => {
             ))}
           </div>
           <div className="flex justify-center">
-            <Button href="/contact-us">Let’s discuss your project</Button>
+            <Button href={data.btnLink}>{data.btnText}</Button>
           </div>
         </Container>
       </div>

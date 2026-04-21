@@ -2,7 +2,18 @@ import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
 import Image from "next/image";
 
-const AboutMe = () => {
+interface AboutMeData {
+  title: string;
+  para: string;
+  image: string;
+  signImage: string;
+};
+
+interface AboutMeProps {
+  data: AboutMeData;
+};
+
+const AboutMe = ({ data }: AboutMeProps) => {
   return (
     <div className="pb-20 lg:pt-0">
       <Container>
@@ -18,7 +29,7 @@ const AboutMe = () => {
             // }}
             ></div>
             <Image
-              src={"/ceo/about-me.webp"}
+              src={data.image}
               width={600}
               height={600}
               className="relative"
@@ -26,31 +37,13 @@ const AboutMe = () => {
             />
           </div>
           <div className="grow">
-            <HeadingTwo className="mb-10">About Me</HeadingTwo>
+            <HeadingTwo className="mb-10">{data.title}</HeadingTwo>
             <div className="mb-5">
-              <p className="mb-5">
-                I started as a developer. Over 8 years I built websites,
-                platforms, and software for businesses across 5 countries — and
-                somewhere along the way I noticed something that bothered me:
-                technically excellent work failing because the strategy behind
-                it was wrong. Great code sitting on a website nobody could find.
-                Beautiful designs that didn&apos;t convert. Platforms launched
-                without any plan for growth.
-              </p>
-              <p>
-                That&apos;s why I built HTSOL Inc. the way I did — with design,
-                development, and marketing operating as one coordinated unit,
-                not three separate vendors pulling in different directions.
-                Today I work with healthcare practices, dental clinics, mental
-                health providers, and marketing agencies who need more than
-                execution. They need someone who understands the full picture:
-                what to build, how to market it, and how to make it grow.
-                That&apos;s what I do.
-              </p>
+              <p dangerouslySetInnerHTML={{ __html: data.para }} />
             </div>
             <div>
               <Image
-                src={"/ceo/signature.webp"}
+                src={data.signImage}
                 width={165}
                 height={100}
                 className="w-40 h-[100px] object-contain"

@@ -7,7 +7,24 @@ import { WHAT_I_DO_CEO } from "@/constants";
 import parse from "html-react-parser";
 import Image from "next/image";
 import Link from "next/link";
-const WhatIDo = () => {
+
+interface Cards {
+    icon: string;
+    heading: string;
+    para: string;
+};
+
+interface WhatIDoData {
+    title: string;
+    para: string;
+    cards: Cards[];
+};
+
+interface WhatIDoProps {
+    data: WhatIDoData;
+};
+
+const WhatIDo = ({ data }: WhatIDoProps) => {
     return (
         <DoubleCurves
             up
@@ -22,14 +39,12 @@ const WhatIDo = () => {
                 <Container>
                     <div>
                         <div className="max-w-[1124px] mx-auto flex flex-col gap-5 mb-8">
-                            <HeadingTwo className="text-center">Services That Move the Needle</HeadingTwo>
-                            <p className="text-center">
-                                I don't sell packages. I solve problems. Here's where I spend my time and what I bring to the table.
-                            </p>
+                            <HeadingTwo className="text-center">{data.title}</HeadingTwo>
+                            <p className="text-center" dangerouslySetInnerHTML={{ __html: data.para }} />
                         </div>
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-6">
-                        {WHAT_I_DO_CEO.map((item, index) => (
+                        {data.cards.map((item, index) => (
                             <div
                                 key={item.heading}
                                 className="relative group  bg-[#051315] rounded-4xl px-8 py-8 border border-[#FFFFFF1A] hover:border-[#00A1A5]"
