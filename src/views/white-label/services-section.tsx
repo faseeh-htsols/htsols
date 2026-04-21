@@ -85,7 +85,7 @@ const ServicesSection = () => {
         aria-hidden
       />
 
-      <section className="relative overflow-hidden bg-[#050505] py-24 [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+      <section className="relative overflow-hidden bg-tertiary py-20  md:py-28 xl:pb-44 xl:pt-28 [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
         <Wrapper>
           <div className="mx-auto max-w-[1280px]">
             <div className="mx-auto max-w-[1120px] text-center">

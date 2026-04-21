@@ -104,12 +104,12 @@ export const Footer: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
+                  {/* <Link
                     href="/testimonials"
                     className="text-white/60 hover:text-white text-sm transition-colors duration-200"
                   >
                     Testimonials
-                  </Link>
+                  </Link> */}
                 </li>
                 <li>
                   <Link

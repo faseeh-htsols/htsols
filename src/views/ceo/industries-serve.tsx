@@ -1,17 +1,31 @@
 import Container from "@/components/ui/container";
 import DoubleCurves from "@/components/ui/double-curves";
 import HeadingTwo from "@/components/ui/heading-two";
-import { INDUSTRIES_I_SERVE_CEO } from "@/constants";
 import Image from "next/image";
 import React from "react";
-import Experties from "./experties";
+import Experties, { ExpertiesData } from "./experties";
 
-const IndustriesServe = () => {
+interface Industry {
+  name: string;
+  image: string;
+};
+
+interface IndustriesServeData {
+  title: string;
+  industries: Industry[];
+  skills: ExpertiesData;
+};
+
+interface IndustriesServeProps {
+  data: IndustriesServeData;
+};
+
+const IndustriesServe = ({ data }: IndustriesServeProps) => {
   return (
     <DoubleCurves
       up
-      className="-mt-[3%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_-10px,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_-5px,100%_97%,0_100%)]">
-      <Experties />
+      className="-mt-[3%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[2%] [clip-path:polygon(0_1%,100%_-10px,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_-5px,100%_97%,0_100%)]">
+      <Experties data={data.skills} />
       <div className="relative">
         <div className="">
           {/* <div
@@ -22,7 +36,7 @@ const IndustriesServe = () => {
           <div className="bg-[url(/ceo/industries-serve.webp)] bg-cover bg-center bg-no-repeat pb-24 bg-black">
             <Container>
               <HeadingTwo className="text-center mb-7 md:mb-10">
-                Industries I Serve
+                {data.title}
               </HeadingTwo>
 
               <div className="relative grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-7">
@@ -33,7 +47,7 @@ const IndustriesServe = () => {
                 <div className="hidden lg:block absolute left-0 bottom-0 w-full top-1/2 -translate-y-1/2 h-px bg-white/80" />
                 {/* <div className="hidden lg:block absolute left-0 bottom-0 w-full top-1/2 -translate-y-1/2 h-px bg-[linear-gradient(180deg,#00A1A5_0%,#1A2626_100%)]" /> */}
 
-                {INDUSTRIES_I_SERVE_CEO.map((item) => (
+                {data.industries.map((item) => (
                   <div key={item.name} className="relative z-10 py-5">
                     <div className="flex justify-center">
                       <Image

@@ -1,3 +1,4 @@
+import { WHITE_LABEL_WHY_CHOOSE } from "@/constants";
 import LogosMarquee from "../home/logos-marquee";
 import AgencyGrowthSection from "./agency-growth-section";
 import CapacitySection from "./capacity-section";
@@ -12,6 +13,7 @@ import ProtectionSection from "./protection-section";
 import ServicesSection from "./services-section";
 import TestimonialSection from "./testimonial-section";
 import WorkflowSection from "./workflow-section";
+import WhyChooseHtsol from "../web-dev/why-choose-htsol";
 
 const WhiteLabelMain = () => {
   return (
@@ -22,7 +24,8 @@ const WhiteLabelMain = () => {
       <ProtectionSection />
       <WorkflowSection />
       <ServicesSection />
-      <PartnerSection />
+      {/* <PartnerSection /> */}
+      <WhyChooseHtsol data={WHITE_LABEL_WHY_CHOOSE} />
       <PartnershipProcessSection />
       <TestimonialSection />
       <PortfolioExamplesSection />

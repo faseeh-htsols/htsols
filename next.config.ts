@@ -24,11 +24,11 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
-      {
-        source: "/testimonials",
-        destination: "/",
-        permanent: true,
-      },
+      // {
+      //   source: "/testimonials",
+      //   destination: "/",
+      //   permanent: true,
+      // },
       {
         source: "/services/seo",
         destination: "/",

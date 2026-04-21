@@ -11,19 +11,37 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { CLIENT_SAY_ABOUT_CEO } from "@/constants";
 import DoubleCurves from "@/components/ui/double-curves";
 
-const ClientsAboutMe = () => {
+interface Reviews {
+  para: string;
+  image: string;
+  name: string;
+  designation: string;
+};
+
+interface ClientAboutMeData {
+  title: string;
+  leftQuote: string;
+  rightQuote: string;
+  reviews: Reviews[];
+};
+
+interface ClientsAboutMeProps {
+  data: ClientAboutMeData;
+};
+
+const ClientsAboutMe = ({ data }: ClientsAboutMeProps) => {
   return (
     <DoubleCurves up className="-mt-[3%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_-10px,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_-5px,100%_97%,0_100%)]">
       <div className="bg-tertiary py-20 lg:py-40">
         <Container>
           <HeadingTwo className="mb-8 text-center">
-            What my clients say about me
+            {data.title}
           </HeadingTwo>
 
           <div className="flex justify-between">
             <div className="[50px] md:w-[120px] lg:w-[200px] ">
               <Image
-                src={"/ceo/left-qoute.svg"}
+                src={data.leftQuote}
                 className="w-[50px] md:w-[120px] lg:w-[200px] h-40"
                 width={200}
                 height={200}
@@ -45,7 +63,7 @@ const ClientsAboutMe = () => {
                 pagination={{ clickable: true }}
                 modules={[Autoplay, Pagination]}
               >
-                {CLIENT_SAY_ABOUT_CEO.map((item, index) => (
+                {data.reviews.map((item, index) => (
                   <SwiperSlide key={index}>
                     <p className="text-center text-lg mb-6">{item.para}</p>
                     <div className="flex justify-center items-center gap-6">
@@ -71,11 +89,11 @@ const ClientsAboutMe = () => {
 
             <div className="w-[50px] md:w-[120px] lg:w-[200px] ">
               <Image
-                src={"/ceo/right-qoute.svg"}
+                src={data.rightQuote}
                 className="w-[50px] md:w-[120px] lg:w-[200px] h-40"
                 width={200}
                 height={200}
-                alt="left Qoute"
+                alt="right Qoute"
               />
             </div>
           </div>
