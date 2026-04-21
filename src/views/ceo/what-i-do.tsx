@@ -28,8 +28,8 @@ const WhatIDo = ({ data }: WhatIDoProps) => {
     return (
         <DoubleCurves
             up
-            className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]"
-        >
+            className="-mt-[3%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[4%] [clip-path:polygon(0_1%,100%_-10px,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_-5px,100%_97%,0_100%)]"
+            innerClassName="-rotate-3! top-6! h-[0.5%]! sm:h-[1%]! md:top-0! md:-rotate-2! xl:h-[2.4%]!">
             {/* <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]

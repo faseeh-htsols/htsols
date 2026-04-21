@@ -266,7 +266,7 @@ function ContentSections({
                     const buttonText = item.cta.buttonText?.trim() ?? "";
                     const buttonHref = item.cta.buttonHref?.trim() ?? "";
                     const imageUrl =
-                      item.cta.imageUrl?.trim() || "/blog-cta.webp";
+                      item.cta.imageUrl?.trim();
 
                     return (
                       <div
@@ -274,7 +274,7 @@ function ContentSections({
                         className="my-24 rounded-2xl relative w-full border border-[#00A1A5]">
                         <div className="flex flex-col md:flex-row">
                           {/* TEXT CONTENT */}
-                          <div className=" p-8 flex flex-col justify-center w-full lg:w-[60%]">
+                          <div className={`p-8 flex flex-col justify-center w-full ${imageUrl ? "lg:w-[60%]" : "items-center"}`}>
                             {heading && (
                               <h3 className="text-white text-2xl md:text-3xl font-bold mb-4 uppercase tracking-wide">
                                 {heading}
@@ -282,7 +282,7 @@ function ContentSections({
                             )}
 
                             {paragraph && (
-                              <p className="text-gray-300 mb-6 leading-relaxed">
+                              <p className={`text-gray-300 mb-6 leading-relaxed ${imageUrl ? "" : "text-center"}`}>
                                 {paragraph}
                               </p>
                             )}
@@ -293,15 +293,17 @@ function ContentSections({
                               </Button>
                             </div>
                           </div>
-                          <div className="absolute -right-10 top-1/2 -translate-y-1/2 pointer-events-none lg:block hidden">
-                            <img
-                              src={imageUrl}
-                              alt={heading || "CTA image"}
-                              width={400}
-                              height={300}
-                              className="w-[520px] h-full object-cover"
-                            />
-                          </div>
+                          {imageUrl && (
+                            <div className="absolute -right-10 top-1/2 -translate-y-1/2 pointer-events-none lg:block hidden">
+                              <img
+                                src={imageUrl}
+                                alt={heading || "CTA image"}
+                                width={400}
+                                height={300}
+                                className="w-[520px] h-full object-cover"
+                              />
+                            </div>
+                          )}
                         </div>
                       </div>
                     );
@@ -475,11 +477,10 @@ function ContentSections({
                         <button
                           key={id}
                           onClick={() => scrollToSection(id)}
-                          className={`block w-full text-left text-sm transition-all py-2 px-3 rounded-lg my-2 ${
-                            activeId === id
-                              ? "bg-linear-to-r from-[#00A1A5]/50 to-[#00A1A5] text-white font-semibold"
-                              : "text-gray-400 hover:text-white border border-white hover:bg-white/5"
-                          }`}>
+                          className={`block w-full text-left text-sm transition-all py-2 px-3 rounded-lg my-2 ${activeId === id
+                            ? "bg-linear-to-r from-[#00A1A5]/50 to-[#00A1A5] text-white font-semibold"
+                            : "text-gray-400 hover:text-white border border-white hover:bg-white/5"
+                            }`}>
                           {item.heading}
                         </button>
                       );

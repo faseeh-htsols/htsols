@@ -18,7 +18,21 @@ const SKILLS = [
     { src: "/ceo/bsc.svg", label: "B.Sc. Software Engineering", subLabel: "From: COMSATS University" },
 ] as const;
 
-function SkillPill({ skill }: { skill: (typeof SKILLS)[number] }) {
+interface Skill {
+    src: string;
+    label: string;
+    subLabel: string;
+};
+
+export interface ExpertiesData {
+    skills: Skill[];
+};
+
+interface ExpertiesProps {
+    data: ExpertiesData;
+};
+
+function SkillPill({ skill }: { skill: Skill }) {
     return (
         <div className="flex flex-col items-center justify-center gap-2">
             <div className="shrink-0 rounded-[5px] p-px bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]">
@@ -38,7 +52,7 @@ function SkillPill({ skill }: { skill: (typeof SKILLS)[number] }) {
     );
 }
 
-const Experties = () => {
+const Experties = ({ data }: ExpertiesProps) => {
     return (
         <div className="relative py-20">
             <div className="bg-black" />
@@ -49,10 +63,10 @@ const Experties = () => {
                         className="marquee-content marquee-content--always-run gap-9 md:gap-18"
                         style={{ animationDuration: "150s" }}
                     >
-                        {SKILLS.map((skill, i) => (
+                        {data.skills.map((skill, i) => (
                             <SkillPill key={`a-${i}`} skill={skill} />
                         ))}
-                        {SKILLS.map((skill, i) => (
+                        {data.skills.map((skill, i) => (
                             <SkillPill key={`b-${i}`} skill={skill} />
                         ))}
                     </div>

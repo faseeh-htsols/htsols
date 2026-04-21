@@ -13,7 +13,7 @@ import WhatACall from "./what-a-call";
 import WhyHireMe from "./why-hire-me";
 import WhatIDo from "./what-i-do";
 import HowWorks from "../mississauga/how-works";
-import { CEO_FAQS, CEO_CONVERSATION, CEO_SKILLS, CEO_ABOUT_ME, CEO_ACHIEVEMENTS, WHAT_I_DO_CEO, WHY_HIRE_ME_CEO } from "@/constants";
+import { CEO_FAQS, CEO_CONVERSATION, CEO_SKILLS, CEO_ABOUT_ME, CEO_ACHIEVEMENTS, WHAT_I_DO_CEO, WHY_HIRE_ME_CEO, INDUSTRIES_I_SERVE_CEO, CLIENT_SAY_ABOUT_CEO, CEO_CTA } from "@/constants";
 import Experties from "./experties";
 import LinkedIn from "./linkedin";
 import { fetchCmsBlogs, getBlogDate, safeTime } from "@/lib/cms/blog";
@@ -29,12 +29,12 @@ const CeoMain = async () => {
       <Skills data={CEO_SKILLS} />
       <AboutMe data={CEO_ABOUT_ME} />
       <Achievements data={CEO_ACHIEVEMENTS} />
-      <WhyHireMe data={WHY_HIRE_ME_CEO}/>
+      <WhyHireMe data={WHY_HIRE_ME_CEO} />
       <WhatIDo data={WHAT_I_DO_CEO} />
       <HowWorks data={CEO_CONVERSATION} />
-      <IndustriesServe />
-      <ClientsAboutMe />
-      <WhatACall />
+      <IndustriesServe data={INDUSTRIES_I_SERVE_CEO} />
+      <ClientsAboutMe data={CLIENT_SAY_ABOUT_CEO} />
+      <WhatACall data={CEO_CTA} />
       <BlogCurate posts={sorted} />
       {/* <LinkedInPosts /> */}
       {/* <ViewOnInstgram /> */}

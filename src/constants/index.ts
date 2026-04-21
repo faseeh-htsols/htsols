@@ -946,23 +946,7 @@ export const CEO_ACHIEVEMENTS = [
   },
 ];
 
-export const CTO_ACHIEVEMENTS = [
-  {
-    number: "6+",
-    name: "YEARS IN SOFTWARE DEVELOPMENT",
-    para: "From software engineering and system architecture to building production-grade web applications for businesses in the UK and Canada.",
-  },
-  {
-    number: "UK ",
-    name: "DENTAL TRACK RECORD",
-    para: "Helped dental practices across Manchester, Birmingham, London, Leeds, Bristol, and Edinburgh turn underperforming websites into consistent patient acquisition systems.",
-  },
-  {
-    number: "100+",
-    name: "TECHNOLOGIES INTEGRATED",
-    para: "From custom MERN stack builds and Django back-ends to AI-optimised SEO systems, booking integrations, and practice management software.",
-  },
-];
+
 export const WHY_HIRE_ME_CEO = {
   title: "Why hire me",
   para: `Most agencies separate strategy from execution. Most developers don&apos;t understand marketing. Most marketers can&apos;t build what they recommend. I&apos;ve spent 8 years sitting at the
@@ -994,29 +978,7 @@ export const WHY_HIRE_ME_CEO = {
   ],
 };
 
-export const WHY_HIRE_ME_CTO = [
-  {
-    // icon: "/ceo/full-stack-architecture.json",
-    icon: "/ceo/why-icon-1-2.svg",
-    hoverIcon: "/ceo/why-icon-1.svg",
-    heading: "BUILT FOR DENTAL — NOT ADAPTED FROM GENERIC",
-    para: " I have spent years building specifically for dental practices. I understand PIPEDA and patient data compliance. I know how booking systems need to work for a clinical front desk. I understand the local SEO signals that matter for dental searches — 'dentist near me', 'Invisalign [city]', 'emergency dental'. When I build for a dental practice, I am not starting from a generic template and adapting it. I am building from dental-specific knowledge.",
-  },
-  {
-    // icon: "/ceo/strategic-custom-solutions.json",
-    icon: "/ceo/why-icon-2.svg",
-    hoverIcon: "/ceo/why-icon-2-2.svg",
-    heading: "PROVEN IN COMPETITIVE DENTAL MARKETS",
-    para: "I built and optimised dental websites across Manchester, Birmingham, London, Leeds, Bristol, and Edinburgh — some of the most competitive dental markets in the English-speaking world. UK dental patients are demanding, UK Google rankings are hard-fought, and the practices I worked with saw measurable patient acquisition improvements. That track record is what I bring to every Canadian engagement.",
-  },
-  {
-    // icon: "/ceo/cutting-edge.json",
-    icon: "/ceo/why-icon-3.svg",
-    hoverIcon: "/ceo/why-icon-3-2.svg",
-    heading: "ARCHITECTURE THINKING IN EVERY BUILD",
-    para: "Six years as a Senior Software Architect means I think about systems, not just pages. Before I write code, I think about how the components interact, where the performance bottlenecks will be, how the system will behave under load, and what changes the practice will need to make in two years. That architectural thinking prevents technical debt and produces websites and software that work properly — and keep working.",
-  },
-];
+
 
 
 export const WHAT_I_DO_CEO = {
@@ -1062,87 +1024,130 @@ export const WHAT_I_DO_CEO = {
   ],
 };
 
-export const CTO_SERVICES = [
-  {
-    // icon: "/ceo/full-stack-architecture.json",
-    icon: "/ceo/what-do-icon-1.svg",
-    heading: "High-Performance Dental Websites",
-    para: "I build dental websites that are fast, mobile-first, and technically structured for SEO from the ground up — not templated, not slowed by bloated plugins, not built on platforms that create performance debt. Core Web Vitals, clean architecture, conversion-focused structure. The technical foundation that makes every other marketing effort more effective.",
-  },
-  {
-    // icon: "/ceo/strategic-custom-solutions.json",
-    icon: "/ceo/what-do-icon-2.svg",
-    heading: "Custom CRM & Practice Management Software",
-    para: "Off-the-shelf practice management tools cost more than they solve. I build custom CRM systems, booking platforms, and patient management tools tailored to how a dental team actually works — from front-desk workflows to treatment tracking to automated recall systems. Built to your exact process, owned entirely by your practice.",
-  },
-  {
-    // icon: "/ceo/cutting-edge.json",
-    icon: "/ceo/what-do-icon-3.svg",
-    heading: "AI-Optimised SEO Systems",
-    para: "SEO for dental practices is not generic blog writing and keyword stuffing. It is technical infrastructure — site architecture that search engines can crawl properly, local signals that put your practice in the map pack, schema markup that communicates exactly what you offer and where. I build the technical SEO layer that makes everything else rank.",
-  },
-  {
-    // icon: "/ceo/full-stack-architecture.json",
-    icon: "/ceo/what-do-icon-4.svg",
-    heading: "CMS Architecture & Setup",
-    para: "A poorly architected CMS becomes a bottleneck — slow to update, prone to breaking, and difficult to scale. I design and build CMS systems that give your team full control over content without touching code, keep the site fast, and support your long-term marketing operations. Built to grow with your practice, not fight it.",
-  },
-  {
-    // icon: "/ceo/strategic-custom-solutions.json",
-    icon: "/ceo/what-do-icon-5.svg",
-    heading: "API Development & Third-Party Integrations",
-    para: "Booking systems, payment processors, email marketing platforms, practice management software, analytics — I connect your digital systems so they share data automatically, eliminate manual work, and give you a single coherent view of your practice's digital performance. Custom API development and third-party integrations that actually work reliably.",
-  },
-  {
-    // icon: "/ceo/cutting-edge.json",
-    icon: "/ceo/what-do-icon-6.svg",
-    heading: "Web Performance & Technical Audits",
-    para: "A slow website loses patients before they book. I conduct in-depth technical audits that identify exactly what is limiting your site's performance — load speed, Core Web Vitals, crawlability, indexation, security, and conversion friction — and fix them in order of impact. The technical health of your website directly affects your rankings and your bookings.",
-  },
-];
 
-export const INDUSTRIES_I_SERVE_CEO = [
-  {
-    name: "Healthcare",
-    image: "/ceo/healthcare.svg",
-  },
-  {
-    name: "Dental",
-    image: "/ceo/dental.svg",
-  },
-  {
-    name: "Mental Health",
-    image: "/ceo/mental.svg",
-  },
-  {
-    name: "E-Commerce",
-    image: "/ceo/ecommerence.svg",
-  },
-  {
-    name: "SaaS & Technology",
-    image: "/ceo/saas.svg",
-  },
-  {
-    name: "Professional Services",
-    image: "/ceo/professional.svg",
-  },
-  {
-    name: "Fitness & Wellness",
-    image: "/ceo/fitness-2.svg",
-  },
-  {
-    name: "reinforces white label positioning",
-    image: "/ceo/reinforces.svg",
-  },
-  {
-    name: "Education",
-    image: "/ceo/education.svg",
-  },
-  {
-    name: "Real Estate",
-    image: "/ceo/realstate.svg",
-  },
-];
+export const CEO_EXPERTIES = {
+  skills: [
+    { src: "/ceo/google.svg", label: " Google Analytics Certified", subLabel: "From: Google" },
+    { src: "/ceo/meta.svg", label: "Meta Blueprint Certified", subLabel: "From: Meta" },
+    { src: "/ceo/hubspot.svg", label: "HubSpot Inbound Marketing", subLabel: "From: HubSpot Academy" },
+    { src: "/ceo/semrush.svg", label: "SEO Toolkit Certified", subLabel: "From: Semrush Academy" },
+    { src: "/ceo/bsc.svg", label: "B.Sc. Software Engineering", subLabel: "From: COMSATS University" },
+    { src: "/ceo/google.svg", label: " Google Analytics Certified", subLabel: "From: Google" },
+    { src: "/ceo/meta.svg", label: "Meta Blueprint Certified", subLabel: "From: Meta" },
+    { src: "/ceo/hubspot.svg", label: "HubSpot Inbound Marketing", subLabel: "From: HubSpot Academy" },
+    { src: "/ceo/semrush.svg", label: "SEO Toolkit Certified", subLabel: "From: Semrush Academy" },
+    { src: "/ceo/bsc.svg", label: "B.Sc. Software Engineering", subLabel: "From: COMSATS University" },
+    { src: "/ceo/google.svg", label: " Google Analytics Certified", subLabel: "From: Google" },
+    { src: "/ceo/meta.svg", label: "Meta Blueprint Certified", subLabel: "From: Meta" },
+    { src: "/ceo/hubspot.svg", label: "HubSpot Inbound Marketing", subLabel: "From: HubSpot Academy" },
+    { src: "/ceo/semrush.svg", label: "SEO Toolkit Certified", subLabel: "From: Semrush Academy" },
+    { src: "/ceo/bsc.svg", label: "B.Sc. Software Engineering", subLabel: "From: COMSATS University" },
+  ],
+};
+
+export const INDUSTRIES_I_SERVE_CEO = {
+  title: "Industries I Serve",
+  skills: CEO_EXPERTIES,
+  industries: [
+    {
+      name: "Healthcare",
+      image: "/ceo/healthcare.svg",
+    },
+    {
+      name: "Dental",
+      image: "/ceo/dental.svg",
+    },
+    {
+      name: "Mental Health",
+      image: "/ceo/mental.svg",
+    },
+    {
+      name: "E-Commerce",
+      image: "/ceo/ecommerence.svg",
+    },
+    {
+      name: "SaaS & Technology",
+      image: "/ceo/saas.svg",
+    },
+    {
+      name: "Professional Services",
+      image: "/ceo/professional.svg",
+    },
+    {
+      name: "Fitness & Wellness",
+      image: "/ceo/fitness-2.svg",
+    },
+    {
+      name: "reinforces white label positioning",
+      image: "/ceo/reinforces.svg",
+    },
+    {
+      name: "Education",
+      image: "/ceo/education.svg",
+    },
+    {
+      name: "Real Estate",
+      image: "/ceo/realstate.svg",
+    },
+  ],
+};
+
+export const CTO_EXPERTIES = {
+  skills: [
+    { src: "/ceo/meta.svg", label: "Back-End Database Development", subLabel: "From: Meta" },
+    { src: "/ceo/meta.svg", label: "Python Programming", subLabel: "From: Meta" },
+    { src: "/ceo/meta.svg", label: " Django Web Framework", subLabel: "From: Meta" },
+    { src: "/ceo/bsc.svg", label: "B.E. Avionics Engineering", subLabel: "From: PAF Karachi Institute of Economics and Technology" },
+    { src: "/ceo/google.svg", label: "Chief Technology Officer", subLabel: "From: HTSOL Inc. — Since Dec 2024" },
+  ],
+};
+
+export const INDUSTRIES_I_SERVE_CTO = {
+  title: "INDUSTRIES I BUILD FOR",
+  skills: CTO_EXPERTIES,
+  industries: [
+    {
+      name: "Dental Practices — primary focus, deepest expertise",
+      image: "/ceo/dental.svg",
+    },
+    {
+      name: "Orthodontic Clinics — same digital needs as dental, strong overla",
+      image: "/ceo/education.svg",
+    },
+    {
+      name: "Medical Clinics — healthcare-adjacent, patient data compliance applies",
+      image: "/ceo/professional.svg",
+    },
+    {
+      name: "Mental Health Practices — growing niche, booking and privacy requirements",
+      image: "/ceo/mental.svg",
+    },
+    {
+      name: "Physiotherapy Clinics — appointment-driven, local SEO-heavy",
+      image: "/ceo/fitness-2.svg",
+    },
+    {
+      name: "Dental Marketing Agencies — white label technical partner for dental agencies",
+      image: "/ceo/reinforces.svg",
+    },
+    {
+      name: "Healthcare Software Providers — system integration and custom development",
+      image: "/ceo/healthcare.svg",
+    },
+    {
+      name: "Private Clinics — broader healthcare, same technical requirements",
+      image: "/ceo/realstate.svg",
+    },
+    {
+      name: "E-Commerce Brands — MERN stack and Shopify development capability",
+      image: "/ceo/ecommerence.svg",
+    },
+    {
+      name: "SaaS Startups — full-stack application development",
+      image: "/ceo/saas.svg",
+    },
+  ],
+};
 export const HOW_WE_HELP_HOME = [
   {
     name: "Healthcare practices and clinics",
@@ -1185,69 +1190,90 @@ export const HOW_WE_HELP_HOME = [
     image: "/ceo/realstate.svg",
   },
 ];
-export const CLIENT_SAY_ABOUT_CEO = [
-  {
-    para: "Working with Muhammad Faseeh Ullah has helped us a lot. Their AI solutions helped us automate the online customer support, which helped us focus on the other core business responsibilities.",
-    image: "/ceo/abraham.webp",
-    name: "Abraham",
-    designation: "CEO | Tech Innovators",
-  },
-  {
-    para: "Really great experience working together. Faseeh did an excellent job improving and polishing our frontend, with a strong focus on UI quality, performance optimization, and responsive behavior. They worked confidently with React.js and Next.js, translated designs and wireframes into clean, interactive components, and integrated everything smoothly with our RESTful APIs. Load times and overall responsiveness improved noticeably, and everything works consistently across browsers. Solid communication and delivery — would definitely work with them again.",
-    image: "/ceo/user-icon.png",
-    name: "SAM",
-    designation: "CO-FOUNDER, MEIIDZ",
-  },
-  {
-    para: "Really great experience working together. Faseeh did an excellent job improving and polishing our frontend, with a strong focus on UI quality, performance optimization, and responsive behavior. Load times and overall responsiveness improved noticeably, and everything works consistently across browsers.",
-    image: "/ceo/user-icon.png",
-    name: "MUKHLIS",
-    designation: "TECHAGENCY BANGLA",
-  },
-  {
-    para: "I engaged Faseeh for marketing initiatives at Same Day Builders, a company specializing in handyman services. Faseeh and his team at HtSol demonstrated remarkable flexibility by accommodating my ever-changing schedule, which is par for the course as a business owner. Moreover, during our initial proposal meeting, Faseeh adeptly addressed all of my questions and objectives. This instilled a level of comfort and confidence in me, affirming that I had made the right decision in partnering with him for our marketing needs. Given the positive experience and results, I've decided to extend my collaboration with HtSol to Meiidz, another venture of mine that offers semi-national house cleaning services. The professionalism and effectiveness Faseeh has shown make me optimistic about the marketing prospect.",
-    image: "/ceo/user-icon.png",
-    name: "MARISS N.",
-    designation: "FOUNDER / CEO, SAME DAY BUILDERS, USA",
-  },
-  {
-    para: "Our Account Manager at HtSol was very punctual and very communicative when it came to the campaign. I appreciate his will to understand what the client wants and overall the company to deliver.",
-    image: "/ceo/user-icon.png",
-    name: "JAMES ASUNA",
-    designation: "PRINCIPAL DENTIST AND FOUNDER",
-  },
-  {
-    para: `I was immediately impressed by their prompt and clear communication. They took the time to understand the nuances of my project and asked insightful questions that demonstrated their expertise in the field. This level of professionalism instantly put me at ease and assured me that I was in capable hands.
+export const CLIENT_SAY_ABOUT_CEO = {
+  title: "What my clients say about me",
+  leftQuote: "/ceo/left-qoute.svg",
+  rightQuote: "/ceo/right-qoute.svg",
+  reviews: [
+    {
+      para: "Working with Muhammad Faseeh Ullah has helped us a lot. Their AI solutions helped us automate the online customer support, which helped us focus on the other core business responsibilities.",
+      image: "/ceo/abraham.webp",
+      name: "Abraham",
+      designation: "CEO | Tech Innovators",
+    },
+    {
+      para: "Really great experience working together. Faseeh did an excellent job improving and polishing our frontend, with a strong focus on UI quality, performance optimization, and responsive behavior. They worked confidently with React.js and Next.js, translated designs and wireframes into clean, interactive components, and integrated everything smoothly with our RESTful APIs. Load times and overall responsiveness improved noticeably, and everything works consistently across browsers. Solid communication and delivery — would definitely work with them again.",
+      image: "/ceo/user-icon.png",
+      name: "SAM",
+      designation: "CO-FOUNDER, MEIIDZ",
+    },
+    {
+      para: "Really great experience working together. Faseeh did an excellent job improving and polishing our frontend, with a strong focus on UI quality, performance optimization, and responsive behavior. Load times and overall responsiveness improved noticeably, and everything works consistently across browsers.",
+      image: "/ceo/user-icon.png",
+      name: "MUKHLIS",
+      designation: "TECHAGENCY BANGLA",
+    },
+    {
+      para: "I engaged Faseeh for marketing initiatives at Same Day Builders, a company specializing in handyman services. Faseeh and his team at HtSol demonstrated remarkable flexibility by accommodating my ever-changing schedule, which is par for the course as a business owner. Moreover, during our initial proposal meeting, Faseeh adeptly addressed all of my questions and objectives. This instilled a level of comfort and confidence in me, affirming that I had made the right decision in partnering with him for our marketing needs. Given the positive experience and results, I've decided to extend my collaboration with HtSol to Meiidz, another venture of mine that offers semi-national house cleaning services. The professionalism and effectiveness Faseeh has shown make me optimistic about the marketing prospect.",
+      image: "/ceo/user-icon.png",
+      name: "MARISS N.",
+      designation: "FOUNDER / CEO, SAME DAY BUILDERS, USA",
+    },
+    {
+      para: "Our Account Manager at HtSol was very punctual and very communicative when it came to the campaign. I appreciate his will to understand what the client wants and overall the company to deliver.",
+      image: "/ceo/user-icon.png",
+      name: "JAMES ASUNA",
+      designation: "PRINCIPAL DENTIST AND FOUNDER",
+    },
+    {
+      para: `I was immediately impressed by their prompt and clear communication. They took the time to understand the nuances of my project and asked insightful questions that demonstrated their expertise in the field. This level of professionalism instantly put me at ease and assured me that I was in capable hands.
 
     Great campaign and managed all aspects of it - really happy with the support and guidance to make it a collaborative approach as it just took a lot of the stress away from me on an area I don't know much about.
 
     Perfectly executed and really happy with the communication throughout.
     `,
-    image: "/ceo/user-icon.png",
-    name: "ASIF N.",
-    designation: "FOUNDER, MARKETING AGENCY, UK",
-  },
-  {
-    para: "Project title: IT Consultation. Had a very engaging and productive meeting session. Good advice. They listened to the problem, tried to see the problem from a broader perspective to give a proper solution / advice. Anyone can can talk to them for IT advice. Best of luck !",
-    image: "/ceo/user-icon.png",
-    name: "MUSA",
-    designation: "FOUNDER, TRAVEL AGENCY, BANGLADESH",
-  },
-  {
-    para: `It was great to work with HtSol. They very keen to do all the details and ask / noted unclear parts thoroughly. I would Love and already planning to do another Software for healthcare industry with them.
+      image: "/ceo/user-icon.png",
+      name: "ASIF N.",
+      designation: "FOUNDER, MARKETING AGENCY, UK",
+    },
+    {
+      para: "Project title: IT Consultation. Had a very engaging and productive meeting session. Good advice. They listened to the problem, tried to see the problem from a broader perspective to give a proper solution / advice. Anyone can can talk to them for IT advice. Best of luck !",
+      image: "/ceo/user-icon.png",
+      name: "MUSA",
+      designation: "FOUNDER, TRAVEL AGENCY, BANGLADESH",
+    },
+    {
+      para: `It was great to work with HtSol. They very keen to do all the details and ask / noted unclear parts thoroughly. I would Love and already planning to do another Software for healthcare industry with them.
     Helped me a lot with great product!
     `,
-    image: "/ceo/user-icon.png",
-    name: "JAEYOON",
-    designation: "SOUTH KOREA",
-  },
-  {
-    para: "Good and fast never disappointed with HtSol. They work quickly and take time to understand your business and business logic.",
-    image: "/ceo/user-icon.png",
-    name: "YANIS",
-    designation: "FOUNDER, YOGA STUDIO, FRANCE",
-  },
-];
+      image: "/ceo/user-icon.png",
+      name: "JAEYOON",
+      designation: "SOUTH KOREA",
+    },
+    {
+      para: "Good and fast never disappointed with HtSol. They work quickly and take time to understand your business and business logic.",
+      image: "/ceo/user-icon.png",
+      name: "YANIS",
+      designation: "FOUNDER, YOGA STUDIO, FRANCE",
+    },
+  ],
+};
+export const CEO_CTA = {
+  title: "WANT TO TALK GROWTH?",
+  para: "Whether you're a services business owner or an agency that needs reliable execution capacity, or a business that just wants a website that actually converts — I'm available for a direct conversation. No forms, no waiting. Book a call and let's figure out if we're a fit.",
+  image: "/ceo/talk-img.png",
+  buttons: [
+    {
+      text: "Schedule a Call Back",
+      link: "/contact-us",
+    },
+    {
+      text: "Book a discovery call",
+      link: "/contact-us",
+    },
+  ],
+};
+
 export const BOLG_CURATE_CEO = [
   {
     image: "/ceo/blog-one.webp",
@@ -2287,6 +2313,50 @@ export const STAFF_AUGMENTATION_WHY_CHOOSE = {
   ],
 };
 
+export const WHITE_LABEL_WHY_CHOOSE = {
+  title: "Why Agencies Choose HTSOL Inc. As Their White Label Partner",
+  highLight: "Quality You Can Stand Behind. Reliability You Can Count On.",
+  bgColor: true,
+  curveLine: true,
+  cards: [
+    {
+      id: "oneTeam",
+      heading: "We Understand Agency Workflows",
+      description:
+        "We have worked inside agency relationships before. We understand how agencies sell, how they manage clients, and how they protect their positioning. We are not a freelancer who needs hand-holding. We are a professional execution partner who integrates cleanly into your operation and makes you look good.",
+      image: "/white-why-1.png",
+    },
+    {
+      id: "fullStack",
+      heading: "Full-Stack Capability Under One Roof",
+      description:
+        "Most white label options are specialists - they do SEO, or they do web design, or they do ads. HTSOL delivers all of it. That means your agency can offer a complete digital service to your clients without assembling a different partner for each discipline. One relationship. Full capability.",
+      image: "/website/full-development.png",
+    },
+    {
+      id: "quality",
+      heading: "Quality That Protects Your Reputation",
+      description:
+        "We only produce work we would be comfortable putting our own name on, which means it is work you can comfortably put yours on. We do not cut corners to hit a price point. If a project requires more time to do it right, we communicate that early, not after we have delivered something substandard.",
+      image: "/website/performance-first.png",
+    },
+    {
+      id: "globalDelivery",
+      heading: "Canada-Based Strategy, Global Delivery",
+      description:
+        "HTSOL is based in Mississauga, Ontario. Our strategic oversight is Canadian - we understand Canadian clients, Canadian compliance, and the Canadian market. Our delivery team operates internationally, which gives us the capacity to scale with your agency's needs without inflating your costs.",
+      image: "/location-agency.png",
+    },
+    {
+      id: "noConflicts",
+      heading: "No Conflicts. Ever.",
+      description:
+        "We do not take on direct clients in the same markets as our agency partners without prior agreement. We do not approach your clients independently. We do not use the work we produce for you in our own portfolio without explicit permission. Your clients are your clients. That boundary is absolute.",
+      image: "/website/clear-transparent.png",
+    },
+  ],
+};
+
 export const STAFF_AUGMENTATION_WHY_CHOOSE_Accordion = {
   highLight: "FLEXIBLE MODELS. NO UNNECESSARY COMMITMENTS.",
   title: "How to Engage HTSOL Talent",
@@ -2839,4 +2909,205 @@ export const CEO_ABOUT_ME = {
   That&apos;s why I built HTSOL Inc. the way I did — with design, development, and marketing operating as one coordinated unit, not three separate vendors pulling in different directions. Today I work with healthcare practices, dental clinics, mental health providers, and marketing agencies who need more than execution. They need someone who understands the full picture: what to build, how to market it, and how to make it grow. That&apos;s what I do.`,
   image: "/ceo/about-me.webp",
   signImage: "/ceo/signature.webp",
+};
+
+export const CTO_SKILLS = {
+  skills: [
+    { src: "/ceo/laravel.svg", label: "MERN Stack" },
+    { src: "/ceo/wordpress.svg", label: "Next.js" },
+    { src: "/ceo/visual-studio.svg", label: "React" },
+    { src: "/ceo/vscode.svg", label: "Node.js" },
+    { src: "/ceo/visual-studio.svg", label: "MongoDB" },
+    { src: "/ceo/elementor.svg", label: "Python" },
+    { src: "/ceo/xd.svg", label: "Django" },
+    { src: "/ceo/shopify.svg", label: "Custom CRM Development" },
+    { src: "/ceo/adobe-ai.svg", label: "AI-Optimised SEO" },
+    { src: "/ceo/webflow.svg", label: "Dental Practice Software" },
+    { src: "/ceo/figma.svg", label: "System Architecture" },
+    { src: "/ceo/shopify.svg", label: "REST API Development" },
+    { src: "/ceo/photoshop.svg", label: "CMS Development" },
+    { src: "/ceo/laravel.svg", label: "Web Performance Optimisation" },
+  ]
+};
+
+export const CTO_ABOUT_ME = {
+  title: "About Me",
+  para: `I am a software architect, full-stack engineer, and AI systems builder with over six years of experience designing web applications, intelligent automation systems, and digital infrastructure. My engineering background — rooted in avionics and complex systems design — means I think about technology the way an engineer designs a control system: precision-first, failure-aware, built to perform under load. When I joined HTSOL Inc. as CTO, I brought that foundation to one focused purpose: building AI-driven digital systems that help dental practices and healthcare businesses grow online — high-performance websites, custom CRMs, intelligent SEO automation, and software that actually fits how a clinical team operates.
+  <br/><br/>
+  Dental practices don't struggle because of bad dentistry. They struggle because their digital presence doesn't reflect the quality of care they deliver. My job is to close that gap — with websites engineered to perform from day one, AI-powered SEO systems that automate the discovery of high-intent dental searches, intelligent booking and CRM software that reduces front-desk administrative burden, and robotic process automation that handles the repetitive operational tasks that eat into a clinical team's time. I've helped practices across the UK turn underperforming websites into consistent patient acquisition engines. That's the standard I bring to every build.`,
+  image: "/cto/about-cto.png",
+  signImage: "/ceo/signature.webp",
+};
+
+export const CTO_ACHIEVEMENTS = [
+  {
+    number: "6+",
+    name: "YEARS IN SOFTWARE DEVELOPMENT",
+    para: "From software engineering and system architecture to building production-grade web applications for businesses in the UK and Canada.",
+  },
+  {
+    number: "UK ",
+    name: "DENTAL TRACK RECORD",
+    para: "Helped dental practices across Manchester, Birmingham, London, Leeds, Bristol, and Edinburgh turn underperforming websites into consistent patient acquisition systems.",
+  },
+  {
+    number: "100+",
+    name: "TECHNOLOGIES INTEGRATED",
+    para: "From custom MERN stack builds and Django back-ends to AI-optimised SEO systems, booking integrations, and practice management software.",
+  },
+];
+
+export const CTO_SERVICES = {
+  title: "The Technical Systems Behind HTSOL's Results",
+  para: "I don't do surface-level web work. Every system I build is engineered for performance, infused with AI where it creates real value, and built to support genuine long-term growth.",
+  cards: [
+    {
+      // icon: "/ceo/full-stack-architecture.json",
+      icon: "/ceo/what-do-icon-1.svg",
+      heading: "High-Performance Dental Websites",
+      para: "I build dental websites that are fast, mobile-first, and technically structured for SEO from the ground up — not templated, not slowed by bloated plugins, not built on platforms that create performance debt. Core Web Vitals, clean architecture, conversion-focused structure. The technical foundation that makes every other marketing effort more effective.",
+    },
+    {
+      // icon: "/ceo/strategic-custom-solutions.json",
+      icon: "/ceo/what-do-icon-2.svg",
+      heading: "Custom CRM & Practice Management Software",
+      para: "Off-the-shelf practice management tools cost more than they solve. I build custom CRM systems, booking platforms, and patient management tools tailored to how a dental team actually works — from front-desk workflows to treatment tracking to automated recall systems. Built to your exact process, owned entirely by your practice.",
+    },
+    {
+      // icon: "/ceo/cutting-edge.json",
+      icon: "/ceo/what-do-icon-3.svg",
+      heading: "AI-Optimised SEO Systems",
+      para: "SEO for dental practices is not generic blog writing and keyword stuffing. It is technical infrastructure — site architecture that search engines can crawl properly, local signals that put your practice in the map pack, schema markup that communicates exactly what you offer and where. I build the technical SEO layer that makes everything else rank.",
+    },
+    {
+      // icon: "/ceo/full-stack-architecture.json",
+      icon: "/ceo/what-do-icon-4.svg",
+      heading: "CMS Architecture & Setup",
+      para: "A poorly architected CMS becomes a bottleneck — slow to update, prone to breaking, and difficult to scale. I design and build CMS systems that give your team full control over content without touching code, keep the site fast, and support your long-term marketing operations. Built to grow with your practice, not fight it.",
+    },
+    {
+      // icon: "/ceo/strategic-custom-solutions.json",
+      icon: "/ceo/what-do-icon-5.svg",
+      heading: "API Development & Third-Party Integrations",
+      para: "Booking systems, payment processors, email marketing platforms, practice management software, analytics — I connect your digital systems so they share data automatically, eliminate manual work, and give you a single coherent view of your practice's digital performance. Custom API development and third-party integrations that actually work reliably.",
+    },
+    {
+      // icon: "/ceo/cutting-edge.json",
+      icon: "/ceo/what-do-icon-6.svg",
+      heading: "Web Performance & Technical Audits",
+      para: "A slow website loses patients before they book. I conduct in-depth technical audits that identify exactly what is limiting your site's performance — load speed, Core Web Vitals, crawlability, indexation, security, and conversion friction — and fix them in order of impact. The technical health of your website directly affects your rankings and your bookings.",
+    },
+  ],
+};
+
+export const WHY_HIRE_ME_CTO = {
+  title: "WHY WORK WITH ME",
+  para: `Most web developers build websites. I build dental digital systems — the technical infrastructure that makes a practice visible, bookable, and operationally efficient. There is a difference, and it shows in every project I deliver.`,
+  btnText: "Let's Discuss Your Technical Requirements",
+  btnLink: "/contact-us",
+  cards: [
+    {
+      // icon: "/ceo/full-stack-architecture.json",
+      icon: "/ceo/why-icon-1-2.svg",
+      hoverIcon: "/ceo/why-icon-1.svg",
+      heading: "BUILT FOR DENTAL — NOT ADAPTED FROM GENERIC",
+      para: " I have spent years building specifically for dental practices. I understand PIPEDA and patient data compliance. I know how booking systems need to work for a clinical front desk. I understand the local SEO signals that matter for dental searches — 'dentist near me', 'Invisalign [city]', 'emergency dental'. When I build for a dental practice, I am not starting from a generic template and adapting it. I am building from dental-specific knowledge.",
+    },
+    {
+      // icon: "/ceo/strategic-custom-solutions.json",
+      icon: "/ceo/why-icon-2.svg",
+      hoverIcon: "/ceo/why-icon-2-2.svg",
+      heading: "PROVEN IN COMPETITIVE DENTAL MARKETS",
+      para: "I built and optimised dental websites across Manchester, Birmingham, London, Leeds, Bristol, and Edinburgh — some of the most competitive dental markets in the English-speaking world. UK dental patients are demanding, UK Google rankings are hard-fought, and the practices I worked with saw measurable patient acquisition improvements. That track record is what I bring to every Canadian engagement.",
+    },
+    {
+      // icon: "/ceo/cutting-edge.json",
+      icon: "/ceo/why-icon-3.svg",
+      hoverIcon: "/ceo/why-icon-3-2.svg",
+      heading: "ARCHITECTURE THINKING IN EVERY BUILD",
+      para: "Six years as a Senior Software Architect means I think about systems, not just pages. Before I write code, I think about how the components interact, where the performance bottlenecks will be, how the system will behave under load, and what changes the practice will need to make in two years. That architectural thinking prevents technical debt and produces websites and software that work properly — and keep working.",
+    },
+  ],
+};
+
+export const CLIENT_SAY_ABOUT_CTO = {
+  title: "What my clients say about me",
+  leftQuote: "/ceo/left-qoute.svg",
+  rightQuote: "/ceo/right-qoute.svg",
+  reviews: [
+    {
+      para: "Working with Muhammad Faseeh Ullah has helped us a lot. Their AI solutions helped us automate the online customer support, which helped us focus on the other core business responsibilities.",
+      image: "/ceo/abraham.webp",
+      name: "Abraham",
+      designation: "CEO | Tech Innovators",
+    },
+    {
+      para: "Really great experience working together. Faseeh did an excellent job improving and polishing our frontend, with a strong focus on UI quality, performance optimization, and responsive behavior. They worked confidently with React.js and Next.js, translated designs and wireframes into clean, interactive components, and integrated everything smoothly with our RESTful APIs. Load times and overall responsiveness improved noticeably, and everything works consistently across browsers. Solid communication and delivery — would definitely work with them again.",
+      image: "/ceo/user-icon.png",
+      name: "SAM",
+      designation: "CO-FOUNDER, MEIIDZ",
+    },
+    {
+      para: "Really great experience working together. Faseeh did an excellent job improving and polishing our frontend, with a strong focus on UI quality, performance optimization, and responsive behavior. Load times and overall responsiveness improved noticeably, and everything works consistently across browsers.",
+      image: "/ceo/user-icon.png",
+      name: "MUKHLIS",
+      designation: "TECHAGENCY BANGLA",
+    },
+    {
+      para: "I engaged Faseeh for marketing initiatives at Same Day Builders, a company specializing in handyman services. Faseeh and his team at HtSol demonstrated remarkable flexibility by accommodating my ever-changing schedule, which is par for the course as a business owner. Moreover, during our initial proposal meeting, Faseeh adeptly addressed all of my questions and objectives. This instilled a level of comfort and confidence in me, affirming that I had made the right decision in partnering with him for our marketing needs. Given the positive experience and results, I've decided to extend my collaboration with HtSol to Meiidz, another venture of mine that offers semi-national house cleaning services. The professionalism and effectiveness Faseeh has shown make me optimistic about the marketing prospect.",
+      image: "/ceo/user-icon.png",
+      name: "MARISS N.",
+      designation: "FOUNDER / CEO, SAME DAY BUILDERS, USA",
+    },
+    {
+      para: "Our Account Manager at HtSol was very punctual and very communicative when it came to the campaign. I appreciate his will to understand what the client wants and overall the company to deliver.",
+      image: "/ceo/user-icon.png",
+      name: "JAMES ASUNA",
+      designation: "PRINCIPAL DENTIST AND FOUNDER",
+    },
+    {
+      para: `I was immediately impressed by their prompt and clear communication. They took the time to understand the nuances of my project and asked insightful questions that demonstrated their expertise in the field. This level of professionalism instantly put me at ease and assured me that I was in capable hands.
+
+    Great campaign and managed all aspects of it - really happy with the support and guidance to make it a collaborative approach as it just took a lot of the stress away from me on an area I don't know much about.
+
+    Perfectly executed and really happy with the communication throughout.
+    `,
+      image: "/ceo/user-icon.png",
+      name: "ASIF N.",
+      designation: "FOUNDER, MARKETING AGENCY, UK",
+    },
+    {
+      para: "Project title: IT Consultation. Had a very engaging and productive meeting session. Good advice. They listened to the problem, tried to see the problem from a broader perspective to give a proper solution / advice. Anyone can can talk to them for IT advice. Best of luck !",
+      image: "/ceo/user-icon.png",
+      name: "MUSA",
+      designation: "FOUNDER, TRAVEL AGENCY, BANGLADESH",
+    },
+    {
+      para: `It was great to work with HtSol. They very keen to do all the details and ask / noted unclear parts thoroughly. I would Love and already planning to do another Software for healthcare industry with them.
+    Helped me a lot with great product!
+    `,
+      image: "/ceo/user-icon.png",
+      name: "JAEYOON",
+      designation: "SOUTH KOREA",
+    },
+    {
+      para: "Good and fast never disappointed with HtSol. They work quickly and take time to understand your business and business logic.",
+      image: "/ceo/user-icon.png",
+      name: "YANIS",
+      designation: "FOUNDER, YOGA STUDIO, FRANCE",
+    },
+  ],
+};
+
+export const CTO_CTA = {
+  title: "IS YOUR DENTAL WEBSITE UNDERPERFORMING TECHNICALLY?",
+  para: "If your website is slow, not ranking, difficult to update, or losing patients to competitors with better-performing sites — the problem is usually technical, not marketing. I offer a direct technical consultation where I review what you have, identify what is limiting performance, and tell you exactly what needs to be fixed and why. No pitch. No generic recommendation. Just a technical assessment from someone who builds this specifically for dental practices.",
+  image: "/call-back-from-us.webp",
+  buttons: [
+    {
+      text: "Book a Technical Consultation",
+      link: "/contact-us",
+    },
+  ],
+  className: "h-[300px] lg:h-[480px]! xl:h-[540px]!",
 };
