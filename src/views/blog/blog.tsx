@@ -29,12 +29,13 @@ function Blog({ posts }: BlogProps) {
             </div>
             <Link
               href={`/blog/${featured.slug}`}
-              className="absolute inset-0 mt-60">
+              className="absolute inset-0 mt-60"
+            >
               <div className="w-full md:w-[70%] h-full backdrop-blur-md bg-black/60 p-3 flex flex-col justify-center border-l border-[#00A1A5]/20">
                 <div className="flex items-center justify-between gap-3 mb-4">
-                  <span className="text-white text-xs uppercase tracking-wider font-semibold bg-linear-to-r from-[#00A1A5]/50 to-[#00A1A5] px-4 py-1.5 rounded-full ">
+                  {/* <span className="text-white text-xs uppercase tracking-wider font-semibold bg-linear-to-r from-[#00A1A5]/50 to-[#00A1A5] px-4 py-1.5 rounded-full ">
                     Category
-                  </span>
+                  </span> */}
 
                   <div className="flex flex-wrap gap-2">
                     {(featured.banner?.tags ?? [])
@@ -42,7 +43,8 @@ function Blog({ posts }: BlogProps) {
                       .map((tag, index) => (
                         <span
                           key={index}
-                          className="text-xs text-gray-300 bg-white/10 px-3 py-1.5 rounded-full border border-gray-500/30">
+                          className="text-xs text-gray-300 bg-white/10 px-3 py-1.5 rounded-full border border-gray-500/30"
+                        >
                           #{tag}
                         </span>
                       ))}
@@ -102,7 +104,8 @@ function Blog({ posts }: BlogProps) {
                       className="w-6 h-6 text-white"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke="currentColor">
+                      stroke="currentColor"
+                    >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -121,7 +124,8 @@ function Blog({ posts }: BlogProps) {
             <Link
               key={post.id || post.slug || post.title || ""}
               href={`/blog/${post.slug}`}
-              className="group rounded-2xl overflow-hidden transition-all">
+              className="group rounded-2xl overflow-hidden transition-all"
+            >
               <div className="relative h-[200px] md:h-[250px] overflow-hidden">
                 <img
                   src={
@@ -142,7 +146,8 @@ function Blog({ posts }: BlogProps) {
                     {(post.banner?.tags ?? []).slice(0, 3).map((tag, index) => (
                       <span
                         key={index}
-                        className="text-xs text-gray-400 bg-white/5 px-2 py-1 rounded-full border border-gray-700">
+                        className="text-xs text-gray-400 bg-white/5 px-2 py-1 rounded-full border border-gray-700"
+                      >
                         #{tag}
                       </span>
                     ))}
@@ -200,7 +205,8 @@ function Blog({ posts }: BlogProps) {
                       className="w-5 h-5 text-white"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke="currentColor">
+                      stroke="currentColor"
+                    >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
