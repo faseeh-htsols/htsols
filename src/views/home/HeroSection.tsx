@@ -11,6 +11,7 @@ import Button from "../../components/ui/Button";
 import GlowButton from "../../components/ui/GlowButton";
 import CircularText from "../../components/ui/CircularText";
 import Container from "@/components/ui/container";
+import Image from "next/image";
 
 interface Slide {
   headline: string[];
@@ -70,8 +71,17 @@ export const HeroSection: React.FC = () => {
 
   return (
     <section
-      className="relative lg:min-h-screen overflow-hidden bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/home-header.webp')" }}>
+      className="relative lg:min-h-screen overflow-hidden"
+      // style={{ backgroundImage: "url('/home-header.webp')" }}
+    >
+      <Image
+        src="/home-header.webp"
+        alt="home header"
+        fill
+        sizes="100vw"
+        preload
+        className="object-cover object-center -z-10"
+      />
       {/* Background with 3D terrain effect */}
       {/* <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#111] to-[#0a1a1a]" />
@@ -163,11 +173,13 @@ export const HeroSection: React.FC = () => {
         onSlideChange={(swiper) => {
           // realIndex = index in slides[] when loop is enabled
           setSelectedIndex(swiper.realIndex);
-        }}>
+        }}
+      >
         {slides.map((slide, index) => (
           <SwiperSlide
             key={index}
-            className=" relative lg:min-h-screen pt-36 lg:pt-30 lg:pb-10 xl:pb-0 xl:pt-10 flex! items-center">
+            className=" relative lg:min-h-screen pt-36 lg:pt-30 lg:pb-10 xl:pb-0 xl:pt-10 flex! items-center"
+          >
             {/* <div className="w-full max-w-[1600px] mx-auto px-6 md:px-12 pt-32 pb-20"> */}
             <Container>
               <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -187,7 +199,8 @@ export const HeroSection: React.FC = () => {
                           style={{
                             background:
                               "linear-gradient(90deg, #075B65 0%, #00838A 37.02%, #328A99 81.25%)",
-                          }}></span>
+                          }}
+                        ></span>
                         <span className="relative text-white">
                           {` ${slide.outlineWord}`}
                         </span>
@@ -207,7 +220,8 @@ export const HeroSection: React.FC = () => {
                           style={{
                             background:
                               "linear-gradient(90deg, #075B65 0%, #00838A 37.02%, #328A99 81.25%)",
-                          }}></span>
+                          }}
+                        ></span>
                         <span className="relative text-white">
                           {` ${slide.outlineWord}`}
                         </span>
@@ -233,7 +247,8 @@ export const HeroSection: React.FC = () => {
                   )}
                   <p
                     className="text-white/70 text-lg md:text-lg leading-relaxed lg:max-w-md  ml-auto"
-                    dangerouslySetInnerHTML={{ __html: slide.description }}></p>
+                    dangerouslySetInnerHTML={{ __html: slide.description }}
+                  ></p>
                 </div>
               </div>
               {/* <div className="lg:absolute lg:bottom-[10%] flex flex-wrap gap-4 pt-4">
@@ -258,8 +273,9 @@ export const HeroSection: React.FC = () => {
             <button
               key={index}
               onClick={() => handleDotClick(index)}
-              className={`lg:w-2 w-8 h-2 lg:h-8 rounded-full transition-all duration-300 ${index === selectedIndex ? "w-14 lg:w-2 lg:h-14" : ""
-                }`}
+              className={`lg:w-2 w-8 h-2 lg:h-8 rounded-full transition-all duration-300 ${
+                index === selectedIndex ? "w-14 lg:w-2 lg:h-14" : ""
+              }`}
               style={{
                 background: isActive
                   ? "linear-gradient(90deg, #075B65 0%, #00838A 37.02%, #328A99 81.25%)"
