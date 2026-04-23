@@ -79,7 +79,7 @@ export const HeroSection: React.FC = () => {
         alt="home header"
         fill
         sizes="100vw"
-        preload
+        fetchPriority="high"
         className="object-cover object-center -z-10"
       />
       {/* Background with 3D terrain effect */}

@@ -49,7 +49,8 @@ const BannerReuse = ({
   return (
     <div
       ref={bannerRef}
-      className="relative overflow-hidden pt-[120px] sm:pt-[140px] md:pt-[160px] lg:pt-[180px]">
+      className="relative overflow-hidden pt-[120px] sm:pt-[140px] md:pt-[160px] lg:pt-[180px]"
+    >
       {/* Background */}
       <div className="absolute inset-0 w-full h-full  bg-cover bg-center ">
         <img src={image} className="w-full h-full object-cover" alt={title} />
@@ -60,14 +61,15 @@ const BannerReuse = ({
           background:
             " linear-gradient(142.13deg, rgba(24, 19, 19, 0.493) 1.8%, rgba(24, 19, 19, 0.561) 99.75%)",
           backdropFilter: "blur(10.100000381469727px",
-        }}>
+        }}
+      >
         <Container>
           <div className="text-white " ref={contentRef}>
             <div className="">
               <div>
-                <span className="text-white text-lg uppercase tracking-wider font-semibold bg-linear-to-r from-[#00A1A5]/50 to-[#00A1A5] px-4 py-1.5 rounded-full">
+                {/* <span className="text-white text-lg uppercase tracking-wider font-semibold bg-linear-to-r from-[#00A1A5]/50 to-[#00A1A5] px-4 py-1.5 rounded-full">
                   Category
-                </span>
+                </span> */}
                 <div className="">
                   <h1
                     className="uppercase mt-5 font-primary text-white  tracking-[2px] font-medium mb-[20px] text-[30px] leading-tight"
@@ -76,7 +78,8 @@ const BannerReuse = ({
                   {description && (
                     <p
                       className="  text-[19px]  mb-[20px] text-white"
-                      dangerouslySetInnerHTML={{ __html: description }}></p>
+                      dangerouslySetInnerHTML={{ __html: description }}
+                    ></p>
                   )}
                 </div>
                 <div className="flex lg:flex-row flex-col gap-3 justify-between">
@@ -117,7 +120,8 @@ const BannerReuse = ({
                       {tags!.map((bt) => (
                         <p
                           key={bt.id}
-                          className="text-white inline-block p-2 border border-white rounded-full ">
+                          className="text-white inline-block p-2 border border-white rounded-full "
+                        >
                           #{bt.tag.name}
                         </p>
                       ))}

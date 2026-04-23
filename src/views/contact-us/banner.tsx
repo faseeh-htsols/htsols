@@ -35,9 +35,7 @@ const validationSchema = Yup.object({
     .matches(/^[0-9]{10,15}$/, "Contact number must be 10–15 digits")
     .required("Contact number is required"),
 
-  service: Yup.string()
-    .trim()
-    .required("Please select a service"),
+  service: Yup.string().trim().required("Please select a service"),
 
   enquiry: Yup.string()
     .trim()
@@ -102,7 +100,7 @@ const Banner = () => {
   // };
   const sendEmail = async (
     values: FormValues,
-    formikHelpers: FormikHelpers<FormValues>
+    formikHelpers: FormikHelpers<FormValues>,
   ) => {
     setIsSending(true);
 
@@ -123,7 +121,7 @@ const Banner = () => {
             page: values.page,
             enquiry: values.enquiry,
           }),
-        }
+        },
       );
 
       const data = await response.json();
@@ -146,7 +144,7 @@ const Banner = () => {
       setPopupMsg(
         error instanceof Error
           ? error.message
-          : "Failed to send message, please try again."
+          : "Failed to send message, please try again.",
       );
       setPopupOpen(true);
     } finally {
@@ -216,7 +214,8 @@ const Banner = () => {
               city: "",
             }}
             validationSchema={validationSchema}
-            onSubmit={sendEmail}>
+            onSubmit={sendEmail}
+          >
             {({ isSubmitting }) => (
               <Form ref={formRef}>
                 <Field type="hidden" name="page" />
@@ -276,7 +275,8 @@ const Banner = () => {
                       </p>
                       <a
                         href="#contact-form"
-                        className="inline-flex items-center bg-white gap-2 px-6 py-3 text-sm text-primary font-medium uppercase rounded-full tracking-wider transition-all duration-300 border border-white hover:bg-transparent hover:text-white">
+                        className="inline-flex items-center bg-white gap-2 px-6 py-3 text-sm text-primary font-medium uppercase rounded-full tracking-wider transition-all duration-300 border border-white hover:bg-transparent hover:text-white"
+                      >
                         Request a call back
                         <Image
                           src={"/right-arrow-btn.webp"}
@@ -284,6 +284,7 @@ const Banner = () => {
                           width={18}
                           height={18}
                           className="w-[18px] h-[18px]"
+                          fetchPriority="high"
                         />
                       </a>
                     </div>
@@ -370,28 +371,33 @@ const Banner = () => {
                         <Field
                           as="select"
                           name="service"
-                          className="h-full w-full outline-0 bg-transparent border-0 rounded-md px-5 pr-12 text-white appearance-none">
+                          className="h-full w-full outline-0 bg-transparent border-0 rounded-md px-5 pr-12 text-white appearance-none"
+                        >
                           <option value="" className="bg-black text-white">
                             Service are you interested in
                           </option>
                           <option
                             value="web dev"
-                            className="bg-black text-white">
+                            className="bg-black text-white"
+                          >
                             web dev
                           </option>
                           <option
                             value="cgi / vfx /3d animations"
-                            className="bg-black text-white">
+                            className="bg-black text-white"
+                          >
                             cgi / vfx /3d animations
                           </option>
                           <option
                             value="staff augmentation"
-                            className="bg-black text-white">
+                            className="bg-black text-white"
+                          >
                             staff augmentation
                           </option>
                           <option
                             value="Complete digital transformation"
-                            className="bg-black text-white">
+                            className="bg-black text-white"
+                          >
                             Complete digital transformation
                           </option>
                         </Field>
@@ -402,7 +408,8 @@ const Banner = () => {
                           height="18"
                           viewBox="0 0 24 24"
                           fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
                           <path
                             d="M6 9l6 6 6-6"
                             stroke="currentColor"
@@ -439,7 +446,8 @@ const Banner = () => {
                       <button
                         type="submit"
                         disabled={isSubmitting || isSending}
-                        className="inline-flex cursor-pointer items-center bg-white gap-2 px-6 py-3 text-sm text-primary font-semibold uppercase rounded-full tracking-wider transition-all duration-300 border border-white hover:bg-transparent hover:text-white disabled:opacity-60 disabled:cursor-not-allowed">
+                        className="inline-flex cursor-pointer items-center bg-white gap-2 px-6 py-3 text-sm text-primary font-semibold uppercase rounded-full tracking-wider transition-all duration-300 border border-white hover:bg-transparent hover:text-white disabled:opacity-60 disabled:cursor-not-allowed"
+                      >
                         {isSending ? "Sending..." : "Submit form"}
                         <Image
                           src={"/right-arrow-btn.webp"}
@@ -447,6 +455,7 @@ const Banner = () => {
                           width={18}
                           height={18}
                           className="w-[18px] h-[18px]"
+                          fetchPriority="high"
                         />
                       </button>
                     </div>
@@ -470,8 +479,10 @@ const Banner = () => {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p
-                  className={`text-lg font-semibold ${popupType === "success" ? "text-green-700" : "text-red-700"
-                    }`}>
+                  className={`text-lg font-semibold ${
+                    popupType === "success" ? "text-green-700" : "text-red-700"
+                  }`}
+                >
                   {popupType === "success"
                     ? "Message sent"
                     : "Something went wrong"}
@@ -483,7 +494,8 @@ const Banner = () => {
                 type="button"
                 aria-label="Close popup"
                 onClick={closePopup}
-                className="w-9 h-9 flex items-center justify-center rounded-md border border-gray-200 hover:bg-gray-50 text-black">
+                className="w-9 h-9 flex items-center justify-center rounded-md border border-gray-200 hover:bg-gray-50 text-black"
+              >
                 <span className="text-xl leading-none">&times;</span>
               </button>
             </div>
@@ -492,7 +504,8 @@ const Banner = () => {
               <button
                 type="button"
                 onClick={closePopup}
-                className="px-5 py-2 rounded-full bg-secondary font-medium text-black">
+                className="px-5 py-2 rounded-full bg-secondary font-medium text-black"
+              >
                 OK
               </button>
             </div>

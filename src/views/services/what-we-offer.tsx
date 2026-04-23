@@ -65,7 +65,9 @@ const WhatWeOffer = () => {
                           loop
                         /> */}
                       </div>
-                      <h3 className="transition-opacity text-[20px] font-primary">{item.title}</h3>
+                      <h3 className="transition-opacity text-[20px] font-primary">
+                        {item.title}
+                      </h3>
                     </div>
                   </AccordionTrigger>
 
@@ -83,46 +85,64 @@ const WhatWeOffer = () => {
 
                       <div className="flex flex-col justify-start items-start gap-4">
                         {item.subHeading && (
-                          <h3 className="text-[#00A1A5] text-[18px] font-poppins">{item.subHeading}</h3>
+                          <h3 className="text-[#00A1A5] text-[18px] font-poppins">
+                            {item.subHeading}
+                          </h3>
                         )}
                         <p dangerouslySetInnerHTML={{ __html: item.para }} />
                         {item.subHeading2 && (
-                          <h3 className="text-[#00A1A5] text-[18px] font-poppins">{item.subHeading2}</h3>
+                          <h3 className="text-[#00A1A5] text-[18px] font-poppins">
+                            {item.subHeading2}
+                          </h3>
                         )}
                         {item.lists && (
                           <ul className="list-disc pl-5 space-y-4 marker:text-[#00A1A5]">
                             {item.lists.map((listItem, index) => (
                               <li key={index}>
                                 {listItem.title && (
-                                  <h3 className="text-[#00A1A5] text-[18px] font-poppins">{listItem.title}</h3>
+                                  <h3 className="text-[#00A1A5] text-[18px] font-poppins">
+                                    {listItem.title}
+                                  </h3>
                                 )}
-                                <p dangerouslySetInnerHTML={{ __html: listItem.para }} />
+                                <p
+                                  dangerouslySetInnerHTML={{
+                                    __html: listItem.para,
+                                  }}
+                                />
                               </li>
                             ))}
                           </ul>
                         )}
                         {item.botPara && (
-                          <p dangerouslySetInnerHTML={{ __html: item.botPara }} />
+                          <p
+                            dangerouslySetInnerHTML={{ __html: item.botPara }}
+                          />
                         )}
                         {item.lists2 && (
                           <ul className="list-disc pl-5 space-y-4 marker:text-[#00A1A5]">
                             {item.lists2.map((listItem, index) => (
                               <li key={index}>
                                 {listItem.title && (
-                                  <h3 className="text-[#00A1A5] text-[18px] font-poppins">{listItem.title}</h3>
+                                  <h3 className="text-[#00A1A5] text-[18px] font-poppins">
+                                    {listItem.title}
+                                  </h3>
                                 )}
-                                <p dangerouslySetInnerHTML={{ __html: listItem.para }} />
+                                <p
+                                  dangerouslySetInnerHTML={{
+                                    __html: listItem.para,
+                                  }}
+                                />
                               </li>
                             ))}
                           </ul>
                         )}
                         <div className="flex justify-center items-center gap-8">
                           <Link
-                            href="/services/website-development"
+                            href={item.btnUrl}
                             className="inline-flex items-center gap-2 group"
                           >
                             <span className="text-transparent bg-clip-text bg-linear-to-r from-[#075B65] via-[#00838A] to-[#328A99] font-semibold uppercase text-[18px]">
-                              View Portfolio
+                              {item.btnText}
                             </span>
                             <Image
                               src="/right-arrow.svg"
@@ -133,7 +153,7 @@ const WhatWeOffer = () => {
                             />
                           </Link>
                           <Link
-                            href="/services/website-development"
+                            href="/contact-us"
                             className="inline-flex items-center gap-2 group"
                           >
                             <span className="text-white font-semibold uppercase text-[18px] underline">
