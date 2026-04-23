@@ -19,6 +19,18 @@ interface AccordionItemType {
   btnUrl: string;
 }
 
+interface AccordionItemDigitalType {
+  title: string;
+  icon: string;
+  images?: { src: string; alt: string }[];
+  subHeading?: string;
+  para: string;
+  subHeading2?: string;
+  botPara?: string;
+  lists?: ListItem[];
+  lists2?: ListItem[];
+}
+
 export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
   {
     title: "CGI Services",
@@ -358,7 +370,7 @@ export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
   // },
 ];
 
-export const DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION: AccordionItemType[] =
+export const DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION: AccordionItemDigitalType[] =
   [
     {
       title: "Search Engine Optimization (SEO)",
