@@ -3214,3 +3214,326 @@ export const CTO_CTA = {
   ],
   className: "h-[300px] lg:h-[480px]! xl:h-[540px]!",
 };
+
+export const OUR_PORTFOLIO_TABS = [
+  "Digital Transformation",
+  "Website Design",
+  "Website Development",
+  "CGI Ads",
+  "Digital Marketing",
+  "Search Engine Optimization",
+  "Custom Software Dev",
+] as const;
+
+export interface OurPortfolioDesignCard {
+  image: string;
+  category: string;
+  label: string;
+}
+
+export interface OurPortfolioCgiVideo {
+  thumbnail: string;
+  title: string;
+  subtitle: string;
+  url: string;
+}
+
+export interface OurPortfolioCaseStudy {
+  logo: string;
+  company: string;
+  heading: string;
+  description: string;
+  services: string[];
+  images: string[];
+  accent: string;
+  imageLayout?: "default" | "monitor" | "seo" | "watch";
+}
+
+export const OUR_PORTFOLIO_DESIGN_CARDS: OurPortfolioDesignCard[] = [
+  { image: "/web-design-1.png", category: "Website Design", label: "Dental" },
+  { image: "/web-design-2.png", category: "Website Design", label: "THERAPIST" },
+  { image: "/web-design-3.png", category: "Website Design", label: "DENTIST" },
+  { image: "/web-design-6.png", category: "Website Design", label: "DENTIST" },
+  { image: "/web-design-4.png", category: "Website Design", label: "LOGISTICS" },
+  { image: "/web-design-5.png", category: "Website Design", label: "SMART HOME" },
+  { image: "/w-design-7.png", category: "Website Design", label: "DENTAL" },
+  { image: "/w-design-8.png", category: "Website Design", label: "DIGITAL MARKETING" },
+  { image: "/web-design-9.png", category: "Website Design", label: "DENTAL" },
+  { image: "/w-design-10.png", category: "Website Design", label: "DENTAL" },
+];
+
+export const OUR_PORTFOLIO_DEV_CARDS: OurPortfolioDesignCard[] = [
+  { image: "/web-dev-1.png", category: "Website Development", label: "SMILEFAST" },
+  { image: "/services/web-one.webp", category: "Website Development", label: "DENTAL" },
+  { image: "/services/web-two.webp", category: "Website Development", label: "NUYU DENTAL" },
+  { image: "/services/web-one.webp", category: "Website Development", label: "DENTIST" },
+  { image: "/web-dev-2.png", category: "Website Development", label: "BRITISH ACADEMY" },
+  {
+    image: "/services/web-one.webp",
+    category: "Website Development",
+    label: "DENTAL MARKETING AGENCY",
+  },
+  { image: "/services/web-two.webp", category: "Website Development", label: "DENTAL" },
+  {
+    image: "/services/web-one.webp",
+    category: "Website Development",
+    label: "DENTAL SOLUTIONS",
+  },
+  {
+    image: "/services/web-two.webp",
+    category: "Website Development",
+    label: "SPORTS DENTAL THERAPIST",
+  },
+  { image: "/services/web-one.webp", category: "Website Development", label: "DENTIST" },
+];
+
+export const OUR_PORTFOLIO_CGI_VIDEOS: OurPortfolioCgiVideo[] = [
+  {
+    thumbnail: "https://img.youtube.com/vi/t105qp6q2fY/maxresdefault.jpg",
+    title: "CGI gives you Wings",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/t105qp6q2fY?si=n5JlWqpeaAD_o__J",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/nn4cC3qRik0/maxresdefault.jpg",
+    title: "Kiwai X HtSol",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/nn4cC3qRik0?si=QkdFbM2hX1TCF06T",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/nvr9g1-7S8s/maxresdefault.jpg",
+    title: "PizzahutCGO X HTSol",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/nvr9g1-7S8s?si=L1wAjm231YJVl3Px",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/ifVhc0U0ZFg/maxresdefault.jpg",
+    title: "HTSol Showreel",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/ifVhc0U0ZFg?si=ye4Eavv3VqkQ9rzn",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/1UwBM6PiivM/maxresdefault.jpg",
+    title: "A Tribute to Arshad Nadeem",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/1UwBM6PiivM?si=Ohxot4MUOjNzcRe3",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/BDOPnNwhHpU/maxresdefault.jpg",
+    title: "Nayza Borjan Hoodie Mixed reality 3D Animated and CGI Video Ad",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/BDOPnNwhHpU?si=TnAu5Ylqrj147N9L",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/f_ZA1O9rpM0/maxresdefault.jpg",
+    title: "Nayza Borjan Jacket CGI Video",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/f_ZA1O9rpM0?si=lc3NrBZH5ddKbaq5",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/oS7-CxFz5a8/maxresdefault.jpg",
+    title: "HTSolutions x Burger O'Clock CGI Video Series",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/oS7-CxFz5a8?si=nlvbUknshGvUepqY",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/_1Tg5jmvg38/maxresdefault.jpg",
+    title: "HTSolutions x Burger O'Clock CGI Series Continued",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/_1Tg5jmvg38?si=WjmHziDOHj4jANQx",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/USNe095vuBI/maxresdefault.jpg",
+    title: "Burger O'Clock CGI video Ad x HTSol",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/USNe095vuBI?si=IFdeL8mL-Mtvrmh9",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/MZgfp3s3cgg/maxresdefault.jpg",
+    title: "CGI Video for a hoodie product.",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/MZgfp3s3cgg?si=Ttti2LlytbgHqrcf",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/4OLkrYvz_to/maxresdefault.jpg",
+    title: "Rolling Smart Watches CGI in Lahore By HTSolutions",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/4OLkrYvz_to?si=yyiimYgaLotipQHs",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/gA0lss9gxZo/maxresdefault.jpg",
+    title: "CGI for a Hair Saloon By HTSolutions",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/gA0lss9gxZo?si=mUuNLdnPwM7Cehp6",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/RmU91oIoSpk/maxresdefault.jpg",
+    title: "CGI Commercial",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/RmU91oIoSpk?si=Lxnh_XYCip9wKOYy",
+  },
+];
+
+export const OUR_PORTFOLIO_CASE_STUDIES: OurPortfolioCaseStudy[] = [
+  {
+    logo: "/logo.webp",
+    company: "Dentopia Marketing",
+    heading: "HIGH-IMPACT UX FOR\nDENTAL PROFESSIONALS",
+    description:
+      "With over a decade of clinical expertise, this international consultancy needed a digital ecosystem that matched their authority. We delivered a conversion-focused, award-nominated platform that turns professional trust into measurable practice growth.",
+    services: [
+      "Web Design & Development",
+      "Content Creation",
+      "CMS Management",
+      "Social Media Management",
+      "Branding & Design",
+      "Performance SEO",
+    ],
+    images: ["/mockup.png"],
+    accent: "/marketing-1.png",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Imogen Johnson",
+    heading: "ELEVATING ATHLETE\nORAL PERFORMANCE",
+    description:
+      "As a leader in the UK Sports Dentistry Association, Imogen Johnson required a digital platform that bridged elite sports science with patient-centered care. We built a high-performance, calm-centric interface that showcases her clinical research and advanced aesthetic treatments for the modern athlete.",
+    services: [
+      "Web Design & Development",
+      "Content Creation",
+      "Branding & Design",
+      "Social Media Management",
+      "Performance SEO",
+    ],
+    images: ["/services/web-two.webp", "/services/web-one.webp"],
+    accent: "/marketing-2.webp",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Imogen Johnson",
+    heading: "ELEVATING ATHLETE\nORAL PERFORMANCE",
+    description:
+      "As a leader in the UK Sports Dentistry Association, Imogen Johnson required a digital platform that bridged elite sports science with patient-centered care. We built a high-performance, calm-centric interface that showcases her clinical research and advanced aesthetic treatments for the modern athlete.",
+    services: [
+      "Web Design & Development",
+      "Content Creation",
+      "Branding & Design",
+      "Social Media Management",
+      "Performance SEO",
+    ],
+    images: ["/mockup 3.png"],
+    accent: "/marketing-3.webp",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Wriste Watch",
+    heading: "ELEVATING ATHLETE\nORAL PERFORMANCE",
+    description:
+      "As a leader in the UK Sports Dentistry Association, Imogen Johnson required a digital platform that bridged elite sports science with patient-centered care. We built a high-performance, calm-centric interface that showcases her clinical research and advanced aesthetic treatments for the modern athlete.",
+    services: ["Social Media Management", "Content Creation", "Branding & Design"],
+    images: ["/watch.png"],
+    accent: "/marketing-3.webp",
+    imageLayout: "watch",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Diamond Medical",
+    heading: "ELEVATING ATHLETE\nORAL PERFORMANCE",
+    description:
+      "As a leader in the UK Sports Dentistry Association, Imogen Johnson required a digital platform that bridged elite sports science with patient-centered care. We built a high-performance, calm-centric interface that showcases her clinical research and advanced aesthetic treatments for the modern athlete.",
+    services: ["Social Media Management", "Content Creation", "Branding & Design"],
+    images: ["/diamond.png"],
+    accent: "/diamond-bg.png",
+  },
+];
+
+export const OUR_PORTFOLIO_CUSTOM_DEV_CARDS: OurPortfolioCaseStudy[] = [
+  {
+    logo: "/cust-dev-logo.png",
+    company: "Htsol.ca",
+    heading: "HIGH-IMPACT UX FOR\nDENTAL PROFESSIONALS",
+    description:
+      "With over a decade of clinical expertise, this international consultancy needed a digital ecosystem that matched their authority. We delivered a conversion-focused, award-nominated platform that turns professional trust into measurable practice growth.",
+    services: ["Web Design & Development", "Social Media Management"],
+    images: ["/htsol.png"],
+    accent: "/cus-dev-1.png",
+    imageLayout: "monitor",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Smile Fast",
+    heading: "HIGH-IMPACT UX FOR\nDENTAL PROFESSIONALS",
+    description:
+      "With over a decade of clinical expertise, this international consultancy needed a digital ecosystem that matched their authority. We delivered a conversion-focused, award-nominated platform that turns professional trust into measurable practice growth.",
+    services: ["Web Design & Development", "Social Media Management"],
+    images: ["/cust-dev-2.png"],
+    accent: "/cus-dev-1.png",
+    imageLayout: "monitor",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Start Smiling",
+    heading: "HIGH-IMPACT UX FOR\nDENTAL PROFESSIONALS",
+    description:
+      "With over a decade of clinical expertise, this international consultancy needed a digital ecosystem that matched their authority. We delivered a conversion-focused, award-nominated platform that turns professional trust into measurable practice growth.",
+    services: ["Web Design & Development", "Social Media Management"],
+    images: ["/cust-dev-3.png"],
+    accent: "/cus-dev-1.png",
+    imageLayout: "monitor",
+  },
+];
+
+export const OUR_PORTFOLIO_SEO_CARDS: OurPortfolioCaseStudy[] = [
+  {
+    logo: "/logo.webp",
+    company: "Dr. sean",
+    heading: "Dr Sean Roberts",
+    description:
+      "With over a decade of clinical expertise, this international consultancy needed a digital ecosystem that matched their authority. We delivered a conversion-focused, award-nominated platform that turns professional trust into measurable practice growth.",
+    services: [
+      "Web Design & Development",
+      "Content Creation",
+      "CMS Management",
+      "Social Media Management",
+      "Branding & Design",
+      "Performance SEO",
+    ],
+    images: ["/seo-1.png"],
+    accent: "/cus-dev-1.png",
+    imageLayout: "seo",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Nuyu Dental",
+    heading: "Nuyu Dental & Clinic",
+    description:
+      "As a leader in the UK Sports Dentistry Association, Imogen Johnson required a digital platform that bridged elite sports science with patient-centered care. We built a high-performance, calm-centric interface that showcases her clinical research and advanced aesthetic treatments for the modern athlete.",
+    services: [
+      "Web Design & Development",
+      "Content Creation",
+      "Branding & Design",
+      "Social Media Management",
+      "Performance SEO",
+    ],
+    images: ["/seo-1.png"],
+    accent: "/cus-dev-1.png",
+    imageLayout: "seo",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Dentopia",
+    heading: "DEntopia marketing",
+    description:
+      "As a leader in the UK Sports Dentistry Association, Imogen Johnson required a digital platform that bridged elite sports science with patient-centered care. We built a high-performance, calm-centric interface that showcases her clinical research and advanced aesthetic treatments for the modern athlete.",
+    services: [
+      "Web Design & Development",
+      "Content Creation",
+      "Branding & Design",
+      "Social Media Management",
+      "Performance SEO",
+    ],
+    images: ["/seo-1.png"],
+    accent: "/cus-dev-1.png",
+    imageLayout: "seo",
+  },
+];
