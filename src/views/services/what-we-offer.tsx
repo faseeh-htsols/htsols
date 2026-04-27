@@ -7,8 +7,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion-two";
 import { SERVICES_SERVICES_OFFERED_ACCORDION } from "@/constants";
-import parse from "html-react-parser";
-import LottiePlayer from "@/components/ui/lottie-player";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,10 +14,10 @@ const WhatWeOffer = () => {
   return (
     <div className="bg-tertiary py-20 lg:py-40">
       <Container>
-        <div className="flex flex-col lg:flex-row items-start gap-5">
-          <div className="lg:w-[250px] shrink-0 lg:pr-5 lg:border-r border-white">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(260px,320px)_minmax(0,1fr)] lg:gap-8">
+          <div className="lg:pr-8 lg:border-r border-white/30">
             <div className="text-white flex flex-col gap-8 pt-0 lg:sticky lg:top-24">
-              <h2 className="uppercase text-xl md:text-2xl font-semibold font-primary">
+              <h2 className="max-w-[320px] uppercase text-2xl md:text-3xl lg:text-[28px] font-semibold font-primary leading-tight">
                 Top Digital Marketing & Web Development Services in Canada
               </h2>
 
@@ -29,14 +27,19 @@ const WhatWeOffer = () => {
             </div>
           </div>
 
-          <div className="grow pt-0">
-            <Accordion type="single" className="space-y-4 mb-12" collapsible>
+          <div className="min-w-0 w-full pt-0">
+            <Accordion
+              type="single"
+              defaultValue="0"
+              className="w-full space-y-4 mb-12"
+              collapsible
+            >
               {SERVICES_SERVICES_OFFERED_ACCORDION.map((item, index) => (
                 <AccordionItem
                   key={item.title}
                   value={String(index)}
                   className="
-                    border border-[#2C2C2C] border-b! px-4 bg-black rounded-lg transition-all
+                    w-full border border-[#2C2C2C] border-b! px-4 bg-black rounded-lg transition-all
                     data-[state=open]:border-white data-[state=open]:bg-black
                     [&[data-state=closed]_.offer-icon_img]:opacity-80 
                     [&[data-state=open]_.offer-icon_img]:opacity-100
@@ -45,18 +48,18 @@ const WhatWeOffer = () => {
                   "
                 >
                   <AccordionTrigger
-                    className="text-white font-secondary text-lg uppercase hover:no-underline cursor-pointer  [&[data-state=closed]_.offer-icon_svg]:fill-white/60
+                    className="w-full text-white font-secondary uppercase hover:no-underline cursor-pointer [&[data-state=closed]_.offer-icon_svg]:fill-white/60
                   [&[data-state=open]_.offer-icon_svg]:fill-white"
                   >
-                    <div className="flex gap-3 items-center justify-center">
-                      <div className="offer-icon [&_svg]:w-12 [&_svg]:h-12">
+                    <div className="flex min-w-0 flex-1 items-center gap-3 text-left">
+                      <div className="offer-icon shrink-0 [&_svg]:w-12 [&_svg]:h-12">
                         {/* {parse(item.icons)} */}
                         <Image
                           width={27}
                           height={34}
                           src={item.icon}
                           alt={item.title}
-                          className="w-8 h-8"
+                          className="w-7 h-7 md:w-8 md:h-8"
                         />
                         {/* <LottiePlayer
                           className="w-[45px] h-[45px]"
@@ -65,9 +68,7 @@ const WhatWeOffer = () => {
                           loop
                         /> */}
                       </div>
-                      <h3 className="transition-opacity text-[20px] font-primary">
-                        {item.title}
-                      </h3>
+                      <h3 className="transition-opacity text-[20px] font-primary">{item.title}</h3>
                     </div>
                   </AccordionTrigger>
 
@@ -142,7 +143,7 @@ const WhatWeOffer = () => {
                             className="inline-flex items-center gap-2 group"
                           >
                             <span className="text-transparent bg-clip-text bg-linear-to-r from-[#075B65] via-[#00838A] to-[#328A99] font-semibold uppercase text-[18px]">
-                              {item.btnText}
+                              Read More
                             </span>
                             <Image
                               src="/right-arrow.svg"

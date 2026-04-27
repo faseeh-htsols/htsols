@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import HeadingTwo from "../ui/heading-two";
 import LottiePlayer from "../ui/lottie-player";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { AnimationItem } from "lottie-web";
@@ -126,6 +125,30 @@ export const Footer: React.FC = () => {
                     className="text-white/60 hover:text-white text-sm transition-colors duration-200"
                   >
                     Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/privacy-policy"
+                    className="text-white/60 hover:text-white text-sm transition-colors duration-200"
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/terms-of-use"
+                    className="text-white/60 hover:text-white text-sm transition-colors duration-200"
+                  >
+                    Terms of Use
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/cookie-policy"
+                    className="text-white/60 hover:text-white text-sm transition-colors duration-200"
+                  >
+                    Cookie Policy
                   </Link>
                 </li>
               </ul>

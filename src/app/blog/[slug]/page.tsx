@@ -9,6 +9,15 @@ import { fetchCmsBlogBySlug, fetchCmsBlogs } from "@/lib/cms/blog";
 const getBlog = cache(async (slug: string) => fetchCmsBlogBySlug(slug));
 const getBlogs = cache(async () => fetchCmsBlogs());
 
+export async function generateStaticParams() {
+  const blogs = await getBlogs();
+
+  return blogs
+    .map((blog) => blog.slug?.trim())
+    .filter((slug): slug is string => Boolean(slug))
+    .map((slug) => ({ slug }));
+}
+
 export async function generateMetadata({
   params,
 }: {
