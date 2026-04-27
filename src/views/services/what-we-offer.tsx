@@ -28,7 +28,12 @@ const WhatWeOffer = () => {
           </div>
 
           <div className="min-w-0 w-full pt-0">
-            <Accordion type="single" className="w-full space-y-4 mb-12" collapsible>
+            <Accordion
+              type="single"
+              defaultValue="0"
+              className="w-full space-y-4 mb-12"
+              collapsible
+            >
               {SERVICES_SERVICES_OFFERED_ACCORDION.map((item, index) => (
                 <AccordionItem
                   key={item.title}
@@ -138,7 +143,7 @@ const WhatWeOffer = () => {
                             className="inline-flex items-center gap-2 group"
                           >
                             <span className="text-transparent bg-clip-text bg-linear-to-r from-[#075B65] via-[#00838A] to-[#328A99] font-semibold uppercase text-[18px]">
-                              {item.btnText}
+                              Read More
                             </span>
                             <Image
                               src="/right-arrow.svg"

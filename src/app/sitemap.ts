@@ -1,6 +1,9 @@
 import type { MetadataRoute } from "next";
 import { fetchCmsBlogs } from "@/lib/cms/blog";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "") ??
   "https://www.htsol.ca";
