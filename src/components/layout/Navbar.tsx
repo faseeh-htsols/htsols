@@ -17,14 +17,16 @@ export const Navbar: React.FC = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-black px-6 py-6 md:px-12">
       <div className="mx-auto flex max-w-[1600px] items-center gap-6">
         <Link href="/" className="flex items-center gap-0">
-          <Image
-            className="h-[50px] w-[150px] object-contain md:w-[250px]"
-            src="/footer-logo.webp"
-            width={300}
-            height={100}
-            alt="logo"
-            priority
-          />
+          <div className="relative h-[50px] w-[150px] md:w-[250px]">
+            <Image
+              src="/footer-logo.webp"
+              alt="logo"
+              fill
+              className="object-contain"
+              sizes="(max-width: 768px) 150px, 250px"
+              fetchPriority="high"
+            />
+          </div>
         </Link>
 
         <div className="hidden flex-1 justify-center xl:flex">
@@ -45,7 +47,11 @@ export const Navbar: React.FC = () => {
               }
 
               return (
-                <div key={item.name} className="group relative" onMouseLeave={() => setHideDesktopDropdown(false)}>
+                <div
+                  key={item.name}
+                  className="group relative"
+                  onMouseLeave={() => setHideDesktopDropdown(false)}
+                >
                   {item.link ? (
                     <Link
                       href={item.link}
@@ -68,11 +74,8 @@ export const Navbar: React.FC = () => {
                         />
                       </svg>
                     </Link>
-
                   ) : (
-                    <div
-                      className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-white/85 transition-colors hover:text-white hover:cursor-pointer"
-                    >
+                    <div className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-white/85 transition-colors hover:text-white hover:cursor-pointer">
                       {item.name}
                       <svg
                         className="h-3 w-3 transition-transform duration-200 group-hover:rotate-180"
@@ -93,10 +96,11 @@ export const Navbar: React.FC = () => {
                   )}
 
                   <div
-                    className={`absolute top-3 left-1/2 z-50 mt-3 w-64 -translate-x-1/2 translate-y-2 rounded-xl border border-white/10 bg-black/95 p-3 transition-all duration-200 ${hideDesktopDropdown
-                      ? "invisible opacity-0"
-                      : "invisible opacity-0 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
-                      }`}
+                    className={`absolute top-3 left-1/2 z-50 mt-3 w-64 -translate-x-1/2 translate-y-2 rounded-xl border border-white/10 bg-black/95 p-3 transition-all duration-200 ${
+                      hideDesktopDropdown
+                        ? "invisible opacity-0"
+                        : "invisible opacity-0 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
+                    }`}
                   >
                     <div className="flex flex-col">
                       {item.subItems?.map((sub) => (
@@ -221,7 +225,9 @@ export const Navbar: React.FC = () => {
                 </div>
 
                 <div className="mt-6 xl:hidden">
-                  <GlowButton href="/contact-us">Book a Free Consultation</GlowButton>
+                  <GlowButton href="/contact-us">
+                    Book a Free Consultation
+                  </GlowButton>
                 </div>
               </div>
             </DrawerContent>

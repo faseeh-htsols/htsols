@@ -41,7 +41,10 @@ const ProcessSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+    <DoubleCurves
+      up
+      className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]"
+    >
       <section className="relative bg-tertiary py-20 lg:py-40">
         {/* <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
@@ -67,28 +70,32 @@ const ProcessSection = () => {
                       onMouseEnter={() => setActiveIndex(index)}
                       onFocus={() => setActiveIndex(index)}
                       onClick={() => setActiveIndex(index)}
-                      className={`group process-step flex w-full items-center justify-between rounded-full border px-7 py-5 text-left transition-all ${isActive
-                        ? "border-white/50 bg-white/5"
-                        : "border-white/20 hover:border-white/40"
-                        }`}
+                      className={`group process-step flex w-full items-center justify-between rounded-full border px-7 py-5 text-left transition-all ${
+                        isActive
+                          ? "border-white/50 bg-white/5"
+                          : "border-white/20 hover:border-white/40"
+                      }`}
                     >
                       <span className="flex items-center gap-5">
                         <span
-                          className={`process-step-number text-base sm:text-lg lg:text-xl font-primary ${isActive ? "gradient-text-blue" : "text-white/40"
-                            }`}
+                          className={`process-step-number text-base sm:text-lg lg:text-xl font-primary ${
+                            isActive ? "gradient-text-blue" : "text-white/40"
+                          }`}
                         >
                           {step.id}
                         </span>
                         <span
-                          className={`text-base sm:text-lg lg:text-xl font-primary font-semibold uppercase tracking-wide ${isActive ? "text-white" : "text-white/50"
-                            }`}
+                          className={`text-base sm:text-lg lg:text-xl font-primary font-semibold uppercase tracking-wide ${
+                            isActive ? "text-white" : "text-white/50"
+                          }`}
                         >
                           {step.title}
                         </span>
                       </span>
                       <span
-                        className={`transition-all ${isActive ? "text-white" : "text-white/40"
-                          } group-hover:text-white`}
+                        className={`transition-all ${
+                          isActive ? "text-white" : "text-white/40"
+                        } group-hover:text-white`}
                       >
                         <svg
                           width="20"
@@ -121,10 +128,11 @@ const ProcessSection = () => {
                     alt={`${step.title} preview`}
                     fill
                     sizes="(max-width: 1024px) 100vw, 520px"
-                    className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ${index === activeIndex
-                      ? "opacity-100 scale-100 blur-0"
-                      : "opacity-0 scale-105 blur-sm"
-                      }`}
+                    className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ${
+                      index === activeIndex
+                        ? "opacity-100 scale-100 blur-0"
+                        : "opacity-0 scale-105 blur-sm"
+                    }`}
                   />
                 ))}
               </div>
@@ -139,6 +147,7 @@ const ProcessSection = () => {
                     fill
                     sizes="(max-width: 1024px) 100vw, 320px"
                     className="object-cover"
+                    fetchPriority="high"
                   />
                 </div>
                 <p className="mt-4 text-white/80 text-sm leading-relaxed flex-1">

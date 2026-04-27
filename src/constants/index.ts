@@ -15,6 +15,20 @@ interface AccordionItemType {
   botPara?: string;
   lists?: ListItem[];
   lists2?: ListItem[];
+  btnText: string;
+  btnUrl: string;
+}
+
+interface AccordionItemDigitalType {
+  title: string;
+  icon: string;
+  images?: { src: string; alt: string }[];
+  subHeading?: string;
+  para: string;
+  subHeading2?: string;
+  botPara?: string;
+  lists?: ListItem[];
+  lists2?: ListItem[];
 }
 
 export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
@@ -24,6 +38,8 @@ export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
     subHeading: "Unlock the Power of High-Quality Visuals for Your Business",
     para: "At HTSOL Inc., we specialize in <b>CGI (Computer-Generated Imagery)</b> that transforms ideas into visually captivating realities. Whether you're in need of realistic 3D visualizations, animated models, or immersive environments, our CGI services are tailored to elevate your brand and make a lasting impact on your audience.",
     subHeading2: "What We Offer:",
+    btnText: "View Portfolio",
+    btnUrl: "/services/cgi",
     lists: [
       {
         title: `3D Modelling & Animation`,
@@ -53,6 +69,8 @@ export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
     subHeading: "Get the Right Talent to Fuel Your Success",
     para: "Finding the right team for your project can be challenging, but HTSOL Inc. makes it easy with <b>Staff Augmentation</b> services that provide you with access to skilled professionals when and where you need them. Whether you're looking to expand your team temporarily or require specialized expertise, we offer customized solutions to meet your unique business needs.",
     subHeading2: "Our Staff Augmentation Services Include:",
+    btnText: "View Portfolio",
+    btnUrl: "/services/staff-augmentation",
     lists: [
       {
         title: `Flexible Workforce Solutions`,
@@ -78,6 +96,8 @@ export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
     subHeading: "Embrace the Future with Innovative Solutions",
     para: "In today’s fast-paced digital world, staying ahead requires more than just keeping up—it requires <b>Digital Transformation.<b/> At HTSOL Inc., we help businesses evolve by adopting digital technologies that streamline operations, enhance customer experiences, and drive growth. Our team of experts will guide you through every step of the transformation journey, ensuring your business is future-ready.",
     subHeading2: "Our Digital Transformation Services Include:",
+    btnText: "View Portfolio",
+    btnUrl: "/services/digital-transformation",
     lists: [
       {
         title: `Business Process Automation`,
@@ -106,6 +126,8 @@ export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
     icon: "/services/tab-icon.svg",
     para: "A well-crafted plan makes everything else easier. We begin with a thorough audit of your digital presence and competitive landscape. Then, we build a channel-specific strategy designed to drive lead generation, engagement, and conversions.",
     subHeading2: "What to expect:",
+    btnText: "View Portfolio",
+    btnUrl: "/services/digital-marketing",
     lists: [
       {
         para: `Clear insights into what's working and what needs improvement`,
@@ -123,6 +145,8 @@ export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
     icon: "/services/tab-icon.svg",
     para: "SEO is more than just adding keywords. We combine AI-powered automation with proven SEO techniques to enhance your visibility in organic search results.",
     subHeading2: "Our approach covers:",
+    btnText: "View Portfolio",
+    btnUrl: "/services/seo-services",
     lists: [
       {
         para: `Technical and on-page improvements to ensure search engines can properly index your site`,
@@ -139,46 +163,11 @@ export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
     ],
   },
   {
-    title: "Social Media Marketing",
-    icon: "/services/tab-icon.svg",
-    para: "Social Media Marketing should be intentional and consistent. We ensure your presence is clear and effective across platforms like Facebook, Instagram, LinkedIn, and Twitter, with messaging tailored to your brand and audience.",
-    subHeading2: "Our approach includes:",
-    lists: [
-      {
-        para: `Audience insights`,
-      },
-      {
-        para: `Competitor benchmarking`,
-      },
-      {
-        para: `Proven methods that deliver measurable growth without gimmicks`,
-      },
-    ],
-  },
-  {
-    title: "PPC Campaign Management",
-    icon: "/services/tab-icon.svg",
-    para: "Effective PPC campaigns require strategic budget allocation and continuous optimization. We specialize in building targeted Pay-Per-Click campaigns on Google Ads and Facebook Ads, using testing to refine performance.",
-    subHeading2: "Services include:",
-    lists: [
-      {
-        para: `In-depth keyword research to target high-intent searches`,
-      },
-      {
-        para: `Ad structures and targeting aligned with buyer behavior`,
-      },
-      {
-        para: `Ongoing testing, including A/B testing, to optimize performance over time`,
-      },
-      {
-        para: `Continuous refinements to drive qualified leads and conversions`,
-      },
-    ],
-  },
-  {
     title: "Web Design & Development",
     icon: "/services/tab-icon.svg",
     para: "Your website should be easy to navigate and trust. At HTSOL Inc., we build mobile-friendly, user-centric websites designed to guide visitors smoothly toward their goals. <br/><br/>Whether you're starting from scratch or revamping an existing site, we focus on:",
+    btnText: "View Portfolio",
+    btnUrl: "/services/website-development",
     lists: [
       {
         para: `A structure that reinforces your brand identity and business goals`,
@@ -194,157 +183,194 @@ export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
       },
     ],
   },
-  {
-    title: "Ecommerce Development & Marketing",
-    icon: "/services/tab-icon.svg",
-    para: `When it comes to eCommerce, details matter. We specialize in developing custom eCommerce websites and supporting strategies that simplify the shopping experience and help your store perform consistently.
-    <br/><br/>
-    We develop on platforms like:
-  `,
-    lists: [
-      {
-        para: `Shopify, WooCommerce, and Magento`,
-      },
-    ],
-    botPara: `To drive growth, we provide:`,
-    lists2: [
-      {
-        para: `Targeted eCommerce SEO and PPC campaigns tailored to online retail success`,
-      },
-      {
-        para: `Conversion optimization based on real customer behavior`,
-      },
-    ],
-  },
-  {
-    title: "Content Marketing",
-    icon: "/services/tab-icon.svg",
-    para: `Great content should engage and inform—not just fill space. Our team creates high-quality, SEO-optimized content that resonates with both your audience and search engines.
-    <br/><br/>
-    We assist with:
-  `,
-    lists: [
-      {
-        para: `Blog posts and articles`,
-      },
-      {
-        para: `Landing pages`,
-      },
-      {
-        para: `Video scripts`,
-      },
-      {
-        para: `Messaging that aligns with your brand voice`,
-      },
-    ],
-  },
-  {
-    title: "Technical SEO",
-    icon: "/services/tab-icon.svg",
-    para: `Even the best content can be hindered by technical issues. Our Technical SEO services ensure your website runs smoothly and is fully optimized for search engines.
-    <br/><br/>
-    We focus on:
-  `,
-    lists: [
-      {
-        para: `Fixing crawl errors`,
-      },
-      {
-        para: `Speeding up page load times`,
-      },
-      {
-        para: `Resolving indexing issues to ensure complete search engine visibility`,
-      },
-      {
-        para: `Addressing duplicate content and improving site architecture`,
-      },
-    ],
-  },
-  {
-    title: "Email Marketing",
-    icon: "/services/tab-icon.svg",
-    para: `Email marketing is most effective when it feels relevant and personal. We help you connect with your audience, converting interest into lasting relationships.
-    <br/><br/>
-    Our services include:
-  `,
-    lists: [
-      {
-        para: `Building segmented email lists`,
-      },
-      {
-        para: `Crafting compelling, natural-sounding messages`,
-      },
-      {
-        para: `Improving open and click-through rates through testing and refinement`,
-      },
-    ],
-  },
-  {
-    title: "Online Reputation Management (ORM)",
-    icon: "/services/tab-icon.svg",
-    para: `Your online reputation is often the first impression people have of your business. With ORM, we help you stay on top of reviews and feedback in a professional and proactive manner.
-    <br/><br/>
-    We offer:
-  `,
-    lists: [
-      {
-        para: `Monitoring reviews on key platforms`,
-      },
-      {
-        para: `Thoughtful and consistent responses`,
-      },
-      {
-        para: `Managing your presence on review sites and social media`,
-      },
-      {
-        para: `Ongoing support to maintain a positive online reputation`,
-      },
-    ],
-  },
-  {
-    title: "AI-Driven Marketing Solutions",
-    icon: "/services/tab-icon.svg",
-    para: `AI is a powerful tool when used wisely. At HTSOL Inc., we incorporate AI into our marketing strategies to improve decision-making and efficiency without replacing the human touch.
-    <br/><br/>
-    We use AI for:
-  `,
-    lists: [
-      {
-        para: `Predictive analytics to spot trends and opportunities`,
-      },
-      {
-        para: `Personalized content recommendations`,
-      },
-      {
-        para: `Data-backed insights to optimize time and budget allocation`,
-      },
-    ],
-  },
-  {
-    title: "Franchise SEO",
-    icon: "/services/tab-icon.svg",
-    para: `Franchises face unique challenges, especially with multiple locations to manage. Our Franchise SEO service ensures local visibility while maintaining consistency across all franchise pages.
-    <br/><br/>
-    Services include:
-  `,
-    lists: [
-      {
-        para: `AI-driven insights to find local opportunities`,
-      },
-      {
-        para: `Optimizing both corporate sites and individual franchise locations`,
-      },
-      {
-        para: `Boosting visibility in organic search results`,
-      },
-      {
-        para: `Ensuring consistent branding and visibility across all locations`,
-      },
-    ],
-  },
+  // {
+  //   title: "Social Media Marketing",
+  //   icon: "/services/tab-icon.svg",
+  //   para: "Social Media Marketing should be intentional and consistent. We ensure your presence is clear and effective across platforms like Facebook, Instagram, LinkedIn, and Twitter, with messaging tailored to your brand and audience.",
+  //   subHeading2: "Our approach includes:",
+  //   lists: [
+  //     {
+  //       para: `Audience insights`,
+  //     },
+  //     {
+  //       para: `Competitor benchmarking`,
+  //     },
+  //     {
+  //       para: `Proven methods that deliver measurable growth without gimmicks`,
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "PPC Campaign Management",
+  //   icon: "/services/tab-icon.svg",
+  //   para: "Effective PPC campaigns require strategic budget allocation and continuous optimization. We specialize in building targeted Pay-Per-Click campaigns on Google Ads and Facebook Ads, using testing to refine performance.",
+  //   subHeading2: "Services include:",
+  //   lists: [
+  //     {
+  //       para: `In-depth keyword research to target high-intent searches`,
+  //     },
+  //     {
+  //       para: `Ad structures and targeting aligned with buyer behavior`,
+  //     },
+  //     {
+  //       para: `Ongoing testing, including A/B testing, to optimize performance over time`,
+  //     },
+  //     {
+  //       para: `Continuous refinements to drive qualified leads and conversions`,
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "Ecommerce Development & Marketing",
+  //   icon: "/services/tab-icon.svg",
+  //   para: `When it comes to eCommerce, details matter. We specialize in developing custom eCommerce websites and supporting strategies that simplify the shopping experience and help your store perform consistently.
+  //   <br/><br/>
+  //   We develop on platforms like:
+  // `,
+  //   lists: [
+  //     {
+  //       para: `Shopify, WooCommerce, and Magento`,
+  //     },
+  //   ],
+  //   botPara: `To drive growth, we provide:`,
+  //   lists2: [
+  //     {
+  //       para: `Targeted eCommerce SEO and PPC campaigns tailored to online retail success`,
+  //     },
+  //     {
+  //       para: `Conversion optimization based on real customer behavior`,
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "Content Marketing",
+  //   icon: "/services/tab-icon.svg",
+  //   para: `Great content should engage and inform—not just fill space. Our team creates high-quality, SEO-optimized content that resonates with both your audience and search engines.
+  //   <br/><br/>
+  //   We assist with:
+  // `,
+  //   lists: [
+  //     {
+  //       para: `Blog posts and articles`,
+  //     },
+  //     {
+  //       para: `Landing pages`,
+  //     },
+  //     {
+  //       para: `Video scripts`,
+  //     },
+  //     {
+  //       para: `Messaging that aligns with your brand voice`,
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "Technical SEO",
+  //   icon: "/services/tab-icon.svg",
+  //   para: `Even the best content can be hindered by technical issues. Our Technical SEO services ensure your website runs smoothly and is fully optimized for search engines.
+  //   <br/><br/>
+  //   We focus on:
+  // `,
+  //   lists: [
+  //     {
+  //       para: `Fixing crawl errors`,
+  //     },
+  //     {
+  //       para: `Speeding up page load times`,
+  //     },
+  //     {
+  //       para: `Resolving indexing issues to ensure complete search engine visibility`,
+  //     },
+  //     {
+  //       para: `Addressing duplicate content and improving site architecture`,
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "Email Marketing",
+  //   icon: "/services/tab-icon.svg",
+  //   para: `Email marketing is most effective when it feels relevant and personal. We help you connect with your audience, converting interest into lasting relationships.
+  //   <br/><br/>
+  //   Our services include:
+  // `,
+  //   lists: [
+  //     {
+  //       para: `Building segmented email lists`,
+  //     },
+  //     {
+  //       para: `Crafting compelling, natural-sounding messages`,
+  //     },
+  //     {
+  //       para: `Improving open and click-through rates through testing and refinement`,
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "Online Reputation Management (ORM)",
+  //   icon: "/services/tab-icon.svg",
+  //   para: `Your online reputation is often the first impression people have of your business. With ORM, we help you stay on top of reviews and feedback in a professional and proactive manner.
+  //   <br/><br/>
+  //   We offer:
+  // `,
+  //   lists: [
+  //     {
+  //       para: `Monitoring reviews on key platforms`,
+  //     },
+  //     {
+  //       para: `Thoughtful and consistent responses`,
+  //     },
+  //     {
+  //       para: `Managing your presence on review sites and social media`,
+  //     },
+  //     {
+  //       para: `Ongoing support to maintain a positive online reputation`,
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "AI-Driven Marketing Solutions",
+  //   icon: "/services/tab-icon.svg",
+  //   para: `AI is a powerful tool when used wisely. At HTSOL Inc., we incorporate AI into our marketing strategies to improve decision-making and efficiency without replacing the human touch.
+  //   <br/><br/>
+  //   We use AI for:
+  // `,
+  //   lists: [
+  //     {
+  //       para: `Predictive analytics to spot trends and opportunities`,
+  //     },
+  //     {
+  //       para: `Personalized content recommendations`,
+  //     },
+  //     {
+  //       para: `Data-backed insights to optimize time and budget allocation`,
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "Franchise SEO",
+  //   icon: "/services/tab-icon.svg",
+  //   para: `Franchises face unique challenges, especially with multiple locations to manage. Our Franchise SEO service ensures local visibility while maintaining consistency across all franchise pages.
+  //   <br/><br/>
+  //   Services include:
+  // `,
+  //   lists: [
+  //     {
+  //       para: `AI-driven insights to find local opportunities`,
+  //     },
+  //     {
+  //       para: `Optimizing both corporate sites and individual franchise locations`,
+  //     },
+  //     {
+  //       para: `Boosting visibility in organic search results`,
+  //     },
+  //     {
+  //       para: `Ensuring consistent branding and visibility across all locations`,
+  //     },
+  //   ],
+  // },
 ];
 
-export const DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION: AccordionItemType[] =
+export const DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION: AccordionItemDigitalType[] =
   [
     {
       title: "Search Engine Optimization (SEO)",
@@ -946,7 +972,6 @@ export const CEO_ACHIEVEMENTS = [
   },
 ];
 
-
 export const WHY_HIRE_ME_CEO = {
   title: "Why hire me",
   para: `Most agencies separate strategy from execution. Most developers don&apos;t understand marketing. Most marketers can&apos;t build what they recommend. I&apos;ve spent 8 years sitting at the
@@ -977,9 +1002,6 @@ export const WHY_HIRE_ME_CEO = {
     },
   ],
 };
-
-
-
 
 export const WHAT_I_DO_CEO = {
   title: "Services That Move the Needle",
@@ -1024,24 +1046,83 @@ export const WHAT_I_DO_CEO = {
   ],
 };
 
-
 export const CEO_EXPERTIES = {
   skills: [
-    { src: "/ceo/google.svg", label: " Google Analytics Certified", subLabel: "From: Google" },
-    { src: "/ceo/meta.svg", label: "Meta Blueprint Certified", subLabel: "From: Meta" },
-    { src: "/ceo/hubspot.svg", label: "HubSpot Inbound Marketing", subLabel: "From: HubSpot Academy" },
-    { src: "/ceo/semrush.svg", label: "SEO Toolkit Certified", subLabel: "From: Semrush Academy" },
-    { src: "/ceo/bsc.svg", label: "B.Sc. Software Engineering", subLabel: "From: COMSATS University" },
-    { src: "/ceo/google.svg", label: " Google Analytics Certified", subLabel: "From: Google" },
-    { src: "/ceo/meta.svg", label: "Meta Blueprint Certified", subLabel: "From: Meta" },
-    { src: "/ceo/hubspot.svg", label: "HubSpot Inbound Marketing", subLabel: "From: HubSpot Academy" },
-    { src: "/ceo/semrush.svg", label: "SEO Toolkit Certified", subLabel: "From: Semrush Academy" },
-    { src: "/ceo/bsc.svg", label: "B.Sc. Software Engineering", subLabel: "From: COMSATS University" },
-    { src: "/ceo/google.svg", label: " Google Analytics Certified", subLabel: "From: Google" },
-    { src: "/ceo/meta.svg", label: "Meta Blueprint Certified", subLabel: "From: Meta" },
-    { src: "/ceo/hubspot.svg", label: "HubSpot Inbound Marketing", subLabel: "From: HubSpot Academy" },
-    { src: "/ceo/semrush.svg", label: "SEO Toolkit Certified", subLabel: "From: Semrush Academy" },
-    { src: "/ceo/bsc.svg", label: "B.Sc. Software Engineering", subLabel: "From: COMSATS University" },
+    {
+      src: "/ceo/google.svg",
+      label: " Google Analytics Certified",
+      subLabel: "From: Google",
+    },
+    {
+      src: "/ceo/meta.svg",
+      label: "Meta Blueprint Certified",
+      subLabel: "From: Meta",
+    },
+    {
+      src: "/ceo/hubspot.svg",
+      label: "HubSpot Inbound Marketing",
+      subLabel: "From: HubSpot Academy",
+    },
+    {
+      src: "/ceo/semrush.svg",
+      label: "SEO Toolkit Certified",
+      subLabel: "From: Semrush Academy",
+    },
+    {
+      src: "/ceo/bsc.svg",
+      label: "B.Sc. Software Engineering",
+      subLabel: "From: COMSATS University",
+    },
+    {
+      src: "/ceo/google.svg",
+      label: " Google Analytics Certified",
+      subLabel: "From: Google",
+    },
+    {
+      src: "/ceo/meta.svg",
+      label: "Meta Blueprint Certified",
+      subLabel: "From: Meta",
+    },
+    {
+      src: "/ceo/hubspot.svg",
+      label: "HubSpot Inbound Marketing",
+      subLabel: "From: HubSpot Academy",
+    },
+    {
+      src: "/ceo/semrush.svg",
+      label: "SEO Toolkit Certified",
+      subLabel: "From: Semrush Academy",
+    },
+    {
+      src: "/ceo/bsc.svg",
+      label: "B.Sc. Software Engineering",
+      subLabel: "From: COMSATS University",
+    },
+    {
+      src: "/ceo/google.svg",
+      label: " Google Analytics Certified",
+      subLabel: "From: Google",
+    },
+    {
+      src: "/ceo/meta.svg",
+      label: "Meta Blueprint Certified",
+      subLabel: "From: Meta",
+    },
+    {
+      src: "/ceo/hubspot.svg",
+      label: "HubSpot Inbound Marketing",
+      subLabel: "From: HubSpot Academy",
+    },
+    {
+      src: "/ceo/semrush.svg",
+      label: "SEO Toolkit Certified",
+      subLabel: "From: Semrush Academy",
+    },
+    {
+      src: "/ceo/bsc.svg",
+      label: "B.Sc. Software Engineering",
+      subLabel: "From: COMSATS University",
+    },
   ],
 };
 
@@ -1094,11 +1175,31 @@ export const INDUSTRIES_I_SERVE_CEO = {
 
 export const CTO_EXPERTIES = {
   skills: [
-    { src: "/ceo/meta.svg", label: "Back-End Database Development", subLabel: "From: Meta" },
-    { src: "/ceo/meta.svg", label: "Python Programming", subLabel: "From: Meta" },
-    { src: "/ceo/meta.svg", label: " Django Web Framework", subLabel: "From: Meta" },
-    { src: "/ceo/bsc.svg", label: "B.E. Avionics Engineering", subLabel: "From: PAF Karachi Institute of Economics and Technology" },
-    { src: "/ceo/google.svg", label: "Chief Technology Officer", subLabel: "From: HTSOL Inc. — Since Dec 2024" },
+    {
+      src: "/ceo/meta.svg",
+      label: "Back-End Database Development",
+      subLabel: "From: Meta",
+    },
+    {
+      src: "/ceo/meta.svg",
+      label: "Python Programming",
+      subLabel: "From: Meta",
+    },
+    {
+      src: "/ceo/meta.svg",
+      label: " Django Web Framework",
+      subLabel: "From: Meta",
+    },
+    {
+      src: "/ceo/bsc.svg",
+      label: "B.E. Avionics Engineering",
+      subLabel: "From: PAF Karachi Institute of Economics and Technology",
+    },
+    {
+      src: "/ceo/google.svg",
+      label: "Chief Technology Officer",
+      subLabel: "From: HTSOL Inc. — Since Dec 2024",
+    },
   ],
 };
 
@@ -1994,8 +2095,7 @@ export const CTO_FAQS = [
       "Qamar's role is to ensure that every technical output HTSOL delivers is built properly — fast, secure, scalable, and structured to support long-term growth. Where Faseeh Khan (CEO) leads strategy, client relationships, and growth direction, Qamar leads technical architecture, development quality, and delivery execution. He works on every website build, CRM project, and technical SEO implementation — ensuring the engineering underneath HTSOL's work is done to a high standard.",
   },
   {
-    question:
-      "What is Qamar's specific experience with dental practices?",
+    question: "What is Qamar's specific experience with dental practices?",
     answer:
       "Qamar has worked with dental practices across the United Kingdom — including practices in Manchester, Birmingham, London, Leeds, Bristol, and Edinburgh — helping them rebuild underperforming websites into consistent patient acquisition systems. His focus has been on the technical systems specific to dental: conversion-optimised website architecture, AI-assisted local SEO, custom CRM and practice management software, and the booking and patient flow integrations that clinical teams actually need. He brings that UK delivery track record to every Canadian engagement.",
   },
@@ -2005,12 +2105,14 @@ export const CTO_FAQS = [
       "Qamar's primary stack is MERN (MongoDB, Express.js, React, Node.js) and Next.js for web applications and custom software. He also works with Python and Django for back-end systems, and has formal Meta certifications in Python programming, Django web framework, and back-end database development. For dental-specific builds, he integrates booking systems, patient management platforms, CMS architectures, and the local SEO technical layer that supports Google Business Profile and map pack rankings.",
   },
   {
-    question: "Can Qamar build custom software for our dental practice — not just a website?",
+    question:
+      "Can Qamar build custom software for our dental practice — not just a website?",
     answer:
       "Yes — custom software is one of Qamar's core capabilities. He designs and builds bespoke CRM systems, patient management platforms, booking tools, and administrative dashboards tailored to how a specific dental practice operates. Unlike off-the-shelf solutions that require your team to adapt to the software, Qamar builds systems that adapt to your team. These are custom builds owned entirely by your practice — not subscription software with monthly fees that increase each year.",
   },
   {
-    question: "Why does Qamar have an Avionics degree rather than a Computer Science degree?",
+    question:
+      "Why does Qamar have an Avionics degree rather than a Computer Science degree?",
     answer:
       "Qamar studied B.E. Avionics (Aviation Electronics Engineering) at PAF Karachi Institute of Economics and Technology — a rigorous engineering discipline that demands the kind of systematic, precise thinking that good software architecture requires. Aviation electronics engineers are trained to build systems where failures have serious consequences, which translates directly into how Qamar approaches software architecture: methodically, with careful consideration of how systems fail and how to prevent it. His software expertise was developed through six years of professional practice as a software architect and engineer.",
   },
@@ -2059,7 +2161,6 @@ export const CEO_CONVERSATION = {
   ],
 };
 
-
 export const CTO_CONVERSATION = {
   title: "From Brief to Build — How the Technical Work Actually Happens",
   para: "Every system I build starts with understanding what it needs to do — then I build the right way to do it. No shortcuts that create problems later. No handovers that leave gaps.",
@@ -2091,7 +2192,6 @@ export const CTO_CONVERSATION = {
     },
   ],
 };
-
 
 export const WEB_DEV_WHY_CHOOSE = {
   title: "Why Choose HTSOL Inc. for Web Development",
@@ -2172,7 +2272,8 @@ export const DIGITAL_MARKETING_WHY_CHOOSE = {
 };
 
 export const STAFF_AUGMENTATION_GROWTH = {
-  title: " Growth Should Not Stop Because You Cannot Afford to Hire — or Take the Risk",
+  title:
+    " Growth Should Not Stop Because You Cannot Afford to Hire — or Take the Risk",
   para: `Every growing business hits the same wall. The workload has outgrown the team. You need a developer to build that feature. A designer to produce that campaign. An SEO specialist to finally get the site ranking. But hiring full-time is expensive, slow, and permanent — and the work you need done might only last three months.
   <br/><br/>
   Most businesses end up stuck between bad options: overpaying a generalist agency, taking a chance on a freelancer who disappears halfway through, or leaving the work undone while the opportunity passes. There is a better model — one where you get a dedicated professional who is actually accountable, without the full-time commitment.`,
@@ -2190,8 +2291,10 @@ export const STAFF_AUGMENTATION_GROWTH = {
 
 export const STAFF_AUGMENTATION_PROTECTION = {
   bgImg: "/services/protection-bg.png",
-  text1: "HTSOL Talent Works for You — Under Your Direction, in Your Tools, on Your Schedule. They Are an Extension of Your Team, Not a Vendor You Manage at Arm's Length.",
-  text2: "You Set the Priorities. You Run the Standups. You Own the Output. We Provide the Person — Screened, Skilled, and Ready to Contribute from Week One.",
+  text1:
+    "HTSOL Talent Works for You — Under Your Direction, in Your Tools, on Your Schedule. They Are an Extension of Your Team, Not a Vendor You Manage at Arm's Length.",
+  text2:
+    "You Set the Priorities. You Run the Standups. You Own the Output. We Provide the Person — Screened, Skilled, and Ready to Contribute from Week One.",
   btnText1: " tell us what you need",
   btnLink1: "#white-label-form",
   btnText2: "talk to a talent specialist",
@@ -2420,12 +2523,14 @@ export const STAFF_AUGMENTATION_SMART_WAY = {
       alt: "Pay for the hours and skills you actually need — nothing more",
     },
     {
-      title: "Scale up and down as your workload demands without the hiring and firing cycle",
+      title:
+        "Scale up and down as your workload demands without the hiring and firing cycle",
       image: "/website/conversion-focused.png",
       alt: "Scale up and down as your workload demands without the hiring and firing cycle",
     },
     {
-      title: "Eliminate employer taxes, benefits, office costs, and equipment overhead",
+      title:
+        "Eliminate employer taxes, benefits, office costs, and equipment overhead",
       image: "/website/technical-seo.png",
       alt: "Eliminate employer taxes, benefits, office costs, and equipment overhead",
     },
@@ -2435,7 +2540,8 @@ export const STAFF_AUGMENTATION_SMART_WAY = {
       alt: "Test a role before you commit to making it permanent",
     },
     {
-      title: "Keep your core team lean and focused while augmented talent handles specific workloads",
+      title:
+        "Keep your core team lean and focused while augmented talent handles specific workloads",
       image: "/website/performance.png",
       alt: "Keep your core team lean and focused while augmented talent handles specific workloads",
     },
@@ -2445,74 +2551,67 @@ export const STAFF_AUGMENTATION_SMART_WAY = {
 
 export const STAFF_AUGMENTATION_EXPERT = {
   bgImage: "/staff-augmentation/expert-bg.png",
-  title: " NEED AN EXTRA PAIR OF HANDS — OR AN ENTIRE CAPABILITY YOU DO NOT HAVE YET?",
+  title:
+    " NEED AN EXTRA PAIR OF HANDS — OR AN ENTIRE CAPABILITY YOU DO NOT HAVE YET?",
   para: ` Tell us what you need, what your timeline looks like, and what a successful engagement means for your business. We will match you with the right talent and get you started fast — no lengthy procurement process, no enterprise contract, no unnecessary complexity.`,
   btnText: "Tell Us What You Need",
   btnLink: "#white-label-form",
 };
 
-
 export const STAFF_AUGMENTATION_FAQS = [
   {
-    question: "What is the difference between staff augmentation and hiring a freelancer?",
+    question:
+      "What is the difference between staff augmentation and hiring a freelancer?",
     answer:
       "A freelancer works for themselves — on their schedule, across multiple clients, with their own tools, and with limited accountability to your process. A staff augmentation resource works for you — inside your tools, on your hours, under your direct management, with full accountability to your team and your deliverables. The key difference is integration and dedication. A freelancer is a contractor you work with. An augmented resource is a professional who becomes part of your team for the duration of the engagement.",
   },
   {
-    question:
-      "How is this different from using an agency?",
+    question: "How is this different from using an agency?",
     answer:
       "When you hire an agency, they own the work. They assign whoever is available, you communicate through an account manager, and you often have limited visibility into who is actually doing the work. With staff augmentation, you get a named individual who works for you directly. You manage them, you set the priorities, you see the output as it is produced. There is no account manager in between, no markup for overhead you do not need, and no risk that your project is being deprioritised because the agency is busy with a bigger client.",
   },
   {
-    question:
-      "How quickly can someone start?",
+    question: "How quickly can someone start?",
     answer:
       "In most cases, within five business days of confirming the engagement. The timeline depends on the specific role and experience level required — some specialist roles take a few additional days to match correctly. We prioritise placing the right person over placing someone fast, but we move quickly. If you have a hard start date, tell us upfront and we will work backwards from it.",
   },
   {
-    question:
-      "What roles can I hire through HTSOL staff augmentation?",
+    question: "What roles can I hire through HTSOL staff augmentation?",
     answer:
       "Full-stack, front-end, and back-end developers. UI/UX designers and graphic designers. SEO specialists. Paid ads managers for Google and Meta. Social media managers. Content writers and content strategists. Email marketing specialists. Project managers. If you need a digital role that is not listed, ask us — we may still be able to help, or we can be honest if we cannot.",
   },
   {
-    question:
-      "Do I need to provide equipment or software licences?",
+    question: "Do I need to provide equipment or software licences?",
     answer:
       "It depends on the role and your preference. Most HTSOL resources work with their own hardware. For software licences — design tools, development environments, SEO platforms — we can work within your existing licences, source our own where appropriate, or advise on the most cost-effective approach for your situation. We will clarify this before the engagement starts so there are no surprises.",
   },
   {
-    question:
-      "Can I end an engagement early if it is not working?",
+    question: "Can I end an engagement early if it is not working?",
     answer:
       "Yes. We do not lock clients into long-term contracts they cannot exit. Our standard engagements have a two-week notice period for ending or adjusting scope. If the placement is genuinely not working — the match is wrong, the output is not meeting your standard — we address it directly and, if necessary, make a replacement. We would rather solve the problem than hold you to a contract that is not delivering value.",
   },
   {
-    question:
-      "Who manages the HTSOL resource — us or you?",
+    question: "Who manages the HTSOL resource — us or you?",
     answer:
       "You manage them. You set the work priorities, run the standups, assign the tasks, and provide feedback. HTSOL handles the employment relationship — compensation, compliance, HR matters. Think of it as us being the employer of record while you are the day-to-day manager. You get all the control of a direct report without any of the employment administration.",
   },
   {
-    question:
-      "Can a staff augmentation arrangement become a permanent hire?",
+    question: "Can a staff augmentation arrangement become a permanent hire?",
     answer:
       "Yes — this is actually one of the advantages of the model. An augmentation engagement is an effective way to trial a person before committing to a permanent role. If after three to six months you want to convert the relationship to a direct permanent hire, we can facilitate that. The terms of conversion are agreed upfront so there are no ambiguities later.",
   },
   {
-    question:
-      "Is there a minimum engagement length?",
+    question: "Is there a minimum engagement length?",
     answer:
       "We ask for a minimum commitment of one month for dedicated full-time and part-time resources — this ensures there is enough runway for the person to contribute meaningfully and for you to evaluate the value of the engagement. For project-based work, the minimum is the scope of the project itself. We do not offer day rates or week-by-week arrangements — the value of augmentation comes from consistency and integration, which requires a minimum time commitment to establish.",
   },
   {
-    question: "How do you ensure the person you place is actually as experienced as described?",
+    question:
+      "How do you ensure the person you place is actually as experienced as described?",
     answer:
       "Every resource goes through an internal technical and professional evaluation before we make a placement. We assess their skills against the role requirements, review examples of their work, and conduct a structured interview process. We also match for working style, communication quality, and remote work capability — not just technical ability. If we are not confident someone is the right fit for your specific requirements, we will not place them and will keep looking. A bad placement creates more work for you and damages the relationship — we would rather take more time to get it right.",
   },
 ];
-
 
 export const DIGITAL_TRANSFORMATION_GROWTH = {
   title: "Your Competitors Are Getting Customers You Should Be Getting",
@@ -2551,8 +2650,10 @@ export const DIGITAL_TRANSFORMATION_ACHIEVEMENTS = [
 
 export const DIGITAL_TRANSFORMATION_PROTECTION = {
   bgImg: "/services/protection-bg.png",
-  text1: "HTSOL Inc. Handles the Full Journey — From Brand Strategy and Website Launch to SEO, Automation, and the Systems That Support Growth.",
-  text2: "You Do Not Need Five Different Vendors. You Do Not Need to Figure Out Digital Marketing or Internal Systems on Your Own. You Need One Team That Builds the Right Foundation, Connects Everything Properly, and Shows You Real Results.",
+  text1:
+    "HTSOL Inc. Handles the Full Journey — From Brand Strategy and Website Launch to SEO, Automation, and the Systems That Support Growth.",
+  text2:
+    "You Do Not Need Five Different Vendors. You Do Not Need to Figure Out Digital Marketing or Internal Systems on Your Own. You Need One Team That Builds the Right Foundation, Connects Everything Properly, and Shows You Real Results.",
   btnText1: "Book A free consultation",
   btnLink1: "/contact-us",
   btnText2: "see what is included",
@@ -2762,7 +2863,8 @@ export const DIGITAL_TRANSFORMATION_Accordion = {
 
 export const DIGITAL_TRANSFORMATION_DIGITAL_PRESENCE = {
   curveLine: true,
-  title: "Digital Presence Is One of the Most Valuable Assets a Service Business Can Build",
+  title:
+    "Digital Presence Is One of the Most Valuable Assets a Service Business Can Build",
   para: `Referrals are helpful, but they are not predictable. Word of mouth matters, but it does not scale on its own. A Google Business listing is useful, but it is not a full strategy.
   <br/><br/>
   A well-built digital presence does something different. It compounds. It improves visibility, strengthens trust, supports lead generation, and creates a better client journey over time. When your website, SEO, marketing, and systems are working together, your business becomes easier to grow and easier to manage.`,
@@ -2770,12 +2872,14 @@ export const DIGITAL_TRANSFORMATION_DIGITAL_PRESENCE = {
   btnLink: "/contact-us",
   items: [
     {
-      title: "A brand that creates the right first impression online and offline",
+      title:
+        "A brand that creates the right first impression online and offline",
       image: "/digital-transformation/digital-presence-1.png",
       alt: "Senior talent available in days, not months",
     },
     {
-      title: "A website that turns visitors into real enquiries around the clock",
+      title:
+        "A website that turns visitors into real enquiries around the clock",
       image: "/website/full-development.png",
       alt: "Pay for the hours and skills you actually need — nothing more",
     },
@@ -2785,17 +2889,20 @@ export const DIGITAL_TRANSFORMATION_DIGITAL_PRESENCE = {
       alt: "Scale up and down as your workload demands without the hiring and firing cycle",
     },
     {
-      title: "Marketing and automation that support predictable, measurable growth",
+      title:
+        "Marketing and automation that support predictable, measurable growth",
       image: "/website/technical-seo.png",
       alt: "Eliminate employer taxes, benefits, office costs, and equipment overhead",
     },
     {
-      title: "Better workflow optimisation, stronger systems, and improved business efficiency",
+      title:
+        "Better workflow optimisation, stronger systems, and improved business efficiency",
       image: "/website/analytics.png",
       alt: "Test a role before you commit to making it permanent",
     },
     {
-      title: "A business that is easier to scale, easier to sell, and less dependent on luck",
+      title:
+        "A business that is easier to scale, easier to sell, and less dependent on luck",
       image: "/website/performance.png",
       alt: "Keep your core team lean and focused while augmented talent handles specific workloads",
     },
@@ -2813,7 +2920,8 @@ export const DIGITAL_TRANSFORMATION_DIGITAL_SHIFT = {
 
 export const DIGITAL_TRANSFORMATION_READY = {
   bgImage: "/digital-transformation/ready-bg.png",
-  title: "READY TO STOP RELYING ON REFERRALS AND START GETTING CLIENTS FROM GOOGLE?",
+  title:
+    "READY TO STOP RELYING ON REFERRALS AND START GETTING CLIENTS FROM GOOGLE?",
   para: `Whether you have no website, an outdated one, disconnected systems, or a site that is not generating results, we can help you fix it. HTSOL delivers digital transformation services that bring your brand, website, marketing, and internal systems together into one practical growth plan. Start with a free consultation and we will show you where you stand, what needs to happen next, and what the right scope looks like for your business.`,
   btnText: "Book a free consultation",
   btnLink: "/contact-us",
@@ -2822,13 +2930,13 @@ export const DIGITAL_TRANSFORMATION_READY = {
 
 export const DIGITAL_TRANSFORMATION_FAQS = [
   {
-    question: "I have a Google Business listing and I get referrals — do I really need a website?",
+    question:
+      "I have a Google Business listing and I get referrals — do I really need a website?",
     answer:
       "A Google Business listing helps people who already know what they are looking for. A website helps you win trust, explain your services clearly, rank for more searches, and convert more visitors into enquiries. It also gives you an asset you fully control. A listing alone is not a complete digital strategy.",
   },
   {
-    question:
-      "How much does a complete digital transformation cost?",
+    question: "How much does a complete digital transformation cost?",
     answer:
       "It depends on your starting point and what your business needs. Some businesses need branding, a new website, local SEO, and light automation. Others also need business process automation, CRM setup, or software modernization consulting. We scope projects based on your goals, current position, and priorities, then give you a clear breakdown of cost and deliverables.",
   },
@@ -2839,8 +2947,7 @@ export const DIGITAL_TRANSFORMATION_FAQS = [
       "That depends on the channels involved. Google Ads can generate enquiries quickly after launch. SEO usually takes longer to build, but its value compounds over time. Automation and system improvements may not directly bring in leads, but they improve follow-up, response speed, and conversion efficiency once leads start coming in.",
   },
   {
-    question:
-      "Can I start with just a website and add marketing later?",
+    question: "Can I start with just a website and add marketing later?",
     answer:
       "Yes. That is a common starting point. We often begin with brand and website work, then add local SEO, paid campaigns, content, and operational improvements over time. The key is planning it properly from the start so each stage connects to the next.",
   },
@@ -2851,20 +2958,17 @@ export const DIGITAL_TRANSFORMATION_FAQS = [
       "Yes. We work with trust-based service businesses where credibility, clarity, and local visibility matter. That includes healthcare, legal, and professional services. We understand how clients search, what information they need before contacting you, and how to structure a digital presence that supports those decisions. This also makes us a strong fit for digital transformation for healthcare clinics and other service-led businesses.",
   },
   {
-    question:
-      "Will I need to be heavily involved in the process?",
+    question: "Will I need to be heavily involved in the process?",
     answer:
       "Not heavily. We involve you in the decisions that need your input, such as brand direction, design approval, service details, and business priorities. We handle the strategy, writing, development, implementation, and optimisation work so you can stay focused on running the business.",
   },
   {
-    question:
-      "What if I already have a website but it is not working?",
+    question: "What if I already have a website but it is not working?",
     answer:
       "That is common. Sometimes the issue is poor messaging, weak SEO, slow performance, bad structure, or missing conversion paths. In other cases, the problem is that the website is not connected properly to your lead handling, reporting, or internal systems. We audit what is there, identify the real bottlenecks, and recommend the most practical fix.",
   },
   {
-    question:
-      "Do you write the website copy or do I need to provide it?",
+    question: "Do you write the website copy or do I need to provide it?",
     answer:
       "We write it. You give us the core information about your services, service areas, differentiators, and business goals. We turn that into clear, persuasive, SEO-friendly copy that speaks to your audience naturally and supports conversions.",
   },
@@ -2880,7 +2984,6 @@ export const DIGITAL_TRANSFORMATION_FAQS = [
       "We measure it. That includes traffic, rankings, calls, form submissions, lead quality, campaign data, and operational improvements where relevant. If your project includes workflow automation consulting, reporting automation, or system changes, we also track how those improvements support faster response times, cleaner workflows, and better efficiency.",
   },
 ];
-
 
 export const CEO_SKILLS = {
   skills: [
@@ -2898,7 +3001,7 @@ export const CEO_SKILLS = {
     { src: "/ceo/shopify.svg", label: "E-Commerce Growth" },
     { src: "/ceo/webflow.svg", label: "Search Engine Optimization" },
     { src: "/ceo/laravel.svg", label: "Web Performance & Speed" },
-  ]
+  ],
 };
 
 export const CEO_ABOUT_ME = {
@@ -2927,7 +3030,7 @@ export const CTO_SKILLS = {
     { src: "/ceo/shopify.svg", label: "REST API Development" },
     { src: "/ceo/photoshop.svg", label: "CMS Development" },
     { src: "/ceo/laravel.svg", label: "Web Performance Optimisation" },
-  ]
+  ],
 };
 
 export const CTO_ABOUT_ME = {
@@ -3111,3 +3214,326 @@ export const CTO_CTA = {
   ],
   className: "h-[300px] lg:h-[480px]! xl:h-[540px]!",
 };
+
+export const OUR_PORTFOLIO_TABS = [
+  "Digital Transformation",
+  "Website Design",
+  "Website Development",
+  "CGI Ads",
+  "Digital Marketing",
+  "Search Engine Optimization",
+  "Custom Software Dev",
+] as const;
+
+export interface OurPortfolioDesignCard {
+  image: string;
+  category: string;
+  label: string;
+}
+
+export interface OurPortfolioCgiVideo {
+  thumbnail: string;
+  title: string;
+  subtitle: string;
+  url: string;
+}
+
+export interface OurPortfolioCaseStudy {
+  logo: string;
+  company: string;
+  heading: string;
+  description: string;
+  services: string[];
+  images: string[];
+  accent: string;
+  imageLayout?: "default" | "monitor" | "seo" | "watch";
+}
+
+export const OUR_PORTFOLIO_DESIGN_CARDS: OurPortfolioDesignCard[] = [
+  { image: "/web-design-1.png", category: "Website Design", label: "Dental" },
+  { image: "/web-design-2.png", category: "Website Design", label: "THERAPIST" },
+  { image: "/web-design-3.png", category: "Website Design", label: "DENTIST" },
+  { image: "/web-design-6.png", category: "Website Design", label: "DENTIST" },
+  { image: "/web-design-4.png", category: "Website Design", label: "LOGISTICS" },
+  { image: "/web-design-5.png", category: "Website Design", label: "SMART HOME" },
+  { image: "/w-design-7.png", category: "Website Design", label: "DENTAL" },
+  { image: "/w-design-8.png", category: "Website Design", label: "DIGITAL MARKETING" },
+  { image: "/web-design-9.png", category: "Website Design", label: "DENTAL" },
+  { image: "/w-design-10.png", category: "Website Design", label: "DENTAL" },
+];
+
+export const OUR_PORTFOLIO_DEV_CARDS: OurPortfolioDesignCard[] = [
+  { image: "/web-dev-1.png", category: "Website Development", label: "SMILEFAST" },
+  { image: "/services/web-one.webp", category: "Website Development", label: "DENTAL" },
+  { image: "/services/web-two.webp", category: "Website Development", label: "NUYU DENTAL" },
+  { image: "/services/web-one.webp", category: "Website Development", label: "DENTIST" },
+  { image: "/web-dev-2.png", category: "Website Development", label: "BRITISH ACADEMY" },
+  {
+    image: "/services/web-one.webp",
+    category: "Website Development",
+    label: "DENTAL MARKETING AGENCY",
+  },
+  { image: "/services/web-two.webp", category: "Website Development", label: "DENTAL" },
+  {
+    image: "/services/web-one.webp",
+    category: "Website Development",
+    label: "DENTAL SOLUTIONS",
+  },
+  {
+    image: "/services/web-two.webp",
+    category: "Website Development",
+    label: "SPORTS DENTAL THERAPIST",
+  },
+  { image: "/services/web-one.webp", category: "Website Development", label: "DENTIST" },
+];
+
+export const OUR_PORTFOLIO_CGI_VIDEOS: OurPortfolioCgiVideo[] = [
+  {
+    thumbnail: "https://img.youtube.com/vi/t105qp6q2fY/maxresdefault.jpg",
+    title: "CGI gives you Wings",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/t105qp6q2fY?si=n5JlWqpeaAD_o__J",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/nn4cC3qRik0/maxresdefault.jpg",
+    title: "Kiwai X HtSol",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/nn4cC3qRik0?si=QkdFbM2hX1TCF06T",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/nvr9g1-7S8s/maxresdefault.jpg",
+    title: "PizzahutCGO X HTSol",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/nvr9g1-7S8s?si=L1wAjm231YJVl3Px",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/ifVhc0U0ZFg/maxresdefault.jpg",
+    title: "HTSol Showreel",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/ifVhc0U0ZFg?si=ye4Eavv3VqkQ9rzn",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/1UwBM6PiivM/maxresdefault.jpg",
+    title: "A Tribute to Arshad Nadeem",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/1UwBM6PiivM?si=Ohxot4MUOjNzcRe3",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/BDOPnNwhHpU/maxresdefault.jpg",
+    title: "Nayza Borjan Hoodie Mixed reality 3D Animated and CGI Video Ad",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/BDOPnNwhHpU?si=TnAu5Ylqrj147N9L",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/f_ZA1O9rpM0/maxresdefault.jpg",
+    title: "Nayza Borjan Jacket CGI Video",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/f_ZA1O9rpM0?si=lc3NrBZH5ddKbaq5",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/oS7-CxFz5a8/maxresdefault.jpg",
+    title: "HTSolutions x Burger O'Clock CGI Video Series",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/oS7-CxFz5a8?si=nlvbUknshGvUepqY",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/_1Tg5jmvg38/maxresdefault.jpg",
+    title: "HTSolutions x Burger O'Clock CGI Series Continued",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/_1Tg5jmvg38?si=WjmHziDOHj4jANQx",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/USNe095vuBI/maxresdefault.jpg",
+    title: "Burger O'Clock CGI video Ad x HTSol",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/USNe095vuBI?si=IFdeL8mL-Mtvrmh9",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/MZgfp3s3cgg/maxresdefault.jpg",
+    title: "CGI Video for a hoodie product.",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/MZgfp3s3cgg?si=Ttti2LlytbgHqrcf",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/4OLkrYvz_to/maxresdefault.jpg",
+    title: "Rolling Smart Watches CGI in Lahore By HTSolutions",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/4OLkrYvz_to?si=yyiimYgaLotipQHs",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/gA0lss9gxZo/maxresdefault.jpg",
+    title: "CGI for a Hair Saloon By HTSolutions",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/gA0lss9gxZo?si=mUuNLdnPwM7Cehp6",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/RmU91oIoSpk/maxresdefault.jpg",
+    title: "CGI Commercial",
+    subtitle: "2025",
+    url: "https://youtube.com/shorts/RmU91oIoSpk?si=Lxnh_XYCip9wKOYy",
+  },
+];
+
+export const OUR_PORTFOLIO_CASE_STUDIES: OurPortfolioCaseStudy[] = [
+  {
+    logo: "/logo.webp",
+    company: "Dentopia Marketing",
+    heading: "HIGH-IMPACT UX FOR\nDENTAL PROFESSIONALS",
+    description:
+      "With over a decade of clinical expertise, this international consultancy needed a digital ecosystem that matched their authority. We delivered a conversion-focused, award-nominated platform that turns professional trust into measurable practice growth.",
+    services: [
+      "Web Design & Development",
+      "Content Creation",
+      "CMS Management",
+      "Social Media Management",
+      "Branding & Design",
+      "Performance SEO",
+    ],
+    images: ["/mockup.png"],
+    accent: "/marketing-1.png",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Imogen Johnson",
+    heading: "ELEVATING ATHLETE\nORAL PERFORMANCE",
+    description:
+      "As a leader in the UK Sports Dentistry Association, Imogen Johnson required a digital platform that bridged elite sports science with patient-centered care. We built a high-performance, calm-centric interface that showcases her clinical research and advanced aesthetic treatments for the modern athlete.",
+    services: [
+      "Web Design & Development",
+      "Content Creation",
+      "Branding & Design",
+      "Social Media Management",
+      "Performance SEO",
+    ],
+    images: ["/services/web-two.webp", "/services/web-one.webp"],
+    accent: "/marketing-2.webp",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Imogen Johnson",
+    heading: "ELEVATING ATHLETE\nORAL PERFORMANCE",
+    description:
+      "As a leader in the UK Sports Dentistry Association, Imogen Johnson required a digital platform that bridged elite sports science with patient-centered care. We built a high-performance, calm-centric interface that showcases her clinical research and advanced aesthetic treatments for the modern athlete.",
+    services: [
+      "Web Design & Development",
+      "Content Creation",
+      "Branding & Design",
+      "Social Media Management",
+      "Performance SEO",
+    ],
+    images: ["/mockup 3.png"],
+    accent: "/marketing-3.webp",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Wriste Watch",
+    heading: "ELEVATING ATHLETE\nORAL PERFORMANCE",
+    description:
+      "As a leader in the UK Sports Dentistry Association, Imogen Johnson required a digital platform that bridged elite sports science with patient-centered care. We built a high-performance, calm-centric interface that showcases her clinical research and advanced aesthetic treatments for the modern athlete.",
+    services: ["Social Media Management", "Content Creation", "Branding & Design"],
+    images: ["/watch.png"],
+    accent: "/marketing-3.webp",
+    imageLayout: "watch",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Diamond Medical",
+    heading: "ELEVATING ATHLETE\nORAL PERFORMANCE",
+    description:
+      "As a leader in the UK Sports Dentistry Association, Imogen Johnson required a digital platform that bridged elite sports science with patient-centered care. We built a high-performance, calm-centric interface that showcases her clinical research and advanced aesthetic treatments for the modern athlete.",
+    services: ["Social Media Management", "Content Creation", "Branding & Design"],
+    images: ["/diamond.png"],
+    accent: "/diamond-bg.png",
+  },
+];
+
+export const OUR_PORTFOLIO_CUSTOM_DEV_CARDS: OurPortfolioCaseStudy[] = [
+  {
+    logo: "/cust-dev-logo.png",
+    company: "Htsol.ca",
+    heading: "HIGH-IMPACT UX FOR\nDENTAL PROFESSIONALS",
+    description:
+      "With over a decade of clinical expertise, this international consultancy needed a digital ecosystem that matched their authority. We delivered a conversion-focused, award-nominated platform that turns professional trust into measurable practice growth.",
+    services: ["Web Design & Development", "Social Media Management"],
+    images: ["/htsol.png"],
+    accent: "/cus-dev-1.png",
+    imageLayout: "monitor",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Smile Fast",
+    heading: "HIGH-IMPACT UX FOR\nDENTAL PROFESSIONALS",
+    description:
+      "With over a decade of clinical expertise, this international consultancy needed a digital ecosystem that matched their authority. We delivered a conversion-focused, award-nominated platform that turns professional trust into measurable practice growth.",
+    services: ["Web Design & Development", "Social Media Management"],
+    images: ["/cust-dev-2.png"],
+    accent: "/cus-dev-1.png",
+    imageLayout: "monitor",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Start Smiling",
+    heading: "HIGH-IMPACT UX FOR\nDENTAL PROFESSIONALS",
+    description:
+      "With over a decade of clinical expertise, this international consultancy needed a digital ecosystem that matched their authority. We delivered a conversion-focused, award-nominated platform that turns professional trust into measurable practice growth.",
+    services: ["Web Design & Development", "Social Media Management"],
+    images: ["/cust-dev-3.png"],
+    accent: "/cus-dev-1.png",
+    imageLayout: "monitor",
+  },
+];
+
+export const OUR_PORTFOLIO_SEO_CARDS: OurPortfolioCaseStudy[] = [
+  {
+    logo: "/logo.webp",
+    company: "Dr. sean",
+    heading: "Dr Sean Roberts",
+    description:
+      "With over a decade of clinical expertise, this international consultancy needed a digital ecosystem that matched their authority. We delivered a conversion-focused, award-nominated platform that turns professional trust into measurable practice growth.",
+    services: [
+      "Web Design & Development",
+      "Content Creation",
+      "CMS Management",
+      "Social Media Management",
+      "Branding & Design",
+      "Performance SEO",
+    ],
+    images: ["/seo-1.png"],
+    accent: "/cus-dev-1.png",
+    imageLayout: "seo",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Nuyu Dental",
+    heading: "Nuyu Dental & Clinic",
+    description:
+      "As a leader in the UK Sports Dentistry Association, Imogen Johnson required a digital platform that bridged elite sports science with patient-centered care. We built a high-performance, calm-centric interface that showcases her clinical research and advanced aesthetic treatments for the modern athlete.",
+    services: [
+      "Web Design & Development",
+      "Content Creation",
+      "Branding & Design",
+      "Social Media Management",
+      "Performance SEO",
+    ],
+    images: ["/seo-1.png"],
+    accent: "/cus-dev-1.png",
+    imageLayout: "seo",
+  },
+  {
+    logo: "/logo.webp",
+    company: "Dentopia",
+    heading: "DEntopia marketing",
+    description:
+      "As a leader in the UK Sports Dentistry Association, Imogen Johnson required a digital platform that bridged elite sports science with patient-centered care. We built a high-performance, calm-centric interface that showcases her clinical research and advanced aesthetic treatments for the modern athlete.",
+    services: [
+      "Web Design & Development",
+      "Content Creation",
+      "Branding & Design",
+      "Social Media Management",
+      "Performance SEO",
+    ],
+    images: ["/seo-1.png"],
+    accent: "/cus-dev-1.png",
+    imageLayout: "seo",
+  },
+];

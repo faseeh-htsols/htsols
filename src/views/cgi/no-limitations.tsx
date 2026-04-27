@@ -290,6 +290,7 @@ const NoLimitations = () => {
                               width={30}
                               height={30}
                               className="h-[30px] w-[30px]"
+                              fetchPriority="high"
                             />
                           </button>
                         </div>
@@ -322,6 +323,7 @@ const NoLimitations = () => {
                           width={30}
                           height={30}
                           className="h-[30px] w-[30px]"
+                          fetchPriority="high"
                         />
                       </button>
                     </div>

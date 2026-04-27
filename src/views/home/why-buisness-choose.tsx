@@ -39,10 +39,12 @@ export default function WhyBuisnessChoose() {
   return (
     <DoubleCurves
       up
-      className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]">
+      className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_97%,0_100%)]"
+    >
       <section
         ref={mainRef}
-        className="relative bg-[url(/why-home-bg.png)] bg-cover bg-no-repeat bg-right py-20  overflow-hidden">
+        className="relative bg-[url(/why-home-bg.webp)] bg-cover bg-no-repeat bg-right py-20  overflow-hidden"
+      >
         {/* <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[4%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-2 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] animate-pulse
@@ -55,7 +57,8 @@ export default function WhyBuisnessChoose() {
           {/* LEFT CONTENT */}
           <div
             className="bg-[#252528] overflow-hidden relative rounded-xl p-10 lg:p-12 text-white max-w-xl"
-            ref={sectionRef}>
+            ref={sectionRef}
+          >
             <div className="absolute top-0 left-0 bg-[#00A1A5] h-14 w-24 rounded-full blur-2xl"></div>
             <h2 className="text-3xl uppercase lg:text-3xl font-semibold font-primary leading-tight mb-10">
               Why Businesses Choose HTSOL Inc.
@@ -73,7 +76,8 @@ export default function WhyBuisnessChoose() {
                 {lists.map((list, idx) => (
                   <li
                     key={idx}
-                    className="font-semibold text-[22px] bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">
+                    className="font-semibold text-[22px] bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent"
+                  >
                     {list}
                   </li>
                 ))}

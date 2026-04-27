@@ -41,6 +41,7 @@ export const Footer: React.FC = () => {
                     height={300}
                     className="w-[260px] h-[70px] object-contain"
                     alt="HTSOLUTIONS LOGO"
+                    fetchPriority="high"
                   />
                 </Link>
               </div>
