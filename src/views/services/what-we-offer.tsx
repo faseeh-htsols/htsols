@@ -30,7 +30,6 @@ const WhatWeOffer = () => {
           <div className="min-w-0 w-full pt-0">
             <Accordion
               type="single"
-              defaultValue="0"
               className="w-full space-y-4 mb-12"
               collapsible
             >
@@ -72,7 +71,7 @@ const WhatWeOffer = () => {
                     </div>
                   </AccordionTrigger>
 
-                  <AccordionContent className="text-white">
+                  <AccordionContent forceMount className="text-white">
                     <div>
                       {item.images && (
                         <div className="grid grid-cols-2 gap-5">

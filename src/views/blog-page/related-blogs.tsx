@@ -1,13 +1,11 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import { IRelatedBlog } from "./main";
 import Link from "next/link";
-import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import type { Swiper as SwiperInstance } from "swiper";
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
 import DoubleCurves from "@/components/ui/double-curves";
@@ -114,8 +112,6 @@ type RelatedBlogsProps = {
 };
 
 const RelatedBlogs = ({ posts, post }: RelatedBlogsProps) => {
-  const swiperRef = useRef<SwiperInstance | null>(null);
-
   const items = posts ?? post ?? [];
   const count = items.length;
 
@@ -163,69 +159,28 @@ const RelatedBlogs = ({ posts, post }: RelatedBlogsProps) => {
     );
   }
 
-  // 3+ posts – Swiper with *manual* custom nav buttons (no default arrows)
+  // 3+ posts - Swiper autoplay without custom side controls.
   return renderShell(
-    <div className="relative">
-      {/* LEFT custom button */}
-      <div className="absolute top-1/2 -translate-y-1/2 left-0 z-10">
-        <button
-          onClick={() => swiperRef.current?.slidePrev()}
-          className="cursor-pointer border border-white/20 hover:border-white/40 h-[40px] w-[40px] flex justify-center items-center rounded-full bg-black/40"
-          aria-label="Previous">
-          <Image
-            src={"/left-arrow-blog.svg"}
-            alt="arrow"
-            width={25}
-            height={25}
-            className="w-[25px] h-[25px]"
-          />
-        </button>
-      </div>
-
-      {/* Swiper */}
-      <div className="px-[50px]">
-        <Swiper
-          modules={[Autoplay]}
-          spaceBetween={24}
-          slidesPerView={1}
-          breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 2 },
-          }}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          loop={items.length > 2}
-          onSwiper={(swiper) => {
-            swiperRef.current = swiper;
-          }}
-          className="px-6 md:px-10">
-          {items.map((post) => (
-            <SwiperSlide key={post.slug}>
-              <Card post={post} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-
-      {/* RIGHT custom button */}
-      <div className="absolute top-1/2 -translate-y-1/2 right-0 z-10">
-        <button
-          onClick={() => swiperRef.current?.slideNext()}
-          className="cursor-pointer border border-white/20 hover:border-white/40 h-[40px] w-[40px] flex justify-center items-center rounded-full bg-black/40"
-          aria-label="Next">
-          <Image
-            src={"/right-arrow-blog.svg"}
-            alt="arrow"
-            width={25}
-            height={25}
-            className="w-[25px] h-[25px]"
-          />
-        </button>
-      </div>
-    </div>,
+    <Swiper
+      modules={[Autoplay]}
+      spaceBetween={24}
+      slidesPerView={1}
+      breakpoints={{
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 2 },
+      }}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
+      loop={items.length > 2}>
+      {items.map((post) => (
+        <SwiperSlide key={post.slug}>
+          <Card post={post} />
+        </SwiperSlide>
+      ))}
+    </Swiper>,
   );
 };
 

@@ -1,10 +1,8 @@
 "use client";
 import Container from "@/components/ui/container";
 import HeadingTwo from "@/components/ui/heading-two";
-import Image from "next/image";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import emailjs from "@emailjs/browser";
 import type { FormikHelpers } from "formik";
 import { useRef, useState } from "react";
 import gsap from "gsap";
@@ -58,7 +56,8 @@ const Contact = () => {
       const headingEl = headingSplitRef.current;
       const paraEl = paraSplitRef.current;
       const formEl = formWrapRef.current;
-      if (!headingEl || !paraEl || !formEl) return;
+      const sectionEl = scopeRef.current;
+      if (!headingEl || !paraEl || !formEl || !sectionEl) return;
 
       // Split into words
       const headingSplit = new SplitType(headingEl, { types: "words" });
@@ -130,13 +129,13 @@ const Contact = () => {
           y: 0,
           duration: 0.8,
           ease: "power2.out",
-          scrollTrigger: {
-            trigger: formEl,
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-            invalidateOnRefresh: true,
+            scrollTrigger: {
+              trigger: sectionEl,
+              start: "top 65%",
+              toggleActions: "play none none none",
+              invalidateOnRefresh: true,
+            },
           },
-        },
       );
 
       // ✅ cleanup SplitType DOM changes
