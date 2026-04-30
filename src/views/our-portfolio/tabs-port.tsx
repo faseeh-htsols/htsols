@@ -3,7 +3,6 @@
 import { useState, useCallback, useRef, useEffect } from "react";
 import Image from "next/image";
 import Container from "@/components/ui/container";
-import { GlowButton } from "@/components/ui/GlowButton";
 import PopUpYoutube from "@/components/ui/popup-youtube";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
@@ -36,8 +35,6 @@ export default function TabsPort() {
   const [tabsStyle, setTabsStyle] = useState<React.CSSProperties>({});
   const [tabsHeight, setTabsHeight] = useState(0);
 
-  const [hideFixedTabs, setHideFixedTabs] = useState(false);
-
   const openVideo = useCallback((url: string) => {
     setPopupSrc(url);
     setPopupOpen(true);
@@ -64,14 +61,6 @@ export default function TabsPort() {
       top,
       behavior: "smooth",
     });
-  };
-
-  const closeFixedTabs = () => {
-    setHideFixedTabs(true);
-  };
-
-  const openFixedTabs = () => {
-    setHideFixedTabs(false);
   };
 
   useEffect(() => {
@@ -102,12 +91,14 @@ export default function TabsPort() {
       }
 
       if (sectionTopReached && !sectionBottomReached) {
+        const isMobile = window.innerWidth < 768;
         setTabsMode("fixed");
         setTabsStyle({
           position: "fixed",
-          top: `${headerOffset}px`,
-          left: `${containerLeft}px`,
-          width: `${containerWidth}px`,
+          top: isMobile ? "76px" : `${headerOffset}px`,
+          left: isMobile ? "16px" : `${containerLeft}px`,
+          right: isMobile ? "16px" : undefined,
+          width: isMobile ? "auto" : `${containerWidth}px`,
           zIndex: 80,
         });
         return;
@@ -146,7 +137,7 @@ export default function TabsPort() {
           {/* normal/original tabs always mounted */}
           <div
             ref={tabsOuterRef}
-            className={tabsMode === "fixed" && !hideFixedTabs ? "invisible pointer-events-none" : ""}
+            className={tabsMode === "fixed" ? "invisible pointer-events-none" : ""}
           >
             <div className="flex flex-wrap justify-center gap-3 bg-tertiary rounded-[10px] p-4">
               {OUR_PORTFOLIO_TABS.map((tab) => {
@@ -169,18 +160,18 @@ export default function TabsPort() {
           </div>
 
           {/* fixed floating tabs */}
-          {tabsMode === "fixed" && !hideFixedTabs && (
+          {tabsMode === "fixed" && (
             <div style={tabsStyle}>
-              <div className="flex items-center gap-3 bg-[#111111] rounded-[20px] p-4 shadow-lg">
+              <div className="flex items-center gap-2 bg-[#111111] rounded-2xl p-2 shadow-lg md:gap-3 md:rounded-[20px] md:p-4">
                 <button
                   type="button"
                   onClick={scrollToSectionTop}
-                  className="shrink-0 h-12 w-12 rounded-[14px] bg-[#05070d] text-white flex items-center justify-center text-2xl hover:cursor-pointer"
+                  className="shrink-0 h-10 w-10 rounded-xl bg-[#05070d] text-white flex items-center justify-center text-xl hover:cursor-pointer md:h-12 md:w-12 md:rounded-[14px] md:text-2xl"
                 >
                   ↑
                 </button>
 
-                <div className="flex-1 flex flex-wrap justify-center gap-3">
+                <div className="flex-1 min-w-0 flex gap-2 overflow-x-auto overscroll-x-contain md:flex-wrap md:justify-center md:gap-3">
                   {OUR_PORTFOLIO_TABS.map((tab) => {
                     const isActive = activeTab === tab;
                     return (
@@ -188,7 +179,7 @@ export default function TabsPort() {
                         key={tab}
                         onClick={() => setActiveTab(tab)}
                         className={`
-                  relative px-6 py-3 text-xs sm:text-sm font-semibold uppercase tracking-wider
+                  relative shrink-0 px-4 py-2.5 text-[10px] sm:text-xs md:px-6 md:py-3 md:text-sm font-semibold uppercase tracking-wider
                   transition-all duration-300 cursor-pointer whitespace-nowrap bg-[#010101] rounded-xl font-primary
                   ${isActive
                             ? "text-white bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]"
@@ -201,32 +192,10 @@ export default function TabsPort() {
                   })}
                 </div>
 
-                <button
-                  type="button"
-                  onClick={closeFixedTabs}
-                  className="shrink-0 h-12 w-12 rounded-[14px] bg-transparent text-white flex items-center justify-center text-3xl hover:cursor-pointer"
-                >
-                  ×
-                </button>
               </div>
             </div>
           )}
 
-          {tabsMode === "fixed" && hideFixedTabs && (
-            <div className="fixed bottom-6 right-6 z-90">
-              <button
-                type="button"
-                onClick={openFixedTabs}
-                className="h-14 w-14 rounded-xl border border-white bg-black flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.35)] hover:cursor-pointer"
-                aria-label="Open tabs"
-              >
-                <span className="flex flex-col gap-1.5">
-                  <span className="block h-0.5 w-5 rounded-full bg-white" />
-                  <span className="block h-0.5 w-5 rounded-full bg-white" />
-                </span>
-              </button>
-            </div>
-          )}
         </div>
 
         {/* ── TAB CONTENT ── */}
