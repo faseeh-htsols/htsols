@@ -120,23 +120,21 @@ const Contact = () => {
         "-=0.25",
       );
 
-      // Form fade from bottom
-      gsap.fromTo(
-        formEl,
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power2.out",
-            scrollTrigger: {
-              trigger: sectionEl,
-              start: "top 65%",
-              toggleActions: "play none none none",
-              invalidateOnRefresh: true,
-            },
-          },
-      );
+      // Keep the form available by default; only add a small one-time reveal.
+      gsap.from(formEl, {
+        autoAlpha: 0,
+        y: 24,
+        duration: 0.45,
+        ease: "power2.out",
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: sectionEl,
+          start: "top 92%",
+          toggleActions: "play none none none",
+          once: true,
+          invalidateOnRefresh: true,
+        },
+      });
 
       // ✅ cleanup SplitType DOM changes
       return () => {
