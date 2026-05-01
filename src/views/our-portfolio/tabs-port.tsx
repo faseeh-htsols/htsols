@@ -48,7 +48,7 @@ export default function TabsPort() {
   const scrollToSectionTop = () => {
     if (!tabsOuterRef.current) return;
 
-    const headerOffset = 96;
+    const headerOffset = window.innerWidth < 768 ? 104 : 96;
     const extraGap = tabsHeight + 20;
 
     const top =
@@ -70,7 +70,8 @@ export default function TabsPort() {
 
       if (!section || !tabs) return;
 
-      const headerOffset = 96;
+      const isMobile = window.innerWidth < 768;
+      const headerOffset = isMobile ? 104 : 96;
       const sectionRect = section.getBoundingClientRect();
       const tabsRect = tabs.getBoundingClientRect();
 
@@ -91,15 +92,14 @@ export default function TabsPort() {
       }
 
       if (sectionTopReached && !sectionBottomReached) {
-        const isMobile = window.innerWidth < 768;
         setTabsMode("fixed");
         setTabsStyle({
           position: "fixed",
-          top: isMobile ? "76px" : `${headerOffset}px`,
+          top: `${headerOffset}px`,
           left: isMobile ? "16px" : `${containerLeft}px`,
           right: isMobile ? "16px" : undefined,
           width: isMobile ? "auto" : `${containerWidth}px`,
-          zIndex: 80,
+          zIndex: 20,
         });
         return;
       }
@@ -111,7 +111,7 @@ export default function TabsPort() {
         right: 0,
         bottom: 0,
         width: "100%",
-        zIndex: 80,
+        zIndex: 20,
       });
     };
 
