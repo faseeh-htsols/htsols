@@ -102,7 +102,7 @@ export default function TabsPort() {
           zIndex: 20,
         });
         return;
-      }
+      } 
 
       setTabsMode("bottom");
       setTabsStyle({
