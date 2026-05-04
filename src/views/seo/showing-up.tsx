@@ -10,17 +10,17 @@ const TOP_ITEMS = [
     {
         title: "KEYWORD RESEARCH",
         icon: "/icon-bg.svg",
-        centerIcon: "/icon-1.svg",
+        centerIcon: "/seo-icon-1.svg",
     },
     {
         title: "CLEAR REPORTING",
         icon: "/icon-bg.svg",
-        centerIcon: "/icon-1.svg",
+        centerIcon: "/seo-icon-2.svg",
     },
     {
         title: "RANK GROWTH",
         icon: "/icon-bg.svg",
-        centerIcon: "/icon-1.svg",
+        centerIcon: "/seo-icon-3.svg",
     },
 ];
 

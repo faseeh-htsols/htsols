@@ -34,7 +34,7 @@ interface AccordionItemDigitalType {
 export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
   {
     title: "CGI Services",
-    icon: "/services/tab-icon.svg",
+    icon: "/services/services-icon-1.svg",
     subHeading: "Unlock the Power of High-Quality Visuals for Your Business",
     para: "At HTSOL Inc., we specialize in <b>CGI (Computer-Generated Imagery)</b> that transforms ideas into visually captivating realities. Whether you're in need of realistic 3D visualizations, animated models, or immersive environments, our CGI services are tailored to elevate your brand and make a lasting impact on your audience.",
     subHeading2: "What We Offer:",
@@ -65,7 +65,7 @@ export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
   },
   {
     title: "Staff Augmentation",
-    icon: "/services/tab-icon.svg",
+    icon: "/services/services-icon-2.svg",
     subHeading: "Get the Right Talent to Fuel Your Success",
     para: "Finding the right team for your project can be challenging, but HTSOL Inc. makes it easy with <b>Staff Augmentation</b> services that provide you with access to skilled professionals when and where you need them. Whether you're looking to expand your team temporarily or require specialized expertise, we offer customized solutions to meet your unique business needs.",
     subHeading2: "Our Staff Augmentation Services Include:",
@@ -92,7 +92,7 @@ export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
   },
   {
     title: "Digital Transformation",
-    icon: "/services/tab-icon.svg",
+    icon: "/services/services-icon-3.svg",
     subHeading: "Embrace the Future with Innovative Solutions",
     para: "In today’s fast-paced digital world, staying ahead requires more than just keeping up—it requires <b>Digital Transformation.<b/> At HTSOL Inc., we help businesses evolve by adopting digital technologies that streamline operations, enhance customer experiences, and drive growth. Our team of experts will guide you through every step of the transformation journey, ensuring your business is future-ready.",
     subHeading2: "Our Digital Transformation Services Include:",
@@ -123,7 +123,7 @@ export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
   },
   {
     title: "Digital Marketing Strategy Development",
-    icon: "/services/tab-icon.svg",
+    icon: "/services/services-icon-4.svg",
     para: "A well-crafted plan makes everything else easier. We begin with a thorough audit of your digital presence and competitive landscape. Then, we build a channel-specific strategy designed to drive lead generation, engagement, and conversions.",
     subHeading2: "What to expect:",
     btnText: "View Portfolio",
@@ -142,7 +142,7 @@ export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
   },
   {
     title: "Search Engine Optimization (SEO)",
-    icon: "/services/tab-icon.svg",
+    icon: "/services/services-icon-5.svg",
     para: "SEO is more than just adding keywords. We combine AI-powered automation with proven SEO techniques to enhance your visibility in organic search results.",
     subHeading2: "Our approach covers:",
     btnText: "View Portfolio",
@@ -164,7 +164,7 @@ export const SERVICES_SERVICES_OFFERED_ACCORDION: AccordionItemType[] = [
   },
   {
     title: "Web Design & Development",
-    icon: "/services/tab-icon.svg",
+    icon: "/services/services-icon-6.svg",
     para: "Your website should be easy to navigate and trust. At HTSOL Inc., we build mobile-friendly, user-centric websites designed to guide visitors smoothly toward their goals. <br/><br/>Whether you're starting from scratch or revamping an existing site, we focus on:",
     btnText: "View Portfolio",
     btnUrl: "/services/website-development",
@@ -635,27 +635,27 @@ export const DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION: AccordionItemDigitalT
 
 export const SERVICES_WHY = [
   {
-    icon: "/services/why-icon-1.svg",
+    icon: "/services/choose-icon-1.svg",
     heading: "Proven Track Record of Success",
     para: "We don’t rely on vague promises. Instead, we focus on tracking real performance metrics like lead quality, conversions, and revenue growth. With HTSOL, you’ll always see measurable progress.",
   },
   {
-    icon: "/services/why-icon-2.svg",
+    icon: "/services/choose-icon-2.svg",
     heading: "Custom Strategies Tailored to Your Business",
     para: "Every business is unique. That's why we craft strategies tailored specifically to your industry, goals, and target audience. When you need flexibility, we adapt our approach to meet your changing priorities.",
   },
   {
-    icon: "/services/why-icon-3.svg",
+    icon: "/services/choose-icon-3.svg",
     heading: "Human-Driven AI",
     para: "While AI can enhance efficiency, all our decisions are still made by experienced professionals. Our strategies, messaging, and priorities are always human-led to ensure your brand’s voice remains authentic.",
   },
   {
-    icon: "/services/why-icon-2.svg",
+    icon: "/services/choose-icon-4.svg",
     heading: "Cross-Industry Expertise",
     para: "We support businesses across various industries, including healthcare and eCommerce. This diverse experience helps us recognize challenges quickly while respecting what makes your business special.",
   },
   {
-    icon: "/services/why-icon-3.svg",
+    icon: "/services/choose-icon-5.svg",
     heading: "Competitive Pricing",
     para: "Your budget matters, and we're here to offer flexible pricing options that align with your goals. We ensure you get the best value without overcommitting.",
   },
@@ -783,17 +783,17 @@ export const DIGITAL_MARKETING_FAQS = [
 export const SERVICE_BUISNESS = [
   {
     heading: "Comprehensive Audits",
-    image: "/website/service-icon-2.svg",
+    image: "/services/what-icon-1.svg",
     para: "We assess what’s working and identify any roadblocks.",
   },
   {
     heading: "Practical Roadmap",
-    image: "/website/service-icon-2.svg",
+    image: "/services/what-icon-2.svg",
     para: "A clear, actionable plan—no jargon, just a path forward.",
   },
   {
     heading: "Continuous Improvements",
-    image: "/website/service-icon-3.svg",
+    image: "/services/what-icon-3.svg",
     para: "We help drive qualified leads, conversions, and long-term growth.",
   },
 ];
