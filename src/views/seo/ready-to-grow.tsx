@@ -7,19 +7,19 @@ import Image from "next/image";
 
 const WEB_DEV_SERVICES_WE_OFFER = [
   {
-    icon: "/seo-icon.svg",
+    icon: "/invest-icon-1.svg",
     heading: "Consistent lead flow",
   },
   {
-    icon: "/seo-icon.svg",
+    icon: "/invest-icon-2.svg",
     heading: "Lower acquisition costs over time",
   },
   {
-    icon: "/seo-icon.svg",
+    icon: "/invest-icon-3.svg",
     heading: "Stronger brand trust",
   },
   {
-    icon: "/seo-icon.svg",
+    icon: "/invest-icon-4.svg",
     heading: "Better performance across all channels",
   },
 ];
