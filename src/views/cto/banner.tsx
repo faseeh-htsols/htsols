@@ -11,11 +11,11 @@ const Banner = () => {
           <div className="relative z-10 w-[80%]">
             <div className="relative mb-6 sm:mb-8 flex items-center justify-center gap-6">
               <div className="h-px w-[80%] bg-white/25" />
-              <div className="flex items-center gap-4 bg-transparent">
+              <div className="flex items-center justify-center gap-4 bg-transparent">
                 <Link
                   href="https://www.linkedin.com/in/qamar-rafique/"
                   target="_blank"
-                  className="w-8 h-8 opacity-90 hover:opacity-100"
+                  className="w-8 h-8 opacity-90 hover:opacity-100 flex justify-center"
                 >
                   <Image
                     src={"/ceo/linkedin.svg"}
