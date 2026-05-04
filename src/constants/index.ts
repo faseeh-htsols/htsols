@@ -374,7 +374,7 @@ export const DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION: AccordionItemDigitalT
   [
     {
       title: "Search Engine Optimization (SEO)",
-      icon: "/services/tab-icon.svg",
+      icon: "/marketing-service-1.svg",
       para: `Search engine optimization forms the foundation of long-term online visibility. When your website appears in relevant search results, it becomes easier for potential customers to find and trust your business.
     <br/><br/>
     Our <b>SEO specialists</b> focus on improving your website’s presence on search engines such as Google so your business can attract users who are actively searching for your services.
@@ -405,7 +405,7 @@ export const DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION: AccordionItemDigitalT
     },
     {
       title: "Pay-Per-Click Advertising (PPC)",
-      icon: "/services/tab-icon.svg",
+      icon: "/marketing-service-2.svg",
       para: `Pay-per-click advertising allows businesses to reach targeted audiences quickly through platforms such as <b>Google Ads</b> and <b>Microsoft Ads.</b>
     <br/><br/>
     When campaigns are planned correctly, PPC can help businesses generate qualified leads while maintaining control over advertising budgets.
@@ -435,7 +435,7 @@ export const DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION: AccordionItemDigitalT
     },
     {
       title: "Social Media Marketing",
-      icon: "/services/tab-icon.svg",
+      icon: "/marketing-service-3.svg",
       para: `Social media plays an important role in how businesses build relationships with their audiences. It allows companies to communicate directly with customers while strengthening brand recognition.
     <br/><br/>
     Our <b>social media marketing</b> team helps businesses connect with their audience through thoughtful content and consistent engagement.
@@ -464,7 +464,7 @@ export const DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION: AccordionItemDigitalT
     },
     {
       title: "Social Media Management",
-      icon: "/services/tab-icon.svg",
+      icon: "/marketing-service-4.svg",
       para: `Effective social media management requires more than occasional posts. It requires strategic planning, creative content and consistent engagement.
     <br/><br/>
     At HTSOL, we develop comprehensive social media management strategies designed to grow your audience and strengthen your brand identity.
@@ -495,7 +495,7 @@ export const DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION: AccordionItemDigitalT
     },
     {
       title: "Digital Marketing Strategy",
-      icon: "/services/tab-icon.svg",
+      icon: "/marketing-service-5.svg",
       para: `Successful digital marketing begins with a clear strategy. Without a well-defined plan, marketing campaigns often lack direction and measurable outcomes.
     <br/><br/>
     HTSOL develops comprehensive digital marketing strategies based on research, analytics and industry insights. We analyze your brand positioning, competitive landscape and target audience to determine the most effective marketing channels.
@@ -526,7 +526,7 @@ export const DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION: AccordionItemDigitalT
     },
     {
       title: "Affiliate Marketing",
-      icon: "/services/tab-icon.svg",
+      icon: "/marketing-service-6.svg",
       para: `Affiliate marketing allows businesses to expand their reach and increase sales through trusted partners and publishers.
     <br/><br/>
     HTSOL manages affiliate marketing programs that connect your brand with relevant websites, review platforms and content creators who promote your products or services.
@@ -557,7 +557,7 @@ export const DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION: AccordionItemDigitalT
     },
     {
       title: "Content Marketing",
-      icon: "/services/tab-icon.svg",
+      icon: "/marketing-service-7.svg",
       para: `Content marketing helps businesses educate their audience while building trust and improving search engine visibility.
     <br/><br/>
     Well-written content answers real questions and helps potential customers understand how your services can support their needs.
@@ -584,7 +584,7 @@ export const DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION: AccordionItemDigitalT
     },
     {
       title: "Email Marketing",
-      icon: "/services/tab-icon.svg",
+      icon: "/marketing-service-8.svg",
       para: `Email marketing remains one of the most effective ways to maintain communication with customers and nurture potential leads.
     <br/><br/>
     A thoughtful email strategy helps businesses share useful information, strengthen customer relationships, and encourage repeat engagement.
@@ -608,7 +608,7 @@ export const DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION: AccordionItemDigitalT
     },
     {
       title: "Conversion Rate Optimization (CRO)",
-      icon: "/services/tab-icon.svg",
+      icon: "/marketing-service-9.svg",
       para: `Driving traffic to your website is only one part of digital marketing. Turning visitors into leads and customers is equally important.
     <br/><br/>
     <b>Conversion rate optimization (CRO)</b> focuses on improving the elements of your website that influence user decisions.
@@ -1664,21 +1664,25 @@ export const MISSISSAUGA_AGENCY = {
       id: "rapid-launch",
       heading: "Rapid Launch",
       para: "Your site is typically live within four weeks—from discovery to launch.",
+      icon: "/location-agancy-1.svg",
     },
     {
       id: "seo-optimized",
       heading: "SEO Optimized",
       para: "Every page is structured for both search engines and real humans.",
+      icon: "/location-agancy-2.svg",
     },
     {
       id: "full-ownership",
       heading: "Full Ownership",
       para: "You own everything: your domain, hosting, code, and CMS logins.",
+      icon: "/location-agancy-3.svg",
     },
     {
       id: "strategic-growth",
       heading: "Strategic Growth",
       para: "We stay involved after launch—monitoring performance, making improvements, scaling with you.",
+      icon: "/location-agancy-4.svg",
     },
     {
       id: "agency-image",
@@ -1689,6 +1693,7 @@ export const MISSISSAUGA_AGENCY = {
       id: "dedicated-support",
       heading: "Dedicated Support",
       para: "One point of contact for design, development, and marketing questions.",
+      icon: "/location-agancy-5.svg",
     },
   ],
 };
@@ -1698,42 +1703,50 @@ export const MISSISSAUGA_SERVICES = {
   highlight: "Mississauga",
   services: [
     {
-      icon: "/services/why-icon-1.svg",
+      icon: "/location-service-1.svg",
+      hoverIcon: "/location-service-hover-1.svg",
       heading: "Custom Website Design",
       para: `Every site we build starts from scratch — no templates, no page builders, no recycled layouts. We design around your brand, your audience, and your specific business goals. Whether you're a service business, professional firm, clinic, or local retailer, the design reflects who you are and what you want visitors to do.`,
     },
     {
-      icon: "/services/why-icon-2.svg",
+      icon: "/location-service-2.svg",
+      hoverIcon: "/location-service-hover-2.svg",
       heading: "Web Development",
       para: `Clean, performant code built on modern frameworks. We develop sites that load fast, run reliably, and can grow with your business. Built on Next.js and modern web standards — not WordPress themes stitched together and hoped for the best.`,
     },
     {
-      icon: "/services/why-icon-3.svg",
+      icon: "/location-service-3.svg",
+      hoverIcon: "/location-service-hover-3.svg",
       heading: "Mobile-First Design",
       para: `More than half of your visitors will find you on a phone. We build mobile-first as a baseline — not as an afterthought. Every layout, every button, every form works exactly as intended on any screen size.`,
     },
     {
-      icon: "/services/why-icon-2.svg",
+      icon: "/location-service-4.svg",
+      hoverIcon: "/location-service-hover-4.svg",
       heading: "SEO-Ready Foundations",
       para: `Every HTSOL website ships with clean site architecture, proper metadata, schema markup where relevant, fast Core Web Vitals, and a structure that makes it easy for Google to understand and rank your pages. You won't need to hire someone to 'fix the SEO' six months after launch.`,
     },
     {
-      icon: "/services/why-icon-2.svg",
+      icon: "/location-service-5.svg",
+      hoverIcon: "/location-service-hover-5.svg",
       heading: "CMS Setup & Training",
       para: `We set up a content management system that your team can actually use — no developer needed for everyday updates. Add blog posts, update service pages, change images, swap out offers — all without touching a line of code.`,
     },
     {
-      icon: "/services/why-icon-3.svg",
+      icon: "/location-service-6.svg",
+      hoverIcon: "/location-service-hover-6.svg",
       heading: "Landing Pages for Campaigns",
       para: `Running Google Ads or Meta campaigns? A dedicated landing page purpose-built for a specific offer converts significantly better than sending paid traffic to your homepage. We design and build campaign-specific landing pages that work with your ads, not against them.`,
     },
     {
-      icon: "/services/why-icon-2.svg",
+      icon: "/location-service-7.svg",
+      hoverIcon: "/location-service-hover-7.svg",
       heading: "Website Redesigns",
       para: `If your current site is slow, outdated, or losing you leads, we can redesign it — while protecting your existing SEO value through proper migration planning, redirect strategy, and content preservation.`,
     },
     {
-      icon: "/services/why-icon-2.svg",
+      icon: "/location-service-8.svg",
+      hoverIcon: "/location-service-hover-8.svg",
       heading: "E-Commerce Development",
       para: `We build conversion-focused e-commerce sites on Shopify and WooCommerce for Mississauga retailers looking to sell online with a store that's easy to manage and built to grow.`,
     },
@@ -1842,37 +1855,37 @@ export const MISSISSAUGA_WORK = {
   para: `We work with a wide range of local businesses across Mississauga and the wider GTA. A few of the industries we work with regularly:`,
   services: [
     {
-      icon: "/website/web-services-icon-1-1.svg",
+      icon: "/location-work-1.svg",
       heading: "Professional services",
       para: `accountants, lawyers, consultants, financial advisors`,
     },
     {
-      icon: "/website/web-services-icon-2.svg",
+      icon: "/location-work-2.svg",
       heading: "Healthcare and wellness",
       para: `clinics, dental practices, physio, specialists`,
     },
     {
-      icon: "/website/web-services-icon-3.svg",
+      icon: "/location-work-3.svg",
       heading: "Trades and home services",
       para: `contractors, electricians, plumbers, landscapers`,
     },
     {
-      icon: "/website/web-services-icon-3.svg",
+      icon: "/location-work-4.svg",
       heading: "Retail and e-commerce",
       para: `local shops, product brands, online stores`,
     },
     {
-      icon: "/website/web-services-icon-3.svg",
+      icon: "/location-work-5.svg",
       heading: "Restaurants and hospitality",
       para: `cafes, catering, event venues`,
     },
     {
-      icon: "/website/web-services-icon-3.svg",
+      icon: "/location-work-6.svg",
       heading: "Technology and SaaS",
       para: `startups and scale-ups needing a platform to match their product`,
     },
     {
-      icon: "/website/web-services-icon-3.svg",
+      icon: "/location-work-7.svg",
       heading: "Real estate professionals",
       para: `agents, developers, property managers`,
     },
@@ -2987,7 +3000,7 @@ export const DIGITAL_TRANSFORMATION_FAQS = [
 
 export const CEO_SKILLS = {
   skills: [
-    { src: "/ceo/figma.svg", label: "Digital Growth Strategy" },
+    { src: "/ceo/growth.svg", label: "Digital Growth Strategy" },
     { src: "/ceo/wordpress.svg", label: "Dental Marketing" },
     { src: "/ceo/elementor.svg", label: "Healthcare Digital Marketing" },
     { src: "/ceo/vscode.svg", label: "Mental Health Clinic Growth" },
@@ -3251,29 +3264,69 @@ export interface OurPortfolioCaseStudy {
 
 export const OUR_PORTFOLIO_DESIGN_CARDS: OurPortfolioDesignCard[] = [
   { image: "/web-design-1.png", category: "Website Design", label: "Dental" },
-  { image: "/web-design-2.png", category: "Website Design", label: "THERAPIST" },
+  {
+    image: "/web-design-2.png",
+    category: "Website Design",
+    label: "THERAPIST",
+  },
   { image: "/web-design-3.png", category: "Website Design", label: "DENTIST" },
   { image: "/web-design-6.png", category: "Website Design", label: "DENTIST" },
-  { image: "/web-design-4.png", category: "Website Design", label: "LOGISTICS" },
-  { image: "/web-design-5.png", category: "Website Design", label: "SMART HOME" },
+  {
+    image: "/web-design-4.png",
+    category: "Website Design",
+    label: "LOGISTICS",
+  },
+  {
+    image: "/web-design-5.png",
+    category: "Website Design",
+    label: "SMART HOME",
+  },
   { image: "/w-design-7.png", category: "Website Design", label: "DENTAL" },
-  { image: "/w-design-8.png", category: "Website Design", label: "DIGITAL MARKETING" },
+  {
+    image: "/w-design-8.png",
+    category: "Website Design",
+    label: "DIGITAL MARKETING",
+  },
   { image: "/web-design-9.png", category: "Website Design", label: "DENTAL" },
   { image: "/w-design-10.png", category: "Website Design", label: "DENTAL" },
 ];
 
 export const OUR_PORTFOLIO_DEV_CARDS: OurPortfolioDesignCard[] = [
-  { image: "/web-dev-1.png", category: "Website Development", label: "SMILEFAST" },
-  { image: "/services/web-one.webp", category: "Website Development", label: "DENTAL" },
-  { image: "/services/web-two.webp", category: "Website Development", label: "NUYU DENTAL" },
-  { image: "/services/web-one.webp", category: "Website Development", label: "DENTIST" },
-  { image: "/web-dev-2.png", category: "Website Development", label: "BRITISH ACADEMY" },
+  {
+    image: "/web-dev-1.png",
+    category: "Website Development",
+    label: "SMILEFAST",
+  },
+  {
+    image: "/services/web-one.webp",
+    category: "Website Development",
+    label: "DENTAL",
+  },
+  {
+    image: "/services/web-two.webp",
+    category: "Website Development",
+    label: "NUYU DENTAL",
+  },
+  {
+    image: "/services/web-one.webp",
+    category: "Website Development",
+    label: "DENTIST",
+  },
+  {
+    image: "/web-dev-2.png",
+    category: "Website Development",
+    label: "BRITISH ACADEMY",
+  },
   {
     image: "/services/web-one.webp",
     category: "Website Development",
     label: "DENTAL MARKETING AGENCY",
   },
-  { image: "/services/web-two.webp", category: "Website Development", label: "DENTAL" },
+  {
+    image: "/services/web-two.webp",
+    category: "Website Development",
+    label: "DENTAL",
+  },
   {
     image: "/services/web-one.webp",
     category: "Website Development",
@@ -3284,7 +3337,11 @@ export const OUR_PORTFOLIO_DEV_CARDS: OurPortfolioDesignCard[] = [
     category: "Website Development",
     label: "SPORTS DENTAL THERAPIST",
   },
-  { image: "/services/web-one.webp", category: "Website Development", label: "DENTIST" },
+  {
+    image: "/services/web-one.webp",
+    category: "Website Development",
+    label: "DENTIST",
+  },
 ];
 
 export const OUR_PORTFOLIO_CGI_VIDEOS: OurPortfolioCgiVideo[] = [
@@ -3430,7 +3487,11 @@ export const OUR_PORTFOLIO_CASE_STUDIES: OurPortfolioCaseStudy[] = [
     heading: "ELEVATING ATHLETE\nORAL PERFORMANCE",
     description:
       "As a leader in the UK Sports Dentistry Association, Imogen Johnson required a digital platform that bridged elite sports science with patient-centered care. We built a high-performance, calm-centric interface that showcases her clinical research and advanced aesthetic treatments for the modern athlete.",
-    services: ["Social Media Management", "Content Creation", "Branding & Design"],
+    services: [
+      "Social Media Management",
+      "Content Creation",
+      "Branding & Design",
+    ],
     images: ["/watch.png"],
     accent: "/marketing-3.webp",
     imageLayout: "watch",
@@ -3441,7 +3502,11 @@ export const OUR_PORTFOLIO_CASE_STUDIES: OurPortfolioCaseStudy[] = [
     heading: "ELEVATING ATHLETE\nORAL PERFORMANCE",
     description:
       "As a leader in the UK Sports Dentistry Association, Imogen Johnson required a digital platform that bridged elite sports science with patient-centered care. We built a high-performance, calm-centric interface that showcases her clinical research and advanced aesthetic treatments for the modern athlete.",
-    services: ["Social Media Management", "Content Creation", "Branding & Design"],
+    services: [
+      "Social Media Management",
+      "Content Creation",
+      "Branding & Design",
+    ],
     images: ["/diamond.png"],
     accent: "/diamond-bg.png",
   },

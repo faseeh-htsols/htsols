@@ -23,7 +23,12 @@ const SeoMain = () => {
       <SeoWorks />
       <SeoMethodology />
       <ReadyToGrow />
-      <FAQSection bgColor="#0F0F0F" faqs={SEO_FAQS} heading={true} accordionbgtransparent />
+      <FAQSection
+        bgColor="#0F0F0F"
+        faqs={SEO_FAQS}
+        heading={true}
+        accordionbgtransparent
+      />
       {/* <ClientsSection /> */}
       <div id="contact-form">
         <ContactForm />
