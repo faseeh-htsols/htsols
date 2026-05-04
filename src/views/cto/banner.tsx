@@ -5,7 +5,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="bg-[url(/cto/cto-banner-back.webp)] bg-cover bg-center pt-14 sm:pt-20">
+    <div className="bg-[url(/cto/cto-banner-back.webp)] bg-cover bg-center pt-36 lg:pt-20">
       <Container>
         <div className="relative flex flex-col lg:flex-row items-center justify-between min-h-[520px] md:min-h-[560px]">
           <div className="relative z-10 w-[80%]">
@@ -13,9 +13,10 @@ const Banner = () => {
               <div className="h-px w-[80%] bg-white/25" />
               <div className="flex items-center gap-4 bg-transparent">
                 <Link
-                  href="https://www.linkedin.com/in/qamar-rafique-736b7b210/"
+                  href="https://www.linkedin.com/in/qamar-rafique/"
                   target="_blank"
-                  className="w-8 h-8 opacity-90 hover:opacity-100">
+                  className="w-8 h-8 opacity-90 hover:opacity-100"
+                >
                   <Image
                     src={"/ceo/linkedin.svg"}
                     alt="LinkedIn"
@@ -29,7 +30,8 @@ const Banner = () => {
             </div>
             <div
               className="
-                relative w-full border-[6px] border-white/70 px-6 sm:px-10 py-8 sm:py-10 bg-black/20 backdrop-blur-[2px] lg:pr-[160px] text-center">
+                relative w-full border-[6px] border-white/70 px-6 sm:px-10 py-8 sm:py-10 bg-black/20 backdrop-blur-[2px] lg:pr-[160px] text-center"
+            >
               <p className="font-primary text-center uppercase tracking-[0.22em] text-[#00838A] text-lg sm:text-3xl">
                 Meet
               </p>
@@ -38,13 +40,16 @@ const Banner = () => {
               </h1>
               <h2 className="font-sans font-semibold text-center mt-5">
                 <span className="relative text-2xl sm:text-3xl lg:text-4xl inline-block">
-                  <span className="relative z-2">CTO & TECHNICAL ARCHITECT</span>
+                  <span className="relative z-2">
+                    CTO & TECHNICAL ARCHITECT
+                  </span>
                   <span
                     className="absolute bottom-1.5 left-0 w-full h-2 sm:h-3 bg-primary"
                     style={{
                       background:
                         "linear-gradient(90deg, #075B65 0%, #00838A 37.02%, #328A99 81.25%)",
-                    }}></span>
+                    }}
+                  ></span>
                 </span>
               </h2>
             </div>
