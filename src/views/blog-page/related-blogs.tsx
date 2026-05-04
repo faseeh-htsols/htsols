@@ -33,9 +33,9 @@ const Card = ({ post }: { post: IRelatedBlog }) => {
 
       <div className="p-5">
         <div className="flex items-center justify-between gap-3 mb-3">
-          <span className="text-white text-xs uppercase tracking-wider font-semibold bg-linear-to-r from-[#00A1A5]/50 to-[#00A1A5] px-4 py-1.5 rounded-full">
+          {/* <span className="text-white text-xs uppercase tracking-wider font-semibold bg-linear-to-r from-[#00A1A5]/50 to-[#00A1A5] px-4 py-1.5 rounded-full">
             Category
-          </span>
+          </span> */}
 
           <div className="flex flex-wrap gap-2">
             {tags.slice(0, 3).map((tag, index) => (
