@@ -93,7 +93,7 @@ const Banner = () => {
                   />
                 </Link>
                 <Link
-                  href="https://www.linkedin.com/in/mfaseehullah/"
+                  href="https://www.linkedin.com/in/muhammad-faseeh-ullah-305689170/"
                   target="_blank"
                   className="w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100"
                 >
