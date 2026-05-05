@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Button from "../ui/Button";
 import GlowButton from "../ui/GlowButton";
 
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
@@ -12,6 +11,24 @@ import { NAV_ITEMS } from "@/constants";
 export const Navbar: React.FC = () => {
   const [open, setOpen] = React.useState(false);
   const [hideDesktopDropdown, setHideDesktopDropdown] = React.useState(false);
+  const [expandedMobileItems, setExpandedMobileItems] = React.useState<
+    Record<string, boolean>
+  >({});
+
+  const handleDrawerOpenChange = (nextOpen: boolean) => {
+    setOpen(nextOpen);
+
+    if (!nextOpen) {
+      setExpandedMobileItems({});
+    }
+  };
+
+  const toggleMobileItem = (name: string) => {
+    setExpandedMobileItems((current) => ({
+      ...current,
+      [name]: !current[name],
+    }));
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-black px-6 py-6 md:px-12">
@@ -126,7 +143,11 @@ export const Navbar: React.FC = () => {
             <GlowButton href="/contact-us">Book a Free Consultation</GlowButton>
           </div>
 
-          <Drawer open={open} direction="right" onOpenChange={setOpen}>
+          <Drawer
+            open={open}
+            direction="right"
+            onOpenChange={handleDrawerOpenChange}
+          >
             <DrawerTrigger asChild>
               <button
                 aria-label="Open menu"
@@ -193,21 +214,61 @@ export const Navbar: React.FC = () => {
                       );
                     }
 
+                    const isExpanded = Boolean(
+                      expandedMobileItems[item.name],
+                    );
+                    const mobileMenuId = `mobile-menu-${item.name
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}`;
+
                     return (
-                      <details
+                      <div
                         key={item.name}
                         className="border-b border-white/10"
                       >
-                        <summary className="flex list-none cursor-pointer items-center justify-between py-4">
-                          <span className="font-medium text-white">
-                            {item.name}
-                          </span>
-                          <span className="text-white/70 transition-transform group-open:rotate-180">
-                            v
-                          </span>
-                        </summary>
+                        <div className="flex items-center">
+                          {item.link ? (
+                            <Link
+                              href={item.link}
+                              onClick={() => setOpen(false)}
+                              className="flex-1 py-4 font-medium text-white"
+                            >
+                              {item.name}
+                            </Link>
+                          ) : (
+                            <button
+                              type="button"
+                              onClick={() => toggleMobileItem(item.name)}
+                              className="flex-1 py-4 text-left font-medium text-white"
+                              aria-expanded={isExpanded}
+                              aria-controls={mobileMenuId}
+                            >
+                              {item.name}
+                            </button>
+                          )}
 
-                        <div className="flex flex-col gap-2 pb-4 pl-3">
+                          <button
+                            type="button"
+                            onClick={() => toggleMobileItem(item.name)}
+                            className={`flex h-12 w-12 items-center justify-end text-white/70 transition hover:text-white ${
+                              isExpanded ? "rotate-180" : ""
+                            }`}
+                            aria-expanded={isExpanded}
+                            aria-controls={mobileMenuId}
+                            aria-label={`${
+                              isExpanded ? "Collapse" : "Expand"
+                            } ${item.name} menu`}
+                          >
+                            v
+                          </button>
+                        </div>
+
+                        <div
+                          id={mobileMenuId}
+                          className={`flex-col gap-2 pb-4 pl-3 ${
+                            isExpanded ? "flex" : "hidden"
+                          }`}
+                        >
                           {item.subItems?.map((sub) => (
                             <Link
                               key={sub.name}
@@ -219,7 +280,7 @@ export const Navbar: React.FC = () => {
                             </Link>
                           ))}
                         </div>
-                      </details>
+                      </div>
                     );
                   })}
                 </div>

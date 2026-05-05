@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Unbounded, Poppins, Jost, Open_Sans, Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 import DefaultProviders from "@/providers/default-providers";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+
+const gtmId = "GTM-P2JCR47K";
+const gaId = "G-G1VLXCBDQW";
+
 const unbounded = Unbounded({
   variable: "--font-unbounded",
   subsets: ["latin"],
@@ -52,14 +54,50 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="GTM-P2JCR47K" />
       <body
         className={`${unbounded.variable} bg-black text-white ${inter.variable} ${popins.variable} ${jost.variable} ${open_Sans.variable} antialiased`}
       >
-        <GoogleAnalytics gaId="G-G1VLXCBDQW" />
         {/* <Navbar /> */}
         <DefaultProviders>{children}</DefaultProviders>
         {/* <Footer /> */}
+        <Script
+          id="htsol-analytics"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(){
+                var loaded = false;
+                var loadAnalytics = function() {
+                  if (loaded) return;
+                  loaded = true;
+
+                  window.dataLayer = window.dataLayer || [];
+                  window.dataLayer.push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+
+                  var gtmScript = document.createElement('script');
+                  gtmScript.async = true;
+                  gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=${gtmId}';
+                  document.head.appendChild(gtmScript);
+
+                  function gtag(){window.dataLayer.push(arguments);}
+                  window.gtag = window.gtag || gtag;
+                  gtag('js', new Date());
+                  gtag('config', '${gaId}');
+
+                  var gaScript = document.createElement('script');
+                  gaScript.async = true;
+                  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=${gaId}';
+                  document.head.appendChild(gaScript);
+                };
+
+                var schedule = window.requestIdleCallback || function(callback) {
+                  return window.setTimeout(callback, 3000);
+                };
+                schedule(loadAnalytics, { timeout: 6000 });
+              })();
+            `,
+          }}
+        />
       </body>
     </html>
   );

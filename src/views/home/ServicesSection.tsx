@@ -280,7 +280,7 @@ export const ServicesSection: React.FC = () => {
                           src={service.image}
                           alt={service.title}
                           fill
-                          unoptimized
+                          sizes="(max-width: 639px) 85vw, 70vw"
                           className="object-cover"
                         />
                         <div className="absolute inset-0 bg-linear-to-t from-[#111] via-transparent to-transparent" />
@@ -353,6 +353,7 @@ export const ServicesSection: React.FC = () => {
                       src={service.image}
                       alt={service.title}
                       fill
+                      sizes="(min-width: 1024px) 31vw, (min-width: 768px) 50vw, 85vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-[#111] via-transparent to-transparent" />

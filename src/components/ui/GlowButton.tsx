@@ -68,7 +68,6 @@ export const GlowButton: React.FC<GlowButtonProps> = ({
           width={30}
           height={30}
           className="w-[30px] h-[30px]"
-          fetchPriority="high"
         />
       </>
     );

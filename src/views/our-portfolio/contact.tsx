@@ -59,7 +59,10 @@ const Contact = () => {
       const sectionEl = scopeRef.current;
       if (!headingEl || !paraEl || !formEl || !sectionEl) return;
 
-      // Split into words
+      // ✅ Unhide the containers immediately — words will be hidden by gsap.set below
+      gsap.set([headingEl, paraEl], { opacity: 1 });
+
+      // Split into words (existing code below, unchanged)
       const headingSplit = new SplitType(headingEl, { types: "words" });
       const paraSplit = new SplitType(paraEl, { types: "words" });
       const iconEl = iconWrapRef.current;
@@ -186,7 +189,7 @@ const Contact = () => {
 
   const sendEmail = async (
     values: FormValues,
-    formikHelpers: FormikHelpers<FormValues>
+    formikHelpers: FormikHelpers<FormValues>,
   ) => {
     setIsSending(true);
 
@@ -206,7 +209,7 @@ const Contact = () => {
             contact: values.contact,
             enquiry: values.enquiry,
           }),
-        }
+        },
       );
 
       const data = await response.json();
@@ -229,7 +232,7 @@ const Contact = () => {
       setPopupMsg(
         error instanceof Error
           ? error.message
-          : "Failed to send message, please try again."
+          : "Failed to send message, please try again.",
       );
       setPopupOpen(true);
     } finally {
@@ -239,10 +242,7 @@ const Contact = () => {
   };
   const closePopup = () => setPopupOpen(false);
   return (
-    <section
-      ref={scopeRef}
-      className="bg-black relative pb-20   "
-    >
+    <section ref={scopeRef} className="bg-black relative pb-10 md:pb-20">
       {/* <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[1%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-3 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]
@@ -252,7 +252,7 @@ const Contact = () => {
         <div className="w-full h-full  max-w-[1600px] bg-gradient-to-r from-transparent via-[#00A1A5] to-transparent" />
       </div> */}
       <Container>
-        <div className="relative py-5 lg:py-10 flex gap-8 flex-col max-w-5xl mx-auto">
+        <div className="relative py-5 lg:py-10 flex gap-4 md:gap-8 flex-col max-w-5xl mx-auto">
           {/* <div className="flex justify-center" ref={iconWrapRef}>
                         <Image
                             src={"/chat.svg"}
@@ -263,11 +263,20 @@ const Contact = () => {
                         />
                     </div> */}
 
-          <HeadingTwo ref={headingSplitRef} className="text-center mb-3">
+          <HeadingTwo
+            ref={headingSplitRef}
+            className="text-center mb-3 opacity-0 !text-3xl md:!text-4xl lg:!text-5xl"
+          >
             Ready To Discuss your project?
           </HeadingTwo>
-          <h3 ref={paraSplitRef} className="text-white text-[20px] text-center font-normal">
-            Katalyst Studio offers a range of design services that are tailored to meet the unique needs of each client Katalyst Studio offers a range of design services.
+
+          <h3
+            ref={paraSplitRef}
+            className="text-white text-base md:text-[20px] text-center font-normal opacity-0"
+          >
+            Katalyst Studio offers a range of design services that are tailored
+            to meet the unique needs of each client Katalyst Studio offers a
+            range of design services.
           </h3>
         </div>
         <div className="relative mt-8" ref={formWrapRef}>
@@ -286,7 +295,7 @@ const Contact = () => {
             {({ isSubmitting }) => (
               <Form ref={formRef}>
                 <Field type="hidden" name="page" />
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
                   <div>
                     <Field
                       type="text"
@@ -313,7 +322,6 @@ const Contact = () => {
                       className="text-red-600 text-xs mt-2"
                     />
                   </div>
-
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-5">
                   <div>
@@ -400,7 +408,7 @@ const Contact = () => {
                   <Field
                     as="textarea"
                     name="enquiry"
-                    className="h-28 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 py-3 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
+                    className="h-24 md:h-28 w-full relative outline-0 bg-[url(/input-bg.webp)] bg-cover border-0 rounded-md px-4 py-3 backdrop:backdrop-blur-2xl placeholder:text-white/55 text-white"
                     placeholder="Notes"
                     id=""
                   ></Field>
@@ -414,7 +422,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting || isSending}
-                    className="inline-flex cursor-pointer items-center bg-white gap-2 px-6 py-3 text-sm text-primary font-medium uppercase rounded-full tracking-wider transition-all duration-300 border"
+                    className="inline-flex cursor-pointer items-center bg-white gap-2 px-4 py-2.5 md:px-6 md:py-3 text-sm text-primary font-medium uppercase rounded-full tracking-wider transition-all duration-300 border"
                   >
                     {isSending ? "Submiting..." : "Submit Form"}
                     <svg
@@ -492,8 +500,9 @@ const Contact = () => {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p
-                  className={`text-lg font-semibold ${popupType === "success" ? "text-green-700" : "text-red-700"
-                    }`}
+                  className={`text-lg font-semibold ${
+                    popupType === "success" ? "text-green-700" : "text-red-700"
+                  }`}
                 >
                   {popupType === "success"
                     ? "Message sent"

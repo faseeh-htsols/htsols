@@ -1,7 +1,7 @@
 // components/lottie-player.tsx
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import lottie, { AnimationItem } from "lottie-web";
+import React, { useEffect, useRef } from "react";
+import type { AnimationItem } from "lottie-web";
 
 type LottiePlayerProps = {
   src: string; // public path to JSON
@@ -19,34 +19,58 @@ export default function LottiePlayer({
   onReady,
 }: LottiePlayerProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [anim, setAnim] = useState<AnimationItem | null>(null);
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    const container = containerRef.current;
+    if (!container) return;
 
-    const prefersReduced =
-      typeof window !== "undefined" &&
-      window.matchMedia &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let animation: AnimationItem | null = null;
+    let cancelled = false;
+    let observer: IntersectionObserver | null = null;
 
-    const animation = lottie.loadAnimation({
-      container: containerRef.current,
-      renderer: "svg",
-      loop,
-      autoplay: prefersReduced ? false : autoplay,
-      path: src,
-      rendererSettings: {
-        progressiveLoad: true, // faster SVG render
-        preserveAspectRatio: "xMidYMid meet",
-        className: "w-full h-full",
-      },
-    });
+    const loadAnimation = async () => {
+      const prefersReduced =
+        window.matchMedia &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    setAnim(animation);
-    onReady?.(animation);
+      const { default: lottie } = await import("lottie-web");
+      if (cancelled) return;
+
+      animation = lottie.loadAnimation({
+        container,
+        renderer: "svg",
+        loop,
+        autoplay: prefersReduced ? false : autoplay,
+        path: src,
+        rendererSettings: {
+          progressiveLoad: true,
+          preserveAspectRatio: "xMidYMid meet",
+          className: "w-full h-full",
+        },
+      });
+
+      onReady?.(animation);
+    };
+
+    if ("IntersectionObserver" in window) {
+      observer = new IntersectionObserver(
+        ([entry]) => {
+          if (!entry?.isIntersecting) return;
+          observer?.disconnect();
+          observer = null;
+          void loadAnimation();
+        },
+        { rootMargin: "200px" },
+      );
+      observer.observe(container);
+    } else {
+      void loadAnimation();
+    }
 
     return () => {
-      animation.destroy();
+      cancelled = true;
+      observer?.disconnect();
+      animation?.destroy();
     };
   }, [src, loop, autoplay, onReady]);
 
