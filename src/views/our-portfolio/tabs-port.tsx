@@ -34,6 +34,8 @@ export default function TabsPort() {
   const [tabsMode, setTabsMode] = useState<"normal" | "fixed" | "bottom">("normal");
   const [tabsStyle, setTabsStyle] = useState<React.CSSProperties>({});
   const [tabsHeight, setTabsHeight] = useState(0);
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
+  const [desktopTabsDismissed, setDesktopTabsDismissed] = useState(false);
 
   const openVideo = useCallback((url: string) => {
     setPopupSrc(url);
@@ -71,6 +73,7 @@ export default function TabsPort() {
       if (!section || !tabs) return;
 
       const isMobile = window.innerWidth < 768;
+      setIsMobileViewport(isMobile);
       const headerOffset = isMobile ? 104 : 96;
       const sectionRect = section.getBoundingClientRect();
       const tabsRect = tabs.getBoundingClientRect();
@@ -86,6 +89,7 @@ export default function TabsPort() {
         sectionRect.bottom <= headerOffset + tabsCurrentHeight;
 
       if (!sectionTopReached) {
+        setDesktopTabsDismissed(false);
         setTabsMode("normal");
         setTabsStyle({});
         return;
@@ -126,6 +130,9 @@ export default function TabsPort() {
     };
   }, []);
 
+  const showFixedTabs =
+    tabsMode === "fixed" && (isMobileViewport || !desktopTabsDismissed);
+
   return (
     <section ref={sectionRef} className="relative py-20">
       <Container>
@@ -160,7 +167,7 @@ export default function TabsPort() {
           </div>
 
           {/* fixed floating tabs */}
-          {tabsMode === "fixed" && (
+          {showFixedTabs && (
             <div style={tabsStyle}>
               <div className="flex items-center gap-2 bg-[#111111] rounded-2xl p-2 shadow-lg md:gap-3 md:rounded-[20px] md:p-4">
                 <button
@@ -192,6 +199,14 @@ export default function TabsPort() {
                   })}
                 </div>
 
+                <button
+                  type="button"
+                  aria-label="Close portfolio tabs"
+                  onClick={() => setDesktopTabsDismissed(true)}
+                  className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-[14px] bg-[#05070d] text-sm font-semibold text-white transition-colors hover:bg-[#1a1a1a] md:flex"
+                >
+                  X
+                </button>
               </div>
             </div>
           )}
