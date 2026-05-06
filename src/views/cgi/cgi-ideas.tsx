@@ -29,24 +29,6 @@ const TRENDING_ITEMS = [
   },
 ];
 
-function PlayBadge() {
-  return (
-    <span className="absolute inset-0 flex items-center justify-center">
-      <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/80 bg-black/20 backdrop-blur-[2px]">
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path d="M9 7.5v9l8-4.5-8-4.5Z" fill="white" fillOpacity="0.9" />
-        </svg>
-      </span>
-    </span>
-  );
-}
-
 export default function CgiIdeasSection() {
   const [open, setOpen] = useState(false);
   const [activeSrc, setActiveSrc] = useState<string | null>(null);
@@ -132,12 +114,12 @@ export default function CgiIdeasSection() {
                     className={`block relative w-full h-full  overflow-hidden `}
                   >
                     <div className="relative w-full h-[400px] rounded-lg overflow-hidden">
-                      <img
+                      <Image
                         src={item.img}
                         alt={item.title}
-                        className={`absolute inset-0 h-full w-full z-10 object-cover`}
-                        loading="lazy"
-                        // quality={100}
+                        fill
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                        className="absolute inset-0 z-10 object-cover"
                       />
                       <div className="absolute top-1/2 z-10 left-1/2 -translate-x-1/2 -translate-y-1/2">
                         <Image

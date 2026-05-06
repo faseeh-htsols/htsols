@@ -55,7 +55,7 @@ const WhiteLabelCapacitySection = ({ data }: CapacityProps) => {
 
             <div className="absolute -left-20 -top-26 z-5">
               <Image
-                src="/staff-augmentation/blur-overlay.png"
+                src="/staff-augmentation/blur-overlay.webp"
                 width={500}
                 height={500}
                 className="h-[350px] w-[350px]"

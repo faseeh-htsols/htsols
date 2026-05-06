@@ -1,6 +1,5 @@
 "use client";
 
-import Container from "@/components/ui/container";
 import DoubleCurves from "@/components/ui/double-curves";
 import HeadingTwo from "@/components/ui/heading-two";
 import { useEffect, useMemo, useState } from "react";
@@ -10,9 +9,6 @@ import "swiper/css";
 // import "swiper/css/pagination";
 import Image from "next/image";
 import Link from "next/link";
-
-const gradientBtn =
-    "bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]";
 
 export type LinkedInPost = {
     id: string;
@@ -71,7 +67,7 @@ function PostCard({ post }: { post: LinkedInPost }) {
                         <div className="flex h-15 w-15 shrink-0 rounded-full bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] p-px">
                             <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-black">
                                 <Image
-                                    src="/ceo/ceo-linkedin.png"
+                                    src="/ceo/ceo-linkedin.webp"
                                     alt="LinkedIn"
                                     fill
                                     className="object-cover"
@@ -131,7 +127,6 @@ function PostCard({ post }: { post: LinkedInPost }) {
 
                 {post.image ? (
                     <div className="mt-4 -mx-5 md:-mx-6 overflow-hidden">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <Image
                             src={post.image}
                             alt=""
@@ -151,12 +146,13 @@ function PostCard({ post }: { post: LinkedInPost }) {
                         rel="noopener noreferrer"
                         className="mt-4 flex gap-3 rounded-xl border border-white/10 bg-white/5 p-3 transition hover:border-[#00838A]/50 hover:bg-white/10">
                         {post.article.image ? (
-                            // eslint-disable-next-line @next/next/no-img-element
-                            <img
+                            <Image
                                 src={post.article.image}
                                 alt=""
+                                width={56}
+                                height={56}
+                                unoptimized
                                 className="h-14 w-14 shrink-0 rounded-lg object-cover"
-                                loading="lazy"
                             />
                         ) : null}
                         <span className="line-clamp-3 text-left text-xs font-medium text-white/90">
@@ -254,22 +250,6 @@ function PostCard({ post }: { post: LinkedInPost }) {
                 </div>
             </div>
         </div>
-    );
-}
-
-function ExternalIcon({ className }: { className?: string }) {
-    return (
-        <svg
-            className={className}
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            aria-hidden>
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-            <polyline points="15 3 21 3 21 9" />
-            <line x1="10" y1="14" x2="21" y2="3" />
-        </svg>
     );
 }
 

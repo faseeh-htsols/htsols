@@ -43,7 +43,7 @@ const WhiteLabelCapacitySection = () => {
             <div className="relative z-10 overflow-hidden rounded-[20px] border border-white/10 bg-[#121212] shadow-[0_26px_70px_rgba(0,0,0,0.28)]">
               <div className="relative aspect-[604/470] w-full sm:aspect-[604/500] lg:aspect-[604/540]">
                 <Image
-                  src="/website/one-team.png"
+                  src="/website/one-team.webp"
                   alt="HTSOL white-label delivery team collaborating on client work"
                   fill
                   className="object-cover"

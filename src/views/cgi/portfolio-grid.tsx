@@ -259,7 +259,7 @@ const PortfolioGrid = () => {
 
           {/* Tabs row (slash-separated) */}
           <div className="flex flex-wrap justify-center items-center gap-3 md:gap-5 py-6">
-            {TABS.map((t, i) => {
+            {TABS.map((t) => {
               const isActive = active === t;
               return (
                 <div key={t} className="flex items-center">
@@ -289,9 +289,7 @@ const PortfolioGrid = () => {
               ref={gridRef}
               className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"
             >
-              {WORKS.map((w, i) => {
-                const colSpan = w.w ? `col-span-${Math.min(w.w, 4)}` : "";
-                const rowSpan = w.h ? `row-span-${Math.min(w.h, 4)}` : "";
+              {WORKS.map((w) => {
                 return (
                   <article
                     key={w.id}
@@ -309,12 +307,12 @@ const PortfolioGrid = () => {
                         className={`block relative w-full h-full cursor-pointer overflow-hidden `}
                       >
                         <div className="relative w-full h-[400px] rounded-lg overflow-hidden">
-                          <img
+                          <Image
                             src={w.img}
                             alt={w.title}
-                            className={`absolute inset-0 h-full w-full z-10 object-cover`}
-                            loading="lazy"
-                          // quality={100}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                            className="absolute inset-0 z-10 object-cover"
                           />
                           <div className="absolute top-1/2 z-10 left-1/2 -translate-x-1/2 -translate-y-1/2">
                             <Image

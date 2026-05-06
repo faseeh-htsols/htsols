@@ -295,7 +295,7 @@ function ContentSections({
                           </div>
                           {imageUrl && (
                             <div className="absolute -right-10 top-1/2 -translate-y-1/2 pointer-events-none lg:block hidden">
-                              <img
+                              <Image
                                 src={imageUrl}
                                 alt={heading || "CTA image"}
                                 width={400}

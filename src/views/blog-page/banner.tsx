@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { IBlogtags } from "./main";
 import Container from "@/components/ui/container";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 type BannerData = {
@@ -53,7 +54,14 @@ const BannerReuse = ({
     >
       {/* Background */}
       <div className="absolute inset-0 w-full h-full  bg-cover bg-center ">
-        <img src={image} className="w-full h-full object-cover" alt={title} />
+        <Image
+          src={image}
+          className="object-cover"
+          alt={title}
+          fill
+          sizes="100vw"
+          priority
+        />
       </div>
       <div
         className="relative mt-96 py-6"
@@ -86,20 +94,24 @@ const BannerReuse = ({
                   <div className="flex justify-center gap-6">
                     <div className="flex gap-2 items-center">
                       <div className="w-[70px] h-[70px] rounded-full flex justify-center items-center bg-primary shrink-0">
-                        <img
+                        <Image
                           src={authorImage}
                           className="w-[60px] h-[60px] object-contain"
                           alt={authorName}
+                          width={60}
+                          height={60}
                         />
                       </div>
                       <h2>{authorName}</h2>
                     </div>
                     <div className="flex gap-2 items-center">
                       <div className="w-[70px] h-[70px] flex justify-center items-center">
-                        <img
+                        <Image
                           src="/blog-number.svg"
                           className="w-[70px] h-[70px] object-contain"
                           alt="published date"
+                          width={70}
+                          height={70}
                         />
                       </div>
                       <h2>

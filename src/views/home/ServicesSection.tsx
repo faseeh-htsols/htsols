@@ -24,14 +24,14 @@ const services: ServiceCard[] = [
     title: "WEBSITE DEVELOPMENT SERVICES",
     description:
       "Design and development that turns visitors into leads with speed, clarity, and clean UX.",
-    image: "/web-dev-ser-home.png",
+    image: "/web-dev-ser-home.webp",
     link: "/services/website-development",
   },
   {
     title: "SEO SERVICES",
     description:
       "Smart SEO, content, and campaigns that get you seen in Google, ChatGPT, and where buyers search.",
-    image: "/seo-srevices.png",
+    image: "/seo-srevices.webp",
     link: "/services/seo-services",
   },
   {
@@ -45,21 +45,21 @@ const services: ServiceCard[] = [
     title: "STAFF AUGMENTATION",
     description:
       "Add vetted developers and designers to your team, without the hiring delays or overhead.",
-    image: "/staff.png",
+    image: "/staff.webp",
     link: "/services/staff-augmentation",
   },
   {
     title: "DIGITAL TRANSFORMATION",
     description:
       "Strategy and execution that modernises your business without disrupting day-to-day delivery.",
-    image: "/digital-transformation.png",
+    image: "/digital-transformation.webp",
     link: "/services/digital-transformation",
   },
   {
     title: "DIGITAL MARKETING",
     description:
       "Performance marketing that drives qualified traffic, better leads, and stronger ROI across channels.",
-    image: "/marketing.png",
+    image: "/marketing.webp",
     link: "/services/digital-marketing",
   },
 ];

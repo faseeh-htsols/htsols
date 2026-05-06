@@ -79,6 +79,7 @@ export const HeroSection: React.FC = () => {
         alt="home header"
         fill
         sizes="100vw"
+        priority
         fetchPriority="high"
         className="object-cover object-center -z-10"
       />

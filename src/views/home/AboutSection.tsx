@@ -96,7 +96,6 @@ export const AboutSection: React.FC = () => {
                 className="object-cover rounded-lg"
                 fill
                 sizes="(max-width: 1024px) 100vw, 372px"
-                fetchPriority="high"
               />
             </div>
           </div>
@@ -140,7 +139,6 @@ export const AboutSection: React.FC = () => {
                   alt="Team collaboration"
                   fill
                   className="object-cover"
-                  fetchPriority="high"
                 />
               </div>
             </div>

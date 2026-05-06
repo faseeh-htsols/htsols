@@ -1,20 +1,21 @@
 import React from "react";
 import Container from "@/components/ui/container";
-import Button from "@/components/ui/Button";
 import Link from "next/link";
 import DoubleCurves from "@/components/ui/double-curves";
-
-const FUNDAMENTALS = [
-    "Consent-friendly analytics and cookie setups when required",
-    "Privacy basics aligned with Canadian expectations, including PIPEDA considerations",
-    "Accessibility best practices aligned with WCAG, and AODA considerations for Ontario-based organizations",
-    "Security basics like SSL, updates, and form protection",
-];
+import Image from "next/image";
 
 const StartGrowing = () => {
     return (
         <DoubleCurves up className="-mt-[9%] sm:-mt-[5%] md:-mt-[5%] lg:-mt-[4%] xl:-mt-[3%] [clip-path:polygon(0_1%,100%_0,100%_100%,0_100%)] md:[clip-path:polygon(0_2%,100%_0,100%_100%,0_100%)] lg:[clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)]">
-            <section className="relative min-h-[600px] lg:min-h-[700px] bg-[url(/growing-bg.png)] bg-cover bg-center overflow-hidden">
+            <section className="relative min-h-[600px] overflow-hidden lg:min-h-[700px]">
+                <Image
+                    src="/growing-bg.webp"
+                    alt=""
+                    fill
+                    sizes="100vw"
+                    className="absolute inset-0 z-0 object-cover object-center"
+                    aria-hidden="true"
+                />
                 <Container>
                     <div className="relative z-10 flex py-16 lg:py-24">
                         <div className="">

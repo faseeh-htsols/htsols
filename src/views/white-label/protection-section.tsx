@@ -6,7 +6,7 @@ const WhiteLabelProtectionSection = () => {
     <section
       className="relative overflow-hidden bg-black bg-cover bg-center bg-no-repeat py-20 sm:py-24 lg:py-28"
       style={{
-        backgroundImage: "url('/services/protection-bg.png')",
+        backgroundImage: "url('/services/protection-bg.webp')",
       }}
     >
 

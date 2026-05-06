@@ -2,6 +2,7 @@
 import React from "react";
 import { IRelatedBlog } from "./main";
 import Link from "next/link";
+import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -24,9 +25,11 @@ const Card = ({ post }: { post: IRelatedBlog }) => {
       href={`/blog/${post.slug}`}
       className="group rounded-2xl overflow-hidden transition-all block h-full">
       <div className="relative h-[200px] md:h-[250px] overflow-hidden">
-        <img
+        <Image
           src={image}
           alt={title}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover group-hover:scale-105 transition-transform duration-300"
         />
       </div>
@@ -59,7 +62,7 @@ const Card = ({ post }: { post: IRelatedBlog }) => {
         <div className="flex items-center justify-between">
           {authorName && authorImage ? (
             <div className="flex items-center gap-2">
-              <img
+              <Image
                 src={authorImage}
                 alt={authorName}
                 width={32}

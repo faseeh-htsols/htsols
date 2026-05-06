@@ -8,6 +8,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import Image from "next/image";
 
 const gradientBtn =
   "bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)]";
@@ -94,14 +95,14 @@ function PostCard({ post }: { post: LinkedInPost }) {
       ) : null}
 
       {post.image ? (
-        <div className="mt-4 -mx-1 overflow-hidden rounded-xl border border-white/10">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+        <div className="relative mt-4 -mx-1 h-52 overflow-hidden rounded-xl border border-white/10">
+          <Image
             src={post.image}
             alt=""
-            className="max-h-52 w-full object-cover"
-            loading="lazy"
-            decoding="async"
+            fill
+            unoptimized
+            sizes="(max-width: 768px) 100vw, 360px"
+            className="object-cover"
           />
         </div>
       ) : null}
@@ -113,12 +114,13 @@ function PostCard({ post }: { post: LinkedInPost }) {
           rel="noopener noreferrer"
           className="mt-4 flex gap-3 rounded-xl border border-white/10 bg-white/5 p-3 transition hover:border-[#00838A]/50 hover:bg-white/10">
           {post.article.image ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
+            <Image
               src={post.article.image}
               alt=""
+              width={56}
+              height={56}
+              unoptimized
               className="h-14 w-14 shrink-0 rounded-lg object-cover"
-              loading="lazy"
             />
           ) : null}
           <span className="line-clamp-3 text-left text-xs font-medium text-white/90">

@@ -7,7 +7,7 @@ const ProjectTalkSection = () => {
     <section
       className="relative overflow-hidden bg-black bg-cover bg-center bg-no-repeat py-24 sm:py-28 lg:py-32"
       style={{
-        backgroundImage: "url('/services/protection-bg.png')",
+        backgroundImage: "url('/services/protection-bg.webp')",
       }}
     >
       <div className="absolute inset-0 bg-black/50" />
@@ -18,7 +18,7 @@ const ProjectTalkSection = () => {
           <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,580px)_minmax(0,1fr)] lg:gap-16 xl:gap-20">
             <div className="mx-auto w-full max-w-[580px]">
               <Image
-                src="/services/project(1).png"
+                src="/services/project(1).webp"
                 alt="White label project execution preview"
                 width={1160}
                 height={1226}

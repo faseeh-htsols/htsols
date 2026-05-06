@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import DoubleCurves from "@/components/ui/double-curves";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,8 +44,16 @@ export default function WhyBuisnessChoose() {
     >
       <section
         ref={mainRef}
-        className="relative bg-[url(/why-home-bg.webp)] bg-cover bg-no-repeat bg-right py-20  overflow-hidden"
+        className="relative overflow-hidden py-20"
       >
+        <Image
+          src="/why-home-bg.webp"
+          alt=""
+          fill
+          sizes="100vw"
+          className="absolute inset-0 z-0 object-cover object-right"
+          aria-hidden="true"
+        />
         {/* <div
         className="pointer-events-none absolute z-2 top-0 left-0 h-[4%] sm:h-[1%] md:h-[2%] lg:h-[3%] -rotate-2 sm:-rotate-1 w-full
            bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] animate-pulse
@@ -53,7 +62,7 @@ export default function WhyBuisnessChoose() {
         {/* subtle gradient */}
         {/* <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/30 to-transparent" /> */}
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2">
           {/* LEFT CONTENT */}
           <div
             className="bg-[#252528] overflow-hidden relative rounded-xl p-10 lg:p-12 text-white max-w-xl"

@@ -1304,25 +1304,25 @@ export const CLIENT_SAY_ABOUT_CEO = {
     },
     {
       para: "Really great experience working together. Faseeh did an excellent job improving and polishing our frontend, with a strong focus on UI quality, performance optimization, and responsive behavior. They worked confidently with React.js and Next.js, translated designs and wireframes into clean, interactive components, and integrated everything smoothly with our RESTful APIs. Load times and overall responsiveness improved noticeably, and everything works consistently across browsers. Solid communication and delivery — would definitely work with them again.",
-      image: "/ceo/user-icon.png",
+      image: "/ceo/user-icon.webp",
       name: "SAM",
       designation: "CO-FOUNDER, MEIIDZ",
     },
     {
       para: "Really great experience working together. Faseeh did an excellent job improving and polishing our frontend, with a strong focus on UI quality, performance optimization, and responsive behavior. Load times and overall responsiveness improved noticeably, and everything works consistently across browsers.",
-      image: "/ceo/user-icon.png",
+      image: "/ceo/user-icon.webp",
       name: "MUKHLIS",
       designation: "TECHAGENCY BANGLA",
     },
     {
       para: "I engaged Faseeh for marketing initiatives at Same Day Builders, a company specializing in handyman services. Faseeh and his team at HtSol demonstrated remarkable flexibility by accommodating my ever-changing schedule, which is par for the course as a business owner. Moreover, during our initial proposal meeting, Faseeh adeptly addressed all of my questions and objectives. This instilled a level of comfort and confidence in me, affirming that I had made the right decision in partnering with him for our marketing needs. Given the positive experience and results, I've decided to extend my collaboration with HtSol to Meiidz, another venture of mine that offers semi-national house cleaning services. The professionalism and effectiveness Faseeh has shown make me optimistic about the marketing prospect.",
-      image: "/ceo/user-icon.png",
+      image: "/ceo/user-icon.webp",
       name: "MARISS N.",
       designation: "FOUNDER / CEO, SAME DAY BUILDERS, USA",
     },
     {
       para: "Our Account Manager at HtSol was very punctual and very communicative when it came to the campaign. I appreciate his will to understand what the client wants and overall the company to deliver.",
-      image: "/ceo/user-icon.png",
+      image: "/ceo/user-icon.webp",
       name: "JAMES ASUNA",
       designation: "PRINCIPAL DENTIST AND FOUNDER",
     },
@@ -1333,13 +1333,13 @@ export const CLIENT_SAY_ABOUT_CEO = {
 
     Perfectly executed and really happy with the communication throughout.
     `,
-      image: "/ceo/user-icon.png",
+      image: "/ceo/user-icon.webp",
       name: "ASIF N.",
       designation: "FOUNDER, MARKETING AGENCY, UK",
     },
     {
       para: "Project title: IT Consultation. Had a very engaging and productive meeting session. Good advice. They listened to the problem, tried to see the problem from a broader perspective to give a proper solution / advice. Anyone can can talk to them for IT advice. Best of luck !",
-      image: "/ceo/user-icon.png",
+      image: "/ceo/user-icon.webp",
       name: "MUSA",
       designation: "FOUNDER, TRAVEL AGENCY, BANGLADESH",
     },
@@ -1347,13 +1347,13 @@ export const CLIENT_SAY_ABOUT_CEO = {
       para: `It was great to work with HtSol. They very keen to do all the details and ask / noted unclear parts thoroughly. I would Love and already planning to do another Software for healthcare industry with them.
     Helped me a lot with great product!
     `,
-      image: "/ceo/user-icon.png",
+      image: "/ceo/user-icon.webp",
       name: "JAEYOON",
       designation: "SOUTH KOREA",
     },
     {
       para: "Good and fast never disappointed with HtSol. They work quickly and take time to understand your business and business logic.",
-      image: "/ceo/user-icon.png",
+      image: "/ceo/user-icon.webp",
       name: "YANIS",
       designation: "FOUNDER, YOGA STUDIO, FRANCE",
     },
@@ -1362,7 +1362,7 @@ export const CLIENT_SAY_ABOUT_CEO = {
 export const CEO_CTA = {
   title: "WANT TO TALK GROWTH?",
   para: "Whether you're a services business owner or an agency that needs reliable execution capacity, or a business that just wants a website that actually converts — I'm available for a direct conversation. No forms, no waiting. Book a call and let's figure out if we're a fit.",
-  image: "/ceo/talk-img.png",
+  image: "/ceo/talk-img.webp",
   buttons: [
     {
       text: "Schedule a Call Back",
@@ -1686,7 +1686,7 @@ export const MISSISSAUGA_AGENCY = {
     },
     {
       id: "agency-image",
-      mainImage: "/location-agency.png",
+      mainImage: "/location-agency.webp",
       imageAlt: "Mississauga web design agency",
     },
     {
@@ -1776,8 +1776,8 @@ export const MISSISSAUGA_OUR_WORK = {
         "Lead Generation",
         "Dental Marketing",
       ],
-      images: ["/mockup.png"],
-      accent: "/marketing-1.png",
+      images: ["/mockup.webp"],
+      accent: "/marketing-1.webp",
     },
     {
       company: "518 Dental",
@@ -1792,8 +1792,8 @@ export const MISSISSAUGA_OUR_WORK = {
         "Patient Journey",
         "Conversion Ready",
       ],
-      images: ["/dental-location.png"],
-      accent: "/marketing-1.png",
+      images: ["/dental-location.webp"],
+      accent: "/marketing-1.webp",
     },
     {
       company: "Grange Green Dental",
@@ -1808,8 +1808,8 @@ export const MISSISSAUGA_OUR_WORK = {
         "Service Showcase",
         "Patient Enquiries",
       ],
-      images: ["/mockup 3.png"],
-      accent: "/marketing-1.png",
+      images: ["/mockup 3.webp"],
+      accent: "/marketing-1.webp",
     },
   ],
 };
@@ -1893,7 +1893,7 @@ export const MISSISSAUGA_WORK = {
   endServices: {
     heading:
       "If your business relies on people finding you online and trusting what they see, we can help",
-    bgImage: "/business-bg.png",
+    bgImage: "/business-bg.webp",
     btnText: `Book A Free Consultation`,
     btnLink: `/contact-us`,
   },
@@ -1947,7 +1947,7 @@ export const MISSISSAUGA_WHAT_DELIVER = {
   para: `A well-built website is the foundation everything else builds on. When the foundations are right, every other channel performs better — SEO gets traction faster, paid ads convert at lower cost, and referrals turn into enquiries instead of bouncing away.
   <br/><br/>
   For Mississauga businesses specifically, local visibility matters. A site built with proper local SEO signals — city-specific content, Google Business Profile alignment, fast mobile performance — helps you show up when someone nearby is actively searching for what you offer.`,
-  image: "/what-deliver-img.png",
+  image: "/what-deliver-img.webp",
 };
 
 export const MISSISSAUGA_WHY_CHOOSE = {
@@ -1958,31 +1958,31 @@ export const MISSISSAUGA_WHY_CHOOSE = {
       heading: "We're Local",
       description:
         "We're based in Mississauga at 3400 Riverspray Crescent. We understand the local business landscape, the GTA market, and what Mississauga customers expect from a business online. This isn't a generic pitch — it's local knowledge applied to local strategy.",
-      image: "/website/one-team.png",
+      image: "/website/one-team.webp",
     },
     {
       heading: "Design, Development, and Marketing Under One Roof",
       description:
         "Most agencies specialise in one thing. We bring all three together, which means your website is built with your marketing strategy in mind from day one — not retrofitted with SEO six months later by a different team.",
-      image: "/website/performance-first.png",
+      image: "/website/performance-first.webp",
     },
     {
       heading: "Built for Performance, Not Just Appearance",
       description:
         "Our builds use modern frameworks and performance-first practices. Fast load times, stable Core Web Vitals, clean code, and a CMS your team can manage without developer help.",
-      image: "/website/clear-transparent.png",
+      image: "/website/clear-transparent.webp",
     },
     {
       heading: "Live in Under a Month",
       description:
         "Most standard business websites are live within four weeks of kickoff — design, development, and launch. We're not slow. We're structured.",
-      image: "/website/designed-trust.png",
+      image: "/website/designed-trust.webp",
     },
     {
       heading: "We Stay Involved",
       description:
         "We don't deliver and disappear. After launch, we monitor performance, recommend improvements, and stay engaged as your business grows. Your site should evolve — and we're here to make sure it does.",
-      image: "/website/built-to-scale.png",
+      image: "/website/built-to-scale.webp",
     },
   ],
 };
@@ -2214,35 +2214,35 @@ export const WEB_DEV_WHY_CHOOSE = {
       heading: "ONE TEAM FOR DEVELOPMENT AND MARKETING",
       description:
         "Your website should work with your SEO, ads, and content strategy. We build with your full digital ecosystem in mind.",
-      image: "/website/one-team.png",
+      image: "/website/one-team.webp",
     },
     {
       id: "performanceFirst",
       heading: "PERFORMANCE-FIRST BUILDS",
       description:
         "Speed, stability, and mobile usability are treated as requirements, not optional extras. This supports better user experience and more reliable Core Web Vitals.",
-      image: "/website/performance-first.png",
+      image: "/website/performance-first.webp",
     },
     {
       id: "clearTransparent",
       heading: "CLEAR, TRANSPARENT PROCESS",
       description:
         "You get clear milestones, practical guidance, and a build process that stays organized.",
-      image: "/website/clear-transparent.png",
+      image: "/website/clear-transparent.webp",
     },
     {
       id: "desForTrust",
       heading: "DESIGNED FOR TRUST",
       description:
         "We help you present your services clearly, build credibility, and reduce friction for users who are ready to contact you.",
-      image: "/website/designed-trust.png",
+      image: "/website/designed-trust.webp",
     },
     {
       id: "builtToScale",
       heading: "BUILT TO SCALE",
       description:
         "Your site should support new services, new locations, and future campaigns without needing a rebuild every year.",
-      image: "/website/built-to-scale.png",
+      image: "/website/built-to-scale.webp",
     },
   ],
 };
@@ -2290,7 +2290,7 @@ export const STAFF_AUGMENTATION_GROWTH = {
   para: `Every growing business hits the same wall. The workload has outgrown the team. You need a developer to build that feature. A designer to produce that campaign. An SEO specialist to finally get the site ranking. But hiring full-time is expensive, slow, and permanent — and the work you need done might only last three months.
   <br/><br/>
   Most businesses end up stuck between bad options: overpaying a generalist agency, taking a chance on a freelancer who disappears halfway through, or leaving the work undone while the opportunity passes. There is a better model — one where you get a dedicated professional who is actually accountable, without the full-time commitment.`,
-  img: "/staff-augmentation/growth-imge.png",
+  img: "/staff-augmentation/growth-imge.webp",
   highlight: "The Real Cost of the Wrong Talent Decision:",
   list: [
     "Months wasted on a hiring process for a role that might not need to be permanent",
@@ -2303,7 +2303,7 @@ export const STAFF_AUGMENTATION_GROWTH = {
 };
 
 export const STAFF_AUGMENTATION_PROTECTION = {
-  bgImg: "/services/protection-bg.png",
+  bgImg: "/services/protection-bg.webp",
   text1:
     "HTSOL Talent Works for You — Under Your Direction, in Your Tools, on Your Schedule. They Are an Extension of Your Team, Not a Vendor You Manage at Arm's Length.",
   text2:
@@ -2396,35 +2396,35 @@ export const STAFF_AUGMENTATION_WHY_CHOOSE = {
       heading: "NOT JUST DEVELOPERS — THE FULL DIGITAL STACK",
       description:
         "Most staff augmentation providers give you developers. HTSOL gives you the full range of digital talent your business actually needs — developers, designers, SEO specialists, paid ads managers, content writers, and project managers. One relationship. Every discipline. No need to find a separate provider for each role.",
-      image: "/staff-augmentation/why-img-1.png",
+      image: "/staff-augmentation/why-img-1.webp",
     },
     {
       id: "performanceFirst",
       heading: "SENIOR TALENT FROM DAY ONE",
       description:
         "We do not send you a junior resource to learn on your project. Every HTSOL placement is a practitioner with real experience — someone who has done the work before, asks the right questions, and needs minimal hand-holding to deliver. You should see a meaningful contribution in week one, not week six.",
-      image: "/website/performance-first.png",
+      image: "/website/performance-first.webp",
     },
     {
       id: "clearTransparent",
       heading: "ACCESSIBLE TO STARTUPS AND SMES",
       description:
         "Enterprise offshore providers have enterprise minimums — six-figure annual contracts, complex onboarding, and governance structures built for Fortune 500 companies. HTSOL works with startups, growing agencies, and SMBs. Our model scales to your size. Whether you need one person for three months or a small team ongoing, we can accommodate it.",
-      image: "/website/clear-transparent.png",
+      image: "/website/clear-transparent.webp",
     },
     {
       id: "desForTrust",
       heading: "YOU OWN THE OUTPUT COMPLETELY",
       description:
         "Everything produced by your HTSOL resource belongs to you. Code, designs, content, strategies — it is all yours. We do not retain any rights to work produced during an engagement, and you are not locked into any platform or tooling we own. Your intellectual property is your intellectual property.",
-      image: "/website/designed-trust.png",
+      image: "/website/designed-trust.webp",
     },
     {
       id: "builtToScale",
       heading: "HONEST MATCHING — NOT JUST FAST PLACEMENT",
       description:
         "We would rather take an extra few days to match you with the right person than place the wrong one quickly and have you managing a performance problem three weeks in. Before we place anyone, we match their skills, experience, and working style to your actual requirements. If we do not have the right person, we tell you — not try to sell you someone who almost fits.",
-      image: "/website/built-to-scale.png",
+      image: "/website/built-to-scale.webp",
     },
   ],
 };
@@ -2440,35 +2440,35 @@ export const WHITE_LABEL_WHY_CHOOSE = {
       heading: "We Understand Agency Workflows",
       description:
         "We have worked inside agency relationships before. We understand how agencies sell, how they manage clients, and how they protect their positioning. We are not a freelancer who needs hand-holding. We are a professional execution partner who integrates cleanly into your operation and makes you look good.",
-      image: "/white-why-1.png",
+      image: "/white-why-1.webp",
     },
     {
       id: "fullStack",
       heading: "Full-Stack Capability Under One Roof",
       description:
         "Most white label options are specialists - they do SEO, or they do web design, or they do ads. HTSOL delivers all of it. That means your agency can offer a complete digital service to your clients without assembling a different partner for each discipline. One relationship. Full capability.",
-      image: "/website/full-development.png",
+      image: "/website/full-development.webp",
     },
     {
       id: "quality",
       heading: "Quality That Protects Your Reputation",
       description:
         "We only produce work we would be comfortable putting our own name on, which means it is work you can comfortably put yours on. We do not cut corners to hit a price point. If a project requires more time to do it right, we communicate that early, not after we have delivered something substandard.",
-      image: "/website/performance-first.png",
+      image: "/website/performance-first.webp",
     },
     {
       id: "globalDelivery",
       heading: "Canada-Based Strategy, Global Delivery",
       description:
         "HTSOL is based in Mississauga, Ontario. Our strategic oversight is Canadian - we understand Canadian clients, Canadian compliance, and the Canadian market. Our delivery team operates internationally, which gives us the capacity to scale with your agency's needs without inflating your costs.",
-      image: "/location-agency.png",
+      image: "/location-agency.webp",
     },
     {
       id: "noConflicts",
       heading: "No Conflicts. Ever.",
       description:
         "We do not take on direct clients in the same markets as our agency partners without prior agreement. We do not approach your clients independently. We do not use the work we produce for you in our own portfolio without explicit permission. Your clients are your clients. That boundary is absolute.",
-      image: "/website/clear-transparent.png",
+      image: "/website/clear-transparent.webp",
     },
   ],
 };
@@ -2517,7 +2517,7 @@ export const STAFF_AUGMENTATION_AGENCY = {
 };
 
 export const STAFF_AUGMENTATION_SMART_WAY = {
-  bgImage: "/staff-augmentation/smart-way-bg.png",
+  bgImage: "/staff-augmentation/smart-way-bg.webp",
   title: "THE SMARTEST WAY TO SCALE YOUR TEAM WITHOUT SCALING YOUR RISK",
   para: `The traditional hiring model is built for a different era. Permanent headcount, six-month hiring cycles, expensive onboarding, and the constant risk that your new hire does not work out — none of that is suited to the speed at which businesses need to move today.
   <br /><br />
@@ -2527,35 +2527,35 @@ export const STAFF_AUGMENTATION_SMART_WAY = {
   items: [
     {
       title: "Senior talent available in days, not months",
-      image: "/staff-augmentation/smart-way-img-1.png",
+      image: "/staff-augmentation/smart-way-img-1.webp",
       alt: "Senior talent available in days, not months",
     },
     {
       title: "Pay for the hours and skills you actually need — nothing more",
-      image: "/website/full-development.png",
+      image: "/website/full-development.webp",
       alt: "Pay for the hours and skills you actually need — nothing more",
     },
     {
       title:
         "Scale up and down as your workload demands without the hiring and firing cycle",
-      image: "/website/conversion-focused.png",
+      image: "/website/conversion-focused.webp",
       alt: "Scale up and down as your workload demands without the hiring and firing cycle",
     },
     {
       title:
         "Eliminate employer taxes, benefits, office costs, and equipment overhead",
-      image: "/website/technical-seo.png",
+      image: "/website/technical-seo.webp",
       alt: "Eliminate employer taxes, benefits, office costs, and equipment overhead",
     },
     {
       title: "Test a role before you commit to making it permanent",
-      image: "/website/analytics.png",
+      image: "/website/analytics.webp",
       alt: "Test a role before you commit to making it permanent",
     },
     {
       title:
         "Keep your core team lean and focused while augmented talent handles specific workloads",
-      image: "/website/performance.png",
+      image: "/website/performance.webp",
       alt: "Keep your core team lean and focused while augmented talent handles specific workloads",
     },
   ],
@@ -2563,7 +2563,7 @@ export const STAFF_AUGMENTATION_SMART_WAY = {
 };
 
 export const STAFF_AUGMENTATION_EXPERT = {
-  bgImage: "/staff-augmentation/expert-bg.png",
+  bgImage: "/staff-augmentation/expert-bg.webp",
   title:
     " NEED AN EXTRA PAIR OF HANDS — OR AN ENTIRE CAPABILITY YOU DO NOT HAVE YET?",
   para: ` Tell us what you need, what your timeline looks like, and what a successful engagement means for your business. We will match you with the right talent and get you started fast — no lengthy procurement process, no enterprise contract, no unnecessary complexity.`,
@@ -2631,7 +2631,7 @@ export const DIGITAL_TRANSFORMATION_GROWTH = {
   para: ` Every day, people in your area search for the exact services you offer. A dentist near me. A physio open on Saturday. An electrician available today. A family lawyer I can trust. These are real, high-intent searches from people ready to book, call, or enquire. If your business is not showing up properly, those leads go somewhere else.
   <br/><br/>
   The problem is not demand. The problem is visibility, trust, and follow-through. Without the right website, local SEO, messaging, and systems in place, your business stays harder to find and harder to choose. Over time, that gap grows. Competitors build more reviews, better rankings, stronger authority, and better client journeys while you rely on inconsistent referrals.`,
-  img: "/digital-transformation/growth-img.png",
+  img: "/digital-transformation/growth-img.webp",
   highlight: "Here Is What Digital Invisibility Actually Costs You:",
   list: [
     "Clients choosing a competitor because they found them first on Google",
@@ -2662,7 +2662,7 @@ export const DIGITAL_TRANSFORMATION_ACHIEVEMENTS = [
 ];
 
 export const DIGITAL_TRANSFORMATION_PROTECTION = {
-  bgImg: "/services/protection-bg.png",
+  bgImg: "/services/protection-bg.webp",
   text1:
     "HTSOL Inc. Handles the Full Journey — From Brand Strategy and Website Launch to SEO, Automation, and the Systems That Support Growth.",
   text2:
@@ -2684,35 +2684,35 @@ export const DIGITAL_TRANSFORMATION_EVERYTHING = {
       heading: "BRAND IDENTITY",
       description:
         "Before people trust your website, ads, or Google listing, they judge your brand. We create a professional logo, visual identity, messaging direction, and positioning that make your business feel credible, established, and worth contacting from the first impression.",
-      image: "/digital-transformation/everything-img-1.png",
+      image: "/digital-transformation/everything-img-1.webp",
     },
     {
       id: "performanceFirst",
       heading: "WEBSITE DESIGN & DEVELOPMENT",
       description:
         "Your website is your digital storefront. We design and build a fast, mobile-ready, conversion-focused website that clearly explains what you do, who you help, and why people should choose you. Every page is built to support trust, SEO, and action.",
-      image: "/website/performance-first.png",
+      image: "/website/performance-first.webp",
     },
     {
       id: "clearTransparent",
       heading: "LOCAL SEO & GOOGLE VISIBILITY",
       description:
         "Once your site is live, we help the right people find it. We improve your Google Business Profile, local relevance, service pages, and search visibility so your business appears for the searches that matter in your city and service area.",
-      image: "/website/clear-transparent.png",
+      image: "/website/clear-transparent.webp",
     },
     {
       id: "desForTrust",
       heading: "DIGITAL MARKETING & PAID GROWTH",
       description:
         "SEO builds long-term momentum. Paid campaigns can generate demand sooner. We use the right mix of Google Ads, content, local search strategy, and social visibility to support growth based on your goals, timeline, and budget.",
-      image: "/website/designed-trust.png",
+      image: "/website/designed-trust.webp",
     },
     {
       id: "builtToScale",
       heading: "SYSTEMS, AUTOMATION & SOFTWARE",
       description:
         "Growth only works when your operations can handle it. This is where our workflow automation consulting, digital systems consulting, and software modernization consulting come in. If your business needs better booking flows, CRM integration, reporting dashboards, internal tools, or more efficient processes, we build and connect the systems that support growth behind the scenes.",
-      image: "/website/built-to-scale.png",
+      image: "/website/built-to-scale.webp",
     },
   ],
 };
@@ -2818,7 +2818,7 @@ export const DIGITAL_TRANSFORMATION_WHY = {
     },
     {
       id: "results-image",
-      mainImage: "/digital-transformation/why-img.png",
+      mainImage: "/digital-transformation/why-img.webp",
       imageAlt: "Mississauga web design agency",
     },
     {
@@ -2887,36 +2887,36 @@ export const DIGITAL_TRANSFORMATION_DIGITAL_PRESENCE = {
     {
       title:
         "A brand that creates the right first impression online and offline",
-      image: "/digital-transformation/digital-presence-1.png",
+      image: "/digital-transformation/digital-presence-1.webp",
       alt: "Senior talent available in days, not months",
     },
     {
       title:
         "A website that turns visitors into real enquiries around the clock",
-      image: "/website/full-development.png",
+      image: "/website/full-development.webp",
       alt: "Pay for the hours and skills you actually need — nothing more",
     },
     {
       title: "Google visibility that brings in leads beyond referrals alone",
-      image: "/website/conversion-focused.png",
+      image: "/website/conversion-focused.webp",
       alt: "Scale up and down as your workload demands without the hiring and firing cycle",
     },
     {
       title:
         "Marketing and automation that support predictable, measurable growth",
-      image: "/website/technical-seo.png",
+      image: "/website/technical-seo.webp",
       alt: "Eliminate employer taxes, benefits, office costs, and equipment overhead",
     },
     {
       title:
         "Better workflow optimisation, stronger systems, and improved business efficiency",
-      image: "/website/analytics.png",
+      image: "/website/analytics.webp",
       alt: "Test a role before you commit to making it permanent",
     },
     {
       title:
         "A business that is easier to scale, easier to sell, and less dependent on luck",
-      image: "/website/performance.png",
+      image: "/website/performance.webp",
       alt: "Keep your core team lean and focused while augmented talent handles specific workloads",
     },
   ],
@@ -2924,7 +2924,7 @@ export const DIGITAL_TRANSFORMATION_DIGITAL_PRESENCE = {
 };
 
 export const DIGITAL_TRANSFORMATION_DIGITAL_SHIFT = {
-  bgImage: "/staff-augmentation/smart-way-bg.png",
+  bgImage: "/staff-augmentation/smart-way-bg.webp",
   title: "EMPOWERING MODERN BRANDS TO LEAD THE DIGITAL SHIFT",
   para: `The transition from traditional systems to a cloud-native environment seemed daunting until we partnered with HtSolutions. Their team bridged the gap between our vision and technical execution perfectly. We are now more agile, more responsive, and miles ahead of our competitors.`,
   highLight: "SARAH JENKINS",
@@ -2932,7 +2932,7 @@ export const DIGITAL_TRANSFORMATION_DIGITAL_SHIFT = {
 };
 
 export const DIGITAL_TRANSFORMATION_READY = {
-  bgImage: "/digital-transformation/ready-bg.png",
+  bgImage: "/digital-transformation/ready-bg.webp",
   title:
     "READY TO STOP RELYING ON REFERRALS AND START GETTING CLIENTS FROM GOOGLE?",
   para: `Whether you have no website, an outdated one, disconnected systems, or a site that is not generating results, we can help you fix it. HTSOL delivers digital transformation services that bring your brand, website, marketing, and internal systems together into one practical growth plan. Start with a free consultation and we will show you where you stand, what needs to happen next, and what the right scope looks like for your business.`,
@@ -3051,7 +3051,7 @@ export const CTO_ABOUT_ME = {
   para: `I am a software architect, full-stack engineer, and AI systems builder with over six years of experience designing web applications, intelligent automation systems, and digital infrastructure. My engineering background — rooted in avionics and complex systems design — means I think about technology the way an engineer designs a control system: precision-first, failure-aware, built to perform under load. When I joined HTSOL Inc. as CTO, I brought that foundation to one focused purpose: building AI-driven digital systems that help dental practices and healthcare businesses grow online — high-performance websites, custom CRMs, intelligent SEO automation, and software that actually fits how a clinical team operates.
   <br/><br/>
   Dental practices don't struggle because of bad dentistry. They struggle because their digital presence doesn't reflect the quality of care they deliver. My job is to close that gap — with websites engineered to perform from day one, AI-powered SEO systems that automate the discovery of high-intent dental searches, intelligent booking and CRM software that reduces front-desk administrative burden, and robotic process automation that handles the repetitive operational tasks that eat into a clinical team's time. I've helped practices across the UK turn underperforming websites into consistent patient acquisition engines. That's the standard I bring to every build.`,
-  image: "/cto/about-cto.png",
+  image: "/cto/about-cto.webp",
   signImage: "/ceo/signature.webp",
 };
 
@@ -3159,25 +3159,25 @@ export const CLIENT_SAY_ABOUT_CTO = {
     },
     {
       para: "Really great experience working together. Faseeh did an excellent job improving and polishing our frontend, with a strong focus on UI quality, performance optimization, and responsive behavior. They worked confidently with React.js and Next.js, translated designs and wireframes into clean, interactive components, and integrated everything smoothly with our RESTful APIs. Load times and overall responsiveness improved noticeably, and everything works consistently across browsers. Solid communication and delivery — would definitely work with them again.",
-      image: "/ceo/user-icon.png",
+      image: "/ceo/user-icon.webp",
       name: "SAM",
       designation: "CO-FOUNDER, MEIIDZ",
     },
     {
       para: "Really great experience working together. Faseeh did an excellent job improving and polishing our frontend, with a strong focus on UI quality, performance optimization, and responsive behavior. Load times and overall responsiveness improved noticeably, and everything works consistently across browsers.",
-      image: "/ceo/user-icon.png",
+      image: "/ceo/user-icon.webp",
       name: "MUKHLIS",
       designation: "TECHAGENCY BANGLA",
     },
     {
       para: "I engaged Faseeh for marketing initiatives at Same Day Builders, a company specializing in handyman services. Faseeh and his team at HtSol demonstrated remarkable flexibility by accommodating my ever-changing schedule, which is par for the course as a business owner. Moreover, during our initial proposal meeting, Faseeh adeptly addressed all of my questions and objectives. This instilled a level of comfort and confidence in me, affirming that I had made the right decision in partnering with him for our marketing needs. Given the positive experience and results, I've decided to extend my collaboration with HtSol to Meiidz, another venture of mine that offers semi-national house cleaning services. The professionalism and effectiveness Faseeh has shown make me optimistic about the marketing prospect.",
-      image: "/ceo/user-icon.png",
+      image: "/ceo/user-icon.webp",
       name: "MARISS N.",
       designation: "FOUNDER / CEO, SAME DAY BUILDERS, USA",
     },
     {
       para: "Our Account Manager at HtSol was very punctual and very communicative when it came to the campaign. I appreciate his will to understand what the client wants and overall the company to deliver.",
-      image: "/ceo/user-icon.png",
+      image: "/ceo/user-icon.webp",
       name: "JAMES ASUNA",
       designation: "PRINCIPAL DENTIST AND FOUNDER",
     },
@@ -3188,13 +3188,13 @@ export const CLIENT_SAY_ABOUT_CTO = {
 
     Perfectly executed and really happy with the communication throughout.
     `,
-      image: "/ceo/user-icon.png",
+      image: "/ceo/user-icon.webp",
       name: "ASIF N.",
       designation: "FOUNDER, MARKETING AGENCY, UK",
     },
     {
       para: "Project title: IT Consultation. Had a very engaging and productive meeting session. Good advice. They listened to the problem, tried to see the problem from a broader perspective to give a proper solution / advice. Anyone can can talk to them for IT advice. Best of luck !",
-      image: "/ceo/user-icon.png",
+      image: "/ceo/user-icon.webp",
       name: "MUSA",
       designation: "FOUNDER, TRAVEL AGENCY, BANGLADESH",
     },
@@ -3202,13 +3202,13 @@ export const CLIENT_SAY_ABOUT_CTO = {
       para: `It was great to work with HtSol. They very keen to do all the details and ask / noted unclear parts thoroughly. I would Love and already planning to do another Software for healthcare industry with them.
     Helped me a lot with great product!
     `,
-      image: "/ceo/user-icon.png",
+      image: "/ceo/user-icon.webp",
       name: "JAEYOON",
       designation: "SOUTH KOREA",
     },
     {
       para: "Good and fast never disappointed with HtSol. They work quickly and take time to understand your business and business logic.",
-      image: "/ceo/user-icon.png",
+      image: "/ceo/user-icon.webp",
       name: "YANIS",
       designation: "FOUNDER, YOGA STUDIO, FRANCE",
     },
@@ -3263,37 +3263,37 @@ export interface OurPortfolioCaseStudy {
 }
 
 export const OUR_PORTFOLIO_DESIGN_CARDS: OurPortfolioDesignCard[] = [
-  { image: "/web-design-1.png", category: "Website Design", label: "Dental" },
+  { image: "/web-design-1.webp", category: "Website Design", label: "Dental" },
   {
-    image: "/web-design-2.png",
+    image: "/web-design-2.webp",
     category: "Website Design",
     label: "THERAPIST",
   },
-  { image: "/web-design-3.png", category: "Website Design", label: "DENTIST" },
-  { image: "/web-design-6.png", category: "Website Design", label: "DENTIST" },
+  { image: "/web-design-3.webp", category: "Website Design", label: "DENTIST" },
+  { image: "/web-design-6.webp", category: "Website Design", label: "DENTIST" },
   {
-    image: "/web-design-4.png",
+    image: "/web-design-4.webp",
     category: "Website Design",
     label: "LOGISTICS",
   },
   {
-    image: "/web-design-5.png",
+    image: "/web-design-5.webp",
     category: "Website Design",
     label: "SMART HOME",
   },
-  { image: "/w-design-7.png", category: "Website Design", label: "DENTAL" },
+  { image: "/w-design-7.webp", category: "Website Design", label: "DENTAL" },
   {
-    image: "/w-design-8.png",
+    image: "/w-design-8.webp",
     category: "Website Design",
     label: "DIGITAL MARKETING",
   },
-  { image: "/web-design-9.png", category: "Website Design", label: "DENTAL" },
-  { image: "/w-design-10.png", category: "Website Design", label: "DENTAL" },
+  { image: "/web-design-9.webp", category: "Website Design", label: "DENTAL" },
+  { image: "/w-design-10.webp", category: "Website Design", label: "DENTAL" },
 ];
 
 export const OUR_PORTFOLIO_DEV_CARDS: OurPortfolioDesignCard[] = [
   {
-    image: "/web-dev-1.png",
+    image: "/web-dev-1.webp",
     category: "Website Development",
     label: "SMILEFAST",
   },
@@ -3313,7 +3313,7 @@ export const OUR_PORTFOLIO_DEV_CARDS: OurPortfolioDesignCard[] = [
     label: "DENTIST",
   },
   {
-    image: "/web-dev-2.png",
+    image: "/web-dev-2.webp",
     category: "Website Development",
     label: "BRITISH ACADEMY",
   },
@@ -3346,85 +3346,85 @@ export const OUR_PORTFOLIO_DEV_CARDS: OurPortfolioDesignCard[] = [
 
 export const OUR_PORTFOLIO_CGI_VIDEOS: OurPortfolioCgiVideo[] = [
   {
-    thumbnail: "https://img.youtube.com/vi/t105qp6q2fY/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi_webp/t105qp6q2fY/maxresdefault.webp",
     title: "CGI gives you Wings",
     subtitle: "2025",
     url: "https://youtube.com/shorts/t105qp6q2fY?si=n5JlWqpeaAD_o__J",
   },
   {
-    thumbnail: "https://img.youtube.com/vi/nn4cC3qRik0/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi_webp/nn4cC3qRik0/maxresdefault.webp",
     title: "Kiwai X HtSol",
     subtitle: "2025",
     url: "https://youtube.com/shorts/nn4cC3qRik0?si=QkdFbM2hX1TCF06T",
   },
   {
-    thumbnail: "https://img.youtube.com/vi/nvr9g1-7S8s/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi_webp/nvr9g1-7S8s/maxresdefault.webp",
     title: "PizzahutCGO X HTSol",
     subtitle: "2025",
     url: "https://youtube.com/shorts/nvr9g1-7S8s?si=L1wAjm231YJVl3Px",
   },
   {
-    thumbnail: "https://img.youtube.com/vi/ifVhc0U0ZFg/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi_webp/ifVhc0U0ZFg/maxresdefault.webp",
     title: "HTSol Showreel",
     subtitle: "2025",
     url: "https://youtube.com/shorts/ifVhc0U0ZFg?si=ye4Eavv3VqkQ9rzn",
   },
   {
-    thumbnail: "https://img.youtube.com/vi/1UwBM6PiivM/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi_webp/1UwBM6PiivM/maxresdefault.webp",
     title: "A Tribute to Arshad Nadeem",
     subtitle: "2025",
     url: "https://youtube.com/shorts/1UwBM6PiivM?si=Ohxot4MUOjNzcRe3",
   },
   {
-    thumbnail: "https://img.youtube.com/vi/BDOPnNwhHpU/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi_webp/BDOPnNwhHpU/maxresdefault.webp",
     title: "Nayza Borjan Hoodie Mixed reality 3D Animated and CGI Video Ad",
     subtitle: "2025",
     url: "https://youtube.com/shorts/BDOPnNwhHpU?si=TnAu5Ylqrj147N9L",
   },
   {
-    thumbnail: "https://img.youtube.com/vi/f_ZA1O9rpM0/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi_webp/f_ZA1O9rpM0/maxresdefault.webp",
     title: "Nayza Borjan Jacket CGI Video",
     subtitle: "2025",
     url: "https://youtube.com/shorts/f_ZA1O9rpM0?si=lc3NrBZH5ddKbaq5",
   },
   {
-    thumbnail: "https://img.youtube.com/vi/oS7-CxFz5a8/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi_webp/oS7-CxFz5a8/maxresdefault.webp",
     title: "HTSolutions x Burger O'Clock CGI Video Series",
     subtitle: "2025",
     url: "https://youtube.com/shorts/oS7-CxFz5a8?si=nlvbUknshGvUepqY",
   },
   {
-    thumbnail: "https://img.youtube.com/vi/_1Tg5jmvg38/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi_webp/_1Tg5jmvg38/maxresdefault.webp",
     title: "HTSolutions x Burger O'Clock CGI Series Continued",
     subtitle: "2025",
     url: "https://youtube.com/shorts/_1Tg5jmvg38?si=WjmHziDOHj4jANQx",
   },
   {
-    thumbnail: "https://img.youtube.com/vi/USNe095vuBI/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi_webp/USNe095vuBI/maxresdefault.webp",
     title: "Burger O'Clock CGI video Ad x HTSol",
     subtitle: "2025",
     url: "https://youtube.com/shorts/USNe095vuBI?si=IFdeL8mL-Mtvrmh9",
   },
   {
-    thumbnail: "https://img.youtube.com/vi/MZgfp3s3cgg/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi_webp/MZgfp3s3cgg/maxresdefault.webp",
     title: "CGI Video for a hoodie product.",
     subtitle: "2025",
     url: "https://youtube.com/shorts/MZgfp3s3cgg?si=Ttti2LlytbgHqrcf",
   },
   {
-    thumbnail: "https://img.youtube.com/vi/4OLkrYvz_to/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi_webp/4OLkrYvz_to/maxresdefault.webp",
     title: "Rolling Smart Watches CGI in Lahore By HTSolutions",
     subtitle: "2025",
     url: "https://youtube.com/shorts/4OLkrYvz_to?si=yyiimYgaLotipQHs",
   },
   {
-    thumbnail: "https://img.youtube.com/vi/gA0lss9gxZo/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi_webp/gA0lss9gxZo/maxresdefault.webp",
     title: "CGI for a Hair Saloon By HTSolutions",
     subtitle: "2025",
     url: "https://youtube.com/shorts/gA0lss9gxZo?si=mUuNLdnPwM7Cehp6",
   },
   {
-    thumbnail: "https://img.youtube.com/vi/RmU91oIoSpk/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi_webp/RmU91oIoSpk/maxresdefault.webp",
     title: "CGI Commercial",
     subtitle: "2025",
     url: "https://youtube.com/shorts/RmU91oIoSpk?si=Lxnh_XYCip9wKOYy",
@@ -3446,8 +3446,8 @@ export const OUR_PORTFOLIO_CASE_STUDIES: OurPortfolioCaseStudy[] = [
       "Branding & Design",
       "Performance SEO",
     ],
-    images: ["/mockup.png"],
-    accent: "/marketing-1.png",
+    images: ["/mockup.webp"],
+    accent: "/marketing-1.webp",
   },
   {
     logo: "/logo.webp",
@@ -3478,7 +3478,7 @@ export const OUR_PORTFOLIO_CASE_STUDIES: OurPortfolioCaseStudy[] = [
       "Social Media Management",
       "Performance SEO",
     ],
-    images: ["/mockup 3.png"],
+    images: ["/mockup 3.webp"],
     accent: "/marketing-3.webp",
   },
   {
@@ -3492,7 +3492,7 @@ export const OUR_PORTFOLIO_CASE_STUDIES: OurPortfolioCaseStudy[] = [
       "Content Creation",
       "Branding & Design",
     ],
-    images: ["/watch.png"],
+    images: ["/watch.webp"],
     accent: "/marketing-3.webp",
     imageLayout: "watch",
   },
@@ -3507,21 +3507,21 @@ export const OUR_PORTFOLIO_CASE_STUDIES: OurPortfolioCaseStudy[] = [
       "Content Creation",
       "Branding & Design",
     ],
-    images: ["/diamond.png"],
-    accent: "/diamond-bg.png",
+    images: ["/diamond.webp"],
+    accent: "/diamond-bg.webp",
   },
 ];
 
 export const OUR_PORTFOLIO_CUSTOM_DEV_CARDS: OurPortfolioCaseStudy[] = [
   {
-    logo: "/cust-dev-logo.png",
+    logo: "/cust-dev-logo.webp",
     company: "Htsol.ca",
     heading: "HIGH-IMPACT UX FOR\nDENTAL PROFESSIONALS",
     description:
       "With over a decade of clinical expertise, this international consultancy needed a digital ecosystem that matched their authority. We delivered a conversion-focused, award-nominated platform that turns professional trust into measurable practice growth.",
     services: ["Web Design & Development", "Social Media Management"],
-    images: ["/htsol.png"],
-    accent: "/cus-dev-1.png",
+    images: ["/htsol.webp"],
+    accent: "/cus-dev-1.webp",
     imageLayout: "monitor",
   },
   {
@@ -3531,8 +3531,8 @@ export const OUR_PORTFOLIO_CUSTOM_DEV_CARDS: OurPortfolioCaseStudy[] = [
     description:
       "With over a decade of clinical expertise, this international consultancy needed a digital ecosystem that matched their authority. We delivered a conversion-focused, award-nominated platform that turns professional trust into measurable practice growth.",
     services: ["Web Design & Development", "Social Media Management"],
-    images: ["/cust-dev-2.png"],
-    accent: "/cus-dev-1.png",
+    images: ["/cust-dev-2.webp"],
+    accent: "/cus-dev-1.webp",
     imageLayout: "monitor",
   },
   {
@@ -3542,8 +3542,8 @@ export const OUR_PORTFOLIO_CUSTOM_DEV_CARDS: OurPortfolioCaseStudy[] = [
     description:
       "With over a decade of clinical expertise, this international consultancy needed a digital ecosystem that matched their authority. We delivered a conversion-focused, award-nominated platform that turns professional trust into measurable practice growth.",
     services: ["Web Design & Development", "Social Media Management"],
-    images: ["/cust-dev-3.png"],
-    accent: "/cus-dev-1.png",
+    images: ["/cust-dev-3.webp"],
+    accent: "/cus-dev-1.webp",
     imageLayout: "monitor",
   },
 ];
@@ -3563,8 +3563,8 @@ export const OUR_PORTFOLIO_SEO_CARDS: OurPortfolioCaseStudy[] = [
       "Branding & Design",
       "Performance SEO",
     ],
-    images: ["/seo-1.png"],
-    accent: "/cus-dev-1.png",
+    images: ["/seo-1.webp"],
+    accent: "/cus-dev-1.webp",
     imageLayout: "seo",
   },
   {
@@ -3580,8 +3580,8 @@ export const OUR_PORTFOLIO_SEO_CARDS: OurPortfolioCaseStudy[] = [
       "Social Media Management",
       "Performance SEO",
     ],
-    images: ["/seo-1.png"],
-    accent: "/cus-dev-1.png",
+    images: ["/seo-1.webp"],
+    accent: "/cus-dev-1.webp",
     imageLayout: "seo",
   },
   {
@@ -3597,8 +3597,8 @@ export const OUR_PORTFOLIO_SEO_CARDS: OurPortfolioCaseStudy[] = [
       "Social Media Management",
       "Performance SEO",
     ],
-    images: ["/seo-1.png"],
-    accent: "/cus-dev-1.png",
+    images: ["/seo-1.webp"],
+    accent: "/cus-dev-1.webp",
     imageLayout: "seo",
   },
 ];

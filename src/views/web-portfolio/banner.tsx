@@ -6,7 +6,7 @@ import Container from "@/components/ui/container";
 
 export default function Banner() {
   const [isOpen, setIsOpen] = useState(false);
-  const portfolioBannerImage = "/portfolio-banner.png";
+  const portfolioBannerImage = "/portfolio-banner.webp";
   const portfolioPlayButtonImage = "/play-button.svg";
   const portfolioVideo = "/portfolio-video.mp4";
 

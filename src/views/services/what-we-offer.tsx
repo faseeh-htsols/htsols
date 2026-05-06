@@ -77,7 +77,14 @@ const WhatWeOffer = () => {
                         <div className="grid grid-cols-2 gap-5">
                           {item.images.map((img, idx) => (
                             <div key={idx}>
-                              <img src={img.src} alt={img.alt} />
+                              <Image
+                                src={img.src}
+                                alt={img.alt}
+                                width={600}
+                                height={400}
+                                sizes="(max-width: 768px) 50vw, 320px"
+                                className="h-auto w-full"
+                              />
                             </div>
                           ))}
                         </div>

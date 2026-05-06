@@ -164,7 +164,7 @@ const TestimonialsSection = () => {
                       <div className="flex h-15 w-15 shrink-0 rounded-full">
                         <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full ">
                           <Image
-                            src={"/ceo/user-icon.png"}
+                            src={"/ceo/user-icon.webp"}
                             alt="qoute icon"
                             fill
                             className="object-cover"

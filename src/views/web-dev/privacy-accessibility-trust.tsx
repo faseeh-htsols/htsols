@@ -2,6 +2,7 @@ import React from "react";
 import Container from "@/components/ui/container";
 import Button from "@/components/ui/Button";
 import HeadingTwo from "@/components/ui/heading-two";
+import Image from "next/image";
 
 const FUNDAMENTALS = [
   "Consent-friendly analytics and cookie setups when required",
@@ -12,7 +13,15 @@ const FUNDAMENTALS = [
 
 const PrivacyAccessibilityTrust = () => {
   return (
-    <section className="relative min-h-[600px] lg:min-h-[700px] bg-[url(/website/privacy-bg.png)] bg-cover bg-right overflow-hidden">
+    <section className="relative min-h-[600px] overflow-hidden lg:min-h-[700px]">
+      <Image
+        src="/website/privacy-bg.webp"
+        alt=""
+        fill
+        sizes="100vw"
+        className="absolute inset-0 z-0 object-cover object-right"
+        aria-hidden="true"
+      />
       <Container>
         <div className="relative z-10 flex py-20 lg:py-40">
           <div className="">
