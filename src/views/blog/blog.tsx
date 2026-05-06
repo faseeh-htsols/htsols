@@ -17,14 +17,16 @@ function Blog({ posts }: BlogProps) {
         {featured?.slug && (
           <div className="relative overflow-hidden rounded-2xl h-auto md:h-[500px] mb-10">
             <div className="absolute inset-0">
-              <img
+              <Image
                 src={
                   featured.pictureUrl ||
                   featured.banner?.image ||
                   "/blog-banner.webp"
                 }
                 alt={featured.title || featured.banner?.title || "Blog"}
-                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 1280px"
+                className="object-cover"
               />
             </div>
             <Link
@@ -66,7 +68,7 @@ function Blog({ posts }: BlogProps) {
                     (featured.author?.pictureUrl ||
                       featured.author?.image?.url)) ? (
                     <div className="flex items-center gap-3">
-                      <img
+                      <Image
                         src={
                           featured.banner?.authorImage ??
                           featured.author?.pictureUrl ??
@@ -127,11 +129,13 @@ function Blog({ posts }: BlogProps) {
               className="group rounded-2xl overflow-hidden transition-all"
             >
               <div className="relative h-[200px] md:h-[250px] overflow-hidden">
-                <img
+                <Image
                   src={
                     post.pictureUrl || post.banner?.image || "/blog-banner.webp"
                   }
                   alt={post.title || post.banner?.title || "Blog"}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -167,7 +171,7 @@ function Blog({ posts }: BlogProps) {
                   (post.author?.name &&
                     (post.author?.pictureUrl || post.author?.image?.url)) ? (
                     <div className="flex items-center gap-2">
-                      <img
+                      <Image
                         src={
                           post.banner?.authorImage ??
                           post.author?.pictureUrl ??

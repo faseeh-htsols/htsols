@@ -1,19 +1,21 @@
 import Button from "@/components/ui/Button";
+import Image from "next/image";
 
-const lists = [
-  "One accountable partner",
-  "Consistent communication",
-  "Predictable timelines",
-  "Systems designed to scale with your growth",
-  "Tailored solutions built around your processes",
-];
 export default function OurStory() {
   return (
-    <section className="relative bg-[url(/about-us/our-story-bg.png)] bg-cover bg-no-repeat bg-center py-20 lg:py-40 overflow-hidden">
+    <section className="relative overflow-hidden py-20 lg:py-40">
+      <Image
+        src="/about-us/our-story-bg.webp"
+        alt=""
+        fill
+        sizes="100vw"
+        className="absolute inset-0 z-0 object-cover object-center"
+        aria-hidden="true"
+      />
       {/* subtle gradient */}
       {/* <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/30 to-transparent" /> */}
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2">
         {/* LEFT CONTENT */}
         <div className="bg-[#252528] overflow-hidden relative rounded-xl p-10 lg:p-12 text-white max-w-xl">
           <div className="absolute top-0 left-0 bg-[#00A1A5] h-14 w-24 rounded-full blur-2xl"></div>

@@ -33,7 +33,7 @@ const Banner = () => {
           <div className="relative order-2 lg:order-1 flex h-full items-center justify-center lg:justify-start">
             <div className="relative w-full h-full min-h-[300px] sm:min-h-[400px]">
               <Image
-                src="/marketing-banner.png"
+                src="/marketing-banner.webp"
                 alt="SEO growth metrics and Page 1 Rankings"
                 fill
                 className="object-cover rounded-[20px]"

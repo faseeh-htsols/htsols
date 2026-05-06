@@ -63,7 +63,7 @@ const WhiteLabelWorkflowSection = () => {
 
             <div className="mt-2 w-full max-w-[550px] ml-auto lg:mt-0 lg:w-[550px]">
               <Image
-                src="/services/work-duo-pic.png"
+                src="/services/work-duo-pic.webp"
                 alt="White label workflow preview"
                 width={550}
                 height={554}

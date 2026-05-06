@@ -1,6 +1,5 @@
 import HeadingTwo from "@/components/ui/heading-two";
 import Container from "@/components/ui/container";
-import { BOLG_CURATE_CEO } from "@/constants";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import DoubleCurves from "@/components/ui/double-curves";
@@ -30,17 +29,19 @@ const BlogCurate = ({ posts = [] }: BlogProps) => {
                     key={index}
                     className="relative overflow-hidden group w-full lg:w-[calc((100%-56px)/3)]"
                   >
-                    <img
+                    <div className="relative h-[200px] w-full overflow-hidden rounded-xl md:h-[270px]">
+                      <Image
                       src={
                         item.pictureUrl ||
                         item.banner?.image ||
                         "/blog-banner.webp"
                       }
                       alt={item.title || item.banner?.title || "Blog"}
-                      // width={500}
-                      // height={500}
-                      className="h-[200px] md:h-[270px] w-full rounded-xl"
-                    />
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 33vw"
+                        className="object-cover"
+                      />
+                    </div>
                     <div className="absolute inset-0 w-full h-full">
                       <div className="p-5 flex flex-col h-full justify-between">
                         <button className="w-10 ms-auto relative z-10 h-10 rounded-full border-2 border-white flex items-center justify-center text-white transition-all duration-300  group-hover:bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] group-hover:border-[#075B65]">

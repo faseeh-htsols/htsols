@@ -22,25 +22,25 @@ const partnerReasons: PartnerReason[] = [
     title: "Full-Stack Capability Under One Roof",
     description:
       "Most white label options are specialists - they do SEO, or they do web design, or they do ads. HTSOL delivers all of it. That means your agency can offer a complete digital service to your clients without assembling a different partner for each discipline. One relationship. Full capability.",
-    image: "/website/full-development.png",
+    image: "/website/full-development.webp",
   },
   {
     title: "Quality That Protects Your Reputation",
     description:
       "We only produce work we would be comfortable putting our own name on, which means it is work you can comfortably put yours on. We do not cut corners to hit a price point. If a project requires more time to do it right, we communicate that early, not after we have delivered something substandard.",
-    image: "/website/performance-first.png",
+    image: "/website/performance-first.webp",
   },
   {
     title: "Canada-Based Strategy, Global Delivery",
     description:
       "HTSOL is based in Mississauga, Ontario. Our strategic oversight is Canadian - we understand Canadian clients, Canadian compliance, and the Canadian market. Our delivery team operates internationally, which gives us the capacity to scale with your agency's needs without inflating your costs.",
-    image: "/location-agency.png",
+    image: "/location-agency.webp",
   },
   {
     title: "No Conflicts. Ever.",
     description:
       "We do not take on direct clients in the same markets as our agency partners without prior agreement. We do not approach your clients independently. We do not use the work we produce for you in our own portfolio without explicit permission. Your clients are your clients. That boundary is absolute.",
-    image: "/website/clear-transparent.png",
+    image: "/website/clear-transparent.webp",
   },
 ];
 

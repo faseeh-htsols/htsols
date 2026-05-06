@@ -54,7 +54,7 @@ const DigitalAgency = ({ data }: DigitalAgencyProps) => {
                     <div className="relative">
                         <div className="pointer-events-none absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2">
                             <Image
-                                src="/staff-augmentation/blur-overlay.png"
+                                src="/staff-augmentation/blur-overlay.webp"
                                 width={500}
                                 height={500}
                                 className="h-[550px] w-[550px] object-contain"

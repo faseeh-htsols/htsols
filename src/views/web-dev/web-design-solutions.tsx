@@ -14,37 +14,37 @@ type SolutionItem = {
 const ITEMS: SolutionItem[] = [
   {
     title: "UI AND UX DESIGN, PLUS WIREFRAMES",
-    image: "/website/ui-ux.png",
+    image: "/website/ui-ux.webp",
     alt: "UI/UX design and wireframes",
   },
   {
     title: "FULL DEVELOPMENT AND CMS SETUP",
-    image: "/website/full-development.png",
+    image: "/website/full-development.webp",
     alt: "Full development and CMS setup",
   },
   {
     title: "CONVERSION-FOCUSED LAYOUTS AND FORMS",
-    image: "/website/conversion-focused.png",
+    image: "/website/conversion-focused.webp",
     alt: "Conversion-focused layouts and forms",
   },
   {
     title: "TECHNICAL SEO FOUNDATIONS",
-    image: "/website/technical-seo.png",
+    image: "/website/technical-seo.webp",
     alt: "Technical SEO foundations",
   },
   {
     title: "ANALYTICS AND TRACKING SETUP",
-    image: "/website/analytics.png",
+    image: "/website/analytics.webp",
     alt: "Analytics and tracking setup",
   },
   {
     title: "PERFORMANCE OPTIMIZATION",
-    image: "/website/performance.png",
+    image: "/website/performance.webp",
     alt: "Performance optimization",
   },
   {
     title: "LAUNCH SUPPORT AND TRAINING",
-    image: "/website/launch- support.png",
+    image: "/website/launch- support.webp",
     alt: "Launch support and training",
   },
 ];

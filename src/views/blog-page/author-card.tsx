@@ -17,7 +17,7 @@ function AuthorCard({ author, date }: { author: Author; date?: string }) {
         <div className="">
           <div className="flex lg:flex-row flex-col items-center gap-4">
             <div className="bg-primary flex justify-center items-center w-[200px] h-[200px] shrink-0 rounded-full">
-              <img
+              <Image
                 src={pictureUrl || "/user-placeholder.webp"}
                 alt={name || "Author"}
                 width={1000}

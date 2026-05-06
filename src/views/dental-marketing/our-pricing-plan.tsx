@@ -99,7 +99,7 @@ export default function PricingPlan() {
                     <div className="relative overflow-hidden rounded-[18px] border border-[#0DAFC0]/40 bg-[#111111]">
                         <div className="absolute inset-0">
                             <Image
-                                src="/dental/pricing-plan-bg.png"
+                                src="/dental/pricing-plan-bg.webp"
                                 alt="pricing bg"
                                 fill
                                 className="object-cover"
@@ -112,7 +112,7 @@ export default function PricingPlan() {
                             <div className="flex flex-col items-center text-center mb-6">
                                 <div className="w-[48px] h-[48px] rounded-full overflow-hidden mb-3 border border-white/20">
                                     <Image
-                                        src="/dental/pricing-circle.png"
+                                        src="/dental/pricing-circle.webp"
                                         alt="icon"
                                         width={48}
                                         height={48}

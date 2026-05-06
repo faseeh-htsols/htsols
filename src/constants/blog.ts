@@ -234,7 +234,7 @@ export const BLOGS: BlogPost[] = [
       {
         heading: "What is local SEO?",
         content:
-          "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus.</p><img src=\"/blog-image.png\" alt=\"Local SEO\" />",
+          "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus.</p><img src=\"/blog-image.webp\" alt=\"Local SEO\" />",
       },
       {
         heading: "The checklist",

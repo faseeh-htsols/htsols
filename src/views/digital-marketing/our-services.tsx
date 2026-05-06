@@ -7,10 +7,7 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion-two";
 import { DIGITAL_MARKETING_SERVICES_OFFERED_ACCORDION } from "@/constants";
-import parse from "html-react-parser";
-import LottiePlayer from "@/components/ui/lottie-player";
 import Image from "next/image";
-import Link from "next/link";
 
 const OurServices = () => {
     return (
@@ -80,7 +77,14 @@ const OurServices = () => {
                                                 <div className="grid grid-cols-2 gap-5">
                                                     {item.images.map((img, idx) => (
                                                         <div key={idx}>
-                                                            <img src={img.src} alt={img.alt} />
+                                                            <Image
+                                                                src={img.src}
+                                                                alt={img.alt}
+                                                                width={600}
+                                                                height={400}
+                                                                sizes="(max-width: 768px) 50vw, 320px"
+                                                                className="h-auto w-full"
+                                                            />
                                                         </div>
                                                     ))}
                                                 </div>

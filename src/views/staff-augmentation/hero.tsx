@@ -50,11 +50,11 @@ const validationSchema = Yup.object({
 type StaffAugmentationFormValues = Yup.InferType<typeof validationSchema>;
 
 const avatarSources = [
-  "/staff-augmentation/avatar-1.png",
-  "/staff-augmentation/avatar-2.png",
-  "/staff-augmentation/avatar-3.png",
-  "/staff-augmentation/avatar-4.png",
-  "/staff-augmentation/avatar-5.png",
+  "/staff-augmentation/avatar-1.webp",
+  "/staff-augmentation/avatar-2.webp",
+  "/staff-augmentation/avatar-3.webp",
+  "/staff-augmentation/avatar-4.webp",
+  "/staff-augmentation/avatar-5.webp",
 ] as const;
 
 const inputClasses =
@@ -135,15 +135,19 @@ const WhiteLabelHero = () => {
   };
 
   return (
-    <section
-      className="relative overflow-hidden bg-[#04070A] bg-cover bg-center bg-no-repeat pb-16 pt-32 lg:min-h-screen lg:pb-24 lg:pt-40"
-      style={{
-        backgroundImage: "url('/services/whitelabel-bg-home.png')",
-      }}
-    >
-      <div className="absolute inset-0 bg-black/45" />
+    <section className="relative overflow-hidden bg-[#04070A] pb-16 pt-32 lg:min-h-screen lg:pb-24 lg:pt-40">
+      <Image
+        src="/services/whitelabel-bg-home.webp"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="absolute inset-0 z-0 object-cover object-center"
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 z-[1] bg-black/45" />
 
-      <div className="absolute left-0 top-20">
+      <div className="absolute left-0 top-20 z-[2]">
         <Image
           src="/left-gradient.webp"
           width={500}
@@ -152,7 +156,7 @@ const WhiteLabelHero = () => {
           alt="left gradient"
         />
       </div>
-      <div className="absolute right-0 top-20">
+      <div className="absolute right-0 top-20 z-[2]">
         <Image
           src="/right-gradient.webp"
           width={500}
@@ -163,6 +167,7 @@ const WhiteLabelHero = () => {
       </div>
 
       <Container>
+        <div className="relative z-10">
         <div className="relative grid grid-cols-1 items-center gap-8 sm:gap-10 xl:grid-cols-[minmax(0,780px)_630px] xl:justify-between xl:gap-12 overflow-hidden">
           <div className="max-w-[780px]">
             <div className="mb-6 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 lg:gap-6">
@@ -434,6 +439,7 @@ const WhiteLabelHero = () => {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </Container>
 

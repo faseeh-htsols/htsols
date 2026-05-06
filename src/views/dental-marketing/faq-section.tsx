@@ -18,7 +18,7 @@ export default function FAQSection() {
         <div className="relative">
           <div className="absolute -left-10 -top-10 hidden lg:block">
             <Image
-              src="/faq-bg-glow.png"
+              src="/faq-bg-glow.webp"
               alt="faq left bg"
               width={120}
               height={120}
@@ -28,7 +28,7 @@ export default function FAQSection() {
 
           <div className="absolute -right-10 -bottom-10 hidden lg:block">
             <Image
-              src="/faq-bg-glow.png"
+              src="/faq-bg-glow.webp"
               alt="faq right bg"
               width={120}
               height={120}

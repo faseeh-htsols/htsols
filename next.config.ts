@@ -13,6 +13,10 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "cms.htsol.ca",
+      },
+      {
+        protocol: "https",
         hostname: "img.youtube.com",
       },
     ],

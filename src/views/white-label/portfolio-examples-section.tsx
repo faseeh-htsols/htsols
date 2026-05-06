@@ -4,27 +4,27 @@ import Image from "next/image";
 
 const portfolioExamples = [
   {
-    src: "/services/Home.png",
+    src: "/services/Home.webp",
     alt: "White label website example one",
   },
   {
-    src: "/services/Home (1).png",
+    src: "/services/Home (1).webp",
     alt: "White label website example two",
   },
   {
-    src: "/services/Home (2).png",
+    src: "/services/Home (2).webp",
     alt: "White label website example three",
   },
   {
-    src: "/services/Home.png",
+    src: "/services/Home.webp",
     alt: "White label website example four",
   },
   {
-    src: "/services/Home (1).png",
+    src: "/services/Home (1).webp",
     alt: "White label website example five",
   },
   {
-    src: "/services/Home (2).png",
+    src: "/services/Home (2).webp",
     alt: "White label website example six",
   },
 ] as const;
