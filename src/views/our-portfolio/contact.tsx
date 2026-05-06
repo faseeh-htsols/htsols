@@ -59,13 +59,12 @@ const Contact = () => {
     const sectionEl = scopeRef.current;
     if (!headingEl || !paraEl || !formEl || !sectionEl) return;
 
-    // Hide via GSAP (not Tailwind)
+    // Hide via GSAP
     gsap.set([headingEl, paraEl], { autoAlpha: 0 });
 
     const headingSplit = new SplitType(headingEl, { types: "words" });
     const paraSplit = new SplitType(paraEl, { types: "words" });
 
-    // Container visible, words hidden
     gsap.set([headingEl, paraEl], { autoAlpha: 1 });
     gsap.set([headingSplit.words, paraSplit.words], {
       display: "inline-block",
@@ -73,16 +72,8 @@ const Contact = () => {
       y: 18,
     });
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: headingEl,
-        start: "top 95%",
-        toggleActions: "play none none none",
-        once: true,
-        invalidateOnRefresh: true,
-      },
-    });
-
+    // Paused timeline — IntersectionObserver will play it
+    const tl = gsap.timeline({ paused: true });
     tl.to(headingSplit.words, {
       opacity: 1,
       y: 0,
@@ -101,26 +92,39 @@ const Contact = () => {
       "-=0.3",
     );
 
-    gsap.from(formEl, {
-      autoAlpha: 0,
-      y: 24,
-      duration: 0.45,
-      ease: "power2.out",
-      immediateRender: false,
-      scrollTrigger: {
-        trigger: sectionEl,
-        start: "top 92%",
-        toggleActions: "play none none none",
-        once: true,
-        invalidateOnRefresh: true,
+    // IntersectionObserver fires on real visibility — not scroll pixel math
+    const headingObserver = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          tl.play();
+          headingObserver.disconnect();
+        }
       },
-    });
+      { threshold: 0.1 },
+    );
+    headingObserver.observe(headingEl);
 
-    // KEY: force remeasure after TabsPort layout settles
-    const refreshTimer = setTimeout(() => ScrollTrigger.refresh(), 400);
+    // Form fade-in
+    gsap.set(formEl, { autoAlpha: 0, y: 24 });
+    const formObserver = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          gsap.to(formEl, {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.45,
+            ease: "power2.out",
+          });
+          formObserver.disconnect();
+        }
+      },
+      { threshold: 0.05 },
+    );
+    formObserver.observe(formEl);
 
     return () => {
-      clearTimeout(refreshTimer);
+      headingObserver.disconnect();
+      formObserver.disconnect();
       headingSplit.revert();
       paraSplit.revert();
     };
