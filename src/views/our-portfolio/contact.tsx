@@ -52,101 +52,81 @@ const Contact = () => {
   const [popupType, setPopupType] = useState<"success" | "error">("success");
   const [popupMsg, setPopupMsg] = useState("");
   useGSAP(
-    () => {
-      const headingEl = headingSplitRef.current;
-      const paraEl = paraSplitRef.current;
-      const formEl = formWrapRef.current;
-      const sectionEl = scopeRef.current;
-      if (!headingEl || !paraEl || !formEl || !sectionEl) return;
+  () => {
+    const headingEl = headingSplitRef.current;
+    const paraEl = paraSplitRef.current;
+    const formEl = formWrapRef.current;
+    const sectionEl = scopeRef.current;
+    if (!headingEl || !paraEl || !formEl || !sectionEl) return;
 
-      // ✅ Unhide the containers immediately — words will be hidden by gsap.set below
-      gsap.set([headingEl, paraEl], { opacity: 1 });
+    // Hide via GSAP (not Tailwind)
+    gsap.set([headingEl, paraEl], { autoAlpha: 0 });
 
-      // Split into words (existing code below, unchanged)
-      const headingSplit = new SplitType(headingEl, { types: "words" });
-      const paraSplit = new SplitType(paraEl, { types: "words" });
-      const iconEl = iconWrapRef.current;
+    const headingSplit = new SplitType(headingEl, { types: "words" });
+    const paraSplit = new SplitType(paraEl, { types: "words" });
 
-      if (iconEl) {
-        gsap.fromTo(
-          iconEl,
-          { opacity: 0, y: -14, scale: 0.96 },
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 0.7,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: iconEl,
-              start: "top 85%",
-              toggleActions: "play none none reverse",
-              invalidateOnRefresh: true,
-            },
-          },
-        );
-      }
-      // Make sure words can move independently
-      gsap.set([headingSplit.words, paraSplit.words], {
-        display: "inline-block",
-        opacity: 0,
-        y: 18,
-      });
+    // Container visible, words hidden
+    gsap.set([headingEl, paraEl], { autoAlpha: 1 });
+    gsap.set([headingSplit.words, paraSplit.words], {
+      display: "inline-block",
+      opacity: 0,
+      y: 18,
+    });
 
-      // Heading + para reveal by words on scroll
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: headingEl, // top block
-          start: "top 80%",
-          end: "bottom 55%",
-          scrub: true,
-          invalidateOnRefresh: true,
-          // markers: true,
-        },
-      });
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: headingEl,
+        start: "top 95%",
+        toggleActions: "play none none none",
+        once: true,
+        invalidateOnRefresh: true,
+      },
+    });
 
-      tl.to(headingSplit.words, {
+    tl.to(headingSplit.words, {
+      opacity: 1,
+      y: 0,
+      stagger: 0.04,
+      ease: "power2.out",
+      duration: 0.7,
+    }).to(
+      paraSplit.words,
+      {
         opacity: 1,
         y: 0,
-        stagger: 0.04,
+        stagger: 0.02,
         ease: "power2.out",
         duration: 0.6,
-      }).to(
-        paraSplit.words,
-        {
-          opacity: 1,
-          y: 0,
-          stagger: 0.01,
-          ease: "power2.out",
-          duration: 0.6,
-        },
-        "-=0.25",
-      );
+      },
+      "-=0.3",
+    );
 
-      // Keep the form available by default; only add a small one-time reveal.
-      gsap.from(formEl, {
-        autoAlpha: 0,
-        y: 24,
-        duration: 0.45,
-        ease: "power2.out",
-        immediateRender: false,
-        scrollTrigger: {
-          trigger: sectionEl,
-          start: "top 92%",
-          toggleActions: "play none none none",
-          once: true,
-          invalidateOnRefresh: true,
-        },
-      });
+    gsap.from(formEl, {
+      autoAlpha: 0,
+      y: 24,
+      duration: 0.45,
+      ease: "power2.out",
+      immediateRender: false,
+      scrollTrigger: {
+        trigger: sectionEl,
+        start: "top 92%",
+        toggleActions: "play none none none",
+        once: true,
+        invalidateOnRefresh: true,
+      },
+    });
 
-      // ✅ cleanup SplitType DOM changes
-      return () => {
-        headingSplit.revert();
-        paraSplit.revert();
-      };
-    },
-    { scope: scopeRef },
-  );
+    // KEY: force remeasure after TabsPort layout settles
+    const refreshTimer = setTimeout(() => ScrollTrigger.refresh(), 400);
+
+    return () => {
+      clearTimeout(refreshTimer);
+      headingSplit.revert();
+      paraSplit.revert();
+    };
+  },
+  { scope: scopeRef },
+);
   // const sendEmail = async (
   //   values: FormValues,
   //   formikHelpers: FormikHelpers<FormValues>,
@@ -265,14 +245,14 @@ const Contact = () => {
 
           <HeadingTwo
             ref={headingSplitRef}
-            className="text-center mb-3 opacity-0 !text-3xl md:!text-4xl lg:!text-5xl"
+            className="text-center mb-3 !text-3xl md:!text-4xl lg:!text-5xl"
           >
             Ready To Discuss your project?
           </HeadingTwo>
 
           <h3
             ref={paraSplitRef}
-            className="text-white text-base md:text-[20px] text-center font-normal opacity-0"
+            className="text-white text-base md:text-[20px] text-center font-normal"
           >
             Katalyst Studio offers a range of design services that are tailored
             to meet the unique needs of each client Katalyst Studio offers a
