@@ -168,283 +168,297 @@ const WhiteLabelHero = () => {
 
       <Container>
         <div className="relative z-10">
-        <div className="relative grid grid-cols-1 items-center gap-8 sm:gap-10 xl:grid-cols-[minmax(0,780px)_630px] xl:justify-between xl:gap-12 overflow-hidden">
-          <div className="max-w-[780px]">
-            <div className="mb-6 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 lg:gap-6">
-              <div className="flex items-center">
-                {avatarSources.map((src, index) => (
-                  <div
-                    key={src}
-                    className={`relative h-11 w-11 overflow-hidden rounded-full border border-white/20 bg-black ${index === 0 ? "" : "-ml-3"}`}
-                  >
-                    <Image
-                      src={src}
-                      alt="HTSOL team member"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-
-              <div className="border-t border-[#00A1A5]/40 pt-3 sm:border-l sm:border-t-0 sm:pl-4 sm:pt-0">
-                <div className="mb-1 flex items-center gap-1">
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <svg
-                      key={index}
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="#F5C451"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
+          <div className="relative grid grid-cols-1 items-center gap-8 sm:gap-10 xl:grid-cols-[minmax(0,780px)_630px] xl:justify-between xl:gap-12 overflow-hidden">
+            <div className="max-w-[780px]">
+              <div className="mb-6 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 lg:gap-6">
+                <div className="flex items-center">
+                  {avatarSources.map((src, index) => (
+                    <div
+                      key={src}
+                      className={`relative h-11 w-11 overflow-hidden rounded-full border border-white/20 bg-black ${index === 0 ? "" : "-ml-3"}`}
                     >
-                      <path d="M12 2.75l2.83 5.73 6.32.92-4.57 4.45 1.08 6.3L12 17.16l-5.66 2.99 1.08-6.3L2.85 9.4l6.32-.92L12 2.75z" />
-                    </svg>
+                      <Image
+                        src={src}
+                        alt="HTSOL team member"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   ))}
                 </div>
-                {/* <p className="text-xs font-medium uppercase tracking-[0.16em] text-white/90 sm:text-sm">
+
+                <div className="border-t border-[#00A1A5]/40 pt-3 sm:border-l sm:border-t-0 sm:pl-4 sm:pt-0">
+                  <div className="mb-1 flex items-center gap-1">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <svg
+                        key={index}
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="#F5C451"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                      >
+                        <path d="M12 2.75l2.83 5.73 6.32.92-4.57 4.45 1.08 6.3L12 17.16l-5.66 2.99 1.08-6.3L2.85 9.4l6.32-.92L12 2.75z" />
+                      </svg>
+                    ))}
+                  </div>
+                  {/* <p className="text-xs font-medium uppercase tracking-[0.16em] text-white/90 sm:text-sm">
                   NDA Protected <span className="mx-2 text-white/35">|</span>{" "}
                   100% White Label
                 </p> */}
+                </div>
+              </div>
+
+              <div className="mb-8 inline-flex h-12 not-odd:w-fit items-center gap-2.5 rounded-full border border-[#00A1A5] px-3 py-2.5 sm:h-[53px] sm:px-3.5 [&>span:first-child]:hidden">
+                <span className="mr-3 text-[#00A1A5]">•</span>
+                <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#00A1A5]" />
+                <span className="inline-flex h-[33px] min-w-0 flex-1 items-center whitespace-nowrap font-sans text-[13px] font-light leading-none tracking-[0.02em] text-white sm:text-[16px] lg:text-[18px]">
+                  Staff Augmentation Services
+                </span>
+              </div>
+
+              <h1 className="max-w-[780px] font-primary text-[34px] font-semibold uppercase leading-[0.92] tracking-[-0.04em] text-white sm:text-5xl sm:tracking-[-0.045em] lg:text-[60px]">
+                The{" "}
+                <span className="bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">
+                  Talent Your Team Needs.
+                </span>{" "}
+                None of the Hiring Headaches.
+              </h1>
+
+              <p className="mt-6 max-w-2xl leading-relaxed text-white/82 sm:mt-8">
+                Hiring takes months. Freelancers are unreliable. Agencies charge
+                for work you cannot control. And your business still needs the
+                work done — right now, to a real standard, by someone who
+                actually shows up.
+                <br />
+                <br />
+                Staff augmentation is the practical answer. You get a dedicated
+                professional — a developer, a designer, a marketer, an SEO
+                specialist — who integrates directly into your team, works under
+                your direction, attends your standups, and delivers exactly what
+                you tell them to.
+                <br />
+                <br />
+                HTSOL Inc. gives startups, agencies, and growing businesses
+                access to senior digital talent across the full stack — without
+                the six-month hiring process, the employer taxes, the benefits
+                package, or the risk of a permanent hire you are not sure about
+                yet.
+              </p>
+
+              <div className="mt-8 flex justify-center sm:mt-10 sm:justify-start">
+                <Button variant="white" href="#white-label-form">
+                  Tell Us What You Need
+                </Button>
               </div>
             </div>
 
-            <div className="mb-8 inline-flex h-12 not-odd:w-fit items-center gap-2.5 rounded-full border border-[#00A1A5] px-3 py-2.5 sm:h-[53px] sm:px-3.5 [&>span:first-child]:hidden">
-              <span className="mr-3 text-[#00A1A5]">•</span>
-              <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#00A1A5]" />
-              <span className="inline-flex h-[33px] min-w-0 flex-1 items-center whitespace-nowrap font-sans text-[13px] font-light leading-none tracking-[0.02em] text-white sm:text-[16px] lg:text-[18px]">
-                Staff Augmentation Services
-              </span>
-            </div>
+            <div
+              id="white-label-form"
+              className="relative w-full xl:ml-auto xl:w-[630px]"
+            >
+              <div className="rounded-[30px] border border-[#00A1A5] bg-transparent">
+                <div className="overflow-hidden rounded-[30px] bg-[linear-gradient(180deg,rgba(38,38,38,0.8)_0%,rgba(20,20,20,0.84)_100%)] shadow-[0_30px_90px_rgba(0,0,0,0.45)] backdrop-blur-xl">
+                  <div className="bg-[linear-gradient(180deg,rgba(10,98,103,0.48)_0%,rgba(8,62,66,0.28)_100%)] px-6 py-5 text-center">
+                    <h2 className="mx-auto flex min-h-16 w-full max-w-[420px] flex-col items-center justify-center font-primary text-[19px] font-semibold uppercase leading-none tracking-[-0.03em] text-white sm:text-[24px] lg:text-[30px]">
+                      <span className="block whitespace-nowrap">
+                        Get the Talent You Need to
+                      </span>
+                      <span className="block whitespace-nowrap">
+                        Hit Your Deadlines
+                      </span>
+                    </h2>
+                  </div>
 
-            <h1 className="max-w-[780px] font-primary text-[34px] font-semibold uppercase leading-[0.92] tracking-[-0.04em] text-white sm:text-5xl sm:tracking-[-0.045em] lg:text-[60px]">The
-              {" "}
-              <span className="bg-[linear-gradient(90deg,#075B65_0%,#00838A_37.02%,#328A99_81.25%)] bg-clip-text text-transparent">
-                Talent Your Team Needs.
-              </span>{" "}
-              None of the Hiring Headaches.
-            </h1>
+                  <div className="p-4 sm:p-6 lg:px-7 lg:pb-7 lg:pt-6">
+                    <Formik<StaffAugmentationFormValues>
+                      initialValues={{
+                        firstName: "",
+                        lastName: "",
+                        email: "",
+                        contact: "",
+                        agencyName: "",
+                        website: "",
+                        enquiry: "",
+                        smsConsent: false,
+                        page: "White Label Page",
+                      }}
+                      validationSchema={validationSchema}
+                      onSubmit={sendEmail}
+                    >
+                      {({ isSubmitting }) => (
+                        <Form>
+                          <Field type="hidden" name="page" />
 
-            <p className="mt-6 max-w-2xl leading-relaxed text-white/82 sm:mt-8">
-              Hiring takes months. Freelancers are unreliable. Agencies charge for work you cannot control. And your business still needs the work done — right now, to a real standard, by someone who actually shows up.
-              <br /><br />
-              Staff augmentation is the practical answer. You get a dedicated professional — a developer, a designer, a marketer, an SEO specialist — who integrates directly into your team, works under your direction, attends your standups, and delivers exactly what you tell them to.
-              <br /><br />
-              HTSOL Inc. gives startups, agencies, and growing businesses access to senior digital talent across the full stack — without the six-month hiring process, the employer taxes, the benefits package, or the risk of a permanent hire you are not sure about yet.
+                          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                            <div>
+                              <Field
+                                type="text"
+                                name="firstName"
+                                className={inputClasses}
+                                placeholder="First name"
+                              />
+                              <ErrorMessage
+                                name="firstName"
+                                component="p"
+                                className="mt-2 text-xs text-red-400"
+                              />
+                            </div>
 
-            </p>
+                            <div>
+                              <Field
+                                type="text"
+                                name="lastName"
+                                className={inputClasses}
+                                placeholder="Last name"
+                              />
+                              <ErrorMessage
+                                name="lastName"
+                                component="p"
+                                className="mt-2 text-xs text-red-400"
+                              />
+                            </div>
 
-            <div className="mt-8 flex justify-center sm:mt-10 sm:justify-start">
-              <Button variant="white" href="#white-label-form">
-                Tell Us What You Need
-              </Button>
-            </div>
-          </div>
+                            <div>
+                              <Field
+                                type="email"
+                                name="email"
+                                className={inputClasses}
+                                placeholder="Email"
+                              />
+                              <ErrorMessage
+                                name="email"
+                                component="p"
+                                className="mt-2 text-xs text-red-400"
+                              />
+                            </div>
 
-          <div
-            id="white-label-form"
-            className="relative w-full xl:ml-auto xl:w-[630px]"
-          >
-            <div className="rounded-[30px] border border-[#00A1A5] bg-transparent">
-              <div className="overflow-hidden rounded-[30px] bg-[linear-gradient(180deg,rgba(38,38,38,0.8)_0%,rgba(20,20,20,0.84)_100%)] shadow-[0_30px_90px_rgba(0,0,0,0.45)] backdrop-blur-xl">
-                <div className="bg-[linear-gradient(180deg,rgba(10,98,103,0.48)_0%,rgba(8,62,66,0.28)_100%)] px-6 py-5 text-center">
-                  <h2 className="mx-auto flex min-h-16 w-full max-w-[420px] flex-col items-center justify-center font-primary text-[19px] font-semibold uppercase leading-none tracking-[-0.03em] text-white sm:text-[24px] lg:text-[30px]">
-                    <span className="block whitespace-nowrap">
-                      Get the Talent You Need to
-                    </span>
-                    <span className="block whitespace-nowrap">Hit Your Deadlines</span>
-                  </h2>
-                </div>
+                            <div>
+                              <Field
+                                type="text"
+                                name="contact"
+                                className={inputClasses}
+                                placeholder="Phone number"
+                              />
+                              <ErrorMessage
+                                name="contact"
+                                component="p"
+                                className="mt-2 text-xs text-red-400"
+                              />
+                            </div>
 
-                <div className="p-4 sm:p-6 lg:px-7 lg:pb-7 lg:pt-6">
-                  <Formik<StaffAugmentationFormValues>
-                    initialValues={{
-                      firstName: "",
-                      lastName: "",
-                      email: "",
-                      contact: "",
-                      agencyName: "",
-                      website: "",
-                      enquiry: "",
-                      smsConsent: false,
-                      page: "White Label Page",
-                    }}
-                    validationSchema={validationSchema}
-                    onSubmit={sendEmail}
-                  >
-                    {({ isSubmitting }) => (
-                      <Form>
-                        <Field type="hidden" name="page" />
+                            <div>
+                              <Field
+                                type="text"
+                                name="agencyName"
+                                className={inputClasses}
+                                placeholder="Agency Name"
+                              />
+                              <ErrorMessage
+                                name="agencyName"
+                                component="p"
+                                className="mt-2 text-xs text-red-400"
+                              />
+                            </div>
 
-                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                          <div>
+                            <div>
+                              <Field
+                                type="text"
+                                name="website"
+                                className={inputClasses}
+                                placeholder="URL"
+                              />
+                              <ErrorMessage
+                                name="website"
+                                component="p"
+                                className="mt-2 text-xs text-red-400"
+                              />
+                            </div>
+                          </div>
+
+                          <div className="mt-4">
                             <Field
-                              type="text"
-                              name="firstName"
-                              className={inputClasses}
-                              placeholder="First name"
+                              as="textarea"
+                              name="enquiry"
+                              className="h-28 w-full rounded-xl border border-white/20 bg-white/5 px-4 py-4 text-[15px] text-white outline-0 transition-colors placeholder:text-white/72 focus:border-[#00A1A5]/70 focus:bg-white/8"
+                              placeholder="Message"
                             />
                             <ErrorMessage
-                              name="firstName"
+                              name="enquiry"
                               component="p"
                               className="mt-2 text-xs text-red-400"
                             />
                           </div>
 
-                          <div>
-                            <Field
-                              type="text"
-                              name="lastName"
-                              className={inputClasses}
-                              placeholder="Last name"
-                            />
-                            <ErrorMessage
-                              name="lastName"
-                              component="p"
-                              className="mt-2 text-xs text-red-400"
-                            />
-                          </div>
-
-                          <div>
-                            <Field
-                              type="email"
-                              name="email"
-                              className={inputClasses}
-                              placeholder="Email"
-                            />
-                            <ErrorMessage
-                              name="email"
-                              component="p"
-                              className="mt-2 text-xs text-red-400"
-                            />
-                          </div>
-
-                          <div>
-                            <Field
-                              type="text"
-                              name="contact"
-                              className={inputClasses}
-                              placeholder="Phone number"
-                            />
-                            <ErrorMessage
-                              name="contact"
-                              component="p"
-                              className="mt-2 text-xs text-red-400"
-                            />
-                          </div>
-
-                          <div>
-                            <Field
-                              type="text"
-                              name="agencyName"
-                              className={inputClasses}
-                              placeholder="Agency Name"
-                            />
-                            <ErrorMessage
-                              name="agencyName"
-                              component="p"
-                              className="mt-2 text-xs text-red-400"
-                            />
-                          </div>
-
-                          <div>
-                            <Field
-                              type="text"
-                              name="website"
-                              className={inputClasses}
-                              placeholder="URL"
-                            />
-                            <ErrorMessage
-                              name="website"
-                              component="p"
-                              className="mt-2 text-xs text-red-400"
-                            />
-                          </div>
-                        </div>
-
-                        <div className="mt-4">
-                          <Field
-                            as="textarea"
-                            name="enquiry"
-                            className="h-28 w-full rounded-xl border border-white/20 bg-white/5 px-4 py-4 text-[15px] text-white outline-0 transition-colors placeholder:text-white/72 focus:border-[#00A1A5]/70 focus:bg-white/8"
-                            placeholder="Message"
-                          />
+                          <label className="mt-5 flex items-start gap-3 text-xs leading-relaxed text-white/72 sm:text-sm">
+                            <span className="relative mt-1 h-6 w-6 shrink-0">
+                              <Field
+                                type="checkbox"
+                                name="smsConsent"
+                                className="peer absolute inset-0 h-full w-full cursor-pointer appearance-none bg-white/8 checked:border-[#00A1A5] checked:bg-[#00A1A5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A1A5]/50"
+                              />
+                              <svg
+                                className="pointer-events-none absolute inset-0 m-auto hidden h-5 w-5 text-white peer-checked:block"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true"
+                              >
+                                <path
+                                  d="M3.5 8.5L6.5 11.5L12.5 4.5"
+                                  stroke="currentColor"
+                                  strokeWidth="2.2"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                              </svg>
+                            </span>
+                            <span>
+                              Consent to receive SMS notifications, alerts, and
+                              occasional marketing communication from company.
+                              Message frequency varies. Message and data rates
+                              may apply. You can reply STOP to unsubscribe at
+                              any time.
+                            </span>
+                          </label>
                           <ErrorMessage
-                            name="enquiry"
+                            name="smsConsent"
                             component="p"
                             className="mt-2 text-xs text-red-400"
                           />
-                        </div>
 
-                        <label className="mt-5 flex items-start gap-3 text-xs leading-relaxed text-white/72 sm:text-sm">
-                          <span className="relative mt-1 h-6 w-6 shrink-0">
-                            <Field
-                              type="checkbox"
-                              name="smsConsent"
-                              className="peer absolute inset-0 h-full w-full cursor-pointer appearance-none bg-white/8 checked:border-[#00A1A5] checked:bg-[#00A1A5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A1A5]/50"
-                            />
-                            <svg
-                              className="pointer-events-none absolute inset-0 m-auto hidden h-5 w-5 text-white peer-checked:block"
-                              viewBox="0 0 16 16"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                              aria-hidden="true"
+                          <div className="mt-7 flex justify-center">
+                            <button
+                              type="submit"
+                              disabled={isSubmitting || isSending}
+                              className={submitButtonClasses}
                             >
-                              <path
-                                d="M3.5 8.5L6.5 11.5L12.5 4.5"
-                                stroke="currentColor"
-                                strokeWidth="2.2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
+                              {isSending
+                                ? "Sending..."
+                                : "I'M READY TO GROW MY AGENCY"}
+                              <Image
+                                src="/black-arrow.svg"
+                                alt=""
+                                width={22}
+                                height={22}
+                                className="h-[22px] w-[22px] transition-[filter] duration-300 group-hover:invert"
                               />
-                            </svg>
-                          </span>
-                          <span>
-                            Consent to receive SMS notifications, alerts, and
-                            occasional marketing communication from company.
-                            Message frequency varies. Message and data rates may
-                            apply. You can reply STOP to unsubscribe at any
-                            time.
-                          </span>
-                        </label>
-                        <ErrorMessage
-                          name="smsConsent"
-                          component="p"
-                          className="mt-2 text-xs text-red-400"
-                        />
-
-                        <div className="mt-7 flex justify-center">
-                          <button
-                            type="submit"
-                            disabled={isSubmitting || isSending}
-                            className={submitButtonClasses}
-                          >
-                            {isSending
-                              ? "Sending..."
-                              : "I'M READY TO GROW MY AGENCY"}
-                            <Image
-                              src="/black-arrow.svg"
-                              alt=""
-                              width={22}
-                              height={22}
-                              className="h-[22px] w-[22px] transition-[filter] duration-300 group-hover:invert"
-                            />
-                          </button>
-                        </div>
-                      </Form>
-                    )}
-                  </Formik>
+                            </button>
+                          </div>
+                        </Form>
+                      )}
+                    </Formik>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
       </Container>
 
       {popupOpen && (
-        <div className="fixed inset-0 z-9999flex items-center justify-center px-4">
+        <div className="fixed inset-0 z-9999 flex items-center justify-center px-4">
           <button
             type="button"
             aria-label="Close popup backdrop"

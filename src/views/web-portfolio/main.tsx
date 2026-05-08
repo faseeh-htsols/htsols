@@ -12,7 +12,7 @@ const WebPortfolioMain = () => {
     <>
       <Banner />
       <TabsPort />
-      <Contact />
+      <Contact pageName="Web Portfolio Page" />
       <LogosMarquee />
     </>
   );
