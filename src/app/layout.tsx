@@ -34,6 +34,10 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "") ??
+      "https://www.htsol.ca",
+  ),
   verification: {
     google: "TH_L-Ksg9FClpQN94jCRTKe1hBGcT1HI60tlub3V0_M",
   },

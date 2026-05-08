@@ -1,13 +1,7 @@
-"use client";
-import React, { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { IBlogtags } from "./main";
 import Container from "@/components/ui/container";
 import Image from "next/image";
 
-gsap.registerPlugin(ScrollTrigger);
 type BannerData = {
   title: string;
   image: string;
@@ -26,32 +20,8 @@ const BannerReuse = ({
   scheduledDate,
   tags,
 }: BannerData) => {
-  const bannerRef = useRef<HTMLDivElement | null>(null);
-  const contentRef = useRef<HTMLDivElement | null>(null);
-
-  // useGSAP(() => {
-  //   // Scroll-based fade and move up animation
-  //   gsap.to(contentRef.current, {
-  //     y: -100, // Move up by 100px
-  //     opacity: 0, // Fade to transparent
-  //     ease: "none",
-  //     scrollTrigger: {
-  //       trigger: bannerRef.current,
-  //       start: "top top", // when banner hits top of viewport
-  //       end: "40% top", // fade completes after 40% scroll
-  //       scrub: true, // ties animation to scroll
-  //       // onEnter: () => {
-  //       //   ScrollTrigger.refresh();
-  //       // },
-  //     },
-  //   });
-  // }, []);
-  // console.log(tags);
   return (
-    <div
-      ref={bannerRef}
-      className="relative overflow-hidden pt-[120px] sm:pt-[140px] md:pt-[160px] lg:pt-[180px]"
-    >
+    <div className="relative overflow-hidden pt-[120px] sm:pt-[140px] md:pt-[160px] lg:pt-[180px]">
       {/* Background */}
       <div className="absolute inset-0 w-full h-full  bg-cover bg-center ">
         <Image
@@ -72,7 +42,7 @@ const BannerReuse = ({
         }}
       >
         <Container>
-          <div className="text-white " ref={contentRef}>
+          <div className="text-white ">
             <div className="">
               <div>
                 {/* <span className="text-white text-lg uppercase tracking-wider font-semibold bg-linear-to-r from-[#00A1A5]/50 to-[#00A1A5] px-4 py-1.5 rounded-full">
