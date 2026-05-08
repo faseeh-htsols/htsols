@@ -3,14 +3,9 @@ import React, { useEffect, useRef, useState } from "react";
 import type { IBlogCta } from "./main";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
 import Container from "@/components/ui/container";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
-
-gsap.registerPlugin(ScrollTrigger);
 
 type Section = {
   heading?: string;
@@ -62,35 +57,17 @@ function ContentSections({
 }) {
   const [activeId, setActiveId] = useState<string | null>(null);
   const headingRefs = useRef<Record<string, HTMLElement | null>>({});
-  const sectionRef = useRef<HTMLElement | null>(null);
-  const tocRef = useRef<HTMLDivElement | null>(null);
+  const tocListRef = useRef<HTMLDivElement | null>(null);
+  const tocButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
 
   const generateId = (text: string | undefined) =>
-    text ? text.toLowerCase().replace(/\s+/g, "-") : "";
-
-  useGSAP(
-    () => {
-      if (!sectionRef.current || !tocRef.current) return;
-
-      const mm = gsap.matchMedia();
-
-      mm.add("(min-width: 1024px)", () => {
-        ScrollTrigger.create({
-          trigger: sectionRef.current,
-          start: "top top+=60",
-          end: () => {
-            const tocHeight = tocRef.current!.offsetHeight;
-            const viewportHeight = window.innerHeight;
-            const overflow = Math.max(0, tocHeight - viewportHeight + 100);
-            return `bottom-=${overflow}px bottom`;
-          },
-          pin: tocRef.current,
-          invalidateOnRefresh: true,
-        });
-      });
-    },
-    { dependencies: [] },
-  );
+    text
+      ? text
+        .toLowerCase()
+        .replace(/&/g, "and")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "")
+      : "";
 
   useEffect(() => {
     const headingElements = Object.values(headingRefs.current);
@@ -116,6 +93,31 @@ function ContentSections({
     };
   }, [sections]);
 
+  useEffect(() => {
+    if (!activeId) return;
+
+    const list = tocListRef.current;
+    const button = tocButtonRefs.current[activeId];
+    if (!list || !button) return;
+
+    const listRect = list.getBoundingClientRect();
+    const buttonRect = button.getBoundingClientRect();
+    const edgeBuffer = 12;
+    const isButtonNearEdge =
+      buttonRect.top < listRect.top + edgeBuffer ||
+      buttonRect.bottom > listRect.bottom - edgeBuffer;
+
+    if (!isButtonNearEdge) return;
+
+    const targetScrollTop =
+      button.offsetTop - list.clientHeight / 2 + button.clientHeight / 2;
+
+    list.scrollTo({
+      top: Math.max(0, targetScrollTop),
+      behavior: "smooth",
+    });
+  }, [activeId]);
+
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
@@ -124,7 +126,7 @@ function ContentSections({
 
   const pathname = usePathname();
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.ht-solutions.com";
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.htsol.ca";
   const shareUrl = `${baseUrl}${pathname}`;
   const shareText = `${blogTitle}`;
   const encodedUrl = encodeURIComponent(shareUrl);
@@ -141,11 +143,9 @@ function ContentSections({
       .replace(" ", ", ");
 
   return (
-    <section
-      className="pt-10 pb-24 bg-black text-white relative"
-      ref={sectionRef}>
+    <section className="pt-10 pb-24 bg-black text-white relative">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-[72px_minmax(0,1fr)_280px] gap-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[64px_minmax(0,1fr)_minmax(260px,320px)] xl:grid-cols-[72px_minmax(0,1fr)_320px] xl:gap-10">
           {/* LEFT: SOCIALS (desktop) */}
           <aside className="hidden lg:block">
             <div className="sticky top-28">
@@ -242,13 +242,14 @@ function ContentSections({
                   )}
 
                   {image && (
-                    <div className="relative w-full h-[260px] sm:h-[320px] md:h-[380px] lg:h-[420px] rounded-2xl overflow-hidden mb-6 border border-white/10">
+                    <div className="relative mb-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]">
                       <Image
-                        src={"/blog-cta.webp"}
+                        src={image.src}
                         alt={image.alt || sec.heading || "Blog image"}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 1024px) 100vw, 70vw"
+                        width={1200}
+                        height={675}
+                        className="h-auto max-h-[520px] w-full object-contain"
+                        sizes="(max-width: 1024px) 100vw, 760px"
                         unoptimized
                       />
                     </div>
@@ -271,10 +272,14 @@ function ContentSections({
                     return (
                       <div
                         key={item.id}
-                        className="my-24 rounded-2xl relative w-full border border-[#00A1A5]">
-                        <div className="flex flex-col md:flex-row">
+                        className="my-16 overflow-hidden rounded-2xl border border-[#00A1A5] bg-white/[0.03]">
+                        <div
+                          className={`grid ${imageUrl ? "lg:grid-cols-[minmax(0,1fr)_360px]" : ""}`}
+                        >
                           {/* TEXT CONTENT */}
-                          <div className={`p-8 flex flex-col justify-center w-full ${imageUrl ? "lg:w-[60%]" : "items-center"}`}>
+                          <div
+                            className={`flex w-full flex-col justify-center p-6 sm:p-8 ${imageUrl ? "" : "items-center"}`}
+                          >
                             {heading && (
                               <h3 className="text-white text-2xl md:text-3xl font-bold mb-4 uppercase tracking-wide">
                                 {heading}
@@ -288,19 +293,20 @@ function ContentSections({
                             )}
 
                             <div className="w-fit">
-                              <Button variant="outline" href={buttonHref}>
+                              <Button variant="outline" href={buttonHref || "/contact-us"}>
                                 {buttonText || "Learn More"}
                               </Button>
                             </div>
                           </div>
                           {imageUrl && (
-                            <div className="absolute -right-10 top-1/2 -translate-y-1/2 pointer-events-none lg:block hidden">
+                            <div className="relative min-h-[240px] border-t border-white/10 lg:min-h-full lg:border-l lg:border-t-0">
                               <Image
                                 src={imageUrl}
                                 alt={heading || "CTA image"}
-                                width={400}
-                                height={300}
-                                className="w-[520px] h-full object-cover"
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 360px"
+                                className="object-contain p-4"
+                                unoptimized
                               />
                             </div>
                           )}
@@ -375,12 +381,12 @@ function ContentSections({
                 <span>Share Blog</span>
               </div>
 
-              <div className="grid grid-cols-2 lg:grid-cols-4 lg:justify-between gap-3">
+              <div className="grid flex-1 grid-cols-2 gap-3 sm:grid-cols-4">
                 <Link
                   href={`https://wa.me/?text=${encodedText}%20${encodedUrl}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full h-auto px-12 py-4 rounded-lg border border-white/15 bg-black/30 hover:bg-white/10 transition-all flex flex-col items-center justify-center gap-1"
+                  className="flex min-h-20 w-full flex-col items-center justify-center gap-1 rounded-lg border border-white/15 bg-black/30 px-4 py-4 transition-all hover:bg-white/10"
                   title="Share on WhatsApp">
                   <span className="w-6 h-6 rounded-full bg-[#25D366] flex items-center justify-center">
                     <svg
@@ -400,7 +406,7 @@ function ContentSections({
                   href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full h-auto px-12 py-4 rounded-lg border border-white/15 bg-black/30 hover:bg-white/10 transition-all flex flex-col items-center justify-center gap-1"
+                  className="flex min-h-20 w-full flex-col items-center justify-center gap-1 rounded-lg border border-white/15 bg-black/30 px-4 py-4 transition-all hover:bg-white/10"
                   title="Share on Facebook">
                   <span className="w-6 h-6 rounded-full bg-[#1877F2] flex items-center justify-center">
                     <svg
@@ -420,7 +426,7 @@ function ContentSections({
                   href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedText}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full h-auto px-12 py-4 rounded-lg border border-white/15 bg-black/30 hover:bg-white/10 transition-all flex flex-col items-center justify-center gap-1"
+                  className="flex min-h-20 w-full flex-col items-center justify-center gap-1 rounded-lg border border-white/15 bg-black/30 px-4 py-4 transition-all hover:bg-white/10"
                   title="Share on LinkedIn">
                   <span className="w-6 h-6 rounded-full bg-[#0A66C2] flex items-center justify-center">
                     <svg
@@ -440,7 +446,7 @@ function ContentSections({
                   href={`https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full h-auto px-12 py-4 rounded-lg border border-white/15 bg-black/30 hover:bg-white/10 transition-all flex flex-col items-center justify-center gap-1"
+                  className="flex min-h-20 w-full flex-col items-center justify-center gap-1 rounded-lg border border-white/15 bg-black/30 px-4 py-4 transition-all hover:bg-white/10"
                   title="Share on Twitter/X">
                   <span className="w-6 h-6 rounded-full bg-black flex items-center justify-center">
                     <svg
@@ -460,32 +466,36 @@ function ContentSections({
           </div>
 
           {/* TABLE OF CONTENTS - SIDEBAR */}
-          <aside className="lg:w-[280px] shrink-0">
-            <div className="sticky top-24" ref={tocRef}>
-              <div className="border border-white rounded-xl p-6">
-                <h2 className="text-white text-lg font-bold uppercase mb-6 pb-3 border-b border-white tracking-wide">
-                  Table Of Content
-                </h2>
+          <aside className="order-first shrink-0 lg:order-none">
+            <div className="flex max-h-[420px] flex-col overflow-hidden rounded-xl border border-white/70 bg-black/95 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-6 lg:sticky lg:top-[120px] lg:max-h-[calc(100dvh-150px)]">
+              <h2 className="mb-5 shrink-0 border-b border-white/70 pb-3 text-lg font-bold uppercase tracking-wide text-white">
+                Table Of Content
+              </h2>
 
-                <div className="space-y-3">
-                  {sections
-                    .filter((s) => s.heading)
-                    .map((item) => {
-                      const id = generateId(item.heading);
+              <div
+                ref={tocListRef}
+                className="min-h-0 flex-1 space-y-3 overflow-y-auto overscroll-contain [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+              >
+                {sections
+                  .filter((s) => s.heading)
+                  .map((item) => {
+                    const id = generateId(item.heading);
 
-                      return (
-                        <button
-                          key={id}
-                          onClick={() => scrollToSection(id)}
-                          className={`block w-full text-left text-sm transition-all py-2 px-3 rounded-lg my-2 ${activeId === id
-                            ? "bg-linear-to-r from-[#00A1A5]/50 to-[#00A1A5] text-white font-semibold"
-                            : "text-gray-400 hover:text-white border border-white hover:bg-white/5"
-                            }`}>
-                          {item.heading}
-                        </button>
-                      );
-                    })}
-                </div>
+                    return (
+                      <button
+                        key={id}
+                        ref={(el) => {
+                          if (id) tocButtonRefs.current[id] = el;
+                        }}
+                        onClick={() => scrollToSection(id)}
+                        className={`block w-full rounded-lg px-3 py-3 text-left text-sm leading-snug transition-all ${activeId === id
+                          ? "bg-linear-to-r from-[#00A1A5]/50 to-[#00A1A5] font-semibold text-white"
+                          : "border border-white/70 text-gray-300 hover:bg-white/5 hover:text-white"
+                          }`}>
+                        {item.heading}
+                      </button>
+                    );
+                  })}
               </div>
             </div>
           </aside>

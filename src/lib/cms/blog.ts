@@ -98,6 +98,8 @@ export type CmsBlogDetail = {
   seo?: {
     seoTitle?: string | null;
     seoDescription?: string | null;
+    seoImageAlt?: string | null;
+    imageUrl?: string | null;
     schemaJson?: unknown;
   } | null;
 } | null;
