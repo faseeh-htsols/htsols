@@ -56,6 +56,8 @@ function ContentSections({
   scheduledDate: string;
 }) {
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [showMobileToc, setShowMobileToc] = useState(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
   const headingRefs = useRef<Record<string, HTMLElement | null>>({});
   const tocListRef = useRef<HTMLDivElement | null>(null);
   const tocButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
@@ -70,26 +72,46 @@ function ContentSections({
       : "";
 
   useEffect(() => {
-    const headingElements = Object.values(headingRefs.current);
+    let frameId = 0;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveId(entry.target.id);
-          }
-        });
-      },
-      {
-        rootMargin: "-50% 0px -40% 0px",
-        threshold: 0,
-      },
-    );
+    const getHeadingElements = () =>
+      sections
+        .map((section) => headingRefs.current[generateId(section.heading)])
+        .filter((el): el is HTMLElement => Boolean(el));
 
-    headingElements.forEach((el) => el && observer.observe(el));
+    const updateActiveHeading = () => {
+      const headingElements = getHeadingElements();
+      if (!headingElements.length) return;
+
+      const activationOffset = window.innerWidth >= 1024 ? 220 : 140;
+      const contentTop = sectionRef.current?.getBoundingClientRect().top ?? 0;
+      let currentId = headingElements[0].id;
+
+      for (const heading of headingElements) {
+        if (heading.getBoundingClientRect().top <= activationOffset) {
+          currentId = heading.id;
+        } else {
+          break;
+        }
+      }
+
+      setActiveId(currentId);
+      setShowMobileToc(contentTop <= 82 && window.innerWidth < 1024);
+    };
+
+    const scheduleUpdate = () => {
+      if (frameId) cancelAnimationFrame(frameId);
+      frameId = requestAnimationFrame(updateActiveHeading);
+    };
+
+    updateActiveHeading();
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate);
 
     return () => {
-      headingElements.forEach((el) => el && observer.unobserve(el));
+      if (frameId) cancelAnimationFrame(frameId);
+      window.removeEventListener("scroll", scheduleUpdate);
+      window.removeEventListener("resize", scheduleUpdate);
     };
   }, [sections]);
 
@@ -121,7 +143,12 @@ function ContentSections({
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    const targetOffset = window.innerWidth >= 1024 ? 128 : 96;
+    const targetTop = el.getBoundingClientRect().top + window.scrollY - targetOffset;
+
+    setActiveId(id);
+    window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
   };
 
   const pathname = usePathname();
@@ -142,9 +169,31 @@ function ContentSections({
       .replace(" ", " ")
       .replace(" ", ", ");
 
+  const activeHeading =
+    sections.find((section) => generateId(section.heading) === activeId)
+      ?.heading ?? sections.find((section) => section.heading)?.heading ?? "";
+
   return (
-    <section className="pt-10 pb-24 bg-black text-white relative">
+    <section ref={sectionRef} className="pt-10 pb-24 bg-black text-white relative">
       <Container>
+        <div
+          data-mobile-toc
+          className={`sticky top-[104px] z-40 mb-6 transition-all duration-300 lg:hidden ${
+            showMobileToc
+              ? "translate-y-0 opacity-100"
+              : "pointer-events-none -translate-y-3 opacity-0"
+          }`}
+        >
+          <div className="mx-auto w-full max-w-[340px] rounded-xl border border-white/70 bg-black/95 px-4 py-3 shadow-[0_14px_34px_rgba(0,0,0,0.45)]">
+            <div className="border-b border-white/70 pb-1 text-center text-sm font-bold uppercase leading-none tracking-wide text-white">
+              Table Of Content
+            </div>
+            <div className="pt-1 text-center text-sm font-semibold leading-tight text-[#00A1A5]">
+              {activeHeading}
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[64px_minmax(0,1fr)_minmax(260px,320px)] xl:grid-cols-[72px_minmax(0,1fr)_320px] xl:gap-10">
           {/* LEFT: SOCIALS (desktop) */}
           <aside className="hidden lg:block">
@@ -466,7 +515,7 @@ function ContentSections({
           </div>
 
           {/* TABLE OF CONTENTS - SIDEBAR */}
-          <aside className="order-first shrink-0 lg:order-none">
+          <aside className="hidden shrink-0 lg:order-none lg:block">
             <div className="flex max-h-[420px] flex-col overflow-hidden rounded-xl border border-white/70 bg-black/95 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:p-6 lg:sticky lg:top-[120px] lg:max-h-[calc(100dvh-150px)]">
               <h2 className="mb-5 shrink-0 border-b border-white/70 pb-3 text-lg font-bold uppercase tracking-wide text-white">
                 Table Of Content
