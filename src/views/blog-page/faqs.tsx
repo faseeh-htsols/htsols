@@ -145,7 +145,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
                     <AccordionTrigger className="text-white font-secondary text-lg uppercase hover:no-underline cursor-pointer">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-white">
+                    <AccordionContent forceMount className="text-white">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
