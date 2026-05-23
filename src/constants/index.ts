@@ -1442,6 +1442,10 @@ export const NAV_ITEMS = [
         link: "/services/digital-marketing",
       },
       {
+        name: "Branding",
+        link: "/services/branding",
+      },
+      {
         name: "Digital Transformation",
         link: "/services/digital-transformation",
       },

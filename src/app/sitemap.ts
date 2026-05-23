@@ -17,6 +17,7 @@ const staticPaths = [
   "/cto",
   "/dental-marketing",
   "/services",
+  "/services/branding",
   "/services/cgi",
   "/services/digital-marketing",
   "/services/seo-services",
