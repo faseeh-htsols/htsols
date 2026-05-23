@@ -997,3 +997,23 @@ body {
 .clear-strategy-swiper {
   overflow: hidden;
 }
+
+@keyframes htsol-branding-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
+@keyframes htsol-branding-marquee-reverse {
+  from {
+    transform: translateX(-33.333%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
