@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const BRANDING_TRUST_POINTS = [
   {
-    icon: "/brainding/eye.svg",
+    icon: "/branding/eye.svg",
     title: (
       <>
         First
@@ -15,7 +15,7 @@ const BRANDING_TRUST_POINTS = [
       "Less than 0.1 seconds to form a visual opinion — your brand must win it instantly",
   },
   {
-    icon: "/brainding/touch.svg",
+    icon: "/branding/touch.svg",
     title: (
       <>
         Every
@@ -27,7 +27,7 @@ const BRANDING_TRUST_POINTS = [
       "Website, print, social, pitch decks — one consistent system across everything",
   },
   {
-    icon: "/brainding/sheild.svg",
+    icon: "/branding/sheild.svg",
     title: (
       <>
         Built To
@@ -42,12 +42,15 @@ const BRANDING_TRUST_POINTS = [
 
 const BrandShowcase = () => {
   return (
-    <section className="bg-black pb-20 pt-10 text-white lg:pb-28 lg:pt-14">
+    <section
+      id="branding-work"
+      className="bg-black pb-20 pt-10 text-white lg:pb-28 lg:pt-14"
+    >
       <Container>
         <div className="mx-auto max-w-6xl">
           <div className="overflow-hidden rounded-[6px]">
             <Image
-              src="/brainding/brandingsimages.png"
+              src="/branding/brandingsimages.png"
               alt="Branding work across social, website, stationery, print, and analytics touchpoints"
               width={1654}
               height={845}
