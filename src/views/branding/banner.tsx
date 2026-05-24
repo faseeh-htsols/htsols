@@ -8,7 +8,7 @@ const BRANDING_SERVICES_TOP = [
   "Colour Palette & Typography",
   "Brand Guidelines & Style Guides",
   "Business Card & Stationery Design",
-  "Social Media Branding",
+  "Social Media Brand Assets",
 ];
 
 const BRANDING_SERVICES_BOTTOM = [
@@ -17,7 +17,7 @@ const BRANDING_SERVICES_BOTTOM = [
   "Packaging & Print Design",
   "Pitch Deck & Presentation Design",
   "Brand Audit & Refresh",
-  "Rebranding Strategy",
+  "Rebranding Services",
 ];
 
 const Chip = ({ label }: { label: string }) => (
@@ -85,26 +85,29 @@ const Banner = () => {
           </div>
 
           <h1 className="max-w-[1200px] font-primary text-[34px] font-semibold uppercase leading-[1.18] tracking-normal text-white sm:text-5xl lg:text-[46px] xl:text-[50px]">
-            Your brand is the first thing people judge you on make sure it says
-            the right thing
+            Your brand is the first thing people judge you on - make sure it
+            says the right thing
           </h1>
 
           <div className="mt-7 max-w-5xl space-y-5 text-xs leading-relaxed text-white/82 sm:text-sm">
             <p>
-              Every day, people in your area search for the exact services you
-              offer. A dentist near me. A physio open on Saturday. An
-              electrician available today. A family lawyer I can trust. These
-              are real, high-intent searches from people ready to book, call, or
-              enquire. If your business is not showing up properly, those leads
-              go somewhere else.
+              Before a potential client reads your website copy, checks your
+              reviews, or speaks to anyone in your team, they have already
+              formed an opinion about your business. That opinion is built
+              entirely on what they see - your logo, your colours, your
+              typography, the way your visual presence feels.
             </p>
             <p>
-              The problem is not demand. The problem is visibility, trust, and
-              follow-through. Without the right website, local SEO, messaging,
-              and systems in place, your business stays harder to find and
-              harder to choose. Over time, that gap grows: competitors build
-              more reviews, better rankings, stronger authority, and better
-              client journeys while you rely on inconsistent referrals.
+              A weak brand signals a weak business. An inconsistent brand
+              signals a disorganised one. A generic, template-built logo signals
+              a business that did not invest in its own identity, and people
+              wonder why they should invest in it either.
+            </p>
+            <p>
+              HTSOL Inc. creates brand identities that make your business look
+              exactly as credible, professional, and worth choosing as it
+              actually is, built to work across your website, social media,
+              marketing materials, and every other touchpoint.
             </p>
           </div>
 

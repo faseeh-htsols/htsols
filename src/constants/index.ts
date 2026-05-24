@@ -3002,6 +3002,359 @@ export const DIGITAL_TRANSFORMATION_FAQS = [
   },
 ];
 
+export const BRANDING_GROWTH = {
+  title:
+    "IF YOUR BRAND DOES NOT LOOK THE PART, YOUR BUSINESS DOES NOT GET THE CHANCE TO PROVE IT IS",
+  para: `Most business owners focus on what they do and assume clients will eventually recognise the quality of their work. But before a client gives you the chance to prove yourself, they evaluate your brand. A logo that looks like it was made on a free website builder. Social media graphics that do not match the website. Business cards with a different font from the email footer. Each inconsistency quietly signals that the business behind it lacks attention to detail.
+  <br/><br/>
+  That matters more than most business owners realise. Studies consistently show that it takes less than one tenth of a second for someone to form a visual opinion about a brand. You do not get a second chance to make that first impression, and a weak brand is losing clients before you even know they existed.`,
+  img: "/branding/multicomp.png",
+  highlight: "WHAT A WEAK OR INCONSISTENT BRAND ACTUALLY COSTS YOU:",
+  list: [
+    "Potential clients who judge your professionalism by your logo before they read anything else",
+    "A pricing ceiling because weak brands cannot command premium rates, regardless of the quality behind them",
+    "Marketing spend that underperforms because the brand it lands on does not convert trust into action",
+    "Inconsistency across touchpoints that makes your business look disorganised and harder to remember",
+    "New business pitches that lose to better-branded competitors, not better competitors",
+    "A brand that does not grow with you, forcing a rebrand when you can least afford the distraction",
+  ],
+};
+
+export const BRANDING_PROTECTION = {
+  bgImg: "/services/protection-bg.webp",
+  text1:
+    "WE DO NOT DESIGN LOGOS. WE BUILD BRAND IDENTITIES - SYSTEMS THAT TELL YOUR STORY CONSISTENTLY ACROSS EVERY TOUCHPOINT WHERE SOMEONE ENCOUNTERS YOUR BUSINESS.",
+  text2:
+    "EVERY DECISION WE MAKE - COLOUR, TYPOGRAPHY, FORM, TONE - IS GROUNDED IN HOW YOUR TARGET AUDIENCE MAKES DECISIONS AND WHAT THEY NEED TO SEE BEFORE THEY TRUST YOU ENOUGH TO BUY.",
+  btnText1: "START YOUR BRAND PROJECT",
+  btnLink1: "/contact-us",
+  btnText2: "TALK TO A BRAND STRATEGIST",
+  btnLink2: "/contact-us",
+};
+
+export const BRANDING_EVERYTHING = {
+  title: "A BRAND IDENTITY BUILT TO WORK ACROSS EVERY CONTEXT",
+  highLight: "STRATEGY-DRIVEN. VISUALLY DISTINCTIVE. PRACTICALLY USEFUL.",
+  para: `Good branding is not decoration. It is a system - a set of visual and verbal decisions that work together consistently to make your business recognisable, credible, and worth remembering. Here is what we build.`,
+  bgColor: true,
+  cards: [
+    {
+      id: "logoMarkSystem",
+      heading: "LOGO & MARK SYSTEM",
+      description:
+        "A primary logo, secondary logo, and standalone mark designed to work across every application from your website header to a physical sign, a social profile picture, a business card, and everything in between. You receive the logo in every format you need, in every colour variation appropriate to your brand, with clear guidance on correct usage.",
+      image: "/branding/brandingsimages.png",
+    },
+    {
+      id: "colourTypography",
+      heading: "COLOUR PALETTE & TYPOGRAPHY",
+      description:
+        "A considered colour system with defined primary, secondary, and accent colours selected based on colour psychology, your industry, and the emotional response your brand needs to create. Paired with a typography system that balances personality with readability across print and digital.",
+      image: "/digital-transformation/everything-img-1.webp",
+    },
+    {
+      id: "brandGuidelines",
+      heading: "BRAND GUIDELINES DOCUMENT",
+      description:
+        "A comprehensive brand guidelines document that tells anyone who works on your brand exactly how to use every element correctly: logo placement rules, colour codes, typography hierarchy, photography styles, and tone of voice principles.",
+      image: "/website/clear-transparent.webp",
+    },
+    {
+      id: "brandAssetLibrary",
+      heading: "BRAND ASSET LIBRARY",
+      description:
+        "Every logo variation, icon, pattern, and brand element organised, named, and ready to use. Delivered in the correct file formats for web and print use so you never have to wonder which version of your logo is the right one.",
+      image: "/website/designed-trust.webp",
+    },
+  ],
+};
+
+export const BRANDING_WHAT: ServiceData = {
+  highLight:
+    "FROM YOUR FIRST LOGO TO A COMPLETE BRAND SYSTEM - WE BUILD IDENTITIES THAT LAST.",
+  title: "BRANDING SERVICES FROM HTSOL INC.",
+  para: "Whether you are launching a new business, refreshing an outdated identity, or building a complete brand system for the first time, we have the service that fits your stage and your goals.",
+  cards: [
+    {
+      titleLines: ["Logo Design"],
+      description:
+        "A professional primary logo, secondary logo variation, and standalone icon mark created through a structured discovery and design process. Not a template. Not a logo generator. A custom-designed mark built around your business, market, and audience.",
+      icon: "/staff-augmentation/role-icon-1.svg",
+      tone: "muted",
+    },
+    {
+      titleLines: ["Brand Identity System"],
+      description:
+        "The complete visual system that makes your brand work as a whole: logo, colours, typography, spacing rules, imagery guidelines, and supporting elements where appropriate.",
+      icon: "/staff-augmentation/role-icon-2.svg",
+      tone: "base",
+    },
+    {
+      titleLines: ["Brand Guidelines & Style Guide"],
+      description:
+        "A comprehensive brand standards document covering logo usage, colour specifications, typography hierarchy, photography and illustration style, tone of voice, and examples of correct and incorrect application.",
+      icon: "/digital-transformation/what-icon-1.svg",
+      tone: "muted",
+    },
+    {
+      titleLines: ["Brand Voice & Messaging"],
+      description:
+        "How your brand sounds: its personality, tone, vocabulary, tagline direction, brand story, and key messaging pillars across every channel.",
+      icon: "/digital-transformation/what-icon-2.svg",
+      tone: "base",
+    },
+    {
+      titleLines: ["Business Stationery & Print Design"],
+      description:
+        "Business cards, letterheads, email signatures, envelopes, folders, and branded print material designed to the same standard as your digital brand.",
+      icon: "/digital-transformation/what-icon-3.svg",
+      tone: "muted",
+    },
+    {
+      titleLines: ["Social Media Brand Assets"],
+      description:
+        "Profile images, cover photos, post templates, story templates, highlight covers, and branded graphic assets delivered as editable templates.",
+      icon: "/staff-augmentation/role-icon-6.svg",
+      tone: "base",
+    },
+    {
+      titleLines: ["Pitch Deck & Presentation Design"],
+      description:
+        "A branded PowerPoint or Google Slides presentation template, investor deck, capabilities deck, or client proposal built on your brand identity.",
+      icon: "/digital-transformation/what-icon-4.svg",
+      tone: "muted",
+    },
+    {
+      titleLines: ["Brand Audit & Refresh"],
+      description:
+        "For businesses with an existing brand that feels outdated or inconsistent. We audit what you have, identify what is working, and refresh what needs updating without discarding useful brand equity.",
+      icon: "/digital-transformation/what-icon-5.svg",
+      tone: "base",
+    },
+    {
+      titleLines: ["Full Rebrand"],
+      description:
+        "For businesses that have outgrown their identity, changed direction, or need to reposition in the market. Includes stakeholder discovery, market positioning, full identity development, and a rollout plan.",
+      icon: "/digital-transformation/what-icon-6.svg",
+      tone: "muted",
+    },
+  ],
+};
+
+export const BRANDING_WHY = {
+  highLight: "Strategy First. Design Second. Everything Connected.",
+  title: "WHY BUSINESSES CHOOSE HTSOL INC. FOR BRANDING",
+  para: "HTSOL branding is not isolated design work. It becomes the foundation for the website, marketing, social assets, and client-facing materials that follow.",
+  cards: [
+    {
+      icon: "/digital-transformation/why-icon-1.svg",
+      id: "built-to-work",
+      heading: "YOUR BRAND BUILT TO WORK WITH YOUR WEBSITE AND MARKETING",
+      para: "Most branding agencies hand over a logo and a PDF and their work is done. HTSOL branding is the first step in a complete digital system, built to feed directly into your website design, marketing campaigns, social media, and printed materials.",
+    },
+    {
+      icon: "/digital-transformation/why-icon-2.svg",
+      id: "market-audience",
+      heading: "GROUNDED IN YOUR MARKET AND YOUR AUDIENCE",
+      para: "We research your market, study competitors' visual positioning, understand your audience's expectations, and identify the visual signals that build trust in your industry.",
+    },
+    {
+      icon: "/digital-transformation/why-icon-3.svg",
+      id: "professional-services",
+      heading: "HEALTHCARE AND PROFESSIONAL SERVICES EXPERTISE",
+      para: "HTSOL has specific experience branding dental practices, medical clinics, mental health providers, physiotherapy clinics, law firms, and other professional service businesses where trust requirements are high.",
+    },
+    {
+      icon: "/digital-transformation/why-icon-4.svg",
+      id: "longevity",
+      heading: "DESIGNED FOR LONGEVITY, NOT TREND CYCLES",
+      para: "We build brands that feel current without being trend-dependent, so your identity still looks professional and credible years from now.",
+    },
+    {
+      id: "results-image",
+      mainImage: "/digital-transformation/why-img.webp",
+      imageAlt: "Brand identity applied across multiple business touchpoints",
+    },
+    {
+      icon: "/digital-transformation/why-icon-5.svg",
+      id: "files",
+      heading: "EVERY FORMAT. EVERY FILE. EVERY TIME.",
+      para: "Every brand identity comes with a complete file package: vector files for print, optimised files for web, dark and light variations, horizontal and stacked versions, and clear documentation for when to use each file.",
+    },
+  ],
+};
+
+export const BRANDING_PROCESS = {
+  highLight: "STRUCTURED. COLLABORATIVE. BUILT ON REAL UNDERSTANDING.",
+  title: "OUR BRANDING PROCESS",
+  para: `A brand identity is only as strong as the thinking behind it. Our process ensures we understand your business, your market, and your audience deeply before any design work begins, so what we create is genuinely right for your situation, not just visually appealing.`,
+  accordion: [
+    {
+      number: "01",
+      title: "BRAND DISCOVERY",
+      description:
+        "We start by understanding your business at the level that makes brand decisions meaningful: what you stand for, who your ideal client is, what they value, who your competitors are, and what feeling someone should have after encountering your brand.",
+    },
+    {
+      number: "02",
+      title: "RESEARCH & POSITIONING",
+      description:
+        "We research your competitive landscape and map the visual territory your competitors occupy so we can identify credible differentiation for your market.",
+    },
+    {
+      number: "03",
+      title: "CONCEPT DEVELOPMENT",
+      description:
+        "We develop two to three distinct brand directions, each with a strategic approach, logo exploration, colour direction, typography pairing, and rationale.",
+    },
+    {
+      number: "04",
+      title: "REFINEMENT",
+      description:
+        "You select a preferred direction and provide feedback. We refine the chosen concept, sharpen the logo, finalise the colour system, lock the typography, and ensure everything works in real usage contexts.",
+    },
+    {
+      number: "05",
+      title: "BRAND SYSTEM BUILD",
+      description:
+        "With the primary mark approved, we build the complete brand system: secondary logos, colour specifications, typography hierarchy, spacing rules, imagery guidelines, patterns, and supporting elements.",
+    },
+    {
+      number: "06",
+      title: "DELIVERY & HANDOVER",
+      description:
+        "Final delivery includes an organised file package, completed brand guidelines, and a handover session so you and your team understand how to use the brand consistently.",
+    },
+  ],
+};
+
+export const BRANDING_SYSTEM = {
+  curveLine: true,
+  title: "YOUR BRAND IS THE MOST REUSED ASSET YOUR BUSINESS WILL EVER BUILD",
+  para: `Every piece of marketing you produce - every website page, every social post, every email, every proposal, every piece of printed material - builds on your brand. A strong brand makes every one of those assets more effective. A weak brand undermines them all.
+  <br/><br/>
+  Investing in your brand identity once, done properly, pays returns across every marketing activity your business undertakes for years. It is not a cost you incur for a logo. It is a foundation you build that makes everything else work harder.`,
+  btnText: "Start Your Brand Project",
+  btnLink: "/contact-us",
+  items: [
+    {
+      title:
+        "Every marketing asset you produce performs better when it sits on a credible brand",
+      image: "/digital-transformation/digital-presence-1.webp",
+      alt: "Brand identity touchpoints across digital and physical marketing assets",
+    },
+    {
+      title:
+        "Premium pricing becomes defensible when your brand signals premium positioning",
+      image: "/website/full-development.webp",
+      alt: "Premium brand presentation supporting stronger positioning",
+    },
+    {
+      title:
+        "Client trust is established faster when the first visual impression is professional",
+      image: "/website/conversion-focused.webp",
+      alt: "Professional visual identity creating trust before the first conversation",
+    },
+    {
+      title:
+        "Your team produces better, more consistent marketing when the brand guidelines are clear",
+      image: "/website/technical-seo.webp",
+      alt: "Brand guidelines supporting consistent marketing execution",
+    },
+    {
+      title:
+        "A consistent brand is more memorable, and remembered brands get chosen when purchase decisions are made",
+      image: "/website/analytics.webp",
+      alt: "Consistent brand identity improving recognition and recall",
+    },
+    {
+      title:
+        "Your brand becomes a long-term foundation that makes every future campaign work harder",
+      image: "/website/performance.webp",
+      alt: "Brand identity foundation supporting long-term business growth",
+    },
+  ],
+  className: "pb-10! lg:pb-20! pt-20! lg:pt-40!",
+};
+
+export const BRANDING_INVESTMENT = {
+  title: "YOUR BRAND IS THE MOST REUSED ASSET YOUR BUSINESS WILL EVER BUILD",
+  body: [
+    "Every piece of marketing you produce - every website page, every social post, every email, every proposal, every piece of printed material - builds on your brand. A strong brand makes every one of those assets more effective. A weak brand undermines them all.",
+    "Investing in your brand identity once, done properly, pays returns across every marketing activity your business undertakes for years. It is not a cost you incur for a logo. It is a foundation you build that makes everything else work harder.",
+  ],
+  bullets: [
+    "Every marketing asset you produce performs better when it sits on a credible brand",
+    "Premium pricing becomes defensible when your brand signals premium positioning",
+    "Client trust is established faster when the first visual impression is professional",
+    "Your team produces better, more consistent marketing when the brand guidelines are clear",
+    "A consistent brand is more memorable, and remembered brands get chosen when purchase decisions are made",
+  ],
+  primaryCta: "Start Your Brand Project",
+  primaryHref: "/contact-us",
+  secondaryCta: "Request a Brand Consultation",
+  secondaryHref: "/contact-us",
+};
+
+export const BRANDING_CTA = {
+  title: "READY TO BUILD A BRAND YOUR BUSINESS CAN BE PROUD OF?",
+  para: "Whether you are launching a new business, growing out of a logo you made yourself five years ago, or repositioning for a new market, we can help. Start with a free brand consultation. We will look at where you are, what you need, and what a brand identity project realistically involves for your situation.",
+  btnText: "Start Your Brand Project",
+  btnLink: "/contact-us",
+};
+
+export const BRANDING_FAQS = [
+  {
+    question: "What is the difference between a logo and a brand identity?",
+    answer:
+      "A logo is a mark - a symbol or wordmark that represents your business. A brand identity is the complete visual system that includes your logo, colour palette, typography, imagery style, patterns, supporting elements, and the guidelines that explain how all of it works together.",
+  },
+  {
+    question: "How much does a brand identity cost?",
+    answer:
+      "It depends on the scope. A logo-only project for a new small business is different from a complete brand identity system for an established practice that includes guidelines, asset libraries, and print design. We scope every branding project individually and give you a clear breakdown before work begins.",
+  },
+  {
+    question: "How long does a branding project take?",
+    answer:
+      "A focused logo and brand identity project typically takes three to five weeks from discovery to final delivery. More comprehensive projects that include guidelines, asset libraries, and collateral design often take five to eight weeks, depending on feedback timelines and scope.",
+  },
+  {
+    question: "I already have a logo - do I need a rebrand or just a refresh?",
+    answer:
+      "It depends on how far your current brand is from where your business needs to be. A refresh updates and improves what exists. A rebrand replaces the identity entirely when the business has changed direction, repositioned, or the existing brand is actively working against it.",
+  },
+  {
+    question: "Do you specialise in branding for any particular industries?",
+    answer:
+      "Yes. Healthcare, dental, mental health, physiotherapy, law firms, and professional service businesses are industries where we have specific branding experience. These industries have particular trust requirements that brand design must account for.",
+  },
+  {
+    question: "How involved do I need to be in the branding process?",
+    answer:
+      "Meaningfully involved at the beginning and at key decision points, less so during the design phases in between. The discovery stage requires thoughtful input, and you review concepts and refinements before we build out the full system.",
+  },
+  {
+    question: "Will I own all the files and intellectual property from the project?",
+    answer:
+      "Yes. Upon final payment, all intellectual property in the agreed brand identity transfers to you. Every final logo file, design asset, and source file included in scope belongs to your business.",
+  },
+  {
+    question: "Can you also build our website after the brand is complete?",
+    answer:
+      "Yes. Because HTSOL handles branding, web design, web development, and digital marketing under one roof, your website can be built directly on the brand identity we created without handoff gaps or interpretation errors.",
+  },
+  {
+    question: "What file formats will I receive at the end of the project?",
+    answer:
+      "You receive logo variations in vector formats such as SVG, AI, and EPS for print and scalability, PNG files for web and document use, PDF versions for suppliers, and web-optimised exports. Additional assets are delivered as source files and exported final versions where included in scope.",
+  },
+  {
+    question: "What if I do not like the initial design concepts?",
+    answer:
+      "The discovery process is designed to prevent that by grounding concepts in your business, audience, market, and preferences before design begins. If a concept direction is wrong, we identify why and correct it through structured feedback rather than iterating endlessly on the wrong direction.",
+  },
+];
 export const CEO_SKILLS = {
   skills: [
     { src: "/ceo/growth.svg", label: "Digital Growth Strategy" },
